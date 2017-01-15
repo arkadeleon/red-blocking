@@ -4,12 +4,12 @@
 
   },
   "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
-    "14E39F3945723097E84D84E110F7FE807EFB6384" : 9223372036854775807,
+    "BEAE3FEA7018A7052984E1773F49E8F5516D6449" : 9223372036854775807,
     "9E3763E47E8AD18B66657EC78F47DDCA67683511" : 9223372036854775807
   },
   "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "66FD301E-6A76-4E0B-A917-4A57D0C24C0B",
   "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
-    "14E39F3945723097E84D84E110F7FE807EFB6384" : "i3rd\/",
+    "BEAE3FEA7018A7052984E1773F49E8F5516D6449" : "i3rd\/",
     "9E3763E47E8AD18B66657EC78F47DDCA67683511" : "i3rd_old\/"
   },
   "DVTSourceControlWorkspaceBlueprintNameKey" : "i3rd",
@@ -17,14 +17,14 @@
   "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "i3rd.xcodeproj",
   "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
     {
-      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "http:\/\/www.svnchina.com\/svn\/i3rd",
-      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Subversion",
-      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "14E39F3945723097E84D84E110F7FE807EFB6384"
-    },
-    {
       "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/git.oschina.net\/biohazardlover\/i3rd.git",
       "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
       "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "9E3763E47E8AD18B66657EC78F47DDCA67683511"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "http:\/\/www.svnchina.com\/svn\/i3rd",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Subversion",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "BEAE3FEA7018A7052984E1773F49E8F5516D6449"
     }
   ]
 }
