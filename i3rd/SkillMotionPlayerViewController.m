@@ -12,13 +12,12 @@
 
 @interface SkillMotionPlayerViewController ()
 
-@property (weak, nonatomic) IBOutlet UILabel *downloadProgressLabel;
 @property (weak, nonatomic) IBOutlet UIProgressView *downloadProgressView;
 @property (weak, nonatomic) IBOutlet UILabel *currentFrameLabel;
-@property (weak, nonatomic) IBOutlet UILabel *fpsLabel;
+@property (weak, nonatomic) IBOutlet UILabel *totalFrameLabel;
+@property (weak, nonatomic) IBOutlet UITextField *fpsTextField;
 @property (weak, nonatomic) IBOutlet SkillMotionPlayer *framesPlayer;
 @property (weak, nonatomic) IBOutlet UISlider *progressControl;
-@property (weak, nonatomic) IBOutlet UISlider *fpsControl;
 
 @property (strong, nonatomic) NSDictionary *framesInfo;
 
@@ -31,7 +30,6 @@
 - (IBAction)progressControlSlided:(id)sender;
 - (IBAction)dismiss:(id)sender;
 - (IBAction)fpsChanged:(id)sender;
-- (IBAction)fpsControlUp:(id)sender;
 - (IBAction)playOrPause:(id)sender;
 - (IBAction)presentHitboxPopoverController:(id)sender;
 - (void)update;
@@ -139,15 +137,14 @@
     [self update];
 }
 
-- (IBAction)fpsChanged:(id)sender
-{
-    self.currentFramesPerSecond = self.fpsControl.value;
+- (IBAction)fpsChanged:(id)sender {
+    self.currentFramesPerSecond = self.fpsTextField.text.integerValue;
+    self.currentFramesPerSecond = MAX(self.currentFramesPerSecond, 0);
+    self.currentFramesPerSecond = MIN(self.currentFramesPerSecond, 60);
+    
     [[NSUserDefaults standardUserDefaults] setInteger:self.currentFramesPerSecond forKey:PreferredFramesPerSecondKey];
-    self.fpsLabel.text = [[NSString alloc] initWithFormat:@"fps:%lu", (unsigned long)self.currentFramesPerSecond];
-}
-
-- (IBAction)fpsControlUp:(id)sender
-{
+    self.fpsTextField.text = [[NSString alloc] initWithFormat:@"%lu", (unsigned long)self.currentFramesPerSecond];
+    
     if (self.playbackState == SkillMotionPlaybackStatePlaying) {
         [_playTimer invalidate];
         _playTimer = [NSTimer scheduledTimerWithTimeInterval:1.0 / self.currentFramesPerSecond target:self selector:@selector(playTimerFired:) userInfo:nil repeats:YES];
@@ -183,7 +180,8 @@
     NSDictionary *frameInfo = [self.framesInfo objectForKey:[NSString stringWithFormat:@"%03lu", (unsigned long)self.currentFrame]];
     
     [self.framesPlayer drawFrameImage:frameImage withFrameInfo:frameInfo];
-    self.currentFrameLabel.text = [[NSString alloc] initWithFormat:@"%03lu / %03lu", (unsigned long)self.currentFrame, self.numberOfFrames - 1];
+    self.currentFrameLabel.text = [[NSString alloc] initWithFormat:@"%03lu", (unsigned long)self.currentFrame];
+    self.totalFrameLabel.text = [[NSString alloc] initWithFormat:@"%03lu", self.numberOfFrames - 1];
     self.progressControl.value = self.currentFrame;
 }
 
@@ -214,13 +212,11 @@
 {
     self.isPreparedToPlay = NO;
     
-    self.downloadProgressLabel.text = @"下载准备中";
     self.downloadProgressView.progress = 0.0;
     
     self.currentFrame = 0;
     self.currentFramesPerSecond = [[NSUserDefaults standardUserDefaults] integerForKey:PreferredFramesPerSecondKey];
-    self.fpsControl.value = self.currentFramesPerSecond;
-    self.fpsLabel.text = [[NSString alloc] initWithFormat:@"fps:%lu", (unsigned long)self.currentFramesPerSecond];
+    self.fpsTextField.text = [[NSString alloc] initWithFormat:@"%lu", (unsigned long)self.currentFramesPerSecond];
     
     self.progressControl.userInteractionEnabled = NO;
     
@@ -349,6 +345,13 @@
     [self update];
 }
 
+#pragma mark - Text Field Delegate
+
+- (BOOL)textFieldShouldReturn:(UITextField *)textField {
+    [self.view endEditing:true];
+    return YES;
+}
+
 #pragma mark - Download Manager Delegate
 
 - (void)downloadManager:(DownloadManager *)downloadManager didFinishDownloadingJSONObject:(id)jsonObject atRelativePath:(NSString *)relativePath
@@ -356,8 +359,8 @@
     self.framesInfo = jsonObject;
     self.numberOfFrames = [self.framesInfo count];
     
-    self.downloadProgressLabel.text = [NSString stringWithFormat:@"0 / %lu", (unsigned long)self.numberOfFrames];
-    self.currentFrameLabel.text = [NSString stringWithFormat:@"000 / %03lu", self.numberOfFrames - 1];
+    self.currentFrameLabel.text = @"000";
+    self.totalFrameLabel.text = [[NSString alloc] initWithFormat:@"%03lu", self.numberOfFrames - 1];
     self.progressControl.maximumValue = self.numberOfFrames - 1;
     
     for (int i = 0; i < self.numberOfFrames; i++) {
@@ -370,8 +373,6 @@
 {
     [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:NO];
     
-    self.downloadProgressLabel.text = @"下载失败";
-    
     UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"无法连接到服务器" message:nil delegate:self cancelButtonTitle:@"取消" otherButtonTitles:@"确定", @"重试", nil];
     [alertView show];
 }
@@ -380,15 +381,13 @@
 {
     [_frameImages setObject:image forKey:relativePath];
     NSUInteger numberOfImagesDownloaded = [_frameImages count];
-
-    self.downloadProgressLabel.text = [NSString stringWithFormat:@"%lu / %lu", (unsigned long)numberOfImagesDownloaded, (unsigned long)self.numberOfFrames];
-    self.downloadProgressView.progress = 1.0 * numberOfImagesDownloaded / self.numberOfFrames;
+    
+    [self.downloadProgressView setProgress:1.0 * numberOfImagesDownloaded / self.numberOfFrames animated:YES];
     
     if (numberOfImagesDownloaded == self.numberOfFrames) {
         [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:NO];
         
-        self.navigationItem.titleView = nil;
-        self.navigationItem.title = self.title;
+        self.downloadProgressView.hidden = YES;
         
         self.progressControl.userInteractionEnabled = YES;
         
@@ -403,14 +402,12 @@
     [_frameImages setObject:[NSNull null] forKey:relativePath];
     NSUInteger numberOfImagesDownloaded = [_frameImages count];
     
-    self.downloadProgressLabel.text = [NSString stringWithFormat:@"%lu / %lu", (unsigned long)numberOfImagesDownloaded, (unsigned long)self.numberOfFrames];
-    self.downloadProgressView.progress = 1.0 * numberOfImagesDownloaded / self.numberOfFrames;
+    [self.downloadProgressView setProgress:1.0 * numberOfImagesDownloaded / self.numberOfFrames animated:YES];
     
     if (numberOfImagesDownloaded == self.numberOfFrames) {
         [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:NO];
         
-        self.navigationItem.titleView = nil;
-        self.navigationItem.title = self.title;
+        self.downloadProgressView.hidden = YES;
         
         self.progressControl.userInteractionEnabled = YES;
         

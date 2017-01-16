@@ -12,7 +12,7 @@ typedef enum SkillMotionPlaybackState {
 
 @protocol SkillMotionPlayerViewControllerDelegate;
 
-@interface SkillMotionPlayerViewController : UIViewController <DownloadManagerDelegate, UIAlertViewDelegate, UIPopoverPresentationControllerDelegate>
+@interface SkillMotionPlayerViewController : UIViewController <DownloadManagerDelegate, UITextFieldDelegate, UIAlertViewDelegate, UIPopoverPresentationControllerDelegate>
 {
     NSTimer *_playTimer;
     NSTimer *_seekingForwardTimer;
