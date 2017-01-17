@@ -26,8 +26,6 @@
 		EEA48CA31775E59F00351CAB /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEA48CA21775E59F00351CAB /* Security.framework */; };
 		EEA48CA51775E79000351CAB /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEA48CA41775E79000351CAB /* ImageIO.framework */; };
 		EEADB06C17FA72B3004E2F60 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EEADB06B17FA72B3004E2F60 /* Images.xcassets */; };
-		EEAF7FF517FFCCED003E67C6 /* iTunesArtwork in Resources */ = {isa = PBXBuildFile; fileRef = EEAF7FF317FFCCED003E67C6 /* iTunesArtwork */; };
-		EEAF7FF617FFCCED003E67C6 /* iTunesArtwork@2x in Resources */ = {isa = PBXBuildFile; fileRef = EEAF7FF417FFCCED003E67C6 /* iTunesArtwork@2x */; };
 		EEE27ACF176C1347008A41AB /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEE27ACE176C1347008A41AB /* UIKit.framework */; };
 		EEE27AD1176C1347008A41AB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEE27AD0176C1347008A41AB /* Foundation.framework */; };
 		EEE27AD3176C1347008A41AB /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEE27AD2176C1347008A41AB /* CoreGraphics.framework */; };
@@ -152,8 +150,6 @@
 		EEA48CA21775E59F00351CAB /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		EEA48CA41775E79000351CAB /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
 		EEADB06B17FA72B3004E2F60 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		EEAF7FF317FFCCED003E67C6 /* iTunesArtwork */ = {isa = PBXFileReference; lastKnownFileType = file; path = iTunesArtwork; sourceTree = "<group>"; };
-		EEAF7FF417FFCCED003E67C6 /* iTunesArtwork@2x */ = {isa = PBXFileReference; lastKnownFileType = file; path = "iTunesArtwork@2x"; sourceTree = "<group>"; };
 		EEE27ACB176C1347008A41AB /* i3rd.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = i3rd.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EEE27ACE176C1347008A41AB /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		EEE27AD0176C1347008A41AB /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -366,8 +362,6 @@
 		EEE27AD5176C1347008A41AB /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				EEAF7FF317FFCCED003E67C6 /* iTunesArtwork */,
-				EEAF7FF417FFCCED003E67C6 /* iTunesArtwork@2x */,
 				EEE27AD6176C1347008A41AB /* i3rd-Info.plist */,
 				EEE27AD7176C1347008A41AB /* InfoPlist.strings */,
 				EEE27ADA176C1347008A41AB /* main.m */,
@@ -573,7 +567,6 @@
 				EEE27BC5176C1653008A41AB /* ElenaBody@2x~iphone.png in Resources */,
 				EEE27BCA176C1653008A41AB /* GoukiBody@2x~ipad.png in Resources */,
 				EEE27BCB176C1653008A41AB /* GoukiBody@2x~iphone.png in Resources */,
-				EEAF7FF517FFCCED003E67C6 /* iTunesArtwork in Resources */,
 				EEE27BCE176C1653008A41AB /* HugoBody@2x~ipad.png in Resources */,
 				EEE27BCF176C1653008A41AB /* HugoBody@2x~iphone.png in Resources */,
 				EEE27BD2176C1653008A41AB /* IbukiBody@2x~ipad.png in Resources */,
@@ -629,7 +622,6 @@
 				EEE27C30176C1654008A41AB /* Gouki.plist in Resources */,
 				EEE27C31176C1654008A41AB /* Guide.plist in Resources */,
 				EEE27C32176C1654008A41AB /* Hugo.plist in Resources */,
-				EEAF7FF617FFCCED003E67C6 /* iTunesArtwork@2x in Resources */,
 				EEE27C33176C1654008A41AB /* Ibuki.plist in Resources */,
 				EEE27C34176C1654008A41AB /* Ken.plist in Resources */,
 				EEE27C35176C1654008A41AB /* Makoto.plist in Resources */,
