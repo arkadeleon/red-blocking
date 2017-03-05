@@ -36,7 +36,7 @@ static NSOperationQueue *_sharedQueue = nil;
 
 - (NSString *)dbankManualLinkBaseURL
 {
-    return @"http://leonandvane.date/apps/i3rd";
+    return @"https://leonandvane.date/apps/i3rd";
 }
 
 - (id)JSONObjectWithFileAtRelativePath:(NSString *)relativePath
