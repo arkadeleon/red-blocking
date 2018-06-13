@@ -3,7 +3,7 @@
 //  i3rd
 //
 //  Created by Leon Li on 2018/6/13.
-//  Copyright © 2018 pp. All rights reserved.
+//  Copyright © 2018 Leon & Vane. All rights reserved.
 //
 
 import UIKit

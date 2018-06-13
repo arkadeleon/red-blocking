@@ -14,14 +14,14 @@
 		04580D321A25CB1800A4A9B2 /* GuideMasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04580D131A25CB1800A4A9B2 /* GuideMasterViewController.m */; };
 		04580D341A25CB1800A4A9B2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04580D161A25CB1800A4A9B2 /* Main.storyboard */; };
 		04580D361A25CB1800A4A9B2 /* MoreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04580D191A25CB1800A4A9B2 /* MoreViewController.m */; };
-		04580D391A25CB1800A4A9B2 /* PropertyListBasedTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 04580D1F1A25CB1800A4A9B2 /* PropertyListBasedTableViewCell.m */; };
 		04580D3D1A25CB1800A4A9B2 /* PropertyListBasedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04580D271A25CB1800A4A9B2 /* PropertyListBasedViewController.m */; };
 		04580D3E1A25CB1800A4A9B2 /* SkillMotionPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 04580D291A25CB1800A4A9B2 /* SkillMotionPlayer.m */; };
 		04580D3F1A25CB1800A4A9B2 /* SkillMotionPlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04580D2B1A25CB1800A4A9B2 /* SkillMotionPlayerViewController.m */; };
-		04B655541A41B6EB008E308F /* Cell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04B655531A41B6EB008E308F /* Cell.xib */; };
+		04B655541A41B6EB008E308F /* PropertyListBasedTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04B655531A41B6EB008E308F /* PropertyListBasedTableViewCell.xib */; };
 		35375CAC20D0FE45004642CB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 35375CAB20D0FE45004642CB /* LaunchScreen.storyboard */; };
 		3546A89220D1024C002FEC38 /* UIColor+Integer.m in Sources */ = {isa = PBXBuildFile; fileRef = 3546A89120D1024C002FEC38 /* UIColor+Integer.m */; };
 		35B9241620D10B600081BD00 /* HitboxesConfigurationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35B9241520D10B600081BD00 /* HitboxesConfigurationViewController.swift */; };
+		35B9241820D115590081BD00 /* PropertyListBasedTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35B9241720D115590081BD00 /* PropertyListBasedTableViewCell.swift */; };
 		EE318CB5183E363E0081370B /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE318CB4183E363E0081370B /* AudioToolbox.framework */; };
 		EEA48CA31775E59F00351CAB /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEA48CA21775E59F00351CAB /* Security.framework */; };
 		EEA48CA51775E79000351CAB /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEA48CA41775E79000351CAB /* ImageIO.framework */; };
@@ -130,8 +130,6 @@
 		04580D161A25CB1800A4A9B2 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		04580D181A25CB1800A4A9B2 /* MoreViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MoreViewController.h; sourceTree = "<group>"; };
 		04580D191A25CB1800A4A9B2 /* MoreViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MoreViewController.m; sourceTree = "<group>"; };
-		04580D1E1A25CB1800A4A9B2 /* PropertyListBasedTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PropertyListBasedTableViewCell.h; sourceTree = "<group>"; };
-		04580D1F1A25CB1800A4A9B2 /* PropertyListBasedTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PropertyListBasedTableViewCell.m; sourceTree = "<group>"; };
 		04580D261A25CB1800A4A9B2 /* PropertyListBasedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PropertyListBasedViewController.h; sourceTree = "<group>"; };
 		04580D271A25CB1800A4A9B2 /* PropertyListBasedViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PropertyListBasedViewController.m; sourceTree = "<group>"; };
 		04580D281A25CB1800A4A9B2 /* SkillMotionPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SkillMotionPlayer.h; sourceTree = "<group>"; };
@@ -139,11 +137,12 @@
 		04580D2A1A25CB1800A4A9B2 /* SkillMotionPlayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SkillMotionPlayerViewController.h; sourceTree = "<group>"; };
 		04580D2B1A25CB1800A4A9B2 /* SkillMotionPlayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SkillMotionPlayerViewController.m; sourceTree = "<group>"; };
 		04580D2C1A25CB1800A4A9B2 /* UIColor+Integer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Integer.h"; sourceTree = "<group>"; };
-		04B655531A41B6EB008E308F /* Cell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Cell.xib; sourceTree = "<group>"; };
+		04B655531A41B6EB008E308F /* PropertyListBasedTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PropertyListBasedTableViewCell.xib; sourceTree = "<group>"; };
 		35375CAB20D0FE45004642CB /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3546A89120D1024C002FEC38 /* UIColor+Integer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Integer.m"; sourceTree = "<group>"; };
 		35B9241420D102890081BD00 /* GuideMasterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GuideMasterViewController.h; sourceTree = "<group>"; };
 		35B9241520D10B600081BD00 /* HitboxesConfigurationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HitboxesConfigurationViewController.swift; sourceTree = "<group>"; };
+		35B9241720D115590081BD00 /* PropertyListBasedTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertyListBasedTableViewCell.swift; sourceTree = "<group>"; };
 		88B6B3C31F2AD6AB00E31C39 /* i3rd-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "i3rd-Bridging-Header.h"; sourceTree = "<group>"; };
 		EE318CB4183E363E0081370B /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		EEA36C4617769AED0007E02F /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
@@ -279,8 +278,8 @@
 				35B9241520D10B600081BD00 /* HitboxesConfigurationViewController.swift */,
 				04580D181A25CB1800A4A9B2 /* MoreViewController.h */,
 				04580D191A25CB1800A4A9B2 /* MoreViewController.m */,
-				04580D1E1A25CB1800A4A9B2 /* PropertyListBasedTableViewCell.h */,
-				04580D1F1A25CB1800A4A9B2 /* PropertyListBasedTableViewCell.m */,
+				35B9241720D115590081BD00 /* PropertyListBasedTableViewCell.swift */,
+				04B655531A41B6EB008E308F /* PropertyListBasedTableViewCell.xib */,
 				04580D261A25CB1800A4A9B2 /* PropertyListBasedViewController.h */,
 				04580D271A25CB1800A4A9B2 /* PropertyListBasedViewController.m */,
 				04580D281A25CB1800A4A9B2 /* SkillMotionPlayer.h */,
@@ -349,7 +348,6 @@
 				04580D0B1A25CB1800A4A9B2 /* AppDelegate.m */,
 				35375CAB20D0FE45004642CB /* LaunchScreen.storyboard */,
 				04580D161A25CB1800A4A9B2 /* Main.storyboard */,
-				04B655531A41B6EB008E308F /* Cell.xib */,
 				3572AF8D20D1021F00C15871 /* Core */,
 				3546A89320D1025D002FEC38 /* UI */,
 				EEADB06B17FA72B3004E2F60 /* Images.xcassets */,
@@ -516,7 +514,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 0930;
-				ORGANIZATIONNAME = pp;
+				ORGANIZATIONNAME = "Leon & Vane";
 				TargetAttributes = {
 					EEE27ACA176C1347008A41AB = {
 						DevelopmentTeam = A47Q8ENB5Y;
@@ -627,7 +625,7 @@
 				EEE27C34176C1654008A41AB /* Ken.plist in Resources */,
 				EEE27C35176C1654008A41AB /* Makoto.plist in Resources */,
 				EEE27C37176C1654008A41AB /* Necro.plist in Resources */,
-				04B655541A41B6EB008E308F /* Cell.xib in Resources */,
+				04B655541A41B6EB008E308F /* PropertyListBasedTableViewCell.xib in Resources */,
 				EEE27C38176C1654008A41AB /* Oro.plist in Resources */,
 				EEE27C39176C1654008A41AB /* Q.plist in Resources */,
 				04580D341A25CB1800A4A9B2 /* Main.storyboard in Resources */,
@@ -648,6 +646,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				35B9241820D115590081BD00 /* PropertyListBasedTableViewCell.swift in Sources */,
 				04580D321A25CB1800A4A9B2 /* GuideMasterViewController.m in Sources */,
 				EEE27ADB176C1347008A41AB /* main.m in Sources */,
 				04580D3F1A25CB1800A4A9B2 /* SkillMotionPlayerViewController.m in Sources */,
@@ -660,7 +659,6 @@
 				04580D301A25CB1800A4A9B2 /* DownloadManager.m in Sources */,
 				04580D361A25CB1800A4A9B2 /* MoreViewController.m in Sources */,
 				04580D2F1A25CB1800A4A9B2 /* ApplicationDataManager.m in Sources */,
-				04580D391A25CB1800A4A9B2 /* PropertyListBasedTableViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

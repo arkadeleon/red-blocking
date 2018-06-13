@@ -1,6 +1,5 @@
 
 #import "PropertyListBasedViewController.h"
-#import "PropertyListBasedTableViewCell.h"
 
 NSString *const PropertyListBasedViewControllerSectionsKey = @"Sections";
 NSString *const PropertyListBasedViewControllerSectionTitleKey = @"SectionTitle";
@@ -19,7 +18,7 @@ NSString *const PropertyListBasedViewControllerPresentedKey = @"Presented";
     
     self.tableView.estimatedRowHeight = 44;
     self.tableView.rowHeight = UITableViewAutomaticDimension;
-    [self.tableView registerNib:[UINib nibWithNibName:@"Cell" bundle:nil] forCellReuseIdentifier:@"Cell"];
+    [self.tableView registerNib:[UINib nibWithNibName:@"PropertyListBasedTableViewCell" bundle:nil] forCellReuseIdentifier:@"PropertyListBasedTableViewCell"];
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -77,7 +76,7 @@ NSString *const PropertyListBasedViewControllerPresentedKey = @"Presented";
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    PropertyListBasedTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
+    PropertyListBasedTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"PropertyListBasedTableViewCell" forIndexPath:indexPath];
     [self configureCell:cell forRowAtIndexPath:indexPath];
     return cell;
 }
