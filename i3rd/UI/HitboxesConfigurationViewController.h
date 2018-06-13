@@ -1,4 +1,0 @@
-
-@interface HitboxesConfigurationViewController : UITableViewController
-
-@end

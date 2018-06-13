@@ -12,7 +12,6 @@
 		04580D301A25CB1800A4A9B2 /* DownloadManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 04580D0F1A25CB1800A4A9B2 /* DownloadManager.m */; };
 		04580D311A25CB1800A4A9B2 /* GuideDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04580D111A25CB1800A4A9B2 /* GuideDetailViewController.m */; };
 		04580D321A25CB1800A4A9B2 /* GuideMasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04580D131A25CB1800A4A9B2 /* GuideMasterViewController.m */; };
-		04580D331A25CB1800A4A9B2 /* HitboxesConfigurationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04580D151A25CB1800A4A9B2 /* HitboxesConfigurationViewController.m */; };
 		04580D341A25CB1800A4A9B2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04580D161A25CB1800A4A9B2 /* Main.storyboard */; };
 		04580D361A25CB1800A4A9B2 /* MoreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04580D191A25CB1800A4A9B2 /* MoreViewController.m */; };
 		04580D391A25CB1800A4A9B2 /* PropertyListBasedTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 04580D1F1A25CB1800A4A9B2 /* PropertyListBasedTableViewCell.m */; };
@@ -22,6 +21,7 @@
 		04B655541A41B6EB008E308F /* Cell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04B655531A41B6EB008E308F /* Cell.xib */; };
 		35375CAC20D0FE45004642CB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 35375CAB20D0FE45004642CB /* LaunchScreen.storyboard */; };
 		3546A89220D1024C002FEC38 /* UIColor+Integer.m in Sources */ = {isa = PBXBuildFile; fileRef = 3546A89120D1024C002FEC38 /* UIColor+Integer.m */; };
+		35B9241620D10B600081BD00 /* HitboxesConfigurationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35B9241520D10B600081BD00 /* HitboxesConfigurationViewController.swift */; };
 		EE318CB5183E363E0081370B /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE318CB4183E363E0081370B /* AudioToolbox.framework */; };
 		EEA48CA31775E59F00351CAB /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEA48CA21775E59F00351CAB /* Security.framework */; };
 		EEA48CA51775E79000351CAB /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEA48CA41775E79000351CAB /* ImageIO.framework */; };
@@ -127,8 +127,6 @@
 		04580D101A25CB1800A4A9B2 /* GuideDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GuideDetailViewController.h; sourceTree = "<group>"; };
 		04580D111A25CB1800A4A9B2 /* GuideDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GuideDetailViewController.m; sourceTree = "<group>"; };
 		04580D131A25CB1800A4A9B2 /* GuideMasterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GuideMasterViewController.m; sourceTree = "<group>"; };
-		04580D141A25CB1800A4A9B2 /* HitboxesConfigurationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HitboxesConfigurationViewController.h; sourceTree = "<group>"; };
-		04580D151A25CB1800A4A9B2 /* HitboxesConfigurationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HitboxesConfigurationViewController.m; sourceTree = "<group>"; };
 		04580D161A25CB1800A4A9B2 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		04580D181A25CB1800A4A9B2 /* MoreViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MoreViewController.h; sourceTree = "<group>"; };
 		04580D191A25CB1800A4A9B2 /* MoreViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MoreViewController.m; sourceTree = "<group>"; };
@@ -145,6 +143,7 @@
 		35375CAB20D0FE45004642CB /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3546A89120D1024C002FEC38 /* UIColor+Integer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Integer.m"; sourceTree = "<group>"; };
 		35B9241420D102890081BD00 /* GuideMasterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GuideMasterViewController.h; sourceTree = "<group>"; };
+		35B9241520D10B600081BD00 /* HitboxesConfigurationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HitboxesConfigurationViewController.swift; sourceTree = "<group>"; };
 		88B6B3C31F2AD6AB00E31C39 /* i3rd-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "i3rd-Bridging-Header.h"; sourceTree = "<group>"; };
 		EE318CB4183E363E0081370B /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		EEA36C4617769AED0007E02F /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
@@ -277,8 +276,7 @@
 				04580D111A25CB1800A4A9B2 /* GuideDetailViewController.m */,
 				35B9241420D102890081BD00 /* GuideMasterViewController.h */,
 				04580D131A25CB1800A4A9B2 /* GuideMasterViewController.m */,
-				04580D141A25CB1800A4A9B2 /* HitboxesConfigurationViewController.h */,
-				04580D151A25CB1800A4A9B2 /* HitboxesConfigurationViewController.m */,
+				35B9241520D10B600081BD00 /* HitboxesConfigurationViewController.swift */,
 				04580D181A25CB1800A4A9B2 /* MoreViewController.h */,
 				04580D191A25CB1800A4A9B2 /* MoreViewController.m */,
 				04580D1E1A25CB1800A4A9B2 /* PropertyListBasedTableViewCell.h */,
@@ -654,11 +652,11 @@
 				EEE27ADB176C1347008A41AB /* main.m in Sources */,
 				04580D3F1A25CB1800A4A9B2 /* SkillMotionPlayerViewController.m in Sources */,
 				04580D3E1A25CB1800A4A9B2 /* SkillMotionPlayer.m in Sources */,
-				04580D331A25CB1800A4A9B2 /* HitboxesConfigurationViewController.m in Sources */,
 				04580D311A25CB1800A4A9B2 /* GuideDetailViewController.m in Sources */,
 				3546A89220D1024C002FEC38 /* UIColor+Integer.m in Sources */,
 				04580D3D1A25CB1800A4A9B2 /* PropertyListBasedViewController.m in Sources */,
 				04580D2E1A25CB1800A4A9B2 /* AppDelegate.m in Sources */,
+				35B9241620D10B600081BD00 /* HitboxesConfigurationViewController.swift in Sources */,
 				04580D301A25CB1800A4A9B2 /* DownloadManager.m in Sources */,
 				04580D361A25CB1800A4A9B2 /* MoreViewController.m in Sources */,
 				04580D2F1A25CB1800A4A9B2 /* ApplicationDataManager.m in Sources */,
