@@ -21,9 +21,9 @@
 		04580D3F1A25CB1800A4A9B2 /* SkillMotionPlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04580D2B1A25CB1800A4A9B2 /* SkillMotionPlayerViewController.m */; };
 		04580D401A25CB1800A4A9B2 /* UIColor+Integer.m in Sources */ = {isa = PBXBuildFile; fileRef = 04580D2D1A25CB1800A4A9B2 /* UIColor+Integer.m */; };
 		04B655541A41B6EB008E308F /* Cell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04B655531A41B6EB008E308F /* Cell.xib */; };
+		35375CAC20D0FE45004642CB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 35375CAB20D0FE45004642CB /* LaunchScreen.storyboard */; };
 		88B6B3C51F2AD6AB00E31C39 /* Character.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88B6B3C41F2AD6AB00E31C39 /* Character.swift */; };
 		EE318CB5183E363E0081370B /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE318CB4183E363E0081370B /* AudioToolbox.framework */; };
-		EE84A1DA1A26213C001485B8 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = EE84A1D91A26213C001485B8 /* LaunchScreen.xib */; };
 		EEA48CA31775E59F00351CAB /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEA48CA21775E59F00351CAB /* Security.framework */; };
 		EEA48CA51775E79000351CAB /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEA48CA41775E79000351CAB /* ImageIO.framework */; };
 		EEADB06C17FA72B3004E2F60 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EEADB06B17FA72B3004E2F60 /* Images.xcassets */; };
@@ -145,10 +145,10 @@
 		04580D2C1A25CB1800A4A9B2 /* UIColor+Integer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Integer.h"; sourceTree = "<group>"; };
 		04580D2D1A25CB1800A4A9B2 /* UIColor+Integer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Integer.m"; sourceTree = "<group>"; };
 		04B655531A41B6EB008E308F /* Cell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Cell.xib; sourceTree = "<group>"; };
+		35375CAB20D0FE45004642CB /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		88B6B3C31F2AD6AB00E31C39 /* i3rd-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "i3rd-Bridging-Header.h"; sourceTree = "<group>"; };
 		88B6B3C41F2AD6AB00E31C39 /* Character.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Character.swift; sourceTree = "<group>"; };
 		EE318CB4183E363E0081370B /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
-		EE84A1D91A26213C001485B8 /* LaunchScreen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LaunchScreen.xib; sourceTree = "<group>"; };
 		EEA36C4617769AED0007E02F /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
 		EEA48CA21775E59F00351CAB /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		EEA48CA41775E79000351CAB /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
@@ -359,7 +359,7 @@
 			children = (
 				04580D0A1A25CB1800A4A9B2 /* AppDelegate.h */,
 				04580D0B1A25CB1800A4A9B2 /* AppDelegate.m */,
-				EE84A1D91A26213C001485B8 /* LaunchScreen.xib */,
+				35375CAB20D0FE45004642CB /* LaunchScreen.storyboard */,
 				04580D161A25CB1800A4A9B2 /* Main.storyboard */,
 				04B655531A41B6EB008E308F /* Cell.xib */,
 				88B6B3C21F2AD69500E31C39 /* Model */,
@@ -591,6 +591,7 @@
 				EEE27BDB176C1653008A41AB /* MakotoBody@2x~iphone.png in Resources */,
 				EEE27BDE176C1653008A41AB /* NecroBody@2x~ipad.png in Resources */,
 				EEE27BDF176C1653008A41AB /* NecroBody@2x~iphone.png in Resources */,
+				35375CAC20D0FE45004642CB /* LaunchScreen.storyboard in Resources */,
 				EEE27BE2176C1653008A41AB /* OroBody@2x~ipad.png in Resources */,
 				EEE27BE3176C1653008A41AB /* OroBody@2x~iphone.png in Resources */,
 				EEE27BE6176C1653008A41AB /* QBody@2x~ipad.png in Resources */,
@@ -620,7 +621,6 @@
 				EEE27C17176C1653008A41AB /* MakotoHead@2x.png in Resources */,
 				EEE27C19176C1653008A41AB /* NecroHead@2x.png in Resources */,
 				EEE27C1B176C1653008A41AB /* OroHead@2x.png in Resources */,
-				EE84A1DA1A26213C001485B8 /* LaunchScreen.xib in Resources */,
 				EEE27C1D176C1653008A41AB /* QHead@2x.png in Resources */,
 				EEE27C1F176C1653008A41AB /* RemyHead@2x.png in Resources */,
 				EEE27C21176C1653008A41AB /* RyuHead@2x.png in Resources */,
@@ -729,7 +729,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -764,7 +764,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -787,7 +787,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "i3rd/i3rd-Prefix.pch";
 				INFOPLIST_FILE = "i3rd/i3rd-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				OTHER_LDFLAGS = "-ObjC";
@@ -818,7 +818,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "i3rd/i3rd-Prefix.pch";
 				INFOPLIST_FILE = "i3rd/i3rd-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				OTHER_LDFLAGS = "-ObjC";
