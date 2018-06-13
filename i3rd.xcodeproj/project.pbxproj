@@ -19,10 +19,9 @@
 		04580D3D1A25CB1800A4A9B2 /* PropertyListBasedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04580D271A25CB1800A4A9B2 /* PropertyListBasedViewController.m */; };
 		04580D3E1A25CB1800A4A9B2 /* SkillMotionPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 04580D291A25CB1800A4A9B2 /* SkillMotionPlayer.m */; };
 		04580D3F1A25CB1800A4A9B2 /* SkillMotionPlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04580D2B1A25CB1800A4A9B2 /* SkillMotionPlayerViewController.m */; };
-		04580D401A25CB1800A4A9B2 /* UIColor+Integer.m in Sources */ = {isa = PBXBuildFile; fileRef = 04580D2D1A25CB1800A4A9B2 /* UIColor+Integer.m */; };
 		04B655541A41B6EB008E308F /* Cell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04B655531A41B6EB008E308F /* Cell.xib */; };
 		35375CAC20D0FE45004642CB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 35375CAB20D0FE45004642CB /* LaunchScreen.storyboard */; };
-		88B6B3C51F2AD6AB00E31C39 /* Character.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88B6B3C41F2AD6AB00E31C39 /* Character.swift */; };
+		3546A89220D1024C002FEC38 /* UIColor+Integer.m in Sources */ = {isa = PBXBuildFile; fileRef = 3546A89120D1024C002FEC38 /* UIColor+Integer.m */; };
 		EE318CB5183E363E0081370B /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE318CB4183E363E0081370B /* AudioToolbox.framework */; };
 		EEA48CA31775E59F00351CAB /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEA48CA21775E59F00351CAB /* Security.framework */; };
 		EEA48CA51775E79000351CAB /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEA48CA41775E79000351CAB /* ImageIO.framework */; };
@@ -127,7 +126,6 @@
 		04580D0F1A25CB1800A4A9B2 /* DownloadManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DownloadManager.m; sourceTree = "<group>"; };
 		04580D101A25CB1800A4A9B2 /* GuideDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GuideDetailViewController.h; sourceTree = "<group>"; };
 		04580D111A25CB1800A4A9B2 /* GuideDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GuideDetailViewController.m; sourceTree = "<group>"; };
-		04580D121A25CB1800A4A9B2 /* GuideMasterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GuideMasterViewController.h; sourceTree = "<group>"; };
 		04580D131A25CB1800A4A9B2 /* GuideMasterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GuideMasterViewController.m; sourceTree = "<group>"; };
 		04580D141A25CB1800A4A9B2 /* HitboxesConfigurationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HitboxesConfigurationViewController.h; sourceTree = "<group>"; };
 		04580D151A25CB1800A4A9B2 /* HitboxesConfigurationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HitboxesConfigurationViewController.m; sourceTree = "<group>"; };
@@ -143,11 +141,11 @@
 		04580D2A1A25CB1800A4A9B2 /* SkillMotionPlayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SkillMotionPlayerViewController.h; sourceTree = "<group>"; };
 		04580D2B1A25CB1800A4A9B2 /* SkillMotionPlayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SkillMotionPlayerViewController.m; sourceTree = "<group>"; };
 		04580D2C1A25CB1800A4A9B2 /* UIColor+Integer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Integer.h"; sourceTree = "<group>"; };
-		04580D2D1A25CB1800A4A9B2 /* UIColor+Integer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Integer.m"; sourceTree = "<group>"; };
 		04B655531A41B6EB008E308F /* Cell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Cell.xib; sourceTree = "<group>"; };
 		35375CAB20D0FE45004642CB /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		3546A89120D1024C002FEC38 /* UIColor+Integer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Integer.m"; sourceTree = "<group>"; };
+		35B9241420D102890081BD00 /* GuideMasterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GuideMasterViewController.h; sourceTree = "<group>"; };
 		88B6B3C31F2AD6AB00E31C39 /* i3rd-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "i3rd-Bridging-Header.h"; sourceTree = "<group>"; };
-		88B6B3C41F2AD6AB00E31C39 /* Character.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Character.swift; sourceTree = "<group>"; };
 		EE318CB4183E363E0081370B /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		EEA36C4617769AED0007E02F /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
 		EEA48CA21775E59F00351CAB /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
@@ -272,26 +270,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		04580D411A25CB8100A4A9B2 /* Core */ = {
+		3546A89320D1025D002FEC38 /* UI */ = {
 			isa = PBXGroup;
 			children = (
-				04580D0C1A25CB1800A4A9B2 /* ApplicationDataManager.h */,
-				04580D0D1A25CB1800A4A9B2 /* ApplicationDataManager.m */,
-				04580D0E1A25CB1800A4A9B2 /* DownloadManager.h */,
-				04580D0F1A25CB1800A4A9B2 /* DownloadManager.m */,
-				04580D2C1A25CB1800A4A9B2 /* UIColor+Integer.h */,
-				04580D2D1A25CB1800A4A9B2 /* UIColor+Integer.m */,
-			);
-			name = Core;
-			sourceTree = "<group>";
-		};
-		04580D421A25CB8E00A4A9B2 /* UI */ = {
-			isa = PBXGroup;
-			children = (
-				04580D121A25CB1800A4A9B2 /* GuideMasterViewController.h */,
-				04580D131A25CB1800A4A9B2 /* GuideMasterViewController.m */,
 				04580D101A25CB1800A4A9B2 /* GuideDetailViewController.h */,
 				04580D111A25CB1800A4A9B2 /* GuideDetailViewController.m */,
+				35B9241420D102890081BD00 /* GuideMasterViewController.h */,
+				04580D131A25CB1800A4A9B2 /* GuideMasterViewController.m */,
+				04580D141A25CB1800A4A9B2 /* HitboxesConfigurationViewController.h */,
+				04580D151A25CB1800A4A9B2 /* HitboxesConfigurationViewController.m */,
+				04580D181A25CB1800A4A9B2 /* MoreViewController.h */,
+				04580D191A25CB1800A4A9B2 /* MoreViewController.m */,
 				04580D1E1A25CB1800A4A9B2 /* PropertyListBasedTableViewCell.h */,
 				04580D1F1A25CB1800A4A9B2 /* PropertyListBasedTableViewCell.m */,
 				04580D261A25CB1800A4A9B2 /* PropertyListBasedViewController.h */,
@@ -300,20 +289,21 @@
 				04580D291A25CB1800A4A9B2 /* SkillMotionPlayer.m */,
 				04580D2A1A25CB1800A4A9B2 /* SkillMotionPlayerViewController.h */,
 				04580D2B1A25CB1800A4A9B2 /* SkillMotionPlayerViewController.m */,
-				04580D141A25CB1800A4A9B2 /* HitboxesConfigurationViewController.h */,
-				04580D151A25CB1800A4A9B2 /* HitboxesConfigurationViewController.m */,
-				04580D181A25CB1800A4A9B2 /* MoreViewController.h */,
-				04580D191A25CB1800A4A9B2 /* MoreViewController.m */,
 			);
-			name = UI;
+			path = UI;
 			sourceTree = "<group>";
 		};
-		88B6B3C21F2AD69500E31C39 /* Model */ = {
+		3572AF8D20D1021F00C15871 /* Core */ = {
 			isa = PBXGroup;
 			children = (
-				88B6B3C41F2AD6AB00E31C39 /* Character.swift */,
+				04580D0C1A25CB1800A4A9B2 /* ApplicationDataManager.h */,
+				04580D0D1A25CB1800A4A9B2 /* ApplicationDataManager.m */,
+				04580D0E1A25CB1800A4A9B2 /* DownloadManager.h */,
+				04580D0F1A25CB1800A4A9B2 /* DownloadManager.m */,
+				04580D2C1A25CB1800A4A9B2 /* UIColor+Integer.h */,
+				3546A89120D1024C002FEC38 /* UIColor+Integer.m */,
 			);
-			name = Model;
+			path = Core;
 			sourceTree = "<group>";
 		};
 		EEE27AC2176C1347008A41AB = {
@@ -362,9 +352,8 @@
 				35375CAB20D0FE45004642CB /* LaunchScreen.storyboard */,
 				04580D161A25CB1800A4A9B2 /* Main.storyboard */,
 				04B655531A41B6EB008E308F /* Cell.xib */,
-				88B6B3C21F2AD69500E31C39 /* Model */,
-				04580D411A25CB8100A4A9B2 /* Core */,
-				04580D421A25CB8E00A4A9B2 /* UI */,
+				3572AF8D20D1021F00C15871 /* Core */,
+				3546A89320D1025D002FEC38 /* UI */,
 				EEADB06B17FA72B3004E2F60 /* Images.xcassets */,
 				EEE27AD5176C1347008A41AB /* Supporting Files */,
 			);
@@ -667,12 +656,11 @@
 				04580D3E1A25CB1800A4A9B2 /* SkillMotionPlayer.m in Sources */,
 				04580D331A25CB1800A4A9B2 /* HitboxesConfigurationViewController.m in Sources */,
 				04580D311A25CB1800A4A9B2 /* GuideDetailViewController.m in Sources */,
+				3546A89220D1024C002FEC38 /* UIColor+Integer.m in Sources */,
 				04580D3D1A25CB1800A4A9B2 /* PropertyListBasedViewController.m in Sources */,
 				04580D2E1A25CB1800A4A9B2 /* AppDelegate.m in Sources */,
 				04580D301A25CB1800A4A9B2 /* DownloadManager.m in Sources */,
-				88B6B3C51F2AD6AB00E31C39 /* Character.swift in Sources */,
 				04580D361A25CB1800A4A9B2 /* MoreViewController.m in Sources */,
-				04580D401A25CB1800A4A9B2 /* UIColor+Integer.m in Sources */,
 				04580D2F1A25CB1800A4A9B2 /* ApplicationDataManager.m in Sources */,
 				04580D391A25CB1800A4A9B2 /* PropertyListBasedTableViewCell.m in Sources */,
 			);
