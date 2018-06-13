@@ -21,6 +21,7 @@
 		04580D3F1A25CB1800A4A9B2 /* SkillMotionPlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04580D2B1A25CB1800A4A9B2 /* SkillMotionPlayerViewController.m */; };
 		04580D401A25CB1800A4A9B2 /* UIColor+Integer.m in Sources */ = {isa = PBXBuildFile; fileRef = 04580D2D1A25CB1800A4A9B2 /* UIColor+Integer.m */; };
 		04B655541A41B6EB008E308F /* Cell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04B655531A41B6EB008E308F /* Cell.xib */; };
+		88B6B3C51F2AD6AB00E31C39 /* Character.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88B6B3C41F2AD6AB00E31C39 /* Character.swift */; };
 		EE318CB5183E363E0081370B /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE318CB4183E363E0081370B /* AudioToolbox.framework */; };
 		EE84A1DA1A26213C001485B8 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = EE84A1D91A26213C001485B8 /* LaunchScreen.xib */; };
 		EEA48CA31775E59F00351CAB /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEA48CA21775E59F00351CAB /* Security.framework */; };
@@ -144,6 +145,8 @@
 		04580D2C1A25CB1800A4A9B2 /* UIColor+Integer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Integer.h"; sourceTree = "<group>"; };
 		04580D2D1A25CB1800A4A9B2 /* UIColor+Integer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Integer.m"; sourceTree = "<group>"; };
 		04B655531A41B6EB008E308F /* Cell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Cell.xib; sourceTree = "<group>"; };
+		88B6B3C31F2AD6AB00E31C39 /* i3rd-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "i3rd-Bridging-Header.h"; sourceTree = "<group>"; };
+		88B6B3C41F2AD6AB00E31C39 /* Character.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Character.swift; sourceTree = "<group>"; };
 		EE318CB4183E363E0081370B /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		EE84A1D91A26213C001485B8 /* LaunchScreen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LaunchScreen.xib; sourceTree = "<group>"; };
 		EEA36C4617769AED0007E02F /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
@@ -305,6 +308,14 @@
 			name = UI;
 			sourceTree = "<group>";
 		};
+		88B6B3C21F2AD69500E31C39 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				88B6B3C41F2AD6AB00E31C39 /* Character.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
 		EEE27AC2176C1347008A41AB = {
 			isa = PBXGroup;
 			children = (
@@ -351,6 +362,7 @@
 				EE84A1D91A26213C001485B8 /* LaunchScreen.xib */,
 				04580D161A25CB1800A4A9B2 /* Main.storyboard */,
 				04B655531A41B6EB008E308F /* Cell.xib */,
+				88B6B3C21F2AD69500E31C39 /* Model */,
 				04580D411A25CB8100A4A9B2 /* Core */,
 				04580D421A25CB8E00A4A9B2 /* UI */,
 				EEADB06B17FA72B3004E2F60 /* Images.xcassets */,
@@ -362,6 +374,7 @@
 		EEE27AD5176C1347008A41AB /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				88B6B3C31F2AD6AB00E31C39 /* i3rd-Bridging-Header.h */,
 				EEE27AD6176C1347008A41AB /* i3rd-Info.plist */,
 				EEE27AD7176C1347008A41AB /* InfoPlist.strings */,
 				EEE27ADA176C1347008A41AB /* main.m */,
@@ -520,6 +533,7 @@
 				TargetAttributes = {
 					EEE27ACA176C1347008A41AB = {
 						DevelopmentTeam = A47Q8ENB5Y;
+						LastSwiftMigration = 0830;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.ApplicationGroups.iOS = {
@@ -656,6 +670,7 @@
 				04580D3D1A25CB1800A4A9B2 /* PropertyListBasedViewController.m in Sources */,
 				04580D2E1A25CB1800A4A9B2 /* AppDelegate.m in Sources */,
 				04580D301A25CB1800A4A9B2 /* DownloadManager.m in Sources */,
+				88B6B3C51F2AD6AB00E31C39 /* Character.swift in Sources */,
 				04580D361A25CB1800A4A9B2 /* MoreViewController.m in Sources */,
 				04580D401A25CB1800A4A9B2 /* UIColor+Integer.m in Sources */,
 				04580D2F1A25CB1800A4A9B2 /* ApplicationDataManager.m in Sources */,
@@ -765,16 +780,24 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer: LI JUNLIN (UC4Q2BNNGH)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = A47Q8ENB5Y;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "i3rd/i3rd-Prefix.pch";
 				INFOPLIST_FILE = "i3rd/i3rd-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = com.studiopp.i3rd;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "i3rd/i3rd-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
@@ -788,16 +811,23 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer: LI JUNLIN (UC4Q2BNNGH)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = A47Q8ENB5Y;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "i3rd/i3rd-Prefix.pch";
 				INFOPLIST_FILE = "i3rd/i3rd-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = com.studiopp.i3rd;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "i3rd/i3rd-Bridging-Header.h";
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
