@@ -145,7 +145,6 @@
 		EEE27AD2176C1347008A41AB /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		EEE27AD6176C1347008A41AB /* i3rd-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "i3rd-Info.plist"; sourceTree = "<group>"; };
 		EEE27AD8176C1347008A41AB /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		EEE27ADC176C1347008A41AB /* i3rd-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "i3rd-Prefix.pch"; sourceTree = "<group>"; };
 		EEE27AEB176C1424008A41AB /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		EEE27AED176C1430008A41AB /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		EEE27AEF176C1457008A41AB /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
@@ -230,7 +229,6 @@
 		EEE27B9E176C1653008A41AB /* Urien.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Urien.plist; sourceTree = "<group>"; };
 		EEE27B9F176C1653008A41AB /* Yang.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Yang.plist; sourceTree = "<group>"; };
 		EEE27BA0176C1653008A41AB /* Yun.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Yun.plist; sourceTree = "<group>"; };
-		EEE27C76176C1FAB008A41AB /* i3rd.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = i3rd.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -342,8 +340,6 @@
 				88B6B3C31F2AD6AB00E31C39 /* i3rd-Bridging-Header.h */,
 				EEE27AD6176C1347008A41AB /* i3rd-Info.plist */,
 				EEE27AD7176C1347008A41AB /* InfoPlist.strings */,
-				EEE27ADC176C1347008A41AB /* i3rd-Prefix.pch */,
-				EEE27C76176C1FAB008A41AB /* i3rd.entitlements */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -764,7 +760,7 @@
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "i3rd/i3rd-Prefix.pch";
+				GCC_PREFIX_HEADER = "";
 				INFOPLIST_FILE = "i3rd/i3rd-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -796,7 +792,7 @@
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "i3rd/i3rd-Prefix.pch";
+				GCC_PREFIX_HEADER = "";
 				INFOPLIST_FILE = "i3rd/i3rd-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

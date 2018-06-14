@@ -18,10 +18,11 @@ class GuideDetailViewController: PropertyListBasedViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-//        let tableViewBackgroundView = UIView(frame: tableView.bounds)
-//        tableViewBackgroundView.backgroundColor = .clear
-//        tableView.backgroundView = tableViewBackgroundView
-//        tableView.backgroundColor = .clear
+        let tableViewBackgroundView = UIView(frame: tableView.bounds)
+        tableViewBackgroundView.backgroundColor = .clear
+        tableView.backgroundView = tableViewBackgroundView
+        tableView.backgroundColor = .clear
+        view.backgroundColor = .clear
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

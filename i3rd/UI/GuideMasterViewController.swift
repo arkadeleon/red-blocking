@@ -62,6 +62,7 @@ class GuideMasterViewController: PropertyListBasedViewController {
             let rowInfo = rows?[indexPath.row] as? NSDictionary
             let rowTitle = rowInfo?[PropertyListBasedViewControllerRowTitleKey] as? String
             let next = rowInfo?[PropertyListBasedViewControllerNextKey] as? String
+            let nextBackgroundImage = rowInfo?[GuideMasterViewControllerNextBackgroundImageKey] as? String
             
             let detailPropertyListURL = Bundle.main.bundleURL.appendingPathComponent(next!)
             let detailPropertyListInfo = NSDictionary(contentsOf: detailPropertyListURL)
@@ -70,6 +71,8 @@ class GuideMasterViewController: PropertyListBasedViewController {
             let detailViewController = (segue.destination as! UINavigationController).topViewController as! GuideDetailViewController
             detailViewController.title = rowTitle
             detailViewController.sections = detailSections!
+            
+            bodyView.image = UIImage(named: nextBackgroundImage!)
         }
     }
     
