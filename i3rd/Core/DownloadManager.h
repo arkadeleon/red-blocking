@@ -1,4 +1,6 @@
 
+#import <UIKit/UIKit.h>
+
 @protocol DownloadManagerDelegate;
 
 @interface DownloadManager : NSObject
