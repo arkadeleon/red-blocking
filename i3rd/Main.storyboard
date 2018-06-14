@@ -426,7 +426,7 @@
         <!--Guide Detail View Controller-->
         <scene sceneID="ccw-JI-azm">
             <objects>
-                <viewController storyboardIdentifier="GuideDetailViewController" id="kmA-L4-zqk" customClass="GuideDetailViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="GuideDetailViewController" id="kmA-L4-zqk" customClass="GuideDetailViewController" customModule="i3rd" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="s1D-5m-aZd"/>
                         <viewControllerLayoutGuide type="bottom" id="Ea1-dE-7nR"/>

@@ -1,6 +1,5 @@
 
 #import "AppDelegate.h"
-#import "GuideDetailViewController.h"
 #import "ApplicationDataManager.h"
 
 @implementation AppDelegate

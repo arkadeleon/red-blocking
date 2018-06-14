@@ -10,13 +10,13 @@
 		04580D2E1A25CB1800A4A9B2 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 04580D0B1A25CB1800A4A9B2 /* AppDelegate.m */; };
 		04580D2F1A25CB1800A4A9B2 /* ApplicationDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 04580D0D1A25CB1800A4A9B2 /* ApplicationDataManager.m */; };
 		04580D301A25CB1800A4A9B2 /* DownloadManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 04580D0F1A25CB1800A4A9B2 /* DownloadManager.m */; };
-		04580D311A25CB1800A4A9B2 /* GuideDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04580D111A25CB1800A4A9B2 /* GuideDetailViewController.m */; };
 		04580D341A25CB1800A4A9B2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04580D161A25CB1800A4A9B2 /* Main.storyboard */; };
 		04580D361A25CB1800A4A9B2 /* MoreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04580D191A25CB1800A4A9B2 /* MoreViewController.m */; };
 		04580D3D1A25CB1800A4A9B2 /* PropertyListBasedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04580D271A25CB1800A4A9B2 /* PropertyListBasedViewController.m */; };
 		04580D3E1A25CB1800A4A9B2 /* SkillMotionPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 04580D291A25CB1800A4A9B2 /* SkillMotionPlayer.m */; };
 		04580D3F1A25CB1800A4A9B2 /* SkillMotionPlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04580D2B1A25CB1800A4A9B2 /* SkillMotionPlayerViewController.m */; };
 		04B655541A41B6EB008E308F /* PropertyListBasedTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04B655531A41B6EB008E308F /* PropertyListBasedTableViewCell.xib */; };
+		3505351520D1FDA600078847 /* GuideDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3505351420D1FDA600078847 /* GuideDetailViewController.swift */; };
 		35375CAC20D0FE45004642CB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 35375CAB20D0FE45004642CB /* LaunchScreen.storyboard */; };
 		3546A89220D1024C002FEC38 /* UIColor+Integer.m in Sources */ = {isa = PBXBuildFile; fileRef = 3546A89120D1024C002FEC38 /* UIColor+Integer.m */; };
 		35B9241620D10B600081BD00 /* HitboxesConfigurationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35B9241520D10B600081BD00 /* HitboxesConfigurationViewController.swift */; };
@@ -124,8 +124,6 @@
 		04580D0D1A25CB1800A4A9B2 /* ApplicationDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ApplicationDataManager.m; sourceTree = "<group>"; };
 		04580D0E1A25CB1800A4A9B2 /* DownloadManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DownloadManager.h; sourceTree = "<group>"; };
 		04580D0F1A25CB1800A4A9B2 /* DownloadManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DownloadManager.m; sourceTree = "<group>"; };
-		04580D101A25CB1800A4A9B2 /* GuideDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GuideDetailViewController.h; sourceTree = "<group>"; };
-		04580D111A25CB1800A4A9B2 /* GuideDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GuideDetailViewController.m; sourceTree = "<group>"; };
 		04580D161A25CB1800A4A9B2 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		04580D181A25CB1800A4A9B2 /* MoreViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MoreViewController.h; sourceTree = "<group>"; };
 		04580D191A25CB1800A4A9B2 /* MoreViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MoreViewController.m; sourceTree = "<group>"; };
@@ -137,6 +135,7 @@
 		04580D2B1A25CB1800A4A9B2 /* SkillMotionPlayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SkillMotionPlayerViewController.m; sourceTree = "<group>"; };
 		04580D2C1A25CB1800A4A9B2 /* UIColor+Integer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Integer.h"; sourceTree = "<group>"; };
 		04B655531A41B6EB008E308F /* PropertyListBasedTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PropertyListBasedTableViewCell.xib; sourceTree = "<group>"; };
+		3505351420D1FDA600078847 /* GuideDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GuideDetailViewController.swift; sourceTree = "<group>"; };
 		35375CAB20D0FE45004642CB /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3546A89120D1024C002FEC38 /* UIColor+Integer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Integer.m"; sourceTree = "<group>"; };
 		35B9241520D10B600081BD00 /* HitboxesConfigurationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HitboxesConfigurationViewController.swift; sourceTree = "<group>"; };
@@ -271,8 +270,7 @@
 			isa = PBXGroup;
 			children = (
 				35B9241920D1194B0081BD00 /* GuideMasterViewController.swift */,
-				04580D101A25CB1800A4A9B2 /* GuideDetailViewController.h */,
-				04580D111A25CB1800A4A9B2 /* GuideDetailViewController.m */,
+				3505351420D1FDA600078847 /* GuideDetailViewController.swift */,
 				35B9241520D10B600081BD00 /* HitboxesConfigurationViewController.swift */,
 				04580D181A25CB1800A4A9B2 /* MoreViewController.h */,
 				04580D191A25CB1800A4A9B2 /* MoreViewController.m */,
@@ -649,7 +647,7 @@
 				35B9241A20D1194B0081BD00 /* GuideMasterViewController.swift in Sources */,
 				04580D3F1A25CB1800A4A9B2 /* SkillMotionPlayerViewController.m in Sources */,
 				04580D3E1A25CB1800A4A9B2 /* SkillMotionPlayer.m in Sources */,
-				04580D311A25CB1800A4A9B2 /* GuideDetailViewController.m in Sources */,
+				3505351520D1FDA600078847 /* GuideDetailViewController.swift in Sources */,
 				3546A89220D1024C002FEC38 /* UIColor+Integer.m in Sources */,
 				04580D3D1A25CB1800A4A9B2 /* PropertyListBasedViewController.m in Sources */,
 				04580D2E1A25CB1800A4A9B2 /* AppDelegate.m in Sources */,

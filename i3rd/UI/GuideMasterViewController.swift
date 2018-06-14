@@ -11,7 +11,6 @@ import UIKit
 let GuideMasterViewControllerNextBackgroundImageKey = "NextBackgroundImage"
 
 class GuideMasterViewController: PropertyListBasedViewController {
-    
     lazy var bodyView: UIImageView = {
         if UIDevice.current.userInterfaceIdiom == .phone {
             let statusBarHeight = UIApplication.shared.statusBarFrame.height
@@ -103,7 +102,7 @@ class GuideMasterViewController: PropertyListBasedViewController {
     override func encodeRestorableState(with coder: NSCoder) {
         super.encodeRestorableState(with: coder)
         
-        coder.encodeConditionalObject(tableView.indexPathForSelectedRow, forKey: GuideMasterViewControllerSelectedIndexPathKey)
+        coder.encode(tableView.indexPathForSelectedRow, forKey: GuideMasterViewControllerSelectedIndexPathKey)
     }
     
     override func decodeRestorableState(with coder: NSCoder) {
