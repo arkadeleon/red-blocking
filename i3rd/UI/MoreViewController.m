@@ -1,6 +1,6 @@
 
 #import "MoreViewController.h"
-#import "DownloadManager.h"
+#import "i3rd-Swift.h"
 
 const NSInteger FeedbackCellSection = 0;
 const NSInteger FeedbackCellRow = 0;
@@ -24,10 +24,10 @@ const NSInteger DeleteDocumentsAndDataViewTag = 1000;
 
 - (BOOL)deleteDocumentsAndData
 {
-    DownloadManager *downloadManager = [DownloadManager defaultManager];
-    NSString *framesDataPath = [[downloadManager applicationDocumentsDirectory] stringByAppendingPathComponent:@"motions"];
+    DownloadManager *downloadManager = DownloadManager.shared;
+    NSURL *framesDataPath = [[downloadManager localBaseURL] URLByAppendingPathComponent:@"motions"];
     NSFileManager *fileManager = [NSFileManager defaultManager];
-    return [fileManager removeItemAtPath:framesDataPath error:nil];
+    return [fileManager removeItemAtURL:framesDataPath error:nil];
 }
 
 #pragma mark - Table View Delegate

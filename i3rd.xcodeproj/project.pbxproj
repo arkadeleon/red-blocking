@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		04580D301A25CB1800A4A9B2 /* DownloadManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 04580D0F1A25CB1800A4A9B2 /* DownloadManager.m */; };
 		04580D341A25CB1800A4A9B2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04580D161A25CB1800A4A9B2 /* Main.storyboard */; };
 		04580D361A25CB1800A4A9B2 /* MoreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04580D191A25CB1800A4A9B2 /* MoreViewController.m */; };
 		04B655541A41B6EB008E308F /* PropertyListBasedTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04B655531A41B6EB008E308F /* PropertyListBasedTableViewCell.xib */; };
@@ -19,6 +18,7 @@
 		3566755320D2692F00DD26A4 /* UIColor+Integer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3566755220D2692F00DD26A4 /* UIColor+Integer.swift */; };
 		3566755520D26A2800DD26A4 /* ApplicationDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3566755420D26A2800DD26A4 /* ApplicationDataManager.swift */; };
 		3566755720D26A4D00DD26A4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3566755620D26A4D00DD26A4 /* AppDelegate.swift */; };
+		3566755920D2702C00DD26A4 /* DownloadManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3566755820D2702C00DD26A4 /* DownloadManager.swift */; };
 		35B9241620D10B600081BD00 /* HitboxesConfigurationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35B9241520D10B600081BD00 /* HitboxesConfigurationViewController.swift */; };
 		35B9241820D115590081BD00 /* PropertyListBasedTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35B9241720D115590081BD00 /* PropertyListBasedTableViewCell.swift */; };
 		35B9241A20D1194B0081BD00 /* GuideMasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35B9241920D1194B0081BD00 /* GuideMasterViewController.swift */; };
@@ -117,8 +117,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		04580D0E1A25CB1800A4A9B2 /* DownloadManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DownloadManager.h; sourceTree = "<group>"; };
-		04580D0F1A25CB1800A4A9B2 /* DownloadManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DownloadManager.m; sourceTree = "<group>"; };
 		04580D161A25CB1800A4A9B2 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		04580D181A25CB1800A4A9B2 /* MoreViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MoreViewController.h; sourceTree = "<group>"; };
 		04580D191A25CB1800A4A9B2 /* MoreViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MoreViewController.m; sourceTree = "<group>"; };
@@ -131,6 +129,7 @@
 		3566755220D2692F00DD26A4 /* UIColor+Integer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Integer.swift"; sourceTree = "<group>"; };
 		3566755420D26A2800DD26A4 /* ApplicationDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationDataManager.swift; sourceTree = "<group>"; };
 		3566755620D26A4D00DD26A4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		3566755820D2702C00DD26A4 /* DownloadManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadManager.swift; sourceTree = "<group>"; };
 		35B9241520D10B600081BD00 /* HitboxesConfigurationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HitboxesConfigurationViewController.swift; sourceTree = "<group>"; };
 		35B9241720D115590081BD00 /* PropertyListBasedTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertyListBasedTableViewCell.swift; sourceTree = "<group>"; };
 		35B9241920D1194B0081BD00 /* GuideMasterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuideMasterViewController.swift; sourceTree = "<group>"; };
@@ -279,8 +278,7 @@
 			isa = PBXGroup;
 			children = (
 				3566755420D26A2800DD26A4 /* ApplicationDataManager.swift */,
-				04580D0E1A25CB1800A4A9B2 /* DownloadManager.h */,
-				04580D0F1A25CB1800A4A9B2 /* DownloadManager.m */,
+				3566755820D2702C00DD26A4 /* DownloadManager.swift */,
 				3566755220D2692F00DD26A4 /* UIColor+Integer.swift */,
 			);
 			path = Core;
@@ -629,6 +627,7 @@
 			files = (
 				35B9241820D115590081BD00 /* PropertyListBasedTableViewCell.swift in Sources */,
 				3505351720D20D2E00078847 /* PropertyListBasedViewController.swift in Sources */,
+				3566755920D2702C00DD26A4 /* DownloadManager.swift in Sources */,
 				3566755720D26A4D00DD26A4 /* AppDelegate.swift in Sources */,
 				35B9241A20D1194B0081BD00 /* GuideMasterViewController.swift in Sources */,
 				3505351520D1FDA600078847 /* GuideDetailViewController.swift in Sources */,
@@ -636,7 +635,6 @@
 				3566755320D2692F00DD26A4 /* UIColor+Integer.swift in Sources */,
 				3566755520D26A2800DD26A4 /* ApplicationDataManager.swift in Sources */,
 				35B9241620D10B600081BD00 /* HitboxesConfigurationViewController.swift in Sources */,
-				04580D301A25CB1800A4A9B2 /* DownloadManager.m in Sources */,
 				3505351920D21AC300078847 /* SkillMotionPlayerViewController.swift in Sources */,
 				04580D361A25CB1800A4A9B2 /* MoreViewController.m in Sources */,
 			);

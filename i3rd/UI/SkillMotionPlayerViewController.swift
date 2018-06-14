@@ -109,8 +109,8 @@ class SkillMotionPlayerViewController: UIViewController {
         delegate?.skillMotionPlayerViewControllerWillDismiss?(self)
         
         dismiss(animated: true) { [unowned self] in
-            DownloadManager.default()?.delegate = nil
-            DownloadManager.sharedQueue()?.cancelAllOperations()
+            DownloadManager.shared.delegate = nil
+            DownloadManager.sharedQueue.cancelAllOperations()
             self.playTimer?.invalidate()
             self.seekingForwardTimer?.invalidate()
             self.seekingBackwardTimer?.invalidate()
@@ -212,10 +212,10 @@ class SkillMotionPlayerViewController: UIViewController {
         
         UIApplication.shared.isNetworkActivityIndicatorVisible = true
         
-        DownloadManager.default()?.delegate = self
+        DownloadManager.shared.delegate = self
         
         let jsonFilePath = String(format: "motions/%@/%@/%@_%@.json", characterCode, skillCode, characterCode, skillCode)
-        DownloadManager.default()?.downloadJSONObjectWithFile(atRelativePath: jsonFilePath)
+        DownloadManager.shared.downloadJSONObjectWithFileAtRelativePath(jsonFilePath)
     }
     
     func play() {
@@ -333,7 +333,7 @@ extension SkillMotionPlayerViewController: UIPopoverPresentationControllerDelega
 }
 
 extension SkillMotionPlayerViewController: DownloadManagerDelegate {
-    func downloadManager(_ downloadManager: DownloadManager!, didFinishDownloadingJSONObject jsonObject: Any!, atRelativePath relativePath: String!) {
+    func downloadManager(_ downloadManager: DownloadManager, didFinishDownloadingJSONObject jsonObject: Any, atRelativePath relativePath: String) {
         framesInfo = jsonObject as! NSDictionary
         numberOfFrames = framesInfo.count
         
@@ -343,11 +343,11 @@ extension SkillMotionPlayerViewController: DownloadManagerDelegate {
         
         for i in 0..<numberOfFrames {
             let imageFilePath = String(format: "motions/%@/%@/%@_%@_%03d.png", characterCode, skillCode, characterCode, skillCode, i)
-            downloadManager.downloadImageWithFile(atRelativePath: imageFilePath)
+            downloadManager.downloadImageWithFileAtRelativePath(imageFilePath)
         }
     }
     
-    func downloadManager(_ downloadManager: DownloadManager!, didFailToDownloadJSONObjectAtRelativePath relativePath: String!) {
+    func downloadManager(_ downloadManager: DownloadManager, didFailToDownloadJSONObjectAtRelativePath relativePath: String) {
         UIApplication.shared.isNetworkActivityIndicatorVisible = false
         
         let alert = UIAlertController(title: "无法连接到服务器", message: nil, preferredStyle: .alert)
@@ -361,7 +361,7 @@ extension SkillMotionPlayerViewController: DownloadManagerDelegate {
         present(alert, animated: true, completion: nil)
     }
     
-    func downloadManager(_ downloadManager: DownloadManager!, didFinishDownloadingImage image: UIImage!, atRelativePath relativePath: String!) {
+    func downloadManager(_ downloadManager: DownloadManager, didFinishDownloadingImage image: UIImage, atRelativePath relativePath: String) {
         frameImages[relativePath] = image
         let numberOfImagesDownloaded = frameImages.count
         
@@ -380,7 +380,7 @@ extension SkillMotionPlayerViewController: DownloadManagerDelegate {
         }
     }
     
-    func downloadManager(_ downloadManager: DownloadManager!, didFailToDownloadImageAtRelativePath relativePath: String!) {
+    func downloadManager(_ downloadManager: DownloadManager, didFailToDownloadImageAtRelativePath relativePath: String) {
         frameImages[relativePath] = NSNull()
         let numberOfImagesDownloaded = frameImages.count
         
