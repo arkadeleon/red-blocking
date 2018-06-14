@@ -4,3 +4,5 @@
 
 #import "UIColor+Integer.h"
 #import "ApplicationDataManager.h"
+#import "PropertyListBasedViewController.h"
+#import "GuideDetailViewController.h"

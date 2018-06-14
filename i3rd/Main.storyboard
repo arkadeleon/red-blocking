@@ -104,7 +104,7 @@
         <!--Guide Master View Controller-->
         <scene sceneID="wnl-OD-KEG">
             <objects>
-                <viewController id="1q5-Ey-k3I" customClass="GuideMasterViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="GuideMasterViewController" id="1q5-Ey-k3I" customClass="GuideMasterViewController" customModule="i3rd" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Jkp-zL-1pN"/>
                         <viewControllerLayoutGuide type="bottom" id="XjJ-7w-AkW"/>
