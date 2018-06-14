@@ -34,8 +34,8 @@ class GuideDetailViewController: PropertyListBasedViewController {
             
             let player = (segue.destination as! UINavigationController).topViewController as! SkillMotionPlayerViewController
             player.delegate = self
-            player.characterCode = presented?[GuideDetailViewControllerCharacterCodeKey] as? String
-            player.skillCode = presented?[GuideDetailViewControllerSkillCodeKey] as? String
+            player.characterCode = presented?[GuideDetailViewControllerCharacterCodeKey] as! String
+            player.skillCode = presented?[GuideDetailViewControllerSkillCodeKey] as! String
             player.title = presented?[GuideDetailViewControllerSkillNameKey] as? String
         }
     }

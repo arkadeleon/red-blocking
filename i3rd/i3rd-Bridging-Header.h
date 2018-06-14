@@ -4,4 +4,5 @@
 
 #import "UIColor+Integer.h"
 #import "ApplicationDataManager.h"
-#import "SkillMotionPlayerViewController.h"
+#import "DownloadManager.h"
+#import "SkillMotionPlayer.h"

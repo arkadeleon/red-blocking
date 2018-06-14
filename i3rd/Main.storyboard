@@ -481,7 +481,7 @@
         <!--Skill Motion Player View Controller-->
         <scene sceneID="vYV-MR-L0z">
             <objects>
-                <viewController storyboardIdentifier="SkillMotionPlayerViewController" modalPresentationStyle="formSheet" id="LFl-cU-IOS" customClass="SkillMotionPlayerViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SkillMotionPlayerViewController" modalPresentationStyle="formSheet" id="LFl-cU-IOS" customClass="SkillMotionPlayerViewController" customModule="i3rd" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="fxZ-l0-RLX"/>
                         <viewControllerLayoutGuide type="bottom" id="Feb-Og-Lke"/>
