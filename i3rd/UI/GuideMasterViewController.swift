@@ -41,7 +41,7 @@ class GuideMasterViewController: PropertyListBasedViewController {
         
         let propertyListURL = Bundle.main.bundleURL.appendingPathComponent("Guide.plist")
         let propertyListInfo = NSDictionary(contentsOf: propertyListURL)
-        sections = propertyListInfo?[PropertyListBasedViewControllerSectionsKey] as? [Any]
+        sections = propertyListInfo?[PropertyListBasedViewControllerSectionsKey] as! NSArray
         
         if UIDevice.current.userInterfaceIdiom == .pad {
             let indexPath = IndexPath(row: 0, section: 0)
@@ -69,7 +69,7 @@ class GuideMasterViewController: PropertyListBasedViewController {
             
             let detailViewController = (segue.destination as! UINavigationController).topViewController as! GuideDetailViewController
             detailViewController.title = rowTitle
-            detailViewController.sections = detailSections as? [Any]
+            detailViewController.sections = detailSections!
         }
     }
     
@@ -90,7 +90,7 @@ class GuideMasterViewController: PropertyListBasedViewController {
         let detailSections = detailPropertyListInfo?[PropertyListBasedViewControllerSectionsKey] as? NSArray
         
         detailViewController.title = rowTitle
-        detailViewController.sections = detailSections as? [Any]
+        detailViewController.sections = detailSections!
         
         bodyView.image = UIImage(named: nextBackgroundImage!)
     }
@@ -121,7 +121,7 @@ class GuideMasterViewController: PropertyListBasedViewController {
     
     // MARK: - Table View Delegate
     
-    override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
         if UIDevice.current.userInterfaceIdiom == .pad {
             cell.accessoryType = .none;
         }
@@ -137,7 +137,7 @@ class GuideMasterViewController: PropertyListBasedViewController {
         }
     }
     
-    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if UIDevice.current.userInterfaceIdiom == .phone {
             performSegue(withIdentifier: "ShowDetail", sender: nil)
         } else {

@@ -55,7 +55,7 @@ class GuideDetailViewController: PropertyListBasedViewController {
     
     override func decodeRestorableState(with coder: NSCoder) {
         title = coder.decodeObject(forKey: GuideDetailViewControllerTitleKey) as? String
-        sections = coder.decodeObject(forKey: PropertyListBasedViewControllerSectionsKey) as? [Any]
+        sections = coder.decodeObject(forKey: PropertyListBasedViewControllerSectionsKey) as! NSArray
         if let selectedIndexPath = coder.decodeObject(forKey: GuideDetailViewControllerSelectedIndexPathKey) as? IndexPath {
             tableView.selectRow(at: selectedIndexPath, animated: false, scrollPosition: .top)
         }
@@ -63,7 +63,7 @@ class GuideDetailViewController: PropertyListBasedViewController {
     
     // MARK: - Table View Delegate
     
-    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let sectionInfo = sections[indexPath.section] as? NSDictionary
         let rows = sectionInfo?[PropertyListBasedViewControllerRowsKey] as? NSArray
         let rowInfo = rows?[indexPath.row] as? NSDictionary
@@ -78,7 +78,7 @@ class GuideDetailViewController: PropertyListBasedViewController {
                 propertyListInfo = next as! NSDictionary
             }
             
-            let nextSectionsInfo = propertyListInfo[PropertyListBasedViewControllerSectionsKey] as! [Any]
+            let nextSectionsInfo = propertyListInfo[PropertyListBasedViewControllerSectionsKey] as! NSArray
             
             let nextViewController = storyboard?.instantiateViewController(withIdentifier: "GuideDetailViewController") as! GuideDetailViewController
             nextViewController.title = rowTitle

@@ -40,7 +40,7 @@
 - (BOOL)splitViewController:(UISplitViewController *)splitViewController collapseSecondaryViewController:(UIViewController *)secondaryViewController ontoPrimaryViewController:(UIViewController *)primaryViewController
 {
     GuideDetailViewController *detailViewController = (GuideDetailViewController *)(((UINavigationController *)secondaryViewController).topViewController);
-    if (detailViewController.sections == nil) {
+    if (detailViewController.sections.count == 0) {
         return YES;
     }
     return NO;
