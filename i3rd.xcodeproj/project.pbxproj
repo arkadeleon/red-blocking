@@ -14,6 +14,26 @@
 		3505351720D20D2E00078847 /* PropertyListBasedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3505351620D20D2E00078847 /* PropertyListBasedViewController.swift */; };
 		3505351920D21AC300078847 /* SkillMotionPlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3505351820D21AC300078847 /* SkillMotionPlayerViewController.swift */; };
 		3505351C20D259E900078847 /* SkillMotionPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3505351B20D259E900078847 /* SkillMotionPlayer.swift */; };
+		352275C120D2A9C7002144BD /* Yang.plist in Resources */ = {isa = PBXBuildFile; fileRef = 352275AD20D2A9C7002144BD /* Yang.plist */; };
+		352275C220D2A9C7002144BD /* Dudley.plist in Resources */ = {isa = PBXBuildFile; fileRef = 352275AE20D2A9C7002144BD /* Dudley.plist */; };
+		352275C320D2A9C7002144BD /* Makoto.plist in Resources */ = {isa = PBXBuildFile; fileRef = 352275AF20D2A9C7002144BD /* Makoto.plist */; };
+		352275C420D2A9C7002144BD /* Remy.plist in Resources */ = {isa = PBXBuildFile; fileRef = 352275B020D2A9C7002144BD /* Remy.plist */; };
+		352275C520D2A9C7002144BD /* Necro.plist in Resources */ = {isa = PBXBuildFile; fileRef = 352275B120D2A9C7002144BD /* Necro.plist */; };
+		352275C620D2A9C7002144BD /* Yun.plist in Resources */ = {isa = PBXBuildFile; fileRef = 352275B220D2A9C7002144BD /* Yun.plist */; };
+		352275C720D2A9C7002144BD /* Ryu.plist in Resources */ = {isa = PBXBuildFile; fileRef = 352275B320D2A9C7002144BD /* Ryu.plist */; };
+		352275C820D2A9C7002144BD /* Gouki.plist in Resources */ = {isa = PBXBuildFile; fileRef = 352275B420D2A9C7002144BD /* Gouki.plist */; };
+		352275C920D2A9C7002144BD /* Alex.plist in Resources */ = {isa = PBXBuildFile; fileRef = 352275B520D2A9C7002144BD /* Alex.plist */; };
+		352275CA20D2A9C7002144BD /* Chun-li.plist in Resources */ = {isa = PBXBuildFile; fileRef = 352275B620D2A9C7002144BD /* Chun-li.plist */; };
+		352275CB20D2A9C7002144BD /* Elena.plist in Resources */ = {isa = PBXBuildFile; fileRef = 352275B720D2A9C7002144BD /* Elena.plist */; };
+		352275CC20D2A9C7002144BD /* Ken.plist in Resources */ = {isa = PBXBuildFile; fileRef = 352275B820D2A9C7002144BD /* Ken.plist */; };
+		352275CD20D2A9C7002144BD /* Ibuki.plist in Resources */ = {isa = PBXBuildFile; fileRef = 352275B920D2A9C7002144BD /* Ibuki.plist */; };
+		352275CE20D2A9C7002144BD /* Guide.plist in Resources */ = {isa = PBXBuildFile; fileRef = 352275BA20D2A9C7002144BD /* Guide.plist */; };
+		352275CF20D2A9C7002144BD /* Twelve.plist in Resources */ = {isa = PBXBuildFile; fileRef = 352275BB20D2A9C7002144BD /* Twelve.plist */; };
+		352275D020D2A9C7002144BD /* Urien.plist in Resources */ = {isa = PBXBuildFile; fileRef = 352275BC20D2A9C7002144BD /* Urien.plist */; };
+		352275D120D2A9C7002144BD /* Sean.plist in Resources */ = {isa = PBXBuildFile; fileRef = 352275BD20D2A9C7002144BD /* Sean.plist */; };
+		352275D220D2A9C7002144BD /* Hugo.plist in Resources */ = {isa = PBXBuildFile; fileRef = 352275BE20D2A9C7002144BD /* Hugo.plist */; };
+		352275D320D2A9C7002144BD /* Oro.plist in Resources */ = {isa = PBXBuildFile; fileRef = 352275BF20D2A9C7002144BD /* Oro.plist */; };
+		352275D420D2A9C7002144BD /* Q.plist in Resources */ = {isa = PBXBuildFile; fileRef = 352275C020D2A9C7002144BD /* Q.plist */; };
 		35375CAC20D0FE45004642CB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 35375CAB20D0FE45004642CB /* LaunchScreen.storyboard */; };
 		3566755320D2692F00DD26A4 /* UIColor+Integer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3566755220D2692F00DD26A4 /* UIColor+Integer.swift */; };
 		3566755520D26A2800DD26A4 /* ApplicationDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3566755420D26A2800DD26A4 /* ApplicationDataManager.swift */; };
@@ -37,83 +57,6 @@
 		EEE27AF4176C1470008A41AB /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEE27AF3176C1470008A41AB /* MessageUI.framework */; };
 		EEE27AF6176C147C008A41AB /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEE27AF5176C147C008A41AB /* QuartzCore.framework */; };
 		EEE27AFA176C1490008A41AB /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEE27AF9176C1490008A41AB /* SystemConfiguration.framework */; };
-		EEE27BB8176C1653008A41AB /* AlexBody@2x~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = EEE27B16176C1653008A41AB /* AlexBody@2x~ipad.png */; };
-		EEE27BB9176C1653008A41AB /* AlexBody@2x~iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = EEE27B17176C1653008A41AB /* AlexBody@2x~iphone.png */; };
-		EEE27BBC176C1653008A41AB /* Chun-liBody@2x~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = EEE27B1A176C1653008A41AB /* Chun-liBody@2x~ipad.png */; };
-		EEE27BBD176C1653008A41AB /* Chun-liBody@2x~iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = EEE27B1B176C1653008A41AB /* Chun-liBody@2x~iphone.png */; };
-		EEE27BC0176C1653008A41AB /* DudleyBody@2x~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = EEE27B1E176C1653008A41AB /* DudleyBody@2x~ipad.png */; };
-		EEE27BC1176C1653008A41AB /* DudleyBody@2x~iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = EEE27B1F176C1653008A41AB /* DudleyBody@2x~iphone.png */; };
-		EEE27BC4176C1653008A41AB /* ElenaBody@2x~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = EEE27B22176C1653008A41AB /* ElenaBody@2x~ipad.png */; };
-		EEE27BC5176C1653008A41AB /* ElenaBody@2x~iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = EEE27B23176C1653008A41AB /* ElenaBody@2x~iphone.png */; };
-		EEE27BCA176C1653008A41AB /* GoukiBody@2x~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = EEE27B28176C1653008A41AB /* GoukiBody@2x~ipad.png */; };
-		EEE27BCB176C1653008A41AB /* GoukiBody@2x~iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = EEE27B29176C1653008A41AB /* GoukiBody@2x~iphone.png */; };
-		EEE27BCE176C1653008A41AB /* HugoBody@2x~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = EEE27B2C176C1653008A41AB /* HugoBody@2x~ipad.png */; };
-		EEE27BCF176C1653008A41AB /* HugoBody@2x~iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = EEE27B2D176C1653008A41AB /* HugoBody@2x~iphone.png */; };
-		EEE27BD2176C1653008A41AB /* IbukiBody@2x~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = EEE27B30176C1653008A41AB /* IbukiBody@2x~ipad.png */; };
-		EEE27BD3176C1653008A41AB /* IbukiBody@2x~iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = EEE27B31176C1653008A41AB /* IbukiBody@2x~iphone.png */; };
-		EEE27BD6176C1653008A41AB /* KenBody@2x~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = EEE27B34176C1653008A41AB /* KenBody@2x~ipad.png */; };
-		EEE27BD7176C1653008A41AB /* KenBody@2x~iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = EEE27B35176C1653008A41AB /* KenBody@2x~iphone.png */; };
-		EEE27BDA176C1653008A41AB /* MakotoBody@2x~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = EEE27B38176C1653008A41AB /* MakotoBody@2x~ipad.png */; };
-		EEE27BDB176C1653008A41AB /* MakotoBody@2x~iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = EEE27B39176C1653008A41AB /* MakotoBody@2x~iphone.png */; };
-		EEE27BDE176C1653008A41AB /* NecroBody@2x~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = EEE27B3C176C1653008A41AB /* NecroBody@2x~ipad.png */; };
-		EEE27BDF176C1653008A41AB /* NecroBody@2x~iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = EEE27B3D176C1653008A41AB /* NecroBody@2x~iphone.png */; };
-		EEE27BE2176C1653008A41AB /* OroBody@2x~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = EEE27B40176C1653008A41AB /* OroBody@2x~ipad.png */; };
-		EEE27BE3176C1653008A41AB /* OroBody@2x~iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = EEE27B41176C1653008A41AB /* OroBody@2x~iphone.png */; };
-		EEE27BE6176C1653008A41AB /* QBody@2x~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = EEE27B44176C1653008A41AB /* QBody@2x~ipad.png */; };
-		EEE27BE7176C1653008A41AB /* QBody@2x~iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = EEE27B45176C1653008A41AB /* QBody@2x~iphone.png */; };
-		EEE27BEA176C1653008A41AB /* RemyBody@2x~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = EEE27B48176C1653008A41AB /* RemyBody@2x~ipad.png */; };
-		EEE27BEB176C1653008A41AB /* RemyBody@2x~iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = EEE27B49176C1653008A41AB /* RemyBody@2x~iphone.png */; };
-		EEE27BEE176C1653008A41AB /* RyuBody@2x~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = EEE27B4C176C1653008A41AB /* RyuBody@2x~ipad.png */; };
-		EEE27BEF176C1653008A41AB /* RyuBody@2x~iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = EEE27B4D176C1653008A41AB /* RyuBody@2x~iphone.png */; };
-		EEE27BF2176C1653008A41AB /* SeanBody@2x~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = EEE27B50176C1653008A41AB /* SeanBody@2x~ipad.png */; };
-		EEE27BF3176C1653008A41AB /* SeanBody@2x~iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = EEE27B51176C1653008A41AB /* SeanBody@2x~iphone.png */; };
-		EEE27BF6176C1653008A41AB /* TwelveBody@2x~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = EEE27B54176C1653008A41AB /* TwelveBody@2x~ipad.png */; };
-		EEE27BF7176C1653008A41AB /* TwelveBody@2x~iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = EEE27B55176C1653008A41AB /* TwelveBody@2x~iphone.png */; };
-		EEE27BFA176C1653008A41AB /* UrienBody@2x~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = EEE27B58176C1653008A41AB /* UrienBody@2x~ipad.png */; };
-		EEE27BFB176C1653008A41AB /* UrienBody@2x~iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = EEE27B59176C1653008A41AB /* UrienBody@2x~iphone.png */; };
-		EEE27BFE176C1653008A41AB /* YangBody@2x~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = EEE27B5C176C1653008A41AB /* YangBody@2x~ipad.png */; };
-		EEE27BFF176C1653008A41AB /* YangBody@2x~iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = EEE27B5D176C1653008A41AB /* YangBody@2x~iphone.png */; };
-		EEE27C02176C1653008A41AB /* YunBody@2x~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = EEE27B60176C1653008A41AB /* YunBody@2x~ipad.png */; };
-		EEE27C03176C1653008A41AB /* YunBody@2x~iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = EEE27B61176C1653008A41AB /* YunBody@2x~iphone.png */; };
-		EEE27C07176C1653008A41AB /* AlexHead@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EEE27B66176C1653008A41AB /* AlexHead@2x.png */; };
-		EEE27C09176C1653008A41AB /* Chun-liHead@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EEE27B68176C1653008A41AB /* Chun-liHead@2x.png */; };
-		EEE27C0B176C1653008A41AB /* DudleyHead@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EEE27B6A176C1653008A41AB /* DudleyHead@2x.png */; };
-		EEE27C0D176C1653008A41AB /* ElenaHead@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EEE27B6C176C1653008A41AB /* ElenaHead@2x.png */; };
-		EEE27C0F176C1653008A41AB /* GoukiHead@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EEE27B6E176C1653008A41AB /* GoukiHead@2x.png */; };
-		EEE27C11176C1653008A41AB /* HugoHead@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EEE27B70176C1653008A41AB /* HugoHead@2x.png */; };
-		EEE27C13176C1653008A41AB /* IbukiHead@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EEE27B72176C1653008A41AB /* IbukiHead@2x.png */; };
-		EEE27C15176C1653008A41AB /* KenHead@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EEE27B74176C1653008A41AB /* KenHead@2x.png */; };
-		EEE27C17176C1653008A41AB /* MakotoHead@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EEE27B76176C1653008A41AB /* MakotoHead@2x.png */; };
-		EEE27C19176C1653008A41AB /* NecroHead@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EEE27B78176C1653008A41AB /* NecroHead@2x.png */; };
-		EEE27C1B176C1653008A41AB /* OroHead@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EEE27B7A176C1653008A41AB /* OroHead@2x.png */; };
-		EEE27C1D176C1653008A41AB /* QHead@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EEE27B7C176C1653008A41AB /* QHead@2x.png */; };
-		EEE27C1F176C1653008A41AB /* RemyHead@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EEE27B7E176C1653008A41AB /* RemyHead@2x.png */; };
-		EEE27C21176C1653008A41AB /* RyuHead@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EEE27B80176C1653008A41AB /* RyuHead@2x.png */; };
-		EEE27C23176C1653008A41AB /* SeanHead@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EEE27B82176C1653008A41AB /* SeanHead@2x.png */; };
-		EEE27C25176C1653008A41AB /* TwelveHead@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EEE27B84176C1653008A41AB /* TwelveHead@2x.png */; };
-		EEE27C27176C1653008A41AB /* UrienHead@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EEE27B86176C1653008A41AB /* UrienHead@2x.png */; };
-		EEE27C29176C1653008A41AB /* YangHead@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EEE27B88176C1653008A41AB /* YangHead@2x.png */; };
-		EEE27C2B176C1653008A41AB /* YunHead@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EEE27B8A176C1653008A41AB /* YunHead@2x.png */; };
-		EEE27C2C176C1653008A41AB /* Alex.plist in Resources */ = {isa = PBXBuildFile; fileRef = EEE27B8C176C1653008A41AB /* Alex.plist */; };
-		EEE27C2D176C1653008A41AB /* Chun-li.plist in Resources */ = {isa = PBXBuildFile; fileRef = EEE27B8D176C1653008A41AB /* Chun-li.plist */; };
-		EEE27C2E176C1653008A41AB /* Dudley.plist in Resources */ = {isa = PBXBuildFile; fileRef = EEE27B8E176C1653008A41AB /* Dudley.plist */; };
-		EEE27C2F176C1654008A41AB /* Elena.plist in Resources */ = {isa = PBXBuildFile; fileRef = EEE27B8F176C1653008A41AB /* Elena.plist */; };
-		EEE27C30176C1654008A41AB /* Gouki.plist in Resources */ = {isa = PBXBuildFile; fileRef = EEE27B90176C1653008A41AB /* Gouki.plist */; };
-		EEE27C31176C1654008A41AB /* Guide.plist in Resources */ = {isa = PBXBuildFile; fileRef = EEE27B91176C1653008A41AB /* Guide.plist */; };
-		EEE27C32176C1654008A41AB /* Hugo.plist in Resources */ = {isa = PBXBuildFile; fileRef = EEE27B92176C1653008A41AB /* Hugo.plist */; };
-		EEE27C33176C1654008A41AB /* Ibuki.plist in Resources */ = {isa = PBXBuildFile; fileRef = EEE27B93176C1653008A41AB /* Ibuki.plist */; };
-		EEE27C34176C1654008A41AB /* Ken.plist in Resources */ = {isa = PBXBuildFile; fileRef = EEE27B94176C1653008A41AB /* Ken.plist */; };
-		EEE27C35176C1654008A41AB /* Makoto.plist in Resources */ = {isa = PBXBuildFile; fileRef = EEE27B95176C1653008A41AB /* Makoto.plist */; };
-		EEE27C37176C1654008A41AB /* Necro.plist in Resources */ = {isa = PBXBuildFile; fileRef = EEE27B97176C1653008A41AB /* Necro.plist */; };
-		EEE27C38176C1654008A41AB /* Oro.plist in Resources */ = {isa = PBXBuildFile; fileRef = EEE27B98176C1653008A41AB /* Oro.plist */; };
-		EEE27C39176C1654008A41AB /* Q.plist in Resources */ = {isa = PBXBuildFile; fileRef = EEE27B99176C1653008A41AB /* Q.plist */; };
-		EEE27C3A176C1654008A41AB /* Remy.plist in Resources */ = {isa = PBXBuildFile; fileRef = EEE27B9A176C1653008A41AB /* Remy.plist */; };
-		EEE27C3B176C1654008A41AB /* Ryu.plist in Resources */ = {isa = PBXBuildFile; fileRef = EEE27B9B176C1653008A41AB /* Ryu.plist */; };
-		EEE27C3C176C1654008A41AB /* Sean.plist in Resources */ = {isa = PBXBuildFile; fileRef = EEE27B9C176C1653008A41AB /* Sean.plist */; };
-		EEE27C3D176C1654008A41AB /* Twelve.plist in Resources */ = {isa = PBXBuildFile; fileRef = EEE27B9D176C1653008A41AB /* Twelve.plist */; };
-		EEE27C3E176C1654008A41AB /* Urien.plist in Resources */ = {isa = PBXBuildFile; fileRef = EEE27B9E176C1653008A41AB /* Urien.plist */; };
-		EEE27C3F176C1654008A41AB /* Yang.plist in Resources */ = {isa = PBXBuildFile; fileRef = EEE27B9F176C1653008A41AB /* Yang.plist */; };
-		EEE27C40176C1654008A41AB /* Yun.plist in Resources */ = {isa = PBXBuildFile; fileRef = EEE27BA0176C1653008A41AB /* Yun.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -125,6 +68,26 @@
 		3505351620D20D2E00078847 /* PropertyListBasedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertyListBasedViewController.swift; sourceTree = "<group>"; };
 		3505351820D21AC300078847 /* SkillMotionPlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkillMotionPlayerViewController.swift; sourceTree = "<group>"; };
 		3505351B20D259E900078847 /* SkillMotionPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkillMotionPlayer.swift; sourceTree = "<group>"; };
+		352275AD20D2A9C7002144BD /* Yang.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Yang.plist; sourceTree = "<group>"; };
+		352275AE20D2A9C7002144BD /* Dudley.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Dudley.plist; sourceTree = "<group>"; };
+		352275AF20D2A9C7002144BD /* Makoto.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Makoto.plist; sourceTree = "<group>"; };
+		352275B020D2A9C7002144BD /* Remy.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Remy.plist; sourceTree = "<group>"; };
+		352275B120D2A9C7002144BD /* Necro.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Necro.plist; sourceTree = "<group>"; };
+		352275B220D2A9C7002144BD /* Yun.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Yun.plist; sourceTree = "<group>"; };
+		352275B320D2A9C7002144BD /* Ryu.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Ryu.plist; sourceTree = "<group>"; };
+		352275B420D2A9C7002144BD /* Gouki.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Gouki.plist; sourceTree = "<group>"; };
+		352275B520D2A9C7002144BD /* Alex.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Alex.plist; sourceTree = "<group>"; };
+		352275B620D2A9C7002144BD /* Chun-li.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Chun-li.plist"; sourceTree = "<group>"; };
+		352275B720D2A9C7002144BD /* Elena.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Elena.plist; sourceTree = "<group>"; };
+		352275B820D2A9C7002144BD /* Ken.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Ken.plist; sourceTree = "<group>"; };
+		352275B920D2A9C7002144BD /* Ibuki.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Ibuki.plist; sourceTree = "<group>"; };
+		352275BA20D2A9C7002144BD /* Guide.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Guide.plist; sourceTree = "<group>"; };
+		352275BB20D2A9C7002144BD /* Twelve.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Twelve.plist; sourceTree = "<group>"; };
+		352275BC20D2A9C7002144BD /* Urien.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Urien.plist; sourceTree = "<group>"; };
+		352275BD20D2A9C7002144BD /* Sean.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Sean.plist; sourceTree = "<group>"; };
+		352275BE20D2A9C7002144BD /* Hugo.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Hugo.plist; sourceTree = "<group>"; };
+		352275BF20D2A9C7002144BD /* Oro.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Oro.plist; sourceTree = "<group>"; };
+		352275C020D2A9C7002144BD /* Q.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Q.plist; sourceTree = "<group>"; };
 		35375CAB20D0FE45004642CB /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3566755220D2692F00DD26A4 /* UIColor+Integer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Integer.swift"; sourceTree = "<group>"; };
 		3566755420D26A2800DD26A4 /* ApplicationDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationDataManager.swift; sourceTree = "<group>"; };
@@ -152,83 +115,6 @@
 		EEE27AF3176C1470008A41AB /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		EEE27AF5176C147C008A41AB /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		EEE27AF9176C1490008A41AB /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
-		EEE27B16176C1653008A41AB /* AlexBody@2x~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "AlexBody@2x~ipad.png"; sourceTree = "<group>"; };
-		EEE27B17176C1653008A41AB /* AlexBody@2x~iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "AlexBody@2x~iphone.png"; sourceTree = "<group>"; };
-		EEE27B1A176C1653008A41AB /* Chun-liBody@2x~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Chun-liBody@2x~ipad.png"; sourceTree = "<group>"; };
-		EEE27B1B176C1653008A41AB /* Chun-liBody@2x~iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Chun-liBody@2x~iphone.png"; sourceTree = "<group>"; };
-		EEE27B1E176C1653008A41AB /* DudleyBody@2x~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "DudleyBody@2x~ipad.png"; sourceTree = "<group>"; };
-		EEE27B1F176C1653008A41AB /* DudleyBody@2x~iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "DudleyBody@2x~iphone.png"; sourceTree = "<group>"; };
-		EEE27B22176C1653008A41AB /* ElenaBody@2x~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ElenaBody@2x~ipad.png"; sourceTree = "<group>"; };
-		EEE27B23176C1653008A41AB /* ElenaBody@2x~iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ElenaBody@2x~iphone.png"; sourceTree = "<group>"; };
-		EEE27B28176C1653008A41AB /* GoukiBody@2x~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "GoukiBody@2x~ipad.png"; sourceTree = "<group>"; };
-		EEE27B29176C1653008A41AB /* GoukiBody@2x~iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "GoukiBody@2x~iphone.png"; sourceTree = "<group>"; };
-		EEE27B2C176C1653008A41AB /* HugoBody@2x~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "HugoBody@2x~ipad.png"; sourceTree = "<group>"; };
-		EEE27B2D176C1653008A41AB /* HugoBody@2x~iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "HugoBody@2x~iphone.png"; sourceTree = "<group>"; };
-		EEE27B30176C1653008A41AB /* IbukiBody@2x~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "IbukiBody@2x~ipad.png"; sourceTree = "<group>"; };
-		EEE27B31176C1653008A41AB /* IbukiBody@2x~iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "IbukiBody@2x~iphone.png"; sourceTree = "<group>"; };
-		EEE27B34176C1653008A41AB /* KenBody@2x~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "KenBody@2x~ipad.png"; sourceTree = "<group>"; };
-		EEE27B35176C1653008A41AB /* KenBody@2x~iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "KenBody@2x~iphone.png"; sourceTree = "<group>"; };
-		EEE27B38176C1653008A41AB /* MakotoBody@2x~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "MakotoBody@2x~ipad.png"; sourceTree = "<group>"; };
-		EEE27B39176C1653008A41AB /* MakotoBody@2x~iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "MakotoBody@2x~iphone.png"; sourceTree = "<group>"; };
-		EEE27B3C176C1653008A41AB /* NecroBody@2x~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "NecroBody@2x~ipad.png"; sourceTree = "<group>"; };
-		EEE27B3D176C1653008A41AB /* NecroBody@2x~iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "NecroBody@2x~iphone.png"; sourceTree = "<group>"; };
-		EEE27B40176C1653008A41AB /* OroBody@2x~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "OroBody@2x~ipad.png"; sourceTree = "<group>"; };
-		EEE27B41176C1653008A41AB /* OroBody@2x~iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "OroBody@2x~iphone.png"; sourceTree = "<group>"; };
-		EEE27B44176C1653008A41AB /* QBody@2x~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "QBody@2x~ipad.png"; sourceTree = "<group>"; };
-		EEE27B45176C1653008A41AB /* QBody@2x~iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "QBody@2x~iphone.png"; sourceTree = "<group>"; };
-		EEE27B48176C1653008A41AB /* RemyBody@2x~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "RemyBody@2x~ipad.png"; sourceTree = "<group>"; };
-		EEE27B49176C1653008A41AB /* RemyBody@2x~iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "RemyBody@2x~iphone.png"; sourceTree = "<group>"; };
-		EEE27B4C176C1653008A41AB /* RyuBody@2x~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "RyuBody@2x~ipad.png"; sourceTree = "<group>"; };
-		EEE27B4D176C1653008A41AB /* RyuBody@2x~iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "RyuBody@2x~iphone.png"; sourceTree = "<group>"; };
-		EEE27B50176C1653008A41AB /* SeanBody@2x~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "SeanBody@2x~ipad.png"; sourceTree = "<group>"; };
-		EEE27B51176C1653008A41AB /* SeanBody@2x~iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "SeanBody@2x~iphone.png"; sourceTree = "<group>"; };
-		EEE27B54176C1653008A41AB /* TwelveBody@2x~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "TwelveBody@2x~ipad.png"; sourceTree = "<group>"; };
-		EEE27B55176C1653008A41AB /* TwelveBody@2x~iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "TwelveBody@2x~iphone.png"; sourceTree = "<group>"; };
-		EEE27B58176C1653008A41AB /* UrienBody@2x~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "UrienBody@2x~ipad.png"; sourceTree = "<group>"; };
-		EEE27B59176C1653008A41AB /* UrienBody@2x~iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "UrienBody@2x~iphone.png"; sourceTree = "<group>"; };
-		EEE27B5C176C1653008A41AB /* YangBody@2x~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "YangBody@2x~ipad.png"; sourceTree = "<group>"; };
-		EEE27B5D176C1653008A41AB /* YangBody@2x~iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "YangBody@2x~iphone.png"; sourceTree = "<group>"; };
-		EEE27B60176C1653008A41AB /* YunBody@2x~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "YunBody@2x~ipad.png"; sourceTree = "<group>"; };
-		EEE27B61176C1653008A41AB /* YunBody@2x~iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "YunBody@2x~iphone.png"; sourceTree = "<group>"; };
-		EEE27B66176C1653008A41AB /* AlexHead@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "AlexHead@2x.png"; sourceTree = "<group>"; };
-		EEE27B68176C1653008A41AB /* Chun-liHead@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Chun-liHead@2x.png"; sourceTree = "<group>"; };
-		EEE27B6A176C1653008A41AB /* DudleyHead@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "DudleyHead@2x.png"; sourceTree = "<group>"; };
-		EEE27B6C176C1653008A41AB /* ElenaHead@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ElenaHead@2x.png"; sourceTree = "<group>"; };
-		EEE27B6E176C1653008A41AB /* GoukiHead@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "GoukiHead@2x.png"; sourceTree = "<group>"; };
-		EEE27B70176C1653008A41AB /* HugoHead@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "HugoHead@2x.png"; sourceTree = "<group>"; };
-		EEE27B72176C1653008A41AB /* IbukiHead@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "IbukiHead@2x.png"; sourceTree = "<group>"; };
-		EEE27B74176C1653008A41AB /* KenHead@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "KenHead@2x.png"; sourceTree = "<group>"; };
-		EEE27B76176C1653008A41AB /* MakotoHead@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "MakotoHead@2x.png"; sourceTree = "<group>"; };
-		EEE27B78176C1653008A41AB /* NecroHead@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "NecroHead@2x.png"; sourceTree = "<group>"; };
-		EEE27B7A176C1653008A41AB /* OroHead@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "OroHead@2x.png"; sourceTree = "<group>"; };
-		EEE27B7C176C1653008A41AB /* QHead@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "QHead@2x.png"; sourceTree = "<group>"; };
-		EEE27B7E176C1653008A41AB /* RemyHead@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "RemyHead@2x.png"; sourceTree = "<group>"; };
-		EEE27B80176C1653008A41AB /* RyuHead@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "RyuHead@2x.png"; sourceTree = "<group>"; };
-		EEE27B82176C1653008A41AB /* SeanHead@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "SeanHead@2x.png"; sourceTree = "<group>"; };
-		EEE27B84176C1653008A41AB /* TwelveHead@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "TwelveHead@2x.png"; sourceTree = "<group>"; };
-		EEE27B86176C1653008A41AB /* UrienHead@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "UrienHead@2x.png"; sourceTree = "<group>"; };
-		EEE27B88176C1653008A41AB /* YangHead@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "YangHead@2x.png"; sourceTree = "<group>"; };
-		EEE27B8A176C1653008A41AB /* YunHead@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "YunHead@2x.png"; sourceTree = "<group>"; };
-		EEE27B8C176C1653008A41AB /* Alex.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Alex.plist; sourceTree = "<group>"; };
-		EEE27B8D176C1653008A41AB /* Chun-li.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Chun-li.plist"; sourceTree = "<group>"; };
-		EEE27B8E176C1653008A41AB /* Dudley.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Dudley.plist; sourceTree = "<group>"; };
-		EEE27B8F176C1653008A41AB /* Elena.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Elena.plist; sourceTree = "<group>"; };
-		EEE27B90176C1653008A41AB /* Gouki.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Gouki.plist; sourceTree = "<group>"; };
-		EEE27B91176C1653008A41AB /* Guide.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Guide.plist; sourceTree = "<group>"; };
-		EEE27B92176C1653008A41AB /* Hugo.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Hugo.plist; sourceTree = "<group>"; };
-		EEE27B93176C1653008A41AB /* Ibuki.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Ibuki.plist; sourceTree = "<group>"; };
-		EEE27B94176C1653008A41AB /* Ken.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Ken.plist; sourceTree = "<group>"; };
-		EEE27B95176C1653008A41AB /* Makoto.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Makoto.plist; sourceTree = "<group>"; };
-		EEE27B97176C1653008A41AB /* Necro.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Necro.plist; sourceTree = "<group>"; };
-		EEE27B98176C1653008A41AB /* Oro.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Oro.plist; sourceTree = "<group>"; };
-		EEE27B99176C1653008A41AB /* Q.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Q.plist; sourceTree = "<group>"; };
-		EEE27B9A176C1653008A41AB /* Remy.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Remy.plist; sourceTree = "<group>"; };
-		EEE27B9B176C1653008A41AB /* Ryu.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Ryu.plist; sourceTree = "<group>"; };
-		EEE27B9C176C1653008A41AB /* Sean.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Sean.plist; sourceTree = "<group>"; };
-		EEE27B9D176C1653008A41AB /* Twelve.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Twelve.plist; sourceTree = "<group>"; };
-		EEE27B9E176C1653008A41AB /* Urien.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Urien.plist; sourceTree = "<group>"; };
-		EEE27B9F176C1653008A41AB /* Yang.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Yang.plist; sourceTree = "<group>"; };
-		EEE27BA0176C1653008A41AB /* Yun.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Yun.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -255,6 +141,33 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		352275AC20D2A9C7002144BD /* PropertyLists */ = {
+			isa = PBXGroup;
+			children = (
+				352275AD20D2A9C7002144BD /* Yang.plist */,
+				352275AE20D2A9C7002144BD /* Dudley.plist */,
+				352275AF20D2A9C7002144BD /* Makoto.plist */,
+				352275B020D2A9C7002144BD /* Remy.plist */,
+				352275B120D2A9C7002144BD /* Necro.plist */,
+				352275B220D2A9C7002144BD /* Yun.plist */,
+				352275B320D2A9C7002144BD /* Ryu.plist */,
+				352275B420D2A9C7002144BD /* Gouki.plist */,
+				352275B520D2A9C7002144BD /* Alex.plist */,
+				352275B620D2A9C7002144BD /* Chun-li.plist */,
+				352275B720D2A9C7002144BD /* Elena.plist */,
+				352275B820D2A9C7002144BD /* Ken.plist */,
+				352275B920D2A9C7002144BD /* Ibuki.plist */,
+				352275BA20D2A9C7002144BD /* Guide.plist */,
+				352275BB20D2A9C7002144BD /* Twelve.plist */,
+				352275BC20D2A9C7002144BD /* Urien.plist */,
+				352275BD20D2A9C7002144BD /* Sean.plist */,
+				352275BE20D2A9C7002144BD /* Hugo.plist */,
+				352275BF20D2A9C7002144BD /* Oro.plist */,
+				352275C020D2A9C7002144BD /* Q.plist */,
+			);
+			path = PropertyLists;
+			sourceTree = "<group>";
+		};
 		3546A89320D1025D002FEC38 /* UI */ = {
 			isa = PBXGroup;
 			children = (
@@ -286,7 +199,6 @@
 			isa = PBXGroup;
 			children = (
 				EEE27AD4176C1347008A41AB /* i3rd */,
-				EEE27AFB176C1631008A41AB /* Resources */,
 				EEE27ACD176C1347008A41AB /* Frameworks */,
 				EEE27ACC176C1347008A41AB /* Products */,
 			);
@@ -328,8 +240,9 @@
 				04580D161A25CB1800A4A9B2 /* Main.storyboard */,
 				3572AF8D20D1021F00C15871 /* Core */,
 				3546A89320D1025D002FEC38 /* UI */,
-				EEADB06B17FA72B3004E2F60 /* Assets.xcassets */,
+				352275AC20D2A9C7002144BD /* PropertyLists */,
 				EEE27AD5176C1347008A41AB /* Supporting Files */,
+				EEADB06B17FA72B3004E2F60 /* Assets.xcassets */,
 			);
 			path = i3rd;
 			sourceTree = "<group>";
@@ -342,124 +255,6 @@
 				EEE27AD7176C1347008A41AB /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		EEE27AFB176C1631008A41AB /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				EEE27B14176C1653008A41AB /* Images */,
-				EEE27B8B176C1653008A41AB /* PropertyLists */,
-			);
-			name = Resources;
-			sourceTree = "<group>";
-		};
-		EEE27B14176C1653008A41AB /* Images */ = {
-			isa = PBXGroup;
-			children = (
-				EEE27B15176C1653008A41AB /* Body */,
-				EEE27B64176C1653008A41AB /* Head */,
-			);
-			name = Images;
-			path = i3rd/Images;
-			sourceTree = "<group>";
-		};
-		EEE27B15176C1653008A41AB /* Body */ = {
-			isa = PBXGroup;
-			children = (
-				EEE27B17176C1653008A41AB /* AlexBody@2x~iphone.png */,
-				EEE27B16176C1653008A41AB /* AlexBody@2x~ipad.png */,
-				EEE27B1B176C1653008A41AB /* Chun-liBody@2x~iphone.png */,
-				EEE27B1A176C1653008A41AB /* Chun-liBody@2x~ipad.png */,
-				EEE27B1F176C1653008A41AB /* DudleyBody@2x~iphone.png */,
-				EEE27B1E176C1653008A41AB /* DudleyBody@2x~ipad.png */,
-				EEE27B23176C1653008A41AB /* ElenaBody@2x~iphone.png */,
-				EEE27B22176C1653008A41AB /* ElenaBody@2x~ipad.png */,
-				EEE27B29176C1653008A41AB /* GoukiBody@2x~iphone.png */,
-				EEE27B28176C1653008A41AB /* GoukiBody@2x~ipad.png */,
-				EEE27B2D176C1653008A41AB /* HugoBody@2x~iphone.png */,
-				EEE27B2C176C1653008A41AB /* HugoBody@2x~ipad.png */,
-				EEE27B31176C1653008A41AB /* IbukiBody@2x~iphone.png */,
-				EEE27B30176C1653008A41AB /* IbukiBody@2x~ipad.png */,
-				EEE27B35176C1653008A41AB /* KenBody@2x~iphone.png */,
-				EEE27B34176C1653008A41AB /* KenBody@2x~ipad.png */,
-				EEE27B39176C1653008A41AB /* MakotoBody@2x~iphone.png */,
-				EEE27B38176C1653008A41AB /* MakotoBody@2x~ipad.png */,
-				EEE27B3D176C1653008A41AB /* NecroBody@2x~iphone.png */,
-				EEE27B3C176C1653008A41AB /* NecroBody@2x~ipad.png */,
-				EEE27B41176C1653008A41AB /* OroBody@2x~iphone.png */,
-				EEE27B40176C1653008A41AB /* OroBody@2x~ipad.png */,
-				EEE27B45176C1653008A41AB /* QBody@2x~iphone.png */,
-				EEE27B44176C1653008A41AB /* QBody@2x~ipad.png */,
-				EEE27B49176C1653008A41AB /* RemyBody@2x~iphone.png */,
-				EEE27B48176C1653008A41AB /* RemyBody@2x~ipad.png */,
-				EEE27B4D176C1653008A41AB /* RyuBody@2x~iphone.png */,
-				EEE27B4C176C1653008A41AB /* RyuBody@2x~ipad.png */,
-				EEE27B51176C1653008A41AB /* SeanBody@2x~iphone.png */,
-				EEE27B50176C1653008A41AB /* SeanBody@2x~ipad.png */,
-				EEE27B55176C1653008A41AB /* TwelveBody@2x~iphone.png */,
-				EEE27B54176C1653008A41AB /* TwelveBody@2x~ipad.png */,
-				EEE27B59176C1653008A41AB /* UrienBody@2x~iphone.png */,
-				EEE27B58176C1653008A41AB /* UrienBody@2x~ipad.png */,
-				EEE27B5D176C1653008A41AB /* YangBody@2x~iphone.png */,
-				EEE27B5C176C1653008A41AB /* YangBody@2x~ipad.png */,
-				EEE27B61176C1653008A41AB /* YunBody@2x~iphone.png */,
-				EEE27B60176C1653008A41AB /* YunBody@2x~ipad.png */,
-			);
-			path = Body;
-			sourceTree = "<group>";
-		};
-		EEE27B64176C1653008A41AB /* Head */ = {
-			isa = PBXGroup;
-			children = (
-				EEE27B66176C1653008A41AB /* AlexHead@2x.png */,
-				EEE27B68176C1653008A41AB /* Chun-liHead@2x.png */,
-				EEE27B6A176C1653008A41AB /* DudleyHead@2x.png */,
-				EEE27B6C176C1653008A41AB /* ElenaHead@2x.png */,
-				EEE27B6E176C1653008A41AB /* GoukiHead@2x.png */,
-				EEE27B70176C1653008A41AB /* HugoHead@2x.png */,
-				EEE27B72176C1653008A41AB /* IbukiHead@2x.png */,
-				EEE27B74176C1653008A41AB /* KenHead@2x.png */,
-				EEE27B76176C1653008A41AB /* MakotoHead@2x.png */,
-				EEE27B78176C1653008A41AB /* NecroHead@2x.png */,
-				EEE27B7A176C1653008A41AB /* OroHead@2x.png */,
-				EEE27B7C176C1653008A41AB /* QHead@2x.png */,
-				EEE27B7E176C1653008A41AB /* RemyHead@2x.png */,
-				EEE27B80176C1653008A41AB /* RyuHead@2x.png */,
-				EEE27B82176C1653008A41AB /* SeanHead@2x.png */,
-				EEE27B84176C1653008A41AB /* TwelveHead@2x.png */,
-				EEE27B86176C1653008A41AB /* UrienHead@2x.png */,
-				EEE27B88176C1653008A41AB /* YangHead@2x.png */,
-				EEE27B8A176C1653008A41AB /* YunHead@2x.png */,
-			);
-			path = Head;
-			sourceTree = "<group>";
-		};
-		EEE27B8B176C1653008A41AB /* PropertyLists */ = {
-			isa = PBXGroup;
-			children = (
-				EEE27B91176C1653008A41AB /* Guide.plist */,
-				EEE27B8C176C1653008A41AB /* Alex.plist */,
-				EEE27B8D176C1653008A41AB /* Chun-li.plist */,
-				EEE27B8E176C1653008A41AB /* Dudley.plist */,
-				EEE27B8F176C1653008A41AB /* Elena.plist */,
-				EEE27B90176C1653008A41AB /* Gouki.plist */,
-				EEE27B92176C1653008A41AB /* Hugo.plist */,
-				EEE27B93176C1653008A41AB /* Ibuki.plist */,
-				EEE27B94176C1653008A41AB /* Ken.plist */,
-				EEE27B95176C1653008A41AB /* Makoto.plist */,
-				EEE27B97176C1653008A41AB /* Necro.plist */,
-				EEE27B98176C1653008A41AB /* Oro.plist */,
-				EEE27B99176C1653008A41AB /* Q.plist */,
-				EEE27B9A176C1653008A41AB /* Remy.plist */,
-				EEE27B9B176C1653008A41AB /* Ryu.plist */,
-				EEE27B9C176C1653008A41AB /* Sean.plist */,
-				EEE27B9D176C1653008A41AB /* Twelve.plist */,
-				EEE27B9E176C1653008A41AB /* Urien.plist */,
-				EEE27B9F176C1653008A41AB /* Yang.plist */,
-				EEE27BA0176C1653008A41AB /* Yun.plist */,
-			);
-			name = PropertyLists;
-			path = i3rd/PropertyLists;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -529,88 +324,31 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				352275C420D2A9C7002144BD /* Remy.plist in Resources */,
 				EEE27AD9176C1347008A41AB /* InfoPlist.strings in Resources */,
+				352275C320D2A9C7002144BD /* Makoto.plist in Resources */,
+				352275C120D2A9C7002144BD /* Yang.plist in Resources */,
+				352275C920D2A9C7002144BD /* Alex.plist in Resources */,
+				352275CE20D2A9C7002144BD /* Guide.plist in Resources */,
+				352275C820D2A9C7002144BD /* Gouki.plist in Resources */,
+				352275D220D2A9C7002144BD /* Hugo.plist in Resources */,
+				352275C220D2A9C7002144BD /* Dudley.plist in Resources */,
 				EEADB06C17FA72B3004E2F60 /* Assets.xcassets in Resources */,
-				EEE27BB8176C1653008A41AB /* AlexBody@2x~ipad.png in Resources */,
-				EEE27BB9176C1653008A41AB /* AlexBody@2x~iphone.png in Resources */,
-				EEE27BBC176C1653008A41AB /* Chun-liBody@2x~ipad.png in Resources */,
-				EEE27BBD176C1653008A41AB /* Chun-liBody@2x~iphone.png in Resources */,
-				EEE27BC0176C1653008A41AB /* DudleyBody@2x~ipad.png in Resources */,
-				EEE27BC1176C1653008A41AB /* DudleyBody@2x~iphone.png in Resources */,
-				EEE27BC4176C1653008A41AB /* ElenaBody@2x~ipad.png in Resources */,
-				EEE27BC5176C1653008A41AB /* ElenaBody@2x~iphone.png in Resources */,
-				EEE27BCA176C1653008A41AB /* GoukiBody@2x~ipad.png in Resources */,
-				EEE27BCB176C1653008A41AB /* GoukiBody@2x~iphone.png in Resources */,
-				EEE27BCE176C1653008A41AB /* HugoBody@2x~ipad.png in Resources */,
-				EEE27BCF176C1653008A41AB /* HugoBody@2x~iphone.png in Resources */,
-				EEE27BD2176C1653008A41AB /* IbukiBody@2x~ipad.png in Resources */,
-				EEE27BD3176C1653008A41AB /* IbukiBody@2x~iphone.png in Resources */,
-				EEE27BD6176C1653008A41AB /* KenBody@2x~ipad.png in Resources */,
-				EEE27BD7176C1653008A41AB /* KenBody@2x~iphone.png in Resources */,
-				EEE27BDA176C1653008A41AB /* MakotoBody@2x~ipad.png in Resources */,
-				EEE27BDB176C1653008A41AB /* MakotoBody@2x~iphone.png in Resources */,
-				EEE27BDE176C1653008A41AB /* NecroBody@2x~ipad.png in Resources */,
-				EEE27BDF176C1653008A41AB /* NecroBody@2x~iphone.png in Resources */,
+				352275C520D2A9C7002144BD /* Necro.plist in Resources */,
+				352275D320D2A9C7002144BD /* Oro.plist in Resources */,
+				352275D020D2A9C7002144BD /* Urien.plist in Resources */,
+				352275C720D2A9C7002144BD /* Ryu.plist in Resources */,
+				352275CC20D2A9C7002144BD /* Ken.plist in Resources */,
+				352275D120D2A9C7002144BD /* Sean.plist in Resources */,
+				352275CB20D2A9C7002144BD /* Elena.plist in Resources */,
 				35375CAC20D0FE45004642CB /* LaunchScreen.storyboard in Resources */,
-				EEE27BE2176C1653008A41AB /* OroBody@2x~ipad.png in Resources */,
-				EEE27BE3176C1653008A41AB /* OroBody@2x~iphone.png in Resources */,
-				EEE27BE6176C1653008A41AB /* QBody@2x~ipad.png in Resources */,
-				EEE27BE7176C1653008A41AB /* QBody@2x~iphone.png in Resources */,
-				EEE27BEA176C1653008A41AB /* RemyBody@2x~ipad.png in Resources */,
-				EEE27BEB176C1653008A41AB /* RemyBody@2x~iphone.png in Resources */,
-				EEE27BEE176C1653008A41AB /* RyuBody@2x~ipad.png in Resources */,
-				EEE27BEF176C1653008A41AB /* RyuBody@2x~iphone.png in Resources */,
-				EEE27BF2176C1653008A41AB /* SeanBody@2x~ipad.png in Resources */,
-				EEE27BF3176C1653008A41AB /* SeanBody@2x~iphone.png in Resources */,
-				EEE27BF6176C1653008A41AB /* TwelveBody@2x~ipad.png in Resources */,
-				EEE27BF7176C1653008A41AB /* TwelveBody@2x~iphone.png in Resources */,
-				EEE27BFA176C1653008A41AB /* UrienBody@2x~ipad.png in Resources */,
-				EEE27BFB176C1653008A41AB /* UrienBody@2x~iphone.png in Resources */,
-				EEE27BFE176C1653008A41AB /* YangBody@2x~ipad.png in Resources */,
-				EEE27BFF176C1653008A41AB /* YangBody@2x~iphone.png in Resources */,
-				EEE27C02176C1653008A41AB /* YunBody@2x~ipad.png in Resources */,
-				EEE27C03176C1653008A41AB /* YunBody@2x~iphone.png in Resources */,
-				EEE27C07176C1653008A41AB /* AlexHead@2x.png in Resources */,
-				EEE27C09176C1653008A41AB /* Chun-liHead@2x.png in Resources */,
-				EEE27C0B176C1653008A41AB /* DudleyHead@2x.png in Resources */,
-				EEE27C0D176C1653008A41AB /* ElenaHead@2x.png in Resources */,
-				EEE27C0F176C1653008A41AB /* GoukiHead@2x.png in Resources */,
-				EEE27C11176C1653008A41AB /* HugoHead@2x.png in Resources */,
-				EEE27C13176C1653008A41AB /* IbukiHead@2x.png in Resources */,
-				EEE27C15176C1653008A41AB /* KenHead@2x.png in Resources */,
-				EEE27C17176C1653008A41AB /* MakotoHead@2x.png in Resources */,
-				EEE27C19176C1653008A41AB /* NecroHead@2x.png in Resources */,
-				EEE27C1B176C1653008A41AB /* OroHead@2x.png in Resources */,
-				EEE27C1D176C1653008A41AB /* QHead@2x.png in Resources */,
-				EEE27C1F176C1653008A41AB /* RemyHead@2x.png in Resources */,
-				EEE27C21176C1653008A41AB /* RyuHead@2x.png in Resources */,
-				EEE27C23176C1653008A41AB /* SeanHead@2x.png in Resources */,
-				EEE27C25176C1653008A41AB /* TwelveHead@2x.png in Resources */,
-				EEE27C27176C1653008A41AB /* UrienHead@2x.png in Resources */,
-				EEE27C29176C1653008A41AB /* YangHead@2x.png in Resources */,
-				EEE27C2B176C1653008A41AB /* YunHead@2x.png in Resources */,
-				EEE27C2C176C1653008A41AB /* Alex.plist in Resources */,
-				EEE27C2D176C1653008A41AB /* Chun-li.plist in Resources */,
-				EEE27C2E176C1653008A41AB /* Dudley.plist in Resources */,
-				EEE27C2F176C1654008A41AB /* Elena.plist in Resources */,
-				EEE27C30176C1654008A41AB /* Gouki.plist in Resources */,
-				EEE27C31176C1654008A41AB /* Guide.plist in Resources */,
-				EEE27C32176C1654008A41AB /* Hugo.plist in Resources */,
-				EEE27C33176C1654008A41AB /* Ibuki.plist in Resources */,
-				EEE27C34176C1654008A41AB /* Ken.plist in Resources */,
-				EEE27C35176C1654008A41AB /* Makoto.plist in Resources */,
-				EEE27C37176C1654008A41AB /* Necro.plist in Resources */,
+				352275CA20D2A9C7002144BD /* Chun-li.plist in Resources */,
 				04B655541A41B6EB008E308F /* PropertyListBasedTableViewCell.xib in Resources */,
-				EEE27C38176C1654008A41AB /* Oro.plist in Resources */,
-				EEE27C39176C1654008A41AB /* Q.plist in Resources */,
 				04580D341A25CB1800A4A9B2 /* Main.storyboard in Resources */,
-				EEE27C3A176C1654008A41AB /* Remy.plist in Resources */,
-				EEE27C3B176C1654008A41AB /* Ryu.plist in Resources */,
-				EEE27C3C176C1654008A41AB /* Sean.plist in Resources */,
-				EEE27C3D176C1654008A41AB /* Twelve.plist in Resources */,
-				EEE27C3E176C1654008A41AB /* Urien.plist in Resources */,
-				EEE27C3F176C1654008A41AB /* Yang.plist in Resources */,
-				EEE27C40176C1654008A41AB /* Yun.plist in Resources */,
+				352275CF20D2A9C7002144BD /* Twelve.plist in Resources */,
+				352275D420D2A9C7002144BD /* Q.plist in Resources */,
+				352275C620D2A9C7002144BD /* Yun.plist in Resources */,
+				352275CD20D2A9C7002144BD /* Ibuki.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
