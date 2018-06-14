@@ -12,11 +12,11 @@
 		04580D301A25CB1800A4A9B2 /* DownloadManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 04580D0F1A25CB1800A4A9B2 /* DownloadManager.m */; };
 		04580D341A25CB1800A4A9B2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04580D161A25CB1800A4A9B2 /* Main.storyboard */; };
 		04580D361A25CB1800A4A9B2 /* MoreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04580D191A25CB1800A4A9B2 /* MoreViewController.m */; };
-		04580D3E1A25CB1800A4A9B2 /* SkillMotionPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 04580D291A25CB1800A4A9B2 /* SkillMotionPlayer.m */; };
 		04B655541A41B6EB008E308F /* PropertyListBasedTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04B655531A41B6EB008E308F /* PropertyListBasedTableViewCell.xib */; };
 		3505351520D1FDA600078847 /* GuideDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3505351420D1FDA600078847 /* GuideDetailViewController.swift */; };
 		3505351720D20D2E00078847 /* PropertyListBasedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3505351620D20D2E00078847 /* PropertyListBasedViewController.swift */; };
 		3505351920D21AC300078847 /* SkillMotionPlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3505351820D21AC300078847 /* SkillMotionPlayerViewController.swift */; };
+		3505351C20D259E900078847 /* SkillMotionPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3505351B20D259E900078847 /* SkillMotionPlayer.swift */; };
 		35375CAC20D0FE45004642CB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 35375CAB20D0FE45004642CB /* LaunchScreen.storyboard */; };
 		3546A89220D1024C002FEC38 /* UIColor+Integer.m in Sources */ = {isa = PBXBuildFile; fileRef = 3546A89120D1024C002FEC38 /* UIColor+Integer.m */; };
 		35B9241620D10B600081BD00 /* HitboxesConfigurationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35B9241520D10B600081BD00 /* HitboxesConfigurationViewController.swift */; };
@@ -127,13 +127,12 @@
 		04580D161A25CB1800A4A9B2 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		04580D181A25CB1800A4A9B2 /* MoreViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MoreViewController.h; sourceTree = "<group>"; };
 		04580D191A25CB1800A4A9B2 /* MoreViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MoreViewController.m; sourceTree = "<group>"; };
-		04580D281A25CB1800A4A9B2 /* SkillMotionPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SkillMotionPlayer.h; sourceTree = "<group>"; };
-		04580D291A25CB1800A4A9B2 /* SkillMotionPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SkillMotionPlayer.m; sourceTree = "<group>"; };
 		04580D2C1A25CB1800A4A9B2 /* UIColor+Integer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Integer.h"; sourceTree = "<group>"; };
 		04B655531A41B6EB008E308F /* PropertyListBasedTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PropertyListBasedTableViewCell.xib; sourceTree = "<group>"; };
 		3505351420D1FDA600078847 /* GuideDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GuideDetailViewController.swift; sourceTree = "<group>"; };
 		3505351620D20D2E00078847 /* PropertyListBasedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertyListBasedViewController.swift; sourceTree = "<group>"; };
 		3505351820D21AC300078847 /* SkillMotionPlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkillMotionPlayerViewController.swift; sourceTree = "<group>"; };
+		3505351B20D259E900078847 /* SkillMotionPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkillMotionPlayer.swift; sourceTree = "<group>"; };
 		35375CAB20D0FE45004642CB /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3546A89120D1024C002FEC38 /* UIColor+Integer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Integer.m"; sourceTree = "<group>"; };
 		35B9241520D10B600081BD00 /* HitboxesConfigurationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HitboxesConfigurationViewController.swift; sourceTree = "<group>"; };
@@ -272,8 +271,7 @@
 				3505351620D20D2E00078847 /* PropertyListBasedViewController.swift */,
 				35B9241720D115590081BD00 /* PropertyListBasedTableViewCell.swift */,
 				04B655531A41B6EB008E308F /* PropertyListBasedTableViewCell.xib */,
-				04580D281A25CB1800A4A9B2 /* SkillMotionPlayer.h */,
-				04580D291A25CB1800A4A9B2 /* SkillMotionPlayer.m */,
+				3505351B20D259E900078847 /* SkillMotionPlayer.swift */,
 				3505351820D21AC300078847 /* SkillMotionPlayerViewController.swift */,
 				35B9241520D10B600081BD00 /* HitboxesConfigurationViewController.swift */,
 				04580D181A25CB1800A4A9B2 /* MoreViewController.h */,
@@ -642,8 +640,8 @@
 				3505351720D20D2E00078847 /* PropertyListBasedViewController.swift in Sources */,
 				EEE27ADB176C1347008A41AB /* main.m in Sources */,
 				35B9241A20D1194B0081BD00 /* GuideMasterViewController.swift in Sources */,
-				04580D3E1A25CB1800A4A9B2 /* SkillMotionPlayer.m in Sources */,
 				3505351520D1FDA600078847 /* GuideDetailViewController.swift in Sources */,
+				3505351C20D259E900078847 /* SkillMotionPlayer.swift in Sources */,
 				3546A89220D1024C002FEC38 /* UIColor+Integer.m in Sources */,
 				04580D2E1A25CB1800A4A9B2 /* AppDelegate.m in Sources */,
 				35B9241620D10B600081BD00 /* HitboxesConfigurationViewController.swift in Sources */,

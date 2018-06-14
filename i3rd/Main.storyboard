@@ -497,7 +497,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fgj-Wf-hR1">
                                 <rect key="frame" x="0.0" y="146" width="375" height="375"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dpZ-LB-ynZ" customClass="SkillMotionPlayer">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dpZ-LB-ynZ" customClass="SkillMotionPlayer" customModule="i3rd" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="219"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>

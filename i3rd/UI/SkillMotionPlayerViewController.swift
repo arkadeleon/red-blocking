@@ -189,9 +189,9 @@ class SkillMotionPlayerViewController: UIViewController {
     func update() {
         let key = String(format: "motions/%@/%@/%@_%@_%03d.png", characterCode, skillCode, characterCode, skillCode, currentFrame)
         let frameImage = frameImages[key] as? UIImage
-        let frameInfo = framesInfo[String(format: "%03d", currentFrame)] as? NSDictionary
+        let frameInfo = framesInfo[String(format: "%03d", currentFrame)] as! NSDictionary
         
-        framesPlayer.drawFrameImage(frameImage, withFrameInfo: frameInfo as? [AnyHashable : Any])
+        framesPlayer.drawFrameImage(frameImage, withFrameInfo: frameInfo)
         currentFrameLabel.text = String(format: "%03d", currentFrame)
         totalFrameLabel.text = String(format: "%03d", numberOfFrames - 1)
         progressControl.value = Float(currentFrame)
