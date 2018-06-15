@@ -23,7 +23,7 @@
 		352275C720D2A9C7002144BD /* Ryu.plist in Resources */ = {isa = PBXBuildFile; fileRef = 352275B320D2A9C7002144BD /* Ryu.plist */; };
 		352275C820D2A9C7002144BD /* Gouki.plist in Resources */ = {isa = PBXBuildFile; fileRef = 352275B420D2A9C7002144BD /* Gouki.plist */; };
 		352275C920D2A9C7002144BD /* Alex.plist in Resources */ = {isa = PBXBuildFile; fileRef = 352275B520D2A9C7002144BD /* Alex.plist */; };
-		352275CA20D2A9C7002144BD /* Chun-li.plist in Resources */ = {isa = PBXBuildFile; fileRef = 352275B620D2A9C7002144BD /* Chun-li.plist */; };
+		352275CA20D2A9C7002144BD /* Chun-Li.plist in Resources */ = {isa = PBXBuildFile; fileRef = 352275B620D2A9C7002144BD /* Chun-Li.plist */; };
 		352275CB20D2A9C7002144BD /* Elena.plist in Resources */ = {isa = PBXBuildFile; fileRef = 352275B720D2A9C7002144BD /* Elena.plist */; };
 		352275CC20D2A9C7002144BD /* Ken.plist in Resources */ = {isa = PBXBuildFile; fileRef = 352275B820D2A9C7002144BD /* Ken.plist */; };
 		352275CD20D2A9C7002144BD /* Ibuki.plist in Resources */ = {isa = PBXBuildFile; fileRef = 352275B920D2A9C7002144BD /* Ibuki.plist */; };
@@ -82,7 +82,7 @@
 		352275B320D2A9C7002144BD /* Ryu.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Ryu.plist; sourceTree = "<group>"; };
 		352275B420D2A9C7002144BD /* Gouki.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Gouki.plist; sourceTree = "<group>"; };
 		352275B520D2A9C7002144BD /* Alex.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Alex.plist; sourceTree = "<group>"; };
-		352275B620D2A9C7002144BD /* Chun-li.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Chun-li.plist"; sourceTree = "<group>"; };
+		352275B620D2A9C7002144BD /* Chun-Li.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Chun-Li.plist"; sourceTree = "<group>"; };
 		352275B720D2A9C7002144BD /* Elena.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Elena.plist; sourceTree = "<group>"; };
 		352275B820D2A9C7002144BD /* Ken.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Ken.plist; sourceTree = "<group>"; };
 		352275B920D2A9C7002144BD /* Ibuki.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Ibuki.plist; sourceTree = "<group>"; };
@@ -164,7 +164,7 @@
 				352275B320D2A9C7002144BD /* Ryu.plist */,
 				352275B420D2A9C7002144BD /* Gouki.plist */,
 				352275B520D2A9C7002144BD /* Alex.plist */,
-				352275B620D2A9C7002144BD /* Chun-li.plist */,
+				352275B620D2A9C7002144BD /* Chun-Li.plist */,
 				352275B720D2A9C7002144BD /* Elena.plist */,
 				352275B820D2A9C7002144BD /* Ken.plist */,
 				352275B920D2A9C7002144BD /* Ibuki.plist */,
@@ -370,7 +370,7 @@
 				352275D120D2A9C7002144BD /* Sean.plist in Resources */,
 				352275CB20D2A9C7002144BD /* Elena.plist in Resources */,
 				35375CAC20D0FE45004642CB /* LaunchScreen.storyboard in Resources */,
-				352275CA20D2A9C7002144BD /* Chun-li.plist in Resources */,
+				352275CA20D2A9C7002144BD /* Chun-Li.plist in Resources */,
 				04B655541A41B6EB008E308F /* PropertyListBasedTableViewCell.xib in Resources */,
 				04580D341A25CB1800A4A9B2 /* Main.storyboard in Resources */,
 				352275CF20D2A9C7002144BD /* Twelve.plist in Resources */,

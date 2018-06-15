@@ -21,13 +21,13 @@
 				</dict>
 				<dict>
 					<key>RowImage</key>
-					<string>Chun-liHead.png</string>
+					<string>Chun-LiHead.png</string>
 					<key>RowTitle</key>
 					<string>チュンリー</string>
 					<key>Next</key>
-					<string>Chun-li.plist</string>
+					<string>Chun-Li.plist</string>
 					<key>NextBackgroundImage</key>
-					<string>Chun-liBody.png</string>
+					<string>Chun-LiBody.png</string>
 				</dict>
 				<dict>
 					<key>RowImage</key>

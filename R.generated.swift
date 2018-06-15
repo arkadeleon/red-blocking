@@ -98,8 +98,8 @@ struct R: Rswift.Validatable {
   struct file {
     /// Resource file `Alex.plist`.
     static let alexPlist = Rswift.FileResource(bundle: R.hostingBundle, name: "Alex", pathExtension: "plist")
-    /// Resource file `Chun-li.plist`.
-    static let chunLiPlist = Rswift.FileResource(bundle: R.hostingBundle, name: "Chun-li", pathExtension: "plist")
+    /// Resource file `Chun-Li.plist`.
+    static let chunLiPlist = Rswift.FileResource(bundle: R.hostingBundle, name: "Chun-Li", pathExtension: "plist")
     /// Resource file `Dudley.plist`.
     static let dudleyPlist = Rswift.FileResource(bundle: R.hostingBundle, name: "Dudley", pathExtension: "plist")
     /// Resource file `Elena.plist`.
@@ -143,7 +143,7 @@ struct R: Rswift.Validatable {
       return fileResource.bundle.url(forResource: fileResource)
     }
     
-    /// `bundle.url(forResource: "Chun-li", withExtension: "plist")`
+    /// `bundle.url(forResource: "Chun-Li", withExtension: "plist")`
     static func chunLiPlist(_: Void = ()) -> Foundation.URL? {
       let fileResource = R.file.chunLiPlist
       return fileResource.bundle.url(forResource: fileResource)
@@ -265,16 +265,16 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
   
-  /// This `R.image` struct is generated, and contains static references to 38 images.
+  /// This `R.image` struct is generated, and contains static references to 39 images.
   struct image {
     /// Image `AlexBody`.
     static let alexBody = Rswift.ImageResource(bundle: R.hostingBundle, name: "AlexBody")
     /// Image `AlexHead`.
     static let alexHead = Rswift.ImageResource(bundle: R.hostingBundle, name: "AlexHead")
-    /// Image `Chun-liBody`.
-    static let chunLiBody = Rswift.ImageResource(bundle: R.hostingBundle, name: "Chun-liBody")
-    /// Image `Chun-liHead`.
-    static let chunLiHead = Rswift.ImageResource(bundle: R.hostingBundle, name: "Chun-liHead")
+    /// Image `Chun-LiBody`.
+    static let chunLiBody = Rswift.ImageResource(bundle: R.hostingBundle, name: "Chun-LiBody")
+    /// Image `Chun-LiHead`.
+    static let chunLiHead = Rswift.ImageResource(bundle: R.hostingBundle, name: "Chun-LiHead")
     /// Image `DudleyBody`.
     static let dudleyBody = Rswift.ImageResource(bundle: R.hostingBundle, name: "DudleyBody")
     /// Image `DudleyHead`.
@@ -283,6 +283,8 @@ struct R: Rswift.Validatable {
     static let elenaBody = Rswift.ImageResource(bundle: R.hostingBundle, name: "ElenaBody")
     /// Image `ElenaHead`.
     static let elenaHead = Rswift.ImageResource(bundle: R.hostingBundle, name: "ElenaHead")
+    /// Image `GillBody`.
+    static let gillBody = Rswift.ImageResource(bundle: R.hostingBundle, name: "GillBody")
     /// Image `GoukiBody`.
     static let goukiBody = Rswift.ImageResource(bundle: R.hostingBundle, name: "GoukiBody")
     /// Image `GoukiHead`.
@@ -354,12 +356,12 @@ struct R: Rswift.Validatable {
       return UIKit.UIImage(resource: R.image.alexHead, compatibleWith: traitCollection)
     }
     
-    /// `UIImage(named: "Chun-liBody", bundle: ..., traitCollection: ...)`
+    /// `UIImage(named: "Chun-LiBody", bundle: ..., traitCollection: ...)`
     static func chunLiBody(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
       return UIKit.UIImage(resource: R.image.chunLiBody, compatibleWith: traitCollection)
     }
     
-    /// `UIImage(named: "Chun-liHead", bundle: ..., traitCollection: ...)`
+    /// `UIImage(named: "Chun-LiHead", bundle: ..., traitCollection: ...)`
     static func chunLiHead(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
       return UIKit.UIImage(resource: R.image.chunLiHead, compatibleWith: traitCollection)
     }
@@ -382,6 +384,11 @@ struct R: Rswift.Validatable {
     /// `UIImage(named: "ElenaHead", bundle: ..., traitCollection: ...)`
     static func elenaHead(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
       return UIKit.UIImage(resource: R.image.elenaHead, compatibleWith: traitCollection)
+    }
+    
+    /// `UIImage(named: "GillBody", bundle: ..., traitCollection: ...)`
+    static func gillBody(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.gillBody, compatibleWith: traitCollection)
     }
     
     /// `UIImage(named: "GoukiBody", bundle: ..., traitCollection: ...)`
