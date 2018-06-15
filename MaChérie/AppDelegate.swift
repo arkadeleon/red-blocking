@@ -8,15 +8,6 @@
 
 import UIKit
 
-let background0 = 0x0d0d0d
-let background1 = 0x282828
-let background2 = 0x404040
-let separator = 0x474747
-let text1 = 0xffffff
-let text2 = 0xaaaaaa
-let text3 = 0x909090
-let control1 = 0x4385f5
-
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?

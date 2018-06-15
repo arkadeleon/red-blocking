@@ -244,9 +244,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <progressView opaque="NO" contentMode="scaleToFill" progressViewStyle="bar" translatesAutoresizingMaskIntoConstraints="NO" id="aW8-Cc-2NM">
-                                <rect key="frame" x="0.0" y="64" width="375" height="2.5"/>
-                            </progressView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fgj-Wf-hR1">
                                 <rect key="frame" x="0.0" y="64" width="375" height="300"/>
                                 <subviews>
@@ -329,6 +326,9 @@
                                     <constraint firstItem="IHj-wR-K8a" firstAttribute="top" secondItem="fgj-Wf-hR1" secondAttribute="top" id="xda-AA-Lko"/>
                                 </constraints>
                             </view>
+                            <progressView opaque="NO" contentMode="scaleToFill" progressViewStyle="bar" translatesAutoresizingMaskIntoConstraints="NO" id="aW8-Cc-2NM">
+                                <rect key="frame" x="0.0" y="64" width="375" height="2.5"/>
+                            </progressView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ueo-RQ-vmw">
                                 <rect key="frame" x="15" y="384" width="165" height="176"/>
                                 <subviews>
