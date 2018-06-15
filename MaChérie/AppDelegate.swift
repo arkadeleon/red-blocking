@@ -11,6 +11,7 @@ import UIKit
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
+    var popInteractor: PopInteractor?
     
     class var shared: AppDelegate {
         return UIApplication.shared.delegate as! AppDelegate
@@ -74,16 +75,21 @@ extension AppDelegate: UISplitViewControllerDelegate {
 extension AppDelegate: UINavigationControllerDelegate {
     func navigationController(_ navigationController: UINavigationController, animationControllerFor operation: UINavigationControllerOperation, from fromVC: UIViewController, to toVC: UIViewController) -> UIViewControllerAnimatedTransitioning? {
         switch operation {
+        case .push:
+            popInteractor = PopInteractor(attachTo: toVC)
+            return PushAnimator()
+        case .pop:
+            return PopAnimator()
         case .none:
             return nil
-        case .pop:
-            return PopAnimationController(direction: .right)
-        case .push:
-            return PushAnimationController(direction: .right)
         }
     }
     
     func navigationController(_ navigationController: UINavigationController, interactionControllerFor animationController: UIViewControllerAnimatedTransitioning) -> UIViewControllerInteractiveTransitioning? {
-        return nil
+        if let popInteractor = popInteractor, popInteractor.transitionInProgress {
+            return popInteractor
+        } else {
+            return nil
+        }
     }
 }
