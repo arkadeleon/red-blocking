@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		04580D341A25CB1800A4A9B2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04580D161A25CB1800A4A9B2 /* Main.storyboard */; };
-		04580D361A25CB1800A4A9B2 /* MoreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04580D191A25CB1800A4A9B2 /* MoreViewController.m */; };
 		04B655541A41B6EB008E308F /* PropertyListBasedTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04B655531A41B6EB008E308F /* PropertyListBasedTableViewCell.xib */; };
 		3505351520D1FDA600078847 /* GuideDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3505351420D1FDA600078847 /* GuideDetailViewController.swift */; };
 		3505351720D20D2E00078847 /* PropertyListBasedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3505351620D20D2E00078847 /* PropertyListBasedViewController.swift */; };
@@ -51,7 +50,6 @@
 		EEE27ACF176C1347008A41AB /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEE27ACE176C1347008A41AB /* UIKit.framework */; };
 		EEE27AD1176C1347008A41AB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEE27AD0176C1347008A41AB /* Foundation.framework */; };
 		EEE27AD3176C1347008A41AB /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEE27AD2176C1347008A41AB /* CoreGraphics.framework */; };
-		EEE27AD9176C1347008A41AB /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = EEE27AD7176C1347008A41AB /* InfoPlist.strings */; };
 		EEE27AEC176C1424008A41AB /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEE27AEB176C1424008A41AB /* AVFoundation.framework */; };
 		EEE27AEE176C1430008A41AB /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEE27AED176C1430008A41AB /* CoreData.framework */; };
 		EEE27AF0176C1457008A41AB /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEE27AEF176C1457008A41AB /* CoreMedia.framework */; };
@@ -100,18 +98,16 @@
 		35B9241520D10B600081BD00 /* HitboxesConfigurationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HitboxesConfigurationViewController.swift; sourceTree = "<group>"; };
 		35B9241720D115590081BD00 /* PropertyListBasedTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertyListBasedTableViewCell.swift; sourceTree = "<group>"; };
 		35B9241920D1194B0081BD00 /* GuideMasterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuideMasterViewController.swift; sourceTree = "<group>"; };
-		88B6B3C31F2AD6AB00E31C39 /* i3rd-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "i3rd-Bridging-Header.h"; sourceTree = "<group>"; };
+		88B6B3C31F2AD6AB00E31C39 /* MaChérie-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MaChérie-Bridging-Header.h"; sourceTree = "<group>"; };
 		EE318CB4183E363E0081370B /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
-		EEA36C4617769AED0007E02F /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
 		EEA48CA21775E59F00351CAB /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		EEA48CA41775E79000351CAB /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
 		EEADB06B17FA72B3004E2F60 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		EEE27ACB176C1347008A41AB /* i3rd.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = i3rd.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EEE27ACB176C1347008A41AB /* MaChérie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MaChérie.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EEE27ACE176C1347008A41AB /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		EEE27AD0176C1347008A41AB /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		EEE27AD2176C1347008A41AB /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		EEE27AD6176C1347008A41AB /* i3rd-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "i3rd-Info.plist"; sourceTree = "<group>"; };
-		EEE27AD8176C1347008A41AB /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		EEE27AD6176C1347008A41AB /* MaChérie-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MaChérie-Info.plist"; sourceTree = "<group>"; };
 		EEE27AEB176C1424008A41AB /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		EEE27AED176C1430008A41AB /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		EEE27AEF176C1457008A41AB /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
@@ -204,7 +200,7 @@
 		EEE27AC2176C1347008A41AB = {
 			isa = PBXGroup;
 			children = (
-				EEE27AD4176C1347008A41AB /* i3rd */,
+				EEE27AD4176C1347008A41AB /* MaChérie */,
 				EEE27ACD176C1347008A41AB /* Frameworks */,
 				EEE27ACC176C1347008A41AB /* Products */,
 			);
@@ -213,7 +209,7 @@
 		EEE27ACC176C1347008A41AB /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				EEE27ACB176C1347008A41AB /* i3rd.app */,
+				EEE27ACB176C1347008A41AB /* MaChérie.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -238,7 +234,7 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		EEE27AD4176C1347008A41AB /* i3rd */ = {
+		EEE27AD4176C1347008A41AB /* MaChérie */ = {
 			isa = PBXGroup;
 			children = (
 				3566755620D26A4D00DD26A4 /* AppDelegate.swift */,
@@ -250,15 +246,14 @@
 				EEE27AD5176C1347008A41AB /* Supporting Files */,
 				EEADB06B17FA72B3004E2F60 /* Assets.xcassets */,
 			);
-			path = i3rd;
+			path = "MaChérie";
 			sourceTree = "<group>";
 		};
 		EEE27AD5176C1347008A41AB /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				88B6B3C31F2AD6AB00E31C39 /* i3rd-Bridging-Header.h */,
-				EEE27AD6176C1347008A41AB /* i3rd-Info.plist */,
-				EEE27AD7176C1347008A41AB /* InfoPlist.strings */,
+				88B6B3C31F2AD6AB00E31C39 /* MaChérie-Bridging-Header.h */,
+				EEE27AD6176C1347008A41AB /* MaChérie-Info.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -266,9 +261,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		EEE27ACA176C1347008A41AB /* i3rd */ = {
+		EEE27ACA176C1347008A41AB /* MaChérie */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = EEE27AE8176C1347008A41AB /* Build configuration list for PBXNativeTarget "i3rd" */;
+			buildConfigurationList = EEE27AE8176C1347008A41AB /* Build configuration list for PBXNativeTarget "MaChérie" */;
 			buildPhases = (
 				EEE27AC7176C1347008A41AB /* Sources */,
 				EEE27AC8176C1347008A41AB /* Frameworks */,
@@ -278,9 +273,9 @@
 			);
 			dependencies = (
 			);
-			name = i3rd;
-			productName = i3rd;
-			productReference = EEE27ACB176C1347008A41AB /* i3rd.app */;
+			name = "MaChérie";
+			productName = "MaChérie";
+			productReference = EEE27ACB176C1347008A41AB /* MaChérie.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -307,7 +302,7 @@
 					};
 				};
 			};
-			buildConfigurationList = EEE27AC6176C1347008A41AB /* Build configuration list for PBXProject "i3rd" */;
+			buildConfigurationList = EEE27AC6176C1347008A41AB /* Build configuration list for PBXProject "MaChérie" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -320,7 +315,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				EEE27ACA176C1347008A41AB /* i3rd */,
+				EEE27ACA176C1347008A41AB /* MaChérie */,
 			);
 		};
 /* End PBXProject section */
@@ -331,7 +326,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				352275C420D2A9C7002144BD /* Remy.plist in Resources */,
-				EEE27AD9176C1347008A41AB /* InfoPlist.strings in Resources */,
 				352275C320D2A9C7002144BD /* Makoto.plist in Resources */,
 				352275C120D2A9C7002144BD /* Yang.plist in Resources */,
 				352275C920D2A9C7002144BD /* Alex.plist in Resources */,
@@ -378,23 +372,10 @@
 				3566755520D26A2800DD26A4 /* ApplicationDataManager.swift in Sources */,
 				35B9241620D10B600081BD00 /* HitboxesConfigurationViewController.swift in Sources */,
 				3505351920D21AC300078847 /* SkillMotionPlayerViewController.swift in Sources */,
-				04580D361A25CB1800A4A9B2 /* MoreViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXVariantGroup section */
-		EEE27AD7176C1347008A41AB /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				EEE27AD8176C1347008A41AB /* en */,
-				EEA36C4617769AED0007E02F /* zh-Hans */,
-			);
-			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		EEE27AE6176C1347008A41AB /* Debug */ = {
@@ -507,7 +488,7 @@
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "";
-				INFOPLIST_FILE = "i3rd/i3rd-Info.plist";
+				INFOPLIST_FILE = "MaChérie/MaChérie-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
@@ -516,7 +497,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				SWIFT_OBJC_BRIDGING_HEADER = "i3rd/i3rd-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "MaChérie/MaChérie-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_SWIFT3_OBJC_INFERENCE = On;
 				SWIFT_VERSION = 4.0;
@@ -539,7 +520,7 @@
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "";
-				INFOPLIST_FILE = "i3rd/i3rd-Info.plist";
+				INFOPLIST_FILE = "MaChérie/MaChérie-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
@@ -548,7 +529,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				SWIFT_OBJC_BRIDGING_HEADER = "i3rd/i3rd-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "MaChérie/MaChérie-Bridging-Header.h";
 				SWIFT_SWIFT3_OBJC_INFERENCE = On;
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -559,7 +540,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		EEE27AC6176C1347008A41AB /* Build configuration list for PBXProject "i3rd" */ = {
+		EEE27AC6176C1347008A41AB /* Build configuration list for PBXProject "MaChérie" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				EEE27AE6176C1347008A41AB /* Debug */,
@@ -568,7 +549,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		EEE27AE8176C1347008A41AB /* Build configuration list for PBXNativeTarget "i3rd" */ = {
+		EEE27AE8176C1347008A41AB /* Build configuration list for PBXNativeTarget "MaChérie" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				EEE27AE9176C1347008A41AB /* Debug */,

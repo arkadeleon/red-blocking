@@ -1,6 +1,6 @@
 
 #import "MoreViewController.h"
-#import "i3rd-Swift.h"
+#import "MaChérie-Swift.h"
 
 const NSInteger FeedbackCellSection = 0;
 const NSInteger FeedbackCellRow = 0;
@@ -39,7 +39,7 @@ const NSInteger DeleteDocumentsAndDataViewTag = 1000;
         mailComposeViewController.modalPresentationStyle = UIModalPresentationFormSheet;
         mailComposeViewController.mailComposeDelegate = self;
         mailComposeViewController.restorationIdentifier = NSStringFromClass([MFMailComposeViewController class]);
-        [mailComposeViewController setSubject:@"About i3rd"];
+        [mailComposeViewController setSubject:@"About MaChérie"];
         [mailComposeViewController setToRecipients:@[@"david1988929@163.com"]];
         [self presentViewController:mailComposeViewController animated:YES completion:NULL];
     } else if (indexPath.section == DeleteDocumentsAndDataCellSection && indexPath.row == DeleteDocumentsAndDataCellRow) {

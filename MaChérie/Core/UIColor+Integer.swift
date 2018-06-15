@@ -1,6 +1,6 @@
 //
 //  UIColor+Integer.swift
-//  i3rd
+//  MaChérie
 //
 //  Created by Leon Li on 2018/6/14.
 //  Copyright © 2018 Leon & Vane. All rights reserved.
