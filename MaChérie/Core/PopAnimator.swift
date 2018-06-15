@@ -21,6 +21,7 @@ class PopAnimator: NSObject, UIViewControllerAnimatedTransitioning {
         
         toView.frame = fromView.frame
         toView.frame.origin.x -= fromView.frame.width
+//        toView.alpha = 0
         
         UIView.animate(
             withDuration: transitionDuration(using: transitionContext),
@@ -28,7 +29,10 @@ class PopAnimator: NSObject, UIViewControllerAnimatedTransitioning {
             options: .curveEaseOut,
             animations: {
                 toView.frame = fromView.frame
+//                toView.alpha = 1
+                
                 fromView.frame.origin.x += fromView.frame.width
+//                fromView.alpha = 0
             },
             completion: { finished in
                 transitionContext.completeTransition(!transitionContext.transitionWasCancelled)

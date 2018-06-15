@@ -18,6 +18,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey : Any]? = nil) -> Bool {
+        
+        application.statusBarStyle = .lightContent
+        
+        UINavigationBar.appearance().barTintColor = R.color.backgroundColor()
+        UINavigationBar.appearance().tintColor = R.color.primaryTextColor()
+        UINavigationBar.appearance().titleTextAttributes = [.foregroundColor : R.color.primaryTextColor()!]
+        
         let splitViewController = window!.rootViewController as! UISplitViewController
         splitViewController.delegate = self
         (splitViewController.viewControllers[0] as! UINavigationController).delegate = self

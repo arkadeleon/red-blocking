@@ -18,7 +18,7 @@ class GuideMasterViewController: PropertyListBasedViewController {
             let bodyViewFrame = UIEdgeInsetsInsetRect(navigationController!.view.bounds, UIEdgeInsets(top: statusBarHeight + navigationBarHeight, left: 0, bottom: 0, right: 0))
             let bodyView = UIImageView(frame: bodyViewFrame)
             bodyView.contentMode = .scaleAspectFit
-            bodyView.backgroundColor = .white
+            bodyView.backgroundColor = R.color.backgroundColor()
             navigationController!.view.insertSubview(bodyView, at: 0)
             return bodyView
         } else {
@@ -28,7 +28,7 @@ class GuideMasterViewController: PropertyListBasedViewController {
             let bodyView = UIImageView(frame: bodyViewFrame)
             bodyView.autoresizingMask = [.flexibleBottomMargin, .flexibleWidth, .flexibleHeight]
             bodyView.contentMode = .scaleAspectFit
-            bodyView.backgroundColor = .white
+            bodyView.backgroundColor = R.color.backgroundColor()
             detailNavigationController.view.insertSubview(bodyView, at: 0)
             return bodyView
         }

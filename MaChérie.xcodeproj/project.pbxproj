@@ -46,6 +46,7 @@
 		35EFE5C220D3A187007EB379 /* PushAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35EFE5C120D3A187007EB379 /* PushAnimator.swift */; };
 		35EFE5C420D3A3B3007EB379 /* PopAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35EFE5C320D3A3B3007EB379 /* PopAnimator.swift */; };
 		35EFE5C620D3A709007EB379 /* PopInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35EFE5C520D3A709007EB379 /* PopInteractor.swift */; };
+		35EFE5C820D3B389007EB379 /* UIImage+Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35EFE5C720D3B389007EB379 /* UIImage+Color.swift */; };
 		EE318CB5183E363E0081370B /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE318CB4183E363E0081370B /* AudioToolbox.framework */; };
 		EEA48CA31775E59F00351CAB /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEA48CA21775E59F00351CAB /* Security.framework */; };
 		EEA48CA51775E79000351CAB /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEA48CA41775E79000351CAB /* ImageIO.framework */; };
@@ -104,6 +105,7 @@
 		35EFE5C120D3A187007EB379 /* PushAnimator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PushAnimator.swift; sourceTree = "<group>"; };
 		35EFE5C320D3A3B3007EB379 /* PopAnimator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopAnimator.swift; sourceTree = "<group>"; };
 		35EFE5C520D3A709007EB379 /* PopInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopInteractor.swift; sourceTree = "<group>"; };
+		35EFE5C720D3B389007EB379 /* UIImage+Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Color.swift"; sourceTree = "<group>"; };
 		88B6B3C31F2AD6AB00E31C39 /* MaChérie-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MaChérie-Bridging-Header.h"; sourceTree = "<group>"; };
 		9B0A51AF84A34AEE62B96739 /* Pods-MaChérie.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MaChérie.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MaChérie/Pods-MaChérie.debug.xcconfig"; sourceTree = "<group>"; };
 		D3FF64D4D4365DCD8DEF7ADE /* Pods-MaChérie.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MaChérie.release.xcconfig"; path = "Pods/Target Support Files/Pods-MaChérie/Pods-MaChérie.release.xcconfig"; sourceTree = "<group>"; };
@@ -203,6 +205,7 @@
 				3566755420D26A2800DD26A4 /* ApplicationDataManager.swift */,
 				3566755820D2702C00DD26A4 /* DownloadManager.swift */,
 				3566755220D2692F00DD26A4 /* UIColor+Integer.swift */,
+				35EFE5C720D3B389007EB379 /* UIImage+Color.swift */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -449,6 +452,7 @@
 				35EFE5BE20D39EEF007EB379 /* R.generated.swift in Sources */,
 				35EFE5C020D39F31007EB379 /* MoreViewController.swift in Sources */,
 				35B9241A20D1194B0081BD00 /* GuideMasterViewController.swift in Sources */,
+				35EFE5C820D3B389007EB379 /* UIImage+Color.swift in Sources */,
 				3505351520D1FDA600078847 /* GuideDetailViewController.swift in Sources */,
 				3505351C20D259E900078847 /* SkillMotionPlayer.swift in Sources */,
 				3566755320D2692F00DD26A4 /* UIColor+Integer.swift in Sources */,
