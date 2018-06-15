@@ -40,7 +40,6 @@
 		3566755520D26A2800DD26A4 /* ApplicationDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3566755420D26A2800DD26A4 /* ApplicationDataManager.swift */; };
 		3566755720D26A4D00DD26A4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3566755620D26A4D00DD26A4 /* AppDelegate.swift */; };
 		3566755920D2702C00DD26A4 /* DownloadManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3566755820D2702C00DD26A4 /* DownloadManager.swift */; };
-		35B9241620D10B600081BD00 /* HitboxesConfigurationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35B9241520D10B600081BD00 /* HitboxesConfigurationViewController.swift */; };
 		35B9241820D115590081BD00 /* PropertyListBasedTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35B9241720D115590081BD00 /* PropertyListBasedTableViewCell.swift */; };
 		35B9241A20D1194B0081BD00 /* GuideMasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35B9241920D1194B0081BD00 /* GuideMasterViewController.swift */; };
 		EE318CB5183E363E0081370B /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE318CB4183E363E0081370B /* AudioToolbox.framework */; };
@@ -95,7 +94,6 @@
 		3566755420D26A2800DD26A4 /* ApplicationDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationDataManager.swift; sourceTree = "<group>"; };
 		3566755620D26A4D00DD26A4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3566755820D2702C00DD26A4 /* DownloadManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadManager.swift; sourceTree = "<group>"; };
-		35B9241520D10B600081BD00 /* HitboxesConfigurationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HitboxesConfigurationViewController.swift; sourceTree = "<group>"; };
 		35B9241720D115590081BD00 /* PropertyListBasedTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertyListBasedTableViewCell.swift; sourceTree = "<group>"; };
 		35B9241920D1194B0081BD00 /* GuideMasterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuideMasterViewController.swift; sourceTree = "<group>"; };
 		88B6B3C31F2AD6AB00E31C39 /* MaChérie-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MaChérie-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -178,7 +176,6 @@
 				04B655531A41B6EB008E308F /* PropertyListBasedTableViewCell.xib */,
 				3505351B20D259E900078847 /* SkillMotionPlayer.swift */,
 				3505351820D21AC300078847 /* SkillMotionPlayerViewController.swift */,
-				35B9241520D10B600081BD00 /* HitboxesConfigurationViewController.swift */,
 				04580D181A25CB1800A4A9B2 /* MoreViewController.h */,
 				04580D191A25CB1800A4A9B2 /* MoreViewController.m */,
 			);
@@ -370,7 +367,6 @@
 				3505351C20D259E900078847 /* SkillMotionPlayer.swift in Sources */,
 				3566755320D2692F00DD26A4 /* UIColor+Integer.swift in Sources */,
 				3566755520D26A2800DD26A4 /* ApplicationDataManager.swift in Sources */,
-				35B9241620D10B600081BD00 /* HitboxesConfigurationViewController.swift in Sources */,
 				3505351920D21AC300078847 /* SkillMotionPlayerViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -494,6 +490,7 @@
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = com.studiopp.i3rd;
+				PRODUCT_MODULE_NAME = MaCherie;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -526,6 +523,7 @@
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = com.studiopp.i3rd;
+				PRODUCT_MODULE_NAME = MaCherie;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";

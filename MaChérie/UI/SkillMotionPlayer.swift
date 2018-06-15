@@ -78,51 +78,51 @@ class SkillMotionPlayer: UIView {
         
         let userDefaults = UserDefaults.standard
         
-        if userDefaults.bool(forKey: Player1PassiveHitboxHiddenKey) == false {
+        if userDefaults.bool(forKey: Player1PassiveHitboxHiddenKey) {
             drawHitboxes(player1PassiveHitboxes, hitboxesToDraw:player1PassiveHitboxesToDraw, inContext:context, withFillColor:PASSIVE_HITBOX_FILL_COLOR.cgColor, strokeColor:PASSIVE_HITBOX_STROKE_COLOR.cgColor)
         }
         
-        if userDefaults.bool(forKey: Player1OtherVulnerabilityHitboxHiddenKey) == false {
+        if userDefaults.bool(forKey: Player1OtherVulnerabilityHitboxHiddenKey) {
             drawHitboxes(player1OtherVulnerabilityHitboxes, hitboxesToDraw:player1OtherVulnerabilityHitboxesToDraw, inContext:context, withFillColor:OTHER_VULNERABILITY_HITBOX_FILL_COLOR.cgColor, strokeColor:OTHER_VULNERABILITY_HITBOX_STROKE_COLOR.cgColor)
         }
         
-        if userDefaults.bool(forKey: Player1ActiveHitboxHiddenKey) == false {
+        if userDefaults.bool(forKey: Player1ActiveHitboxHiddenKey) {
             drawHitboxes(player1ActiveHitboxes, hitboxesToDraw:player1ActiveHitboxesToDraw, inContext:context, withFillColor:ACTIVE_HITBOX_FILL_COLOR.cgColor, strokeColor:ACTIVE_HITBOX_STROKE_COLOR.cgColor)
         }
         
-        if userDefaults.bool(forKey: Player1ThrowHitboxHiddenKey) == false {
+        if userDefaults.bool(forKey: Player1ThrowHitboxHiddenKey) {
             drawHitboxes(player1ThrowHitboxes, hitboxesToDraw:player1ThrowHitboxesToDraw, inContext:context, withFillColor:THROW_HITBOX_FILL_COLOR.cgColor, strokeColor:THROW_HITBOX_STROKE_COLOR.cgColor)
         }
         
-        if userDefaults.bool(forKey: Player1ThrowableHitboxHiddenKey) == false {
+        if userDefaults.bool(forKey: Player1ThrowableHitboxHiddenKey) {
             drawHitboxes(player1ThrowableHitboxes, hitboxesToDraw:player1ThrowableHitboxesToDraw, inContext:context, withFillColor:THROWABLE_HITBOX_FILL_COLOR.cgColor, strokeColor:THROWABLE_HITBOX_STROKE_COLOR.cgColor)
         }
         
-        if userDefaults.bool(forKey: Player1PushHitboxHiddenKey) == false {
+        if userDefaults.bool(forKey: Player1PushHitboxHiddenKey) {
             drawHitboxes(player1PushHitboxes, hitboxesToDraw:player1PushHitboxesToDraw, inContext:context, withFillColor:PUSH_HITBOX_FILL_COLOR.cgColor, strokeColor:PUSH_HITBOX_STROKE_COLOR.cgColor)
         }
         
-        if userDefaults.bool(forKey: Player2PassiveHitboxHiddenKey) == false {
+        if userDefaults.bool(forKey: Player2PassiveHitboxHiddenKey) {
             drawHitboxes(player2PassiveHitboxes, hitboxesToDraw:player2PassiveHitboxesToDraw, inContext:context, withFillColor:PASSIVE_HITBOX_FILL_COLOR.cgColor, strokeColor:PASSIVE_HITBOX_STROKE_COLOR.cgColor)
         }
         
-        if userDefaults.bool(forKey: Player2OtherVulnerabilityHitboxHiddenKey) == false {
+        if userDefaults.bool(forKey: Player2OtherVulnerabilityHitboxHiddenKey) {
             drawHitboxes(player2OtherVulnerabilityHitboxes, hitboxesToDraw:player2OtherVulnerabilityHitboxesToDraw, inContext:context, withFillColor:OTHER_VULNERABILITY_HITBOX_FILL_COLOR.cgColor, strokeColor:OTHER_VULNERABILITY_HITBOX_STROKE_COLOR.cgColor)
         }
         
-        if userDefaults.bool(forKey: Player2ActiveHitboxHiddenKey) == false {
+        if userDefaults.bool(forKey: Player2ActiveHitboxHiddenKey) {
             drawHitboxes(player2ActiveHitboxes, hitboxesToDraw:player2ActiveHitboxesToDraw, inContext:context, withFillColor:ACTIVE_HITBOX_FILL_COLOR.cgColor, strokeColor:ACTIVE_HITBOX_STROKE_COLOR.cgColor)
         }
         
-        if userDefaults.bool(forKey: Player2ThrowHitboxHiddenKey) == false {
+        if userDefaults.bool(forKey: Player2ThrowHitboxHiddenKey) {
             drawHitboxes(player2ThrowHitboxes, hitboxesToDraw:player2ThrowHitboxesToDraw, inContext:context, withFillColor:THROW_HITBOX_FILL_COLOR.cgColor, strokeColor:THROW_HITBOX_STROKE_COLOR.cgColor)
         }
         
-        if userDefaults.bool(forKey: Player2ThrowableHitboxHiddenKey) == false {
+        if userDefaults.bool(forKey: Player2ThrowableHitboxHiddenKey) {
             drawHitboxes(player2ThrowableHitboxes, hitboxesToDraw:player2ThrowableHitboxesToDraw, inContext:context, withFillColor:THROWABLE_HITBOX_FILL_COLOR.cgColor, strokeColor:THROWABLE_HITBOX_STROKE_COLOR.cgColor)
         }
         
-        if userDefaults.bool(forKey: Player2PushHitboxHiddenKey) == false {
+        if userDefaults.bool(forKey: Player2PushHitboxHiddenKey) {
             drawHitboxes(player2PushHitboxes, hitboxesToDraw:player2PushHitboxesToDraw, inContext:context, withFillColor:PUSH_HITBOX_FILL_COLOR.cgColor, strokeColor:PUSH_HITBOX_STROKE_COLOR.cgColor)
         }
         
