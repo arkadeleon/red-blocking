@@ -34,6 +34,8 @@
 		352275D220D2A9C7002144BD /* Hugo.plist in Resources */ = {isa = PBXBuildFile; fileRef = 352275BE20D2A9C7002144BD /* Hugo.plist */; };
 		352275D320D2A9C7002144BD /* Oro.plist in Resources */ = {isa = PBXBuildFile; fileRef = 352275BF20D2A9C7002144BD /* Oro.plist */; };
 		352275D420D2A9C7002144BD /* Q.plist in Resources */ = {isa = PBXBuildFile; fileRef = 352275C020D2A9C7002144BD /* Q.plist */; };
+		352275D820D2B79A002144BD /* PopAnimationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 352275D620D2B799002144BD /* PopAnimationController.swift */; };
+		352275D920D2B79A002144BD /* PushAnimationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 352275D720D2B799002144BD /* PushAnimationController.swift */; };
 		35375CAC20D0FE45004642CB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 35375CAB20D0FE45004642CB /* LaunchScreen.storyboard */; };
 		3566755320D2692F00DD26A4 /* UIColor+Integer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3566755220D2692F00DD26A4 /* UIColor+Integer.swift */; };
 		3566755520D26A2800DD26A4 /* ApplicationDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3566755420D26A2800DD26A4 /* ApplicationDataManager.swift */; };
@@ -88,6 +90,8 @@
 		352275BE20D2A9C7002144BD /* Hugo.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Hugo.plist; sourceTree = "<group>"; };
 		352275BF20D2A9C7002144BD /* Oro.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Oro.plist; sourceTree = "<group>"; };
 		352275C020D2A9C7002144BD /* Q.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Q.plist; sourceTree = "<group>"; };
+		352275D620D2B799002144BD /* PopAnimationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopAnimationController.swift; sourceTree = "<group>"; };
+		352275D720D2B799002144BD /* PushAnimationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PushAnimationController.swift; sourceTree = "<group>"; };
 		35375CAB20D0FE45004642CB /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3566755220D2692F00DD26A4 /* UIColor+Integer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Integer.swift"; sourceTree = "<group>"; };
 		3566755420D26A2800DD26A4 /* ApplicationDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationDataManager.swift; sourceTree = "<group>"; };
@@ -188,6 +192,8 @@
 		3572AF8D20D1021F00C15871 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				352275D620D2B799002144BD /* PopAnimationController.swift */,
+				352275D720D2B799002144BD /* PushAnimationController.swift */,
 				3566755420D26A2800DD26A4 /* ApplicationDataManager.swift */,
 				3566755820D2702C00DD26A4 /* DownloadManager.swift */,
 				3566755220D2692F00DD26A4 /* UIColor+Integer.swift */,
@@ -360,6 +366,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				35B9241820D115590081BD00 /* PropertyListBasedTableViewCell.swift in Sources */,
+				352275D820D2B79A002144BD /* PopAnimationController.swift in Sources */,
+				352275D920D2B79A002144BD /* PushAnimationController.swift in Sources */,
 				3505351720D20D2E00078847 /* PropertyListBasedViewController.swift in Sources */,
 				3566755920D2702C00DD26A4 /* DownloadManager.swift in Sources */,
 				3566755720D26A4D00DD26A4 /* AppDelegate.swift in Sources */,

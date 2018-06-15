@@ -28,7 +28,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey : Any]? = nil) -> Bool {
         let splitViewController = window!.rootViewController as! UISplitViewController
         splitViewController.delegate = self
-        
+        (splitViewController.viewControllers[0] as! UINavigationController).delegate = self
+        (splitViewController.viewControllers[1] as! UINavigationController).delegate = self
+
         UserDefaults.standard.register(defaults: [
             Player1PassiveHitboxHiddenKey : false,
             Player1OtherVulnerabilityHitboxHiddenKey : false,
@@ -75,5 +77,22 @@ extension AppDelegate: UISplitViewControllerDelegate {
         } else {
             return false
         }
+    }
+}
+
+extension AppDelegate: UINavigationControllerDelegate {
+    func navigationController(_ navigationController: UINavigationController, animationControllerFor operation: UINavigationControllerOperation, from fromVC: UIViewController, to toVC: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        switch operation {
+        case .none:
+            return nil
+        case .pop:
+            return PopAnimationController(direction: .right)
+        case .push:
+            return PushAnimationController(direction: .right)
+        }
+    }
+    
+    func navigationController(_ navigationController: UINavigationController, interactionControllerFor animationController: UIViewControllerAnimatedTransitioning) -> UIViewControllerInteractiveTransitioning? {
+        return nil
     }
 }

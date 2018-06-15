@@ -23,6 +23,8 @@ class GuideDetailViewController: PropertyListBasedViewController {
         tableView.backgroundView = tableViewBackgroundView
         tableView.backgroundColor = .clear
         view.backgroundColor = .clear
+        
+        navigationController?.delegate = AppDelegate.shared
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
