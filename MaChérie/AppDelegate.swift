@@ -21,10 +21,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         application.statusBarStyle = .lightContent
         
-        UINavigationBar.appearance().isTranslucent = false
         UINavigationBar.appearance().barTintColor = R.color.backgroundColor()
         UINavigationBar.appearance().tintColor = R.color.primaryTextColor()
         UINavigationBar.appearance().titleTextAttributes = [.foregroundColor : R.color.primaryTextColor()!]
+        UINavigationBar.appearance().setBackgroundImage(UIImage(color: R.color.backgroundColor()!, size: CGSize(width: 1, height: 1)), for: .default)
         UINavigationBar.appearance().shadowImage = R.image.navigationBarShadow()
         
         let splitViewController = window!.rootViewController as! UISplitViewController

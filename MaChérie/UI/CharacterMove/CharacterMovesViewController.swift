@@ -120,7 +120,7 @@ extension CharacterMovesViewController: UITableViewDelegate {
                 performSegue(withIdentifier: GuideDetailViewControllerPresentSkillMotionPlayerViewControllerSegue, sender: self)
             }
         } else if let next = characterMove.next {
-            let nextViewController = storyboard?.instantiateViewController(withIdentifier: "GuideDetailViewController") as! CharacterMovesViewController
+            let nextViewController = storyboard?.instantiateViewController(withIdentifier: "CharacterMovesViewController") as! CharacterMovesViewController
             nextViewController.title = characterMove.rowTitle
             nextViewController.sections = next
             navigationController?.pushViewController(nextViewController, animated: true)

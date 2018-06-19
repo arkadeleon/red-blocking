@@ -783,15 +783,18 @@ struct _R: Rswift.Validatable {
       typealias InitialController = UIKit.UISplitViewController
       
       let bundle = R.hostingBundle
+      let characterMovesViewController = StoryboardViewControllerResource<CharacterMovesViewController>(identifier: "CharacterMovesViewController")
       let charactersViewController = StoryboardViewControllerResource<CharactersViewController>(identifier: "CharactersViewController")
       let guideDetailNavigationController = StoryboardViewControllerResource<UIKit.UINavigationController>(identifier: "GuideDetailNavigationController")
-      let guideDetailViewController = StoryboardViewControllerResource<CharacterMovesViewController>(identifier: "GuideDetailViewController")
-      let guideMasterNavigationController = StoryboardViewControllerResource<UIKit.UINavigationController>(identifier: "GuideMasterNavigationController")
       let guideSplitViewController = StoryboardViewControllerResource<UIKit.UISplitViewController>(identifier: "GuideSplitViewController")
       let moreNavigationController = StoryboardViewControllerResource<UIKit.UINavigationController>(identifier: "MoreNavigationController")
       let moreViewController = StoryboardViewControllerResource<MoreViewController>(identifier: "MoreViewController")
       let name = "Main"
       let skillMotionPlayerViewController = StoryboardViewControllerResource<SkillMotionPlayerViewController>(identifier: "SkillMotionPlayerViewController")
+      
+      func characterMovesViewController(_: Void = ()) -> CharacterMovesViewController? {
+        return UIKit.UIStoryboard(resource: self).instantiateViewController(withResource: characterMovesViewController)
+      }
       
       func charactersViewController(_: Void = ()) -> CharactersViewController? {
         return UIKit.UIStoryboard(resource: self).instantiateViewController(withResource: charactersViewController)
@@ -799,14 +802,6 @@ struct _R: Rswift.Validatable {
       
       func guideDetailNavigationController(_: Void = ()) -> UIKit.UINavigationController? {
         return UIKit.UIStoryboard(resource: self).instantiateViewController(withResource: guideDetailNavigationController)
-      }
-      
-      func guideDetailViewController(_: Void = ()) -> CharacterMovesViewController? {
-        return UIKit.UIStoryboard(resource: self).instantiateViewController(withResource: guideDetailViewController)
-      }
-      
-      func guideMasterNavigationController(_: Void = ()) -> UIKit.UINavigationController? {
-        return UIKit.UIStoryboard(resource: self).instantiateViewController(withResource: guideMasterNavigationController)
       }
       
       func guideSplitViewController(_: Void = ()) -> UIKit.UISplitViewController? {
@@ -832,8 +827,7 @@ struct _R: Rswift.Validatable {
         if _R.storyboard.main().moreViewController() == nil { throw Rswift.ValidationError(description:"[R.swift] ViewController with identifier 'moreViewController' could not be loaded from storyboard 'Main' as 'MoreViewController'.") }
         if _R.storyboard.main().charactersViewController() == nil { throw Rswift.ValidationError(description:"[R.swift] ViewController with identifier 'charactersViewController' could not be loaded from storyboard 'Main' as 'CharactersViewController'.") }
         if _R.storyboard.main().skillMotionPlayerViewController() == nil { throw Rswift.ValidationError(description:"[R.swift] ViewController with identifier 'skillMotionPlayerViewController' could not be loaded from storyboard 'Main' as 'SkillMotionPlayerViewController'.") }
-        if _R.storyboard.main().guideMasterNavigationController() == nil { throw Rswift.ValidationError(description:"[R.swift] ViewController with identifier 'guideMasterNavigationController' could not be loaded from storyboard 'Main' as 'UIKit.UINavigationController'.") }
-        if _R.storyboard.main().guideDetailViewController() == nil { throw Rswift.ValidationError(description:"[R.swift] ViewController with identifier 'guideDetailViewController' could not be loaded from storyboard 'Main' as 'CharacterMovesViewController'.") }
+        if _R.storyboard.main().characterMovesViewController() == nil { throw Rswift.ValidationError(description:"[R.swift] ViewController with identifier 'characterMovesViewController' could not be loaded from storyboard 'Main' as 'CharacterMovesViewController'.") }
       }
       
       fileprivate init() {}
