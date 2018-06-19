@@ -70,7 +70,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 extension AppDelegate: UISplitViewControllerDelegate {
     func splitViewController(_ splitViewController: UISplitViewController, collapseSecondary secondaryViewController: UIViewController, onto primaryViewController: UIViewController) -> Bool {
-        let detailViewController = (secondaryViewController as! UINavigationController).topViewController as! GuideDetailViewController
+        let detailViewController = (secondaryViewController as! UINavigationController).topViewController as! CharacterMovesViewController
         if detailViewController.sections.count == 0 {
             return true
         } else {

@@ -53,7 +53,7 @@ class CharactersViewController: UIViewController {
             tableView.selectRow(at: indexPath, animated: false, scrollPosition: .none)
             
             let detailNavigationController = splitViewController?.viewControllers[1] as! UINavigationController
-            let detailViewController = detailNavigationController.topViewController as! GuideDetailViewController
+            let detailViewController = detailNavigationController.topViewController as! CharacterMovesViewController
             
             displayDetailViewController(detailViewController, withSelectedIndexPath: indexPath)
         }
@@ -72,13 +72,13 @@ class CharactersViewController: UIViewController {
             let indexPath = tableView.indexPathForSelectedRow!
             let character = characters[indexPath.row]
             
-            let detailPropertyListURL = Bundle.main.bundleURL.appendingPathComponent(character.next)
-            let detailPropertyListInfo = NSDictionary(contentsOf: detailPropertyListURL)
-            let detailSections = detailPropertyListInfo?[PropertyListBasedViewControllerSectionsKey] as? NSArray
+            let url = Bundle.main.bundleURL.appendingPathComponent(character.next)
+            let data = try! Data(contentsOf: url)
+            let sections = try! PropertyListDecoder().decode([CharacterMove.Section].self, from: data)
             
-            let detailViewController = (segue.destination as! UINavigationController).topViewController as! GuideDetailViewController
+            let detailViewController = (segue.destination as! UINavigationController).topViewController as! CharacterMovesViewController
             detailViewController.title = character.rowTitle
-            detailViewController.sections = detailSections!
+            detailViewController.sections = sections
             
             bodyView.image = UIImage(named: character.nextBackgroundImage)
         }
@@ -88,15 +88,15 @@ class CharactersViewController: UIViewController {
         
     }
     
-    func displayDetailViewController(_ detailViewController: GuideDetailViewController, withSelectedIndexPath indexPath: IndexPath) {
+    func displayDetailViewController(_ detailViewController: CharacterMovesViewController, withSelectedIndexPath indexPath: IndexPath) {
         let character = characters[indexPath.row]
         
-        let detailPropertyListURL = Bundle.main.bundleURL.appendingPathComponent(character.next)
-        let detailPropertyListInfo = NSDictionary(contentsOf: detailPropertyListURL)
-        let detailSections = detailPropertyListInfo?[PropertyListBasedViewControllerSectionsKey] as? NSArray
+        let url = Bundle.main.bundleURL.appendingPathComponent(character.next)
+        let data = try! Data(contentsOf: url)
+        let sections = try! PropertyListDecoder().decode([CharacterMove.Section].self, from: data)
         
         detailViewController.title = character.rowTitle
-        detailViewController.sections = detailSections!
+        detailViewController.sections = sections
         
         bodyView.image = UIImage(named: character.nextBackgroundImage)
     }
@@ -158,7 +158,7 @@ extension CharactersViewController: UITableViewDelegate {
         } else {
             let detailNavigationController = splitViewController?.viewControllers[1] as! UINavigationController
             detailNavigationController.popToRootViewController(animated: false)
-            let detailViewController = detailNavigationController.topViewController as! GuideDetailViewController
+            let detailViewController = detailNavigationController.topViewController as! CharacterMovesViewController
             displayDetailViewController(detailViewController, withSelectedIndexPath: indexPath)
             detailViewController.tableView.contentOffset = .zero
             detailViewController.tableView.reloadData()
