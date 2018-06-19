@@ -14,7 +14,7 @@
         <scene sceneID="sx1-L3-gOm">
             <objects>
                 <navigationController id="OPD-rM-bvf" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="0g1-zk-iXG">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" shadowImage="NavigationBarShadow" id="0g1-zk-iXG">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="barTintColor" name="BackgroundColor"/>
@@ -32,7 +32,7 @@
             <objects>
                 <viewController id="5pq-S5-lc1" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="V1h-fT-HH0">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" name="BackgroundColor"/>
                         <viewLayoutGuide key="safeArea" id="aPB-Br-QLe"/>
@@ -45,6 +45,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="NavigationBarShadow" width="375" height="1"/>
         <namedColor name="BackgroundColor">
             <color red="0.15700000524520874" green="0.15700000524520874" blue="0.15700000524520874" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

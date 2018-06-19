@@ -8,10 +8,6 @@
 
 import UIKit
 
-let GuideDetailViewControllerCharacterCodeKey = "CharacterCode"
-let GuideDetailViewControllerSkillCodeKey = "SkillCode"
-let GuideDetailViewControllerSkillNameKey = "SkillName"
-let GuideDetailViewControllerViewControllerKey = "ViewController"
 let GuideDetailViewControllerPresentSkillMotionPlayerViewControllerSegue = "PresentSkillMotionPlayerViewController"
 
 class CharacterMovesViewController: UIViewController {

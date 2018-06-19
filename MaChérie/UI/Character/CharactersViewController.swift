@@ -84,10 +84,6 @@ class CharactersViewController: UIViewController {
         }
     }
     
-    @IBAction func moreViewControllerUnwound(_ segue: UIStoryboardSegue) {
-        
-    }
-    
     func displayDetailViewController(_ detailViewController: CharacterMovesViewController, withSelectedIndexPath indexPath: IndexPath) {
         let character = characters[indexPath.row]
         
