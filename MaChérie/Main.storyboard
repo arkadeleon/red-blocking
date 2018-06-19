@@ -104,10 +104,10 @@
             </objects>
             <point key="canvasLocation" x="1148" y="-422"/>
         </scene>
-        <!--Guide Master View Controller-->
+        <!--Characters View Controller-->
         <scene sceneID="wnl-OD-KEG">
             <objects>
-                <viewController storyboardIdentifier="GuideMasterViewController" id="1q5-Ey-k3I" customClass="GuideMasterViewController" customModule="MaCherie" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="CharactersViewController" id="1q5-Ey-k3I" customClass="CharactersViewController" customModule="MaCherie" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="a3D-IQ-nzH">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

@@ -1,5 +1,5 @@
 //
-//  GuideMasterViewController.swift
+//  CharactersViewController.swift
 //  MaChérie
 //
 //  Created by Leon Li on 2018/6/13.
@@ -8,9 +8,16 @@
 
 import UIKit
 
-let GuideMasterViewControllerNextBackgroundImageKey = "NextBackgroundImage"
-
-class GuideMasterViewController: PropertyListBasedViewController {
+class CharactersViewController: UIViewController {
+    @IBOutlet var tableView: UITableView!
+    
+    let characters: [Character] = {
+        let url = Bundle.main.bundleURL.appendingPathComponent("Characters.plist")
+        let data = try! Data(contentsOf: url)
+        let characters = try! PropertyListDecoder().decode([Character].self, from: data)
+        return characters
+    }()
+    
     lazy var bodyView: UIImageView = {
         if UIDevice.current.userInterfaceIdiom == .phone {
             let statusBarHeight = UIApplication.shared.statusBarFrame.height
@@ -37,11 +44,9 @@ class GuideMasterViewController: PropertyListBasedViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        navigationItem.title = "攻略"
+        title = "Characters"
         
-        let propertyListURL = Bundle.main.bundleURL.appendingPathComponent("Guide.plist")
-        let propertyListInfo = NSDictionary(contentsOf: propertyListURL)
-        sections = propertyListInfo?[PropertyListBasedViewControllerSectionsKey] as! NSArray
+        tableView.register(R.nib.characterCell)
         
         if UIDevice.current.userInterfaceIdiom == .pad {
             let indexPath = IndexPath(row: 0, section: 0)
@@ -54,25 +59,28 @@ class GuideMasterViewController: PropertyListBasedViewController {
         }
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        if let indexPath = tableView.indexPathForSelectedRow {
+            tableView.deselectRow(at: indexPath, animated: true)
+        }
+    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "ShowDetail" {
             let indexPath = tableView.indexPathForSelectedRow!
-            let sectionInfo = sections[indexPath.section] as? NSDictionary
-            let rows = sectionInfo?[PropertyListBasedViewControllerRowsKey] as? NSArray
-            let rowInfo = rows?[indexPath.row] as? NSDictionary
-            let rowTitle = rowInfo?[PropertyListBasedViewControllerRowTitleKey] as? String
-            let next = rowInfo?[PropertyListBasedViewControllerNextKey] as? String
-            let nextBackgroundImage = rowInfo?[GuideMasterViewControllerNextBackgroundImageKey] as? String
+            let character = characters[indexPath.row]
             
-            let detailPropertyListURL = Bundle.main.bundleURL.appendingPathComponent(next!)
+            let detailPropertyListURL = Bundle.main.bundleURL.appendingPathComponent(character.next)
             let detailPropertyListInfo = NSDictionary(contentsOf: detailPropertyListURL)
             let detailSections = detailPropertyListInfo?[PropertyListBasedViewControllerSectionsKey] as? NSArray
             
             let detailViewController = (segue.destination as! UINavigationController).topViewController as! GuideDetailViewController
-            detailViewController.title = rowTitle
+            detailViewController.title = character.rowTitle
             detailViewController.sections = detailSections!
             
-            bodyView.image = UIImage(named: nextBackgroundImage!)
+            bodyView.image = UIImage(named: character.nextBackgroundImage)
         }
     }
     
@@ -81,21 +89,16 @@ class GuideMasterViewController: PropertyListBasedViewController {
     }
     
     func displayDetailViewController(_ detailViewController: GuideDetailViewController, withSelectedIndexPath indexPath: IndexPath) {
-        let sectionInfo = sections[indexPath.section] as? NSDictionary
-        let rows = sectionInfo?[PropertyListBasedViewControllerRowsKey] as? NSArray
-        let rowInfo = rows?[indexPath.row] as? NSDictionary
-        let rowTitle = rowInfo?[PropertyListBasedViewControllerRowTitleKey] as? String
-        let next = rowInfo?[PropertyListBasedViewControllerNextKey] as? String
-        let nextBackgroundImage = rowInfo?[GuideMasterViewControllerNextBackgroundImageKey] as? String
+        let character = characters[indexPath.row]
         
-        let detailPropertyListURL = Bundle.main.bundleURL.appendingPathComponent(next!)
+        let detailPropertyListURL = Bundle.main.bundleURL.appendingPathComponent(character.next)
         let detailPropertyListInfo = NSDictionary(contentsOf: detailPropertyListURL)
         let detailSections = detailPropertyListInfo?[PropertyListBasedViewControllerSectionsKey] as? NSArray
         
-        detailViewController.title = rowTitle
+        detailViewController.title = character.rowTitle
         detailViewController.sections = detailSections!
         
-        bodyView.image = UIImage(named: nextBackgroundImage!)
+        bodyView.image = UIImage(named: character.nextBackgroundImage)
     }
     
     // MARK: - State Restoration
@@ -114,23 +117,32 @@ class GuideMasterViewController: PropertyListBasedViewController {
         if let selectedIndexPath = coder.decodeObject(forKey: GuideMasterViewControllerSelectedIndexPathKey) as? IndexPath {
             tableView.selectRow(at: selectedIndexPath, animated: false, scrollPosition: .top)
             
-            let sectionInfo = sections[selectedIndexPath.row] as? NSDictionary
-            let rows = sectionInfo?[PropertyListBasedViewControllerRowsKey] as? NSArray
-            let rowInfo = rows?[selectedIndexPath.row] as? NSDictionary
-            let nextBackgroundImage = rowInfo?[GuideMasterViewControllerNextBackgroundImageKey] as? String
-            bodyView.image = UIImage(named: nextBackgroundImage!)
+            let character = characters[selectedIndexPath.row]
+            bodyView.image = UIImage(named: character.nextBackgroundImage)
         }
     }
+}
+
+extension CharactersViewController: UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return characters.count
+    }
     
-    // MARK: - Table View Delegate
-    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let character = characters[indexPath.row]
+        let cell = tableView.dequeueReusableCell(withIdentifier: R.reuseIdentifier.characterCell, for: indexPath)!
+        cell.rowImageView.image = UIImage(named: character.rowImage)
+        cell.rowTitleLabel.text = character.rowTitle
+        return cell
+    }
+}
+
+extension CharactersViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
-        if UIDevice.current.userInterfaceIdiom == .pad {
-            cell.accessoryType = .none;
-        }
+        cell.accessoryType = traitCollection.horizontalSizeClass == .compact ? .disclosureIndicator : .none
     }
     
-    override func tableView(_ tableView: UITableView, willSelectRowAt indexPath: IndexPath) -> IndexPath? {
+    func tableView(_ tableView: UITableView, willSelectRowAt indexPath: IndexPath) -> IndexPath? {
         if UIDevice.current.userInterfaceIdiom == .pad && tableView.cellForRow(at: indexPath)?.isSelected == true {
             let detailNavigationController = splitViewController?.viewControllers[1] as! UINavigationController
             detailNavigationController.popToRootViewController(animated: true)
@@ -152,5 +164,18 @@ class GuideMasterViewController: PropertyListBasedViewController {
             detailViewController.tableView.reloadData()
             detailViewController.tableView.flashScrollIndicators()
         }
+    }
+}
+
+extension CharactersViewController: UIDataSourceModelAssociation {
+    func modelIdentifierForElement(at idx: IndexPath, in view: UIView) -> String? {
+        return nil
+    }
+    
+    func indexPathForElement(withModelIdentifier identifier: String, in view: UIView) -> IndexPath? {
+        let components = identifier.components(separatedBy: ", ")
+        let section = Int(components[0])!
+        let row = Int(components[1])!
+        return IndexPath(row: row, section: section)
     }
 }

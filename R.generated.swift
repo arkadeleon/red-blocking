@@ -98,6 +98,8 @@ struct R: Rswift.Validatable {
   struct file {
     /// Resource file `Alex.plist`.
     static let alexPlist = Rswift.FileResource(bundle: R.hostingBundle, name: "Alex", pathExtension: "plist")
+    /// Resource file `Characters.plist`.
+    static let charactersPlist = Rswift.FileResource(bundle: R.hostingBundle, name: "Characters", pathExtension: "plist")
     /// Resource file `Chun-Li.plist`.
     static let chunLiPlist = Rswift.FileResource(bundle: R.hostingBundle, name: "Chun-Li", pathExtension: "plist")
     /// Resource file `Dudley.plist`.
@@ -106,8 +108,6 @@ struct R: Rswift.Validatable {
     static let elenaPlist = Rswift.FileResource(bundle: R.hostingBundle, name: "Elena", pathExtension: "plist")
     /// Resource file `Gouki.plist`.
     static let goukiPlist = Rswift.FileResource(bundle: R.hostingBundle, name: "Gouki", pathExtension: "plist")
-    /// Resource file `Guide.plist`.
-    static let guidePlist = Rswift.FileResource(bundle: R.hostingBundle, name: "Guide", pathExtension: "plist")
     /// Resource file `Hugo.plist`.
     static let hugoPlist = Rswift.FileResource(bundle: R.hostingBundle, name: "Hugo", pathExtension: "plist")
     /// Resource file `Ibuki.plist`.
@@ -143,6 +143,12 @@ struct R: Rswift.Validatable {
       return fileResource.bundle.url(forResource: fileResource)
     }
     
+    /// `bundle.url(forResource: "Characters", withExtension: "plist")`
+    static func charactersPlist(_: Void = ()) -> Foundation.URL? {
+      let fileResource = R.file.charactersPlist
+      return fileResource.bundle.url(forResource: fileResource)
+    }
+    
     /// `bundle.url(forResource: "Chun-Li", withExtension: "plist")`
     static func chunLiPlist(_: Void = ()) -> Foundation.URL? {
       let fileResource = R.file.chunLiPlist
@@ -164,12 +170,6 @@ struct R: Rswift.Validatable {
     /// `bundle.url(forResource: "Gouki", withExtension: "plist")`
     static func goukiPlist(_: Void = ()) -> Foundation.URL? {
       let fileResource = R.file.goukiPlist
-      return fileResource.bundle.url(forResource: fileResource)
-    }
-    
-    /// `bundle.url(forResource: "Guide", withExtension: "plist")`
-    static func guidePlist(_: Void = ()) -> Foundation.URL? {
-      let fileResource = R.file.guidePlist
       return fileResource.bundle.url(forResource: fileResource)
     }
     
@@ -544,10 +544,17 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
   
-  /// This `R.nib` struct is generated, and contains static references to 1 nibs.
+  /// This `R.nib` struct is generated, and contains static references to 2 nibs.
   struct nib {
+    /// Nib `CharacterCell`.
+    static let characterCell = _R.nib._CharacterCell()
     /// Nib `PropertyListBasedTableViewCell`.
     static let propertyListBasedTableViewCell = _R.nib._PropertyListBasedTableViewCell()
+    
+    /// `UINib(name: "CharacterCell", in: bundle)`
+    static func characterCell(_: Void = ()) -> UIKit.UINib {
+      return UIKit.UINib(resource: R.nib.characterCell)
+    }
     
     /// `UINib(name: "PropertyListBasedTableViewCell", in: bundle)`
     static func propertyListBasedTableViewCell(_: Void = ()) -> UIKit.UINib {
@@ -557,13 +564,31 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
   
-  /// This `R.reuseIdentifier` struct is generated, and contains static references to 0 reuse identifiers.
+  /// This `R.reuseIdentifier` struct is generated, and contains static references to 1 reuse identifiers.
   struct reuseIdentifier {
+    /// Reuse identifier `CharacterCell`.
+    static let characterCell: Rswift.ReuseIdentifier<CharacterCell> = Rswift.ReuseIdentifier(identifier: "CharacterCell")
+    
     fileprivate init() {}
   }
   
   /// This `R.segue` struct is generated, and contains static references to 2 view controllers.
   struct segue {
+    /// This struct is generated for `CharactersViewController`, and contains static references to 1 segues.
+    struct charactersViewController {
+      /// Segue identifier `ShowDetail`.
+      static let showDetail: Rswift.StoryboardSegueIdentifier<UIKit.UIStoryboardSegue, CharactersViewController, UIKit.UINavigationController> = Rswift.StoryboardSegueIdentifier(identifier: "ShowDetail")
+      
+      /// Optionally returns a typed version of segue `ShowDetail`.
+      /// Returns nil if either the segue identifier, the source, destination, or segue types don't match.
+      /// For use inside `prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?)`.
+      static func showDetail(segue: UIKit.UIStoryboardSegue) -> Rswift.TypedStoryboardSegueInfo<UIKit.UIStoryboardSegue, CharactersViewController, UIKit.UINavigationController>? {
+        return Rswift.TypedStoryboardSegueInfo(segueIdentifier: R.segue.charactersViewController.showDetail, segue: segue)
+      }
+      
+      fileprivate init() {}
+    }
+    
     /// This struct is generated for `GuideDetailViewController`, and contains static references to 1 segues.
     struct guideDetailViewController {
       /// Segue identifier `PresentSkillMotionPlayerViewController`.
@@ -574,21 +599,6 @@ struct R: Rswift.Validatable {
       /// For use inside `prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?)`.
       static func presentSkillMotionPlayerViewController(segue: UIKit.UIStoryboardSegue) -> Rswift.TypedStoryboardSegueInfo<UIKit.UIStoryboardSegue, GuideDetailViewController, UIKit.UINavigationController>? {
         return Rswift.TypedStoryboardSegueInfo(segueIdentifier: R.segue.guideDetailViewController.presentSkillMotionPlayerViewController, segue: segue)
-      }
-      
-      fileprivate init() {}
-    }
-    
-    /// This struct is generated for `GuideMasterViewController`, and contains static references to 1 segues.
-    struct guideMasterViewController {
-      /// Segue identifier `ShowDetail`.
-      static let showDetail: Rswift.StoryboardSegueIdentifier<UIKit.UIStoryboardSegue, GuideMasterViewController, UIKit.UINavigationController> = Rswift.StoryboardSegueIdentifier(identifier: "ShowDetail")
-      
-      /// Optionally returns a typed version of segue `ShowDetail`.
-      /// Returns nil if either the segue identifier, the source, destination, or segue types don't match.
-      /// For use inside `prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?)`.
-      static func showDetail(segue: UIKit.UIStoryboardSegue) -> Rswift.TypedStoryboardSegueInfo<UIKit.UIStoryboardSegue, GuideMasterViewController, UIKit.UINavigationController>? {
-        return Rswift.TypedStoryboardSegueInfo(segueIdentifier: R.segue.guideMasterViewController.showDetail, segue: segue)
       }
       
       fileprivate init() {}
@@ -641,6 +651,20 @@ struct _R: Rswift.Validatable {
   }
   
   struct nib {
+    struct _CharacterCell: Rswift.NibResourceType, Rswift.ReuseIdentifierType {
+      typealias ReusableType = CharacterCell
+      
+      let bundle = R.hostingBundle
+      let identifier = "CharacterCell"
+      let name = "CharacterCell"
+      
+      func firstView(owner ownerOrNil: AnyObject?, options optionsOrNil: [NSObject : AnyObject]? = nil) -> CharacterCell? {
+        return instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? CharacterCell
+      }
+      
+      fileprivate init() {}
+    }
+    
     struct _PropertyListBasedTableViewCell: Rswift.NibResourceType {
       let bundle = R.hostingBundle
       let name = "PropertyListBasedTableViewCell"
@@ -673,15 +697,19 @@ struct _R: Rswift.Validatable {
       typealias InitialController = UIKit.UISplitViewController
       
       let bundle = R.hostingBundle
+      let charactersViewController = StoryboardViewControllerResource<CharactersViewController>(identifier: "CharactersViewController")
       let guideDetailNavigationController = StoryboardViewControllerResource<UIKit.UINavigationController>(identifier: "GuideDetailNavigationController")
       let guideDetailViewController = StoryboardViewControllerResource<GuideDetailViewController>(identifier: "GuideDetailViewController")
       let guideMasterNavigationController = StoryboardViewControllerResource<UIKit.UINavigationController>(identifier: "GuideMasterNavigationController")
-      let guideMasterViewController = StoryboardViewControllerResource<GuideMasterViewController>(identifier: "GuideMasterViewController")
       let guideSplitViewController = StoryboardViewControllerResource<UIKit.UISplitViewController>(identifier: "GuideSplitViewController")
       let moreNavigationController = StoryboardViewControllerResource<UIKit.UINavigationController>(identifier: "MoreNavigationController")
       let moreViewController = StoryboardViewControllerResource<MoreViewController>(identifier: "MoreViewController")
       let name = "Main"
       let skillMotionPlayerViewController = StoryboardViewControllerResource<SkillMotionPlayerViewController>(identifier: "SkillMotionPlayerViewController")
+      
+      func charactersViewController(_: Void = ()) -> CharactersViewController? {
+        return UIKit.UIStoryboard(resource: self).instantiateViewController(withResource: charactersViewController)
+      }
       
       func guideDetailNavigationController(_: Void = ()) -> UIKit.UINavigationController? {
         return UIKit.UIStoryboard(resource: self).instantiateViewController(withResource: guideDetailNavigationController)
@@ -693,10 +721,6 @@ struct _R: Rswift.Validatable {
       
       func guideMasterNavigationController(_: Void = ()) -> UIKit.UINavigationController? {
         return UIKit.UIStoryboard(resource: self).instantiateViewController(withResource: guideMasterNavigationController)
-      }
-      
-      func guideMasterViewController(_: Void = ()) -> GuideMasterViewController? {
-        return UIKit.UIStoryboard(resource: self).instantiateViewController(withResource: guideMasterViewController)
       }
       
       func guideSplitViewController(_: Void = ()) -> UIKit.UISplitViewController? {
@@ -718,9 +742,9 @@ struct _R: Rswift.Validatable {
       static func validate() throws {
         if _R.storyboard.main().guideSplitViewController() == nil { throw Rswift.ValidationError(description:"[R.swift] ViewController with identifier 'guideSplitViewController' could not be loaded from storyboard 'Main' as 'UIKit.UISplitViewController'.") }
         if _R.storyboard.main().guideDetailNavigationController() == nil { throw Rswift.ValidationError(description:"[R.swift] ViewController with identifier 'guideDetailNavigationController' could not be loaded from storyboard 'Main' as 'UIKit.UINavigationController'.") }
-        if _R.storyboard.main().moreViewController() == nil { throw Rswift.ValidationError(description:"[R.swift] ViewController with identifier 'moreViewController' could not be loaded from storyboard 'Main' as 'MoreViewController'.") }
         if _R.storyboard.main().moreNavigationController() == nil { throw Rswift.ValidationError(description:"[R.swift] ViewController with identifier 'moreNavigationController' could not be loaded from storyboard 'Main' as 'UIKit.UINavigationController'.") }
-        if _R.storyboard.main().guideMasterViewController() == nil { throw Rswift.ValidationError(description:"[R.swift] ViewController with identifier 'guideMasterViewController' could not be loaded from storyboard 'Main' as 'GuideMasterViewController'.") }
+        if _R.storyboard.main().moreViewController() == nil { throw Rswift.ValidationError(description:"[R.swift] ViewController with identifier 'moreViewController' could not be loaded from storyboard 'Main' as 'MoreViewController'.") }
+        if _R.storyboard.main().charactersViewController() == nil { throw Rswift.ValidationError(description:"[R.swift] ViewController with identifier 'charactersViewController' could not be loaded from storyboard 'Main' as 'CharactersViewController'.") }
         if _R.storyboard.main().skillMotionPlayerViewController() == nil { throw Rswift.ValidationError(description:"[R.swift] ViewController with identifier 'skillMotionPlayerViewController' could not be loaded from storyboard 'Main' as 'SkillMotionPlayerViewController'.") }
         if _R.storyboard.main().guideMasterNavigationController() == nil { throw Rswift.ValidationError(description:"[R.swift] ViewController with identifier 'guideMasterNavigationController' could not be loaded from storyboard 'Main' as 'UIKit.UINavigationController'.") }
         if _R.storyboard.main().guideDetailViewController() == nil { throw Rswift.ValidationError(description:"[R.swift] ViewController with identifier 'guideDetailViewController' could not be loaded from storyboard 'Main' as 'GuideDetailViewController'.") }
