@@ -239,73 +239,73 @@ class SkillMotionPlayerViewController: UIViewController {
     }
     
     @IBAction func togglePlayer1PassiveHitboxes(_ checkbox: UIButton) {
-        checkbox.isSelected.toggle()
+        checkbox.isSelected = !checkbox.isSelected
         checkbox.backgroundColor = checkbox.isSelected ? checkbox.tintColor : .clear
         UserDefaults.standard.set(checkbox.isSelected, forKey: Player1PassiveHitboxHiddenKey)
     }
     
     @IBAction func togglePlayer1OtherVulnerabilityHitboxes(_ checkbox: UIButton) {
-        checkbox.isSelected.toggle()
+        checkbox.isSelected = !checkbox.isSelected
         checkbox.backgroundColor = checkbox.isSelected ? checkbox.tintColor : .clear
         UserDefaults.standard.set(checkbox.isSelected, forKey: Player1OtherVulnerabilityHitboxHiddenKey)
     }
     
     @IBAction func togglePlayer1ActiveHitboxes(_ checkbox: UIButton) {
-        checkbox.isSelected.toggle()
+        checkbox.isSelected = !checkbox.isSelected
         checkbox.backgroundColor = checkbox.isSelected ? checkbox.tintColor : .clear
         UserDefaults.standard.set(checkbox.isSelected, forKey: Player1ActiveHitboxHiddenKey)
     }
     
     @IBAction func togglePlayer1ThrowHitboxes(_ checkbox: UIButton) {
-        checkbox.isSelected.toggle()
+        checkbox.isSelected = !checkbox.isSelected
         checkbox.backgroundColor = checkbox.isSelected ? checkbox.tintColor : .clear
         UserDefaults.standard.set(checkbox.isSelected, forKey: Player1ThrowHitboxHiddenKey)
     }
     
     @IBAction func togglePlayer1ThrowableHitboxes(_ checkbox: UIButton) {
-        checkbox.isSelected.toggle()
+        checkbox.isSelected = !checkbox.isSelected
         checkbox.backgroundColor = checkbox.isSelected ? checkbox.tintColor : .clear
         UserDefaults.standard.set(checkbox.isSelected, forKey: Player1ThrowableHitboxHiddenKey)
     }
     
     @IBAction func togglePlayer1PushHitboxes(_ checkbox: UIButton) {
-        checkbox.isSelected.toggle()
+        checkbox.isSelected = !checkbox.isSelected
         checkbox.backgroundColor = checkbox.isSelected ? checkbox.tintColor : .clear
         UserDefaults.standard.set(checkbox.isSelected, forKey: Player1PushHitboxHiddenKey)
     }
     
     @IBAction func togglePlayer2PassiveHitboxes(_ checkbox: UIButton) {
-        checkbox.isSelected.toggle()
+        checkbox.isSelected = !checkbox.isSelected
         checkbox.backgroundColor = checkbox.isSelected ? checkbox.tintColor : .clear
         UserDefaults.standard.set(checkbox.isSelected, forKey: Player2PassiveHitboxHiddenKey)
     }
     
     @IBAction func togglePlayer2OtherVulnerabilityHitboxes(_ checkbox: UIButton) {
-        checkbox.isSelected.toggle()
+        checkbox.isSelected = !checkbox.isSelected
         checkbox.backgroundColor = checkbox.isSelected ? checkbox.tintColor : .clear
         UserDefaults.standard.set(checkbox.isSelected, forKey: Player2OtherVulnerabilityHitboxHiddenKey)
     }
     
     @IBAction func togglePlayer2ActiveHitboxes(_ checkbox: UIButton) {
-        checkbox.isSelected.toggle()
+        checkbox.isSelected = !checkbox.isSelected
         checkbox.backgroundColor = checkbox.isSelected ? checkbox.tintColor : .clear
         UserDefaults.standard.set(checkbox.isSelected, forKey: Player2ActiveHitboxHiddenKey)
     }
     
     @IBAction func togglePlayer2ThrowHitboxes(_ checkbox: UIButton) {
-        checkbox.isSelected.toggle()
+        checkbox.isSelected = !checkbox.isSelected
         checkbox.backgroundColor = checkbox.isSelected ? checkbox.tintColor : .clear
         UserDefaults.standard.set(checkbox.isSelected, forKey: Player2ThrowHitboxHiddenKey)
     }
     
     @IBAction func togglePlayer2ThrowableHitboxes(_ checkbox: UIButton) {
-        checkbox.isSelected.toggle()
+        checkbox.isSelected = !checkbox.isSelected
         checkbox.backgroundColor = checkbox.isSelected ? checkbox.tintColor : .clear
         UserDefaults.standard.set(checkbox.isSelected, forKey: Player2ThrowableHitboxHiddenKey)
     }
     
     @IBAction func togglePlayer2PushHitboxes(_ checkbox: UIButton) {
-        checkbox.isSelected.toggle()
+        checkbox.isSelected = !checkbox.isSelected
         checkbox.backgroundColor = checkbox.isSelected ? checkbox.tintColor : .clear
         UserDefaults.standard.set(checkbox.isSelected, forKey: Player2PushHitboxHiddenKey)
     }
