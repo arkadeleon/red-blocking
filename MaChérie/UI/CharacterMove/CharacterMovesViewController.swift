@@ -90,15 +90,15 @@ extension CharacterMovesViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let characterMove = sections[indexPath.section].rows[indexPath.row]
-        if let presented = characterMove.presented {
+        if let _ = characterMove.presented {
             let cell = tableView.dequeueReusableCell(withIdentifier: R.reuseIdentifier.characterMoveFramesCell, for: indexPath)!
             cell.rowTitleLabel.text = characterMove.rowTitle
             return cell
-        } else if let next = characterMove.next {
+        } else if let _ = characterMove.next {
             let cell = tableView.dequeueReusableCell(withIdentifier: R.reuseIdentifier.characterMoveCell, for: indexPath)!
             cell.rowTitleLabel.text = characterMove.rowTitle
             return cell
-        } else if let detail = characterMove.rowDetail {
+        } else if let _ = characterMove.rowDetail {
             let cell = tableView.dequeueReusableCell(withIdentifier: R.reuseIdentifier.characterMoveDetailCell, for: indexPath)!
             cell.rowTitleLabel.text = characterMove.rowTitle
             cell.rowDetailLabel.text = characterMove.rowDetail

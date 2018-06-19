@@ -18,6 +18,14 @@ struct CharacterMove: Decodable {
         case next = "Next"
         case presented = "Presented"
     }
+    
+    init(from decoder: Decoder) throws {
+        let container = try decoder.container(keyedBy: CodingKeys.self)
+        rowTitle = try container.decodeIfPresent(String.self, forKey: .rowTitle)
+        rowDetail = try container.decodeIfPresent(String.self, forKey: .rowDetail)
+        next = try container.decodeIfPresent([String : [Section]].self, forKey: .next)?["Sections"]
+        presented = try container.decodeIfPresent(Frames.self, forKey: .presented)
+    }
 }
 
 extension CharacterMove {
