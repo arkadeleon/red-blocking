@@ -7,7 +7,7 @@ DEPENDENCIES:
   - R.swift
 
 SPEC REPOS:
-  https://github.com/CocoaPods/Specs.git:
+  https://github.com/cocoapods/specs.git:
     - R.swift
     - R.swift.Library
 
@@ -15,6 +15,6 @@ SPEC CHECKSUMS:
   R.swift: d6a5ec2f55a8441dc0ed9f1f8b37d7d11ae85c66
   R.swift.Library: c3af34921024333546e23b70e70d0b4e0cffca75
 
-PODFILE CHECKSUM: 16b67c08fea6d868a867b1882d334cbd98fac7d4
+PODFILE CHECKSUM: c6a910e215391f5f4223a69b720d5d1e89402581
 
-COCOAPODS: 1.5.0
+COCOAPODS: 1.5.3
