@@ -392,8 +392,6 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
-				en,
-				"zh-Hans",
 			);
 			mainGroup = EEE27AC2176C1347008A41AB;
 			productRefGroup = EEE27ACC176C1347008A41AB /* Products */;
