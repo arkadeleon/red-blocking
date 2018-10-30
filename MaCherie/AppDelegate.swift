@@ -17,7 +17,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         return UIApplication.shared.delegate as! AppDelegate
     }
     
-    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey : Any]? = nil) -> Bool {
+    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
         UINavigationBar.appearance().barTintColor = R.color.backgroundColor()
         UINavigationBar.appearance().tintColor = R.color.primaryTextColor()
         UINavigationBar.appearance().titleTextAttributes = [.foregroundColor : R.color.primaryTextColor()!]
@@ -79,7 +79,7 @@ extension AppDelegate: UISplitViewControllerDelegate {
 }
 
 extension AppDelegate: UINavigationControllerDelegate {
-    func navigationController(_ navigationController: UINavigationController, animationControllerFor operation: UINavigationControllerOperation, from fromVC: UIViewController, to toVC: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+    func navigationController(_ navigationController: UINavigationController, animationControllerFor operation: UINavigationController.Operation, from fromVC: UIViewController, to toVC: UIViewController) -> UIViewControllerAnimatedTransitioning? {
         switch operation {
         case .push:
             popInteractor = PopInteractor(attachTo: toVC)

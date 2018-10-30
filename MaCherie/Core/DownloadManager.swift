@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import PromiseKit
 
 @objc protocol DownloadManagerDelegate {
     @objc optional func downloadManager(_ downloadManager: DownloadManager, didFinishDownloadingJSONObject jsonObject: Any, atRelativePath relativePath: String)

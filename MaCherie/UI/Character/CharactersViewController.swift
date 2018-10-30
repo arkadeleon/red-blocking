@@ -22,7 +22,7 @@ class CharactersViewController: UIViewController {
         if UIDevice.current.userInterfaceIdiom == .phone {
             let statusBarHeight = UIApplication.shared.statusBarFrame.height
             let navigationBarHeight = navigationController!.navigationBar.bounds.height
-            let bodyViewFrame = UIEdgeInsetsInsetRect(navigationController!.view.bounds, UIEdgeInsets(top: statusBarHeight + navigationBarHeight, left: 0, bottom: 0, right: 0))
+            let bodyViewFrame = navigationController!.view.bounds.inset(by: UIEdgeInsets(top: statusBarHeight + navigationBarHeight, left: 0, bottom: 0, right: 0))
             let bodyView = UIImageView(frame: bodyViewFrame)
             bodyView.contentMode = .scaleAspectFit
             bodyView.backgroundColor = R.color.backgroundColor()
@@ -32,7 +32,7 @@ class CharactersViewController: UIViewController {
             let statusBarHeight = UIApplication.shared.statusBarFrame.height
             let detailNavigationController = splitViewController?.viewControllers[1] as! UINavigationController
             let navigationBarHeight = detailNavigationController.navigationBar.bounds.height
-            let bodyViewFrame = UIEdgeInsetsInsetRect(navigationController!.view.bounds, UIEdgeInsets(top: statusBarHeight + navigationBarHeight, left: 0, bottom: 0, right: 0))
+            let bodyViewFrame = navigationController!.view.bounds.inset(by: UIEdgeInsets(top: statusBarHeight + navigationBarHeight, left: 0, bottom: 0, right: 0))
             let bodyView = UIImageView(frame: bodyViewFrame)
             bodyView.autoresizingMask = [.flexibleBottomMargin, .flexibleWidth, .flexibleHeight]
             bodyView.contentMode = .scaleAspectFit

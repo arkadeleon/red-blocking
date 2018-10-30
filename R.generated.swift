@@ -260,11 +260,6 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
   
-  /// This `R.font` struct is generated, and contains static references to 0 fonts.
-  struct font {
-    fileprivate init() {}
-  }
-  
   /// This `R.image` struct is generated, and contains static references to 40 images.
   struct image {
     /// Image `AlexBody`.
@@ -565,28 +560,53 @@ struct R: Rswift.Validatable {
     static let characterSupplementaryCell = _R.nib._CharacterSupplementaryCell()
     
     /// `UINib(name: "CharacterCell", in: bundle)`
+    @available(*, deprecated, message: "Use UINib(resource: R.nib.characterCell) instead")
     static func characterCell(_: Void = ()) -> UIKit.UINib {
       return UIKit.UINib(resource: R.nib.characterCell)
     }
     
     /// `UINib(name: "CharacterMoveCell", in: bundle)`
+    @available(*, deprecated, message: "Use UINib(resource: R.nib.characterMoveCell) instead")
     static func characterMoveCell(_: Void = ()) -> UIKit.UINib {
       return UIKit.UINib(resource: R.nib.characterMoveCell)
     }
     
     /// `UINib(name: "CharacterMoveDetailCell", in: bundle)`
+    @available(*, deprecated, message: "Use UINib(resource: R.nib.characterMoveDetailCell) instead")
     static func characterMoveDetailCell(_: Void = ()) -> UIKit.UINib {
       return UIKit.UINib(resource: R.nib.characterMoveDetailCell)
     }
     
     /// `UINib(name: "CharacterMoveFramesCell", in: bundle)`
+    @available(*, deprecated, message: "Use UINib(resource: R.nib.characterMoveFramesCell) instead")
     static func characterMoveFramesCell(_: Void = ()) -> UIKit.UINib {
       return UIKit.UINib(resource: R.nib.characterMoveFramesCell)
     }
     
     /// `UINib(name: "CharacterSupplementaryCell", in: bundle)`
+    @available(*, deprecated, message: "Use UINib(resource: R.nib.characterSupplementaryCell) instead")
     static func characterSupplementaryCell(_: Void = ()) -> UIKit.UINib {
       return UIKit.UINib(resource: R.nib.characterSupplementaryCell)
+    }
+    
+    static func characterCell(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> CharacterCell? {
+      return R.nib.characterCell.instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? CharacterCell
+    }
+    
+    static func characterMoveCell(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> CharacterMoveCell? {
+      return R.nib.characterMoveCell.instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? CharacterMoveCell
+    }
+    
+    static func characterMoveDetailCell(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> CharacterMoveDetailCell? {
+      return R.nib.characterMoveDetailCell.instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? CharacterMoveDetailCell
+    }
+    
+    static func characterMoveFramesCell(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> CharacterMoveFramesCell? {
+      return R.nib.characterMoveFramesCell.instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? CharacterMoveFramesCell
+    }
+    
+    static func characterSupplementaryCell(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> CharacterSupplementaryCell? {
+      return R.nib.characterSupplementaryCell.instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? CharacterSupplementaryCell
     }
     
     fileprivate init() {}
@@ -663,11 +683,6 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
   
-  /// This `R.string` struct is generated, and contains static references to 0 localization tables.
-  struct string {
-    fileprivate init() {}
-  }
-  
   fileprivate struct intern: Rswift.Validatable {
     fileprivate static func validate() throws {
       try _R.validate()
@@ -694,7 +709,7 @@ struct _R: Rswift.Validatable {
       let identifier = "CharacterCell"
       let name = "CharacterCell"
       
-      func firstView(owner ownerOrNil: AnyObject?, options optionsOrNil: [NSObject : AnyObject]? = nil) -> CharacterCell? {
+      func firstView(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> CharacterCell? {
         return instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? CharacterCell
       }
       
@@ -708,7 +723,7 @@ struct _R: Rswift.Validatable {
       let identifier = "CharacterMoveCell"
       let name = "CharacterMoveCell"
       
-      func firstView(owner ownerOrNil: AnyObject?, options optionsOrNil: [NSObject : AnyObject]? = nil) -> CharacterMoveCell? {
+      func firstView(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> CharacterMoveCell? {
         return instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? CharacterMoveCell
       }
       
@@ -722,7 +737,7 @@ struct _R: Rswift.Validatable {
       let identifier = "CharacterMoveDetailCell"
       let name = "CharacterMoveDetailCell"
       
-      func firstView(owner ownerOrNil: AnyObject?, options optionsOrNil: [NSObject : AnyObject]? = nil) -> CharacterMoveDetailCell? {
+      func firstView(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> CharacterMoveDetailCell? {
         return instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? CharacterMoveDetailCell
       }
       
@@ -736,7 +751,7 @@ struct _R: Rswift.Validatable {
       let identifier = "CharacterMoveFramesCell"
       let name = "CharacterMoveFramesCell"
       
-      func firstView(owner ownerOrNil: AnyObject?, options optionsOrNil: [NSObject : AnyObject]? = nil) -> CharacterMoveFramesCell? {
+      func firstView(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> CharacterMoveFramesCell? {
         return instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? CharacterMoveFramesCell
       }
       
@@ -750,7 +765,7 @@ struct _R: Rswift.Validatable {
       let identifier = "CharacterSupplementaryCell"
       let name = "CharacterSupplementaryCell"
       
-      func firstView(owner ownerOrNil: AnyObject?, options optionsOrNil: [NSObject : AnyObject]? = nil) -> CharacterSupplementaryCell? {
+      func firstView(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> CharacterSupplementaryCell? {
         return instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? CharacterSupplementaryCell
       }
       
@@ -774,6 +789,9 @@ struct _R: Rswift.Validatable {
       
       static func validate() throws {
         if UIKit.UIImage(named: "NavigationBarShadow") == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'NavigationBarShadow' is used in storyboard 'LaunchScreen', but couldn't be loaded.") }
+        if #available(iOS 11.0, *) {
+          if UIKit.UIColor(named: "BackgroundColor") == nil { throw Rswift.ValidationError(description: "[R.swift] Color named 'BackgroundColor' is used in storyboard 'LaunchScreen', but couldn't be loaded.") }
+        }
       }
       
       fileprivate init() {}
@@ -821,13 +839,20 @@ struct _R: Rswift.Validatable {
       }
       
       static func validate() throws {
+        if #available(iOS 11.0, *) {
+          if UIKit.UIColor(named: "ControlColor") == nil { throw Rswift.ValidationError(description: "[R.swift] Color named 'ControlColor' is used in storyboard 'Main', but couldn't be loaded.") }
+          if UIKit.UIColor(named: "PrimaryTextColor") == nil { throw Rswift.ValidationError(description: "[R.swift] Color named 'PrimaryTextColor' is used in storyboard 'Main', but couldn't be loaded.") }
+          if UIKit.UIColor(named: "BackgroundColor") == nil { throw Rswift.ValidationError(description: "[R.swift] Color named 'BackgroundColor' is used in storyboard 'Main', but couldn't be loaded.") }
+          if UIKit.UIColor(named: "SecondaryTextColor") == nil { throw Rswift.ValidationError(description: "[R.swift] Color named 'SecondaryTextColor' is used in storyboard 'Main', but couldn't be loaded.") }
+          if UIKit.UIColor(named: "SeparatorColor") == nil { throw Rswift.ValidationError(description: "[R.swift] Color named 'SeparatorColor' is used in storyboard 'Main', but couldn't be loaded.") }
+        }
         if _R.storyboard.main().guideSplitViewController() == nil { throw Rswift.ValidationError(description:"[R.swift] ViewController with identifier 'guideSplitViewController' could not be loaded from storyboard 'Main' as 'UIKit.UISplitViewController'.") }
-        if _R.storyboard.main().guideDetailNavigationController() == nil { throw Rswift.ValidationError(description:"[R.swift] ViewController with identifier 'guideDetailNavigationController' could not be loaded from storyboard 'Main' as 'UIKit.UINavigationController'.") }
         if _R.storyboard.main().moreNavigationController() == nil { throw Rswift.ValidationError(description:"[R.swift] ViewController with identifier 'moreNavigationController' could not be loaded from storyboard 'Main' as 'UIKit.UINavigationController'.") }
+        if _R.storyboard.main().guideDetailNavigationController() == nil { throw Rswift.ValidationError(description:"[R.swift] ViewController with identifier 'guideDetailNavigationController' could not be loaded from storyboard 'Main' as 'UIKit.UINavigationController'.") }
         if _R.storyboard.main().moreViewController() == nil { throw Rswift.ValidationError(description:"[R.swift] ViewController with identifier 'moreViewController' could not be loaded from storyboard 'Main' as 'MoreViewController'.") }
         if _R.storyboard.main().charactersViewController() == nil { throw Rswift.ValidationError(description:"[R.swift] ViewController with identifier 'charactersViewController' could not be loaded from storyboard 'Main' as 'CharactersViewController'.") }
-        if _R.storyboard.main().skillMotionPlayerViewController() == nil { throw Rswift.ValidationError(description:"[R.swift] ViewController with identifier 'skillMotionPlayerViewController' could not be loaded from storyboard 'Main' as 'SkillMotionPlayerViewController'.") }
         if _R.storyboard.main().characterMovesViewController() == nil { throw Rswift.ValidationError(description:"[R.swift] ViewController with identifier 'characterMovesViewController' could not be loaded from storyboard 'Main' as 'CharacterMovesViewController'.") }
+        if _R.storyboard.main().skillMotionPlayerViewController() == nil { throw Rswift.ValidationError(description:"[R.swift] ViewController with identifier 'skillMotionPlayerViewController' could not be loaded from storyboard 'Main' as 'SkillMotionPlayerViewController'.") }
       }
       
       fileprivate init() {}

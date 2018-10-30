@@ -67,8 +67,8 @@ class SkillMotionPlayerViewController: UIViewController {
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         
-        observer = NotificationCenter.default.addObserver(forName: Notification.Name.UIApplicationDidEnterBackground, object: nil, queue: nil) { _ in
-            var backgroundTaskIdentifier: UIBackgroundTaskIdentifier = 0
+        observer = NotificationCenter.default.addObserver(forName: UIApplication.didEnterBackgroundNotification, object: nil, queue: nil) { _ in
+            var backgroundTaskIdentifier = UIBackgroundTaskIdentifier(rawValue: 0)
             backgroundTaskIdentifier = UIApplication.shared.beginBackgroundTask(expirationHandler: {
                 UIApplication.shared.endBackgroundTask(backgroundTaskIdentifier)
             })
