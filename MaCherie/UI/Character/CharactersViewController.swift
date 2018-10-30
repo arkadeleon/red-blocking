@@ -29,9 +29,10 @@ class CharactersViewController: UIViewController {
             navigationController!.view.insertSubview(bodyView, at: 0)
             return bodyView
         } else {
+            let statusBarHeight = UIApplication.shared.statusBarFrame.height
             let detailNavigationController = splitViewController?.viewControllers[1] as! UINavigationController
             let navigationBarHeight = detailNavigationController.navigationBar.bounds.height
-            let bodyViewFrame = UIEdgeInsetsInsetRect(navigationController!.view.bounds, UIEdgeInsets(top: navigationBarHeight, left: 0, bottom: 0, right: 0))
+            let bodyViewFrame = UIEdgeInsetsInsetRect(navigationController!.view.bounds, UIEdgeInsets(top: statusBarHeight + navigationBarHeight, left: 0, bottom: 0, right: 0))
             let bodyView = UIImageView(frame: bodyViewFrame)
             bodyView.autoresizingMask = [.flexibleBottomMargin, .flexibleWidth, .flexibleHeight]
             bodyView.contentMode = .scaleAspectFit
@@ -156,9 +157,9 @@ extension CharactersViewController: UITableViewDelegate {
             detailNavigationController.popToRootViewController(animated: false)
             let detailViewController = detailNavigationController.topViewController as! CharacterMovesViewController
             displayDetailViewController(detailViewController, withSelectedIndexPath: indexPath)
-            detailViewController.tableView.contentOffset = .zero
             detailViewController.tableView.reloadData()
             detailViewController.tableView.flashScrollIndicators()
+//            detailViewController.tableView.setContentOffset(.zero, animated: true)
         }
     }
 }
