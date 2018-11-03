@@ -841,18 +841,18 @@ struct _R: Rswift.Validatable {
       static func validate() throws {
         if #available(iOS 11.0, *) {
           if UIKit.UIColor(named: "ControlColor") == nil { throw Rswift.ValidationError(description: "[R.swift] Color named 'ControlColor' is used in storyboard 'Main', but couldn't be loaded.") }
-          if UIKit.UIColor(named: "PrimaryTextColor") == nil { throw Rswift.ValidationError(description: "[R.swift] Color named 'PrimaryTextColor' is used in storyboard 'Main', but couldn't be loaded.") }
-          if UIKit.UIColor(named: "BackgroundColor") == nil { throw Rswift.ValidationError(description: "[R.swift] Color named 'BackgroundColor' is used in storyboard 'Main', but couldn't be loaded.") }
-          if UIKit.UIColor(named: "SecondaryTextColor") == nil { throw Rswift.ValidationError(description: "[R.swift] Color named 'SecondaryTextColor' is used in storyboard 'Main', but couldn't be loaded.") }
           if UIKit.UIColor(named: "SeparatorColor") == nil { throw Rswift.ValidationError(description: "[R.swift] Color named 'SeparatorColor' is used in storyboard 'Main', but couldn't be loaded.") }
+          if UIKit.UIColor(named: "BackgroundColor") == nil { throw Rswift.ValidationError(description: "[R.swift] Color named 'BackgroundColor' is used in storyboard 'Main', but couldn't be loaded.") }
+          if UIKit.UIColor(named: "PrimaryTextColor") == nil { throw Rswift.ValidationError(description: "[R.swift] Color named 'PrimaryTextColor' is used in storyboard 'Main', but couldn't be loaded.") }
+          if UIKit.UIColor(named: "SecondaryTextColor") == nil { throw Rswift.ValidationError(description: "[R.swift] Color named 'SecondaryTextColor' is used in storyboard 'Main', but couldn't be loaded.") }
         }
-        if _R.storyboard.main().guideSplitViewController() == nil { throw Rswift.ValidationError(description:"[R.swift] ViewController with identifier 'guideSplitViewController' could not be loaded from storyboard 'Main' as 'UIKit.UISplitViewController'.") }
-        if _R.storyboard.main().moreNavigationController() == nil { throw Rswift.ValidationError(description:"[R.swift] ViewController with identifier 'moreNavigationController' could not be loaded from storyboard 'Main' as 'UIKit.UINavigationController'.") }
-        if _R.storyboard.main().guideDetailNavigationController() == nil { throw Rswift.ValidationError(description:"[R.swift] ViewController with identifier 'guideDetailNavigationController' could not be loaded from storyboard 'Main' as 'UIKit.UINavigationController'.") }
-        if _R.storyboard.main().moreViewController() == nil { throw Rswift.ValidationError(description:"[R.swift] ViewController with identifier 'moreViewController' could not be loaded from storyboard 'Main' as 'MoreViewController'.") }
         if _R.storyboard.main().charactersViewController() == nil { throw Rswift.ValidationError(description:"[R.swift] ViewController with identifier 'charactersViewController' could not be loaded from storyboard 'Main' as 'CharactersViewController'.") }
         if _R.storyboard.main().characterMovesViewController() == nil { throw Rswift.ValidationError(description:"[R.swift] ViewController with identifier 'characterMovesViewController' could not be loaded from storyboard 'Main' as 'CharacterMovesViewController'.") }
+        if _R.storyboard.main().guideDetailNavigationController() == nil { throw Rswift.ValidationError(description:"[R.swift] ViewController with identifier 'guideDetailNavigationController' could not be loaded from storyboard 'Main' as 'UIKit.UINavigationController'.") }
+        if _R.storyboard.main().moreViewController() == nil { throw Rswift.ValidationError(description:"[R.swift] ViewController with identifier 'moreViewController' could not be loaded from storyboard 'Main' as 'MoreViewController'.") }
+        if _R.storyboard.main().guideSplitViewController() == nil { throw Rswift.ValidationError(description:"[R.swift] ViewController with identifier 'guideSplitViewController' could not be loaded from storyboard 'Main' as 'UIKit.UISplitViewController'.") }
         if _R.storyboard.main().skillMotionPlayerViewController() == nil { throw Rswift.ValidationError(description:"[R.swift] ViewController with identifier 'skillMotionPlayerViewController' could not be loaded from storyboard 'Main' as 'SkillMotionPlayerViewController'.") }
+        if _R.storyboard.main().moreNavigationController() == nil { throw Rswift.ValidationError(description:"[R.swift] ViewController with identifier 'moreNavigationController' could not be loaded from storyboard 'Main' as 'UIKit.UINavigationController'.") }
       }
       
       fileprivate init() {}

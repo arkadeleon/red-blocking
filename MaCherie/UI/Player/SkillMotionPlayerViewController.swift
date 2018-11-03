@@ -64,8 +64,12 @@ class SkillMotionPlayerViewController: UIViewController {
     
     private var observer: NSObjectProtocol!
     
+    private var donwloadManager = DownloadManager()
+    
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
+        
+        donwloadManager.delegate = self
         
         observer = NotificationCenter.default.addObserver(forName: UIApplication.didEnterBackgroundNotification, object: nil, queue: nil) { _ in
             var backgroundTaskIdentifier = UIBackgroundTaskIdentifier(rawValue: 0)
@@ -172,8 +176,6 @@ class SkillMotionPlayerViewController: UIViewController {
         delegate?.skillMotionPlayerViewControllerWillDismiss?(self)
         
         dismiss(animated: true) { [unowned self] in
-            DownloadManager.shared.delegate = nil
-            DownloadManager.sharedQueue.cancelAllOperations()
             self.playTimer?.invalidate()
             self.seekingForwardTimer?.invalidate()
             self.seekingBackwardTimer?.invalidate()
@@ -338,10 +340,8 @@ class SkillMotionPlayerViewController: UIViewController {
         
         UIApplication.shared.isNetworkActivityIndicatorVisible = true
         
-        DownloadManager.shared.delegate = self
-        
         let jsonFilePath = String(format: "motions/%@/%@/%@_%@.json", characterCode, skillCode, characterCode, skillCode)
-        DownloadManager.shared.downloadJSONObjectWithFileAtRelativePath(jsonFilePath)
+        donwloadManager.downloadJSONObjectWithFileAtRelativePath(jsonFilePath)
     }
     
     func play() {
