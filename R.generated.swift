@@ -11,11 +11,150 @@ import UIKit
 struct R: Rswift.Validatable {
   fileprivate static let applicationLocale = hostingBundle.preferredLocalizations.first.flatMap(Locale.init) ?? Locale.current
   fileprivate static let hostingBundle = Bundle(for: R.Class.self)
-  
+
+  /// Find first language and bundle for which the table exists
+  fileprivate static func localeBundle(tableName: String, preferredLanguages: [String]) -> (Foundation.Locale, Foundation.Bundle)? {
+    // Filter preferredLanguages to localizations, use first locale
+    var languages = preferredLanguages
+      .map(Locale.init)
+      .prefix(1)
+      .flatMap { locale -> [String] in
+        if hostingBundle.localizations.contains(locale.identifier) {
+          if let language = locale.languageCode, hostingBundle.localizations.contains(language) {
+            return [locale.identifier, language]
+          } else {
+            return [locale.identifier]
+          }
+        } else if let language = locale.languageCode, hostingBundle.localizations.contains(language) {
+          return [language]
+        } else {
+          return []
+        }
+      }
+
+    // If there's no languages, use development language as backstop
+    if languages.isEmpty {
+      if let developmentLocalization = hostingBundle.developmentLocalization {
+        languages = [developmentLocalization]
+      }
+    } else {
+      // Insert Base as second item (between locale identifier and languageCode)
+      languages.insert("Base", at: 1)
+
+      // Add development language as backstop
+      if let developmentLocalization = hostingBundle.developmentLocalization {
+        languages.append(developmentLocalization)
+      }
+    }
+
+    // Find first language for which table exists
+    // Note: key might not exist in chosen language (in that case, key will be shown)
+    for language in languages {
+      if let lproj = hostingBundle.url(forResource: language, withExtension: "lproj"),
+         let lbundle = Bundle(url: lproj)
+      {
+        let strings = lbundle.url(forResource: tableName, withExtension: "strings")
+        let stringsdict = lbundle.url(forResource: tableName, withExtension: "stringsdict")
+
+        if strings != nil || stringsdict != nil {
+          return (Locale(identifier: language), lbundle)
+        }
+      }
+    }
+
+    // If table is available in main bundle, don't look for localized resources
+    let strings = hostingBundle.url(forResource: tableName, withExtension: "strings", subdirectory: nil, localization: nil)
+    let stringsdict = hostingBundle.url(forResource: tableName, withExtension: "stringsdict", subdirectory: nil, localization: nil)
+
+    if strings != nil || stringsdict != nil {
+      return (applicationLocale, hostingBundle)
+    }
+
+    // If table is not found for requested languages, key will be shown
+    return nil
+  }
+
+  /// Load string from Info.plist file
+  fileprivate static func infoPlistString(path: [String], key: String) -> String? {
+    var dict = hostingBundle.infoDictionary
+    for step in path {
+      guard let obj = dict?[step] as? [String: Any] else { return nil }
+      dict = obj
+    }
+    return dict?[key] as? String
+  }
+
   static func validate() throws {
     try intern.validate()
   }
-  
+
+  #if os(iOS) || os(tvOS)
+  /// This `R.segue` struct is generated, and contains static references to 2 view controllers.
+  struct segue {
+    /// This struct is generated for `CharacterMovesViewController`, and contains static references to 1 segues.
+    struct characterMovesViewController {
+      /// Segue identifier `PresentSkillMotionPlayerViewController`.
+      static let presentSkillMotionPlayerViewController: Rswift.StoryboardSegueIdentifier<UIKit.UIStoryboardSegue, CharacterMovesViewController, UIKit.UINavigationController> = Rswift.StoryboardSegueIdentifier(identifier: "PresentSkillMotionPlayerViewController")
+
+      #if os(iOS) || os(tvOS)
+      /// Optionally returns a typed version of segue `PresentSkillMotionPlayerViewController`.
+      /// Returns nil if either the segue identifier, the source, destination, or segue types don't match.
+      /// For use inside `prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?)`.
+      static func presentSkillMotionPlayerViewController(segue: UIKit.UIStoryboardSegue) -> Rswift.TypedStoryboardSegueInfo<UIKit.UIStoryboardSegue, CharacterMovesViewController, UIKit.UINavigationController>? {
+        return Rswift.TypedStoryboardSegueInfo(segueIdentifier: R.segue.characterMovesViewController.presentSkillMotionPlayerViewController, segue: segue)
+      }
+      #endif
+
+      fileprivate init() {}
+    }
+
+    /// This struct is generated for `CharactersViewController`, and contains static references to 1 segues.
+    struct charactersViewController {
+      /// Segue identifier `ShowDetail`.
+      static let showDetail: Rswift.StoryboardSegueIdentifier<UIKit.UIStoryboardSegue, CharactersViewController, UIKit.UINavigationController> = Rswift.StoryboardSegueIdentifier(identifier: "ShowDetail")
+
+      #if os(iOS) || os(tvOS)
+      /// Optionally returns a typed version of segue `ShowDetail`.
+      /// Returns nil if either the segue identifier, the source, destination, or segue types don't match.
+      /// For use inside `prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?)`.
+      static func showDetail(segue: UIKit.UIStoryboardSegue) -> Rswift.TypedStoryboardSegueInfo<UIKit.UIStoryboardSegue, CharactersViewController, UIKit.UINavigationController>? {
+        return Rswift.TypedStoryboardSegueInfo(segueIdentifier: R.segue.charactersViewController.showDetail, segue: segue)
+      }
+      #endif
+
+      fileprivate init() {}
+    }
+
+    fileprivate init() {}
+  }
+  #endif
+
+  #if os(iOS) || os(tvOS)
+  /// This `R.storyboard` struct is generated, and contains static references to 2 storyboards.
+  struct storyboard {
+    /// Storyboard `LaunchScreen`.
+    static let launchScreen = _R.storyboard.launchScreen()
+    /// Storyboard `Main`.
+    static let main = _R.storyboard.main()
+
+    #if os(iOS) || os(tvOS)
+    /// `UIStoryboard(name: "LaunchScreen", bundle: ...)`
+    static func launchScreen(_: Void = ()) -> UIKit.UIStoryboard {
+      return UIKit.UIStoryboard(resource: R.storyboard.launchScreen)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+    /// `UIStoryboard(name: "Main", bundle: ...)`
+    static func main(_: Void = ()) -> UIKit.UIStoryboard {
+      return UIKit.UIStoryboard(resource: R.storyboard.main)
+    }
+    #endif
+
+    fileprivate init() {}
+  }
+  #endif
+
   /// This `R.color` struct is generated, and contains static references to 8 colors.
   struct color {
     /// Color `BackgroundColor`.
@@ -34,66 +173,82 @@ struct R: Rswift.Validatable {
     static let surfaceColorVariant = Rswift.ColorResource(bundle: R.hostingBundle, name: "SurfaceColorVariant")
     /// Color `SurfaceColor`.
     static let surfaceColor = Rswift.ColorResource(bundle: R.hostingBundle, name: "SurfaceColor")
-    
+
+    #if os(iOS) || os(tvOS)
     /// `UIColor(named: "BackgroundColor", bundle: ..., traitCollection: ...)`
     @available(tvOS 11.0, *)
     @available(iOS 11.0, *)
     static func backgroundColor(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIColor? {
       return UIKit.UIColor(resource: R.color.backgroundColor, compatibleWith: traitCollection)
     }
-    
+    #endif
+
+    #if os(iOS) || os(tvOS)
     /// `UIColor(named: "ControlColor", bundle: ..., traitCollection: ...)`
     @available(tvOS 11.0, *)
     @available(iOS 11.0, *)
     static func controlColor(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIColor? {
       return UIKit.UIColor(resource: R.color.controlColor, compatibleWith: traitCollection)
     }
-    
+    #endif
+
+    #if os(iOS) || os(tvOS)
     /// `UIColor(named: "PrimaryTextColor", bundle: ..., traitCollection: ...)`
     @available(tvOS 11.0, *)
     @available(iOS 11.0, *)
     static func primaryTextColor(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIColor? {
       return UIKit.UIColor(resource: R.color.primaryTextColor, compatibleWith: traitCollection)
     }
-    
+    #endif
+
+    #if os(iOS) || os(tvOS)
     /// `UIColor(named: "SecondaryTextColor", bundle: ..., traitCollection: ...)`
     @available(tvOS 11.0, *)
     @available(iOS 11.0, *)
     static func secondaryTextColor(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIColor? {
       return UIKit.UIColor(resource: R.color.secondaryTextColor, compatibleWith: traitCollection)
     }
-    
+    #endif
+
+    #if os(iOS) || os(tvOS)
     /// `UIColor(named: "SecondaryTextColorVariant", bundle: ..., traitCollection: ...)`
     @available(tvOS 11.0, *)
     @available(iOS 11.0, *)
     static func secondaryTextColorVariant(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIColor? {
       return UIKit.UIColor(resource: R.color.secondaryTextColorVariant, compatibleWith: traitCollection)
     }
-    
+    #endif
+
+    #if os(iOS) || os(tvOS)
     /// `UIColor(named: "SeparatorColor", bundle: ..., traitCollection: ...)`
     @available(tvOS 11.0, *)
     @available(iOS 11.0, *)
     static func separatorColor(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIColor? {
       return UIKit.UIColor(resource: R.color.separatorColor, compatibleWith: traitCollection)
     }
-    
+    #endif
+
+    #if os(iOS) || os(tvOS)
     /// `UIColor(named: "SurfaceColor", bundle: ..., traitCollection: ...)`
     @available(tvOS 11.0, *)
     @available(iOS 11.0, *)
     static func surfaceColor(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIColor? {
       return UIKit.UIColor(resource: R.color.surfaceColor, compatibleWith: traitCollection)
     }
-    
+    #endif
+
+    #if os(iOS) || os(tvOS)
     /// `UIColor(named: "SurfaceColorVariant", bundle: ..., traitCollection: ...)`
     @available(tvOS 11.0, *)
     @available(iOS 11.0, *)
     static func surfaceColorVariant(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIColor? {
       return UIKit.UIColor(resource: R.color.surfaceColorVariant, compatibleWith: traitCollection)
     }
-    
+    #endif
+
     fileprivate init() {}
   }
-  
+
   /// This `R.file` struct is generated, and contains static references to 20 files.
   struct file {
     /// Resource file `Alex.plist`.
@@ -136,130 +291,130 @@ struct R: Rswift.Validatable {
     static let yangPlist = Rswift.FileResource(bundle: R.hostingBundle, name: "Yang", pathExtension: "plist")
     /// Resource file `Yun.plist`.
     static let yunPlist = Rswift.FileResource(bundle: R.hostingBundle, name: "Yun", pathExtension: "plist")
-    
+
     /// `bundle.url(forResource: "Alex", withExtension: "plist")`
     static func alexPlist(_: Void = ()) -> Foundation.URL? {
       let fileResource = R.file.alexPlist
       return fileResource.bundle.url(forResource: fileResource)
     }
-    
+
     /// `bundle.url(forResource: "Characters", withExtension: "plist")`
     static func charactersPlist(_: Void = ()) -> Foundation.URL? {
       let fileResource = R.file.charactersPlist
       return fileResource.bundle.url(forResource: fileResource)
     }
-    
+
     /// `bundle.url(forResource: "Chun-Li", withExtension: "plist")`
     static func chunLiPlist(_: Void = ()) -> Foundation.URL? {
       let fileResource = R.file.chunLiPlist
       return fileResource.bundle.url(forResource: fileResource)
     }
-    
+
     /// `bundle.url(forResource: "Dudley", withExtension: "plist")`
     static func dudleyPlist(_: Void = ()) -> Foundation.URL? {
       let fileResource = R.file.dudleyPlist
       return fileResource.bundle.url(forResource: fileResource)
     }
-    
+
     /// `bundle.url(forResource: "Elena", withExtension: "plist")`
     static func elenaPlist(_: Void = ()) -> Foundation.URL? {
       let fileResource = R.file.elenaPlist
       return fileResource.bundle.url(forResource: fileResource)
     }
-    
+
     /// `bundle.url(forResource: "Gouki", withExtension: "plist")`
     static func goukiPlist(_: Void = ()) -> Foundation.URL? {
       let fileResource = R.file.goukiPlist
       return fileResource.bundle.url(forResource: fileResource)
     }
-    
+
     /// `bundle.url(forResource: "Hugo", withExtension: "plist")`
     static func hugoPlist(_: Void = ()) -> Foundation.URL? {
       let fileResource = R.file.hugoPlist
       return fileResource.bundle.url(forResource: fileResource)
     }
-    
+
     /// `bundle.url(forResource: "Ibuki", withExtension: "plist")`
     static func ibukiPlist(_: Void = ()) -> Foundation.URL? {
       let fileResource = R.file.ibukiPlist
       return fileResource.bundle.url(forResource: fileResource)
     }
-    
+
     /// `bundle.url(forResource: "Ken", withExtension: "plist")`
     static func kenPlist(_: Void = ()) -> Foundation.URL? {
       let fileResource = R.file.kenPlist
       return fileResource.bundle.url(forResource: fileResource)
     }
-    
+
     /// `bundle.url(forResource: "Makoto", withExtension: "plist")`
     static func makotoPlist(_: Void = ()) -> Foundation.URL? {
       let fileResource = R.file.makotoPlist
       return fileResource.bundle.url(forResource: fileResource)
     }
-    
+
     /// `bundle.url(forResource: "Necro", withExtension: "plist")`
     static func necroPlist(_: Void = ()) -> Foundation.URL? {
       let fileResource = R.file.necroPlist
       return fileResource.bundle.url(forResource: fileResource)
     }
-    
+
     /// `bundle.url(forResource: "Oro", withExtension: "plist")`
     static func oroPlist(_: Void = ()) -> Foundation.URL? {
       let fileResource = R.file.oroPlist
       return fileResource.bundle.url(forResource: fileResource)
     }
-    
+
     /// `bundle.url(forResource: "Q", withExtension: "plist")`
     static func qPlist(_: Void = ()) -> Foundation.URL? {
       let fileResource = R.file.qPlist
       return fileResource.bundle.url(forResource: fileResource)
     }
-    
+
     /// `bundle.url(forResource: "Remy", withExtension: "plist")`
     static func remyPlist(_: Void = ()) -> Foundation.URL? {
       let fileResource = R.file.remyPlist
       return fileResource.bundle.url(forResource: fileResource)
     }
-    
+
     /// `bundle.url(forResource: "Ryu", withExtension: "plist")`
     static func ryuPlist(_: Void = ()) -> Foundation.URL? {
       let fileResource = R.file.ryuPlist
       return fileResource.bundle.url(forResource: fileResource)
     }
-    
+
     /// `bundle.url(forResource: "Sean", withExtension: "plist")`
     static func seanPlist(_: Void = ()) -> Foundation.URL? {
       let fileResource = R.file.seanPlist
       return fileResource.bundle.url(forResource: fileResource)
     }
-    
+
     /// `bundle.url(forResource: "Twelve", withExtension: "plist")`
     static func twelvePlist(_: Void = ()) -> Foundation.URL? {
       let fileResource = R.file.twelvePlist
       return fileResource.bundle.url(forResource: fileResource)
     }
-    
+
     /// `bundle.url(forResource: "Urien", withExtension: "plist")`
     static func urienPlist(_: Void = ()) -> Foundation.URL? {
       let fileResource = R.file.urienPlist
       return fileResource.bundle.url(forResource: fileResource)
     }
-    
+
     /// `bundle.url(forResource: "Yang", withExtension: "plist")`
     static func yangPlist(_: Void = ()) -> Foundation.URL? {
       let fileResource = R.file.yangPlist
       return fileResource.bundle.url(forResource: fileResource)
     }
-    
+
     /// `bundle.url(forResource: "Yun", withExtension: "plist")`
     static func yunPlist(_: Void = ()) -> Foundation.URL? {
       let fileResource = R.file.yunPlist
       return fileResource.bundle.url(forResource: fileResource)
     }
-    
+
     fileprivate init() {}
   }
-  
+
   /// This `R.image` struct is generated, and contains static references to 40 images.
   struct image {
     /// Image `AlexBody`.
@@ -342,210 +497,290 @@ struct R: Rswift.Validatable {
     static let yunBody = Rswift.ImageResource(bundle: R.hostingBundle, name: "YunBody")
     /// Image `YunHead`.
     static let yunHead = Rswift.ImageResource(bundle: R.hostingBundle, name: "YunHead")
-    
+
+    #if os(iOS) || os(tvOS)
     /// `UIImage(named: "AlexBody", bundle: ..., traitCollection: ...)`
     static func alexBody(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
       return UIKit.UIImage(resource: R.image.alexBody, compatibleWith: traitCollection)
     }
-    
+    #endif
+
+    #if os(iOS) || os(tvOS)
     /// `UIImage(named: "AlexHead", bundle: ..., traitCollection: ...)`
     static func alexHead(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
       return UIKit.UIImage(resource: R.image.alexHead, compatibleWith: traitCollection)
     }
-    
+    #endif
+
+    #if os(iOS) || os(tvOS)
     /// `UIImage(named: "Chun-LiBody", bundle: ..., traitCollection: ...)`
     static func chunLiBody(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
       return UIKit.UIImage(resource: R.image.chunLiBody, compatibleWith: traitCollection)
     }
-    
+    #endif
+
+    #if os(iOS) || os(tvOS)
     /// `UIImage(named: "Chun-LiHead", bundle: ..., traitCollection: ...)`
     static func chunLiHead(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
       return UIKit.UIImage(resource: R.image.chunLiHead, compatibleWith: traitCollection)
     }
-    
+    #endif
+
+    #if os(iOS) || os(tvOS)
     /// `UIImage(named: "DudleyBody", bundle: ..., traitCollection: ...)`
     static func dudleyBody(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
       return UIKit.UIImage(resource: R.image.dudleyBody, compatibleWith: traitCollection)
     }
-    
+    #endif
+
+    #if os(iOS) || os(tvOS)
     /// `UIImage(named: "DudleyHead", bundle: ..., traitCollection: ...)`
     static func dudleyHead(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
       return UIKit.UIImage(resource: R.image.dudleyHead, compatibleWith: traitCollection)
     }
-    
+    #endif
+
+    #if os(iOS) || os(tvOS)
     /// `UIImage(named: "ElenaBody", bundle: ..., traitCollection: ...)`
     static func elenaBody(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
       return UIKit.UIImage(resource: R.image.elenaBody, compatibleWith: traitCollection)
     }
-    
+    #endif
+
+    #if os(iOS) || os(tvOS)
     /// `UIImage(named: "ElenaHead", bundle: ..., traitCollection: ...)`
     static func elenaHead(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
       return UIKit.UIImage(resource: R.image.elenaHead, compatibleWith: traitCollection)
     }
-    
+    #endif
+
+    #if os(iOS) || os(tvOS)
     /// `UIImage(named: "GillBody", bundle: ..., traitCollection: ...)`
     static func gillBody(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
       return UIKit.UIImage(resource: R.image.gillBody, compatibleWith: traitCollection)
     }
-    
+    #endif
+
+    #if os(iOS) || os(tvOS)
     /// `UIImage(named: "GoukiBody", bundle: ..., traitCollection: ...)`
     static func goukiBody(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
       return UIKit.UIImage(resource: R.image.goukiBody, compatibleWith: traitCollection)
     }
-    
+    #endif
+
+    #if os(iOS) || os(tvOS)
     /// `UIImage(named: "GoukiHead", bundle: ..., traitCollection: ...)`
     static func goukiHead(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
       return UIKit.UIImage(resource: R.image.goukiHead, compatibleWith: traitCollection)
     }
-    
+    #endif
+
+    #if os(iOS) || os(tvOS)
     /// `UIImage(named: "HugoBody", bundle: ..., traitCollection: ...)`
     static func hugoBody(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
       return UIKit.UIImage(resource: R.image.hugoBody, compatibleWith: traitCollection)
     }
-    
+    #endif
+
+    #if os(iOS) || os(tvOS)
     /// `UIImage(named: "HugoHead", bundle: ..., traitCollection: ...)`
     static func hugoHead(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
       return UIKit.UIImage(resource: R.image.hugoHead, compatibleWith: traitCollection)
     }
-    
+    #endif
+
+    #if os(iOS) || os(tvOS)
     /// `UIImage(named: "IbukiBody", bundle: ..., traitCollection: ...)`
     static func ibukiBody(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
       return UIKit.UIImage(resource: R.image.ibukiBody, compatibleWith: traitCollection)
     }
-    
+    #endif
+
+    #if os(iOS) || os(tvOS)
     /// `UIImage(named: "IbukiHead", bundle: ..., traitCollection: ...)`
     static func ibukiHead(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
       return UIKit.UIImage(resource: R.image.ibukiHead, compatibleWith: traitCollection)
     }
-    
+    #endif
+
+    #if os(iOS) || os(tvOS)
     /// `UIImage(named: "KenBody", bundle: ..., traitCollection: ...)`
     static func kenBody(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
       return UIKit.UIImage(resource: R.image.kenBody, compatibleWith: traitCollection)
     }
-    
+    #endif
+
+    #if os(iOS) || os(tvOS)
     /// `UIImage(named: "KenHead", bundle: ..., traitCollection: ...)`
     static func kenHead(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
       return UIKit.UIImage(resource: R.image.kenHead, compatibleWith: traitCollection)
     }
-    
+    #endif
+
+    #if os(iOS) || os(tvOS)
     /// `UIImage(named: "MakotoBody", bundle: ..., traitCollection: ...)`
     static func makotoBody(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
       return UIKit.UIImage(resource: R.image.makotoBody, compatibleWith: traitCollection)
     }
-    
+    #endif
+
+    #if os(iOS) || os(tvOS)
     /// `UIImage(named: "MakotoHead", bundle: ..., traitCollection: ...)`
     static func makotoHead(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
       return UIKit.UIImage(resource: R.image.makotoHead, compatibleWith: traitCollection)
     }
-    
+    #endif
+
+    #if os(iOS) || os(tvOS)
     /// `UIImage(named: "NavigationBarShadow", bundle: ..., traitCollection: ...)`
     static func navigationBarShadow(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
       return UIKit.UIImage(resource: R.image.navigationBarShadow, compatibleWith: traitCollection)
     }
-    
+    #endif
+
+    #if os(iOS) || os(tvOS)
     /// `UIImage(named: "NecroBody", bundle: ..., traitCollection: ...)`
     static func necroBody(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
       return UIKit.UIImage(resource: R.image.necroBody, compatibleWith: traitCollection)
     }
-    
+    #endif
+
+    #if os(iOS) || os(tvOS)
     /// `UIImage(named: "NecroHead", bundle: ..., traitCollection: ...)`
     static func necroHead(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
       return UIKit.UIImage(resource: R.image.necroHead, compatibleWith: traitCollection)
     }
-    
+    #endif
+
+    #if os(iOS) || os(tvOS)
     /// `UIImage(named: "OroBody", bundle: ..., traitCollection: ...)`
     static func oroBody(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
       return UIKit.UIImage(resource: R.image.oroBody, compatibleWith: traitCollection)
     }
-    
+    #endif
+
+    #if os(iOS) || os(tvOS)
     /// `UIImage(named: "OroHead", bundle: ..., traitCollection: ...)`
     static func oroHead(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
       return UIKit.UIImage(resource: R.image.oroHead, compatibleWith: traitCollection)
     }
-    
+    #endif
+
+    #if os(iOS) || os(tvOS)
     /// `UIImage(named: "QBody", bundle: ..., traitCollection: ...)`
     static func qBody(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
       return UIKit.UIImage(resource: R.image.qBody, compatibleWith: traitCollection)
     }
-    
+    #endif
+
+    #if os(iOS) || os(tvOS)
     /// `UIImage(named: "QHead", bundle: ..., traitCollection: ...)`
     static func qHead(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
       return UIKit.UIImage(resource: R.image.qHead, compatibleWith: traitCollection)
     }
-    
+    #endif
+
+    #if os(iOS) || os(tvOS)
     /// `UIImage(named: "RemyBody", bundle: ..., traitCollection: ...)`
     static func remyBody(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
       return UIKit.UIImage(resource: R.image.remyBody, compatibleWith: traitCollection)
     }
-    
+    #endif
+
+    #if os(iOS) || os(tvOS)
     /// `UIImage(named: "RemyHead", bundle: ..., traitCollection: ...)`
     static func remyHead(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
       return UIKit.UIImage(resource: R.image.remyHead, compatibleWith: traitCollection)
     }
-    
+    #endif
+
+    #if os(iOS) || os(tvOS)
     /// `UIImage(named: "RyuBody", bundle: ..., traitCollection: ...)`
     static func ryuBody(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
       return UIKit.UIImage(resource: R.image.ryuBody, compatibleWith: traitCollection)
     }
-    
+    #endif
+
+    #if os(iOS) || os(tvOS)
     /// `UIImage(named: "RyuHead", bundle: ..., traitCollection: ...)`
     static func ryuHead(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
       return UIKit.UIImage(resource: R.image.ryuHead, compatibleWith: traitCollection)
     }
-    
+    #endif
+
+    #if os(iOS) || os(tvOS)
     /// `UIImage(named: "SeanBody", bundle: ..., traitCollection: ...)`
     static func seanBody(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
       return UIKit.UIImage(resource: R.image.seanBody, compatibleWith: traitCollection)
     }
-    
+    #endif
+
+    #if os(iOS) || os(tvOS)
     /// `UIImage(named: "SeanHead", bundle: ..., traitCollection: ...)`
     static func seanHead(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
       return UIKit.UIImage(resource: R.image.seanHead, compatibleWith: traitCollection)
     }
-    
+    #endif
+
+    #if os(iOS) || os(tvOS)
     /// `UIImage(named: "TwelveBody", bundle: ..., traitCollection: ...)`
     static func twelveBody(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
       return UIKit.UIImage(resource: R.image.twelveBody, compatibleWith: traitCollection)
     }
-    
+    #endif
+
+    #if os(iOS) || os(tvOS)
     /// `UIImage(named: "TwelveHead", bundle: ..., traitCollection: ...)`
     static func twelveHead(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
       return UIKit.UIImage(resource: R.image.twelveHead, compatibleWith: traitCollection)
     }
-    
+    #endif
+
+    #if os(iOS) || os(tvOS)
     /// `UIImage(named: "UrienBody", bundle: ..., traitCollection: ...)`
     static func urienBody(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
       return UIKit.UIImage(resource: R.image.urienBody, compatibleWith: traitCollection)
     }
-    
+    #endif
+
+    #if os(iOS) || os(tvOS)
     /// `UIImage(named: "UrienHead", bundle: ..., traitCollection: ...)`
     static func urienHead(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
       return UIKit.UIImage(resource: R.image.urienHead, compatibleWith: traitCollection)
     }
-    
+    #endif
+
+    #if os(iOS) || os(tvOS)
     /// `UIImage(named: "YangBody", bundle: ..., traitCollection: ...)`
     static func yangBody(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
       return UIKit.UIImage(resource: R.image.yangBody, compatibleWith: traitCollection)
     }
-    
+    #endif
+
+    #if os(iOS) || os(tvOS)
     /// `UIImage(named: "YangHead", bundle: ..., traitCollection: ...)`
     static func yangHead(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
       return UIKit.UIImage(resource: R.image.yangHead, compatibleWith: traitCollection)
     }
-    
+    #endif
+
+    #if os(iOS) || os(tvOS)
     /// `UIImage(named: "YunBody", bundle: ..., traitCollection: ...)`
     static func yunBody(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
       return UIKit.UIImage(resource: R.image.yunBody, compatibleWith: traitCollection)
     }
-    
+    #endif
+
+    #if os(iOS) || os(tvOS)
     /// `UIImage(named: "YunHead", bundle: ..., traitCollection: ...)`
     static func yunHead(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
       return UIKit.UIImage(resource: R.image.yunHead, compatibleWith: traitCollection)
     }
-    
+    #endif
+
     fileprivate init() {}
   }
-  
+
   /// This `R.nib` struct is generated, and contains static references to 5 nibs.
   struct nib {
     /// Nib `CharacterCell`.
@@ -558,60 +793,70 @@ struct R: Rswift.Validatable {
     static let characterMoveFramesCell = _R.nib._CharacterMoveFramesCell()
     /// Nib `CharacterSupplementaryCell`.
     static let characterSupplementaryCell = _R.nib._CharacterSupplementaryCell()
-    
+
+    #if os(iOS) || os(tvOS)
     /// `UINib(name: "CharacterCell", in: bundle)`
     @available(*, deprecated, message: "Use UINib(resource: R.nib.characterCell) instead")
     static func characterCell(_: Void = ()) -> UIKit.UINib {
       return UIKit.UINib(resource: R.nib.characterCell)
     }
-    
+    #endif
+
+    #if os(iOS) || os(tvOS)
     /// `UINib(name: "CharacterMoveCell", in: bundle)`
     @available(*, deprecated, message: "Use UINib(resource: R.nib.characterMoveCell) instead")
     static func characterMoveCell(_: Void = ()) -> UIKit.UINib {
       return UIKit.UINib(resource: R.nib.characterMoveCell)
     }
-    
+    #endif
+
+    #if os(iOS) || os(tvOS)
     /// `UINib(name: "CharacterMoveDetailCell", in: bundle)`
     @available(*, deprecated, message: "Use UINib(resource: R.nib.characterMoveDetailCell) instead")
     static func characterMoveDetailCell(_: Void = ()) -> UIKit.UINib {
       return UIKit.UINib(resource: R.nib.characterMoveDetailCell)
     }
-    
+    #endif
+
+    #if os(iOS) || os(tvOS)
     /// `UINib(name: "CharacterMoveFramesCell", in: bundle)`
     @available(*, deprecated, message: "Use UINib(resource: R.nib.characterMoveFramesCell) instead")
     static func characterMoveFramesCell(_: Void = ()) -> UIKit.UINib {
       return UIKit.UINib(resource: R.nib.characterMoveFramesCell)
     }
-    
+    #endif
+
+    #if os(iOS) || os(tvOS)
     /// `UINib(name: "CharacterSupplementaryCell", in: bundle)`
     @available(*, deprecated, message: "Use UINib(resource: R.nib.characterSupplementaryCell) instead")
     static func characterSupplementaryCell(_: Void = ()) -> UIKit.UINib {
       return UIKit.UINib(resource: R.nib.characterSupplementaryCell)
     }
-    
+    #endif
+
     static func characterCell(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> CharacterCell? {
       return R.nib.characterCell.instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? CharacterCell
     }
-    
+
     static func characterMoveCell(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> CharacterMoveCell? {
       return R.nib.characterMoveCell.instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? CharacterMoveCell
     }
-    
+
     static func characterMoveDetailCell(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> CharacterMoveDetailCell? {
       return R.nib.characterMoveDetailCell.instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? CharacterMoveDetailCell
     }
-    
+
     static func characterMoveFramesCell(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> CharacterMoveFramesCell? {
       return R.nib.characterMoveFramesCell.instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? CharacterMoveFramesCell
     }
-    
+
     static func characterSupplementaryCell(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> CharacterSupplementaryCell? {
       return R.nib.characterSupplementaryCell.instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? CharacterSupplementaryCell
     }
-    
+
     fileprivate init() {}
   }
-  
+
   /// This `R.reuseIdentifier` struct is generated, and contains static references to 5 reuse identifiers.
   struct reuseIdentifier {
     /// Reuse identifier `CharacterCell`.
@@ -624,182 +869,139 @@ struct R: Rswift.Validatable {
     static let characterMoveFramesCell: Rswift.ReuseIdentifier<CharacterMoveFramesCell> = Rswift.ReuseIdentifier(identifier: "CharacterMoveFramesCell")
     /// Reuse identifier `CharacterSupplementaryCell`.
     static let characterSupplementaryCell: Rswift.ReuseIdentifier<CharacterSupplementaryCell> = Rswift.ReuseIdentifier(identifier: "CharacterSupplementaryCell")
-    
+
     fileprivate init() {}
   }
-  
-  /// This `R.segue` struct is generated, and contains static references to 2 view controllers.
-  struct segue {
-    /// This struct is generated for `CharacterMovesViewController`, and contains static references to 1 segues.
-    struct characterMovesViewController {
-      /// Segue identifier `PresentSkillMotionPlayerViewController`.
-      static let presentSkillMotionPlayerViewController: Rswift.StoryboardSegueIdentifier<UIKit.UIStoryboardSegue, CharacterMovesViewController, UIKit.UINavigationController> = Rswift.StoryboardSegueIdentifier(identifier: "PresentSkillMotionPlayerViewController")
-      
-      /// Optionally returns a typed version of segue `PresentSkillMotionPlayerViewController`.
-      /// Returns nil if either the segue identifier, the source, destination, or segue types don't match.
-      /// For use inside `prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?)`.
-      static func presentSkillMotionPlayerViewController(segue: UIKit.UIStoryboardSegue) -> Rswift.TypedStoryboardSegueInfo<UIKit.UIStoryboardSegue, CharacterMovesViewController, UIKit.UINavigationController>? {
-        return Rswift.TypedStoryboardSegueInfo(segueIdentifier: R.segue.characterMovesViewController.presentSkillMotionPlayerViewController, segue: segue)
-      }
-      
-      fileprivate init() {}
-    }
-    
-    /// This struct is generated for `CharactersViewController`, and contains static references to 1 segues.
-    struct charactersViewController {
-      /// Segue identifier `ShowDetail`.
-      static let showDetail: Rswift.StoryboardSegueIdentifier<UIKit.UIStoryboardSegue, CharactersViewController, UIKit.UINavigationController> = Rswift.StoryboardSegueIdentifier(identifier: "ShowDetail")
-      
-      /// Optionally returns a typed version of segue `ShowDetail`.
-      /// Returns nil if either the segue identifier, the source, destination, or segue types don't match.
-      /// For use inside `prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?)`.
-      static func showDetail(segue: UIKit.UIStoryboardSegue) -> Rswift.TypedStoryboardSegueInfo<UIKit.UIStoryboardSegue, CharactersViewController, UIKit.UINavigationController>? {
-        return Rswift.TypedStoryboardSegueInfo(segueIdentifier: R.segue.charactersViewController.showDetail, segue: segue)
-      }
-      
-      fileprivate init() {}
-    }
-    
-    fileprivate init() {}
-  }
-  
-  /// This `R.storyboard` struct is generated, and contains static references to 2 storyboards.
-  struct storyboard {
-    /// Storyboard `LaunchScreen`.
-    static let launchScreen = _R.storyboard.launchScreen()
-    /// Storyboard `Main`.
-    static let main = _R.storyboard.main()
-    
-    /// `UIStoryboard(name: "LaunchScreen", bundle: ...)`
-    static func launchScreen(_: Void = ()) -> UIKit.UIStoryboard {
-      return UIKit.UIStoryboard(resource: R.storyboard.launchScreen)
-    }
-    
-    /// `UIStoryboard(name: "Main", bundle: ...)`
-    static func main(_: Void = ()) -> UIKit.UIStoryboard {
-      return UIKit.UIStoryboard(resource: R.storyboard.main)
-    }
-    
-    fileprivate init() {}
-  }
-  
+
   fileprivate struct intern: Rswift.Validatable {
     fileprivate static func validate() throws {
       try _R.validate()
     }
-    
+
     fileprivate init() {}
   }
-  
+
   fileprivate class Class {}
-  
+
   fileprivate init() {}
 }
 
 struct _R: Rswift.Validatable {
   static func validate() throws {
+    #if os(iOS) || os(tvOS)
     try storyboard.validate()
+    #endif
   }
-  
+
+  #if os(iOS) || os(tvOS)
   struct nib {
     struct _CharacterCell: Rswift.NibResourceType, Rswift.ReuseIdentifierType {
       typealias ReusableType = CharacterCell
-      
+
       let bundle = R.hostingBundle
       let identifier = "CharacterCell"
       let name = "CharacterCell"
-      
+
       func firstView(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> CharacterCell? {
         return instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? CharacterCell
       }
-      
+
       fileprivate init() {}
     }
-    
+
     struct _CharacterMoveCell: Rswift.NibResourceType, Rswift.ReuseIdentifierType {
       typealias ReusableType = CharacterMoveCell
-      
+
       let bundle = R.hostingBundle
       let identifier = "CharacterMoveCell"
       let name = "CharacterMoveCell"
-      
+
       func firstView(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> CharacterMoveCell? {
         return instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? CharacterMoveCell
       }
-      
+
       fileprivate init() {}
     }
-    
+
     struct _CharacterMoveDetailCell: Rswift.NibResourceType, Rswift.ReuseIdentifierType {
       typealias ReusableType = CharacterMoveDetailCell
-      
+
       let bundle = R.hostingBundle
       let identifier = "CharacterMoveDetailCell"
       let name = "CharacterMoveDetailCell"
-      
+
       func firstView(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> CharacterMoveDetailCell? {
         return instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? CharacterMoveDetailCell
       }
-      
+
       fileprivate init() {}
     }
-    
+
     struct _CharacterMoveFramesCell: Rswift.NibResourceType, Rswift.ReuseIdentifierType {
       typealias ReusableType = CharacterMoveFramesCell
-      
+
       let bundle = R.hostingBundle
       let identifier = "CharacterMoveFramesCell"
       let name = "CharacterMoveFramesCell"
-      
+
       func firstView(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> CharacterMoveFramesCell? {
         return instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? CharacterMoveFramesCell
       }
-      
+
       fileprivate init() {}
     }
-    
+
     struct _CharacterSupplementaryCell: Rswift.NibResourceType, Rswift.ReuseIdentifierType {
       typealias ReusableType = CharacterSupplementaryCell
-      
+
       let bundle = R.hostingBundle
       let identifier = "CharacterSupplementaryCell"
       let name = "CharacterSupplementaryCell"
-      
+
       func firstView(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> CharacterSupplementaryCell? {
         return instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? CharacterSupplementaryCell
       }
-      
+
       fileprivate init() {}
     }
-    
+
     fileprivate init() {}
   }
-  
+  #endif
+
+  #if os(iOS) || os(tvOS)
   struct storyboard: Rswift.Validatable {
     static func validate() throws {
+      #if os(iOS) || os(tvOS)
       try launchScreen.validate()
+      #endif
+      #if os(iOS) || os(tvOS)
       try main.validate()
+      #endif
     }
-    
+
+    #if os(iOS) || os(tvOS)
     struct launchScreen: Rswift.StoryboardResourceWithInitialControllerType, Rswift.Validatable {
       typealias InitialController = UIKit.UINavigationController
-      
+
       let bundle = R.hostingBundle
       let name = "LaunchScreen"
-      
+
       static func validate() throws {
-        if UIKit.UIImage(named: "NavigationBarShadow") == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'NavigationBarShadow' is used in storyboard 'LaunchScreen', but couldn't be loaded.") }
-        if #available(iOS 11.0, *) {
-          if UIKit.UIColor(named: "BackgroundColor") == nil { throw Rswift.ValidationError(description: "[R.swift] Color named 'BackgroundColor' is used in storyboard 'LaunchScreen', but couldn't be loaded.") }
+        if UIKit.UIImage(named: "NavigationBarShadow", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'NavigationBarShadow' is used in storyboard 'LaunchScreen', but couldn't be loaded.") }
+        if #available(iOS 11.0, tvOS 11.0, *) {
+          if UIKit.UIColor(named: "BackgroundColor", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Color named 'BackgroundColor' is used in storyboard 'LaunchScreen', but couldn't be loaded.") }
         }
       }
-      
+
       fileprivate init() {}
     }
-    
+    #endif
+
+    #if os(iOS) || os(tvOS)
     struct main: Rswift.StoryboardResourceWithInitialControllerType, Rswift.Validatable {
       typealias InitialController = UIKit.UISplitViewController
-      
+
       let bundle = R.hostingBundle
       let characterMovesViewController = StoryboardViewControllerResource<CharacterMovesViewController>(identifier: "CharacterMovesViewController")
       let charactersViewController = StoryboardViewControllerResource<CharactersViewController>(identifier: "CharactersViewController")
@@ -809,57 +1011,59 @@ struct _R: Rswift.Validatable {
       let moreViewController = StoryboardViewControllerResource<MoreViewController>(identifier: "MoreViewController")
       let name = "Main"
       let skillMotionPlayerViewController = StoryboardViewControllerResource<SkillMotionPlayerViewController>(identifier: "SkillMotionPlayerViewController")
-      
+
       func characterMovesViewController(_: Void = ()) -> CharacterMovesViewController? {
         return UIKit.UIStoryboard(resource: self).instantiateViewController(withResource: characterMovesViewController)
       }
-      
+
       func charactersViewController(_: Void = ()) -> CharactersViewController? {
         return UIKit.UIStoryboard(resource: self).instantiateViewController(withResource: charactersViewController)
       }
-      
+
       func guideDetailNavigationController(_: Void = ()) -> UIKit.UINavigationController? {
         return UIKit.UIStoryboard(resource: self).instantiateViewController(withResource: guideDetailNavigationController)
       }
-      
+
       func guideSplitViewController(_: Void = ()) -> UIKit.UISplitViewController? {
         return UIKit.UIStoryboard(resource: self).instantiateViewController(withResource: guideSplitViewController)
       }
-      
+
       func moreNavigationController(_: Void = ()) -> UIKit.UINavigationController? {
         return UIKit.UIStoryboard(resource: self).instantiateViewController(withResource: moreNavigationController)
       }
-      
+
       func moreViewController(_: Void = ()) -> MoreViewController? {
         return UIKit.UIStoryboard(resource: self).instantiateViewController(withResource: moreViewController)
       }
-      
+
       func skillMotionPlayerViewController(_: Void = ()) -> SkillMotionPlayerViewController? {
         return UIKit.UIStoryboard(resource: self).instantiateViewController(withResource: skillMotionPlayerViewController)
       }
-      
+
       static func validate() throws {
-        if #available(iOS 11.0, *) {
-          if UIKit.UIColor(named: "SeparatorColor") == nil { throw Rswift.ValidationError(description: "[R.swift] Color named 'SeparatorColor' is used in storyboard 'Main', but couldn't be loaded.") }
-          if UIKit.UIColor(named: "ControlColor") == nil { throw Rswift.ValidationError(description: "[R.swift] Color named 'ControlColor' is used in storyboard 'Main', but couldn't be loaded.") }
-          if UIKit.UIColor(named: "PrimaryTextColor") == nil { throw Rswift.ValidationError(description: "[R.swift] Color named 'PrimaryTextColor' is used in storyboard 'Main', but couldn't be loaded.") }
-          if UIKit.UIColor(named: "SecondaryTextColor") == nil { throw Rswift.ValidationError(description: "[R.swift] Color named 'SecondaryTextColor' is used in storyboard 'Main', but couldn't be loaded.") }
-          if UIKit.UIColor(named: "BackgroundColor") == nil { throw Rswift.ValidationError(description: "[R.swift] Color named 'BackgroundColor' is used in storyboard 'Main', but couldn't be loaded.") }
+        if #available(iOS 11.0, tvOS 11.0, *) {
+          if UIKit.UIColor(named: "BackgroundColor", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Color named 'BackgroundColor' is used in storyboard 'Main', but couldn't be loaded.") }
+          if UIKit.UIColor(named: "ControlColor", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Color named 'ControlColor' is used in storyboard 'Main', but couldn't be loaded.") }
+          if UIKit.UIColor(named: "PrimaryTextColor", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Color named 'PrimaryTextColor' is used in storyboard 'Main', but couldn't be loaded.") }
+          if UIKit.UIColor(named: "SecondaryTextColor", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Color named 'SecondaryTextColor' is used in storyboard 'Main', but couldn't be loaded.") }
+          if UIKit.UIColor(named: "SeparatorColor", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Color named 'SeparatorColor' is used in storyboard 'Main', but couldn't be loaded.") }
         }
         if _R.storyboard.main().characterMovesViewController() == nil { throw Rswift.ValidationError(description:"[R.swift] ViewController with identifier 'characterMovesViewController' could not be loaded from storyboard 'Main' as 'CharacterMovesViewController'.") }
         if _R.storyboard.main().charactersViewController() == nil { throw Rswift.ValidationError(description:"[R.swift] ViewController with identifier 'charactersViewController' could not be loaded from storyboard 'Main' as 'CharactersViewController'.") }
+        if _R.storyboard.main().guideDetailNavigationController() == nil { throw Rswift.ValidationError(description:"[R.swift] ViewController with identifier 'guideDetailNavigationController' could not be loaded from storyboard 'Main' as 'UIKit.UINavigationController'.") }
         if _R.storyboard.main().guideSplitViewController() == nil { throw Rswift.ValidationError(description:"[R.swift] ViewController with identifier 'guideSplitViewController' could not be loaded from storyboard 'Main' as 'UIKit.UISplitViewController'.") }
+        if _R.storyboard.main().moreNavigationController() == nil { throw Rswift.ValidationError(description:"[R.swift] ViewController with identifier 'moreNavigationController' could not be loaded from storyboard 'Main' as 'UIKit.UINavigationController'.") }
         if _R.storyboard.main().moreViewController() == nil { throw Rswift.ValidationError(description:"[R.swift] ViewController with identifier 'moreViewController' could not be loaded from storyboard 'Main' as 'MoreViewController'.") }
         if _R.storyboard.main().skillMotionPlayerViewController() == nil { throw Rswift.ValidationError(description:"[R.swift] ViewController with identifier 'skillMotionPlayerViewController' could not be loaded from storyboard 'Main' as 'SkillMotionPlayerViewController'.") }
-        if _R.storyboard.main().moreNavigationController() == nil { throw Rswift.ValidationError(description:"[R.swift] ViewController with identifier 'moreNavigationController' could not be loaded from storyboard 'Main' as 'UIKit.UINavigationController'.") }
-        if _R.storyboard.main().guideDetailNavigationController() == nil { throw Rswift.ValidationError(description:"[R.swift] ViewController with identifier 'guideDetailNavigationController' could not be loaded from storyboard 'Main' as 'UIKit.UINavigationController'.") }
       }
-      
+
       fileprivate init() {}
     }
-    
+    #endif
+
     fileprivate init() {}
   }
-  
+  #endif
+
   fileprivate init() {}
 }

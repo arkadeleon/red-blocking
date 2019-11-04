@@ -6,6 +6,6 @@ target 'MaCherie' do
   use_frameworks!
 
   # Pods for MaCherie
-  pod 'R.swift', '5.0.0.alpha.2'
+  pod 'R.swift'
   pod 'PromiseKit', '6.5.2'
 end
