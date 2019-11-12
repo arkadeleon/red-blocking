@@ -16,11 +16,6 @@
                 <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0jY-XP-XnJ">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <color key="backgroundColor" systemColor="secondarySystemBackgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                    </view>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="PUZ-SL-O1a">
                         <rect key="frame" x="15" y="11.5" width="21" height="21"/>
                         <constraints>
@@ -47,7 +42,6 @@
             <connections>
                 <outlet property="rowImageView" destination="PUZ-SL-O1a" id="b3m-bf-XNN"/>
                 <outlet property="rowTitleLabel" destination="GZw-T9-cqE" id="rBG-lR-Prx"/>
-                <outlet property="selectedBackgroundView" destination="0jY-XP-XnJ" id="Sbf-FG-Mf5"/>
             </connections>
             <point key="canvasLocation" x="546.5" y="396"/>
         </tableViewCell>

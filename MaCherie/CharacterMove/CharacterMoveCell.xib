@@ -16,10 +16,6 @@
                 <rect key="frame" x="0.0" y="0.0" width="348" height="44"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zuF-4X-qqT">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    </view>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cDV-F4-tl5">
                         <rect key="frame" x="15" y="11" width="42" height="22"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -37,7 +33,6 @@
             <viewLayoutGuide key="safeArea" id="b14-rB-Lbz"/>
             <connections>
                 <outlet property="rowTitleLabel" destination="cDV-F4-tl5" id="TvI-Iw-vXA"/>
-                <outlet property="selectedBackgroundView" destination="zuF-4X-qqT" id="fNA-vT-H19"/>
             </connections>
             <point key="canvasLocation" x="546.5" y="396"/>
         </tableViewCell>
