@@ -1,12 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina4_7" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
-        <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
-        <capability name="Named colors" minToolsVersion="9.0"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -17,29 +13,26 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
             <autoresizingMask key="autoresizingMask"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="OgQ-wW-yUH" id="b6x-0M-6q8">
-                <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ddb-Zg-yVP">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <color key="backgroundColor" name="SurfaceColorVariant"/>
                     </view>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J0U-tJ-y7u">
-                        <rect key="frame" x="166.5" y="11" width="42" height="21.5"/>
+                        <rect key="frame" x="166.5" y="11" width="42" height="22"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                        <color key="textColor" name="PrimaryTextColor"/>
+                        <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
-                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 <constraints>
                     <constraint firstAttribute="bottom" secondItem="J0U-tJ-y7u" secondAttribute="bottom" constant="11" id="etL-mi-wvL"/>
                     <constraint firstItem="J0U-tJ-y7u" firstAttribute="centerX" secondItem="b6x-0M-6q8" secondAttribute="centerX" id="fje-J2-fp6"/>
                     <constraint firstItem="J0U-tJ-y7u" firstAttribute="top" secondItem="b6x-0M-6q8" secondAttribute="top" constant="11" id="qDD-GS-JIZ"/>
                 </constraints>
             </tableViewCellContentView>
-            <color key="backgroundColor" name="SurfaceColor"/>
             <viewLayoutGuide key="safeArea" id="Znx-fX-Hue"/>
             <connections>
                 <outlet property="rowTitleLabel" destination="J0U-tJ-y7u" id="86o-ET-Kmq"/>
@@ -48,15 +41,4 @@
             <point key="canvasLocation" x="546.5" y="396"/>
         </tableViewCell>
     </objects>
-    <resources>
-        <namedColor name="PrimaryTextColor">
-            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
-        <namedColor name="SurfaceColor">
-            <color red="0.050999999046325684" green="0.050999999046325684" blue="0.050999999046325684" alpha="0.69999998807907104" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
-        <namedColor name="SurfaceColorVariant">
-            <color red="0.25099998712539673" green="0.25099998712539673" blue="0.25099998712539673" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
-    </resources>
 </document>

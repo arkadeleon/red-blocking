@@ -18,12 +18,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
-        UINavigationBar.appearance().barTintColor = R.color.backgroundColor()
-        UINavigationBar.appearance().tintColor = R.color.primaryTextColor()
-        UINavigationBar.appearance().titleTextAttributes = [.foregroundColor : R.color.primaryTextColor()!]
-        UINavigationBar.appearance().setBackgroundImage(UIImage(color: R.color.backgroundColor()!, size: CGSize(width: 1, height: 1)), for: .default)
-        UINavigationBar.appearance().shadowImage = R.image.navigationBarShadow()
-        
         let splitViewController = window!.rootViewController as! UISplitViewController
         splitViewController.delegate = self
         (splitViewController.viewControllers[0] as! UINavigationController).delegate = self

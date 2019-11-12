@@ -155,100 +155,6 @@ struct R: Rswift.Validatable {
   }
   #endif
 
-  /// This `R.color` struct is generated, and contains static references to 8 colors.
-  struct color {
-    /// Color `BackgroundColor`.
-    static let backgroundColor = Rswift.ColorResource(bundle: R.hostingBundle, name: "BackgroundColor")
-    /// Color `ControlColor`.
-    static let controlColor = Rswift.ColorResource(bundle: R.hostingBundle, name: "ControlColor")
-    /// Color `PrimaryTextColor`.
-    static let primaryTextColor = Rswift.ColorResource(bundle: R.hostingBundle, name: "PrimaryTextColor")
-    /// Color `SecondaryTextColorVariant`.
-    static let secondaryTextColorVariant = Rswift.ColorResource(bundle: R.hostingBundle, name: "SecondaryTextColorVariant")
-    /// Color `SecondaryTextColor`.
-    static let secondaryTextColor = Rswift.ColorResource(bundle: R.hostingBundle, name: "SecondaryTextColor")
-    /// Color `SeparatorColor`.
-    static let separatorColor = Rswift.ColorResource(bundle: R.hostingBundle, name: "SeparatorColor")
-    /// Color `SurfaceColorVariant`.
-    static let surfaceColorVariant = Rswift.ColorResource(bundle: R.hostingBundle, name: "SurfaceColorVariant")
-    /// Color `SurfaceColor`.
-    static let surfaceColor = Rswift.ColorResource(bundle: R.hostingBundle, name: "SurfaceColor")
-
-    #if os(iOS) || os(tvOS)
-    /// `UIColor(named: "BackgroundColor", bundle: ..., traitCollection: ...)`
-    @available(tvOS 11.0, *)
-    @available(iOS 11.0, *)
-    static func backgroundColor(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIColor? {
-      return UIKit.UIColor(resource: R.color.backgroundColor, compatibleWith: traitCollection)
-    }
-    #endif
-
-    #if os(iOS) || os(tvOS)
-    /// `UIColor(named: "ControlColor", bundle: ..., traitCollection: ...)`
-    @available(tvOS 11.0, *)
-    @available(iOS 11.0, *)
-    static func controlColor(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIColor? {
-      return UIKit.UIColor(resource: R.color.controlColor, compatibleWith: traitCollection)
-    }
-    #endif
-
-    #if os(iOS) || os(tvOS)
-    /// `UIColor(named: "PrimaryTextColor", bundle: ..., traitCollection: ...)`
-    @available(tvOS 11.0, *)
-    @available(iOS 11.0, *)
-    static func primaryTextColor(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIColor? {
-      return UIKit.UIColor(resource: R.color.primaryTextColor, compatibleWith: traitCollection)
-    }
-    #endif
-
-    #if os(iOS) || os(tvOS)
-    /// `UIColor(named: "SecondaryTextColor", bundle: ..., traitCollection: ...)`
-    @available(tvOS 11.0, *)
-    @available(iOS 11.0, *)
-    static func secondaryTextColor(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIColor? {
-      return UIKit.UIColor(resource: R.color.secondaryTextColor, compatibleWith: traitCollection)
-    }
-    #endif
-
-    #if os(iOS) || os(tvOS)
-    /// `UIColor(named: "SecondaryTextColorVariant", bundle: ..., traitCollection: ...)`
-    @available(tvOS 11.0, *)
-    @available(iOS 11.0, *)
-    static func secondaryTextColorVariant(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIColor? {
-      return UIKit.UIColor(resource: R.color.secondaryTextColorVariant, compatibleWith: traitCollection)
-    }
-    #endif
-
-    #if os(iOS) || os(tvOS)
-    /// `UIColor(named: "SeparatorColor", bundle: ..., traitCollection: ...)`
-    @available(tvOS 11.0, *)
-    @available(iOS 11.0, *)
-    static func separatorColor(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIColor? {
-      return UIKit.UIColor(resource: R.color.separatorColor, compatibleWith: traitCollection)
-    }
-    #endif
-
-    #if os(iOS) || os(tvOS)
-    /// `UIColor(named: "SurfaceColor", bundle: ..., traitCollection: ...)`
-    @available(tvOS 11.0, *)
-    @available(iOS 11.0, *)
-    static func surfaceColor(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIColor? {
-      return UIKit.UIColor(resource: R.color.surfaceColor, compatibleWith: traitCollection)
-    }
-    #endif
-
-    #if os(iOS) || os(tvOS)
-    /// `UIColor(named: "SurfaceColorVariant", bundle: ..., traitCollection: ...)`
-    @available(tvOS 11.0, *)
-    @available(iOS 11.0, *)
-    static func surfaceColorVariant(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIColor? {
-      return UIKit.UIColor(resource: R.color.surfaceColorVariant, compatibleWith: traitCollection)
-    }
-    #endif
-
-    fileprivate init() {}
-  }
-
   /// This `R.file` struct is generated, and contains static references to 20 files.
   struct file {
     /// Resource file `Alex.plist`.
@@ -415,7 +321,7 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
 
-  /// This `R.image` struct is generated, and contains static references to 40 images.
+  /// This `R.image` struct is generated, and contains static references to 39 images.
   struct image {
     /// Image `AlexBody`.
     static let alexBody = Rswift.ImageResource(bundle: R.hostingBundle, name: "AlexBody")
@@ -455,8 +361,6 @@ struct R: Rswift.Validatable {
     static let makotoBody = Rswift.ImageResource(bundle: R.hostingBundle, name: "MakotoBody")
     /// Image `MakotoHead`.
     static let makotoHead = Rswift.ImageResource(bundle: R.hostingBundle, name: "MakotoHead")
-    /// Image `NavigationBarShadow`.
-    static let navigationBarShadow = Rswift.ImageResource(bundle: R.hostingBundle, name: "NavigationBarShadow")
     /// Image `NecroBody`.
     static let necroBody = Rswift.ImageResource(bundle: R.hostingBundle, name: "NecroBody")
     /// Image `NecroHead`.
@@ -628,13 +532,6 @@ struct R: Rswift.Validatable {
     /// `UIImage(named: "MakotoHead", bundle: ..., traitCollection: ...)`
     static func makotoHead(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
       return UIKit.UIImage(resource: R.image.makotoHead, compatibleWith: traitCollection)
-    }
-    #endif
-
-    #if os(iOS) || os(tvOS)
-    /// `UIImage(named: "NavigationBarShadow", bundle: ..., traitCollection: ...)`
-    static func navigationBarShadow(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
-      return UIKit.UIImage(resource: R.image.navigationBarShadow, compatibleWith: traitCollection)
     }
     #endif
 
@@ -981,16 +878,12 @@ struct _R: Rswift.Validatable {
     }
 
     #if os(iOS) || os(tvOS)
-    struct launchScreen: Rswift.StoryboardResourceWithInitialControllerType, Rswift.Validatable {
-      typealias InitialController = UIKit.UINavigationController
-
+    struct launchScreen: Rswift.StoryboardResourceType, Rswift.Validatable {
       let bundle = R.hostingBundle
       let name = "LaunchScreen"
 
       static func validate() throws {
-        if UIKit.UIImage(named: "NavigationBarShadow", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'NavigationBarShadow' is used in storyboard 'LaunchScreen', but couldn't be loaded.") }
         if #available(iOS 11.0, tvOS 11.0, *) {
-          if UIKit.UIColor(named: "BackgroundColor", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Color named 'BackgroundColor' is used in storyboard 'LaunchScreen', but couldn't be loaded.") }
         }
       }
 
@@ -1042,11 +935,6 @@ struct _R: Rswift.Validatable {
 
       static func validate() throws {
         if #available(iOS 11.0, tvOS 11.0, *) {
-          if UIKit.UIColor(named: "BackgroundColor", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Color named 'BackgroundColor' is used in storyboard 'Main', but couldn't be loaded.") }
-          if UIKit.UIColor(named: "ControlColor", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Color named 'ControlColor' is used in storyboard 'Main', but couldn't be loaded.") }
-          if UIKit.UIColor(named: "PrimaryTextColor", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Color named 'PrimaryTextColor' is used in storyboard 'Main', but couldn't be loaded.") }
-          if UIKit.UIColor(named: "SecondaryTextColor", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Color named 'SecondaryTextColor' is used in storyboard 'Main', but couldn't be loaded.") }
-          if UIKit.UIColor(named: "SeparatorColor", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Color named 'SeparatorColor' is used in storyboard 'Main', but couldn't be loaded.") }
         }
         if _R.storyboard.main().characterMovesViewController() == nil { throw Rswift.ValidationError(description:"[R.swift] ViewController with identifier 'characterMovesViewController' could not be loaded from storyboard 'Main' as 'CharacterMovesViewController'.") }
         if _R.storyboard.main().charactersViewController() == nil { throw Rswift.ValidationError(description:"[R.swift] ViewController with identifier 'charactersViewController' could not be loaded from storyboard 'Main' as 'CharactersViewController'.") }
