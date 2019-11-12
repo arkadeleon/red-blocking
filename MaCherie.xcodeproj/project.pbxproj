@@ -125,7 +125,6 @@
 		35FA31A320D8B55A009A5D7B /* CharacterCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterCell.swift; sourceTree = "<group>"; };
 		35FA31A420D8B55A009A5D7B /* CharacterCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CharacterCell.xib; sourceTree = "<group>"; };
 		6CAF47B466D48E9D038FAAF2 /* Pods_MaCherie.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MaCherie.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		88B6B3C31F2AD6AB00E31C39 /* MaCherie-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MaCherie-Bridging-Header.h"; sourceTree = "<group>"; };
 		9B0A51AF84A34AEE62B96739 /* Pods-MaCherie.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MaCherie.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MaCherie/Pods-MaCherie.debug.xcconfig"; sourceTree = "<group>"; };
 		D3FF64D4D4365DCD8DEF7ADE /* Pods-MaCherie.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MaCherie.release.xcconfig"; path = "Pods/Target Support Files/Pods-MaCherie/Pods-MaCherie.release.xcconfig"; sourceTree = "<group>"; };
 		EDCEEE4A06A3027082614AEF /* Pods-MaCherie.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MaCherie.release.xcconfig"; path = "Pods/Target Support Files/Pods-MaCherie/Pods-MaCherie.release.xcconfig"; sourceTree = "<group>"; };
@@ -137,7 +136,7 @@
 		EEE27ACE176C1347008A41AB /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		EEE27AD0176C1347008A41AB /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		EEE27AD2176C1347008A41AB /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		EEE27AD6176C1347008A41AB /* MaCherie-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MaCherie-Info.plist"; sourceTree = "<group>"; };
+		EEE27AD6176C1347008A41AB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EEE27AEB176C1424008A41AB /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		EEE27AED176C1430008A41AB /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		EEE27AEF176C1457008A41AB /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
@@ -332,8 +331,7 @@
 			isa = PBXGroup;
 			children = (
 				35EFE5BD20D39EEE007EB379 /* R.generated.swift */,
-				88B6B3C31F2AD6AB00E31C39 /* MaCherie-Bridging-Header.h */,
-				EEE27AD6176C1347008A41AB /* MaCherie-Info.plist */,
+				EEE27AD6176C1347008A41AB /* Info.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -637,7 +635,7 @@
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "";
-				INFOPLIST_FILE = "MaCherie/MaCherie-Info.plist";
+				INFOPLIST_FILE = MaCherie/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
@@ -645,9 +643,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.studiopp.i3rd;
 				PRODUCT_MODULE_NAME = MaCherie;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				SWIFT_OBJC_BRIDGING_HEADER = "MaCherie/MaCherie-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 				SWIFT_VERSION = 5.0;
@@ -668,7 +664,7 @@
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "";
-				INFOPLIST_FILE = "MaCherie/MaCherie-Info.plist";
+				INFOPLIST_FILE = MaCherie/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
@@ -676,9 +672,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.studiopp.i3rd;
 				PRODUCT_MODULE_NAME = MaCherie;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				SWIFT_OBJC_BRIDGING_HEADER = "MaCherie/MaCherie-Bridging-Header.h";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
