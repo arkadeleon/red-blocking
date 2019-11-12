@@ -11,7 +11,7 @@
         <scene sceneID="cUZ-e1-qWy">
             <objects>
                 <navigationController definesPresentationContext="YES" useStoryboardIdentifierAsRestorationIdentifier="YES" id="9ZQ-oo-ndQ" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="vCL-mS-UYc">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="vCL-mS-UYc">
                         <rect key="frame" x="0.0" y="44" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -747,6 +747,6 @@
         <image name="play" catalog="system" width="60" height="64"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="2VS-Ld-HJI"/>
+        <segue reference="m87-1a-yA8"/>
     </inferredMetricsTieBreakers>
 </document>
