@@ -35,7 +35,7 @@
 		3566755320D2692F00DD26A4 /* UIColor+Integer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3566755220D2692F00DD26A4 /* UIColor+Integer.swift */; };
 		3566755520D26A2800DD26A4 /* ApplicationDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3566755420D26A2800DD26A4 /* ApplicationDataManager.swift */; };
 		3566755720D26A4D00DD26A4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3566755620D26A4D00DD26A4 /* AppDelegate.swift */; };
-		3566755920D2702C00DD26A4 /* DownloadManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3566755820D2702C00DD26A4 /* DownloadManager.swift */; };
+		3566755920D2702C00DD26A4 /* SkillMotionDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3566755820D2702C00DD26A4 /* SkillMotionDownloader.swift */; };
 		35B69A2420D8DA2700F05A2C /* CharacterSupplementaryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35B69A2220D8DA2700F05A2C /* CharacterSupplementaryCell.swift */; };
 		35B69A2520D8DA2700F05A2C /* CharacterSupplementaryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 35B69A2320D8DA2700F05A2C /* CharacterSupplementaryCell.xib */; };
 		35B69A2820D8DA4700F05A2C /* CharacterMoveCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35B69A2620D8DA4700F05A2C /* CharacterMoveCell.swift */; };
@@ -46,6 +46,7 @@
 		35B69A3120D8DC0300F05A2C /* CharacterMoveFramesCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 35B69A2F20D8DC0300F05A2C /* CharacterMoveFramesCell.xib */; };
 		35B69A3620D8DECE00F05A2C /* CharacterMove.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35B69A3520D8DECE00F05A2C /* CharacterMove.swift */; };
 		35B9241A20D1194B0081BD00 /* CharactersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35B9241920D1194B0081BD00 /* CharactersViewController.swift */; };
+		35C41F3D237AB26000A1EBF7 /* MotionInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35C41F3C237AB26000A1EBF7 /* MotionInfo.swift */; };
 		35EFE5BE20D39EEF007EB379 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35EFE5BD20D39EEE007EB379 /* R.generated.swift */; };
 		35EFE5C020D39F31007EB379 /* MoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35EFE5BF20D39F31007EB379 /* MoreViewController.swift */; };
 		35EFE5C220D3A187007EB379 /* PushAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35EFE5C120D3A187007EB379 /* PushAnimator.swift */; };
@@ -103,7 +104,7 @@
 		3566755220D2692F00DD26A4 /* UIColor+Integer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Integer.swift"; sourceTree = "<group>"; };
 		3566755420D26A2800DD26A4 /* ApplicationDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationDataManager.swift; sourceTree = "<group>"; };
 		3566755620D26A4D00DD26A4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		3566755820D2702C00DD26A4 /* DownloadManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadManager.swift; sourceTree = "<group>"; };
+		3566755820D2702C00DD26A4 /* SkillMotionDownloader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkillMotionDownloader.swift; sourceTree = "<group>"; };
 		35B69A2220D8DA2700F05A2C /* CharacterSupplementaryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterSupplementaryCell.swift; sourceTree = "<group>"; };
 		35B69A2320D8DA2700F05A2C /* CharacterSupplementaryCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CharacterSupplementaryCell.xib; sourceTree = "<group>"; };
 		35B69A2620D8DA4700F05A2C /* CharacterMoveCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterMoveCell.swift; sourceTree = "<group>"; };
@@ -114,6 +115,7 @@
 		35B69A2F20D8DC0300F05A2C /* CharacterMoveFramesCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CharacterMoveFramesCell.xib; sourceTree = "<group>"; };
 		35B69A3520D8DECE00F05A2C /* CharacterMove.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterMove.swift; sourceTree = "<group>"; };
 		35B9241920D1194B0081BD00 /* CharactersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersViewController.swift; sourceTree = "<group>"; };
+		35C41F3C237AB26000A1EBF7 /* MotionInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotionInfo.swift; sourceTree = "<group>"; };
 		35EFE5BD20D39EEE007EB379 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = SOURCE_ROOT; };
 		35EFE5BF20D39F31007EB379 /* MoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreViewController.swift; sourceTree = "<group>"; };
 		35EFE5C120D3A187007EB379 /* PushAnimator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PushAnimator.swift; sourceTree = "<group>"; };
@@ -216,7 +218,6 @@
 				35EFE5C320D3A3B3007EB379 /* PopAnimator.swift */,
 				35EFE5C520D3A709007EB379 /* PopInteractor.swift */,
 				3566755420D26A2800DD26A4 /* ApplicationDataManager.swift */,
-				3566755820D2702C00DD26A4 /* DownloadManager.swift */,
 				3566755220D2692F00DD26A4 /* UIColor+Integer.swift */,
 			);
 			path = Core;
@@ -253,6 +254,8 @@
 		35B69A3420D8DEBD00F05A2C /* Player */ = {
 			isa = PBXGroup;
 			children = (
+				35C41F3C237AB26000A1EBF7 /* MotionInfo.swift */,
+				3566755820D2702C00DD26A4 /* SkillMotionDownloader.swift */,
 				3505351B20D259E900078847 /* SkillMotionPlayer.swift */,
 				3505351820D21AC300078847 /* SkillMotionPlayerViewController.swift */,
 			);
@@ -501,7 +504,7 @@
 				35B69A2420D8DA2700F05A2C /* CharacterSupplementaryCell.swift in Sources */,
 				35EFE5C220D3A187007EB379 /* PushAnimator.swift in Sources */,
 				35FA31A520D8B55A009A5D7B /* CharacterCell.swift in Sources */,
-				3566755920D2702C00DD26A4 /* DownloadManager.swift in Sources */,
+				3566755920D2702C00DD26A4 /* SkillMotionDownloader.swift in Sources */,
 				35B69A3620D8DECE00F05A2C /* CharacterMove.swift in Sources */,
 				35EFE5C420D3A3B3007EB379 /* PopAnimator.swift in Sources */,
 				3566755720D26A4D00DD26A4 /* AppDelegate.swift in Sources */,
@@ -511,6 +514,7 @@
 				3505351520D1FDA600078847 /* CharacterMovesViewController.swift in Sources */,
 				3505351C20D259E900078847 /* SkillMotionPlayer.swift in Sources */,
 				3566755320D2692F00DD26A4 /* UIColor+Integer.swift in Sources */,
+				35C41F3D237AB26000A1EBF7 /* MotionInfo.swift in Sources */,
 				35EFE5C620D3A709007EB379 /* PopInteractor.swift in Sources */,
 				3566755520D26A2800DD26A4 /* ApplicationDataManager.swift in Sources */,
 				35FA31A220D8B33C009A5D7B /* Character.swift in Sources */,

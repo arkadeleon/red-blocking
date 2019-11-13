@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Combine
 
 enum SkillMotionPlaybackState {
     case stopped
@@ -64,12 +65,11 @@ class SkillMotionPlayerViewController: UIViewController {
     
     private var observer: NSObjectProtocol!
     
-    private var donwloadManager = DownloadManager()
+    private var downloader: SkillMotionDownloader?
+    private var subscription: AnyCancellable?
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
-        
-        donwloadManager.delegate = self
         
         observer = NotificationCenter.default.addObserver(forName: UIApplication.didEnterBackgroundNotification, object: nil, queue: nil) { _ in
             var backgroundTaskIdentifier = UIBackgroundTaskIdentifier(rawValue: 0)
@@ -179,7 +179,6 @@ class SkillMotionPlayerViewController: UIViewController {
             self.playTimer?.invalidate()
             self.seekingForwardTimer?.invalidate()
             self.seekingBackwardTimer?.invalidate()
-            UIApplication.shared.isNetworkActivityIndicatorVisible = false
         }
     }
     
@@ -338,10 +337,32 @@ class SkillMotionPlayerViewController: UIViewController {
         
         progressControl.isUserInteractionEnabled = false
         
-        UIApplication.shared.isNetworkActivityIndicatorVisible = true
-        
-        let jsonFilePath = String(format: "motions/%@/%@/%@_%@.json", characterCode, skillCode, characterCode, skillCode)
-        donwloadManager.downloadJSONObjectWithFileAtRelativePath(jsonFilePath)
+        let downloader = SkillMotionDownloader(characterCode: characterCode, skillCode: skillCode)
+        subscription = downloader.downloadPublisher().receive(on: RunLoop.main).sink(receiveCompletion: { (completion) in
+            switch completion {
+            case .finished:
+                self.downloadProgressView.isHidden = true
+                self.progressControl.isUserInteractionEnabled = true
+                self.update()
+                self.isPreparedToPlay = true
+            case .failure(let error):
+                let alert = UIAlertController(title: "无法连接到服务器", message: error.localizedDescription, preferredStyle: .alert)
+                alert.addAction(UIAlertAction(title: "取消", style: .cancel, handler: nil))
+                alert.addAction(UIAlertAction(title: "确定", style: .default, handler: { [unowned self] action in
+                    self.dismiss(action)
+                }))
+                alert.addAction(UIAlertAction(title: "重试", style: .default, handler: { [unowned self] _ in
+                    self.prepareToPlay()
+                }))
+                self.present(alert, animated: true, completion: nil)
+            }
+        }, receiveValue: { (value) in
+            self.currentFrameLabel.text = "000"
+            self.totalFrameLabel.text = String(format: "%03d", value.motionInfo.frames.count)
+            self.progressControl.maximumValue = Float(value.motionInfo.frames.count - 1)
+            self.downloadProgressView.setProgress(Float(value.progress.fractionCompleted), animated: true)
+        })
+        self.downloader = downloader
     }
     
     func play() {
@@ -455,73 +476,5 @@ extension SkillMotionPlayerViewController: UITextFieldDelegate {
 extension SkillMotionPlayerViewController: UIPopoverPresentationControllerDelegate {
     func popoverPresentationControllerDidDismissPopover(_ popoverPresentationController: UIPopoverPresentationController) {
         update()
-    }
-}
-
-extension SkillMotionPlayerViewController: DownloadManagerDelegate {
-    func downloadManager(_ downloadManager: DownloadManager, didFinishDownloadingJSONObject jsonObject: Any, atRelativePath relativePath: String) {
-        framesInfo = jsonObject as! NSDictionary
-        numberOfFrames = framesInfo.count
-        
-        currentFrameLabel.text = "000"
-        totalFrameLabel.text = String(format: "%03d", numberOfFrames - 1)
-        progressControl.maximumValue = Float(numberOfFrames - 1)
-        
-        for i in 0..<numberOfFrames {
-            let imageFilePath = String(format: "motions/%@/%@/%@_%@_%03d.png", characterCode, skillCode, characterCode, skillCode, i)
-            downloadManager.downloadImageWithFileAtRelativePath(imageFilePath)
-        }
-    }
-    
-    func downloadManager(_ downloadManager: DownloadManager, didFailToDownloadJSONObjectAtRelativePath relativePath: String) {
-        UIApplication.shared.isNetworkActivityIndicatorVisible = false
-        
-        let alert = UIAlertController(title: "无法连接到服务器", message: nil, preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: "取消", style: .cancel, handler: nil))
-        alert.addAction(UIAlertAction(title: "确定", style: .default, handler: { [unowned self] action in
-            self.dismiss(action)
-        }))
-        alert.addAction(UIAlertAction(title: "重试", style: .default, handler: { [unowned self] _ in
-            self.prepareToPlay()
-        }))
-        present(alert, animated: true, completion: nil)
-    }
-    
-    func downloadManager(_ downloadManager: DownloadManager, didFinishDownloadingImage image: UIImage, atRelativePath relativePath: String) {
-        frameImages[relativePath] = image
-        let numberOfImagesDownloaded = frameImages.count
-        
-        downloadProgressView.setProgress(Float(numberOfImagesDownloaded) / Float(numberOfFrames), animated: true)
-        
-        if numberOfImagesDownloaded == numberOfFrames {
-            UIApplication.shared.isNetworkActivityIndicatorVisible = false
-            
-            downloadProgressView.isHidden = true
-            
-            progressControl.isUserInteractionEnabled = true
-            
-            update()
-            
-            isPreparedToPlay = true
-        }
-    }
-    
-    func downloadManager(_ downloadManager: DownloadManager, didFailToDownloadImageAtRelativePath relativePath: String) {
-        frameImages[relativePath] = NSNull()
-        let numberOfImagesDownloaded = frameImages.count
-        
-        downloadProgressView.setProgress(Float(numberOfImagesDownloaded) / Float(numberOfFrames), animated: true)
-        
-        if numberOfImagesDownloaded == numberOfFrames {
-            UIApplication.shared.isNetworkActivityIndicatorVisible = false
-            
-            downloadProgressView.isHidden = true
-            
-            progressControl.isUserInteractionEnabled = true
-            
-            update()
-            
-            isPreparedToPlay = true
-        }
     }
 }
