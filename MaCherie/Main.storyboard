@@ -617,14 +617,14 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Zlh-KH-VNo">
                                 <rect key="frame" x="0.0" y="678" width="375" height="100"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ufq-PB-BIe">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ufq-PB-BIe">
                                         <rect key="frame" x="256.66666666666669" y="32" width="72" height="36"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="72" id="5em-EY-0bI"/>
                                             <constraint firstAttribute="height" constant="36" id="gdG-JP-el7"/>
                                         </constraints>
-                                        <state key="normal" title="前进">
-                                            <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" image="forward" catalog="system">
+                                            <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="32"/>
                                         </state>
                                         <connections>
                                             <action selector="seekingForwardButtonTouchDown:" destination="LFl-cU-IOS" eventType="touchDown" id="oDH-Bc-hho"/>
@@ -633,26 +633,26 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MT0-uQ-luf">
-                                        <rect key="frame" x="138.66666666666666" y="32" width="98" height="36"/>
+                                        <rect key="frame" x="138.66666666666666" y="18" width="98" height="64"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="36" id="rOX-Ja-fKT"/>
+                                            <constraint firstAttribute="height" constant="64" id="rOX-Ja-fKT"/>
                                             <constraint firstAttribute="width" constant="98" id="zqm-Wz-GNp"/>
                                         </constraints>
-                                        <state key="normal" title="播放 / 暂停">
-                                            <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" image="play" catalog="system">
+                                            <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="48"/>
                                         </state>
                                         <connections>
                                             <action selector="playOrPause:" destination="LFl-cU-IOS" eventType="touchUpInside" id="otQ-JD-5Ah"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7f9-Bl-C3X">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7f9-Bl-C3X">
                                         <rect key="frame" x="46.666666666666657" y="32" width="72" height="36"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="72" id="JlB-8n-WO0"/>
                                             <constraint firstAttribute="height" constant="36" id="lF0-qK-CeT"/>
                                         </constraints>
-                                        <state key="normal" title="后退">
-                                            <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" image="backward" catalog="system">
+                                            <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="32"/>
                                         </state>
                                         <connections>
                                             <action selector="seekingBackwardButtonTouchDown:" destination="LFl-cU-IOS" eventType="touchDown" id="lo0-DH-14f"/>
@@ -737,7 +737,12 @@
             <point key="canvasLocation" x="1148" y="325.1231527093596"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="backward" catalog="system" width="64" height="38"/>
+        <image name="forward" catalog="system" width="64" height="38"/>
+        <image name="play" catalog="system" width="60" height="64"/>
+    </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="m87-1a-yA8"/>
+        <segue reference="2VS-Ld-HJI"/>
     </inferredMetricsTieBreakers>
 </document>

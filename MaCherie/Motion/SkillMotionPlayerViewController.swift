@@ -213,11 +213,13 @@ class SkillMotionPlayerViewController: UIViewController {
         }
     }
     
-    @IBAction func playOrPause(_ sender: Any) {
+    @IBAction func playOrPause(_ sender: UIButton) {
         if playbackState == .playing {
             pause()
+            sender.setImage(UIImage(systemName: "play"), for: .normal)
         } else {
             play()
+            sender.setImage(UIImage(systemName: "pause"), for: .normal)
         }
     }
     
