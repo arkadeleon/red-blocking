@@ -6,8 +6,8 @@
 //  Copyright © 2018 Leon & Vane. All rights reserved.
 //
 
-import UIKit
 import Combine
+import UIKit
 
 class MotionDownloader {
     typealias Output = (motionInfo: MotionInfo, progress: Progress)

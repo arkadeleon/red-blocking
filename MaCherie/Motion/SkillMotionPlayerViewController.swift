@@ -54,13 +54,13 @@ class SkillMotionPlayerViewController: UIViewController {
     
     private(set) var playbackState: SkillMotionPlaybackState = .stopped
     private(set) var isPreparedToPlay = false
-    private(set) var numberOfFrames = 0
+    private(set) var totalFrames = 0
     private(set) var currentFrame = 0
-    private(set) var currentFramesPerSecond = 0
+    private(set) var currentFPS = 0
     
     private var playTimer: Timer?
-    private var seekingForwardTimer: Timer?
-    private var seekingBackwardTimer: Timer?
+    private var seekForwardTimer: Timer?
+    private var seekBackwardTimer: Timer?
     
     private var observer: NSObjectProtocol!
     
@@ -187,8 +187,8 @@ class SkillMotionPlayerViewController: UIViewController {
         
         dismiss(animated: true) { [unowned self] in
             self.playTimer?.invalidate()
-            self.seekingForwardTimer?.invalidate()
-            self.seekingBackwardTimer?.invalidate()
+            self.seekForwardTimer?.invalidate()
+            self.seekBackwardTimer?.invalidate()
         }
     }
     
@@ -209,17 +209,17 @@ class SkillMotionPlayerViewController: UIViewController {
     }
     
     @IBAction func fpsChanged(_ sender: Any) {
-        currentFramesPerSecond = fpsTextField.text.flatMap { Int($0) } ?? 0
-        currentFramesPerSecond = max(currentFramesPerSecond, 0)
-        currentFramesPerSecond = min(currentFramesPerSecond, 60)
+        currentFPS = fpsTextField.text.flatMap { Int($0) } ?? 0
+        currentFPS = max(currentFPS, 0)
+        currentFPS = min(currentFPS, 60)
         
-        UserDefaults.standard.set(currentFramesPerSecond, forKey: PreferredFramesPerSecondKey)
-        fpsTextField.text = String(currentFramesPerSecond)
+        UserDefaults.standard.set(currentFPS, forKey: PreferredFramesPerSecondKey)
+        fpsTextField.text = String(currentFPS)
         
         if playbackState == .playing {
             playTimer?.invalidate()
-            playTimer = Timer.scheduledTimer(withTimeInterval: 1 / Double(currentFramesPerSecond), repeats: true) { [unowned self] _ in
-                self.currentFrame = (self.currentFrame + 1) % self.numberOfFrames
+            playTimer = Timer.scheduledTimer(withTimeInterval: 1 / Double(currentFPS), repeats: true) { [unowned self] _ in
+                self.currentFrame = (self.currentFrame + 1) % self.totalFrames
                 self.update()
             }
         }
@@ -332,7 +332,7 @@ class SkillMotionPlayerViewController: UIViewController {
         
         playerLayer.motionFrame = motionInfo.frames[currentFrame]
         currentFrameLabel.text = String(format: "%03d", currentFrame)
-        totalFrameLabel.text = String(format: "%03d", numberOfFrames - 1)
+        totalFrameLabel.text = String(format: "%03d", totalFrames - 1)
         progressControl.value = Float(currentFrame)
     }
     
@@ -344,8 +344,8 @@ class SkillMotionPlayerViewController: UIViewController {
         downloadProgressView.progress = 0
         
         currentFrame = 0
-        currentFramesPerSecond = UserDefaults.standard.integer(forKey: PreferredFramesPerSecondKey)
-        fpsTextField.text = String(currentFramesPerSecond)
+        currentFPS = UserDefaults.standard.integer(forKey: PreferredFramesPerSecondKey)
+        fpsTextField.text = String(currentFPS)
         
         progressControl.isUserInteractionEnabled = false
         
@@ -370,7 +370,7 @@ class SkillMotionPlayerViewController: UIViewController {
             }
         }, receiveValue: { (value) in
             self.motionInfo = value.motionInfo
-            self.numberOfFrames = value.motionInfo.frames.count
+            self.totalFrames = value.motionInfo.frames.count
             
             self.currentFrameLabel.text = "000"
             self.totalFrameLabel.text = String(format: "%03d", value.motionInfo.frames.count)
@@ -385,12 +385,12 @@ class SkillMotionPlayerViewController: UIViewController {
         if isPreparedToPlay {
             playbackState = .playing
             
-            currentFrame = (currentFrame + 1) % numberOfFrames
+            currentFrame = (currentFrame + 1) % totalFrames
             update()
             
             if playTimer == nil {
-                playTimer = Timer.scheduledTimer(withTimeInterval: 1 / Double(currentFramesPerSecond), repeats: true) { [unowned self] _ in
-                    self.currentFrame = (self.currentFrame + 1) % self.numberOfFrames
+                playTimer = Timer.scheduledTimer(withTimeInterval: 1 / Double(currentFPS), repeats: true) { [unowned self] _ in
+                    self.currentFrame = (self.currentFrame + 1) % self.totalFrames
                     self.update()
                 }
             }
@@ -424,17 +424,17 @@ class SkillMotionPlayerViewController: UIViewController {
             playTimer?.invalidate()
             playTimer = nil
             
-            currentFrame = (currentFrame + 1) % numberOfFrames
+            currentFrame = (currentFrame + 1) % totalFrames
             update()
             
             DispatchQueue.main.asyncAfter(deadline: .now() + 0.8) { [unowned self] in
                 if self.playbackState == .seekingForward {
-                    self.currentFrame = (self.currentFrame + 1) % self.numberOfFrames
+                    self.currentFrame = (self.currentFrame + 1) % self.totalFrames
                     self.update()
                     
-                    if self.seekingForwardTimer == nil {
-                        self.seekingForwardTimer = Timer.scheduledTimer(withTimeInterval: 1 / Double(self.currentFramesPerSecond), repeats: true) { _ in
-                            self.currentFrame = (self.currentFrame + 1) % self.numberOfFrames
+                    if self.seekForwardTimer == nil {
+                        self.seekForwardTimer = Timer.scheduledTimer(withTimeInterval: 1 / Double(self.currentFPS), repeats: true) { _ in
+                            self.currentFrame = (self.currentFrame + 1) % self.totalFrames
                             self.update()
                         }
                     }
@@ -450,17 +450,17 @@ class SkillMotionPlayerViewController: UIViewController {
             playTimer?.invalidate()
             playTimer = nil
             
-            currentFrame = (currentFrame - 1 + numberOfFrames) % numberOfFrames
+            currentFrame = (currentFrame - 1 + totalFrames) % totalFrames
             update()
             
             DispatchQueue.main.asyncAfter(deadline: .now() + 0.8) { [unowned self] in
                 if self.playbackState == .seekingBackward {
-                    self.currentFrame = (self.currentFrame - 1 + self.numberOfFrames) % self.numberOfFrames
+                    self.currentFrame = (self.currentFrame - 1 + self.totalFrames) % self.totalFrames
                     self.update()
                     
-                    if self.seekingBackwardTimer == nil {
-                        self.seekingBackwardTimer = Timer.scheduledTimer(withTimeInterval: 1 / Double(self.currentFramesPerSecond), repeats: true) { _ in
-                            self.currentFrame = (self.currentFrame - 1 + self.numberOfFrames) % self.numberOfFrames
+                    if self.seekBackwardTimer == nil {
+                        self.seekBackwardTimer = Timer.scheduledTimer(withTimeInterval: 1 / Double(self.currentFPS), repeats: true) { _ in
+                            self.currentFrame = (self.currentFrame - 1 + self.totalFrames) % self.totalFrames
                             self.update()
                         }
                     }
@@ -473,11 +473,11 @@ class SkillMotionPlayerViewController: UIViewController {
         if isPreparedToPlay {
             playbackState = .paused
             
-            seekingForwardTimer?.invalidate()
-            seekingForwardTimer = nil
+            seekForwardTimer?.invalidate()
+            seekForwardTimer = nil
             
-            seekingBackwardTimer?.invalidate()
-            seekingBackwardTimer = nil
+            seekBackwardTimer?.invalidate()
+            seekBackwardTimer = nil
         }
     }
 }
