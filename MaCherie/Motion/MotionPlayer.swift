@@ -21,14 +21,24 @@ extension MotionPlayer {
     }
 }
 
-class MotionPlayer {
+class MotionPlayer: ObservableObject {
     var motionInfo: MotionInfo
     
-    var currentFPS = UserDefaults.standard.integer(forKey: PreferredFramesPerSecondKey)
+    var currentFPS = UserDefaults.standard.integer(forKey: PreferredFramesPerSecondKey) {
+        didSet {
+            UserDefaults.standard.set(currentFPS, forKey: PreferredFramesPerSecondKey)
+            
+            if state == .playing {
+                playTimer?.invalidate()
+                playTimer = Timer.scheduledTimer(withTimeInterval: 1 / Double(currentFPS), repeats: true) { [unowned self] _ in
+                    self.currentFrame = (self.currentFrame + 1) % self.totalFrames
+                }
+            }
+        }
+    }
     
-    private var currentFrame = 0
+    @Published private(set) var currentFrame = 0
     private var totalFrames: Int { motionInfo.frames.count }
-    @Published var currentFrameInfo: MotionInfo.Frame?
     
     private(set) var state: State = .stopped
     

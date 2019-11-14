@@ -9,15 +9,6 @@
 import UIKit
 import Combine
 
-enum SkillMotionPlaybackState {
-    case stopped
-    case playing
-    case paused
-    case interrupted
-    case seekingForward
-    case seekingBackward
-}
-
 @objc protocol SkillMotionPlayerViewControllerDelegate {
     @objc optional func skillMotionPlayerViewControllerWillDismiss(_ skillMotionPlayerViewController: SkillMotionPlayerViewController)
 }
@@ -52,21 +43,15 @@ class SkillMotionPlayerViewController: UIViewController {
     var characterCode = ""
     var skillCode = ""
     
-    private(set) var playbackState: SkillMotionPlaybackState = .stopped
-    private(set) var isPreparedToPlay = false
-    private(set) var totalFrames = 0
-    private(set) var currentFrame = 0
-    private(set) var currentFPS = 0
-    
-    private var playTimer: Timer?
-    private var seekForwardTimer: Timer?
-    private var seekBackwardTimer: Timer?
-    
     private var observer: NSObjectProtocol!
     
     private var downloader: MotionDownloader?
     private var motionInfo: MotionInfo?
-    private var subscription: AnyCancellable?
+    
+    private var player: MotionPlayer?
+    
+    private var downloadSubscription: AnyCancellable?
+    private var playSubscription: AnyCancellable?
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
@@ -148,30 +133,7 @@ class SkillMotionPlayerViewController: UIViewController {
             view.layer.cornerRadius = 5
         }
 
-        prepareToPlay()
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        
-        if isPreparedToPlay {
-            update()
-        }
-    }
-    
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        
-        if isPreparedToPlay && playbackState == .playing {
-            play()
-        }
-    }
-    
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(animated)
-        
-        playTimer?.invalidate()
-        playTimer = nil
+        prepareToDownload()
     }
     
     override func viewDidLayoutSubviews() {
@@ -184,71 +146,45 @@ class SkillMotionPlayerViewController: UIViewController {
     
     @IBAction func dismiss(_ sender: Any) {
         delegate?.skillMotionPlayerViewControllerWillDismiss?(self)
-        
-        dismiss(animated: true) { [unowned self] in
-            self.playTimer?.invalidate()
-            self.seekForwardTimer?.invalidate()
-            self.seekBackwardTimer?.invalidate()
-        }
     }
     
     @IBAction func progressControlDown(_ sender: Any) {
-        playTimer?.invalidate()
-        playTimer = nil
+        player?.beginSeeking()
     }
     
     @IBAction func progressControlUp(_ sender: Any) {
-        if playbackState == .playing {
-            play()
-        }
+        player?.endSeeking()
     }
     
     @IBAction func progressControlSlided(_ sender: Any) {
-        currentFrame = Int(progressControl.value)
-        update()
+        let frame = Int(progressControl.value)
+        player?.seek(to: frame)
     }
     
     @IBAction func fpsChanged(_ sender: Any) {
-        currentFPS = fpsTextField.text.flatMap { Int($0) } ?? 0
+        var currentFPS = fpsTextField.text.flatMap { Int($0) } ?? 0
         currentFPS = max(currentFPS, 0)
         currentFPS = min(currentFPS, 60)
-        
-        UserDefaults.standard.set(currentFPS, forKey: PreferredFramesPerSecondKey)
         fpsTextField.text = String(currentFPS)
-        
-        if playbackState == .playing {
-            playTimer?.invalidate()
-            playTimer = Timer.scheduledTimer(withTimeInterval: 1 / Double(currentFPS), repeats: true) { [unowned self] _ in
-                self.currentFrame = (self.currentFrame + 1) % self.totalFrames
-                self.update()
-            }
-        }
+        player?.currentFPS = currentFPS
     }
     
     @IBAction func playOrPause(_ sender: UIButton) {
-        if playbackState == .playing {
-            pause()
+        if player?.state == .playing {
+            player?.pause()
             sender.setImage(UIImage(systemName: "play"), for: .normal)
         } else {
-            play()
+            player?.play()
             sender.setImage(UIImage(systemName: "pause"), for: .normal)
         }
     }
     
-    @IBAction func seekingForwardButtonTouchDown(_ sender: Any) {
-        beginSeekingForward()
+    @IBAction func forwardButtonAction(_ sender: Any) {
+        player?.forward()
     }
     
-    @IBAction func seekingForwardButtonTouchUp(_ sender: Any) {
-        endSeeking()
-    }
-    
-    @IBAction func seekingBackwardButtonTouchDown(_ sender: Any) {
-        beginSeekingBackward()
-    }
-    
-    @IBAction func seekingBackwardButtonTouchUp(_ sender: Any) {
-        endSeeking()
+    @IBAction func backwardButtonAction(_ sender: Any) {
+        player?.backward()
     }
     
     @IBAction func togglePlayer1PassiveHitboxes(_ checkbox: UIButton) {
@@ -323,40 +259,20 @@ class SkillMotionPlayerViewController: UIViewController {
         UserDefaults.standard.set(!checkbox.isSelected, forKey: Player2PushHitboxHiddenKey)
     }
     
-    // MARK: - Update
-    
-    func update() {
-        guard let motionInfo = motionInfo else {
-            return
-        }
-        
-        playerLayer.motionFrame = motionInfo.frames[currentFrame]
-        currentFrameLabel.text = String(format: "%03d", currentFrame)
-        totalFrameLabel.text = String(format: "%03d", totalFrames - 1)
-        progressControl.value = Float(currentFrame)
-    }
-    
     // MARK: - Playback
     
-    func prepareToPlay() {
-        isPreparedToPlay = false
-        
+    private func prepareToDownload() {
         downloadProgressView.progress = 0
-        
-        currentFrame = 0
-        currentFPS = UserDefaults.standard.integer(forKey: PreferredFramesPerSecondKey)
-        fpsTextField.text = String(currentFPS)
         
         progressControl.isUserInteractionEnabled = false
         
         let downloader = MotionDownloader(characterCode: characterCode, skillCode: skillCode)
-        subscription = downloader.downloadPublisher().receive(on: RunLoop.main).sink(receiveCompletion: { (completion) in
+        downloadSubscription = downloader.downloadPublisher().receive(on: RunLoop.main).sink(receiveCompletion: { (completion) in
             switch completion {
             case .finished:
                 self.downloadProgressView.isHidden = true
                 self.progressControl.isUserInteractionEnabled = true
-                self.update()
-                self.isPreparedToPlay = true
+                self.prepareToPlay()
             case .failure(let error):
                 let alert = UIAlertController(title: "无法连接到服务器", message: error.localizedDescription, preferredStyle: .alert)
                 alert.addAction(UIAlertAction(title: "取消", style: .cancel, handler: nil))
@@ -364,13 +280,12 @@ class SkillMotionPlayerViewController: UIViewController {
                     self.dismiss(action)
                 }))
                 alert.addAction(UIAlertAction(title: "重试", style: .default, handler: { [unowned self] _ in
-                    self.prepareToPlay()
+                    self.prepareToDownload()
                 }))
                 self.present(alert, animated: true, completion: nil)
             }
         }, receiveValue: { (value) in
             self.motionInfo = value.motionInfo
-            self.totalFrames = value.motionInfo.frames.count
             
             self.currentFrameLabel.text = "000"
             self.totalFrameLabel.text = String(format: "%03d", value.motionInfo.frames.count)
@@ -381,104 +296,19 @@ class SkillMotionPlayerViewController: UIViewController {
         self.downloader = downloader
     }
     
-    func play() {
-        if isPreparedToPlay {
-            playbackState = .playing
-            
-            currentFrame = (currentFrame + 1) % totalFrames
-            update()
-            
-            if playTimer == nil {
-                playTimer = Timer.scheduledTimer(withTimeInterval: 1 / Double(currentFPS), repeats: true) { [unowned self] _ in
-                    self.currentFrame = (self.currentFrame + 1) % self.totalFrames
-                    self.update()
-                }
-            }
+    private func prepareToPlay() {
+        guard let motionInfo = motionInfo else {
+            return
         }
-    }
-    
-    func pause() {
-        if isPreparedToPlay {
-            playbackState = .paused
-            
-            playTimer?.invalidate()
-            playTimer = nil
-        }
-    }
-    
-    func stop() {
-        if isPreparedToPlay {
-            playbackState = .stopped
-            
-            playTimer?.invalidate()
-            playTimer = nil
-            
-            currentFrame = 0
-        }
-    }
-    
-    func beginSeekingForward() {
-        if isPreparedToPlay {
-            playbackState = .seekingForward
-            
-            playTimer?.invalidate()
-            playTimer = nil
-            
-            currentFrame = (currentFrame + 1) % totalFrames
-            update()
-            
-            DispatchQueue.main.asyncAfter(deadline: .now() + 0.8) { [unowned self] in
-                if self.playbackState == .seekingForward {
-                    self.currentFrame = (self.currentFrame + 1) % self.totalFrames
-                    self.update()
-                    
-                    if self.seekForwardTimer == nil {
-                        self.seekForwardTimer = Timer.scheduledTimer(withTimeInterval: 1 / Double(self.currentFPS), repeats: true) { _ in
-                            self.currentFrame = (self.currentFrame + 1) % self.totalFrames
-                            self.update()
-                        }
-                    }
-                }
-            }
-        }
-    }
-    
-    func beginSeekingBackward() {
-        if isPreparedToPlay {
-            playbackState = .seekingBackward
-            
-            playTimer?.invalidate()
-            playTimer = nil
-            
-            currentFrame = (currentFrame - 1 + totalFrames) % totalFrames
-            update()
-            
-            DispatchQueue.main.asyncAfter(deadline: .now() + 0.8) { [unowned self] in
-                if self.playbackState == .seekingBackward {
-                    self.currentFrame = (self.currentFrame - 1 + self.totalFrames) % self.totalFrames
-                    self.update()
-                    
-                    if self.seekBackwardTimer == nil {
-                        self.seekBackwardTimer = Timer.scheduledTimer(withTimeInterval: 1 / Double(self.currentFPS), repeats: true) { _ in
-                            self.currentFrame = (self.currentFrame - 1 + self.totalFrames) % self.totalFrames
-                            self.update()
-                        }
-                    }
-                }
-            }
-        }
-    }
-    
-    func endSeeking() {
-        if isPreparedToPlay {
-            playbackState = .paused
-            
-            seekForwardTimer?.invalidate()
-            seekForwardTimer = nil
-            
-            seekBackwardTimer?.invalidate()
-            seekBackwardTimer = nil
-        }
+        
+        let player = MotionPlayer(motionInfo: motionInfo)
+        playSubscription = player.objectWillChange.sink(receiveValue: { _ in
+            let currentFrame = player.currentFrame
+            self.playerLayer.motionFrame = motionInfo.frames[currentFrame]
+            self.currentFrameLabel.text = String(format: "%03d", currentFrame)
+            self.progressControl.value = Float(currentFrame)
+        })
+        self.player = player
     }
 }
 

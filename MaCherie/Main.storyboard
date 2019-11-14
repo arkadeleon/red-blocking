@@ -627,9 +627,7 @@
                                             <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="32"/>
                                         </state>
                                         <connections>
-                                            <action selector="seekingForwardButtonTouchDown:" destination="LFl-cU-IOS" eventType="touchDown" id="oDH-Bc-hho"/>
-                                            <action selector="seekingForwardButtonTouchUp:" destination="LFl-cU-IOS" eventType="touchUpOutside" id="WSI-Dp-SvB"/>
-                                            <action selector="seekingForwardButtonTouchUp:" destination="LFl-cU-IOS" eventType="touchUpInside" id="jaL-qa-B95"/>
+                                            <action selector="forwardButtonAction:" destination="LFl-cU-IOS" eventType="touchUpInside" id="lcY-1L-rHr"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MT0-uQ-luf">
@@ -655,9 +653,7 @@
                                             <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="32"/>
                                         </state>
                                         <connections>
-                                            <action selector="seekingBackwardButtonTouchDown:" destination="LFl-cU-IOS" eventType="touchDown" id="lo0-DH-14f"/>
-                                            <action selector="seekingBackwardButtonTouchUp:" destination="LFl-cU-IOS" eventType="touchUpOutside" id="7mG-Gt-v8n"/>
-                                            <action selector="seekingBackwardButtonTouchUp:" destination="LFl-cU-IOS" eventType="touchUpInside" id="AG5-kF-2iV"/>
+                                            <action selector="backwardButtonAction:" destination="LFl-cU-IOS" eventType="touchUpInside" id="ZMB-me-loW"/>
                                         </connections>
                                     </button>
                                 </subviews>
