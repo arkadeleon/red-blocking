@@ -1,51 +1,63 @@
 //
-//  SkillMotionPlayer.swift
+//  MotionPlayerLayer.swift
 //  MaCherie
 //
 //  Created by Leon Li on 2018/6/14.
 //  Copyright © 2018 Leon & Vane. All rights reserved.
 //
 
+import QuartzCore
 import UIKit
 
-class SkillMotionPlayer: UIView {
+class MotionPlayerLayer: CALayer {
     let frameWidth: CGFloat = 384
     let frameHeight: CGFloat = 224
     
     let axeLength: CGFloat = 7
     let axeColor = UIColor.white
     
-    let passiveHitboxColor = UIColor(red:0, green:0, blue:1, alpha:1)
-    let otherVulnerabilityHitboxColor = UIColor(red:0, green:0.5, blue:1, alpha:1)
-    let activeHitboxColor = UIColor(red:1, green:0, blue:0, alpha:1)
-    let throwHitboxColor = UIColor(red:1, green:0.5, blue:0, alpha:1)
-    let throwableHitboxColor = UIColor(red:0, green:1, blue:0, alpha:1)
-    let pushHitboxColor = UIColor(red:0.5, green:0, blue:1, alpha:1)
+    let passiveHitboxColor = UIColor(rgb: UserDefaults.standard.integer(forKey: PreferredPassiveHitboxRGBColorKey), alpha:1)
+    let otherVulnerabilityHitboxColor = UIColor(rgb: UserDefaults.standard.integer(forKey: PreferredOtherVulnerabilityHitboxRGBColorKey), alpha:1)
+    let activeHitboxColor = UIColor(rgb: UserDefaults.standard.integer(forKey: PreferredActiveHitboxRGBColorKey), alpha:1)
+    let throwHitboxColor = UIColor(rgb: UserDefaults.standard.integer(forKey: PreferredThrowHitboxRGBColorKey), alpha:1)
+    let throwableHitboxColor = UIColor(rgb: UserDefaults.standard.integer(forKey: PreferredThrowableHitboxRGBColorKey), alpha:1)
+    let pushHitboxColor = UIColor(rgb: UserDefaults.standard.integer(forKey: PreferredPushHitboxRGBColorKey), alpha:1)
     
-    var motionFrame: MotionInfo.Frame?
-    
-    func drawFrame(_ frame: MotionInfo.Frame) {
-        self.motionFrame = frame
-        setNeedsDisplay()
+    var motionFrame: MotionInfo.Frame? {
+        didSet {
+            setNeedsDisplay()
+        }
     }
     
-    override func draw(_ rect: CGRect) {
+    override init() {
+        super.init()
+        needsDisplayOnBoundsChange = true
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    override func draw(in ctx: CGContext) {
         guard let frame = motionFrame else {
             return
         }
         
-        frame.image?.draw(in: rect)
+        let boundingBox = ctx.boundingBoxOfClipPath
         
-        let ctx = UIGraphicsGetCurrentContext()!
+        if let image = frame.image?.cgImage {
+            ctx.saveGState()
+            ctx.translateBy(x: 0, y: boundingBox.height)
+            ctx.scaleBy(x: 1, y: -1)
+            ctx.draw(image, in: boundingBox)
+            ctx.restoreGState()
+        }
         
-        ctx.saveGState()
-        let sx = rect.width / frameWidth
-        let sy = rect.height / frameHeight
+        let sx = boundingBox.width / frameWidth
+        let sy = boundingBox.height / frameHeight
         ctx.scaleBy(x: sx, y: sy)
         
-        let userDefaults = UserDefaults.standard
-        
-        if userDefaults.bool(forKey: Player1PassiveHitboxHiddenKey) {
+        if !UserDefaults.standard.bool(forKey: Player1PassiveHitboxHiddenKey) {
             drawHitboxes(
                 hitboxes: frame.player1.hitboxes.passive,
                 hitboxesToDraw: frame.player1.hitboxes.passiveToDraw,
@@ -54,7 +66,7 @@ class SkillMotionPlayer: UIView {
             )
         }
         
-        if userDefaults.bool(forKey: Player1OtherVulnerabilityHitboxHiddenKey) {
+        if !UserDefaults.standard.bool(forKey: Player1OtherVulnerabilityHitboxHiddenKey) {
             drawHitboxes(
                 hitboxes: frame.player1.hitboxes.otherVulnerability,
                 hitboxesToDraw: frame.player1.hitboxes.otherVulnerabilityToDraw,
@@ -63,7 +75,7 @@ class SkillMotionPlayer: UIView {
             )
         }
         
-        if userDefaults.bool(forKey: Player1ActiveHitboxHiddenKey) {
+        if !UserDefaults.standard.bool(forKey: Player1ActiveHitboxHiddenKey) {
             drawHitboxes(
                 hitboxes: frame.player1.hitboxes.active,
                 hitboxesToDraw: frame.player1.hitboxes.activeToDraw,
@@ -72,7 +84,7 @@ class SkillMotionPlayer: UIView {
             )
         }
         
-        if userDefaults.bool(forKey: Player1ThrowHitboxHiddenKey) {
+        if !UserDefaults.standard.bool(forKey: Player1ThrowHitboxHiddenKey) {
             drawHitboxes(
                 hitboxes: frame.player1.hitboxes.throw,
                 hitboxesToDraw: frame.player1.hitboxes.throwToDraw,
@@ -81,7 +93,7 @@ class SkillMotionPlayer: UIView {
             )
         }
         
-        if userDefaults.bool(forKey: Player1ThrowableHitboxHiddenKey) {
+        if !UserDefaults.standard.bool(forKey: Player1ThrowableHitboxHiddenKey) {
             drawHitboxes(
                 hitboxes: frame.player1.hitboxes.throwable,
                 hitboxesToDraw: frame.player1.hitboxes.throwableToDraw,
@@ -90,7 +102,7 @@ class SkillMotionPlayer: UIView {
             )
         }
         
-        if userDefaults.bool(forKey: Player1PushHitboxHiddenKey) {
+        if !UserDefaults.standard.bool(forKey: Player1PushHitboxHiddenKey) {
             drawHitboxes(
                 hitboxes: frame.player1.hitboxes.push,
                 hitboxesToDraw: frame.player1.hitboxes.pushToDraw,
@@ -99,7 +111,7 @@ class SkillMotionPlayer: UIView {
             )
         }
         
-        if userDefaults.bool(forKey: Player2PassiveHitboxHiddenKey) {
+        if !UserDefaults.standard.bool(forKey: Player2PassiveHitboxHiddenKey) {
             drawHitboxes(
                 hitboxes: frame.player2.hitboxes.passive,
                 hitboxesToDraw: frame.player2.hitboxes.passiveToDraw,
@@ -108,7 +120,7 @@ class SkillMotionPlayer: UIView {
             )
         }
         
-        if userDefaults.bool(forKey: Player2OtherVulnerabilityHitboxHiddenKey) {
+        if !UserDefaults.standard.bool(forKey: Player2OtherVulnerabilityHitboxHiddenKey) {
             drawHitboxes(
                 hitboxes: frame.player2.hitboxes.otherVulnerability,
                 hitboxesToDraw: frame.player2.hitboxes.otherVulnerabilityToDraw,
@@ -117,7 +129,7 @@ class SkillMotionPlayer: UIView {
             )
         }
         
-        if userDefaults.bool(forKey: Player2ActiveHitboxHiddenKey) {
+        if !UserDefaults.standard.bool(forKey: Player2ActiveHitboxHiddenKey) {
             drawHitboxes(
                 hitboxes: frame.player2.hitboxes.active,
                 hitboxesToDraw: frame.player2.hitboxes.activeToDraw,
@@ -126,7 +138,7 @@ class SkillMotionPlayer: UIView {
             )
         }
         
-        if userDefaults.bool(forKey: Player2ThrowHitboxHiddenKey) {
+        if !UserDefaults.standard.bool(forKey: Player2ThrowHitboxHiddenKey) {
             drawHitboxes(
                 hitboxes: frame.player2.hitboxes.throw,
                 hitboxesToDraw: frame.player2.hitboxes.throwToDraw,
@@ -135,7 +147,7 @@ class SkillMotionPlayer: UIView {
             )
         }
         
-        if userDefaults.bool(forKey: Player2ThrowableHitboxHiddenKey) {
+        if !UserDefaults.standard.bool(forKey: Player2ThrowableHitboxHiddenKey) {
             drawHitboxes(
                 hitboxes: frame.player2.hitboxes.throwable,
                 hitboxesToDraw: frame.player2.hitboxes.throwableToDraw,
@@ -144,7 +156,7 @@ class SkillMotionPlayer: UIView {
             )
         }
         
-        if userDefaults.bool(forKey: Player2PushHitboxHiddenKey) {
+        if !UserDefaults.standard.bool(forKey: Player2PushHitboxHiddenKey) {
             drawHitboxes(
                 hitboxes: frame.player2.hitboxes.push,
                 hitboxesToDraw: frame.player2.hitboxes.pushToDraw,
@@ -152,8 +164,6 @@ class SkillMotionPlayer: UIView {
                 in: ctx
             )
         }
-        
-        ctx.restoreGState()
     }
     
     private func drawHitboxes(hitboxes: [String], hitboxesToDraw: [[Int]], with color: UIColor, in ctx: CGContext) {

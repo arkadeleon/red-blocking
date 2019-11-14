@@ -244,7 +244,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fgj-Wf-hR1">
                                 <rect key="frame" x="0.0" y="88" width="375" height="300.66666666666669"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dpZ-LB-ynZ" customClass="SkillMotionPlayer" customModule="MaCherie" customModuleProvider="target">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dpZ-LB-ynZ">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="218.66666666666666"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
@@ -713,7 +713,6 @@
                         <outlet property="currentFrameLabel" destination="4V0-rd-Vp1" id="Dcy-lS-otJ"/>
                         <outlet property="downloadProgressView" destination="aW8-Cc-2NM" id="liI-PY-QWF"/>
                         <outlet property="fpsTextField" destination="kCR-6O-yGz" id="VFq-zi-Htc"/>
-                        <outlet property="framesPlayer" destination="dpZ-LB-ynZ" id="ts3-Mt-fDW"/>
                         <outlet property="player1ActiveHitboxesCheckbox" destination="Wm1-6J-Svq" id="RXT-yn-08L"/>
                         <outlet property="player1HitboxesView" destination="ueo-RQ-vmw" id="R0i-eU-hSk"/>
                         <outlet property="player1OtherVulnerabilityHitboxesCheckbox" destination="L1Y-mC-efv" id="Q0T-If-vA7"/>
@@ -728,6 +727,7 @@
                         <outlet property="player2PushHitboxesCheckbox" destination="Vh5-se-O1O" id="diO-gp-lhs"/>
                         <outlet property="player2ThrowHitboxesCheckbox" destination="Ikn-gw-vu6" id="H17-Py-zRo"/>
                         <outlet property="player2ThrowableHitboxesCheckbox" destination="UIt-aC-kzA" id="gko-F0-wDr"/>
+                        <outlet property="playerView" destination="dpZ-LB-ynZ" id="ts3-Mt-fDW"/>
                         <outlet property="progressControl" destination="GNd-hD-Z2c" id="6jr-gd-Ukq"/>
                         <outlet property="totalFrameLabel" destination="UXO-zq-uWc" id="ywW-yd-vU7"/>
                     </connections>

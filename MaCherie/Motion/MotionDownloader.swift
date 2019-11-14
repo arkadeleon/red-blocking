@@ -1,5 +1,5 @@
 //
-//  SkillMotionDownloader.swift
+//  MotionDownloader.swift
 //  MaCherie
 //
 //  Created by Leon Li on 2018/6/14.
@@ -9,7 +9,7 @@
 import UIKit
 import Combine
 
-class SkillMotionDownloader {
+class MotionDownloader {
     typealias Output = (motionInfo: MotionInfo, progress: Progress)
     
     let characterCode: String

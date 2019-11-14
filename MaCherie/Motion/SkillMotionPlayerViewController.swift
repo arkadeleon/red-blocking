@@ -23,11 +23,13 @@ enum SkillMotionPlaybackState {
 }
 
 class SkillMotionPlayerViewController: UIViewController {
+    @IBOutlet var playerView: UIView!
+    private var playerLayer: MotionPlayerLayer!
+    
     @IBOutlet var downloadProgressView: UIProgressView!
     @IBOutlet var currentFrameLabel: UILabel!
     @IBOutlet var totalFrameLabel: UILabel!
     @IBOutlet var fpsTextField: UITextField!
-    @IBOutlet var framesPlayer: SkillMotionPlayer!
     @IBOutlet var progressControl: UISlider!
     
     @IBOutlet var player1HitboxesView: UIView!
@@ -62,7 +64,7 @@ class SkillMotionPlayerViewController: UIViewController {
     
     private var observer: NSObjectProtocol!
     
-    private var downloader: SkillMotionDownloader?
+    private var downloader: MotionDownloader?
     private var motionInfo: MotionInfo?
     private var subscription: AnyCancellable?
     
@@ -84,19 +86,23 @@ class SkillMotionPlayerViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        player1PassiveHitboxesCheckbox.isSelected = UserDefaults.standard.bool(forKey: Player1PassiveHitboxHiddenKey)
-        player1OtherVulnerabilityHitboxesCheckbox.isSelected = UserDefaults.standard.bool(forKey: Player1OtherVulnerabilityHitboxHiddenKey)
-        player1ActiveHitboxesCheckbox.isSelected = UserDefaults.standard.bool(forKey: Player1ActiveHitboxHiddenKey)
-        player1ThrowHitboxesCheckbox.isSelected = UserDefaults.standard.bool(forKey: Player1ThrowHitboxHiddenKey)
-        player1ThrowableHitboxesCheckbox.isSelected = UserDefaults.standard.bool(forKey: Player1ThrowableHitboxHiddenKey)
-        player1PushHitboxesCheckbox.isSelected = UserDefaults.standard.bool(forKey: Player1PushHitboxHiddenKey)
+        playerLayer = MotionPlayerLayer()
+        playerLayer.frame = playerView.bounds
+        playerView.layer.addSublayer(playerLayer)
         
-        player2PassiveHitboxesCheckbox.isSelected = UserDefaults.standard.bool(forKey: Player2PassiveHitboxHiddenKey)
-        player2OtherVulnerabilityHitboxesCheckbox.isSelected = UserDefaults.standard.bool(forKey: Player2OtherVulnerabilityHitboxHiddenKey)
-        player2ActiveHitboxesCheckbox.isSelected = UserDefaults.standard.bool(forKey: Player2ActiveHitboxHiddenKey)
-        player2ThrowHitboxesCheckbox.isSelected = UserDefaults.standard.bool(forKey: Player2ThrowHitboxHiddenKey)
-        player2ThrowableHitboxesCheckbox.isSelected = UserDefaults.standard.bool(forKey: Player2ThrowableHitboxHiddenKey)
-        player2PushHitboxesCheckbox.isSelected = UserDefaults.standard.bool(forKey: Player2PushHitboxHiddenKey)
+        player1PassiveHitboxesCheckbox.isSelected = !UserDefaults.standard.bool(forKey: Player1PassiveHitboxHiddenKey)
+        player1OtherVulnerabilityHitboxesCheckbox.isSelected = !UserDefaults.standard.bool(forKey: Player1OtherVulnerabilityHitboxHiddenKey)
+        player1ActiveHitboxesCheckbox.isSelected = !UserDefaults.standard.bool(forKey: Player1ActiveHitboxHiddenKey)
+        player1ThrowHitboxesCheckbox.isSelected = !UserDefaults.standard.bool(forKey: Player1ThrowHitboxHiddenKey)
+        player1ThrowableHitboxesCheckbox.isSelected = !UserDefaults.standard.bool(forKey: Player1ThrowableHitboxHiddenKey)
+        player1PushHitboxesCheckbox.isSelected = !UserDefaults.standard.bool(forKey: Player1PushHitboxHiddenKey)
+        
+        player2PassiveHitboxesCheckbox.isSelected = !UserDefaults.standard.bool(forKey: Player2PassiveHitboxHiddenKey)
+        player2OtherVulnerabilityHitboxesCheckbox.isSelected = !UserDefaults.standard.bool(forKey: Player2OtherVulnerabilityHitboxHiddenKey)
+        player2ActiveHitboxesCheckbox.isSelected = !UserDefaults.standard.bool(forKey: Player2ActiveHitboxHiddenKey)
+        player2ThrowHitboxesCheckbox.isSelected = !UserDefaults.standard.bool(forKey: Player2ThrowHitboxHiddenKey)
+        player2ThrowableHitboxesCheckbox.isSelected = !UserDefaults.standard.bool(forKey: Player2ThrowableHitboxHiddenKey)
+        player2PushHitboxesCheckbox.isSelected = !UserDefaults.standard.bool(forKey: Player2PushHitboxHiddenKey)
         
         player1PassiveHitboxesCheckbox.tintColor = UIColor(rgb: UserDefaults.standard.integer(forKey: PreferredPassiveHitboxRGBColorKey), alpha:1)
         player1OtherVulnerabilityHitboxesCheckbox.tintColor = UIColor(rgb: UserDefaults.standard.integer(forKey: PreferredOtherVulnerabilityHitboxRGBColorKey), alpha:1)
@@ -166,6 +172,12 @@ class SkillMotionPlayerViewController: UIViewController {
         
         playTimer?.invalidate()
         playTimer = nil
+    }
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        
+        playerLayer.frame = playerView.bounds
     }
     
     // MARK: - Action
@@ -242,73 +254,73 @@ class SkillMotionPlayerViewController: UIViewController {
     @IBAction func togglePlayer1PassiveHitboxes(_ checkbox: UIButton) {
         checkbox.isSelected = !checkbox.isSelected
         checkbox.backgroundColor = checkbox.isSelected ? checkbox.tintColor : .clear
-        UserDefaults.standard.set(checkbox.isSelected, forKey: Player1PassiveHitboxHiddenKey)
+        UserDefaults.standard.set(!checkbox.isSelected, forKey: Player1PassiveHitboxHiddenKey)
     }
     
     @IBAction func togglePlayer1OtherVulnerabilityHitboxes(_ checkbox: UIButton) {
         checkbox.isSelected = !checkbox.isSelected
         checkbox.backgroundColor = checkbox.isSelected ? checkbox.tintColor : .clear
-        UserDefaults.standard.set(checkbox.isSelected, forKey: Player1OtherVulnerabilityHitboxHiddenKey)
+        UserDefaults.standard.set(!checkbox.isSelected, forKey: Player1OtherVulnerabilityHitboxHiddenKey)
     }
     
     @IBAction func togglePlayer1ActiveHitboxes(_ checkbox: UIButton) {
         checkbox.isSelected = !checkbox.isSelected
         checkbox.backgroundColor = checkbox.isSelected ? checkbox.tintColor : .clear
-        UserDefaults.standard.set(checkbox.isSelected, forKey: Player1ActiveHitboxHiddenKey)
+        UserDefaults.standard.set(!checkbox.isSelected, forKey: Player1ActiveHitboxHiddenKey)
     }
     
     @IBAction func togglePlayer1ThrowHitboxes(_ checkbox: UIButton) {
         checkbox.isSelected = !checkbox.isSelected
         checkbox.backgroundColor = checkbox.isSelected ? checkbox.tintColor : .clear
-        UserDefaults.standard.set(checkbox.isSelected, forKey: Player1ThrowHitboxHiddenKey)
+        UserDefaults.standard.set(!checkbox.isSelected, forKey: Player1ThrowHitboxHiddenKey)
     }
     
     @IBAction func togglePlayer1ThrowableHitboxes(_ checkbox: UIButton) {
         checkbox.isSelected = !checkbox.isSelected
         checkbox.backgroundColor = checkbox.isSelected ? checkbox.tintColor : .clear
-        UserDefaults.standard.set(checkbox.isSelected, forKey: Player1ThrowableHitboxHiddenKey)
+        UserDefaults.standard.set(!checkbox.isSelected, forKey: Player1ThrowableHitboxHiddenKey)
     }
     
     @IBAction func togglePlayer1PushHitboxes(_ checkbox: UIButton) {
         checkbox.isSelected = !checkbox.isSelected
         checkbox.backgroundColor = checkbox.isSelected ? checkbox.tintColor : .clear
-        UserDefaults.standard.set(checkbox.isSelected, forKey: Player1PushHitboxHiddenKey)
+        UserDefaults.standard.set(!checkbox.isSelected, forKey: Player1PushHitboxHiddenKey)
     }
     
     @IBAction func togglePlayer2PassiveHitboxes(_ checkbox: UIButton) {
         checkbox.isSelected = !checkbox.isSelected
         checkbox.backgroundColor = checkbox.isSelected ? checkbox.tintColor : .clear
-        UserDefaults.standard.set(checkbox.isSelected, forKey: Player2PassiveHitboxHiddenKey)
+        UserDefaults.standard.set(!checkbox.isSelected, forKey: Player2PassiveHitboxHiddenKey)
     }
     
     @IBAction func togglePlayer2OtherVulnerabilityHitboxes(_ checkbox: UIButton) {
         checkbox.isSelected = !checkbox.isSelected
         checkbox.backgroundColor = checkbox.isSelected ? checkbox.tintColor : .clear
-        UserDefaults.standard.set(checkbox.isSelected, forKey: Player2OtherVulnerabilityHitboxHiddenKey)
+        UserDefaults.standard.set(!checkbox.isSelected, forKey: Player2OtherVulnerabilityHitboxHiddenKey)
     }
     
     @IBAction func togglePlayer2ActiveHitboxes(_ checkbox: UIButton) {
         checkbox.isSelected = !checkbox.isSelected
         checkbox.backgroundColor = checkbox.isSelected ? checkbox.tintColor : .clear
-        UserDefaults.standard.set(checkbox.isSelected, forKey: Player2ActiveHitboxHiddenKey)
+        UserDefaults.standard.set(!checkbox.isSelected, forKey: Player2ActiveHitboxHiddenKey)
     }
     
     @IBAction func togglePlayer2ThrowHitboxes(_ checkbox: UIButton) {
         checkbox.isSelected = !checkbox.isSelected
         checkbox.backgroundColor = checkbox.isSelected ? checkbox.tintColor : .clear
-        UserDefaults.standard.set(checkbox.isSelected, forKey: Player2ThrowHitboxHiddenKey)
+        UserDefaults.standard.set(!checkbox.isSelected, forKey: Player2ThrowHitboxHiddenKey)
     }
     
     @IBAction func togglePlayer2ThrowableHitboxes(_ checkbox: UIButton) {
         checkbox.isSelected = !checkbox.isSelected
         checkbox.backgroundColor = checkbox.isSelected ? checkbox.tintColor : .clear
-        UserDefaults.standard.set(checkbox.isSelected, forKey: Player2ThrowableHitboxHiddenKey)
+        UserDefaults.standard.set(!checkbox.isSelected, forKey: Player2ThrowableHitboxHiddenKey)
     }
     
     @IBAction func togglePlayer2PushHitboxes(_ checkbox: UIButton) {
         checkbox.isSelected = !checkbox.isSelected
         checkbox.backgroundColor = checkbox.isSelected ? checkbox.tintColor : .clear
-        UserDefaults.standard.set(checkbox.isSelected, forKey: Player2PushHitboxHiddenKey)
+        UserDefaults.standard.set(!checkbox.isSelected, forKey: Player2PushHitboxHiddenKey)
     }
     
     // MARK: - Update
@@ -318,9 +330,7 @@ class SkillMotionPlayerViewController: UIViewController {
             return
         }
         
-        let frame = motionInfo.frames[currentFrame]
-        
-        framesPlayer.drawFrame(frame)
+        playerLayer.motionFrame = motionInfo.frames[currentFrame]
         currentFrameLabel.text = String(format: "%03d", currentFrame)
         totalFrameLabel.text = String(format: "%03d", numberOfFrames - 1)
         progressControl.value = Float(currentFrame)
@@ -339,7 +349,7 @@ class SkillMotionPlayerViewController: UIViewController {
         
         progressControl.isUserInteractionEnabled = false
         
-        let downloader = SkillMotionDownloader(characterCode: characterCode, skillCode: skillCode)
+        let downloader = MotionDownloader(characterCode: characterCode, skillCode: skillCode)
         subscription = downloader.downloadPublisher().receive(on: RunLoop.main).sink(receiveCompletion: { (completion) in
             switch completion {
             case .finished:
