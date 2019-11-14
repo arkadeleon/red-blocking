@@ -8,24 +8,20 @@
 
 import UIKit
 
-let FRAME_WIDTH: CGFloat                    = 384
-let FRAME_HEIGHT: CGFloat                   = 224
-let AXE_LENGTH: CGFloat                     = 7
-let PASSIVE_HITBOX_FILL_COLOR               = UIColor(red:0.0, green:0.0, blue:1.0, alpha:0.3)
-let PASSIVE_HITBOX_STROKE_COLOR             = UIColor(red:0.0, green:0.0, blue:1.0, alpha:1.0)
-let OTHER_VULNERABILITY_HITBOX_FILL_COLOR   = UIColor(red:0.0, green:0.5, blue:1.0, alpha:0.3)
-let OTHER_VULNERABILITY_HITBOX_STROKE_COLOR = UIColor(red:0.0, green:0.5, blue:1.0, alpha:1.0)
-let ACTIVE_HITBOX_FILL_COLOR                = UIColor(red:1.0, green:0.0, blue:0.0, alpha:0.3)
-let ACTIVE_HITBOX_STROKE_COLOR              = UIColor(red:1.0, green:0.0, blue:0.0, alpha:1.0)
-let THROW_HITBOX_FILL_COLOR                 = UIColor(red:1.0, green:0.5, blue:0.0, alpha:0.3)
-let THROW_HITBOX_STROKE_COLOR               = UIColor(red:1.0, green:0.5, blue:0.0, alpha:1.0)
-let THROWABLE_HITBOX_FILL_COLOR             = UIColor(red:0.0, green:1.0, blue:0.0, alpha:0.3)
-let THROWABLE_HITBOX_STROKE_COLOR           = UIColor(red:0.0, green:1.0, blue:0.0, alpha:1.0)
-let PUSH_HITBOX_FILL_COLOR                  = UIColor(red:0.5, green:0.0, blue:1.0, alpha:0.3)
-let PUSH_HITBOX_STROKE_COLOR                = UIColor(red:0.5, green:0.0, blue:1.0, alpha:1.0)
-let AXE_COLOR                               = UIColor(red:1.0, green:1.0, blue:1.0, alpha:1.0)
-
 class SkillMotionPlayer: UIView {
+    let frameWidth: CGFloat = 384
+    let frameHeight: CGFloat = 224
+    
+    let axeLength: CGFloat = 7
+    let axeColor = UIColor.white
+    
+    let passiveHitboxColor = UIColor(red:0, green:0, blue:1, alpha:1)
+    let otherVulnerabilityHitboxColor = UIColor(red:0, green:0.5, blue:1, alpha:1)
+    let activeHitboxColor = UIColor(red:1, green:0, blue:0, alpha:1)
+    let throwHitboxColor = UIColor(red:1, green:0.5, blue:0, alpha:1)
+    let throwableHitboxColor = UIColor(red:0, green:1, blue:0, alpha:1)
+    let pushHitboxColor = UIColor(red:0.5, green:0, blue:1, alpha:1)
+    
     var motionFrame: MotionInfo.Frame?
     
     func drawFrame(_ frame: MotionInfo.Frame) {
@@ -40,139 +36,127 @@ class SkillMotionPlayer: UIView {
         
         frame.image?.draw(in: rect)
         
-        let context = UIGraphicsGetCurrentContext()!
+        let ctx = UIGraphicsGetCurrentContext()!
         
-        context.saveGState()
-        let sx = rect.width / FRAME_WIDTH
-        let sy = rect.height / FRAME_HEIGHT
-        context.scaleBy(x: sx, y: sy)
+        ctx.saveGState()
+        let sx = rect.width / frameWidth
+        let sy = rect.height / frameHeight
+        ctx.scaleBy(x: sx, y: sy)
         
         let userDefaults = UserDefaults.standard
         
         if userDefaults.bool(forKey: Player1PassiveHitboxHiddenKey) {
             drawHitboxes(
-                frame.player1.hitboxes.passive,
+                hitboxes: frame.player1.hitboxes.passive,
                 hitboxesToDraw: frame.player1.hitboxes.passiveToDraw,
-                inContext: context,
-                withFillColor: PASSIVE_HITBOX_FILL_COLOR.cgColor,
-                strokeColor: PASSIVE_HITBOX_STROKE_COLOR.cgColor
+                with: passiveHitboxColor,
+                in: ctx
             )
         }
         
         if userDefaults.bool(forKey: Player1OtherVulnerabilityHitboxHiddenKey) {
             drawHitboxes(
-                frame.player1.hitboxes.otherVulnerability,
+                hitboxes: frame.player1.hitboxes.otherVulnerability,
                 hitboxesToDraw: frame.player1.hitboxes.otherVulnerabilityToDraw,
-                inContext: context,
-                withFillColor: OTHER_VULNERABILITY_HITBOX_FILL_COLOR.cgColor,
-                strokeColor: OTHER_VULNERABILITY_HITBOX_STROKE_COLOR.cgColor
+                with: otherVulnerabilityHitboxColor,
+                in: ctx
             )
         }
         
         if userDefaults.bool(forKey: Player1ActiveHitboxHiddenKey) {
             drawHitboxes(
-                frame.player1.hitboxes.active,
+                hitboxes: frame.player1.hitboxes.active,
                 hitboxesToDraw: frame.player1.hitboxes.activeToDraw,
-                inContext: context,
-                withFillColor: ACTIVE_HITBOX_FILL_COLOR.cgColor,
-                strokeColor: ACTIVE_HITBOX_STROKE_COLOR.cgColor
+                with: activeHitboxColor,
+                in: ctx
             )
         }
         
         if userDefaults.bool(forKey: Player1ThrowHitboxHiddenKey) {
             drawHitboxes(
-                frame.player1.hitboxes.throw,
+                hitboxes: frame.player1.hitboxes.throw,
                 hitboxesToDraw: frame.player1.hitboxes.throwToDraw,
-                inContext: context,
-                withFillColor: THROW_HITBOX_FILL_COLOR.cgColor,
-                strokeColor: THROW_HITBOX_STROKE_COLOR.cgColor
+                with: throwHitboxColor,
+                in: ctx
             )
         }
         
         if userDefaults.bool(forKey: Player1ThrowableHitboxHiddenKey) {
             drawHitboxes(
-                frame.player1.hitboxes.throwable,
+                hitboxes: frame.player1.hitboxes.throwable,
                 hitboxesToDraw: frame.player1.hitboxes.throwableToDraw,
-                inContext: context,
-                withFillColor: THROWABLE_HITBOX_FILL_COLOR.cgColor,
-                strokeColor: THROWABLE_HITBOX_STROKE_COLOR.cgColor
+                with: throwableHitboxColor,
+                in: ctx
             )
         }
         
         if userDefaults.bool(forKey: Player1PushHitboxHiddenKey) {
             drawHitboxes(
-                frame.player1.hitboxes.push,
+                hitboxes: frame.player1.hitboxes.push,
                 hitboxesToDraw: frame.player1.hitboxes.pushToDraw,
-                inContext: context,
-                withFillColor: PUSH_HITBOX_FILL_COLOR.cgColor,
-                strokeColor: PUSH_HITBOX_STROKE_COLOR.cgColor
+                with: pushHitboxColor,
+                in: ctx
             )
         }
         
         if userDefaults.bool(forKey: Player2PassiveHitboxHiddenKey) {
             drawHitboxes(
-                frame.player2.hitboxes.passive,
+                hitboxes: frame.player2.hitboxes.passive,
                 hitboxesToDraw: frame.player2.hitboxes.passiveToDraw,
-                inContext: context,
-                withFillColor: PASSIVE_HITBOX_FILL_COLOR.cgColor,
-                strokeColor: PASSIVE_HITBOX_STROKE_COLOR.cgColor
+                with: passiveHitboxColor,
+                in: ctx
             )
         }
         
         if userDefaults.bool(forKey: Player2OtherVulnerabilityHitboxHiddenKey) {
             drawHitboxes(
-                frame.player2.hitboxes.otherVulnerability,
+                hitboxes: frame.player2.hitboxes.otherVulnerability,
                 hitboxesToDraw: frame.player2.hitboxes.otherVulnerabilityToDraw,
-                inContext: context,
-                withFillColor: OTHER_VULNERABILITY_HITBOX_FILL_COLOR.cgColor,
-                strokeColor: OTHER_VULNERABILITY_HITBOX_STROKE_COLOR.cgColor
+                with: otherVulnerabilityHitboxColor,
+                in: ctx
             )
         }
         
         if userDefaults.bool(forKey: Player2ActiveHitboxHiddenKey) {
             drawHitboxes(
-                frame.player2.hitboxes.active,
+                hitboxes: frame.player2.hitboxes.active,
                 hitboxesToDraw: frame.player2.hitboxes.activeToDraw,
-                inContext: context,
-                withFillColor: ACTIVE_HITBOX_FILL_COLOR.cgColor,
-                strokeColor: ACTIVE_HITBOX_STROKE_COLOR.cgColor
+                with: activeHitboxColor,
+                in: ctx
             )
         }
         
         if userDefaults.bool(forKey: Player2ThrowHitboxHiddenKey) {
             drawHitboxes(
-                frame.player2.hitboxes.throw,
+                hitboxes: frame.player2.hitboxes.throw,
                 hitboxesToDraw: frame.player2.hitboxes.throwToDraw,
-                inContext: context,
-                withFillColor: THROW_HITBOX_FILL_COLOR.cgColor,
-                strokeColor: THROW_HITBOX_STROKE_COLOR.cgColor
+                with: throwHitboxColor,
+                in: ctx
             )
         }
         
         if userDefaults.bool(forKey: Player2ThrowableHitboxHiddenKey) {
             drawHitboxes(
-                frame.player2.hitboxes.throwable,
+                hitboxes: frame.player2.hitboxes.throwable,
                 hitboxesToDraw: frame.player2.hitboxes.throwableToDraw,
-                inContext: context,
-                withFillColor: THROWABLE_HITBOX_FILL_COLOR.cgColor,
-                strokeColor: THROWABLE_HITBOX_STROKE_COLOR.cgColor
+                with: throwableHitboxColor,
+                in: ctx
             )
         }
         
         if userDefaults.bool(forKey: Player2PushHitboxHiddenKey) {
             drawHitboxes(
-                frame.player2.hitboxes.push,
+                hitboxes: frame.player2.hitboxes.push,
                 hitboxesToDraw: frame.player2.hitboxes.pushToDraw,
-                inContext: context,
-                withFillColor: PUSH_HITBOX_FILL_COLOR.cgColor,
-                strokeColor: PUSH_HITBOX_STROKE_COLOR.cgColor
+                with: pushHitboxColor,
+                in: ctx
             )
         }
         
-        context.restoreGState()
+        ctx.restoreGState()
     }
     
-    func drawHitboxes(_ hitboxes: [String], hitboxesToDraw: [[Int]], inContext context: CGContext, withFillColor fillColor: CGColor, strokeColor: CGColor) {
+    private func drawHitboxes(hitboxes: [String], hitboxesToDraw: [[Int]], with color: UIColor, in ctx: CGContext) {
         let count = hitboxesToDraw.count
         for i in 0..<count {
             let hitboxToDraw = hitboxesToDraw[i]
@@ -183,12 +167,12 @@ class SkillMotionPlayer: UIView {
                 let left = hitboxToDraw[1]
                 let top = hitboxToDraw[2]
                 let bottom = hitboxToDraw[3]
-                drawHitbox(top: top, left: left, bottom: bottom, right: right, inContext: context, withFillColor: fillColor, strokeColor: strokeColor)
+                drawHitbox(top: top, left: left, bottom: bottom, right: right, with: color, in: ctx)
             }
         }
     }
     
-    func drawHitbox(top: Int, left: Int, bottom: Int, right: Int, inContext context: CGContext, withFillColor fillColor: CGColor, strokeColor: CGColor) {
+    private func drawHitbox(top: Int, left: Int, bottom: Int, right: Int, with color: UIColor, in ctx: CGContext) {
         let rect = CGRect(
             x: CGFloat(left),
             y: CGFloat(top),
@@ -196,22 +180,22 @@ class SkillMotionPlayer: UIView {
             height: CGFloat(bottom - top)
         )
         
-        context.setFillColor(fillColor)
-        context.fill(rect)
+        ctx.setFillColor(color.withAlphaComponent(0.3).cgColor)
+        ctx.fill(rect)
         
-        context.setStrokeColor(strokeColor)
-        context.stroke(rect)
+        ctx.setStrokeColor(color.withAlphaComponent(1).cgColor)
+        ctx.stroke(rect)
     }
     
-    func drawAxe(x: CGFloat, y: CGFloat, inContext context: CGContext) {
-        drawLine(x1: x - AXE_LENGTH, y1: y, x2: x + AXE_LENGTH, y2: y, inContext: context, withColor: AXE_COLOR.cgColor)
-        drawLine(x1: x, y1: y - AXE_LENGTH, x2: x, y2: y + AXE_LENGTH, inContext: context, withColor: AXE_COLOR.cgColor)
+    private func drawAxe(x: CGFloat, y: CGFloat, in ctx: CGContext) {
+        drawLine(x1: x - axeLength, y1: y, x2: x + axeLength, y2: y, with: axeColor, in: ctx)
+        drawLine(x1: x, y1: y - axeLength, x2: x, y2: y + axeLength, with: axeColor, in: ctx)
     }
     
-    func drawLine(x1: CGFloat, y1: CGFloat, x2: CGFloat, y2: CGFloat, inContext context: CGContext, withColor color: CGColor) {
-        context.setLineWidth(1)
-        context.setStrokeColor(color)
-        context.move(to: CGPoint(x: x1, y: y1))
-        context.addLine(to: CGPoint(x: x2, y: y2))
+    private func drawLine(x1: CGFloat, y1: CGFloat, x2: CGFloat, y2: CGFloat, with color: UIColor, in ctx: CGContext) {
+        ctx.setLineWidth(1)
+        ctx.setStrokeColor(color.cgColor)
+        ctx.move(to: CGPoint(x: x1, y: y1))
+        ctx.addLine(to: CGPoint(x: x2, y: y2))
     }
 }
