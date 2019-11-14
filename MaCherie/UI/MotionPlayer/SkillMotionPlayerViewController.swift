@@ -60,12 +60,10 @@ class SkillMotionPlayerViewController: UIViewController {
     private var seekingForwardTimer: Timer?
     private var seekingBackwardTimer: Timer?
     
-    private var frameImages = NSMutableDictionary()
-    private var framesInfo = NSDictionary()
-    
     private var observer: NSObjectProtocol!
     
     private var downloader: SkillMotionDownloader?
+    private var motionInfo: MotionInfo?
     private var subscription: AnyCancellable?
     
     required init?(coder aDecoder: NSCoder) {
@@ -314,11 +312,13 @@ class SkillMotionPlayerViewController: UIViewController {
     // MARK: - Update
     
     func update() {
-        let key = String(format: "motions/%@/%@/%@_%@_%03d.png", characterCode, skillCode, characterCode, skillCode, currentFrame)
-        let frameImage = frameImages[key] as? UIImage
-        let frameInfo = framesInfo[String(format: "%03d", currentFrame)] as! NSDictionary
+        guard let motionInfo = motionInfo else {
+            return
+        }
         
-        framesPlayer.drawFrameImage(frameImage, withFrameInfo: frameInfo)
+        let frame = motionInfo.frames[currentFrame]
+        
+        framesPlayer.drawFrame(frame)
         currentFrameLabel.text = String(format: "%03d", currentFrame)
         totalFrameLabel.text = String(format: "%03d", numberOfFrames - 1)
         progressControl.value = Float(currentFrame)
@@ -357,9 +357,13 @@ class SkillMotionPlayerViewController: UIViewController {
                 self.present(alert, animated: true, completion: nil)
             }
         }, receiveValue: { (value) in
+            self.motionInfo = value.motionInfo
+            self.numberOfFrames = value.motionInfo.frames.count
+            
             self.currentFrameLabel.text = "000"
             self.totalFrameLabel.text = String(format: "%03d", value.motionInfo.frames.count)
             self.progressControl.maximumValue = Float(value.motionInfo.frames.count - 1)
+            self.downloadProgressView.isHidden = false
             self.downloadProgressView.setProgress(Float(value.progress.fractionCompleted), animated: true)
         })
         self.downloader = downloader
@@ -470,11 +474,5 @@ extension SkillMotionPlayerViewController: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         view.endEditing(true)
         return true
-    }
-}
-
-extension SkillMotionPlayerViewController: UIPopoverPresentationControllerDelegate {
-    func popoverPresentationControllerDidDismissPopover(_ popoverPresentationController: UIPopoverPresentationController) {
-        update()
     }
 }

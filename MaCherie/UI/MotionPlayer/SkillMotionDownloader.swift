@@ -38,13 +38,13 @@ class SkillMotionDownloader {
                 let future = Future { (promise) in
                     self.downloadImage(at: index, promise)
                 }.handleEvents(receiveOutput: { value in
-                    motionInfo.sortedFrames[value.0].image = value.1
+                    motionInfo.frames[value.0].image = value.1
                 })
                 merge = merge.merge(with: future).eraseToAnyPublisher()
             }
-            return merge.count().map { (count) -> Output in
+            return merge.scan([]) { $0 + [$1] }.map { (images) -> Output in
                 let progress = Progress(totalUnitCount: Int64(motionInfo.frames.count))
-                progress.completedUnitCount = Int64(count)
+                progress.completedUnitCount = Int64(images.count)
                 return (motionInfo, progress)
             }.eraseToAnyPublisher()
         }.eraseToAnyPublisher()
