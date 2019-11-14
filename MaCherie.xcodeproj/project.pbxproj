@@ -198,17 +198,14 @@
 			path = PropertyLists;
 			sourceTree = "<group>";
 		};
-		3546A89320D1025D002FEC38 /* UI */ = {
+		3546A89320D1025D002FEC38 /* More */ = {
 			isa = PBXGroup;
 			children = (
-				35B69A3220D8DE8500F05A2C /* Character */,
-				35B69A3320D8DEA600F05A2C /* CharacterMove */,
-				35B69A3420D8DEBD00F05A2C /* MotionPlayer */,
 				35EFE5BF20D39F31007EB379 /* MoreViewController.swift */,
 				04580D181A25CB1800A4A9B2 /* MoreViewController.h */,
 				04580D191A25CB1800A4A9B2 /* MoreViewController.m */,
 			);
-			path = UI;
+			path = More;
 			sourceTree = "<group>";
 		};
 		3572AF8D20D1021F00C15871 /* Core */ = {
@@ -251,7 +248,7 @@
 			path = CharacterMove;
 			sourceTree = "<group>";
 		};
-		35B69A3420D8DEBD00F05A2C /* MotionPlayer */ = {
+		35B69A3420D8DEBD00F05A2C /* Motion */ = {
 			isa = PBXGroup;
 			children = (
 				35C41F3C237AB26000A1EBF7 /* MotionInfo.swift */,
@@ -259,7 +256,7 @@
 				3505351B20D259E900078847 /* SkillMotionPlayer.swift */,
 				3505351820D21AC300078847 /* SkillMotionPlayerViewController.swift */,
 			);
-			path = MotionPlayer;
+			path = Motion;
 			sourceTree = "<group>";
 		};
 		A5179E142A649A8F91550A12 /* Pods */ = {
@@ -319,7 +316,10 @@
 				35375CAB20D0FE45004642CB /* LaunchScreen.storyboard */,
 				04580D161A25CB1800A4A9B2 /* Main.storyboard */,
 				3572AF8D20D1021F00C15871 /* Core */,
-				3546A89320D1025D002FEC38 /* UI */,
+				35B69A3220D8DE8500F05A2C /* Character */,
+				35B69A3320D8DEA600F05A2C /* CharacterMove */,
+				35B69A3420D8DEBD00F05A2C /* Motion */,
+				3546A89320D1025D002FEC38 /* More */,
 				352275AC20D2A9C7002144BD /* PropertyLists */,
 				EEE27AD5176C1347008A41AB /* Supporting Files */,
 				EEADB06B17FA72B3004E2F60 /* Assets.xcassets */,
