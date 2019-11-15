@@ -142,16 +142,3 @@ extension CharactersViewController: UITableViewDelegate {
         }
     }
 }
-
-extension CharactersViewController: UIDataSourceModelAssociation {
-    func modelIdentifierForElement(at idx: IndexPath, in view: UIView) -> String? {
-        return nil
-    }
-    
-    func indexPathForElement(withModelIdentifier identifier: String, in view: UIView) -> IndexPath? {
-        let components = identifier.components(separatedBy: ", ")
-        let section = Int(components[0])!
-        let row = Int(components[1])!
-        return IndexPath(row: row, section: section)
-    }
-}

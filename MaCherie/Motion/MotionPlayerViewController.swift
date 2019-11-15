@@ -1,5 +1,5 @@
 //
-//  SkillMotionPlayerViewController.swift
+//  MotionPlayerViewController.swift
 //  MaCherie
 //
 //  Created by Leon Li on 2018/6/14.
@@ -9,11 +9,11 @@
 import UIKit
 import Combine
 
-@objc protocol SkillMotionPlayerViewControllerDelegate {
-    @objc optional func skillMotionPlayerViewControllerWillDismiss(_ skillMotionPlayerViewController: SkillMotionPlayerViewController)
+@objc protocol MotionPlayerViewControllerDelegate {
+    @objc optional func motionPlayerViewControllerWillDismiss(_ motionPlayerViewController: MotionPlayerViewController)
 }
 
-class SkillMotionPlayerViewController: UIViewController {
+class MotionPlayerViewController: UIViewController {
     @IBOutlet var playerView: UIView!
     private var playerLayer: MotionPlayerLayer!
     
@@ -39,7 +39,7 @@ class SkillMotionPlayerViewController: UIViewController {
     @IBOutlet var player2ThrowableHitboxesCheckbox: UIButton!
     @IBOutlet var player2PushHitboxesCheckbox: UIButton!
     
-    weak var delegate: SkillMotionPlayerViewControllerDelegate?
+    weak var delegate: MotionPlayerViewControllerDelegate?
     var characterCode = ""
     var skillCode = ""
     
@@ -145,7 +145,7 @@ class SkillMotionPlayerViewController: UIViewController {
     // MARK: - Action
     
     @IBAction func dismiss(_ sender: Any) {
-        delegate?.skillMotionPlayerViewControllerWillDismiss?(self)
+        delegate?.motionPlayerViewControllerWillDismiss?(self)
     }
     
     @IBAction func progressControlDown(_ sender: Any) {
@@ -312,7 +312,7 @@ class SkillMotionPlayerViewController: UIViewController {
     }
 }
 
-extension SkillMotionPlayerViewController: UITextFieldDelegate {
+extension MotionPlayerViewController: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         view.endEditing(true)
         return true

@@ -8,8 +8,6 @@
 
 import UIKit
 
-let GuideDetailViewControllerPresentSkillMotionPlayerViewControllerSegue = "PresentSkillMotionPlayerViewController"
-
 class CharacterMovesViewController: UIViewController {
     @IBOutlet var tableView: UITableView!
     
@@ -41,11 +39,11 @@ class CharacterMovesViewController: UIViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == GuideDetailViewControllerPresentSkillMotionPlayerViewControllerSegue {
+        if segue.identifier == R.segue.characterMovesViewController.presentMotionPlayerViewController.identifier {
             let indexPath = tableView.indexPathForSelectedRow!
             let characterMove = sections[indexPath.section].rows[indexPath.row]
             
-            let player = (segue.destination as! UINavigationController).topViewController as! SkillMotionPlayerViewController
+            let player = (segue.destination as! UINavigationController).topViewController as! MotionPlayerViewController
             player.delegate = self
             player.characterCode = characterMove.presented!.characterCode
             player.skillCode = characterMove.presented!.skillCode
@@ -96,7 +94,7 @@ extension CharacterMovesViewController: UITableViewDelegate {
         if let presented = characterMove.presented {
             let presentedViewControllerName = presented.viewController
             if presentedViewControllerName == "FramesPlayerViewController" {
-                performSegue(withIdentifier: GuideDetailViewControllerPresentSkillMotionPlayerViewControllerSegue, sender: self)
+                performSegue(withIdentifier: R.segue.characterMovesViewController.presentMotionPlayerViewController, sender: self)
             }
         } else if let next = characterMove.next {
             let nextViewController = storyboard?.instantiateViewController(withIdentifier: "CharacterMovesViewController") as! CharacterMovesViewController
@@ -107,21 +105,8 @@ extension CharacterMovesViewController: UITableViewDelegate {
     }
 }
 
-extension CharacterMovesViewController: UIDataSourceModelAssociation {
-    func modelIdentifierForElement(at idx: IndexPath, in view: UIView) -> String? {
-        return nil
-    }
-    
-    func indexPathForElement(withModelIdentifier identifier: String, in view: UIView) -> IndexPath? {
-        let components = identifier.components(separatedBy: ", ")
-        let section = Int(components[0])!
-        let row = Int(components[1])!
-        return IndexPath(row: row, section: section)
-    }
-}
-
-extension CharacterMovesViewController: SkillMotionPlayerViewControllerDelegate {
-    func willDismiss(_ skillMotionPlayerViewController: SkillMotionPlayerViewController!) {
+extension CharacterMovesViewController: MotionPlayerViewControllerDelegate {
+    func motionPlayerViewControllerWillDismiss(_ motionPlayerViewController: MotionPlayerViewController) {
         if UIDevice.current.userInterfaceIdiom == .pad {
             tableView.deselectRow(at: tableView.indexPathForSelectedRow!, animated: true)
         }

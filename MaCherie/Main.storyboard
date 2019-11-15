@@ -210,7 +210,7 @@
                     <navigationItem key="navigationItem" id="70e-Gc-1W5"/>
                     <connections>
                         <outlet property="tableView" destination="Pof-wR-L4S" id="DfH-O8-Y9d"/>
-                        <segue destination="9re-0b-kvS" kind="presentation" identifier="PresentSkillMotionPlayerViewController" modalPresentationStyle="currentContext" id="1dM-Xk-nIm"/>
+                        <segue destination="9re-0b-kvS" kind="presentation" identifier="PresentMotionPlayerViewController" modalPresentationStyle="currentContext" id="1dM-Xk-nIm"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3Bu-re-eQr" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -233,10 +233,10 @@
             </objects>
             <point key="canvasLocation" x="323" y="326"/>
         </scene>
-        <!--Skill Motion Player View Controller-->
+        <!--Motion Player View Controller-->
         <scene sceneID="vYV-MR-L0z">
             <objects>
-                <viewController storyboardIdentifier="SkillMotionPlayerViewController" modalPresentationStyle="formSheet" id="LFl-cU-IOS" customClass="SkillMotionPlayerViewController" customModule="MaCherie" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="formSheet" id="LFl-cU-IOS" customClass="MotionPlayerViewController" customModule="MaCherie" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="iQN-Uo-WWM">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>

@@ -93,15 +93,15 @@ struct R: Rswift.Validatable {
   struct segue {
     /// This struct is generated for `CharacterMovesViewController`, and contains static references to 1 segues.
     struct characterMovesViewController {
-      /// Segue identifier `PresentSkillMotionPlayerViewController`.
-      static let presentSkillMotionPlayerViewController: Rswift.StoryboardSegueIdentifier<UIKit.UIStoryboardSegue, CharacterMovesViewController, UIKit.UINavigationController> = Rswift.StoryboardSegueIdentifier(identifier: "PresentSkillMotionPlayerViewController")
+      /// Segue identifier `PresentMotionPlayerViewController`.
+      static let presentMotionPlayerViewController: Rswift.StoryboardSegueIdentifier<UIKit.UIStoryboardSegue, CharacterMovesViewController, UIKit.UINavigationController> = Rswift.StoryboardSegueIdentifier(identifier: "PresentMotionPlayerViewController")
 
       #if os(iOS) || os(tvOS)
-      /// Optionally returns a typed version of segue `PresentSkillMotionPlayerViewController`.
+      /// Optionally returns a typed version of segue `PresentMotionPlayerViewController`.
       /// Returns nil if either the segue identifier, the source, destination, or segue types don't match.
       /// For use inside `prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?)`.
-      static func presentSkillMotionPlayerViewController(segue: UIKit.UIStoryboardSegue) -> Rswift.TypedStoryboardSegueInfo<UIKit.UIStoryboardSegue, CharacterMovesViewController, UIKit.UINavigationController>? {
-        return Rswift.TypedStoryboardSegueInfo(segueIdentifier: R.segue.characterMovesViewController.presentSkillMotionPlayerViewController, segue: segue)
+      static func presentMotionPlayerViewController(segue: UIKit.UIStoryboardSegue) -> Rswift.TypedStoryboardSegueInfo<UIKit.UIStoryboardSegue, CharacterMovesViewController, UIKit.UINavigationController>? {
+        return Rswift.TypedStoryboardSegueInfo(segueIdentifier: R.segue.characterMovesViewController.presentMotionPlayerViewController, segue: segue)
       }
       #endif
 
@@ -902,7 +902,6 @@ struct _R: Rswift.Validatable {
       let charactersViewController = StoryboardViewControllerResource<CharactersViewController>(identifier: "CharactersViewController")
       let moreViewController = StoryboardViewControllerResource<MoreViewController>(identifier: "MoreViewController")
       let name = "Main"
-      let skillMotionPlayerViewController = StoryboardViewControllerResource<SkillMotionPlayerViewController>(identifier: "SkillMotionPlayerViewController")
 
       func characterMovesViewController(_: Void = ()) -> CharacterMovesViewController? {
         return UIKit.UIStoryboard(resource: self).instantiateViewController(withResource: characterMovesViewController)
@@ -916,10 +915,6 @@ struct _R: Rswift.Validatable {
         return UIKit.UIStoryboard(resource: self).instantiateViewController(withResource: moreViewController)
       }
 
-      func skillMotionPlayerViewController(_: Void = ()) -> SkillMotionPlayerViewController? {
-        return UIKit.UIStoryboard(resource: self).instantiateViewController(withResource: skillMotionPlayerViewController)
-      }
-
       static func validate() throws {
         if UIKit.UIImage(named: "backward", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'backward' is used in storyboard 'Main', but couldn't be loaded.") }
         if UIKit.UIImage(named: "forward", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'forward' is used in storyboard 'Main', but couldn't be loaded.") }
@@ -929,7 +924,6 @@ struct _R: Rswift.Validatable {
         if _R.storyboard.main().characterMovesViewController() == nil { throw Rswift.ValidationError(description:"[R.swift] ViewController with identifier 'characterMovesViewController' could not be loaded from storyboard 'Main' as 'CharacterMovesViewController'.") }
         if _R.storyboard.main().charactersViewController() == nil { throw Rswift.ValidationError(description:"[R.swift] ViewController with identifier 'charactersViewController' could not be loaded from storyboard 'Main' as 'CharactersViewController'.") }
         if _R.storyboard.main().moreViewController() == nil { throw Rswift.ValidationError(description:"[R.swift] ViewController with identifier 'moreViewController' could not be loaded from storyboard 'Main' as 'MoreViewController'.") }
-        if _R.storyboard.main().skillMotionPlayerViewController() == nil { throw Rswift.ValidationError(description:"[R.swift] ViewController with identifier 'skillMotionPlayerViewController' could not be loaded from storyboard 'Main' as 'SkillMotionPlayerViewController'.") }
       }
 
       fileprivate init() {}
