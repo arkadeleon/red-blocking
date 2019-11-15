@@ -754,7 +754,7 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
 
-  /// This `R.reuseIdentifier` struct is generated, and contains static references to 5 reuse identifiers.
+  /// This `R.reuseIdentifier` struct is generated, and contains static references to 7 reuse identifiers.
   struct reuseIdentifier {
     /// Reuse identifier `CharacterCell`.
     static let characterCell: Rswift.ReuseIdentifier<CharacterCell> = Rswift.ReuseIdentifier(identifier: "CharacterCell")
@@ -766,6 +766,10 @@ struct R: Rswift.Validatable {
     static let characterMoveFramesCell: Rswift.ReuseIdentifier<CharacterMoveFramesCell> = Rswift.ReuseIdentifier(identifier: "CharacterMoveFramesCell")
     /// Reuse identifier `CharacterSupplementaryCell`.
     static let characterSupplementaryCell: Rswift.ReuseIdentifier<CharacterSupplementaryCell> = Rswift.ReuseIdentifier(identifier: "CharacterSupplementaryCell")
+    /// Reuse identifier `ClearDataStorage`.
+    static let clearDataStorage: Rswift.ReuseIdentifier<UIKit.UITableViewCell> = Rswift.ReuseIdentifier(identifier: "ClearDataStorage")
+    /// Reuse identifier `Feedback`.
+    static let feedback: Rswift.ReuseIdentifier<UIKit.UITableViewCell> = Rswift.ReuseIdentifier(identifier: "Feedback")
 
     fileprivate init() {}
   }
@@ -885,6 +889,8 @@ struct _R: Rswift.Validatable {
       let name = "LaunchScreen"
 
       static func validate() throws {
+        if UIKit.UIImage(named: "ellipsis.circle", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'ellipsis.circle' is used in storyboard 'LaunchScreen', but couldn't be loaded.") }
+        if UIKit.UIImage(named: "gamecontroller", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'gamecontroller' is used in storyboard 'LaunchScreen', but couldn't be loaded.") }
         if #available(iOS 11.0, tvOS 11.0, *) {
         }
       }
@@ -895,12 +901,11 @@ struct _R: Rswift.Validatable {
 
     #if os(iOS) || os(tvOS)
     struct main: Rswift.StoryboardResourceWithInitialControllerType, Rswift.Validatable {
-      typealias InitialController = UIKit.UISplitViewController
+      typealias InitialController = UIKit.UITabBarController
 
       let bundle = R.hostingBundle
       let characterMovesViewController = StoryboardViewControllerResource<CharacterMovesViewController>(identifier: "CharacterMovesViewController")
       let charactersViewController = StoryboardViewControllerResource<CharactersViewController>(identifier: "CharactersViewController")
-      let moreViewController = StoryboardViewControllerResource<MoreViewController>(identifier: "MoreViewController")
       let name = "Main"
 
       func characterMovesViewController(_: Void = ()) -> CharacterMovesViewController? {
@@ -911,19 +916,16 @@ struct _R: Rswift.Validatable {
         return UIKit.UIStoryboard(resource: self).instantiateViewController(withResource: charactersViewController)
       }
 
-      func moreViewController(_: Void = ()) -> MoreViewController? {
-        return UIKit.UIStoryboard(resource: self).instantiateViewController(withResource: moreViewController)
-      }
-
       static func validate() throws {
         if UIKit.UIImage(named: "backward", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'backward' is used in storyboard 'Main', but couldn't be loaded.") }
+        if UIKit.UIImage(named: "ellipsis.circle", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'ellipsis.circle' is used in storyboard 'Main', but couldn't be loaded.") }
         if UIKit.UIImage(named: "forward", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'forward' is used in storyboard 'Main', but couldn't be loaded.") }
+        if UIKit.UIImage(named: "gamecontroller", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'gamecontroller' is used in storyboard 'Main', but couldn't be loaded.") }
         if UIKit.UIImage(named: "play", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'play' is used in storyboard 'Main', but couldn't be loaded.") }
         if #available(iOS 11.0, tvOS 11.0, *) {
         }
         if _R.storyboard.main().characterMovesViewController() == nil { throw Rswift.ValidationError(description:"[R.swift] ViewController with identifier 'characterMovesViewController' could not be loaded from storyboard 'Main' as 'CharacterMovesViewController'.") }
         if _R.storyboard.main().charactersViewController() == nil { throw Rswift.ValidationError(description:"[R.swift] ViewController with identifier 'charactersViewController' could not be loaded from storyboard 'Main' as 'CharactersViewController'.") }
-        if _R.storyboard.main().moreViewController() == nil { throw Rswift.ValidationError(description:"[R.swift] ViewController with identifier 'moreViewController' could not be loaded from storyboard 'Main' as 'MoreViewController'.") }
       }
 
       fileprivate init() {}

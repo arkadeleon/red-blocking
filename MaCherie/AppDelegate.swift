@@ -18,7 +18,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
-        let splitViewController = window!.rootViewController as! UISplitViewController
+        let tabBarController = window!.rootViewController as! UITabBarController
+        let splitViewController = tabBarController.viewControllers![0] as! UISplitViewController
         splitViewController.delegate = self
         (splitViewController.viewControllers[0] as! UINavigationController).delegate = self
         (splitViewController.viewControllers[1] as! UINavigationController).delegate = self

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="6M2-cD-LAY">
-    <device id="retina4_7" orientation="portrait" appearance="light"/>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="rRP-Uy-3e3">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -8,36 +8,58 @@
     </dependencies>
     <scenes>
         <!--Navigation Controller-->
-        <scene sceneID="Duq-iN-BTS">
+        <scene sceneID="2Fu-9D-cwL">
             <objects>
-                <navigationController id="6M2-cD-LAY" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="ch3-Ae-dn4">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                <navigationController id="rRP-Uy-3e3" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="DrL-Eb-ChF">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="Mrn-lB-qGj" kind="relationship" relationship="rootViewController" id="F5h-Rh-jy0"/>
+                        <segue destination="Mrn-lB-qGj" kind="relationship" relationship="rootViewController" id="lIU-X8-Cm8"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="XiY-Ah-Cy2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sVv-k8-dLQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-868" y="376"/>
+            <point key="canvasLocation" x="-1470" y="487"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="zYW-4N-Bqs">
             <objects>
                 <viewController id="Mrn-lB-qGj" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="gLM-Mq-TsS">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tabBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dRQ-Zp-6Tb">
+                                <rect key="frame" x="0.0" y="813" width="414" height="49"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="49" id="Rx8-35-Yyf"/>
+                                </constraints>
+                                <items>
+                                    <tabBarItem image="gamecontroller" catalog="system" id="gN8-PX-bFQ"/>
+                                    <tabBarItem image="ellipsis.circle" catalog="system" id="Lf4-4g-XzX"/>
+                                </items>
+                            </tabBar>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="dRQ-Zp-6Tb" firstAttribute="bottom" secondItem="QvM-vY-jg8" secondAttribute="bottom" id="BYZ-EF-KZR"/>
+                            <constraint firstItem="dRQ-Zp-6Tb" firstAttribute="leading" secondItem="QvM-vY-jg8" secondAttribute="leading" id="aZl-aB-HnP"/>
+                            <constraint firstItem="dRQ-Zp-6Tb" firstAttribute="trailing" secondItem="QvM-vY-jg8" secondAttribute="trailing" id="dcN-5A-oOy"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="QvM-vY-jg8"/>
                     </view>
                     <navigationItem key="navigationItem" id="VMP-70-Blx"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PjW-8k-Sgp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-20" y="376"/>
+            <point key="canvasLocation" x="-562" y="487"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="ellipsis.circle" catalog="system" width="64" height="60"/>
+        <image name="gamecontroller" catalog="system" width="64" height="40"/>
+    </resources>
 </document>
