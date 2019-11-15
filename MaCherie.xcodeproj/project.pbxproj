@@ -460,18 +460,16 @@
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-MaCherie/Pods-MaCherie-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/PromiseKit/PromiseKit.framework",
+				"${PODS_ROOT}/Target Support Files/Pods-MaCherie/Pods-MaCherie-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/R.swift.Library/Rswift.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PromiseKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Rswift.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MaCherie/Pods-MaCherie-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MaCherie/Pods-MaCherie-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		75FB20264C36C11B4D54D8D3 /* [CP] Check Pods Manifest.lock */ = {
@@ -638,7 +636,6 @@
 				INFOPLIST_FILE = MaCherie/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
-				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = com.studiopp.i3rd;
 				PRODUCT_MODULE_NAME = MaCherie;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -666,7 +663,6 @@
 				INFOPLIST_FILE = MaCherie/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
-				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = com.studiopp.i3rd;
 				PRODUCT_MODULE_NAME = MaCherie;
 				PRODUCT_NAME = "$(TARGET_NAME)";
