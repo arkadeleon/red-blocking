@@ -126,9 +126,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" indicatorStyle="white" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="0TP-je-jlb">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" indicatorStyle="white" dataMode="prototypes" style="insetGrouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="0TP-je-jlb">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <connections>
                                     <outlet property="dataSource" destination="ogH-PT-2W2" id="Uux-Sm-drG"/>
                                     <outlet property="delegate" destination="ogH-PT-2W2" id="BI1-8C-HWy"/>
@@ -195,9 +194,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="Pof-wR-L4S">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="insetGrouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="Pof-wR-L4S">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
-                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 <connections>
                                     <outlet property="dataSource" destination="hTf-pY-KL2" id="BlB-rC-IhH"/>
                                     <outlet property="delegate" destination="hTf-pY-KL2" id="Ssp-k0-6NK"/>
@@ -216,7 +214,7 @@
                     <navigationItem key="navigationItem" id="70e-Gc-1W5"/>
                     <connections>
                         <outlet property="tableView" destination="Pof-wR-L4S" id="DfH-O8-Y9d"/>
-                        <segue destination="9re-0b-kvS" kind="presentation" identifier="PresentMotionPlayerViewController" modalPresentationStyle="currentContext" id="1dM-Xk-nIm"/>
+                        <segue destination="9re-0b-kvS" kind="presentation" identifier="PresentMotionPlayerViewController" modalPresentationStyle="pageSheet" id="1dM-Xk-nIm"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3Bu-re-eQr" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -228,7 +226,7 @@
             <objects>
                 <navigationController definesPresentationContext="YES" id="9re-0b-kvS" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="OUj-kI-fkm">
-                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="56"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
@@ -244,11 +242,11 @@
             <objects>
                 <viewController modalPresentationStyle="formSheet" id="LFl-cU-IOS" customClass="MotionPlayerViewController" customModule="MaCherie" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="iQN-Uo-WWM">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="758"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fgj-Wf-hR1">
-                                <rect key="frame" x="0.0" y="88" width="375" height="300.66666666666669"/>
+                                <rect key="frame" x="0.0" y="56" width="375" height="300.66666666666669"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dpZ-LB-ynZ">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="218.66666666666666"/>
@@ -314,10 +312,10 @@
                                 </constraints>
                             </view>
                             <progressView opaque="NO" contentMode="scaleToFill" progressViewStyle="bar" translatesAutoresizingMaskIntoConstraints="NO" id="aW8-Cc-2NM">
-                                <rect key="frame" x="0.0" y="88" width="375" height="2.6666666666666714"/>
+                                <rect key="frame" x="0.0" y="56" width="375" height="2.6666666666666643"/>
                             </progressView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ueo-RQ-vmw">
-                                <rect key="frame" x="15" y="408.66666666666669" width="165" height="176.00000000000006"/>
+                                <rect key="frame" x="15" y="376.66666666666669" width="165" height="176.00000000000006"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="nnY-6X-MhG">
                                         <rect key="frame" x="8" y="8" width="149" height="160"/>
@@ -407,7 +405,7 @@
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="f7o-fU-Xsg">
-                                                <rect key="frame" x="0.0" y="111.99999999999994" width="135" height="20"/>
+                                                <rect key="frame" x="0.0" y="112" width="135" height="20"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ecg-WC-qNx">
                                                         <rect key="frame" x="0.0" y="0.0" width="20" height="20"/>
@@ -460,7 +458,7 @@
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Player 1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OBE-zl-WyI">
-                                <rect key="frame" x="120" y="402" width="50" height="13.333333333333314"/>
+                                <rect key="frame" x="120" y="370" width="50" height="13.333333333333314"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="50" id="XZE-iX-dLt"/>
                                 </constraints>
@@ -469,7 +467,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CGt-FD-qln">
-                                <rect key="frame" x="195" y="408.66666666666669" width="165" height="176.00000000000006"/>
+                                <rect key="frame" x="195" y="376.66666666666669" width="165" height="176.00000000000006"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="BV4-Gf-1Zh">
                                         <rect key="frame" x="8" y="8" width="149" height="160"/>
@@ -559,7 +557,7 @@
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="q42-Oh-9JF">
-                                                <rect key="frame" x="0.0" y="111.99999999999994" width="135" height="20"/>
+                                                <rect key="frame" x="0.0" y="112" width="135" height="20"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UIt-aC-kzA">
                                                         <rect key="frame" x="0.0" y="0.0" width="20" height="20"/>
@@ -612,7 +610,7 @@
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Player 2" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g0z-98-cCE">
-                                <rect key="frame" x="300" y="402" width="50" height="13.333333333333314"/>
+                                <rect key="frame" x="300" y="370" width="50" height="13.333333333333314"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="50" id="57V-8d-SKv"/>
                                 </constraints>
@@ -621,7 +619,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Zlh-KH-VNo">
-                                <rect key="frame" x="0.0" y="629" width="375" height="100"/>
+                                <rect key="frame" x="0.0" y="624" width="375" height="100"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ufq-PB-BIe">
                                         <rect key="frame" x="256.66666666666669" y="32" width="72" height="36"/>
@@ -747,6 +745,6 @@
         <image name="play" catalog="system" width="60" height="64"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="m87-1a-yA8"/>
+        <segue reference="2VS-Ld-HJI"/>
     </inferredMetricsTieBreakers>
 </document>
