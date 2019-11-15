@@ -52,27 +52,6 @@ class CharacterMovesViewController: UIViewController {
             player.title = characterMove.presented!.skillName
         }
     }
-    
-    // MARK: - State Restoration
-    
-//    let GuideDetailViewControllerTitleKey = "Title"
-//    let GuideDetailViewControllerSelectedIndexPathKey = "SelectedIndexPath"
-//
-//    override func encodeRestorableState(with coder: NSCoder) {
-//        super.encodeRestorableState(with: coder)
-//
-//        coder.encode(title, forKey: GuideDetailViewControllerTitleKey)
-//        coder.encode(sections, forKey: PropertyListBasedViewControllerSectionsKey)
-//        coder.encode(tableView.indexPathForSelectedRow, forKey: GuideDetailViewControllerSelectedIndexPathKey)
-//    }
-//
-//    override func decodeRestorableState(with coder: NSCoder) {
-//        title = coder.decodeObject(forKey: GuideDetailViewControllerTitleKey) as? String
-//        sections = coder.decodeObject(forKey: PropertyListBasedViewControllerSectionsKey) as! NSArray
-//        if let selectedIndexPath = coder.decodeObject(forKey: GuideDetailViewControllerSelectedIndexPathKey) as? IndexPath {
-//            tableView.selectRow(at: selectedIndexPath, animated: false, scrollPosition: .top)
-//        }
-//    }
 }
 
 extension CharacterMovesViewController: UITableViewDataSource {

@@ -8,8 +8,6 @@
 
 import Foundation
 
-let ApplicationStateRestorationVersionKey = "ApplicationStateRestorationVersion"
-
 let Player1PassiveHitboxHiddenKey = "Player1PassiveHitboxHidden"
 let Player1OtherVulnerabilityHitboxHiddenKey = "Player1OtherVulnerabilityHitboxHidden"
 let Player1ActiveHitboxHiddenKey = "Player1ActiveHitboxHidden"

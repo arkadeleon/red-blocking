@@ -10,7 +10,7 @@
         <!--Navigation Controller-->
         <scene sceneID="cUZ-e1-qWy">
             <objects>
-                <navigationController storyboardIdentifier="GuideDetailNavigationController" definesPresentationContext="YES" useStoryboardIdentifierAsRestorationIdentifier="YES" id="9ZQ-oo-ndQ" sceneMemberID="viewController">
+                <navigationController definesPresentationContext="YES" useStoryboardIdentifierAsRestorationIdentifier="YES" id="9ZQ-oo-ndQ" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="vCL-mS-UYc">
                         <rect key="frame" x="0.0" y="44" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -154,7 +154,7 @@
         <!--Navigation Controller-->
         <scene sceneID="lIg-9B-Ypt">
             <objects>
-                <navigationController storyboardIdentifier="MoreNavigationController" definesPresentationContext="YES" useStoryboardIdentifierAsRestorationIdentifier="YES" id="wZe-Xv-p3b" sceneMemberID="viewController">
+                <navigationController definesPresentationContext="YES" useStoryboardIdentifierAsRestorationIdentifier="YES" id="wZe-Xv-p3b" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="ObU-Yi-uH6">
                         <rect key="frame" x="0.0" y="44" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -170,7 +170,7 @@
         <!--Split View Controller-->
         <scene sceneID="u5b-Ln-nXy">
             <objects>
-                <splitViewController storyboardIdentifier="GuideSplitViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="zSR-vX-PYc" sceneMemberID="viewController">
+                <splitViewController useStoryboardIdentifierAsRestorationIdentifier="YES" id="zSR-vX-PYc" sceneMemberID="viewController">
                     <toolbarItems/>
                     <connections>
                         <segue destination="9ZQ-oo-ndQ" kind="relationship" relationship="detailViewController" id="m87-1a-yA8"/>
@@ -739,6 +739,6 @@
         <image name="play" catalog="system" width="60" height="64"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="2VS-Ld-HJI"/>
+        <segue reference="m87-1a-yA8"/>
     </inferredMetricsTieBreakers>
 </document>

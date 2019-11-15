@@ -97,27 +97,6 @@ class CharactersViewController: UIViewController {
         
         bodyView.image = UIImage(named: character.nextBackgroundImage)
     }
-    
-    // MARK: - State Restoration
-    
-    let GuideMasterViewControllerSelectedIndexPathKey = "SelectedIndexPath"
-    
-    override func encodeRestorableState(with coder: NSCoder) {
-        super.encodeRestorableState(with: coder)
-        
-        coder.encode(tableView.indexPathForSelectedRow, forKey: GuideMasterViewControllerSelectedIndexPathKey)
-    }
-    
-    override func decodeRestorableState(with coder: NSCoder) {
-        super.decodeRestorableState(with: coder)
-        
-        if let selectedIndexPath = coder.decodeObject(forKey: GuideMasterViewControllerSelectedIndexPathKey) as? IndexPath {
-            tableView.selectRow(at: selectedIndexPath, animated: false, scrollPosition: .top)
-            
-            let character = characters[selectedIndexPath.row]
-            bodyView.image = UIImage(named: character.nextBackgroundImage)
-        }
-    }
 }
 
 extension CharactersViewController: UITableViewDataSource {

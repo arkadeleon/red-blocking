@@ -38,7 +38,6 @@ const NSInteger DeleteDocumentsAndDataViewTag = 1000;
         MFMailComposeViewController *mailComposeViewController = [[MFMailComposeViewController alloc] init];
         mailComposeViewController.modalPresentationStyle = UIModalPresentationFormSheet;
         mailComposeViewController.mailComposeDelegate = self;
-        mailComposeViewController.restorationIdentifier = NSStringFromClass([MFMailComposeViewController class]);
         [mailComposeViewController setSubject:@"About MaCherie"];
         [mailComposeViewController setToRecipients:@[@"david1988929@163.com"]];
         [self presentViewController:mailComposeViewController animated:YES completion:NULL];

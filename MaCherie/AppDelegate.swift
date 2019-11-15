@@ -47,18 +47,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         return true
     }
-    
-    func application(_ application: UIApplication, shouldSaveApplicationState coder: NSCoder) -> Bool {
-        let version = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String
-        UserDefaults.standard.set(version, forKey: ApplicationStateRestorationVersionKey)
-        return true
-    }
-    
-    func application(_ application: UIApplication, shouldRestoreApplicationState coder: NSCoder) -> Bool {
-        let version = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String
-        let applicationStateRestorationVersion = UserDefaults.standard.string(forKey: ApplicationStateRestorationVersionKey)
-        return applicationStateRestorationVersion == version
-    }
 }
 
 extension AppDelegate: UISplitViewControllerDelegate {

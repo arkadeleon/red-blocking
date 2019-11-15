@@ -900,9 +900,6 @@ struct _R: Rswift.Validatable {
       let bundle = R.hostingBundle
       let characterMovesViewController = StoryboardViewControllerResource<CharacterMovesViewController>(identifier: "CharacterMovesViewController")
       let charactersViewController = StoryboardViewControllerResource<CharactersViewController>(identifier: "CharactersViewController")
-      let guideDetailNavigationController = StoryboardViewControllerResource<UIKit.UINavigationController>(identifier: "GuideDetailNavigationController")
-      let guideSplitViewController = StoryboardViewControllerResource<UIKit.UISplitViewController>(identifier: "GuideSplitViewController")
-      let moreNavigationController = StoryboardViewControllerResource<UIKit.UINavigationController>(identifier: "MoreNavigationController")
       let moreViewController = StoryboardViewControllerResource<MoreViewController>(identifier: "MoreViewController")
       let name = "Main"
       let skillMotionPlayerViewController = StoryboardViewControllerResource<SkillMotionPlayerViewController>(identifier: "SkillMotionPlayerViewController")
@@ -913,18 +910,6 @@ struct _R: Rswift.Validatable {
 
       func charactersViewController(_: Void = ()) -> CharactersViewController? {
         return UIKit.UIStoryboard(resource: self).instantiateViewController(withResource: charactersViewController)
-      }
-
-      func guideDetailNavigationController(_: Void = ()) -> UIKit.UINavigationController? {
-        return UIKit.UIStoryboard(resource: self).instantiateViewController(withResource: guideDetailNavigationController)
-      }
-
-      func guideSplitViewController(_: Void = ()) -> UIKit.UISplitViewController? {
-        return UIKit.UIStoryboard(resource: self).instantiateViewController(withResource: guideSplitViewController)
-      }
-
-      func moreNavigationController(_: Void = ()) -> UIKit.UINavigationController? {
-        return UIKit.UIStoryboard(resource: self).instantiateViewController(withResource: moreNavigationController)
       }
 
       func moreViewController(_: Void = ()) -> MoreViewController? {
@@ -943,9 +928,6 @@ struct _R: Rswift.Validatable {
         }
         if _R.storyboard.main().characterMovesViewController() == nil { throw Rswift.ValidationError(description:"[R.swift] ViewController with identifier 'characterMovesViewController' could not be loaded from storyboard 'Main' as 'CharacterMovesViewController'.") }
         if _R.storyboard.main().charactersViewController() == nil { throw Rswift.ValidationError(description:"[R.swift] ViewController with identifier 'charactersViewController' could not be loaded from storyboard 'Main' as 'CharactersViewController'.") }
-        if _R.storyboard.main().guideDetailNavigationController() == nil { throw Rswift.ValidationError(description:"[R.swift] ViewController with identifier 'guideDetailNavigationController' could not be loaded from storyboard 'Main' as 'UIKit.UINavigationController'.") }
-        if _R.storyboard.main().guideSplitViewController() == nil { throw Rswift.ValidationError(description:"[R.swift] ViewController with identifier 'guideSplitViewController' could not be loaded from storyboard 'Main' as 'UIKit.UISplitViewController'.") }
-        if _R.storyboard.main().moreNavigationController() == nil { throw Rswift.ValidationError(description:"[R.swift] ViewController with identifier 'moreNavigationController' could not be loaded from storyboard 'Main' as 'UIKit.UINavigationController'.") }
         if _R.storyboard.main().moreViewController() == nil { throw Rswift.ValidationError(description:"[R.swift] ViewController with identifier 'moreViewController' could not be loaded from storyboard 'Main' as 'MoreViewController'.") }
         if _R.storyboard.main().skillMotionPlayerViewController() == nil { throw Rswift.ValidationError(description:"[R.swift] ViewController with identifier 'skillMotionPlayerViewController' could not be loaded from storyboard 'Main' as 'SkillMotionPlayerViewController'.") }
       }
