@@ -21,9 +21,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let tabBarController = window!.rootViewController as! UITabBarController
         let splitViewController = tabBarController.viewControllers![0] as! UISplitViewController
         splitViewController.delegate = self
+        splitViewController.preferredDisplayMode = .allVisible
         (splitViewController.viewControllers[0] as! UINavigationController).delegate = self
         (splitViewController.viewControllers[1] as! UINavigationController).delegate = self
-
+        
         UserDefaults.standard.register(defaults: [
             Player1PassiveHitboxHiddenKey : false,
             Player1OtherVulnerabilityHitboxHiddenKey : false,

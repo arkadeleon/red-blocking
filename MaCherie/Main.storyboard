@@ -2,7 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="azi-XH-Wyq">
     <device id="retina5_9" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -10,7 +10,7 @@
         <!--Navigation Controller-->
         <scene sceneID="cUZ-e1-qWy">
             <objects>
-                <navigationController definesPresentationContext="YES" useStoryboardIdentifierAsRestorationIdentifier="YES" id="9ZQ-oo-ndQ" sceneMemberID="viewController">
+                <navigationController definesPresentationContext="YES" id="9ZQ-oo-ndQ" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="vCL-mS-UYc">
                         <rect key="frame" x="0.0" y="44" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -174,7 +174,7 @@
         <!--Characters-->
         <scene sceneID="u5b-Ln-nXy">
             <objects>
-                <splitViewController useStoryboardIdentifierAsRestorationIdentifier="YES" id="zSR-vX-PYc" sceneMemberID="viewController">
+                <splitViewController id="zSR-vX-PYc" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Characters" image="gamecontroller" catalog="system" id="yu7-U8-Tdz"/>
                     <toolbarItems/>
                     <connections>
