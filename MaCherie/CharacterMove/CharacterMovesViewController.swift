@@ -39,16 +39,21 @@ class CharacterMovesViewController: UIViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == R.segue.characterMovesViewController.presentMotionPlayerViewController.identifier {
-            let indexPath = tableView.indexPathForSelectedRow!
-            let characterMove = sections[indexPath.section].rows[indexPath.row]
-            
-            let player = (segue.destination as! UINavigationController).topViewController as! MotionPlayerViewController
-            player.delegate = self
-            player.characterCode = characterMove.presented!.characterCode
-            player.skillCode = characterMove.presented!.skillCode
-            player.title = characterMove.presented!.skillName
+        guard segue.identifier == R.segue.characterMovesViewController.presentMotionPlayerViewController.identifier else {
+            return
         }
+        
+        guard let indexPath = tableView.indexPathForSelectedRow else {
+            return
+        }
+        
+        let player = (segue.destination as! UINavigationController).topViewController as! MotionPlayerViewController
+        let characterMove = sections[indexPath.section].rows[indexPath.row]
+        player.characterCode = characterMove.presented!.characterCode
+        player.skillCode = characterMove.presented!.skillCode
+        player.title = characterMove.presented!.skillName
+        
+        tableView.deselectRow(at: indexPath, animated: true)
     }
 }
 
@@ -101,14 +106,6 @@ extension CharacterMovesViewController: UITableViewDelegate {
             nextViewController.title = characterMove.rowTitle
             nextViewController.sections = next
             navigationController?.pushViewController(nextViewController, animated: true)
-        }
-    }
-}
-
-extension CharacterMovesViewController: MotionPlayerViewControllerDelegate {
-    func motionPlayerViewControllerWillDismiss(_ motionPlayerViewController: MotionPlayerViewController) {
-        if UIDevice.current.userInterfaceIdiom == .pad {
-            tableView.deselectRow(at: tableView.indexPathForSelectedRow!, animated: true)
         }
     }
 }

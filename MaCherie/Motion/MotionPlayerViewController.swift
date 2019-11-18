@@ -9,10 +9,6 @@
 import UIKit
 import Combine
 
-@objc protocol MotionPlayerViewControllerDelegate {
-    @objc optional func motionPlayerViewControllerWillDismiss(_ motionPlayerViewController: MotionPlayerViewController)
-}
-
 class MotionPlayerViewController: UIViewController {
     @IBOutlet var playerView: UIView!
     private var playerLayer: MotionPlayerLayer!
@@ -39,7 +35,6 @@ class MotionPlayerViewController: UIViewController {
     @IBOutlet var player2ThrowableHitboxesCheckbox: UIButton!
     @IBOutlet var player2PushHitboxesCheckbox: UIButton!
     
-    weak var delegate: MotionPlayerViewControllerDelegate?
     var characterCode = ""
     var skillCode = ""
     
@@ -145,7 +140,7 @@ class MotionPlayerViewController: UIViewController {
     // MARK: - Action
     
     @IBAction func dismiss(_ sender: Any) {
-        delegate?.motionPlayerViewControllerWillDismiss?(self)
+        dismiss(animated: true, completion: nil)
     }
     
     @IBAction func progressControlDown(_ sender: Any) {
