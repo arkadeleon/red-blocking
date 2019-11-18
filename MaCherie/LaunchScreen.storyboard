@@ -38,6 +38,8 @@
                                     <constraint firstAttribute="height" constant="49" id="Rx8-35-Yyf"/>
                                 </constraints>
                                 <items>
+                                    <tabBarItem title="" image="video" catalog="system" id="M1o-Lj-1rd"/>
+                                    <tabBarItem title="" image="headphones" catalog="system" id="iGP-lq-UeT"/>
                                     <tabBarItem image="gamecontroller" catalog="system" id="gN8-PX-bFQ"/>
                                     <tabBarItem image="ellipsis.circle" catalog="system" id="Lf4-4g-XzX"/>
                                 </items>
@@ -61,5 +63,7 @@
     <resources>
         <image name="ellipsis.circle" catalog="system" width="64" height="60"/>
         <image name="gamecontroller" catalog="system" width="64" height="40"/>
+        <image name="headphones" catalog="system" width="64" height="52"/>
+        <image name="video" catalog="system" width="64" height="40"/>
     </resources>
 </document>

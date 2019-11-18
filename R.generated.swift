@@ -891,6 +891,8 @@ struct _R: Rswift.Validatable {
       static func validate() throws {
         if UIKit.UIImage(named: "ellipsis.circle", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'ellipsis.circle' is used in storyboard 'LaunchScreen', but couldn't be loaded.") }
         if UIKit.UIImage(named: "gamecontroller", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'gamecontroller' is used in storyboard 'LaunchScreen', but couldn't be loaded.") }
+        if UIKit.UIImage(named: "headphones", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'headphones' is used in storyboard 'LaunchScreen', but couldn't be loaded.") }
+        if UIKit.UIImage(named: "video", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'video' is used in storyboard 'LaunchScreen', but couldn't be loaded.") }
         if #available(iOS 11.0, tvOS 11.0, *) {
         }
       }
@@ -921,7 +923,9 @@ struct _R: Rswift.Validatable {
         if UIKit.UIImage(named: "ellipsis.circle", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'ellipsis.circle' is used in storyboard 'Main', but couldn't be loaded.") }
         if UIKit.UIImage(named: "forward", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'forward' is used in storyboard 'Main', but couldn't be loaded.") }
         if UIKit.UIImage(named: "gamecontroller", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'gamecontroller' is used in storyboard 'Main', but couldn't be loaded.") }
+        if UIKit.UIImage(named: "headphones", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'headphones' is used in storyboard 'Main', but couldn't be loaded.") }
         if UIKit.UIImage(named: "play", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'play' is used in storyboard 'Main', but couldn't be loaded.") }
+        if UIKit.UIImage(named: "video", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'video' is used in storyboard 'Main', but couldn't be loaded.") }
         if #available(iOS 11.0, tvOS 11.0, *) {
         }
         if _R.storyboard.main().characterMovesViewController() == nil { throw Rswift.ValidationError(description:"[R.swift] ViewController with identifier 'characterMovesViewController' could not be loaded from storyboard 'Main' as 'CharacterMovesViewController'.") }

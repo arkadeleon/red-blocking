@@ -19,7 +19,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
         let tabBarController = window!.rootViewController as! UITabBarController
-        let splitViewController = tabBarController.viewControllers![0] as! UISplitViewController
+        let splitViewController = tabBarController.viewControllers![2] as! UISplitViewController
         splitViewController.delegate = self
         splitViewController.preferredDisplayMode = .allVisible
         (splitViewController.viewControllers[0] as! UINavigationController).delegate = self
