@@ -118,7 +118,7 @@
             </objects>
             <point key="canvasLocation" x="-1287" y="-381"/>
         </scene>
-        <!--Characters View Controller-->
+        <!--Characters-->
         <scene sceneID="Emi-hD-cep">
             <objects>
                 <viewController storyboardIdentifier="CharactersViewController" id="ogH-PT-2W2" customClass="CharactersViewController" customModule="MaCherie" customModuleProvider="target" sceneMemberID="viewController">
@@ -143,7 +143,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="jqj-Z6-UXX"/>
                     </view>
-                    <navigationItem key="navigationItem" id="ziC-lM-mTh"/>
+                    <navigationItem key="navigationItem" title="Characters" id="ziC-lM-mTh"/>
                     <connections>
                         <outlet property="tableView" destination="0TP-je-jlb" id="h7w-lq-VvB"/>
                         <segue destination="9ZQ-oo-ndQ" kind="showDetail" identifier="ShowDetail" id="2VS-Ld-HJI"/>
@@ -171,11 +171,11 @@
             </objects>
             <point key="canvasLocation" x="-2926" y="531"/>
         </scene>
-        <!--Characters-->
+        <!--Moves-->
         <scene sceneID="u5b-Ln-nXy">
             <objects>
                 <splitViewController id="zSR-vX-PYc" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Characters" image="gamecontroller" catalog="system" id="yu7-U8-Tdz"/>
+                    <tabBarItem key="tabBarItem" title="Moves" image="gamecontroller" catalog="system" id="yu7-U8-Tdz"/>
                     <toolbarItems/>
                     <connections>
                         <segue destination="9ZQ-oo-ndQ" kind="relationship" relationship="detailViewController" id="m87-1a-yA8"/>

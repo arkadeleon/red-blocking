@@ -30,6 +30,7 @@
 		352275D220D2A9C7002144BD /* Hugo.plist in Resources */ = {isa = PBXBuildFile; fileRef = 352275BE20D2A9C7002144BD /* Hugo.plist */; };
 		352275D320D2A9C7002144BD /* Oro.plist in Resources */ = {isa = PBXBuildFile; fileRef = 352275BF20D2A9C7002144BD /* Oro.plist */; };
 		352275D420D2A9C7002144BD /* Q.plist in Resources */ = {isa = PBXBuildFile; fileRef = 352275C020D2A9C7002144BD /* Q.plist */; };
+		352FE9672382840D0083CCF0 /* CharacterBackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 352FE9662382840D0083CCF0 /* CharacterBackgroundView.swift */; };
 		35375CAC20D0FE45004642CB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 35375CAB20D0FE45004642CB /* LaunchScreen.storyboard */; };
 		3566755320D2692F00DD26A4 /* UIColor+Integer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3566755220D2692F00DD26A4 /* UIColor+Integer.swift */; };
 		3566755520D26A2800DD26A4 /* ApplicationDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3566755420D26A2800DD26A4 /* ApplicationDataManager.swift */; };
@@ -98,6 +99,7 @@
 		352275BE20D2A9C7002144BD /* Hugo.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Hugo.plist; sourceTree = "<group>"; };
 		352275BF20D2A9C7002144BD /* Oro.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Oro.plist; sourceTree = "<group>"; };
 		352275C020D2A9C7002144BD /* Q.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Q.plist; sourceTree = "<group>"; };
+		352FE9662382840D0083CCF0 /* CharacterBackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterBackgroundView.swift; sourceTree = "<group>"; };
 		35375CAB20D0FE45004642CB /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3566755220D2692F00DD26A4 /* UIColor+Integer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Integer.swift"; sourceTree = "<group>"; };
 		3566755420D26A2800DD26A4 /* ApplicationDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationDataManager.swift; sourceTree = "<group>"; };
@@ -225,6 +227,7 @@
 				35FA31A320D8B55A009A5D7B /* CharacterCell.swift */,
 				35FA31A420D8B55A009A5D7B /* CharacterCell.xib */,
 				35B9241920D1194B0081BD00 /* CharactersViewController.swift */,
+				352FE9662382840D0083CCF0 /* CharacterBackgroundView.swift */,
 			);
 			path = Character;
 			sourceTree = "<group>";
@@ -499,6 +502,7 @@
 			files = (
 				35B69A2C20D8DB0D00F05A2C /* CharacterMoveDetailCell.swift in Sources */,
 				35B69A2420D8DA2700F05A2C /* CharacterSupplementaryCell.swift in Sources */,
+				352FE9672382840D0083CCF0 /* CharacterBackgroundView.swift in Sources */,
 				35C41F4C237D3E7E00A1EBF7 /* MotionPlayer.swift in Sources */,
 				35EFE5C220D3A187007EB379 /* PushAnimator.swift in Sources */,
 				35FA31A520D8B55A009A5D7B /* CharacterCell.swift in Sources */,

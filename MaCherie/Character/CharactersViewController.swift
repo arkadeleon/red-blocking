@@ -18,34 +18,23 @@ class CharactersViewController: UIViewController {
         return characters
     }()
     
-    lazy var bodyView: UIImageView = {
+    lazy var characterBackgroundView: CharacterBackgroundView = {
+        let navigationController: UINavigationController
         if UIDevice.current.userInterfaceIdiom == .phone {
-            let statusBarHeight = UIApplication.shared.statusBarFrame.height
-            let navigationBarHeight = navigationController!.navigationBar.bounds.height
-            let bodyViewFrame = navigationController!.view.bounds.inset(by: UIEdgeInsets(top: statusBarHeight + navigationBarHeight, left: 0, bottom: 0, right: 0))
-            let bodyView = UIImageView(frame: bodyViewFrame)
-            bodyView.contentMode = .scaleAspectFit
-            bodyView.backgroundColor = .systemGroupedBackground
-            navigationController!.view.insertSubview(bodyView, at: 0)
-            return bodyView
+            navigationController = self.navigationController!
         } else {
-            let statusBarHeight = UIApplication.shared.statusBarFrame.height
-            let detailNavigationController = splitViewController?.viewControllers[1] as! UINavigationController
-            let navigationBarHeight = detailNavigationController.navigationBar.bounds.height
-            let bodyViewFrame = detailNavigationController.view.bounds.inset(by: UIEdgeInsets(top: statusBarHeight + navigationBarHeight, left: 0, bottom: 0, right: 0))
-            let bodyView = UIImageView(frame: bodyViewFrame)
-            bodyView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
-            bodyView.contentMode = .scaleAspectFit
-            bodyView.backgroundColor = .systemGroupedBackground
-            detailNavigationController.view.insertSubview(bodyView, at: 0)
-            return bodyView
+            navigationController = splitViewController!.viewControllers[1] as! UINavigationController
         }
+        
+        let characterBackgroundView = CharacterBackgroundView(frame: navigationController.view.bounds)
+        characterBackgroundView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+        navigationController.view.insertSubview(characterBackgroundView, at: 0)
+        
+        return characterBackgroundView
     }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        title = "Characters"
         
         tableView.register(R.nib.characterCell)
         
@@ -81,7 +70,7 @@ class CharactersViewController: UIViewController {
             detailViewController.title = character.rowTitle
             detailViewController.sections = sections
             
-            bodyView.image = UIImage(named: character.nextBackgroundImage)
+            characterBackgroundView.imageView.image = UIImage(named: character.nextBackgroundImage)
         }
     }
     
@@ -95,7 +84,7 @@ class CharactersViewController: UIViewController {
         detailViewController.title = character.rowTitle
         detailViewController.sections = sections
         
-        bodyView.image = UIImage(named: character.nextBackgroundImage)
+        characterBackgroundView.imageView.image = UIImage(named: character.nextBackgroundImage)
     }
 }
 
