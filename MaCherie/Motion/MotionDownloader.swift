@@ -17,7 +17,7 @@ class MotionDownloader {
     
     private let session = URLSession(configuration: .default)
     private let localBaseURL = try! FileManager.default.url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: true)
-    private let remoteBaseURL = URL(string: "http://game-institute.leonandvane.date/games/sf33")!
+    private let remoteBaseURL = URL(string: "https://game-institute.nyc3.digitaloceanspaces.com/ma-cherie")!
     
     init(characterCode: String, skillCode: String) {
         self.characterCode = characterCode
