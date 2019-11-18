@@ -15,7 +15,7 @@ class MoreViewController: UITableViewController {
         
         let cell = tableView.cellForRow(at: indexPath)
         switch cell?.reuseIdentifier {
-        case R.reuseIdentifier.feedback.identifier:
+        case R.reuseIdentifier.feedbackCell.identifier:
             if MFMailComposeViewController.canSendMail() {
                 let mailCompose = MFMailComposeViewController()
                 mailCompose.mailComposeDelegate = self
@@ -23,7 +23,7 @@ class MoreViewController: UITableViewController {
                 mailCompose.setToRecipients(["leon@leonandvane.date"])
                 present(mailCompose, animated: true, completion: nil)
             }
-        case R.reuseIdentifier.clearDataStorage.identifier:
+        case R.reuseIdentifier.clearDataStorageCell.identifier:
             let alert = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
             alert.addAction(UIAlertAction(title: "Clear data storage", style: .destructive, handler: { (action) in
                 

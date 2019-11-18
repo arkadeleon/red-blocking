@@ -2,7 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="azi-XH-Wyq">
     <device id="retina5_9" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -21,7 +21,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MuN-zJ-ujl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1287" y="326"/>
+            <point key="canvasLocation" x="-1127" y="335"/>
         </scene>
         <!--More-->
         <scene sceneID="jPa-xL-8VK">
@@ -33,7 +33,7 @@
                         <sections>
                             <tableViewSection id="u7w-CT-hJl">
                                 <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Feedback" textLabel="lqU-Qg-tLg" style="IBUITableViewCellStyleDefault" id="PyU-mV-khD">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="FeedbackCell" textLabel="lqU-Qg-tLg" style="IBUITableViewCellStyleDefault" id="PyU-mV-khD">
                                         <rect key="frame" x="16" y="18" width="343" height="43.666667938232422"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="PyU-mV-khD" id="AK0-5h-IGR">
@@ -54,7 +54,7 @@
                             </tableViewSection>
                             <tableViewSection id="vC2-Jm-MGB">
                                 <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ClearDataStorage" textLabel="WV1-eb-1xE" style="IBUITableViewCellStyleDefault" id="xcX-q8-2FN">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ClearDataStorageCell" textLabel="WV1-eb-1xE" style="IBUITableViewCellStyleDefault" id="xcX-q8-2FN">
                                         <rect key="frame" x="16" y="97.666667938232422" width="343" height="43.666667938232422"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="xcX-q8-2FN" id="B9G-HK-1sU">
@@ -116,7 +116,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="U5K-L5-9Pu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1287" y="-381"/>
+            <point key="canvasLocation" x="-1127" y="-372"/>
         </scene>
         <!--Characters-->
         <scene sceneID="Emi-hD-cep">
@@ -151,24 +151,27 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="G5z-bl-2jI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-498.39999999999998" y="-381.2807881773399"/>
+            <point key="canvasLocation" x="-178" y="-372"/>
         </scene>
-        <!--Root View Controller-->
+        <!--Playlists-->
         <scene sceneID="Mik-q4-FX3">
             <objects>
-                <tableViewController id="Tld-yQ-pUj" customClass="VideosViewController" customModule="MaCherie" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Rwc-Sj-bUk">
+                <tableViewController storyboardIdentifier="PlaylistsViewController" id="Tld-yQ-pUj" customClass="PlaylistsViewController" customModule="MaCherie" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="insetGrouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="Rwc-Sj-bUk">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="bEJ-wn-58c">
-                                <rect key="frame" x="0.0" y="28" width="375" height="43.666667938232422"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="PlaylistCell" id="bEJ-wn-58c">
+                                <rect key="frame" x="16" y="55.333332061767578" width="343" height="43.666667938232422"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="bEJ-wn-58c" id="qUS-wh-Dbc">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.666667938232422"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="343" height="43.666667938232422"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="QWq-HJ-mKK" kind="show" identifier="ShowVideos" id="x7C-t0-gpZ"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -176,11 +179,46 @@
                             <outlet property="delegate" destination="Tld-yQ-pUj" id="bfk-Lt-oZe"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="I8b-IR-YtF"/>
+                    <navigationItem key="navigationItem" title="Playlists" id="I8b-IR-YtF"/>
+                    <refreshControl key="refreshControl" opaque="NO" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" id="zdh-w0-xfU">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <connections>
+                            <action selector="refreshControlAction:" destination="Tld-yQ-pUj" eventType="valueChanged" id="Op4-hX-AHO"/>
+                        </connections>
+                    </refreshControl>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YLD-Em-gjs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1126" y="-1770"/>
+        </scene>
+        <!--Videos-->
+        <scene sceneID="EEF-EB-0hM">
+            <objects>
+                <tableViewController storyboardIdentifier="VideosViewController" id="QWq-HJ-mKK" customClass="VideosViewController" customModule="MaCherie" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="insetGrouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="2Hh-KG-DNa">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="VideoCell" id="DP6-yt-Su3">
+                                <rect key="frame" x="16" y="55.333332061767578" width="343" height="43.666667938232422"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="DP6-yt-Su3" id="C3q-VN-XQt">
+                                    <rect key="frame" x="0.0" y="0.0" width="343" height="43.666667938232422"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="QWq-HJ-mKK" id="1z0-nh-Zxm"/>
+                            <outlet property="delegate" destination="QWq-HJ-mKK" id="5tY-1n-vKa"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Videos" id="4KN-DV-lF5"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="k49-WB-Eki" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-178" y="-1770"/>
         </scene>
         <!--Videos-->
         <scene sceneID="R9A-hI-Oej">
@@ -199,20 +237,20 @@
             </objects>
             <point key="canvasLocation" x="-2081" y="-1770"/>
         </scene>
-        <!--Root View Controller-->
+        <!--Music-->
         <scene sceneID="GJC-Pb-2cY">
             <objects>
-                <tableViewController id="Avq-na-o7m" customClass="MusicViewController" customModule="MaCherie" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="dnK-IU-CA1">
+                <tableViewController storyboardIdentifier="MusicViewController" id="Avq-na-o7m" customClass="MusicViewController" customModule="MaCherie" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="insetGrouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="dnK-IU-CA1">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="ZPu-A4-ezx">
-                                <rect key="frame" x="0.0" y="28" width="375" height="43.666667938232422"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="AudioCell" id="ZPu-A4-ezx">
+                                <rect key="frame" x="16" y="55.333332061767578" width="343" height="43.666667938232422"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ZPu-A4-ezx" id="Q4n-nM-CG5">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.666667938232422"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="343" height="43.666667938232422"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
@@ -222,7 +260,13 @@
                             <outlet property="delegate" destination="Avq-na-o7m" id="rNw-cz-FME"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="Afo-FV-Cke"/>
+                    <navigationItem key="navigationItem" title="Music" id="Afo-FV-Cke"/>
+                    <refreshControl key="refreshControl" opaque="NO" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" id="7Cc-jI-Bbx">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <connections>
+                            <action selector="refreshControlAction:" destination="Avq-na-o7m" eventType="valueChanged" id="d8T-b2-nvi"/>
+                        </connections>
+                    </refreshControl>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3A2-eC-X3y" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -308,12 +352,12 @@
                     <navigationItem key="navigationItem" id="70e-Gc-1W5"/>
                     <connections>
                         <outlet property="tableView" destination="Pof-wR-L4S" id="DfH-O8-Y9d"/>
-                        <segue destination="9re-0b-kvS" kind="presentation" identifier="PresentMotionPlayerViewController" modalPresentationStyle="pageSheet" id="1dM-Xk-nIm"/>
+                        <segue destination="9re-0b-kvS" kind="presentation" identifier="ShowMotionPlayer" modalPresentationStyle="pageSheet" id="1dM-Xk-nIm"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3Bu-re-eQr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-474.39999999999998" y="325.86206896551727"/>
+            <point key="canvasLocation" x="-154" y="335"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="TaJ-os-b12">
@@ -329,7 +373,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wgE-RD-yAB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="323" y="326"/>
+            <point key="canvasLocation" x="841" y="335"/>
         </scene>
         <!--Motion Player View Controller-->
         <scene sceneID="vYV-MR-L0z">
@@ -828,7 +872,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0bg-fP-faq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1148" y="325.1231527093596"/>
+            <point key="canvasLocation" x="1788" y="335"/>
         </scene>
     </scenes>
     <resources>

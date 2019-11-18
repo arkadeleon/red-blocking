@@ -58,7 +58,8 @@ class CharactersViewController: UIViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "ShowDetail" {
+        switch segue.identifier {
+        case R.segue.charactersViewController.showDetail.identifier:
             let indexPath = tableView.indexPathForSelectedRow!
             let character = characters[indexPath.row]
             
@@ -71,6 +72,8 @@ class CharactersViewController: UIViewController {
             detailViewController.sections = sections
             
             characterBackgroundView.imageView.image = UIImage(named: character.nextBackgroundImage)
+        default:
+            break
         }
     }
     

@@ -39,21 +39,20 @@ class CharacterMovesViewController: UIViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard segue.identifier == R.segue.characterMovesViewController.presentMotionPlayerViewController.identifier else {
-            return
+        switch segue.identifier {
+        case R.segue.characterMovesViewController.showMotionPlayer.identifier:
+            let indexPath = tableView.indexPathForSelectedRow!
+            
+            let player = (segue.destination as! UINavigationController).topViewController as! MotionPlayerViewController
+            let characterMove = sections[indexPath.section].rows[indexPath.row]
+            player.characterCode = characterMove.presented!.characterCode
+            player.skillCode = characterMove.presented!.skillCode
+            player.title = characterMove.presented!.skillName
+            
+            tableView.deselectRow(at: indexPath, animated: true)
+        default:
+            break
         }
-        
-        guard let indexPath = tableView.indexPathForSelectedRow else {
-            return
-        }
-        
-        let player = (segue.destination as! UINavigationController).topViewController as! MotionPlayerViewController
-        let characterMove = sections[indexPath.section].rows[indexPath.row]
-        player.characterCode = characterMove.presented!.characterCode
-        player.skillCode = characterMove.presented!.skillCode
-        player.title = characterMove.presented!.skillName
-        
-        tableView.deselectRow(at: indexPath, animated: true)
     }
 }
 
@@ -99,7 +98,7 @@ extension CharacterMovesViewController: UITableViewDelegate {
         if let presented = characterMove.presented {
             let presentedViewControllerName = presented.viewController
             if presentedViewControllerName == "FramesPlayerViewController" {
-                performSegue(withIdentifier: R.segue.characterMovesViewController.presentMotionPlayerViewController, sender: self)
+                performSegue(withIdentifier: R.segue.characterMovesViewController.showMotionPlayer, sender: self)
             }
         } else if let next = characterMove.next {
             let nextViewController = storyboard?.instantiateViewController(withIdentifier: "CharacterMovesViewController") as! CharacterMovesViewController

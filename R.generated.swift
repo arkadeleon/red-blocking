@@ -89,19 +89,19 @@ struct R: Rswift.Validatable {
   }
 
   #if os(iOS) || os(tvOS)
-  /// This `R.segue` struct is generated, and contains static references to 2 view controllers.
+  /// This `R.segue` struct is generated, and contains static references to 3 view controllers.
   struct segue {
     /// This struct is generated for `CharacterMovesViewController`, and contains static references to 1 segues.
     struct characterMovesViewController {
-      /// Segue identifier `PresentMotionPlayerViewController`.
-      static let presentMotionPlayerViewController: Rswift.StoryboardSegueIdentifier<UIKit.UIStoryboardSegue, CharacterMovesViewController, UIKit.UINavigationController> = Rswift.StoryboardSegueIdentifier(identifier: "PresentMotionPlayerViewController")
+      /// Segue identifier `ShowMotionPlayer`.
+      static let showMotionPlayer: Rswift.StoryboardSegueIdentifier<UIKit.UIStoryboardSegue, CharacterMovesViewController, UIKit.UINavigationController> = Rswift.StoryboardSegueIdentifier(identifier: "ShowMotionPlayer")
 
       #if os(iOS) || os(tvOS)
-      /// Optionally returns a typed version of segue `PresentMotionPlayerViewController`.
+      /// Optionally returns a typed version of segue `ShowMotionPlayer`.
       /// Returns nil if either the segue identifier, the source, destination, or segue types don't match.
       /// For use inside `prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?)`.
-      static func presentMotionPlayerViewController(segue: UIKit.UIStoryboardSegue) -> Rswift.TypedStoryboardSegueInfo<UIKit.UIStoryboardSegue, CharacterMovesViewController, UIKit.UINavigationController>? {
-        return Rswift.TypedStoryboardSegueInfo(segueIdentifier: R.segue.characterMovesViewController.presentMotionPlayerViewController, segue: segue)
+      static func showMotionPlayer(segue: UIKit.UIStoryboardSegue) -> Rswift.TypedStoryboardSegueInfo<UIKit.UIStoryboardSegue, CharacterMovesViewController, UIKit.UINavigationController>? {
+        return Rswift.TypedStoryboardSegueInfo(segueIdentifier: R.segue.characterMovesViewController.showMotionPlayer, segue: segue)
       }
       #endif
 
@@ -119,6 +119,23 @@ struct R: Rswift.Validatable {
       /// For use inside `prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?)`.
       static func showDetail(segue: UIKit.UIStoryboardSegue) -> Rswift.TypedStoryboardSegueInfo<UIKit.UIStoryboardSegue, CharactersViewController, UIKit.UINavigationController>? {
         return Rswift.TypedStoryboardSegueInfo(segueIdentifier: R.segue.charactersViewController.showDetail, segue: segue)
+      }
+      #endif
+
+      fileprivate init() {}
+    }
+
+    /// This struct is generated for `PlaylistsViewController`, and contains static references to 1 segues.
+    struct playlistsViewController {
+      /// Segue identifier `ShowVideos`.
+      static let showVideos: Rswift.StoryboardSegueIdentifier<UIKit.UIStoryboardSegue, PlaylistsViewController, VideosViewController> = Rswift.StoryboardSegueIdentifier(identifier: "ShowVideos")
+
+      #if os(iOS) || os(tvOS)
+      /// Optionally returns a typed version of segue `ShowVideos`.
+      /// Returns nil if either the segue identifier, the source, destination, or segue types don't match.
+      /// For use inside `prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?)`.
+      static func showVideos(segue: UIKit.UIStoryboardSegue) -> Rswift.TypedStoryboardSegueInfo<UIKit.UIStoryboardSegue, PlaylistsViewController, VideosViewController>? {
+        return Rswift.TypedStoryboardSegueInfo(segueIdentifier: R.segue.playlistsViewController.showVideos, segue: segue)
       }
       #endif
 
@@ -754,8 +771,10 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
 
-  /// This `R.reuseIdentifier` struct is generated, and contains static references to 7 reuse identifiers.
+  /// This `R.reuseIdentifier` struct is generated, and contains static references to 10 reuse identifiers.
   struct reuseIdentifier {
+    /// Reuse identifier `AudioCell`.
+    static let audioCell: Rswift.ReuseIdentifier<UIKit.UITableViewCell> = Rswift.ReuseIdentifier(identifier: "AudioCell")
     /// Reuse identifier `CharacterCell`.
     static let characterCell: Rswift.ReuseIdentifier<CharacterCell> = Rswift.ReuseIdentifier(identifier: "CharacterCell")
     /// Reuse identifier `CharacterMoveCell`.
@@ -766,10 +785,14 @@ struct R: Rswift.Validatable {
     static let characterMoveFramesCell: Rswift.ReuseIdentifier<CharacterMoveFramesCell> = Rswift.ReuseIdentifier(identifier: "CharacterMoveFramesCell")
     /// Reuse identifier `CharacterSupplementaryCell`.
     static let characterSupplementaryCell: Rswift.ReuseIdentifier<CharacterSupplementaryCell> = Rswift.ReuseIdentifier(identifier: "CharacterSupplementaryCell")
-    /// Reuse identifier `ClearDataStorage`.
-    static let clearDataStorage: Rswift.ReuseIdentifier<UIKit.UITableViewCell> = Rswift.ReuseIdentifier(identifier: "ClearDataStorage")
-    /// Reuse identifier `Feedback`.
-    static let feedback: Rswift.ReuseIdentifier<UIKit.UITableViewCell> = Rswift.ReuseIdentifier(identifier: "Feedback")
+    /// Reuse identifier `ClearDataStorageCell`.
+    static let clearDataStorageCell: Rswift.ReuseIdentifier<UIKit.UITableViewCell> = Rswift.ReuseIdentifier(identifier: "ClearDataStorageCell")
+    /// Reuse identifier `FeedbackCell`.
+    static let feedbackCell: Rswift.ReuseIdentifier<UIKit.UITableViewCell> = Rswift.ReuseIdentifier(identifier: "FeedbackCell")
+    /// Reuse identifier `PlaylistCell`.
+    static let playlistCell: Rswift.ReuseIdentifier<UIKit.UITableViewCell> = Rswift.ReuseIdentifier(identifier: "PlaylistCell")
+    /// Reuse identifier `VideoCell`.
+    static let videoCell: Rswift.ReuseIdentifier<UIKit.UITableViewCell> = Rswift.ReuseIdentifier(identifier: "VideoCell")
 
     fileprivate init() {}
   }
@@ -908,7 +931,10 @@ struct _R: Rswift.Validatable {
       let bundle = R.hostingBundle
       let characterMovesViewController = StoryboardViewControllerResource<CharacterMovesViewController>(identifier: "CharacterMovesViewController")
       let charactersViewController = StoryboardViewControllerResource<CharactersViewController>(identifier: "CharactersViewController")
+      let musicViewController = StoryboardViewControllerResource<MusicViewController>(identifier: "MusicViewController")
       let name = "Main"
+      let playlistsViewController = StoryboardViewControllerResource<PlaylistsViewController>(identifier: "PlaylistsViewController")
+      let videosViewController = StoryboardViewControllerResource<VideosViewController>(identifier: "VideosViewController")
 
       func characterMovesViewController(_: Void = ()) -> CharacterMovesViewController? {
         return UIKit.UIStoryboard(resource: self).instantiateViewController(withResource: characterMovesViewController)
@@ -916,6 +942,18 @@ struct _R: Rswift.Validatable {
 
       func charactersViewController(_: Void = ()) -> CharactersViewController? {
         return UIKit.UIStoryboard(resource: self).instantiateViewController(withResource: charactersViewController)
+      }
+
+      func musicViewController(_: Void = ()) -> MusicViewController? {
+        return UIKit.UIStoryboard(resource: self).instantiateViewController(withResource: musicViewController)
+      }
+
+      func playlistsViewController(_: Void = ()) -> PlaylistsViewController? {
+        return UIKit.UIStoryboard(resource: self).instantiateViewController(withResource: playlistsViewController)
+      }
+
+      func videosViewController(_: Void = ()) -> VideosViewController? {
+        return UIKit.UIStoryboard(resource: self).instantiateViewController(withResource: videosViewController)
       }
 
       static func validate() throws {
@@ -930,6 +968,9 @@ struct _R: Rswift.Validatable {
         }
         if _R.storyboard.main().characterMovesViewController() == nil { throw Rswift.ValidationError(description:"[R.swift] ViewController with identifier 'characterMovesViewController' could not be loaded from storyboard 'Main' as 'CharacterMovesViewController'.") }
         if _R.storyboard.main().charactersViewController() == nil { throw Rswift.ValidationError(description:"[R.swift] ViewController with identifier 'charactersViewController' could not be loaded from storyboard 'Main' as 'CharactersViewController'.") }
+        if _R.storyboard.main().musicViewController() == nil { throw Rswift.ValidationError(description:"[R.swift] ViewController with identifier 'musicViewController' could not be loaded from storyboard 'Main' as 'MusicViewController'.") }
+        if _R.storyboard.main().playlistsViewController() == nil { throw Rswift.ValidationError(description:"[R.swift] ViewController with identifier 'playlistsViewController' could not be loaded from storyboard 'Main' as 'PlaylistsViewController'.") }
+        if _R.storyboard.main().videosViewController() == nil { throw Rswift.ValidationError(description:"[R.swift] ViewController with identifier 'videosViewController' could not be loaded from storyboard 'Main' as 'VideosViewController'.") }
       }
 
       fileprivate init() {}

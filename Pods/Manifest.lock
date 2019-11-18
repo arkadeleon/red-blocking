@@ -2,19 +2,31 @@ PODS:
   - R.swift (5.1.0):
     - R.swift.Library (~> 5.1.0)
   - R.swift.Library (5.1.0)
+  - XMLParsing (0.0.3)
 
 DEPENDENCIES:
   - R.swift
+  - XMLParsing (from `https://github.com/ShawnMoore/XMLParsing.git`)
 
 SPEC REPOS:
   trunk:
     - R.swift
     - R.swift.Library
 
+EXTERNAL SOURCES:
+  XMLParsing:
+    :git: https://github.com/ShawnMoore/XMLParsing.git
+
+CHECKOUT OPTIONS:
+  XMLParsing:
+    :commit: 594272e4df40798c53ae1735ee65f3f387291670
+    :git: https://github.com/ShawnMoore/XMLParsing.git
+
 SPEC CHECKSUMS:
   R.swift: 8cbc4fc69b740305b6a17c8a8ed968eb788962d9
   R.swift.Library: fa85ce1e0d0b7e818cd9e080df910ba54d2776cc
+  XMLParsing: 085edb6fa22c71d6b53a79299f990a91e7414d19
 
-PODFILE CHECKSUM: 5f256ba4b9cee36f7bb9d0aad6346daa0d38352e
+PODFILE CHECKSUM: ac4406287a28ead52f234a473f56c717f27038ab
 
-COCOAPODS: 1.8.3
+COCOAPODS: 1.8.4

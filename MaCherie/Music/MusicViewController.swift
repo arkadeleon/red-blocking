@@ -8,42 +8,57 @@
 
 import UIKit
 import AVKit
+import XMLParsing
 
 class MusicViewController: UITableViewController {
     private let player = AVPlayer()
-    private var items: [AVPlayerItem] = []
+    private var audios: [S3Object] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
     }
     
-    @objc private func refreshControlAction(_ sender: Any) {
+    @IBAction func refreshControlAction(_ sender: Any) {
         let url = URL(string: "https://game-institute.nyc3.digitaloceanspaces.com/?prefix=ma-cherie/music/")!
         URLSession.shared.dataTask(with: url) { (data, response, error) in
             guard let data = data else {
                 return
             }
             
-            let decoder = JSONDecoder()
-            decoder.dateDecodingStrategy = .iso8601
-            let objectList = try? decoder.decode(S3ObjectList.self, from: data)
+            let decoder = XMLDecoder()
             
-            self.items = objectList?.objects?.map { (object) -> AVPlayerItem in
-                let baseURL = URL(string: "https://game-institute.nyc3.digitaloceanspaces.com")!
-                let url = baseURL.appendingPathComponent(object.key)
-                let item = AVPlayerItem(url: url)
-                return item
-            } ?? []
-            self.tableView.reloadData()
+            let formatter = DateFormatter()
+            formatter.calendar = Calendar(identifier: .iso8601)
+            formatter.locale = Locale(identifier: "en_US_POSIX")
+            formatter.timeZone = TimeZone(secondsFromGMT: 0)
+            formatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSXXXXX"
+            decoder.dateDecodingStrategy = .formatted(formatter)
+            
+            let objectList = try? decoder.decode(S3ObjectList.self, from: data)
+            self.audios = objectList?.objects ?? []
+            
+            DispatchQueue.main.async {
+                self.tableView.reloadData()
+                self.refreshControl?.endRefreshing()
+            }
         }.resume()
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return items.count
+        return audios.count
+    }
+    
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: R.reuseIdentifier.audioCell, for: indexPath)!
+        cell.textLabel?.text = (audios[indexPath.row].key as NSString).lastPathComponent
+        return cell
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let item = items[indexPath.row]
+        let audio = audios[indexPath.row]
+        let baseURL = URL(string: "https://game-institute.nyc3.digitaloceanspaces.com")!
+        let url = baseURL.appendingPathComponent(audio.key)
+        let item = AVPlayerItem(url: url)
         player.replaceCurrentItem(with: item)
         player.play()
     }
