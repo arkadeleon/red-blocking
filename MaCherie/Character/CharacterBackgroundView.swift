@@ -14,11 +14,11 @@ class CharacterBackgroundView: UIView {
     override init(frame: CGRect) {
         imageView = UIImageView()
         imageView.translatesAutoresizingMaskIntoConstraints = false
+        imageView.contentMode = .scaleAspectFit
         
         super.init(frame: frame)
         
         backgroundColor = .systemGroupedBackground
-        contentMode = .scaleAspectFit
         
         addSubview(imageView)
         imageView.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor).isActive = true
