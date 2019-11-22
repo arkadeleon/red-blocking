@@ -9,18 +9,31 @@
 import UIKit
 import XMLParsing
 
+struct Playlist {
+    var title: String
+    var videos: [S3Object]
+}
+
 class PlaylistsViewController: UITableViewController {
     private var playlists: [Playlist] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        refreshControl!.beginRefreshing()
+        refreshControlAction(refreshControl!)
     }
     
     @IBAction func refreshControlAction(_ sender: Any) {
         let url = URL(string: "https://game-institute.nyc3.digitaloceanspaces.com/?prefix=ma-cherie/videos/&marker=\("")")!
         URLSession.shared.dataTask(with: url) { (data, response, error) in
+            defer {
+                DispatchQueue.main.async {
+                    self.tableView.reloadData()
+                    self.refreshControl?.endRefreshing()
+                }
+            }
+            
             guard let data = data else {
                 return
             }
@@ -52,11 +65,6 @@ class PlaylistsViewController: UITableViewController {
             }) ?? [:]
             self.playlists = playlists.map { (playlist) -> Playlist in
                 Playlist(title: playlist.key, videos: playlist.value)
-            }
-            
-            DispatchQueue.main.async {
-                self.tableView.reloadData()
-                self.refreshControl?.endRefreshing()
             }
         }.resume()
     }

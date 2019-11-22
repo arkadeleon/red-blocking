@@ -16,11 +16,21 @@ class MusicViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        refreshControl!.beginRefreshing()
+        refreshControlAction(refreshControl!)
     }
     
     @IBAction func refreshControlAction(_ sender: Any) {
         let url = URL(string: "https://game-institute.nyc3.digitaloceanspaces.com/?prefix=ma-cherie/music/")!
         URLSession.shared.dataTask(with: url) { (data, response, error) in
+            defer {
+                DispatchQueue.main.async {
+                    self.tableView.reloadData()
+                    self.refreshControl?.endRefreshing()
+                }
+            }
+            
             guard let data = data else {
                 return
             }
@@ -36,11 +46,6 @@ class MusicViewController: UITableViewController {
             
             let objectList = try? decoder.decode(S3ObjectList.self, from: data)
             self.audios = objectList?.objects ?? []
-            
-            DispatchQueue.main.async {
-                self.tableView.reloadData()
-                self.refreshControl?.endRefreshing()
-            }
         }.resume()
     }
     
@@ -50,7 +55,10 @@ class MusicViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: R.reuseIdentifier.audioCell, for: indexPath)!
-        cell.textLabel?.text = (audios[indexPath.row].key as NSString).lastPathComponent
+        let path = audios[indexPath.row].key as NSString
+        let lastPathComponent = path.lastPathComponent as NSString
+        cell.textLabel?.text = lastPathComponent.deletingPathExtension
+        cell.textLabel?.numberOfLines = 2
         return cell
     }
     

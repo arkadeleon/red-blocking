@@ -959,11 +959,14 @@ struct _R: Rswift.Validatable {
       static func validate() throws {
         if UIKit.UIImage(named: "ellipsis.circle", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'ellipsis.circle' is used in storyboard 'Main', but couldn't be loaded.") }
         if UIKit.UIImage(named: "envelope", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'envelope' is used in storyboard 'Main', but couldn't be loaded.") }
+        if UIKit.UIImage(named: "film", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'film' is used in storyboard 'Main', but couldn't be loaded.") }
         if UIKit.UIImage(named: "gamecontroller", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'gamecontroller' is used in storyboard 'Main', but couldn't be loaded.") }
         if UIKit.UIImage(named: "gobackward.minus", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'gobackward.minus' is used in storyboard 'Main', but couldn't be loaded.") }
         if UIKit.UIImage(named: "goforward.plus", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'goforward.plus' is used in storyboard 'Main', but couldn't be loaded.") }
         if UIKit.UIImage(named: "headphones", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'headphones' is used in storyboard 'Main', but couldn't be loaded.") }
+        if UIKit.UIImage(named: "music.note", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'music.note' is used in storyboard 'Main', but couldn't be loaded.") }
         if UIKit.UIImage(named: "play.circle", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'play.circle' is used in storyboard 'Main', but couldn't be loaded.") }
+        if UIKit.UIImage(named: "rectangle.stack", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'rectangle.stack' is used in storyboard 'Main', but couldn't be loaded.") }
         if UIKit.UIImage(named: "trash", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'trash' is used in storyboard 'Main', but couldn't be loaded.") }
         if UIKit.UIImage(named: "video", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'video' is used in storyboard 'Main', but couldn't be loaded.") }
         if #available(iOS 11.0, tvOS 11.0, *) {

@@ -24,7 +24,10 @@ class VideosViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: R.reuseIdentifier.videoCell, for: indexPath)!
-        cell.textLabel?.text = (videos[indexPath.row].key as NSString).lastPathComponent
+        let path = videos[indexPath.row].key as NSString
+        let lastPathComponent = path.lastPathComponent as NSString
+        cell.textLabel?.text = lastPathComponent.deletingPathExtension
+        cell.textLabel?.numberOfLines = 2
         return cell
     }
     
