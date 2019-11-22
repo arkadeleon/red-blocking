@@ -167,10 +167,10 @@ class MotionPlayerViewController: UIViewController {
     @IBAction func playOrPause(_ sender: UIButton) {
         if player?.state == .playing {
             player?.pause()
-            sender.setImage(UIImage(systemName: "play"), for: .normal)
+            sender.setImage(UIImage(systemName: "play.circle"), for: .normal)
         } else {
             player?.play()
-            sender.setImage(UIImage(systemName: "pause"), for: .normal)
+            sender.setImage(UIImage(systemName: "pause.circle"), for: .normal)
         }
     }
     
