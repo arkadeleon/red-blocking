@@ -23,11 +23,6 @@ class CharacterMovesViewController: UIViewController {
         view.backgroundColor = .clear
         
         navigationController?.delegate = AppDelegate.shared
-        
-        tableView.register(R.nib.characterMoveCell)
-        tableView.register(R.nib.characterMoveDetailCell)
-        tableView.register(R.nib.characterMoveFramesCell)
-        tableView.register(R.nib.characterSupplementaryCell)
     }
     
     override func viewWillAppear(_ animated: Bool) {

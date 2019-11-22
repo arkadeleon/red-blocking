@@ -41,13 +41,9 @@
 		3566755720D26A4D00DD26A4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3566755620D26A4D00DD26A4 /* AppDelegate.swift */; };
 		3566755920D2702C00DD26A4 /* MotionDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3566755820D2702C00DD26A4 /* MotionDownloader.swift */; };
 		35B69A2420D8DA2700F05A2C /* CharacterSupplementaryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35B69A2220D8DA2700F05A2C /* CharacterSupplementaryCell.swift */; };
-		35B69A2520D8DA2700F05A2C /* CharacterSupplementaryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 35B69A2320D8DA2700F05A2C /* CharacterSupplementaryCell.xib */; };
 		35B69A2820D8DA4700F05A2C /* CharacterMoveCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35B69A2620D8DA4700F05A2C /* CharacterMoveCell.swift */; };
-		35B69A2920D8DA4700F05A2C /* CharacterMoveCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 35B69A2720D8DA4700F05A2C /* CharacterMoveCell.xib */; };
 		35B69A2C20D8DB0D00F05A2C /* CharacterMoveDetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35B69A2A20D8DB0D00F05A2C /* CharacterMoveDetailCell.swift */; };
-		35B69A2D20D8DB0D00F05A2C /* CharacterMoveDetailCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 35B69A2B20D8DB0D00F05A2C /* CharacterMoveDetailCell.xib */; };
 		35B69A3020D8DC0300F05A2C /* CharacterMoveFramesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35B69A2E20D8DC0300F05A2C /* CharacterMoveFramesCell.swift */; };
-		35B69A3120D8DC0300F05A2C /* CharacterMoveFramesCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 35B69A2F20D8DC0300F05A2C /* CharacterMoveFramesCell.xib */; };
 		35B69A3620D8DECE00F05A2C /* CharacterMove.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35B69A3520D8DECE00F05A2C /* CharacterMove.swift */; };
 		35B9241A20D1194B0081BD00 /* CharactersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35B9241920D1194B0081BD00 /* CharactersViewController.swift */; };
 		35C41F3D237AB26000A1EBF7 /* MotionInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35C41F3C237AB26000A1EBF7 /* MotionInfo.swift */; };
@@ -60,7 +56,6 @@
 		35EFE5C620D3A709007EB379 /* PopInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35EFE5C520D3A709007EB379 /* PopInteractor.swift */; };
 		35FA31A220D8B33C009A5D7B /* Character.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35FA31A120D8B33C009A5D7B /* Character.swift */; };
 		35FA31A520D8B55A009A5D7B /* CharacterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35FA31A320D8B55A009A5D7B /* CharacterCell.swift */; };
-		35FA31A620D8B55A009A5D7B /* CharacterCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 35FA31A420D8B55A009A5D7B /* CharacterCell.xib */; };
 		CB3E48F626E0D468003079EB /* Pods_MaCherie.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6CAF47B466D48E9D038FAAF2 /* Pods_MaCherie.framework */; };
 		EE318CB5183E363E0081370B /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE318CB4183E363E0081370B /* AudioToolbox.framework */; };
 		EEA48CA31775E59F00351CAB /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEA48CA21775E59F00351CAB /* Security.framework */; };
@@ -114,13 +109,9 @@
 		3566755620D26A4D00DD26A4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3566755820D2702C00DD26A4 /* MotionDownloader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotionDownloader.swift; sourceTree = "<group>"; };
 		35B69A2220D8DA2700F05A2C /* CharacterSupplementaryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterSupplementaryCell.swift; sourceTree = "<group>"; };
-		35B69A2320D8DA2700F05A2C /* CharacterSupplementaryCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CharacterSupplementaryCell.xib; sourceTree = "<group>"; };
 		35B69A2620D8DA4700F05A2C /* CharacterMoveCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterMoveCell.swift; sourceTree = "<group>"; };
-		35B69A2720D8DA4700F05A2C /* CharacterMoveCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CharacterMoveCell.xib; sourceTree = "<group>"; };
 		35B69A2A20D8DB0D00F05A2C /* CharacterMoveDetailCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterMoveDetailCell.swift; sourceTree = "<group>"; };
-		35B69A2B20D8DB0D00F05A2C /* CharacterMoveDetailCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CharacterMoveDetailCell.xib; sourceTree = "<group>"; };
 		35B69A2E20D8DC0300F05A2C /* CharacterMoveFramesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterMoveFramesCell.swift; sourceTree = "<group>"; };
-		35B69A2F20D8DC0300F05A2C /* CharacterMoveFramesCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CharacterMoveFramesCell.xib; sourceTree = "<group>"; };
 		35B69A3520D8DECE00F05A2C /* CharacterMove.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterMove.swift; sourceTree = "<group>"; };
 		35B9241920D1194B0081BD00 /* CharactersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersViewController.swift; sourceTree = "<group>"; };
 		35C41F3C237AB26000A1EBF7 /* MotionInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotionInfo.swift; sourceTree = "<group>"; };
@@ -133,7 +124,6 @@
 		35EFE5C520D3A709007EB379 /* PopInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopInteractor.swift; sourceTree = "<group>"; };
 		35FA31A120D8B33C009A5D7B /* Character.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Character.swift; sourceTree = "<group>"; };
 		35FA31A320D8B55A009A5D7B /* CharacterCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterCell.swift; sourceTree = "<group>"; };
-		35FA31A420D8B55A009A5D7B /* CharacterCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CharacterCell.xib; sourceTree = "<group>"; };
 		6CAF47B466D48E9D038FAAF2 /* Pods_MaCherie.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MaCherie.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9B0A51AF84A34AEE62B96739 /* Pods-MaCherie.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MaCherie.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MaCherie/Pods-MaCherie.debug.xcconfig"; sourceTree = "<group>"; };
 		D3FF64D4D4365DCD8DEF7ADE /* Pods-MaCherie.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MaCherie.release.xcconfig"; path = "Pods/Target Support Files/Pods-MaCherie/Pods-MaCherie.release.xcconfig"; sourceTree = "<group>"; };
@@ -251,7 +241,6 @@
 			children = (
 				35FA31A120D8B33C009A5D7B /* Character.swift */,
 				35FA31A320D8B55A009A5D7B /* CharacterCell.swift */,
-				35FA31A420D8B55A009A5D7B /* CharacterCell.xib */,
 				35B9241920D1194B0081BD00 /* CharactersViewController.swift */,
 				352FE9662382840D0083CCF0 /* CharacterBackgroundView.swift */,
 			);
@@ -263,13 +252,9 @@
 			children = (
 				35B69A3520D8DECE00F05A2C /* CharacterMove.swift */,
 				35B69A2620D8DA4700F05A2C /* CharacterMoveCell.swift */,
-				35B69A2720D8DA4700F05A2C /* CharacterMoveCell.xib */,
 				35B69A2A20D8DB0D00F05A2C /* CharacterMoveDetailCell.swift */,
-				35B69A2B20D8DB0D00F05A2C /* CharacterMoveDetailCell.xib */,
 				35B69A2E20D8DC0300F05A2C /* CharacterMoveFramesCell.swift */,
-				35B69A2F20D8DC0300F05A2C /* CharacterMoveFramesCell.xib */,
 				35B69A2220D8DA2700F05A2C /* CharacterSupplementaryCell.swift */,
-				35B69A2320D8DA2700F05A2C /* CharacterSupplementaryCell.xib */,
 				3505351420D1FDA600078847 /* CharacterMovesViewController.swift */,
 			);
 			path = CharacterMove;
@@ -456,13 +441,8 @@
 				352275CA20D2A9C7002144BD /* Chun-Li.plist in Resources */,
 				04580D341A25CB1800A4A9B2 /* Main.storyboard in Resources */,
 				352275CF20D2A9C7002144BD /* Twelve.plist in Resources */,
-				35B69A2520D8DA2700F05A2C /* CharacterSupplementaryCell.xib in Resources */,
-				35B69A2920D8DA4700F05A2C /* CharacterMoveCell.xib in Resources */,
-				35B69A2D20D8DB0D00F05A2C /* CharacterMoveDetailCell.xib in Resources */,
 				352275D420D2A9C7002144BD /* Q.plist in Resources */,
-				35FA31A620D8B55A009A5D7B /* CharacterCell.xib in Resources */,
 				352275C620D2A9C7002144BD /* Yun.plist in Resources */,
-				35B69A3120D8DC0300F05A2C /* CharacterMoveFramesCell.xib in Resources */,
 				352275CD20D2A9C7002144BD /* Ibuki.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

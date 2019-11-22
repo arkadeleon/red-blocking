@@ -36,8 +36,6 @@ class CharactersViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        tableView.register(R.nib.characterCell)
-        
         if UIDevice.current.userInterfaceIdiom == .pad {
             let indexPath = IndexPath(row: 0, section: 0)
             tableView.selectRow(at: indexPath, animated: false, scrollPosition: .none)
