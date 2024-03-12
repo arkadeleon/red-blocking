@@ -38,6 +38,7 @@
 		35375CAC20D0FE45004642CB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 35375CAB20D0FE45004642CB /* LaunchScreen.storyboard */; };
 		355F2D202BA0205E00B97A41 /* RswiftLibrary in Frameworks */ = {isa = PBXBuildFile; productRef = 355F2D1F2BA0205E00B97A41 /* RswiftLibrary */; };
 		355F2D252BA0209100B97A41 /* XMLParsing in Frameworks */ = {isa = PBXBuildFile; productRef = 355F2D242BA0209100B97A41 /* XMLParsing */; };
+		355F2D2D2BA04EF100B97A41 /* Yams in Frameworks */ = {isa = PBXBuildFile; productRef = 355F2D2C2BA04EF100B97A41 /* Yams */; };
 		3566755320D2692F00DD26A4 /* UIColor+Integer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3566755220D2692F00DD26A4 /* UIColor+Integer.swift */; };
 		3566755520D26A2800DD26A4 /* ApplicationDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3566755420D26A2800DD26A4 /* ApplicationDataManager.swift */; };
 		3566755720D26A4D00DD26A4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3566755620D26A4D00DD26A4 /* AppDelegate.swift */; };
@@ -159,6 +160,7 @@
 				355F2D202BA0205E00B97A41 /* RswiftLibrary in Frameworks */,
 				EEE27AFA176C1490008A41AB /* SystemConfiguration.framework in Frameworks */,
 				EEE27ACF176C1347008A41AB /* UIKit.framework in Frameworks */,
+				355F2D2D2BA04EF100B97A41 /* Yams in Frameworks */,
 				355F2D252BA0209100B97A41 /* XMLParsing in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -352,6 +354,7 @@
 			packageProductDependencies = (
 				355F2D1F2BA0205E00B97A41 /* RswiftLibrary */,
 				355F2D242BA0209100B97A41 /* XMLParsing */,
+				355F2D2C2BA04EF100B97A41 /* Yams */,
 			);
 			productName = MaCherie;
 			productReference = EEE27ACB176C1347008A41AB /* MaCherie.app */;
@@ -393,6 +396,7 @@
 			packageReferences = (
 				355F2D1E2BA0205E00B97A41 /* XCRemoteSwiftPackageReference "R.swift" */,
 				355F2D232BA0209100B97A41 /* XCRemoteSwiftPackageReference "XMLParsing" */,
+				355F2D2B2BA04EF100B97A41 /* XCRemoteSwiftPackageReference "Yams" */,
 			);
 			productRefGroup = EEE27ACC176C1347008A41AB /* Products */;
 			projectDirPath = "";
@@ -588,6 +592,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer: LI JUNLIN (UC4Q2BNNGH)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = GG76KD534U;
+				ENABLE_ON_DEMAND_RESOURCES = YES;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "";
@@ -617,6 +622,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer: LI JUNLIN (UC4Q2BNNGH)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = GG76KD534U;
+				ENABLE_ON_DEMAND_RESOURCES = YES;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "";
@@ -677,6 +683,14 @@
 				minimumVersion = 0.0.3;
 			};
 		};
+		355F2D2B2BA04EF100B97A41 /* XCRemoteSwiftPackageReference "Yams" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/jpsim/Yams.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.6;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -694,6 +708,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 355F2D1E2BA0205E00B97A41 /* XCRemoteSwiftPackageReference "R.swift" */;
 			productName = "plugin:RswiftGenerateInternalResources";
+		};
+		355F2D2C2BA04EF100B97A41 /* Yams */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 355F2D2B2BA04EF100B97A41 /* XCRemoteSwiftPackageReference "Yams" */;
+			productName = Yams;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
