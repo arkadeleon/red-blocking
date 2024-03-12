@@ -15,17 +15,9 @@ class MotionDownloader {
     let characterCode: String
     let skillCode: String
     
-    private let session = URLSession(configuration: .default)
-    private let localBaseURL = try! FileManager.default.url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: true)
-    private let remoteBaseURL = URL(string: "https://game-institute.nyc3.digitaloceanspaces.com/ma-cherie")!
-    
     init(characterCode: String, skillCode: String) {
         self.characterCode = characterCode
         self.skillCode = skillCode
-    }
-    
-    deinit {
-        session.invalidateAndCancel()
     }
     
     func downloadPublisher() -> AnyPublisher<Output, Error> {
@@ -51,68 +43,18 @@ class MotionDownloader {
     }
     
     private func downloadJSON(_ promise: @escaping (Result<MotionInfo, Error>) -> ()) {
-        let path = String(format: "motions/%@/%@/%@_%@.json", characterCode, skillCode, characterCode, skillCode)
-        let localURL = localBaseURL.appendingPathComponent(path)
-        
-        if FileManager.default.fileExists(atPath: localURL.path) {
-            do {
-                let data = try Data(contentsOf: localURL)
-                let motionInfo = try MotionInfo(data: data)
-                promise(.success(motionInfo))
-            } catch {
-                promise(.failure(error))
-            }
-            return
-        }
-        
-        let remoteURL = remoteBaseURL.appendingPathComponent(path)
-        session.dataTask(with: remoteURL) { (data, response, error) in
-            guard let data = data else {
-                promise(.failure(error!))
-                return
-            }
-            
-            do {
-                try FileManager.default.createDirectory(atPath: localURL.deletingLastPathComponent().path, withIntermediateDirectories: true, attributes: nil)
-                try data.write(to: localURL)
-                let motionInfo = try MotionInfo(data: data)
-                promise(.success(motionInfo))
-            } catch {
-                promise(.failure(error))
-            }
-        }.resume()
+        let path = "FrameData/\(characterCode)/\(skillCode)/\(characterCode)_\(skillCode).json"
+        let url = Bundle.main.resourceURL!.appendingPathComponent(path)
+        let data = try! Data(contentsOf: url)
+        let motionInfo = try! MotionInfo(data: data)
+        promise(.success(motionInfo))
     }
     
     private func downloadImage(at index: Int, _ promise: @escaping (Result<(Int, UIImage?), Error>) -> ()) {
-        let path = String(format: "motions/%@/%@/%@_%@_%03d.png", characterCode, skillCode, characterCode, skillCode, index)
-        let localURL = localBaseURL.appendingPathComponent(path)
-        
-        if FileManager.default.fileExists(atPath: localURL.path) {
-            do {
-                let imageData = try Data(contentsOf: localURL)
-                let image = UIImage(data: imageData)
-                promise(.success((index, image)))
-            } catch {
-                promise(.failure(error))
-            }
-            return
-        }
-        
-        let remoteURL = remoteBaseURL.appendingPathComponent(path)
-        session.dataTask(with: remoteURL) { (data, response, error) in
-            guard let data = data else {
-                promise(.failure(error!))
-                return
-            }
-            
-            do {
-                try FileManager.default.createDirectory(atPath: localURL.deletingLastPathComponent().path, withIntermediateDirectories: true, attributes: nil)
-                try data.write(to: localURL)
-                let image = UIImage(data: data)
-                promise(.success((index, image)))
-            } catch {
-                promise(.failure(error))
-            }
-        }.resume()
+        let path = String(format: "FrameData/%@/%@/%@_%@_%03d.png", characterCode, skillCode, characterCode, skillCode, index)
+        let url = Bundle.main.resourceURL!.appendingPathComponent(path)
+        let data = try! Data(contentsOf: url)
+        let image = UIImage(data: data)
+        promise(.success((index, image)))
     }
 }
