@@ -72,6 +72,8 @@ extension AppDelegate: UINavigationControllerDelegate {
             return PopAnimator()
         case .none:
             return nil
+        @unknown default:
+            fatalError()
         }
     }
     

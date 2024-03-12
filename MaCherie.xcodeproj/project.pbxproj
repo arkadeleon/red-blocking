@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 46;
+	objectVersion = 54;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -36,6 +36,8 @@
 		352FE96F23828ACA0083CCF0 /* VideosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 352FE96E23828ACA0083CCF0 /* VideosViewController.swift */; };
 		352FE971238294580083CCF0 /* S3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 352FE970238294580083CCF0 /* S3.swift */; };
 		35375CAC20D0FE45004642CB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 35375CAB20D0FE45004642CB /* LaunchScreen.storyboard */; };
+		355F2D202BA0205E00B97A41 /* RswiftLibrary in Frameworks */ = {isa = PBXBuildFile; productRef = 355F2D1F2BA0205E00B97A41 /* RswiftLibrary */; };
+		355F2D252BA0209100B97A41 /* XMLParsing in Frameworks */ = {isa = PBXBuildFile; productRef = 355F2D242BA0209100B97A41 /* XMLParsing */; };
 		3566755320D2692F00DD26A4 /* UIColor+Integer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3566755220D2692F00DD26A4 /* UIColor+Integer.swift */; };
 		3566755520D26A2800DD26A4 /* ApplicationDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3566755420D26A2800DD26A4 /* ApplicationDataManager.swift */; };
 		3566755720D26A4D00DD26A4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3566755620D26A4D00DD26A4 /* AppDelegate.swift */; };
@@ -49,14 +51,12 @@
 		35C41F3D237AB26000A1EBF7 /* MotionInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35C41F3C237AB26000A1EBF7 /* MotionInfo.swift */; };
 		35C41F4A237D35A900A1EBF7 /* MotionPlayerLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35C41F49237D35A900A1EBF7 /* MotionPlayerLayer.swift */; };
 		35C41F4C237D3E7E00A1EBF7 /* MotionPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35C41F4B237D3E7E00A1EBF7 /* MotionPlayer.swift */; };
-		35EFE5BE20D39EEF007EB379 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35EFE5BD20D39EEE007EB379 /* R.generated.swift */; };
 		35EFE5C020D39F31007EB379 /* MoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35EFE5BF20D39F31007EB379 /* MoreViewController.swift */; };
 		35EFE5C220D3A187007EB379 /* PushAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35EFE5C120D3A187007EB379 /* PushAnimator.swift */; };
 		35EFE5C420D3A3B3007EB379 /* PopAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35EFE5C320D3A3B3007EB379 /* PopAnimator.swift */; };
 		35EFE5C620D3A709007EB379 /* PopInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35EFE5C520D3A709007EB379 /* PopInteractor.swift */; };
 		35FA31A220D8B33C009A5D7B /* Character.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35FA31A120D8B33C009A5D7B /* Character.swift */; };
 		35FA31A520D8B55A009A5D7B /* CharacterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35FA31A320D8B55A009A5D7B /* CharacterCell.swift */; };
-		CB3E48F626E0D468003079EB /* Pods_MaCherie.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6CAF47B466D48E9D038FAAF2 /* Pods_MaCherie.framework */; };
 		EE318CB5183E363E0081370B /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE318CB4183E363E0081370B /* AudioToolbox.framework */; };
 		EEA48CA31775E59F00351CAB /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEA48CA21775E59F00351CAB /* Security.framework */; };
 		EEA48CA51775E79000351CAB /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEA48CA41775E79000351CAB /* ImageIO.framework */; };
@@ -75,7 +75,6 @@
 
 /* Begin PBXFileReference section */
 		04580D161A25CB1800A4A9B2 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
-		32B4F36714C94E72979941E8 /* Pods-MaCherie.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MaCherie.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MaCherie/Pods-MaCherie.debug.xcconfig"; sourceTree = "<group>"; };
 		3505351420D1FDA600078847 /* CharacterMovesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CharacterMovesViewController.swift; sourceTree = "<group>"; };
 		3505351820D21AC300078847 /* MotionPlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotionPlayerViewController.swift; sourceTree = "<group>"; };
 		352275AD20D2A9C7002144BD /* Yang.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Yang.plist; sourceTree = "<group>"; };
@@ -117,17 +116,12 @@
 		35C41F3C237AB26000A1EBF7 /* MotionInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotionInfo.swift; sourceTree = "<group>"; };
 		35C41F49237D35A900A1EBF7 /* MotionPlayerLayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MotionPlayerLayer.swift; sourceTree = "<group>"; };
 		35C41F4B237D3E7E00A1EBF7 /* MotionPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotionPlayer.swift; sourceTree = "<group>"; };
-		35EFE5BD20D39EEE007EB379 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = SOURCE_ROOT; };
 		35EFE5BF20D39F31007EB379 /* MoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreViewController.swift; sourceTree = "<group>"; };
 		35EFE5C120D3A187007EB379 /* PushAnimator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PushAnimator.swift; sourceTree = "<group>"; };
 		35EFE5C320D3A3B3007EB379 /* PopAnimator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopAnimator.swift; sourceTree = "<group>"; };
 		35EFE5C520D3A709007EB379 /* PopInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopInteractor.swift; sourceTree = "<group>"; };
 		35FA31A120D8B33C009A5D7B /* Character.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Character.swift; sourceTree = "<group>"; };
 		35FA31A320D8B55A009A5D7B /* CharacterCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterCell.swift; sourceTree = "<group>"; };
-		6CAF47B466D48E9D038FAAF2 /* Pods_MaCherie.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MaCherie.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		9B0A51AF84A34AEE62B96739 /* Pods-MaCherie.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MaCherie.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MaCherie/Pods-MaCherie.debug.xcconfig"; sourceTree = "<group>"; };
-		D3FF64D4D4365DCD8DEF7ADE /* Pods-MaCherie.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MaCherie.release.xcconfig"; path = "Pods/Target Support Files/Pods-MaCherie/Pods-MaCherie.release.xcconfig"; sourceTree = "<group>"; };
-		EDCEEE4A06A3027082614AEF /* Pods-MaCherie.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MaCherie.release.xcconfig"; path = "Pods/Target Support Files/Pods-MaCherie/Pods-MaCherie.release.xcconfig"; sourceTree = "<group>"; };
 		EE318CB4183E363E0081370B /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		EEA48CA21775E59F00351CAB /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		EEA48CA41775E79000351CAB /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
@@ -162,9 +156,10 @@
 				EEE27AF4176C1470008A41AB /* MessageUI.framework in Frameworks */,
 				EEE27AF6176C147C008A41AB /* QuartzCore.framework in Frameworks */,
 				EEA48CA31775E59F00351CAB /* Security.framework in Frameworks */,
+				355F2D202BA0205E00B97A41 /* RswiftLibrary in Frameworks */,
 				EEE27AFA176C1490008A41AB /* SystemConfiguration.framework in Frameworks */,
 				EEE27ACF176C1347008A41AB /* UIKit.framework in Frameworks */,
-				CB3E48F626E0D468003079EB /* Pods_MaCherie.framework in Frameworks */,
+				355F2D252BA0209100B97A41 /* XMLParsing in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -272,24 +267,12 @@
 			path = Motion;
 			sourceTree = "<group>";
 		};
-		A5179E142A649A8F91550A12 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				9B0A51AF84A34AEE62B96739 /* Pods-MaCherie.debug.xcconfig */,
-				D3FF64D4D4365DCD8DEF7ADE /* Pods-MaCherie.release.xcconfig */,
-				32B4F36714C94E72979941E8 /* Pods-MaCherie.debug.xcconfig */,
-				EDCEEE4A06A3027082614AEF /* Pods-MaCherie.release.xcconfig */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
 		EEE27AC2176C1347008A41AB = {
 			isa = PBXGroup;
 			children = (
 				EEE27AD4176C1347008A41AB /* MaCherie */,
 				EEE27ACD176C1347008A41AB /* Frameworks */,
 				EEE27ACC176C1347008A41AB /* Products */,
-				A5179E142A649A8F91550A12 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -317,7 +300,6 @@
 				EEA48CA21775E59F00351CAB /* Security.framework */,
 				EEE27AF9176C1490008A41AB /* SystemConfiguration.framework */,
 				EEE27ACE176C1347008A41AB /* UIKit.framework */,
-				6CAF47B466D48E9D038FAAF2 /* Pods_MaCherie.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -345,7 +327,6 @@
 		EEE27AD5176C1347008A41AB /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				35EFE5BD20D39EEE007EB379 /* R.generated.swift */,
 				EEE27AD6176C1347008A41AB /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -358,18 +339,20 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = EEE27AE8176C1347008A41AB /* Build configuration list for PBXNativeTarget "MaCherie" */;
 			buildPhases = (
-				75FB20264C36C11B4D54D8D3 /* [CP] Check Pods Manifest.lock */,
-				35EFE5BC20D39EB0007EB379 /* ShellScript */,
 				EEE27AC7176C1347008A41AB /* Sources */,
 				EEE27AC8176C1347008A41AB /* Frameworks */,
 				EEE27AC9176C1347008A41AB /* Resources */,
-				6DED49262992B918842D505A /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				355F2D272BA021C700B97A41 /* PBXTargetDependency */,
 			);
 			name = MaCherie;
+			packageProductDependencies = (
+				355F2D1F2BA0205E00B97A41 /* RswiftLibrary */,
+				355F2D242BA0209100B97A41 /* XMLParsing */,
+			);
 			productName = MaCherie;
 			productReference = EEE27ACB176C1347008A41AB /* MaCherie.app */;
 			productType = "com.apple.product-type.application";
@@ -380,11 +363,11 @@
 		EEE27AC3176C1347008A41AB /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0930;
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 1520;
 				ORGANIZATIONNAME = "Leon & Vane";
 				TargetAttributes = {
 					EEE27ACA176C1347008A41AB = {
-						DevelopmentTeam = A47Q8ENB5Y;
 						LastSwiftMigration = 1120;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
@@ -400,13 +383,17 @@
 			};
 			buildConfigurationList = EEE27AC6176C1347008A41AB /* Build configuration list for PBXProject "MaCherie" */;
 			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = English;
+			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
-				English,
 				en,
+				Base,
 			);
 			mainGroup = EEE27AC2176C1347008A41AB;
+			packageReferences = (
+				355F2D1E2BA0205E00B97A41 /* XCRemoteSwiftPackageReference "R.swift" */,
+				355F2D232BA0209100B97A41 /* XCRemoteSwiftPackageReference "XMLParsing" */,
+			);
 			productRefGroup = EEE27ACC176C1347008A41AB /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -449,62 +436,6 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
-/* Begin PBXShellScriptBuildPhase section */
-		35EFE5BC20D39EB0007EB379 /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"$TEMP_DIR/rswift-lastrun",
-			);
-			outputPaths = (
-				$SRCROOT/R.generated.swift,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"$PODS_ROOT/R.swift/rswift\" generate \"$SRCROOT/R.generated.swift\"\n";
-		};
-		6DED49262992B918842D505A /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-MaCherie/Pods-MaCherie-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/R.swift.Library/Rswift.framework",
-				"${BUILT_PRODUCTS_DIR}/XMLParsing/XMLParsing.framework",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Rswift.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/XMLParsing.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MaCherie/Pods-MaCherie-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		75FB20264C36C11B4D54D8D3 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-MaCherie-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
-
 /* Begin PBXSourcesBuildPhase section */
 		EEE27AC7176C1347008A41AB /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -522,7 +453,6 @@
 				35B69A3620D8DECE00F05A2C /* CharacterMove.swift in Sources */,
 				35EFE5C420D3A3B3007EB379 /* PopAnimator.swift in Sources */,
 				3566755720D26A4D00DD26A4 /* AppDelegate.swift in Sources */,
-				35EFE5BE20D39EEF007EB379 /* R.generated.swift in Sources */,
 				35EFE5C020D39F31007EB379 /* MoreViewController.swift in Sources */,
 				352FE96B23828AA50083CCF0 /* MusicViewController.swift in Sources */,
 				35B9241A20D1194B0081BD00 /* CharactersViewController.swift in Sources */,
@@ -541,6 +471,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		355F2D272BA021C700B97A41 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			productRef = 355F2D262BA021C700B97A41 /* RswiftGenerateInternalResources */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		EEE27AE6176C1347008A41AB /* Debug */ = {
@@ -563,6 +500,7 @@
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -572,6 +510,7 @@
 				COPY_PHASE_STRIP = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -614,6 +553,7 @@
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -622,6 +562,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -641,20 +582,22 @@
 		};
 		EEE27AE9176C1347008A41AB /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 32B4F36714C94E72979941E8 /* Pods-MaCherie.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer: LI JUNLIN (UC4Q2BNNGH)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = A47Q8ENB5Y;
+				DEVELOPMENT_TEAM = GG76KD534U;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "";
 				INFOPLIST_FILE = MaCherie/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
-				PRODUCT_BUNDLE_IDENTIFIER = com.studiopp.i3rd;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.github.arkadeleon.ma-cherie";
 				PRODUCT_MODULE_NAME = MaCherie;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -668,20 +611,22 @@
 		};
 		EEE27AEA176C1347008A41AB /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = EDCEEE4A06A3027082614AEF /* Pods-MaCherie.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer: LI JUNLIN (UC4Q2BNNGH)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = A47Q8ENB5Y;
+				DEVELOPMENT_TEAM = GG76KD534U;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "";
 				INFOPLIST_FILE = MaCherie/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
-				PRODUCT_BUNDLE_IDENTIFIER = com.studiopp.i3rd;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.github.arkadeleon.ma-cherie";
 				PRODUCT_MODULE_NAME = MaCherie;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -714,6 +659,43 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		355F2D1E2BA0205E00B97A41 /* XCRemoteSwiftPackageReference "R.swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/mac-cain13/R.swift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.5.0;
+			};
+		};
+		355F2D232BA0209100B97A41 /* XCRemoteSwiftPackageReference "XMLParsing" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ShawnMoore/XMLParsing.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.0.3;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		355F2D1F2BA0205E00B97A41 /* RswiftLibrary */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 355F2D1E2BA0205E00B97A41 /* XCRemoteSwiftPackageReference "R.swift" */;
+			productName = RswiftLibrary;
+		};
+		355F2D242BA0209100B97A41 /* XMLParsing */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 355F2D232BA0209100B97A41 /* XCRemoteSwiftPackageReference "XMLParsing" */;
+			productName = XMLParsing;
+		};
+		355F2D262BA021C700B97A41 /* RswiftGenerateInternalResources */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 355F2D1E2BA0205E00B97A41 /* XCRemoteSwiftPackageReference "R.swift" */;
+			productName = "plugin:RswiftGenerateInternalResources";
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = EEE27AC3176C1347008A41AB /* Project object */;
 }
