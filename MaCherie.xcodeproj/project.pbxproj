@@ -31,14 +31,8 @@
 		352275D320D2A9C7002144BD /* Oro.plist in Resources */ = {isa = PBXBuildFile; fileRef = 352275BF20D2A9C7002144BD /* Oro.plist */; };
 		352275D420D2A9C7002144BD /* Q.plist in Resources */ = {isa = PBXBuildFile; fileRef = 352275C020D2A9C7002144BD /* Q.plist */; };
 		352FE9672382840D0083CCF0 /* CharacterBackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 352FE9662382840D0083CCF0 /* CharacterBackgroundView.swift */; };
-		352FE96B23828AA50083CCF0 /* MusicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 352FE96A23828AA50083CCF0 /* MusicViewController.swift */; };
-		352FE96D23828ABD0083CCF0 /* PlaylistsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 352FE96C23828ABD0083CCF0 /* PlaylistsViewController.swift */; };
-		352FE96F23828ACA0083CCF0 /* VideosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 352FE96E23828ACA0083CCF0 /* VideosViewController.swift */; };
-		352FE971238294580083CCF0 /* S3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 352FE970238294580083CCF0 /* S3.swift */; };
 		35375CAC20D0FE45004642CB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 35375CAB20D0FE45004642CB /* LaunchScreen.storyboard */; };
 		355F2D202BA0205E00B97A41 /* RswiftLibrary in Frameworks */ = {isa = PBXBuildFile; productRef = 355F2D1F2BA0205E00B97A41 /* RswiftLibrary */; };
-		355F2D252BA0209100B97A41 /* XMLParsing in Frameworks */ = {isa = PBXBuildFile; productRef = 355F2D242BA0209100B97A41 /* XMLParsing */; };
-		355F2D2D2BA04EF100B97A41 /* Yams in Frameworks */ = {isa = PBXBuildFile; productRef = 355F2D2C2BA04EF100B97A41 /* Yams */; };
 		3566755320D2692F00DD26A4 /* UIColor+Integer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3566755220D2692F00DD26A4 /* UIColor+Integer.swift */; };
 		3566755520D26A2800DD26A4 /* ApplicationDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3566755420D26A2800DD26A4 /* ApplicationDataManager.swift */; };
 		3566755720D26A4D00DD26A4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3566755620D26A4D00DD26A4 /* AppDelegate.swift */; };
@@ -53,7 +47,6 @@
 		35C41F3D237AB26000A1EBF7 /* MotionInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35C41F3C237AB26000A1EBF7 /* MotionInfo.swift */; };
 		35C41F4A237D35A900A1EBF7 /* MotionPlayerLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35C41F49237D35A900A1EBF7 /* MotionPlayerLayer.swift */; };
 		35C41F4C237D3E7E00A1EBF7 /* MotionPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35C41F4B237D3E7E00A1EBF7 /* MotionPlayer.swift */; };
-		35EFE5C020D39F31007EB379 /* MoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35EFE5BF20D39F31007EB379 /* MoreViewController.swift */; };
 		35EFE5C220D3A187007EB379 /* PushAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35EFE5C120D3A187007EB379 /* PushAnimator.swift */; };
 		35EFE5C420D3A3B3007EB379 /* PopAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35EFE5C320D3A3B3007EB379 /* PopAnimator.swift */; };
 		35EFE5C620D3A709007EB379 /* PopInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35EFE5C520D3A709007EB379 /* PopInteractor.swift */; };
@@ -100,10 +93,6 @@
 		352275BF20D2A9C7002144BD /* Oro.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Oro.plist; sourceTree = "<group>"; };
 		352275C020D2A9C7002144BD /* Q.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Q.plist; sourceTree = "<group>"; };
 		352FE9662382840D0083CCF0 /* CharacterBackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterBackgroundView.swift; sourceTree = "<group>"; };
-		352FE96A23828AA50083CCF0 /* MusicViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicViewController.swift; sourceTree = "<group>"; };
-		352FE96C23828ABD0083CCF0 /* PlaylistsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaylistsViewController.swift; sourceTree = "<group>"; };
-		352FE96E23828ACA0083CCF0 /* VideosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideosViewController.swift; sourceTree = "<group>"; };
-		352FE970238294580083CCF0 /* S3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = S3.swift; sourceTree = "<group>"; };
 		35375CAB20D0FE45004642CB /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3566755220D2692F00DD26A4 /* UIColor+Integer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Integer.swift"; sourceTree = "<group>"; };
 		3566755420D26A2800DD26A4 /* ApplicationDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationDataManager.swift; sourceTree = "<group>"; };
@@ -119,7 +108,6 @@
 		35C41F3C237AB26000A1EBF7 /* MotionInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotionInfo.swift; sourceTree = "<group>"; };
 		35C41F49237D35A900A1EBF7 /* MotionPlayerLayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MotionPlayerLayer.swift; sourceTree = "<group>"; };
 		35C41F4B237D3E7E00A1EBF7 /* MotionPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotionPlayer.swift; sourceTree = "<group>"; };
-		35EFE5BF20D39F31007EB379 /* MoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreViewController.swift; sourceTree = "<group>"; };
 		35EFE5C120D3A187007EB379 /* PushAnimator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PushAnimator.swift; sourceTree = "<group>"; };
 		35EFE5C320D3A3B3007EB379 /* PopAnimator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopAnimator.swift; sourceTree = "<group>"; };
 		35EFE5C520D3A709007EB379 /* PopInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopInteractor.swift; sourceTree = "<group>"; };
@@ -162,8 +150,6 @@
 				355F2D202BA0205E00B97A41 /* RswiftLibrary in Frameworks */,
 				EEE27AFA176C1490008A41AB /* SystemConfiguration.framework in Frameworks */,
 				EEE27ACF176C1347008A41AB /* UIKit.framework in Frameworks */,
-				355F2D2D2BA04EF100B97A41 /* Yams in Frameworks */,
-				355F2D252BA0209100B97A41 /* XMLParsing in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -197,35 +183,9 @@
 			path = PropertyLists;
 			sourceTree = "<group>";
 		};
-		352FE96823828A4E0083CCF0 /* Music */ = {
-			isa = PBXGroup;
-			children = (
-				352FE96A23828AA50083CCF0 /* MusicViewController.swift */,
-			);
-			path = Music;
-			sourceTree = "<group>";
-		};
-		352FE96923828A560083CCF0 /* Videos */ = {
-			isa = PBXGroup;
-			children = (
-				352FE96C23828ABD0083CCF0 /* PlaylistsViewController.swift */,
-				352FE96E23828ACA0083CCF0 /* VideosViewController.swift */,
-			);
-			path = Videos;
-			sourceTree = "<group>";
-		};
-		3546A89320D1025D002FEC38 /* More */ = {
-			isa = PBXGroup;
-			children = (
-				35EFE5BF20D39F31007EB379 /* MoreViewController.swift */,
-			);
-			path = More;
-			sourceTree = "<group>";
-		};
 		3572AF8D20D1021F00C15871 /* Core */ = {
 			isa = PBXGroup;
 			children = (
-				352FE970238294580083CCF0 /* S3.swift */,
 				3566755420D26A2800DD26A4 /* ApplicationDataManager.swift */,
 				35EFE5C320D3A3B3007EB379 /* PopAnimator.swift */,
 				35EFE5C520D3A709007EB379 /* PopInteractor.swift */,
@@ -315,12 +275,9 @@
 				35375CAB20D0FE45004642CB /* LaunchScreen.storyboard */,
 				04580D161A25CB1800A4A9B2 /* Main.storyboard */,
 				3572AF8D20D1021F00C15871 /* Core */,
-				352FE96923828A560083CCF0 /* Videos */,
-				352FE96823828A4E0083CCF0 /* Music */,
 				35B69A3220D8DE8500F05A2C /* Character */,
 				35B69A3320D8DEA600F05A2C /* CharacterMove */,
 				35B69A3420D8DEBD00F05A2C /* Motion */,
-				3546A89320D1025D002FEC38 /* More */,
 				352275AC20D2A9C7002144BD /* PropertyLists */,
 				EEE27AD5176C1347008A41AB /* Supporting Files */,
 				35AFF43D2BA093B500737E1A /* FrameData */,
@@ -356,8 +313,6 @@
 			name = MaCherie;
 			packageProductDependencies = (
 				355F2D1F2BA0205E00B97A41 /* RswiftLibrary */,
-				355F2D242BA0209100B97A41 /* XMLParsing */,
-				355F2D2C2BA04EF100B97A41 /* Yams */,
 			);
 			productName = MaCherie;
 			productReference = EEE27ACB176C1347008A41AB /* MaCherie.app */;
@@ -398,8 +353,6 @@
 			mainGroup = EEE27AC2176C1347008A41AB;
 			packageReferences = (
 				355F2D1E2BA0205E00B97A41 /* XCRemoteSwiftPackageReference "R.swift" */,
-				355F2D232BA0209100B97A41 /* XCRemoteSwiftPackageReference "XMLParsing" */,
-				355F2D2B2BA04EF100B97A41 /* XCRemoteSwiftPackageReference "Yams" */,
 			);
 			productRefGroup = EEE27ACC176C1347008A41AB /* Products */;
 			projectDirPath = "";
@@ -449,7 +402,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				352FE96D23828ABD0083CCF0 /* PlaylistsViewController.swift in Sources */,
 				35B69A2C20D8DB0D00F05A2C /* CharacterMoveDetailCell.swift in Sources */,
 				35B69A2420D8DA2700F05A2C /* CharacterSupplementaryCell.swift in Sources */,
 				352FE9672382840D0083CCF0 /* CharacterBackgroundView.swift in Sources */,
@@ -457,18 +409,14 @@
 				35EFE5C220D3A187007EB379 /* PushAnimator.swift in Sources */,
 				35FA31A520D8B55A009A5D7B /* CharacterCell.swift in Sources */,
 				3566755920D2702C00DD26A4 /* MotionDownloader.swift in Sources */,
-				352FE96F23828ACA0083CCF0 /* VideosViewController.swift in Sources */,
 				35B69A3620D8DECE00F05A2C /* CharacterMove.swift in Sources */,
 				35EFE5C420D3A3B3007EB379 /* PopAnimator.swift in Sources */,
 				3566755720D26A4D00DD26A4 /* AppDelegate.swift in Sources */,
-				35EFE5C020D39F31007EB379 /* MoreViewController.swift in Sources */,
-				352FE96B23828AA50083CCF0 /* MusicViewController.swift in Sources */,
 				35B9241A20D1194B0081BD00 /* CharactersViewController.swift in Sources */,
 				3505351520D1FDA600078847 /* CharacterMovesViewController.swift in Sources */,
 				3566755320D2692F00DD26A4 /* UIColor+Integer.swift in Sources */,
 				35C41F4A237D35A900A1EBF7 /* MotionPlayerLayer.swift in Sources */,
 				35C41F3D237AB26000A1EBF7 /* MotionInfo.swift in Sources */,
-				352FE971238294580083CCF0 /* S3.swift in Sources */,
 				35EFE5C620D3A709007EB379 /* PopInteractor.swift in Sources */,
 				3566755520D26A2800DD26A4 /* ApplicationDataManager.swift in Sources */,
 				35FA31A220D8B33C009A5D7B /* Character.swift in Sources */,
@@ -679,22 +627,6 @@
 				minimumVersion = 7.5.0;
 			};
 		};
-		355F2D232BA0209100B97A41 /* XCRemoteSwiftPackageReference "XMLParsing" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/ShawnMoore/XMLParsing.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 0.0.3;
-			};
-		};
-		355F2D2B2BA04EF100B97A41 /* XCRemoteSwiftPackageReference "Yams" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/jpsim/Yams.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 5.0.6;
-			};
-		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -703,20 +635,10 @@
 			package = 355F2D1E2BA0205E00B97A41 /* XCRemoteSwiftPackageReference "R.swift" */;
 			productName = RswiftLibrary;
 		};
-		355F2D242BA0209100B97A41 /* XMLParsing */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 355F2D232BA0209100B97A41 /* XCRemoteSwiftPackageReference "XMLParsing" */;
-			productName = XMLParsing;
-		};
 		355F2D262BA021C700B97A41 /* RswiftGenerateInternalResources */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 355F2D1E2BA0205E00B97A41 /* XCRemoteSwiftPackageReference "R.swift" */;
 			productName = "plugin:RswiftGenerateInternalResources";
-		};
-		355F2D2C2BA04EF100B97A41 /* Yams */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 355F2D2B2BA04EF100B97A41 /* XCRemoteSwiftPackageReference "Yams" */;
-			productName = Yams;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

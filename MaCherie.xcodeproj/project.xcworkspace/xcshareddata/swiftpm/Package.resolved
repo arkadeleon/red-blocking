@@ -1,4 +1,5 @@
 {
+  "originHash" : "9e31fd168df35ebdc5bbd3df832d40d1c281abb1af4e45c8fa0c9667b6d50c0e",
   "pins" : [
     {
       "identity" : "r.swift",
@@ -26,25 +27,7 @@
         "revision" : "b6b67389a0f1a6fdd9c6457a8ab5b02eaab13c5c",
         "version" : "2.9.2"
       }
-    },
-    {
-      "identity" : "xmlparsing",
-      "kind" : "remoteSourceControl",
-      "location" : "https://github.com/ShawnMoore/XMLParsing.git",
-      "state" : {
-        "revision" : "2b77a8078d9695aac1a0e5806768e819025174c3",
-        "version" : "0.0.3"
-      }
-    },
-    {
-      "identity" : "yams",
-      "kind" : "remoteSourceControl",
-      "location" : "https://github.com/jpsim/Yams.git",
-      "state" : {
-        "revision" : "0d9ee7ea8c4ebd4a489ad7a73d5c6cad55d6fed3",
-        "version" : "5.0.6"
-      }
     }
   ],
-  "version" : 2
+  "version" : 3
 }

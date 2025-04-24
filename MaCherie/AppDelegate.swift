@@ -12,19 +12,18 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
     var popInteractor: PopInteractor?
-    
+
     class var shared: AppDelegate {
         return UIApplication.shared.delegate as! AppDelegate
     }
-    
+
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
-        let tabBarController = window!.rootViewController as! UITabBarController
-        let splitViewController = tabBarController.viewControllers![2] as! UISplitViewController
+        let splitViewController = window!.rootViewController as! UISplitViewController
         splitViewController.delegate = self
         splitViewController.preferredDisplayMode = .allVisible
         (splitViewController.viewControllers[0] as! UINavigationController).delegate = self
         (splitViewController.viewControllers[1] as! UINavigationController).delegate = self
-        
+
         UserDefaults.standard.register(defaults: [
             Player1PassiveHitboxHiddenKey : false,
             Player1OtherVulnerabilityHitboxHiddenKey : false,
@@ -46,7 +45,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             PreferredPushHitboxRGBColorKey : 0x7F00FF,
             PreferredFramesPerSecondKey : 30
         ])
-        
+
         return true
     }
 }
@@ -76,7 +75,7 @@ extension AppDelegate: UINavigationControllerDelegate {
             fatalError()
         }
     }
-    
+
     func navigationController(_ navigationController: UINavigationController, interactionControllerFor animationController: UIViewControllerAnimatedTransitioning) -> UIViewControllerInteractiveTransitioning? {
         if let popInteractor = popInteractor, popInteractor.transitionInProgress {
             return popInteractor

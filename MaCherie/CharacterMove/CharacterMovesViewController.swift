@@ -10,40 +10,40 @@ import UIKit
 
 class CharacterMovesViewController: UIViewController {
     @IBOutlet var tableView: UITableView!
-    
+
     var sections: [CharacterMove.Section] = []
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         let tableViewBackgroundView = UIView(frame: tableView.bounds)
         tableViewBackgroundView.backgroundColor = .clear
         tableView.backgroundView = tableViewBackgroundView
         tableView.backgroundColor = .clear
         view.backgroundColor = .clear
-        
+
         navigationController?.delegate = AppDelegate.shared
     }
-    
+
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        
+
         if let indexPath = tableView.indexPathForSelectedRow {
             tableView.deselectRow(at: indexPath, animated: true)
         }
     }
-    
+
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         switch segue.identifier {
         case R.segue.characterMovesViewController.showMotionPlayer.identifier:
             let indexPath = tableView.indexPathForSelectedRow!
-            
+
             let player = (segue.destination as! UINavigationController).topViewController as! MotionPlayerViewController
             let characterMove = sections[indexPath.section].rows[indexPath.row]
             player.characterCode = characterMove.presented!.characterCode
             player.skillCode = characterMove.presented!.skillCode
             player.title = characterMove.presented!.skillName
-            
+
             tableView.deselectRow(at: indexPath, animated: true)
         default:
             break
@@ -55,11 +55,11 @@ extension CharacterMovesViewController: UITableViewDataSource {
     func numberOfSections(in tableView: UITableView) -> Int {
         return sections.count
     }
-    
+
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return sections[section].rows.count
     }
-    
+
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let characterMove = sections[indexPath.section].rows[indexPath.row]
         if let _ = characterMove.presented {
@@ -81,7 +81,7 @@ extension CharacterMovesViewController: UITableViewDataSource {
             return cell
         }
     }
-    
+
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         return sections[section].sectionTitle
     }

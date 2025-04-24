@@ -11,7 +11,7 @@ struct Character: Decodable {
     let rowTitle: String
     let next: String
     let nextBackgroundImage: String
-    
+
     private enum CodingKeys: String, CodingKey {
         case rowImage = "RowImage"
         case rowTitle = "RowTitle"

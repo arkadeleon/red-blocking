@@ -12,7 +12,7 @@ class PopInteractor: UIPercentDrivenInteractiveTransition {
     var navigationController: UINavigationController
     var shouldCompleteTransition = false
     var transitionInProgress = false
-    
+
     init?(attachTo viewController : UIViewController) {
         if let navigationController = viewController.navigationController {
             self.navigationController = navigationController
@@ -22,12 +22,12 @@ class PopInteractor: UIPercentDrivenInteractiveTransition {
             return nil
         }
     }
-    
+
     private func setupBackGesture(view : UIView) {
         let pan = UIPanGestureRecognizer(target: self, action: #selector(handleBackGesture(_:)))
         view.addGestureRecognizer(pan)
     }
-    
+
     @objc private func handleBackGesture(_ gesture : UIPanGestureRecognizer) {
         let viewTranslation = gesture.translation(in: gesture.view?.superview)
         guard viewTranslation.x > 0 else {
@@ -35,7 +35,7 @@ class PopInteractor: UIPercentDrivenInteractiveTransition {
             return
         }
         let progress = viewTranslation.x / navigationController.view.frame.width
-        
+
         switch gesture.state {
         case .began:
             transitionInProgress = true

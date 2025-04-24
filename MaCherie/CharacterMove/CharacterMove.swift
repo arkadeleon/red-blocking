@@ -11,14 +11,14 @@ struct CharacterMove: Decodable {
     let rowDetail: String?
     let next: [Section]?
     let presented: Frames?
-    
+
     private enum CodingKeys: String, CodingKey {
         case rowTitle = "RowTitle"
         case rowDetail = "RowDetail"
         case next = "Next"
         case presented = "Presented"
     }
-    
+
     init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
         rowTitle = try container.decodeIfPresent(String.self, forKey: .rowTitle)
@@ -32,7 +32,7 @@ extension CharacterMove {
     struct Section: Decodable {
         let sectionTitle: String?
         let rows: [CharacterMove]
-        
+
         private enum CodingKeys: String, CodingKey {
             case sectionTitle = "SectionTitle"
             case rows = "Rows"
@@ -46,7 +46,7 @@ extension CharacterMove {
         let characterCode: String
         let skillCode: String
         let skillName: String
-        
+
         private enum CodingKeys: String, CodingKey {
             case viewController = "ViewController"
             case characterCode = "CharacterCode"

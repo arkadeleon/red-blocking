@@ -12,39 +12,39 @@ import UIKit
 class MotionPlayerLayer: CALayer {
     let frameWidth: CGFloat = 384
     let frameHeight: CGFloat = 224
-    
+
     let axeLength: CGFloat = 7
     let axeColor = UIColor.white
-    
+
     let passiveHitboxColor = UIColor(rgb: UserDefaults.standard.integer(forKey: PreferredPassiveHitboxRGBColorKey), alpha:1)
     let otherVulnerabilityHitboxColor = UIColor(rgb: UserDefaults.standard.integer(forKey: PreferredOtherVulnerabilityHitboxRGBColorKey), alpha:1)
     let activeHitboxColor = UIColor(rgb: UserDefaults.standard.integer(forKey: PreferredActiveHitboxRGBColorKey), alpha:1)
     let throwHitboxColor = UIColor(rgb: UserDefaults.standard.integer(forKey: PreferredThrowHitboxRGBColorKey), alpha:1)
     let throwableHitboxColor = UIColor(rgb: UserDefaults.standard.integer(forKey: PreferredThrowableHitboxRGBColorKey), alpha:1)
     let pushHitboxColor = UIColor(rgb: UserDefaults.standard.integer(forKey: PreferredPushHitboxRGBColorKey), alpha:1)
-    
+
     var motionFrame: MotionInfo.Frame? {
         didSet {
             setNeedsDisplay()
         }
     }
-    
+
     override init() {
         super.init()
         needsDisplayOnBoundsChange = true
     }
-    
+
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    
+
     override func draw(in ctx: CGContext) {
         guard let frame = motionFrame else {
             return
         }
-        
+
         let boundingBox = ctx.boundingBoxOfClipPath
-        
+
         if let image = frame.image?.cgImage {
             ctx.saveGState()
             ctx.translateBy(x: 0, y: boundingBox.height)
@@ -52,11 +52,11 @@ class MotionPlayerLayer: CALayer {
             ctx.draw(image, in: boundingBox)
             ctx.restoreGState()
         }
-        
+
         let sx = boundingBox.width / frameWidth
         let sy = boundingBox.height / frameHeight
         ctx.scaleBy(x: sx, y: sy)
-        
+
         if !UserDefaults.standard.bool(forKey: Player1PassiveHitboxHiddenKey) {
             drawHitboxes(
                 hitboxes: frame.player1.hitboxes.passive,
@@ -65,7 +65,7 @@ class MotionPlayerLayer: CALayer {
                 in: ctx
             )
         }
-        
+
         if !UserDefaults.standard.bool(forKey: Player1OtherVulnerabilityHitboxHiddenKey) {
             drawHitboxes(
                 hitboxes: frame.player1.hitboxes.otherVulnerability,
@@ -74,7 +74,7 @@ class MotionPlayerLayer: CALayer {
                 in: ctx
             )
         }
-        
+
         if !UserDefaults.standard.bool(forKey: Player1ActiveHitboxHiddenKey) {
             drawHitboxes(
                 hitboxes: frame.player1.hitboxes.active,
@@ -83,7 +83,7 @@ class MotionPlayerLayer: CALayer {
                 in: ctx
             )
         }
-        
+
         if !UserDefaults.standard.bool(forKey: Player1ThrowHitboxHiddenKey) {
             drawHitboxes(
                 hitboxes: frame.player1.hitboxes.throw,
@@ -92,7 +92,7 @@ class MotionPlayerLayer: CALayer {
                 in: ctx
             )
         }
-        
+
         if !UserDefaults.standard.bool(forKey: Player1ThrowableHitboxHiddenKey) {
             drawHitboxes(
                 hitboxes: frame.player1.hitboxes.throwable,
@@ -101,7 +101,7 @@ class MotionPlayerLayer: CALayer {
                 in: ctx
             )
         }
-        
+
         if !UserDefaults.standard.bool(forKey: Player1PushHitboxHiddenKey) {
             drawHitboxes(
                 hitboxes: frame.player1.hitboxes.push,
@@ -110,7 +110,7 @@ class MotionPlayerLayer: CALayer {
                 in: ctx
             )
         }
-        
+
         if !UserDefaults.standard.bool(forKey: Player2PassiveHitboxHiddenKey) {
             drawHitboxes(
                 hitboxes: frame.player2.hitboxes.passive,
@@ -119,7 +119,7 @@ class MotionPlayerLayer: CALayer {
                 in: ctx
             )
         }
-        
+
         if !UserDefaults.standard.bool(forKey: Player2OtherVulnerabilityHitboxHiddenKey) {
             drawHitboxes(
                 hitboxes: frame.player2.hitboxes.otherVulnerability,
@@ -128,7 +128,7 @@ class MotionPlayerLayer: CALayer {
                 in: ctx
             )
         }
-        
+
         if !UserDefaults.standard.bool(forKey: Player2ActiveHitboxHiddenKey) {
             drawHitboxes(
                 hitboxes: frame.player2.hitboxes.active,
@@ -137,7 +137,7 @@ class MotionPlayerLayer: CALayer {
                 in: ctx
             )
         }
-        
+
         if !UserDefaults.standard.bool(forKey: Player2ThrowHitboxHiddenKey) {
             drawHitboxes(
                 hitboxes: frame.player2.hitboxes.throw,
@@ -146,7 +146,7 @@ class MotionPlayerLayer: CALayer {
                 in: ctx
             )
         }
-        
+
         if !UserDefaults.standard.bool(forKey: Player2ThrowableHitboxHiddenKey) {
             drawHitboxes(
                 hitboxes: frame.player2.hitboxes.throwable,
@@ -155,7 +155,7 @@ class MotionPlayerLayer: CALayer {
                 in: ctx
             )
         }
-        
+
         if !UserDefaults.standard.bool(forKey: Player2PushHitboxHiddenKey) {
             drawHitboxes(
                 hitboxes: frame.player2.hitboxes.push,
@@ -165,13 +165,13 @@ class MotionPlayerLayer: CALayer {
             )
         }
     }
-    
+
     private func drawHitboxes(hitboxes: [String], hitboxesToDraw: [[Int]], with color: UIColor, in ctx: CGContext) {
         let count = hitboxesToDraw.count
         for i in 0..<count {
             let hitboxToDraw = hitboxesToDraw[i]
             let hitbox = hitboxes[i]
-            
+
             if hitbox != "0,0,0,0" {
                 let right = hitboxToDraw[0]
                 let left = hitboxToDraw[1]
@@ -181,7 +181,7 @@ class MotionPlayerLayer: CALayer {
             }
         }
     }
-    
+
     private func drawHitbox(top: Int, left: Int, bottom: Int, right: Int, with color: UIColor, in ctx: CGContext) {
         let rect = CGRect(
             x: CGFloat(left),
@@ -189,19 +189,19 @@ class MotionPlayerLayer: CALayer {
             width: CGFloat(right - left),
             height: CGFloat(bottom - top)
         )
-        
+
         ctx.setFillColor(color.withAlphaComponent(0.3).cgColor)
         ctx.fill(rect)
-        
+
         ctx.setStrokeColor(color.withAlphaComponent(1).cgColor)
         ctx.stroke(rect)
     }
-    
+
     private func drawAxe(x: CGFloat, y: CGFloat, in ctx: CGContext) {
         drawLine(x1: x - axeLength, y1: y, x2: x + axeLength, y2: y, with: axeColor, in: ctx)
         drawLine(x1: x, y1: y - axeLength, x2: x, y2: y + axeLength, with: axeColor, in: ctx)
     }
-    
+
     private func drawLine(x1: CGFloat, y1: CGFloat, x2: CGFloat, y2: CGFloat, with color: UIColor, in ctx: CGContext) {
         ctx.setLineWidth(1)
         ctx.setStrokeColor(color.cgColor)
