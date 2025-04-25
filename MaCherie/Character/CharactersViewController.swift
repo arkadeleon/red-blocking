@@ -12,9 +12,9 @@ class CharactersViewController: UIViewController {
     @IBOutlet var tableView: UITableView!
 
     let characters: [Character] = {
-        let url = Bundle.main.bundleURL.appendingPathComponent("Characters.plist")
+        let url = Bundle.main.bundleURL.appendingPathComponent("CharacterData/Characters.json")
         let data = try! Data(contentsOf: url)
-        let characters = try! PropertyListDecoder().decode([Character].self, from: data)
+        let characters = try! JSONDecoder().decode([Character].self, from: data)
         return characters
     }()
 
@@ -61,9 +61,9 @@ class CharactersViewController: UIViewController {
             let indexPath = tableView.indexPathForSelectedRow!
             let character = characters[indexPath.row]
 
-            let url = Bundle.main.bundleURL.appendingPathComponent(character.next)
+            let url = Bundle.main.bundleURL.appendingPathComponent("CharacterData/\(character.next)")
             let data = try! Data(contentsOf: url)
-            let sections = try! PropertyListDecoder().decode([CharacterMove.Section].self, from: data)
+            let sections = try! JSONDecoder().decode([CharacterMove.Section].self, from: data)
 
             let detailViewController = (segue.destination as! UINavigationController).topViewController as! CharacterMovesViewController
             detailViewController.title = character.rowTitle
@@ -78,9 +78,9 @@ class CharactersViewController: UIViewController {
     func displayDetailViewController(_ detailViewController: CharacterMovesViewController, withSelectedIndexPath indexPath: IndexPath) {
         let character = characters[indexPath.row]
 
-        let url = Bundle.main.bundleURL.appendingPathComponent(character.next)
+        let url = Bundle.main.bundleURL.appendingPathComponent("CharacterData/\(character.next)")
         let data = try! Data(contentsOf: url)
-        let sections = try! PropertyListDecoder().decode([CharacterMove.Section].self, from: data)
+        let sections = try! JSONDecoder().decode([CharacterMove.Section].self, from: data)
 
         detailViewController.title = character.rowTitle
         detailViewController.sections = sections

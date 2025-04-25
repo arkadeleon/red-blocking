@@ -10,26 +10,6 @@
 		04580D341A25CB1800A4A9B2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04580D161A25CB1800A4A9B2 /* Main.storyboard */; };
 		3505351520D1FDA600078847 /* CharacterMovesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3505351420D1FDA600078847 /* CharacterMovesViewController.swift */; };
 		3505351920D21AC300078847 /* MotionPlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3505351820D21AC300078847 /* MotionPlayerViewController.swift */; };
-		352275C120D2A9C7002144BD /* Yang.plist in Resources */ = {isa = PBXBuildFile; fileRef = 352275AD20D2A9C7002144BD /* Yang.plist */; };
-		352275C220D2A9C7002144BD /* Dudley.plist in Resources */ = {isa = PBXBuildFile; fileRef = 352275AE20D2A9C7002144BD /* Dudley.plist */; };
-		352275C320D2A9C7002144BD /* Makoto.plist in Resources */ = {isa = PBXBuildFile; fileRef = 352275AF20D2A9C7002144BD /* Makoto.plist */; };
-		352275C420D2A9C7002144BD /* Remy.plist in Resources */ = {isa = PBXBuildFile; fileRef = 352275B020D2A9C7002144BD /* Remy.plist */; };
-		352275C520D2A9C7002144BD /* Necro.plist in Resources */ = {isa = PBXBuildFile; fileRef = 352275B120D2A9C7002144BD /* Necro.plist */; };
-		352275C620D2A9C7002144BD /* Yun.plist in Resources */ = {isa = PBXBuildFile; fileRef = 352275B220D2A9C7002144BD /* Yun.plist */; };
-		352275C720D2A9C7002144BD /* Ryu.plist in Resources */ = {isa = PBXBuildFile; fileRef = 352275B320D2A9C7002144BD /* Ryu.plist */; };
-		352275C820D2A9C7002144BD /* Gouki.plist in Resources */ = {isa = PBXBuildFile; fileRef = 352275B420D2A9C7002144BD /* Gouki.plist */; };
-		352275C920D2A9C7002144BD /* Alex.plist in Resources */ = {isa = PBXBuildFile; fileRef = 352275B520D2A9C7002144BD /* Alex.plist */; };
-		352275CA20D2A9C7002144BD /* Chun-Li.plist in Resources */ = {isa = PBXBuildFile; fileRef = 352275B620D2A9C7002144BD /* Chun-Li.plist */; };
-		352275CB20D2A9C7002144BD /* Elena.plist in Resources */ = {isa = PBXBuildFile; fileRef = 352275B720D2A9C7002144BD /* Elena.plist */; };
-		352275CC20D2A9C7002144BD /* Ken.plist in Resources */ = {isa = PBXBuildFile; fileRef = 352275B820D2A9C7002144BD /* Ken.plist */; };
-		352275CD20D2A9C7002144BD /* Ibuki.plist in Resources */ = {isa = PBXBuildFile; fileRef = 352275B920D2A9C7002144BD /* Ibuki.plist */; };
-		352275CE20D2A9C7002144BD /* Characters.plist in Resources */ = {isa = PBXBuildFile; fileRef = 352275BA20D2A9C7002144BD /* Characters.plist */; };
-		352275CF20D2A9C7002144BD /* Twelve.plist in Resources */ = {isa = PBXBuildFile; fileRef = 352275BB20D2A9C7002144BD /* Twelve.plist */; };
-		352275D020D2A9C7002144BD /* Urien.plist in Resources */ = {isa = PBXBuildFile; fileRef = 352275BC20D2A9C7002144BD /* Urien.plist */; };
-		352275D120D2A9C7002144BD /* Sean.plist in Resources */ = {isa = PBXBuildFile; fileRef = 352275BD20D2A9C7002144BD /* Sean.plist */; };
-		352275D220D2A9C7002144BD /* Hugo.plist in Resources */ = {isa = PBXBuildFile; fileRef = 352275BE20D2A9C7002144BD /* Hugo.plist */; };
-		352275D320D2A9C7002144BD /* Oro.plist in Resources */ = {isa = PBXBuildFile; fileRef = 352275BF20D2A9C7002144BD /* Oro.plist */; };
-		352275D420D2A9C7002144BD /* Q.plist in Resources */ = {isa = PBXBuildFile; fileRef = 352275C020D2A9C7002144BD /* Q.plist */; };
 		352FE9672382840D0083CCF0 /* CharacterBackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 352FE9662382840D0083CCF0 /* CharacterBackgroundView.swift */; };
 		35375CAC20D0FE45004642CB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 35375CAB20D0FE45004642CB /* LaunchScreen.storyboard */; };
 		355F2D202BA0205E00B97A41 /* RswiftLibrary in Frameworks */ = {isa = PBXBuildFile; productRef = 355F2D1F2BA0205E00B97A41 /* RswiftLibrary */; };
@@ -37,6 +17,7 @@
 		3566755520D26A2800DD26A4 /* ApplicationDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3566755420D26A2800DD26A4 /* ApplicationDataManager.swift */; };
 		3566755720D26A4D00DD26A4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3566755620D26A4D00DD26A4 /* AppDelegate.swift */; };
 		3566755920D2702C00DD26A4 /* MotionDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3566755820D2702C00DD26A4 /* MotionDownloader.swift */; };
+		3583FA322DBB640F00778995 /* CharacterData in Resources */ = {isa = PBXBuildFile; fileRef = 3583FA312DBB63E800778995 /* CharacterData */; };
 		35AFF43E2BA093B500737E1A /* FrameData in Resources */ = {isa = PBXBuildFile; fileRef = 35AFF43D2BA093B500737E1A /* FrameData */; };
 		35B69A2420D8DA2700F05A2C /* CharacterSupplementaryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35B69A2220D8DA2700F05A2C /* CharacterSupplementaryCell.swift */; };
 		35B69A2820D8DA4700F05A2C /* CharacterMoveCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35B69A2620D8DA4700F05A2C /* CharacterMoveCell.swift */; };
@@ -72,32 +53,14 @@
 		04580D161A25CB1800A4A9B2 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		3505351420D1FDA600078847 /* CharacterMovesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CharacterMovesViewController.swift; sourceTree = "<group>"; };
 		3505351820D21AC300078847 /* MotionPlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotionPlayerViewController.swift; sourceTree = "<group>"; };
-		352275AD20D2A9C7002144BD /* Yang.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Yang.plist; sourceTree = "<group>"; };
-		352275AE20D2A9C7002144BD /* Dudley.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Dudley.plist; sourceTree = "<group>"; };
-		352275AF20D2A9C7002144BD /* Makoto.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Makoto.plist; sourceTree = "<group>"; };
-		352275B020D2A9C7002144BD /* Remy.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Remy.plist; sourceTree = "<group>"; };
-		352275B120D2A9C7002144BD /* Necro.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Necro.plist; sourceTree = "<group>"; };
-		352275B220D2A9C7002144BD /* Yun.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Yun.plist; sourceTree = "<group>"; };
-		352275B320D2A9C7002144BD /* Ryu.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Ryu.plist; sourceTree = "<group>"; };
-		352275B420D2A9C7002144BD /* Gouki.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Gouki.plist; sourceTree = "<group>"; };
-		352275B520D2A9C7002144BD /* Alex.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Alex.plist; sourceTree = "<group>"; };
-		352275B620D2A9C7002144BD /* Chun-Li.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Chun-Li.plist"; sourceTree = "<group>"; };
-		352275B720D2A9C7002144BD /* Elena.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Elena.plist; sourceTree = "<group>"; };
-		352275B820D2A9C7002144BD /* Ken.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Ken.plist; sourceTree = "<group>"; };
-		352275B920D2A9C7002144BD /* Ibuki.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Ibuki.plist; sourceTree = "<group>"; };
-		352275BA20D2A9C7002144BD /* Characters.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Characters.plist; sourceTree = "<group>"; };
-		352275BB20D2A9C7002144BD /* Twelve.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Twelve.plist; sourceTree = "<group>"; };
-		352275BC20D2A9C7002144BD /* Urien.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Urien.plist; sourceTree = "<group>"; };
-		352275BD20D2A9C7002144BD /* Sean.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Sean.plist; sourceTree = "<group>"; };
-		352275BE20D2A9C7002144BD /* Hugo.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Hugo.plist; sourceTree = "<group>"; };
-		352275BF20D2A9C7002144BD /* Oro.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Oro.plist; sourceTree = "<group>"; };
-		352275C020D2A9C7002144BD /* Q.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Q.plist; sourceTree = "<group>"; };
 		352FE9662382840D0083CCF0 /* CharacterBackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterBackgroundView.swift; sourceTree = "<group>"; };
 		35375CAB20D0FE45004642CB /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3566755220D2692F00DD26A4 /* UIColor+Integer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Integer.swift"; sourceTree = "<group>"; };
 		3566755420D26A2800DD26A4 /* ApplicationDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationDataManager.swift; sourceTree = "<group>"; };
 		3566755620D26A4D00DD26A4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3566755820D2702C00DD26A4 /* MotionDownloader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotionDownloader.swift; sourceTree = "<group>"; };
+		3583FA312DBB63E800778995 /* CharacterData */ = {isa = PBXFileReference; lastKnownFileType = folder; path = CharacterData; sourceTree = "<group>"; };
+		3583FA5D2DBB65EE00778995 /* PropertyLists */ = {isa = PBXFileReference; lastKnownFileType = folder; path = PropertyLists; sourceTree = "<group>"; };
 		35AFF43D2BA093B500737E1A /* FrameData */ = {isa = PBXFileReference; lastKnownFileType = folder; path = FrameData; sourceTree = "<group>"; };
 		35B69A2220D8DA2700F05A2C /* CharacterSupplementaryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterSupplementaryCell.swift; sourceTree = "<group>"; };
 		35B69A2620D8DA4700F05A2C /* CharacterMoveCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterMoveCell.swift; sourceTree = "<group>"; };
@@ -156,33 +119,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		352275AC20D2A9C7002144BD /* PropertyLists */ = {
-			isa = PBXGroup;
-			children = (
-				352275BA20D2A9C7002144BD /* Characters.plist */,
-				352275B520D2A9C7002144BD /* Alex.plist */,
-				352275B620D2A9C7002144BD /* Chun-Li.plist */,
-				352275AE20D2A9C7002144BD /* Dudley.plist */,
-				352275B720D2A9C7002144BD /* Elena.plist */,
-				352275B420D2A9C7002144BD /* Gouki.plist */,
-				352275BE20D2A9C7002144BD /* Hugo.plist */,
-				352275B920D2A9C7002144BD /* Ibuki.plist */,
-				352275B820D2A9C7002144BD /* Ken.plist */,
-				352275AF20D2A9C7002144BD /* Makoto.plist */,
-				352275B120D2A9C7002144BD /* Necro.plist */,
-				352275BF20D2A9C7002144BD /* Oro.plist */,
-				352275C020D2A9C7002144BD /* Q.plist */,
-				352275B020D2A9C7002144BD /* Remy.plist */,
-				352275B320D2A9C7002144BD /* Ryu.plist */,
-				352275BD20D2A9C7002144BD /* Sean.plist */,
-				352275BB20D2A9C7002144BD /* Twelve.plist */,
-				352275BC20D2A9C7002144BD /* Urien.plist */,
-				352275AD20D2A9C7002144BD /* Yang.plist */,
-				352275B220D2A9C7002144BD /* Yun.plist */,
-			);
-			path = PropertyLists;
-			sourceTree = "<group>";
-		};
 		3572AF8D20D1021F00C15871 /* Core */ = {
 			isa = PBXGroup;
 			children = (
@@ -278,8 +214,9 @@
 				35B69A3220D8DE8500F05A2C /* Character */,
 				35B69A3320D8DEA600F05A2C /* CharacterMove */,
 				35B69A3420D8DEBD00F05A2C /* Motion */,
-				352275AC20D2A9C7002144BD /* PropertyLists */,
 				EEE27AD5176C1347008A41AB /* Supporting Files */,
+				3583FA5D2DBB65EE00778995 /* PropertyLists */,
+				3583FA312DBB63E800778995 /* CharacterData */,
 				35AFF43D2BA093B500737E1A /* FrameData */,
 				EEADB06B17FA72B3004E2F60 /* Assets.xcassets */,
 			);
@@ -368,30 +305,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				352275C420D2A9C7002144BD /* Remy.plist in Resources */,
-				352275C320D2A9C7002144BD /* Makoto.plist in Resources */,
-				352275C120D2A9C7002144BD /* Yang.plist in Resources */,
-				352275C920D2A9C7002144BD /* Alex.plist in Resources */,
-				352275CE20D2A9C7002144BD /* Characters.plist in Resources */,
-				352275C820D2A9C7002144BD /* Gouki.plist in Resources */,
+				3583FA322DBB640F00778995 /* CharacterData in Resources */,
 				35AFF43E2BA093B500737E1A /* FrameData in Resources */,
-				352275D220D2A9C7002144BD /* Hugo.plist in Resources */,
-				352275C220D2A9C7002144BD /* Dudley.plist in Resources */,
 				EEADB06C17FA72B3004E2F60 /* Assets.xcassets in Resources */,
-				352275C520D2A9C7002144BD /* Necro.plist in Resources */,
-				352275D320D2A9C7002144BD /* Oro.plist in Resources */,
-				352275D020D2A9C7002144BD /* Urien.plist in Resources */,
-				352275C720D2A9C7002144BD /* Ryu.plist in Resources */,
-				352275CC20D2A9C7002144BD /* Ken.plist in Resources */,
-				352275D120D2A9C7002144BD /* Sean.plist in Resources */,
-				352275CB20D2A9C7002144BD /* Elena.plist in Resources */,
 				35375CAC20D0FE45004642CB /* LaunchScreen.storyboard in Resources */,
-				352275CA20D2A9C7002144BD /* Chun-Li.plist in Resources */,
 				04580D341A25CB1800A4A9B2 /* Main.storyboard in Resources */,
-				352275CF20D2A9C7002144BD /* Twelve.plist in Resources */,
-				352275D420D2A9C7002144BD /* Q.plist in Resources */,
-				352275C620D2A9C7002144BD /* Yun.plist in Resources */,
-				352275CD20D2A9C7002144BD /* Ibuki.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
