@@ -18,6 +18,7 @@
 		3566755720D26A4D00DD26A4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3566755620D26A4D00DD26A4 /* AppDelegate.swift */; };
 		3566755920D2702C00DD26A4 /* MotionDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3566755820D2702C00DD26A4 /* MotionDownloader.swift */; };
 		3583FA322DBB640F00778995 /* CharacterData in Resources */ = {isa = PBXBuildFile; fileRef = 3583FA312DBB63E800778995 /* CharacterData */; };
+		3583FA662DBDF97300778995 /* Yams in Frameworks */ = {isa = PBXBuildFile; productRef = 3583FA652DBDF97300778995 /* Yams */; };
 		35AFF43E2BA093B500737E1A /* FrameData in Resources */ = {isa = PBXBuildFile; fileRef = 35AFF43D2BA093B500737E1A /* FrameData */; };
 		35B69A2420D8DA2700F05A2C /* CharacterSupplementaryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35B69A2220D8DA2700F05A2C /* CharacterSupplementaryCell.swift */; };
 		35B69A2820D8DA4700F05A2C /* CharacterMoveCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35B69A2620D8DA4700F05A2C /* CharacterMoveCell.swift */; };
@@ -100,6 +101,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EE318CB5183E363E0081370B /* AudioToolbox.framework in Frameworks */,
+				3583FA662DBDF97300778995 /* Yams in Frameworks */,
 				EEE27AEC176C1424008A41AB /* AVFoundation.framework in Frameworks */,
 				EEE27AEE176C1430008A41AB /* CoreData.framework in Frameworks */,
 				EEE27AD3176C1347008A41AB /* CoreGraphics.framework in Frameworks */,
@@ -250,6 +252,7 @@
 			name = MaCherie;
 			packageProductDependencies = (
 				355F2D1F2BA0205E00B97A41 /* RswiftLibrary */,
+				3583FA652DBDF97300778995 /* Yams */,
 			);
 			productName = MaCherie;
 			productReference = EEE27ACB176C1347008A41AB /* MaCherie.app */;
@@ -290,6 +293,7 @@
 			mainGroup = EEE27AC2176C1347008A41AB;
 			packageReferences = (
 				355F2D1E2BA0205E00B97A41 /* XCRemoteSwiftPackageReference "R.swift" */,
+				3583FA642DBDF97300778995 /* XCRemoteSwiftPackageReference "Yams" */,
 			);
 			productRefGroup = EEE27ACC176C1347008A41AB /* Products */;
 			projectDirPath = "";
@@ -545,6 +549,14 @@
 				minimumVersion = 7.5.0;
 			};
 		};
+		3583FA642DBDF97300778995 /* XCRemoteSwiftPackageReference "Yams" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/jpsim/Yams.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.3.1;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -557,6 +569,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 355F2D1E2BA0205E00B97A41 /* XCRemoteSwiftPackageReference "R.swift" */;
 			productName = "plugin:RswiftGenerateInternalResources";
+		};
+		3583FA652DBDF97300778995 /* Yams */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3583FA642DBDF97300778995 /* XCRemoteSwiftPackageReference "Yams" */;
+			productName = Yams;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

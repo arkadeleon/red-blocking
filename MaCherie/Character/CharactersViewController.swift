@@ -7,14 +7,15 @@
 //
 
 import UIKit
+import Yams
 
 class CharactersViewController: UIViewController {
     @IBOutlet var tableView: UITableView!
 
     let characters: [Character] = {
-        let url = Bundle.main.bundleURL.appendingPathComponent("CharacterData/Characters.json")
+        let url = Bundle.main.bundleURL.appendingPathComponent("CharacterData/Characters.yml")
         let data = try! Data(contentsOf: url)
-        let characters = try! JSONDecoder().decode([Character].self, from: data)
+        let characters = try! YAMLDecoder().decode([Character].self, from: data)
         return characters
     }()
 
@@ -63,7 +64,7 @@ class CharactersViewController: UIViewController {
 
             let url = Bundle.main.bundleURL.appendingPathComponent("CharacterData/\(character.next)")
             let data = try! Data(contentsOf: url)
-            let sections = try! JSONDecoder().decode([CharacterMove.Section].self, from: data)
+            let sections = try! YAMLDecoder().decode([CharacterMove.Section].self, from: data)
 
             let detailViewController = (segue.destination as! UINavigationController).topViewController as! CharacterMovesViewController
             detailViewController.title = character.rowTitle
@@ -80,7 +81,7 @@ class CharactersViewController: UIViewController {
 
         let url = Bundle.main.bundleURL.appendingPathComponent("CharacterData/\(character.next)")
         let data = try! Data(contentsOf: url)
-        let sections = try! JSONDecoder().decode([CharacterMove.Section].self, from: data)
+        let sections = try! YAMLDecoder().decode([CharacterMove.Section].self, from: data)
 
         detailViewController.title = character.rowTitle
         detailViewController.sections = sections

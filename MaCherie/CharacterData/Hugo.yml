@@ -1,0 +1,2893 @@
+- SectionTitle: 【熱血の大巨人】
+  Rows:
+    - RowTitle: |-
+        前トーナメントでの圧勝ぶりがたたり、誰もがヒューゴーを敬遠するようになった。
+        試合を組めない日々にマネージャーのポイズンはたまりかね「新軍団の設立&強者スカウト」を案じる。
+        もう弱腰どもに愛想は尽きた。強者よ集え、弱虫は去れ。
+        彼らの新たなチャレンジが始まった。
+- SectionTitle: 【空中通常技】
+  Rows:
+    - RowTitle: ジャンプ小パンチ
+      Next:
+        Sections:
+          - Rows:
+              - RowTitle: 垂直ジャンプ小パンチ
+                Next:
+                  Sections:
+                    - Rows:
+                        - RowTitle: 技名
+                          RowDetail: フライングチョップ
+                        - RowTitle: 発生
+                          RowDetail: "3"
+                        - RowTitle: 持続
+                          RowDetail: "11"
+                        - RowTitle: 攻撃力
+                          RowDetail: "40"
+                        - RowTitle: スタン値
+                          RowDetail: "9"
+                        - RowTitle: 削減値
+                          RowDetail: "3"
+                    - SectionTitle: ゲージ増加量
+                      Rows:
+                        - RowTitle: 空振り
+                          RowDetail: "0"
+                        - RowTitle: ガード
+                          RowDetail: "2"
+                        - RowTitle: ヒット
+                          RowDetail: "3"
+                        - RowTitle: BL
+                          RowDetail: "4"
+              - RowTitle: 斜めジャンプ小パンチ
+                Next:
+                  Sections:
+                    - Rows:
+                        - RowTitle: 技名
+                          RowDetail: フライングチョップ
+                        - RowTitle: 発生
+                          RowDetail: "3"
+                        - RowTitle: 持続
+                          RowDetail: "11"
+                        - RowTitle: 攻撃力
+                          RowDetail: "40"
+                        - RowTitle: スタン値
+                          RowDetail: "9"
+                        - RowTitle: 削減値
+                          RowDetail: "3"
+                    - SectionTitle: ゲージ増加量
+                      Rows:
+                        - RowTitle: 空振り
+                          RowDetail: "0"
+                        - RowTitle: ガード
+                          RowDetail: "2"
+                        - RowTitle: ヒット
+                          RowDetail: "3"
+                        - RowTitle: BL
+                          RowDetail: "4"
+                    - Rows:
+                        - Presented:
+                            SkillName: Jumping Jab
+                            CharacterCode: "06"
+                            ViewController: FramesPlayerViewController
+                            SkillCode: "007"
+                          RowTitle: モーション
+    - RowTitle: ジャンプ中パンチ
+      Next:
+        Sections:
+          - Rows:
+              - RowTitle: 垂直ジャンプ中パンチ
+                Next:
+                  Sections:
+                    - Rows:
+                        - RowTitle: 技名
+                          RowDetail: フライングチョップ
+                        - RowTitle: 発生
+                          RowDetail: "6"
+                        - RowTitle: 持続
+                          RowDetail: "8"
+                        - RowTitle: 攻撃力
+                          RowDetail: "100"
+                        - RowTitle: スタン値
+                          RowDetail: "13"
+                        - RowTitle: 削減値
+                          RowDetail: "3"
+                    - SectionTitle: ゲージ増加量
+                      Rows:
+                        - RowTitle: 空振り
+                          RowDetail: "2"
+                        - RowTitle: ガード
+                          RowDetail: "5"
+                        - RowTitle: ヒット
+                          RowDetail: "9"
+                        - RowTitle: BL
+                          RowDetail: "4"
+              - RowTitle: 斜めジャンプ中パンチ
+                Next:
+                  Sections:
+                    - Rows:
+                        - RowTitle: 技名
+                          RowDetail: フライングチョップ
+                        - RowTitle: 発生
+                          RowDetail: "6"
+                        - RowTitle: 持続
+                          RowDetail: "8"
+                        - RowTitle: 攻撃力
+                          RowDetail: "100"
+                        - RowTitle: スタン値
+                          RowDetail: "13"
+                        - RowTitle: 削減値
+                          RowDetail: "3"
+                    - SectionTitle: ゲージ増加量
+                      Rows:
+                        - RowTitle: 空振り
+                          RowDetail: "2"
+                        - RowTitle: ガード
+                          RowDetail: "5"
+                        - RowTitle: ヒット
+                          RowDetail: "9"
+                        - RowTitle: BL
+                          RowDetail: "4"
+                    - Rows:
+                        - Presented:
+                            SkillName: Jumping Strong
+                            CharacterCode: "06"
+                            ViewController: FramesPlayerViewController
+                            SkillCode: "008"
+                          RowTitle: モーション
+    - RowTitle: ジャンプ大パンチ
+      Next:
+        Sections:
+          - Rows:
+              - RowTitle: 垂直ジャンプ大パンチ
+                Next:
+                  Sections:
+                    - Rows:
+                        - RowTitle: 技名
+                          RowDetail: フライングハンマー
+                        - RowTitle: 発生
+                          RowDetail: "11"
+                        - RowTitle: 持続
+                          RowDetail: "5"
+                        - RowTitle: 攻撃力
+                          RowDetail: "150"
+                        - RowTitle: スタン値
+                          RowDetail: "17"
+                        - RowTitle: 削減値
+                          RowDetail: "3"
+                    - SectionTitle: ゲージ増加量
+                      Rows:
+                        - RowTitle: 空振り
+                          RowDetail: "3"
+                        - RowTitle: ガード
+                          RowDetail: "7"
+                        - RowTitle: ヒット
+                          RowDetail: "15"
+                        - RowTitle: BL
+                          RowDetail: "4"
+              - RowTitle: 斜めジャンプ大パンチ
+                Next:
+                  Sections:
+                    - Rows:
+                        - RowTitle: 技名
+                          RowDetail: フライングハンマー
+                        - RowTitle: 発生
+                          RowDetail: "11"
+                        - RowTitle: 持続
+                          RowDetail: "5"
+                        - RowTitle: 攻撃力
+                          RowDetail: "150"
+                        - RowTitle: スタン値
+                          RowDetail: "17"
+                        - RowTitle: 削減値
+                          RowDetail: "3"
+                    - SectionTitle: ゲージ増加量
+                      Rows:
+                        - RowTitle: 空振り
+                          RowDetail: "3"
+                        - RowTitle: ガード
+                          RowDetail: "7"
+                        - RowTitle: ヒット
+                          RowDetail: "15"
+                        - RowTitle: BL
+                          RowDetail: "4"
+                    - Rows:
+                        - Presented:
+                            SkillName: Jumping Fierce
+                            CharacterCode: "06"
+                            ViewController: FramesPlayerViewController
+                            SkillCode: "009"
+                          RowTitle: モーション
+    - RowTitle: ジャンプ小キック
+      Next:
+        Sections:
+          - Rows:
+              - RowTitle: 垂直ジャンプ小キック
+                Next:
+                  Sections:
+                    - Rows:
+                        - RowTitle: 技名
+                          RowDetail: ニーアタック
+                        - RowTitle: 発生
+                          RowDetail: "3"
+                        - RowTitle: 持続
+                          RowDetail: "16"
+                        - RowTitle: 攻撃力
+                          RowDetail: "60"
+                        - RowTitle: スタン値
+                          RowDetail: "7"
+                        - RowTitle: 削減値
+                          RowDetail: "3"
+                    - SectionTitle: ゲージ増加量
+                      Rows:
+                        - RowTitle: 空振り
+                          RowDetail: "0"
+                        - RowTitle: ガード
+                          RowDetail: "2"
+                        - RowTitle: ヒット
+                          RowDetail: "3"
+                        - RowTitle: BL
+                          RowDetail: "4"
+              - RowTitle: 斜めジャンプ小キック
+                Next:
+                  Sections:
+                    - Rows:
+                        - RowTitle: 技名
+                          RowDetail: ニーアタック
+                        - RowTitle: 発生
+                          RowDetail: "3"
+                        - RowTitle: 持続
+                          RowDetail: "16"
+                        - RowTitle: 攻撃力
+                          RowDetail: "60"
+                        - RowTitle: スタン値
+                          RowDetail: "7"
+                        - RowTitle: 削減値
+                          RowDetail: "3"
+                    - SectionTitle: ゲージ増加量
+                      Rows:
+                        - RowTitle: 空振り
+                          RowDetail: "0"
+                        - RowTitle: ガード
+                          RowDetail: "2"
+                        - RowTitle: ヒット
+                          RowDetail: "3"
+                        - RowTitle: BL
+                          RowDetail: "4"
+                    - Rows:
+                        - Presented:
+                            SkillName: Jumping Short
+                            CharacterCode: "06"
+                            ViewController: FramesPlayerViewController
+                            SkillCode: "016"
+                          RowTitle: モーション
+    - RowTitle: ジャンプ中キック
+      Next:
+        Sections:
+          - Rows:
+              - RowTitle: 垂直ジャンプ中キック
+                Next:
+                  Sections:
+                    - Rows:
+                        - RowTitle: 技名
+                          RowDetail: ニーアタック
+                        - RowTitle: 発生
+                          RowDetail: "5"
+                        - RowTitle: 持続
+                          RowDetail: "7"
+                        - RowTitle: 攻撃力
+                          RowDetail: "100"
+                        - RowTitle: スタン値
+                          RowDetail: "11"
+                        - RowTitle: 削減値
+                          RowDetail: "3"
+                    - SectionTitle: ゲージ増加量
+                      Rows:
+                        - RowTitle: 空振り
+                          RowDetail: "2"
+                        - RowTitle: ガード
+                          RowDetail: "5"
+                        - RowTitle: ヒット
+                          RowDetail: "9"
+                        - RowTitle: BL
+                          RowDetail: "4"
+              - RowTitle: 斜めジャンプ中キック
+                Next:
+                  Sections:
+                    - Rows:
+                        - RowTitle: 技名
+                          RowDetail: ニーアタック
+                        - RowTitle: 発生
+                          RowDetail: "5"
+                        - RowTitle: 持続
+                          RowDetail: "7"
+                        - RowTitle: 攻撃力
+                          RowDetail: "100"
+                        - RowTitle: スタン値
+                          RowDetail: "11"
+                        - RowTitle: 削減値
+                          RowDetail: "3"
+                    - SectionTitle: ゲージ増加量
+                      Rows:
+                        - RowTitle: 空振り
+                          RowDetail: "2"
+                        - RowTitle: ガード
+                          RowDetail: "5"
+                        - RowTitle: ヒット
+                          RowDetail: "9"
+                        - RowTitle: BL
+                          RowDetail: "4"
+                    - Rows:
+                        - Presented:
+                            SkillName: Jumping Forward
+                            CharacterCode: "06"
+                            ViewController: FramesPlayerViewController
+                            SkillCode: "017"
+                          RowTitle: モーション
+    - RowTitle: ジャンプ大キック
+      Next:
+        Sections:
+          - Rows:
+              - RowTitle: 垂直ジャンプ大キック
+                Next:
+                  Sections:
+                    - Rows:
+                        - RowTitle: 技名
+                          RowDetail: ドロップキック
+                        - RowTitle: 発生
+                          RowDetail: "11"
+                        - RowTitle: 持続
+                          RowDetail: "7"
+                        - RowTitle: 攻撃力
+                          RowDetail: "130"
+                        - RowTitle: スタン値
+                          RowDetail: "15"
+                        - RowTitle: 削減値
+                          RowDetail: "3"
+                    - SectionTitle: ゲージ増加量
+                      Rows:
+                        - RowTitle: 空振り
+                          RowDetail: "3"
+                        - RowTitle: ガード
+                          RowDetail: "7"
+                        - RowTitle: ヒット
+                          RowDetail: "15"
+                        - RowTitle: BL
+                          RowDetail: "4"
+                    - SectionTitle: 補足
+                      Rows:
+                        - RowTitle: 横方向に判定が強い
+              - RowTitle: 斜めジャンプ大キック
+                Next:
+                  Sections:
+                    - Rows:
+                        - RowTitle: 技名
+                          RowDetail: ドロップキック
+                        - RowTitle: 発生
+                          RowDetail: "11"
+                        - RowTitle: 持続
+                          RowDetail: "7"
+                        - RowTitle: 攻撃力
+                          RowDetail: "130"
+                        - RowTitle: スタン値
+                          RowDetail: "15"
+                        - RowTitle: 削減値
+                          RowDetail: "3"
+                    - SectionTitle: ゲージ増加量
+                      Rows:
+                        - RowTitle: 空振り
+                          RowDetail: "3"
+                        - RowTitle: ガード
+                          RowDetail: "7"
+                        - RowTitle: ヒット
+                          RowDetail: "15"
+                        - RowTitle: BL
+                          RowDetail: "4"
+                    - SectionTitle: 補足
+                      Rows:
+                        - RowTitle: 横方向に判定が強いので、飛び込みや空中での牽制に有効
+                    - Rows:
+                        - Presented:
+                            SkillName: Jumping Roundhouse
+                            CharacterCode: "06"
+                            ViewController: FramesPlayerViewController
+                            SkillCode: "018"
+                          RowTitle: モーション
+- SectionTitle: 【地上通常技】
+  Rows:
+    - RowTitle: 小パンチ
+      Next:
+        Sections:
+          - Rows:
+              - RowTitle: 立ち小パンチ
+                Next:
+                  Sections:
+                    - Rows:
+                        - RowTitle: 技名
+                          RowDetail: 地獄突き
+                        - RowTitle: C/SC
+                          RowDetail: ☆/×
+                        - RowTitle: ガード
+                          RowDetail: 両方
+                        - RowTitle: BL
+                          RowDetail: 両方
+                        - RowTitle: 発生
+                          RowDetail: "4"
+                        - RowTitle: 持続
+                          RowDetail: "4"
+                        - RowTitle: 硬直
+                          RowDetail: "8"
+                        - RowTitle: 攻撃力
+                          RowDetail: "35"
+                        - RowTitle: スタン値
+                          RowDetail: "5"
+                        - RowTitle: 削減値
+                          RowDetail: "1"
+                    - SectionTitle: ゲージ増加量
+                      Rows:
+                        - RowTitle: 空振り
+                          RowDetail: "0"
+                        - RowTitle: ガード
+                          RowDetail: "2"
+                        - RowTitle: ヒット
+                          RowDetail: "3"
+                        - RowTitle: BL
+                          RowDetail: "4"
+                    - SectionTitle: ヒット&ガード硬直時間差
+                      Rows:
+                        - RowTitle: ガード
+                          RowDetail: "-1"
+                        - RowTitle: 立ヒット
+                          RowDetail: "-1"
+                        - RowTitle: 屈ヒット
+                          RowDetail: "-1"
+                    - Rows:
+                        - Presented:
+                            SkillName: Jab
+                            CharacterCode: "06"
+                            ViewController: FramesPlayerViewController
+                            SkillCode: "001"
+                          RowTitle: モーション
+              - RowTitle: しゃがみ小パンチ
+                Next:
+                  Sections:
+                    - Rows:
+                        - RowTitle: 技名
+                          RowDetail: 地獄突き
+                        - RowTitle: C/SC
+                          RowDetail: ☆/○
+                        - RowTitle: ガード
+                          RowDetail: 両方
+                        - RowTitle: BL
+                          RowDetail: 両方
+                        - RowTitle: 発生
+                          RowDetail: "4"
+                        - RowTitle: 持続
+                          RowDetail: "3"
+                        - RowTitle: 硬直
+                          RowDetail: "8"
+                        - RowTitle: 攻撃力
+                          RowDetail: "30"
+                        - RowTitle: スタン値
+                          RowDetail: "3"
+                        - RowTitle: 削減値
+                          RowDetail: "1"
+                    - SectionTitle: ゲージ増加量
+                      Rows:
+                        - RowTitle: 空振り
+                          RowDetail: "0"
+                        - RowTitle: ガード
+                          RowDetail: "2"
+                        - RowTitle: ヒット
+                          RowDetail: "3"
+                        - RowTitle: BL
+                          RowDetail: "4"
+                    - SectionTitle: ヒット&ガード硬直時間差
+                      Rows:
+                        - RowTitle: ガード
+                          RowDetail: "-1"
+                        - RowTitle: 立ヒット
+                          RowDetail: "-1"
+                        - RowTitle: 屈ヒット
+                          RowDetail: "-1"
+                    - SectionTitle: 補足
+                      Rows:
+                        - RowTitle: |-
+                            ・屈GDと組み合わせて、屈小P×2からヒット確認SAを狙うことが可能
+                            ・屈小P×2からのキャンセル猶予時間は最遅入力で25フレーム
+                    - Rows:
+                        - Presented:
+                            SkillName: Crouching Jab
+                            CharacterCode: "06"
+                            ViewController: FramesPlayerViewController
+                            SkillCode: "004"
+                          RowTitle: モーション
+    - RowTitle: 中パンチ
+      Next:
+        Sections:
+          - Rows:
+              - RowTitle: 立ち中パンチ
+                Next:
+                  Sections:
+                    - Rows:
+                        - RowTitle: 技名
+                          RowDetail: スパン
+                        - RowTitle: C/SC
+                          RowDetail: ×
+                        - RowTitle: ガード
+                          RowDetail: 両方
+                        - RowTitle: BL
+                          RowDetail: →
+                        - RowTitle: 発生
+                          RowDetail: "10"
+                        - RowTitle: 持続
+                          RowDetail: "7"
+                        - RowTitle: 硬直
+                          RowDetail: 12(8)
+                        - RowTitle: 攻撃力
+                          RowDetail: "120"
+                        - RowTitle: スタン値
+                          RowDetail: "13"
+                        - RowTitle: 削減値
+                          RowDetail: "1"
+                    - SectionTitle: ゲージ増加量
+                      Rows:
+                        - RowTitle: 空振り
+                          RowDetail: "2"
+                        - RowTitle: ガード
+                          RowDetail: "5"
+                        - RowTitle: ヒット
+                          RowDetail: "9"
+                        - RowTitle: BL
+                          RowDetail: "4"
+                    - SectionTitle: ヒット&ガード硬直時間差
+                      Rows:
+                        - RowTitle: ガード
+                          RowDetail: "-5"
+                        - RowTitle: 立ヒット
+                          RowDetail: "0"
+                        - RowTitle: 屈ヒット
+                          RowDetail: "+1"
+                    - SectionTitle: 補足
+                      Rows:
+                        - RowTitle: 硬直欄のカッコ内の数値はヒット時のもの
+                    - Rows:
+                        - Presented:
+                            SkillName: Strong
+                            CharacterCode: "06"
+                            ViewController: FramesPlayerViewController
+                            SkillCode: "002"
+                          RowTitle: モーション
+              - RowTitle: しゃがみ中パンチ
+                Next:
+                  Sections:
+                    - Rows:
+                        - RowTitle: 技名
+                          RowDetail: 地獄突き
+                        - RowTitle: C/SC
+                          RowDetail: ×
+                        - RowTitle: ガード
+                          RowDetail: 両方
+                        - RowTitle: BL
+                          RowDetail: 両方
+                        - RowTitle: 発生
+                          RowDetail: "7"
+                        - RowTitle: 持続
+                          RowDetail: "5"
+                        - RowTitle: 硬直
+                          RowDetail: "12"
+                        - RowTitle: 攻撃力
+                          RowDetail: "90"
+                        - RowTitle: スタン値
+                          RowDetail: "3"
+                        - RowTitle: 削減値
+                          RowDetail: "1"
+                    - SectionTitle: ゲージ増加量
+                      Rows:
+                        - RowTitle: 空振り
+                          RowDetail: "2"
+                        - RowTitle: ガード
+                          RowDetail: "5"
+                        - RowTitle: ヒット
+                          RowDetail: "9"
+                        - RowTitle: BL
+                          RowDetail: "4"
+                    - SectionTitle: ヒット&ガード硬直時間差
+                      Rows:
+                        - RowTitle: ガード
+                          RowDetail: "-2"
+                        - RowTitle: 立ヒット
+                          RowDetail: "-1"
+                        - RowTitle: 屈ヒット
+                          RowDetail: "0"
+                    - SectionTitle: 補足
+                      Rows:
+                        - RowTitle: |-
+                            ・ゲージをためるのに有効
+                            ・判定が強いので相手の技を潰すことも良くある
+                    - Rows:
+                        - Presented:
+                            SkillName: Crouching Strong
+                            CharacterCode: "06"
+                            ViewController: FramesPlayerViewController
+                            SkillCode: "005"
+                          RowTitle: モーション
+    - RowTitle: 大パンチ
+      Next:
+        Sections:
+          - Rows:
+              - RowTitle: 立ち大パンチ
+                Next:
+                  Sections:
+                    - Rows:
+                        - RowTitle: 技名
+                          RowDetail: エルボー
+                        - RowTitle: C/SC
+                          RowDetail: ×
+                        - RowTitle: ガード
+                          RowDetail: 立
+                        - RowTitle: BL
+                          RowDetail: →
+                        - RowTitle: 発生
+                          RowDetail: "16"
+                        - RowTitle: 持続
+                          RowDetail: "7"
+                        - RowTitle: 硬直
+                          RowDetail: "15"
+                        - RowTitle: 攻撃力
+                          RowDetail: "170"
+                        - RowTitle: スタン値
+                          RowDetail: "21"
+                        - RowTitle: 削減値
+                          RowDetail: "1"
+                    - SectionTitle: ゲージ増加量
+                      Rows:
+                        - RowTitle: 空振り
+                          RowDetail: "3"
+                        - RowTitle: ガード
+                          RowDetail: "7"
+                        - RowTitle: ヒット
+                          RowDetail: "15"
+                        - RowTitle: BL
+                          RowDetail: "4"
+                    - SectionTitle: ヒット&ガード硬直時間差
+                      Rows:
+                        - RowTitle: ガード
+                          RowDetail: "-3"
+                        - RowTitle: 立ヒット
+                          RowDetail: "-1"
+                        - RowTitle: 屈ヒット
+                          RowDetail: "+1"
+                    - SectionTitle: 補足
+                      Rows:
+                        - RowTitle: 大攻撃の中段技で判定も強いためお世話になる
+                    - Rows:
+                        - Presented:
+                            SkillName: Fierce
+                            CharacterCode: "06"
+                            ViewController: FramesPlayerViewController
+                            SkillCode: "003"
+                          RowTitle: モーション
+              - RowTitle: しゃがみ大パンチ
+                Next:
+                  Sections:
+                    - Rows:
+                        - RowTitle: 技名
+                          RowDetail: ダイビングヘッドバット
+                        - RowTitle: C/SC
+                          RowDetail: ×
+                        - RowTitle: ガード
+                          RowDetail: 両方
+                        - RowTitle: BL
+                          RowDetail: 両方
+                        - RowTitle: 発生
+                          RowDetail: "13"
+                        - RowTitle: 持続
+                          RowDetail: "10"
+                        - RowTitle: 硬直
+                          RowDetail: "37"
+                        - RowTitle: 攻撃力
+                          RowDetail: "110"
+                        - RowTitle: スタン値
+                          RowDetail: "13"
+                        - RowTitle: 削減値
+                          RowDetail: "7"
+                    - SectionTitle: ゲージ増加量
+                      Rows:
+                        - RowTitle: 空振り
+                          RowDetail: "3"
+                        - RowTitle: ガード
+                          RowDetail: "7"
+                        - RowTitle: ヒット
+                          RowDetail: "15"
+                        - RowTitle: BL
+                          RowDetail: "4"
+                    - SectionTitle: ヒット&ガード硬直時間差
+                      Rows:
+                        - RowTitle: ガード
+                          RowDetail: "-29"
+                        - RowTitle: 立ヒット
+                          RowDetail: ダウン
+                        - RowTitle: 屈ヒット
+                          RowDetail: ダウン
+                    - SectionTitle: 補足
+                      Rows:
+                        - RowTitle: |-
+                            ・起き上がり方が立振り向きの場合、硬直が「23」になる
+                            ・コマンド完成後、14フレーム目から空中判定に移行
+                    - Rows:
+                        - Presented:
+                            SkillName: Crouching Fierce
+                            CharacterCode: "06"
+                            ViewController: FramesPlayerViewController
+                            SkillCode: "006"
+                          RowTitle: モーション
+    - RowTitle: 小キック
+      Next:
+        Sections:
+          - Rows:
+              - RowTitle: 立ち小キック
+                Next:
+                  Sections:
+                    - Rows:
+                        - RowTitle: 技名
+                          RowDetail: ローキック
+                        - RowTitle: C/SC
+                          RowDetail: ○
+                        - RowTitle: ガード
+                          RowDetail: 両方
+                        - RowTitle: BL
+                          RowDetail: 両方
+                        - RowTitle: 発生
+                          RowDetail: "5"
+                        - RowTitle: 持続
+                          RowDetail: "4"
+                        - RowTitle: 硬直
+                          RowDetail: "9"
+                        - RowTitle: 攻撃力
+                          RowDetail: "50"
+                        - RowTitle: スタン値
+                          RowDetail: "3"
+                        - RowTitle: 削減値
+                          RowDetail: "1"
+                    - SectionTitle: ゲージ増加量
+                      Rows:
+                        - RowTitle: 空振り
+                          RowDetail: "0"
+                        - RowTitle: ガード
+                          RowDetail: "2"
+                        - RowTitle: ヒット
+                          RowDetail: "3"
+                        - RowTitle: BL
+                          RowDetail: "4"
+                    - SectionTitle: ヒット&ガード硬直時間差
+                      Rows:
+                        - RowTitle: ガード
+                          RowDetail: "+1"
+                        - RowTitle: 立ヒット
+                          RowDetail: "+1"
+                        - RowTitle: 屈ヒット
+                          RowDetail: "+1"
+                    - Rows:
+                        - Presented:
+                            SkillName: Short
+                            CharacterCode: "06"
+                            ViewController: FramesPlayerViewController
+                            SkillCode: "010"
+                          RowTitle: モーション
+              - RowTitle: しゃがみ小キック
+                Next:
+                  Sections:
+                    - Rows:
+                        - RowTitle: 技名
+                          RowDetail: クラウチングキック
+                        - RowTitle: C/SC
+                          RowDetail: ○
+                        - RowTitle: ガード
+                          RowDetail: 屈
+                        - RowTitle: BL
+                          RowDetail: ↓
+                        - RowTitle: 発生
+                          RowDetail: "3"
+                        - RowTitle: 持続
+                          RowDetail: "3"
+                        - RowTitle: 硬直
+                          RowDetail: "7"
+                        - RowTitle: 攻撃力
+                          RowDetail: "40"
+                        - RowTitle: スタン値
+                          RowDetail: "3"
+                        - RowTitle: 削減値
+                          RowDetail: "1"
+                    - SectionTitle: ゲージ増加量
+                      Rows:
+                        - RowTitle: 空振り
+                          RowDetail: "0"
+                        - RowTitle: ガード
+                          RowDetail: "2"
+                        - RowTitle: ヒット
+                          RowDetail: "3"
+                        - RowTitle: BL
+                          RowDetail: "4"
+                    - SectionTitle: ヒット&ガード硬直時間差
+                      Rows:
+                        - RowTitle: ガード
+                          RowDetail: "+2"
+                        - RowTitle: 立ヒット
+                          RowDetail: "+2"
+                        - RowTitle: 屈ヒット
+                          RowDetail: "+2"
+                    - SectionTitle: 補足
+                      Rows:
+                        - RowTitle: キャンセル猶予時間は12フレーム
+                    - Rows:
+                        - Presented:
+                            SkillName: Crouching Short
+                            CharacterCode: "06"
+                            ViewController: FramesPlayerViewController
+                            SkillCode: "013"
+                          RowTitle: モーション
+    - RowTitle: 中キック
+      Next:
+        Sections:
+          - Rows:
+              - RowTitle: 立ち中キック
+                Next:
+                  Sections:
+                    - Rows:
+                        - RowTitle: 技名
+                          RowDetail: アンクルキック
+                        - RowTitle: C/SC
+                          RowDetail: ×
+                        - RowTitle: ガード
+                          RowDetail: 両方・立
+                        - RowTitle: BL
+                          RowDetail: →・→
+                        - RowTitle: 発生
+                          RowDetail: 9・14
+                        - RowTitle: 持続
+                          RowDetail: 2・4
+                        - RowTitle: 硬直
+                          RowDetail: 23(20)
+                        - RowTitle: 攻撃力
+                          RowDetail: 120(70+50)
+                        - RowTitle: スタン値
+                          RowDetail: 14(9+5)
+                        - RowTitle: 削減値
+                          RowDetail: 1・1
+                    - SectionTitle: ゲージ増加量
+                      Rows:
+                        - RowTitle: 空振り
+                          RowDetail: 2(2+0)
+                        - RowTitle: ガード
+                          RowDetail: 5(3+2)
+                        - RowTitle: ヒット
+                          RowDetail: 11(8+3)
+                        - RowTitle: BL
+                          RowDetail: 8(4+4)
+                    - SectionTitle: ヒット&ガード硬直時間差
+                      Rows:
+                        - RowTitle: ガード
+                          RowDetail: "-4"
+                        - RowTitle: 立ヒット
+                          RowDetail: "+1"
+                        - RowTitle: 屈ヒット
+                          RowDetail: "+3"
+                    - SectionTitle: 補足
+                      Rows:
+                        - RowTitle: 硬直欄のカッコ内の数値はヒット時のもの
+                    - Rows:
+                        - Presented:
+                            SkillName: Forward
+                            CharacterCode: "06"
+                            ViewController: FramesPlayerViewController
+                            SkillCode: "011"
+                          RowTitle: モーション
+              - RowTitle: しゃがみ中キック
+                Next:
+                  Sections:
+                    - Rows:
+                        - RowTitle: 技名
+                          RowDetail: クラウチングキック
+                        - RowTitle: C/SC
+                          RowDetail: ×
+                        - RowTitle: ガード
+                          RowDetail: 屈
+                        - RowTitle: BL
+                          RowDetail: ↓
+                        - RowTitle: 発生
+                          RowDetail: "8"
+                        - RowTitle: 持続
+                          RowDetail: "5"
+                        - RowTitle: 硬直
+                          RowDetail: "17"
+                        - RowTitle: 攻撃力
+                          RowDetail: "100"
+                        - RowTitle: スタン値
+                          RowDetail: "3"
+                        - RowTitle: 削減値
+                          RowDetail: "1"
+                    - SectionTitle: ゲージ増加量
+                      Rows:
+                        - RowTitle: 空振り
+                          RowDetail: "2"
+                        - RowTitle: ガード
+                          RowDetail: "5"
+                        - RowTitle: ヒット
+                          RowDetail: "9"
+                        - RowTitle: BL
+                          RowDetail: "4"
+                    - SectionTitle: ヒット&ガード硬直時間差
+                      Rows:
+                        - RowTitle: ガード
+                          RowDetail: "-5"
+                        - RowTitle: 立ヒット
+                          RowDetail: ダウン
+                        - RowTitle: 屈ヒット
+                          RowDetail: ダウン
+                    - Rows:
+                        - Presented:
+                            SkillName: Crouching Forward
+                            CharacterCode: "06"
+                            ViewController: FramesPlayerViewController
+                            SkillCode: "014"
+                          RowTitle: モーション
+    - RowTitle: 大キック
+      Next:
+        Sections:
+          - Rows:
+              - RowTitle: 立ち大キック
+                Next:
+                  Sections:
+                    - Rows:
+                        - RowTitle: 技名
+                          RowDetail: ドロップキック
+                        - RowTitle: C/SC
+                          RowDetail: ×
+                        - RowTitle: ガード
+                          RowDetail: 立
+                        - RowTitle: BL
+                          RowDetail: →
+                        - RowTitle: 発生
+                          RowDetail: "21"
+                        - RowTitle: 持続
+                          RowDetail: "8"
+                        - RowTitle: 硬直
+                          RowDetail: "28"
+                        - RowTitle: 攻撃力
+                          RowDetail: "150"
+                        - RowTitle: スタン値
+                          RowDetail: "19"
+                        - RowTitle: 削減値
+                          RowDetail: "1"
+                    - SectionTitle: ゲージ増加量
+                      Rows:
+                        - RowTitle: 空振り
+                          RowDetail: "3"
+                        - RowTitle: ガード
+                          RowDetail: "7"
+                        - RowTitle: ヒット
+                          RowDetail: "15"
+                        - RowTitle: BL
+                          RowDetail: "4"
+                    - SectionTitle: ヒット&ガード硬直時間差
+                      Rows:
+                        - RowTitle: ガード
+                          RowDetail: "-13"
+                        - RowTitle: 立ヒット
+                          RowDetail: "+3"
+                        - RowTitle: 屈ヒット
+                          RowDetail: "+3"
+                    - SectionTitle: 補足
+                      Rows:
+                        - RowTitle: |-
+                            ・コマンド完成後、8フレーム目から空中判定に移行
+                            ・硬直中に相手が背後に回った場合は、硬直が「25」になる
+                    - Rows:
+                        - Presented:
+                            SkillName: Roundhouse
+                            CharacterCode: "06"
+                            ViewController: FramesPlayerViewController
+                            SkillCode: "012"
+                          RowTitle: モーション
+              - RowTitle: しゃがみ大キック
+                Next:
+                  Sections:
+                    - Rows:
+                        - RowTitle: 技名
+                          RowDetail: ヒッププレス
+                        - RowTitle: C/SC
+                          RowDetail: ×
+                        - RowTitle: ガード
+                          RowDetail: |-
+                            両方(近距離)
+                            立(中～遠距離)
+                        - RowTitle: BL
+                          RowDetail: |-
+                            両方(近距離)
+                            →(中～遠距離)
+                        - RowTitle: 発生
+                          RowDetail: "11"
+                        - RowTitle: 持続
+                          RowDetail: "23"
+                        - RowTitle: 硬直
+                          RowDetail: 24～38
+                        - RowTitle: 攻撃力
+                          RowDetail: |-
+                            170(近距離)
+                            150(中～遠距離)
+                        - RowTitle: スタン値
+                          RowDetail: |-
+                            13(近距離)
+                            9(中～遠距離)
+                        - RowTitle: 削減値
+                          RowDetail: "1"
+                    - SectionTitle: ゲージ増加量
+                      Rows:
+                        - RowTitle: 空振り
+                          RowDetail: "3"
+                        - RowTitle: ガード
+                          RowDetail: "7"
+                        - RowTitle: ヒット
+                          RowDetail: "15"
+                        - RowTitle: BL
+                          RowDetail: "4"
+                    - SectionTitle: ヒット&ガード硬直時間差
+                      Rows:
+                        - RowTitle: ガード
+                          RowDetail: "-43"
+                        - RowTitle: 立ヒット
+                          RowDetail: ダウン
+                        - RowTitle: 屈ヒット
+                          RowDetail: ダウン
+                    - SectionTitle: 補足
+                      Rows:
+                        - RowTitle: |-
+                            ・出だしはしゃがみガードできるが、技の終わり際は中段
+                            ・攻撃発生後、24フレーム目から攻撃判定が中段に移行
+                            ・起き上がり方によって硬直が変化
+                            ・コマンド完成後、12フレーム目から空中判定に移行
+                    - Rows:
+                        - Presented:
+                            SkillName: Crouching Roundhouse
+                            CharacterCode: "06"
+                            ViewController: FramesPlayerViewController
+                            SkillCode: "015"
+                          RowTitle: モーション
+- SectionTitle: 【特殊入力技】
+  Rows:
+    - RowTitle: 通常投げ
+      Next:
+        Sections:
+          - Rows:
+              - RowTitle: ネックハンギングツリー
+                Next:
+                  Sections:
+                    - Rows:
+                        - RowTitle: 技名
+                          RowDetail: ネックハンギングツリー
+                        - RowTitle: コマンド
+                          RowDetail: 小P+小K
+                        - RowTitle: 発生
+                          RowDetail: "2"
+                        - RowTitle: 持続
+                          RowDetail: "1"
+                        - RowTitle: 硬直
+                          RowDetail: "21"
+                        - RowTitle: 攻撃力
+                          RowDetail: 130(30×8)
+                        - RowTitle: スタン値
+                          RowDetail: 24(5×8)
+                        - RowTitle: 投げ間合い
+                          RowDetail: "32"
+                    - SectionTitle: ゲージ増加量
+                      Rows:
+                        - RowTitle: 空振り時
+                          RowDetail: "0"
+                        - RowTitle: 投げ成功時
+                          RowDetail: 24(×8)
+                    - SectionTitle: 補足
+                      Rows:
+                        - RowTitle: |-
+                            ・硬直は投げ失敗時のフレーム
+                            ・連打投げ。最大ヒット数は「8」
+                            ・画面端なら通常技やメガトンプレス等で追撃可能
+                    - Rows:
+                        - Presented:
+                            SkillName: Neutral Throw
+                            CharacterCode: "06"
+                            ViewController: FramesPlayerViewController
+                            SkillCode: "021"
+                          RowTitle: モーション
+              - RowTitle: ボディースラム
+                Next:
+                  Sections:
+                    - Rows:
+                        - RowTitle: 技名
+                          RowDetail: ボディースラム
+                        - RowTitle: コマンド
+                          RowDetail: |-
+                            →+小P+小K
+                            ←+小P+小K
+                        - RowTitle: 発生
+                          RowDetail: "2"
+                        - RowTitle: 持続
+                          RowDetail: "1"
+                        - RowTitle: 硬直
+                          RowDetail: "21"
+                        - RowTitle: 攻撃力
+                          RowDetail: "160"
+                        - RowTitle: スタン値
+                          RowDetail: "13"
+                        - RowTitle: 投げ間合い
+                          RowDetail: "32"
+                    - SectionTitle: ゲージ増加量
+                      Rows:
+                        - RowTitle: 空振り時
+                          RowDetail: "0"
+                        - RowTitle: 投げ成功時
+                          RowDetail: "7"
+                    - SectionTitle: 補足
+                      Rows:
+                        - RowTitle: |-
+                            ・硬直は投げ失敗時のフレーム
+                            ・左右に投げ分ける事が可能
+                    - Rows:
+                        - Presented:
+                            SkillName: Throw
+                            CharacterCode: "06"
+                            ViewController: FramesPlayerViewController
+                            SkillCode: "022"
+                          RowTitle: モーション
+    - RowTitle: リープアタック
+      Next:
+        Sections:
+          - Rows:
+              - RowTitle: 技名
+                RowDetail: ニーアタック
+              - RowTitle: コマンド
+                RowDetail: 中P+中K
+              - RowTitle: C/SC
+                RowDetail: ×
+              - RowTitle: ガード
+                RowDetail: 立
+              - RowTitle: BL
+                RowDetail: →
+              - RowTitle: 発生
+                RowDetail: "15"
+              - RowTitle: 持続
+                RowDetail: "10"
+              - RowTitle: 硬直
+                RowDetail: "5"
+              - RowTitle: 攻撃力
+                RowDetail: "40"
+              - RowTitle: スタン値
+                RowDetail: "3"
+              - RowTitle: 削減値
+                RowDetail: "1"
+          - SectionTitle: ゲージ増加量
+            Rows:
+              - RowTitle: 空振り
+                RowDetail: "0"
+              - RowTitle: ガード
+                RowDetail: "1"
+              - RowTitle: ヒット
+                RowDetail: "2"
+              - RowTitle: BL
+                RowDetail: "4"
+          - SectionTitle: ヒット&ガード硬直時間差
+            Rows:
+              - RowTitle: ガード
+                RowDetail: -5～+7
+              - RowTitle: 立ヒット
+                RowDetail: 0～+8
+              - RowTitle: 屈ヒット
+                RowDetail: +1～+9
+          - SectionTitle: 補足
+            Rows:
+              - RowTitle: |-
+                  ・コマンド完成後、5フレーム目から空中判定に移行
+                  ・技の下りを当てることで、SAや発生の速い通常技に繋ぐことが可能
+          - Rows:
+              - Presented:
+                  SkillName: Universal Overhead
+                  CharacterCode: "06"
+                  ViewController: FramesPlayerViewController
+                  SkillCode: "023"
+                RowTitle: モーション
+    - RowTitle: パーソナルアクション
+      Next:
+        Sections:
+          - Rows:
+              - RowTitle: 威嚇(いかく)
+                Next:
+                  Sections:
+                    - Rows:
+                        - RowTitle: 技名
+                          RowDetail: 威嚇(いかく)
+                        - RowTitle: コマンド
+                          RowDetail: 大P+大K
+                        - RowTitle: C/SC
+                          RowDetail: ×
+                        - RowTitle: ガード
+                          RowDetail: ―
+                        - RowTitle: BL
+                          RowDetail: ―
+                        - RowTitle: 発生
+                          RowDetail: ―
+                        - RowTitle: 持続
+                          RowDetail: 67(97)
+                        - RowTitle: 硬直
+                          RowDetail: ―
+                        - RowTitle: 攻撃力
+                          RowDetail: ―
+                        - RowTitle: スタン値
+                          RowDetail: ―
+                        - RowTitle: ゲージ増加
+                          RowDetail: 5(7)
+                        - RowTitle: 削減値
+                          RowDetail: ―
+                    - SectionTitle: 効果
+                      Rows:
+                        - RowTitle: |-
+                            ・直後に出した投げ以外の攻撃の攻撃力アップ
+                            ・押し続ける事で投げダメージアップ
+                            ・4段階まで防御力アップ
+                    - SectionTitle: 補足
+                      Rows:
+                        - RowTitle: "・押しっぱなし可。押し続ける事で効果アップ\n・防御力アップはそのラウンド中、有効\n・4段階まであげれば、QのPA2回以上の防御力になる \n・オロやヒューゴーなどは、ダウンさせられてQSを取っても反撃できないのでかなり有効\n・持続のカッコ内の数値は押しっぱなしのもの\n・ゲージ増加のカッコ内の数値は1本制のもの"
+              - RowTitle: 威嚇+ポイズン挑発
+                Next:
+                  Sections:
+                    - Rows:
+                        - RowTitle: 技名
+                          RowDetail: 威嚇+ポイズン挑発
+                        - RowTitle: コマンド
+                          RowDetail: スタートボタン+大P+大K(家庭用は上と同時押し)
+                        - RowTitle: C/SC
+                          RowDetail: ×
+                        - RowTitle: ガード
+                          RowDetail: ―
+                        - RowTitle: BL
+                          RowDetail: ―
+                        - RowTitle: 発生
+                          RowDetail: ―
+                        - RowTitle: 持続
+                          RowDetail: "67"
+                        - RowTitle: 硬直
+                          RowDetail: ―
+                        - RowTitle: 攻撃力
+                          RowDetail: ―
+                        - RowTitle: スタン値
+                          RowDetail: ―
+                        - RowTitle: ゲージ増加
+                          RowDetail: 5(7)
+                        - RowTitle: 削減値
+                          RowDetail: ―
+                    - SectionTitle: 効果
+                      Rows:
+                        - RowTitle: |-
+                            ・直後に出した投げ以外の攻撃の攻撃力アップ
+                            ・押し続ける事で投げダメージアップ
+                            ・4段階まで防御力アップ
+                    - SectionTitle: 補足
+                      Rows:
+                        - RowTitle: "・押しっぱなし可。押し続ける事で効果アップ\n・防御力アップはそのラウンド中、有効\n・4段階まであげれば、QのPA2回以上の防御力になる \n・オロやヒューゴーなどは、ダウンさせられてQSを取っても反撃できないのでかなり有効\n・持続のカッコ内の数値は押しっぱなしのもの\n・ゲージ増加のカッコ内の数値は1本制のもの"
+    - RowTitle: レバー入れ技
+      Next:
+        Sections:
+          - Rows:
+              - RowTitle: ボディプレス
+                Next:
+                  Sections:
+                    - Rows:
+                        - RowTitle: 技名
+                          RowDetail: ボディプレス
+                        - RowTitle: コマンド
+                          RowDetail: ジャンプ中に1or2or3+大P
+                        - RowTitle: C/SC
+                          RowDetail: ×
+                        - RowTitle: ガード
+                          RowDetail: 立
+                        - RowTitle: BL
+                          RowDetail: →
+                        - RowTitle: 発生
+                          RowDetail: "9"
+                        - RowTitle: 持続
+                          RowDetail: 着地まで
+                        - RowTitle: 硬直
+                          RowDetail: ―
+                        - RowTitle: 攻撃力
+                          RowDetail: "100"
+                        - RowTitle: スタン値
+                          RowDetail: "17"
+                        - RowTitle: 削減値
+                          RowDetail: "3"
+                    - SectionTitle: ゲージ増加量
+                      Rows:
+                        - RowTitle: 空振り
+                          RowDetail: "3"
+                        - RowTitle: ガード
+                          RowDetail: "7"
+                        - RowTitle: ヒット
+                          RowDetail: "15"
+                        - RowTitle: BL
+                          RowDetail: "4"
+                    - SectionTitle: ヒット&ガード硬直時間差
+                      Rows:
+                        - RowTitle: ガード
+                          RowDetail: ―
+                        - RowTitle: 立ヒット
+                          RowDetail: ―
+                        - RowTitle: 屈ヒット
+                          RowDetail: ―
+                    - SectionTitle: 補足
+                      Rows:
+                        - RowTitle: |-
+                            ・持続はボタンを押すタイミングで変化
+                            ・めくりヒットさせることが可能
+                    - Rows:
+                        - Presented:
+                            SkillName: Down + Fierce (Air)
+                            CharacterCode: "06"
+                            ViewController: FramesPlayerViewController
+                            SkillCode: "020"
+                          RowTitle: モーション
+              - RowTitle: ハンマーフック
+                Next:
+                  Sections:
+                    - Rows:
+                        - RowTitle: 技名
+                          RowDetail: ハンマーフック
+                        - RowTitle: コマンド
+                          RowDetail: 6+大P
+                        - RowTitle: C/SC
+                          RowDetail: ×
+                        - RowTitle: ガード
+                          RowDetail: 両方
+                        - RowTitle: BL
+                          RowDetail: →
+                        - RowTitle: 発生
+                          RowDetail: "14"
+                        - RowTitle: 持続
+                          RowDetail: "4"
+                        - RowTitle: 硬直
+                          RowDetail: 33(31)
+                        - RowTitle: 攻撃力
+                          RowDetail: "160"
+                        - RowTitle: スタン値
+                          RowDetail: "21"
+                        - RowTitle: 削減値
+                          RowDetail: "1"
+                    - SectionTitle: ゲージ増加量
+                      Rows:
+                        - RowTitle: 空振り
+                          RowDetail: "3"
+                        - RowTitle: ガード
+                          RowDetail: "7"
+                        - RowTitle: ヒット
+                          RowDetail: "15"
+                        - RowTitle: BL
+                          RowDetail: "4"
+                    - SectionTitle: ヒット&ガード硬直時間差
+                      Rows:
+                        - RowTitle: ガード
+                          RowDetail: "-14"
+                        - RowTitle: 立ヒット
+                          RowDetail: "+4"
+                        - RowTitle: 屈ヒット
+                          RowDetail: "+4"
+                    - SectionTitle: 補足
+                      Rows:
+                        - RowTitle: 硬直欄のカッコ内の数値はヒット時のもの
+                    - Rows:
+                        - Presented:
+                            SkillName: Towards + Fierce
+                            CharacterCode: "06"
+                            ViewController: FramesPlayerViewController
+                            SkillCode: "019"
+                          RowTitle: モーション
+              - RowTitle: ドロップキック
+                Next:
+                  Sections:
+                    - Rows:
+                        - RowTitle: 技名
+                          RowDetail: ドロップキック
+                        - RowTitle: コマンド
+                          RowDetail: 1 or 3+大K
+                        - RowTitle: C/SC
+                          RowDetail: ×
+                        - RowTitle: ガード
+                          RowDetail: 立
+                        - RowTitle: BL
+                          RowDetail: →
+                        - RowTitle: 発生
+                          RowDetail: "21"
+                        - RowTitle: 持続
+                          RowDetail: "8"
+                        - RowTitle: 硬直
+                          RowDetail: "27"
+                        - RowTitle: 攻撃力
+                          RowDetail: "150"
+                        - RowTitle: スタン値
+                          RowDetail: "19"
+                        - RowTitle: 削減値
+                          RowDetail: "1"
+                    - SectionTitle: ゲージ増加量
+                      Rows:
+                        - RowTitle: 空振り
+                          RowDetail: "3"
+                        - RowTitle: ガード
+                          RowDetail: "7"
+                        - RowTitle: ヒット
+                          RowDetail: "15"
+                        - RowTitle: BL
+                          RowDetail: "4"
+                    - SectionTitle: ヒット&ガード硬直時間差
+                      Rows:
+                        - RowTitle: ガード
+                          RowDetail: "-12"
+                        - RowTitle: 立ヒット
+                          RowDetail: "+4"
+                        - RowTitle: 屈ヒット
+                          RowDetail: "+4"
+                    - SectionTitle: 補足
+                      Rows:
+                        - RowTitle: |-
+                            ・硬直中に相手が背後に回った場合は、硬直が「25」になる
+                            ・基本的に立大Kと同じだが、前後の移動距離が変わる
+- SectionTitle: 【必殺技】
+  Rows:
+    - RowTitle: ムーンサルトプレス
+      Next:
+        Sections:
+          - Rows:
+              - RowTitle: ムーンサルトプレス【小】
+                Next:
+                  Sections:
+                    - Rows:
+                        - RowTitle: 技名
+                          RowDetail: ムーンサルトプレス【小】
+                        - RowTitle: コマンド
+                          RowDetail: レバー1回転+小P
+                        - RowTitle: SC
+                          RowDetail: ×
+                        - RowTitle: ガード
+                          RowDetail: ×
+                        - RowTitle: BL
+                          RowDetail: ×
+                        - RowTitle: 発生
+                          RowDetail: "2"
+                        - RowTitle: 持続
+                          RowDetail: "2"
+                        - RowTitle: 硬直
+                          RowDetail: 36(28)
+                        - RowTitle: 攻撃力
+                          RowDetail: "240"
+                        - RowTitle: ケズリ
+                          RowDetail: ―
+                        - RowTitle: スタン値
+                          RowDetail: "19"
+                        - RowTitle: 投げ間合い
+                          RowDetail: "59"
+                        - RowTitle: 削減値
+                          RowDetail: ―
+                    - SectionTitle: ゲージ増加量
+                      Rows:
+                        - RowTitle: 空振り
+                          RowDetail: "5"
+                        - RowTitle: ガード
+                          RowDetail: ―
+                        - RowTitle: ヒット
+                          RowDetail: "31"
+                        - RowTitle: BL
+                          RowDetail: ―
+                    - SectionTitle: ヒット&ガード硬直時間差
+                      Rows:
+                        - RowTitle: ガード
+                          RowDetail: ―
+                        - RowTitle: 立ヒット
+                          RowDetail: ダウン
+                        - RowTitle: 屈ヒット
+                          RowDetail: ダウン
+                    - Rows:
+                        - Presented:
+                            SkillName: Moonsault Press (Jab)
+                            CharacterCode: "06"
+                            ViewController: FramesPlayerViewController
+                            SkillCode: "027"
+                          RowTitle: モーション
+              - RowTitle: ムーンサルトプレス【中】
+                Next:
+                  Sections:
+                    - Rows:
+                        - RowTitle: 技名
+                          RowDetail: ムーンサルトプレス【中】
+                        - RowTitle: コマンド
+                          RowDetail: レバー1回転+中P
+                        - RowTitle: SC
+                          RowDetail: ×
+                        - RowTitle: ガード
+                          RowDetail: ×
+                        - RowTitle: BL
+                          RowDetail: ×
+                        - RowTitle: 発生
+                          RowDetail: "2"
+                        - RowTitle: 持続
+                          RowDetail: "2"
+                        - RowTitle: 硬直
+                          RowDetail: 36(28)
+                        - RowTitle: 攻撃力
+                          RowDetail: "255"
+                        - RowTitle: ケズリ
+                          RowDetail: ―
+                        - RowTitle: スタン値
+                          RowDetail: "19"
+                        - RowTitle: 投げ間合い
+                          RowDetail: "53"
+                        - RowTitle: 削減値
+                          RowDetail: ―
+                    - SectionTitle: ゲージ増加量
+                      Rows:
+                        - RowTitle: 空振り
+                          RowDetail: "5"
+                        - RowTitle: ガード
+                          RowDetail: ―
+                        - RowTitle: ヒット
+                          RowDetail: "31"
+                        - RowTitle: BL
+                          RowDetail: ―
+                    - SectionTitle: ヒット&ガード硬直時間差
+                      Rows:
+                        - RowTitle: ガード
+                          RowDetail: ―
+                        - RowTitle: 立ヒット
+                          RowDetail: ダウン
+                        - RowTitle: 屈ヒット
+                          RowDetail: ダウン
+                    - Rows:
+                        - Presented:
+                            SkillName: Moonsault Press (Strong)
+                            CharacterCode: "06"
+                            ViewController: FramesPlayerViewController
+                            SkillCode: "028"
+                          RowTitle: モーション
+              - RowTitle: ムーンサルトプレス【大】
+                Next:
+                  Sections:
+                    - Rows:
+                        - RowTitle: 技名
+                          RowDetail: ムーンサルトプレス【大】
+                        - RowTitle: コマンド
+                          RowDetail: レバー1回転+大P
+                        - RowTitle: SC
+                          RowDetail: ×
+                        - RowTitle: ガード
+                          RowDetail: ×
+                        - RowTitle: BL
+                          RowDetail: ×
+                        - RowTitle: 発生
+                          RowDetail: "2"
+                        - RowTitle: 持続
+                          RowDetail: "2"
+                        - RowTitle: 硬直
+                          RowDetail: 36(28)
+                        - RowTitle: 攻撃力
+                          RowDetail: "280"
+                        - RowTitle: ケズリ
+                          RowDetail: ―
+                        - RowTitle: スタン値
+                          RowDetail: "19"
+                        - RowTitle: 投げ間合い
+                          RowDetail: "47"
+                        - RowTitle: 削減値
+                          RowDetail: ―
+                    - SectionTitle: ゲージ増加量
+                      Rows:
+                        - RowTitle: 空振り
+                          RowDetail: "5"
+                        - RowTitle: ガード
+                          RowDetail: ―
+                        - RowTitle: ヒット
+                          RowDetail: "31"
+                        - RowTitle: BL
+                          RowDetail: ―
+                    - SectionTitle: ヒット&ガード硬直時間差
+                      Rows:
+                        - RowTitle: ガード
+                          RowDetail: ―
+                        - RowTitle: 立ヒット
+                          RowDetail: ダウン
+                        - RowTitle: 屈ヒット
+                          RowDetail: ダウン
+                    - Rows:
+                        - Presented:
+                            SkillName: Moonsault Press (Fierce)
+                            CharacterCode: "06"
+                            ViewController: FramesPlayerViewController
+                            SkillCode: "029"
+                          RowTitle: モーション
+          - Rows:
+              - RowTitle: 補足
+                Next:
+                  Sections:
+                    - Rows:
+                        - RowTitle: |-
+                            ・硬直欄のカッコ内の数値はしゃがみ状態で着地した時のもの
+                            ・ボタンにより間合い、威力が変化
+                            ・レバーを1回転させなくても上下左右に一回ずつレバーが入っていれば技が出る(例：4628+Pなど)
+    - RowTitle: ウルトラスルー
+      Next:
+        Sections:
+          - Rows:
+              - RowTitle: ウルトラスルー【小】
+                Next:
+                  Sections:
+                    - Rows:
+                        - RowTitle: 技名
+                          RowDetail: ウルトラスルー【小】
+                        - RowTitle: コマンド
+                          RowDetail: 63214+小K
+                        - RowTitle: SC
+                          RowDetail: ×
+                        - RowTitle: ガード
+                          RowDetail: ×
+                        - RowTitle: BL
+                          RowDetail: ×
+                        - RowTitle: 発生
+                          RowDetail: "7"
+                        - RowTitle: 持続
+                          RowDetail: "2"
+                        - RowTitle: 硬直
+                          RowDetail: "36"
+                        - RowTitle: 攻撃力
+                          RowDetail: "70"
+                        - RowTitle: ケズリ
+                          RowDetail: ―
+                        - RowTitle: スタン値
+                          RowDetail: "7"
+                        - RowTitle: 投げ間合い
+                          RowDetail: "38"
+                        - RowTitle: 削減値
+                          RowDetail: "1"
+                    - SectionTitle: ゲージ増加量
+                      Rows:
+                        - RowTitle: 空振り
+                          RowDetail: "5"
+                        - RowTitle: ガード
+                          RowDetail: ―
+                        - RowTitle: ヒット
+                          RowDetail: "22"
+                        - RowTitle: BL
+                          RowDetail: ―
+                    - SectionTitle: ヒット&ガード硬直時間差
+                      Rows:
+                        - RowTitle: ガード
+                          RowDetail: ―
+                        - RowTitle: 立ヒット
+                          RowDetail: ダウン
+                        - RowTitle: 屈ヒット
+                          RowDetail: ダウン
+                    - Rows:
+                        - Presented:
+                            SkillName: Ultra Throw (Short)
+                            CharacterCode: "06"
+                            ViewController: FramesPlayerViewController
+                            SkillCode: "041"
+                          RowTitle: モーション
+              - RowTitle: ウルトラスルー【中】
+                Next:
+                  Sections:
+                    - Rows:
+                        - RowTitle: 技名
+                          RowDetail: ウルトラスルー【中】
+                        - RowTitle: コマンド
+                          RowDetail: 63214+中K
+                        - RowTitle: SC
+                          RowDetail: ×
+                        - RowTitle: ガード
+                          RowDetail: ×
+                        - RowTitle: BL
+                          RowDetail: ×
+                        - RowTitle: 発生
+                          RowDetail: "7"
+                        - RowTitle: 持続
+                          RowDetail: "2"
+                        - RowTitle: 硬直
+                          RowDetail: "36"
+                        - RowTitle: 攻撃力
+                          RowDetail: "70"
+                        - RowTitle: ケズリ
+                          RowDetail: ―
+                        - RowTitle: スタン値
+                          RowDetail: "7"
+                        - RowTitle: 投げ間合い
+                          RowDetail: "38"
+                        - RowTitle: 削減値
+                          RowDetail: "1"
+                    - SectionTitle: ゲージ増加量
+                      Rows:
+                        - RowTitle: 空振り
+                          RowDetail: "5"
+                        - RowTitle: ガード
+                          RowDetail: ―
+                        - RowTitle: ヒット
+                          RowDetail: "22"
+                        - RowTitle: BL
+                          RowDetail: ―
+                    - SectionTitle: ヒット&ガード硬直時間差
+                      Rows:
+                        - RowTitle: ガード
+                          RowDetail: ―
+                        - RowTitle: 立ヒット
+                          RowDetail: ダウン
+                        - RowTitle: 屈ヒット
+                          RowDetail: ダウン
+                    - Rows:
+                        - Presented:
+                            SkillName: Ultra Throw (Forward)
+                            CharacterCode: "06"
+                            ViewController: FramesPlayerViewController
+                            SkillCode: "042"
+                          RowTitle: モーション
+              - RowTitle: ウルトラスルー【大】
+                Next:
+                  Sections:
+                    - Rows:
+                        - RowTitle: 技名
+                          RowDetail: ウルトラスルー【大】
+                        - RowTitle: コマンド
+                          RowDetail: 63214+大K
+                        - RowTitle: SC
+                          RowDetail: ×
+                        - RowTitle: ガード
+                          RowDetail: ×
+                        - RowTitle: BL
+                          RowDetail: ×
+                        - RowTitle: 発生
+                          RowDetail: "7"
+                        - RowTitle: 持続
+                          RowDetail: "2"
+                        - RowTitle: 硬直
+                          RowDetail: "36"
+                        - RowTitle: 攻撃力
+                          RowDetail: "70"
+                        - RowTitle: ケズリ
+                          RowDetail: ―
+                        - RowTitle: スタン値
+                          RowDetail: "7"
+                        - RowTitle: 投げ間合い
+                          RowDetail: "38"
+                        - RowTitle: 削減値
+                          RowDetail: "1"
+                    - SectionTitle: ゲージ増加量
+                      Rows:
+                        - RowTitle: 空振り
+                          RowDetail: "5"
+                        - RowTitle: ガード
+                          RowDetail: ―
+                        - RowTitle: ヒット
+                          RowDetail: "22"
+                        - RowTitle: BL
+                          RowDetail: ―
+                    - SectionTitle: ヒット&ガード硬直時間差
+                      Rows:
+                        - RowTitle: ガード
+                          RowDetail: ―
+                        - RowTitle: 立ヒット
+                          RowDetail: ダウン
+                        - RowTitle: 屈ヒット
+                          RowDetail: ダウン
+                    - Rows:
+                        - Presented:
+                            SkillName: Ultra Throw (RH)
+                            CharacterCode: "06"
+                            ViewController: FramesPlayerViewController
+                            SkillCode: "043"
+                          RowTitle: モーション
+          - Rows:
+              - RowTitle: 補足
+                Next:
+                  Sections:
+                    - Rows:
+                        - RowTitle: |-
+                            ・つかんだ相手を画面端へ投げ、跳ね返った相手に追撃することが可能
+                            ・ボタンにより画面端での跳ね返り方、威力が変化。「大→中→小」の順に、より画面中央に跳ね返ってくる
+                            ・624＋Kの簡易コマンドでも出す事が可能
+    - RowTitle: シュートダウンバックブリーカー
+      Next:
+        Sections:
+          - Rows:
+              - RowTitle: シュートダウンバックブリーカー【小】
+                Next:
+                  Sections:
+                    - Rows:
+                        - RowTitle: 技名
+                          RowDetail: シュートダウンバックブリーカー【小】
+                        - RowTitle: コマンド
+                          RowDetail: 623+小K
+                        - RowTitle: SC
+                          RowDetail: ×
+                        - RowTitle: ガード
+                          RowDetail: ×
+                        - RowTitle: BL
+                          RowDetail: ×
+                        - RowTitle: 発生
+                          RowDetail: "5"
+                        - RowTitle: 持続
+                          RowDetail: "9"
+                        - RowTitle: 硬直
+                          RowDetail: 30(27)
+                        - RowTitle: 攻撃力
+                          RowDetail: "180"
+                        - RowTitle: ケズリ
+                          RowDetail: ―
+                        - RowTitle: スタン値
+                          RowDetail: "15"
+                        - RowTitle: 削減値
+                          RowDetail: R
+                    - SectionTitle: 投げ間合い
+                      Rows:
+                        - RowTitle: 前方
+                          RowDetail: "21"
+                        - RowTitle: 上下
+                          RowDetail: 71～122
+                    - SectionTitle: ゲージ増加量
+                      Rows:
+                        - RowTitle: 空振り
+                          RowDetail: "5"
+                        - RowTitle: ガード
+                          RowDetail: ―
+                        - RowTitle: ヒット
+                          RowDetail: "31"
+                        - RowTitle: BL
+                          RowDetail: ―
+                    - SectionTitle: ヒット&ガード硬直時間差
+                      Rows:
+                        - RowTitle: ガード
+                          RowDetail: ―
+                        - RowTitle: 立ヒット
+                          RowDetail: ダウン
+                        - RowTitle: 屈ヒット
+                          RowDetail: ダウン
+                    - Rows:
+                        - Presented:
+                            SkillName: Shootdown Backbreaker (Short)
+                            CharacterCode: "06"
+                            ViewController: FramesPlayerViewController
+                            SkillCode: "024"
+                          RowTitle: モーション
+              - RowTitle: シュートダウンバックブリーカー【中】
+                Next:
+                  Sections:
+                    - Rows:
+                        - RowTitle: 技名
+                          RowDetail: シュートダウンバックブリーカー【中】
+                        - RowTitle: コマンド
+                          RowDetail: 623+中K
+                        - RowTitle: SC
+                          RowDetail: ×
+                        - RowTitle: ガード
+                          RowDetail: ×
+                        - RowTitle: BL
+                          RowDetail: ×
+                        - RowTitle: 発生
+                          RowDetail: "17"
+                        - RowTitle: 持続
+                          RowDetail: "10"
+                        - RowTitle: 硬直
+                          RowDetail: 25(22)
+                        - RowTitle: 攻撃力
+                          RowDetail: "200"
+                        - RowTitle: ケズリ
+                          RowDetail: ―
+                        - RowTitle: スタン値
+                          RowDetail: "15"
+                        - RowTitle: 削減値
+                          RowDetail: R
+                    - SectionTitle: 投げ間合い
+                      Rows:
+                        - RowTitle: 前方
+                          RowDetail: "38"
+                        - RowTitle: 上下
+                          RowDetail: 75～110
+                    - SectionTitle: ゲージ増加量
+                      Rows:
+                        - RowTitle: 空振り
+                          RowDetail: "5"
+                        - RowTitle: ガード
+                          RowDetail: ―
+                        - RowTitle: ヒット
+                          RowDetail: "31"
+                        - RowTitle: BL
+                          RowDetail: ―
+                    - SectionTitle: ヒット&ガード硬直時間差
+                      Rows:
+                        - RowTitle: ガード
+                          RowDetail: ―
+                        - RowTitle: 立ヒット
+                          RowDetail: ダウン
+                        - RowTitle: 屈ヒット
+                          RowDetail: ダウン
+                    - Rows:
+                        - Presented:
+                            SkillName: Shootdown Backbreaker (Forward)
+                            CharacterCode: "06"
+                            ViewController: FramesPlayerViewController
+                            SkillCode: "025"
+                          RowTitle: モーション
+              - RowTitle: シュートダウンバックブリーカー【大】
+                Next:
+                  Sections:
+                    - Rows:
+                        - RowTitle: 技名
+                          RowDetail: シュートダウンバックブリーカー【大】
+                        - RowTitle: コマンド
+                          RowDetail: 623+大K
+                        - RowTitle: SC
+                          RowDetail: ×
+                        - RowTitle: ガード
+                          RowDetail: ×
+                        - RowTitle: BL
+                          RowDetail: ×
+                        - RowTitle: 発生
+                          RowDetail: "12"
+                        - RowTitle: 持続
+                          RowDetail: "12"
+                        - RowTitle: 硬直
+                          RowDetail: 29(26)
+                        - RowTitle: 攻撃力
+                          RowDetail: "220"
+                        - RowTitle: ケズリ
+                          RowDetail: ―
+                        - RowTitle: スタン値
+                          RowDetail: "15"
+                        - RowTitle: 削減値
+                          RowDetail: R
+                    - SectionTitle: 投げ間合い
+                      Rows:
+                        - RowTitle: 前方
+                          RowDetail: "29"
+                        - RowTitle: 上下
+                          RowDetail: 76～117
+                    - SectionTitle: ゲージ増加量
+                      Rows:
+                        - RowTitle: 空振り
+                          RowDetail: "5"
+                        - RowTitle: ガード
+                          RowDetail: ―
+                        - RowTitle: ヒット
+                          RowDetail: "31"
+                        - RowTitle: BL
+                          RowDetail: ―
+                    - SectionTitle: ヒット&ガード硬直時間差
+                      Rows:
+                        - RowTitle: ガード
+                          RowDetail: ―
+                        - RowTitle: 立ヒット
+                          RowDetail: ダウン
+                        - RowTitle: 屈ヒット
+                          RowDetail: ダウン
+                    - Rows:
+                        - Presented:
+                            SkillName: Shootdown Backbreaker (RH)
+                            CharacterCode: "06"
+                            ViewController: FramesPlayerViewController
+                            SkillCode: "026"
+                          RowTitle: モーション
+          - Rows:
+              - RowTitle: 補足
+                Next:
+                  Sections:
+                    - Rows:
+                        - RowTitle: "・空中投げ。ボタンによりジャンプ軌道、威力が変化 \n・硬直欄のカッコ内の数値はしゃがみ着地した時のもの\n・コマンド完成後、小は「2」、中と大は「4」フレーム目から空中判定に移行\n・BL不可なので、対空・連続技として使用する"
+    - RowTitle: ミートスカッシャー
+      Next:
+        Sections:
+          - Rows:
+              - RowTitle: ミートスカッシャー【小】
+                Next:
+                  Sections:
+                    - Rows:
+                        - RowTitle: 技名
+                          RowDetail: ミートスカッシャー【小】
+                        - RowTitle: コマンド
+                          RowDetail: レバー1回転+小K
+                        - RowTitle: SC
+                          RowDetail: ×
+                        - RowTitle: ガード
+                          RowDetail: ×
+                        - RowTitle: BL
+                          RowDetail: ×
+                        - RowTitle: 発生
+                          RowDetail: 20～24
+                        - RowTitle: 持続
+                          RowDetail: "2"
+                        - RowTitle: 硬直
+                          RowDetail: "30"
+                        - RowTitle: 攻撃力
+                          RowDetail: "160"
+                        - RowTitle: ケズリ
+                          RowDetail: ―
+                        - RowTitle: スタン値
+                          RowDetail: "13"
+                        - RowTitle: 投げ間合い
+                          RowDetail: "34"
+                        - RowTitle: 削減値
+                          RowDetail: ―
+                    - SectionTitle: ゲージ増加量
+                      Rows:
+                        - RowTitle: 空振り
+                          RowDetail: "3"
+                        - RowTitle: ガード
+                          RowDetail: ―
+                        - RowTitle: ヒット
+                          RowDetail: "22"
+                        - RowTitle: BL
+                          RowDetail: ―
+                    - SectionTitle: ヒット&ガード硬直時間差
+                      Rows:
+                        - RowTitle: ガード
+                          RowDetail: ―
+                        - RowTitle: 立ヒット
+                          RowDetail: ダウン
+                        - RowTitle: 屈ヒット
+                          RowDetail: ダウン
+                    - Rows:
+                        - Presented:
+                            SkillName: Meat Squasher (Short)
+                            CharacterCode: "06"
+                            ViewController: FramesPlayerViewController
+                            SkillCode: "030"
+                          RowTitle: モーション
+              - RowTitle: ミートスカッシャー【中】
+                Next:
+                  Sections:
+                    - Rows:
+                        - RowTitle: 技名
+                          RowDetail: ミートスカッシャー【中】
+                        - RowTitle: コマンド
+                          RowDetail: レバー1回転+中K
+                        - RowTitle: SC
+                          RowDetail: ×
+                        - RowTitle: ガード
+                          RowDetail: ×
+                        - RowTitle: BL
+                          RowDetail: ×
+                        - RowTitle: 発生
+                          RowDetail: 30～52
+                        - RowTitle: 持続
+                          RowDetail: "2"
+                        - RowTitle: 硬直
+                          RowDetail: "33"
+                        - RowTitle: 攻撃力
+                          RowDetail: "160"
+                        - RowTitle: ケズリ
+                          RowDetail: ―
+                        - RowTitle: スタン値
+                          RowDetail: "13"
+                        - RowTitle: 投げ間合い
+                          RowDetail: "34"
+                        - RowTitle: 削減値
+                          RowDetail: ―
+                    - SectionTitle: ゲージ増加量
+                      Rows:
+                        - RowTitle: 空振り
+                          RowDetail: "3"
+                        - RowTitle: ガード
+                          RowDetail: ―
+                        - RowTitle: ヒット
+                          RowDetail: "22"
+                        - RowTitle: BL
+                          RowDetail: ―
+                    - SectionTitle: ヒット&ガード硬直時間差
+                      Rows:
+                        - RowTitle: ガード
+                          RowDetail: ―
+                        - RowTitle: 立ヒット
+                          RowDetail: ダウン
+                        - RowTitle: 屈ヒット
+                          RowDetail: ダウン
+                    - Rows:
+                        - Presented:
+                            SkillName: Meat Squasher (Forward)
+                            CharacterCode: "06"
+                            ViewController: FramesPlayerViewController
+                            SkillCode: "031"
+                          RowTitle: モーション
+              - RowTitle: ミートスカッシャー【大】
+                Next:
+                  Sections:
+                    - Rows:
+                        - RowTitle: 技名
+                          RowDetail: ミートスカッシャー【大】
+                        - RowTitle: コマンド
+                          RowDetail: レバー1回転+大K
+                        - RowTitle: SC
+                          RowDetail: ×
+                        - RowTitle: ガード
+                          RowDetail: ×
+                        - RowTitle: BL
+                          RowDetail: ×
+                        - RowTitle: 発生
+                          RowDetail: 47～67
+                        - RowTitle: 持続
+                          RowDetail: "2"
+                        - RowTitle: 硬直
+                          RowDetail: "36"
+                        - RowTitle: 攻撃力
+                          RowDetail: "160"
+                        - RowTitle: ケズリ
+                          RowDetail: ―
+                        - RowTitle: スタン値
+                          RowDetail: "13"
+                        - RowTitle: 投げ間合い
+                          RowDetail: "34"
+                        - RowTitle: 削減値
+                          RowDetail: ―
+                    - SectionTitle: ゲージ増加量
+                      Rows:
+                        - RowTitle: 空振り
+                          RowDetail: "3"
+                        - RowTitle: ガード
+                          RowDetail: ―
+                        - RowTitle: ヒット
+                          RowDetail: "22"
+                        - RowTitle: BL
+                          RowDetail: ―
+                    - SectionTitle: ヒット&ガード硬直時間差
+                      Rows:
+                        - RowTitle: ガード
+                          RowDetail: ―
+                        - RowTitle: 立ヒット
+                          RowDetail: ダウン
+                        - RowTitle: 屈ヒット
+                          RowDetail: ダウン
+                    - Rows:
+                        - Presented:
+                            SkillName: Meat Squasher (RH)
+                            CharacterCode: "06"
+                            ViewController: FramesPlayerViewController
+                            SkillCode: "032"
+                          RowTitle: モーション
+          - Rows:
+              - RowTitle: 補足
+                Next:
+                  Sections:
+                    - Rows:
+                        - RowTitle: |-
+                            ・ボタンにより小→中→大の順に移動距離が長くなる
+                            ・発生は相手と接触するまでの時間で変化。また投げ間合いは移動する距離は含んでいない数値
+                            ・投げた後は必ず画面端に追い込む事ができる
+    - RowTitle: ジャイアントパームボンバー
+      Next:
+        Sections:
+          - Rows:
+              - RowTitle: ジャイアントパームボンバー【小】
+                Next:
+                  Sections:
+                    - Rows:
+                        - RowTitle: 技名
+                          RowDetail: ジャイアントパームボンバー【小】
+                        - RowTitle: コマンド
+                          RowDetail: 214+小P
+                        - RowTitle: SC
+                          RowDetail: ○
+                        - RowTitle: ガード
+                          RowDetail: 両方
+                        - RowTitle: BL
+                          RowDetail: →
+                        - RowTitle: 発生
+                          RowDetail: "17"
+                        - RowTitle: 持続
+                          RowDetail: "2"
+                        - RowTitle: 硬直
+                          RowDetail: "9"
+                        - RowTitle: 攻撃力
+                          RowDetail: "110"
+                        - RowTitle: ケズリ
+                          RowDetail: "14"
+                        - RowTitle: スタン値
+                          RowDetail: "15"
+                        - RowTitle: 削減値
+                          RowDetail: "5"
+                    - SectionTitle: ゲージ増加量
+                      Rows:
+                        - RowTitle: 空振り
+                          RowDetail: "3"
+                        - RowTitle: ガード
+                          RowDetail: "8"
+                        - RowTitle: ヒット
+                          RowDetail: "16"
+                        - RowTitle: BL
+                          RowDetail: "4"
+                    - SectionTitle: ヒット&ガード硬直時間差
+                      Rows:
+                        - RowTitle: ガード
+                          RowDetail: "+11"
+                        - RowTitle: 立ヒット
+                          RowDetail: "+13"
+                        - RowTitle: 屈ヒット
+                          RowDetail: "+15"
+                    - Rows:
+                        - Presented:
+                            SkillName: Giant Palm Bomber (Jab)
+                            CharacterCode: "06"
+                            ViewController: FramesPlayerViewController
+                            SkillCode: "033"
+                          RowTitle: モーション
+              - RowTitle: ジャイアントパームボンバー【中】
+                Next:
+                  Sections:
+                    - Rows:
+                        - RowTitle: 技名
+                          RowDetail: ジャイアントパームボンバー【中】
+                        - RowTitle: コマンド
+                          RowDetail: 214+中P
+                        - RowTitle: SC
+                          RowDetail: ○
+                        - RowTitle: ガード
+                          RowDetail: 両方
+                        - RowTitle: BL
+                          RowDetail: →
+                        - RowTitle: 発生
+                          RowDetail: "19"
+                        - RowTitle: 持続
+                          RowDetail: "2"
+                        - RowTitle: 硬直
+                          RowDetail: "7"
+                        - RowTitle: 攻撃力
+                          RowDetail: "125"
+                        - RowTitle: ケズリ
+                          RowDetail: "16"
+                        - RowTitle: スタン値
+                          RowDetail: "17"
+                        - RowTitle: 削減値
+                          RowDetail: "5"
+                    - SectionTitle: ゲージ増加量
+                      Rows:
+                        - RowTitle: 空振り
+                          RowDetail: "3"
+                        - RowTitle: ガード
+                          RowDetail: "8"
+                        - RowTitle: ヒット
+                          RowDetail: "16"
+                        - RowTitle: BL
+                          RowDetail: "4"
+                    - SectionTitle: ヒット&ガード硬直時間差
+                      Rows:
+                        - RowTitle: ガード
+                          RowDetail: "+16"
+                        - RowTitle: 立ヒット
+                          RowDetail: "+18"
+                        - RowTitle: 屈ヒット
+                          RowDetail: "+20"
+                    - Rows:
+                        - Presented:
+                            SkillName: Giant Palm Bomber (Strong)
+                            CharacterCode: "06"
+                            ViewController: FramesPlayerViewController
+                            SkillCode: "034"
+                          RowTitle: モーション
+              - RowTitle: ジャイアントパームボンバー【大】
+                Next:
+                  Sections:
+                    - Rows:
+                        - RowTitle: 技名
+                          RowDetail: ジャイアントパームボンバー【大】
+                        - RowTitle: コマンド
+                          RowDetail: 214+大P
+                        - RowTitle: SC
+                          RowDetail: ○
+                        - RowTitle: ガード
+                          RowDetail: 両方
+                        - RowTitle: BL
+                          RowDetail: →
+                        - RowTitle: 発生
+                          RowDetail: "22"
+                        - RowTitle: 持続
+                          RowDetail: "2"
+                        - RowTitle: 硬直
+                          RowDetail: "6"
+                        - RowTitle: 攻撃力
+                          RowDetail: "140"
+                        - RowTitle: ケズリ
+                          RowDetail: "18"
+                        - RowTitle: スタン値
+                          RowDetail: "19"
+                        - RowTitle: 削減値
+                          RowDetail: "5"
+                    - SectionTitle: ゲージ増加量
+                      Rows:
+                        - RowTitle: 空振り
+                          RowDetail: "3"
+                        - RowTitle: ガード
+                          RowDetail: "8"
+                        - RowTitle: ヒット
+                          RowDetail: "16"
+                        - RowTitle: BL
+                          RowDetail: "4"
+                    - SectionTitle: ヒット&ガード硬直時間差
+                      Rows:
+                        - RowTitle: ガード
+                          RowDetail: "+19"
+                        - RowTitle: 立ヒット
+                          RowDetail: "+21"
+                        - RowTitle: 屈ヒット
+                          RowDetail: "+23"
+                    - Rows:
+                        - Presented:
+                            SkillName: Giant Palm Bomber (Fierce)
+                            CharacterCode: "06"
+                            ViewController: FramesPlayerViewController
+                            SkillCode: "035"
+                          RowTitle: モーション
+              - RowTitle: ジャイアントパームボンバー【EX】
+                Next:
+                  Sections:
+                    - Rows:
+                        - RowTitle: 技名
+                          RowDetail: ジャイアントパームボンバー【EX】
+                        - RowTitle: コマンド
+                          RowDetail: 214+PP
+                        - RowTitle: SC
+                          RowDetail: ○・○・○
+                        - RowTitle: ガード
+                          RowDetail: 両方×3
+                        - RowTitle: BL
+                          RowDetail: →×3
+                        - RowTitle: 発生
+                          RowDetail: 22・1・1
+                        - RowTitle: 持続
+                          RowDetail: 1・1・1
+                        - RowTitle: 硬直
+                          RowDetail: "10"
+                        - RowTitle: 攻撃力
+                          RowDetail: 220(20+60+140)
+                        - RowTitle: ケズリ
+                          RowDetail: 21(1+3+17)
+                        - RowTitle: スタン値
+                          RowDetail: 15(3+3+9)
+                        - RowTitle: 削減値
+                          RowDetail: 1・1・3
+                    - SectionTitle: ゲージ増加量
+                      Rows:
+                        - RowTitle: 空振り
+                          RowDetail: ―
+                        - RowTitle: ガード
+                          RowDetail: ―
+                        - RowTitle: ヒット
+                          RowDetail: ―
+                        - RowTitle: BL
+                          RowDetail: 12(4×3)
+                    - SectionTitle: ヒット&ガード硬直時間差
+                      Rows:
+                        - RowTitle: ガード
+                          RowDetail: "+10"
+                        - RowTitle: 立ヒット
+                          RowDetail: ダウン
+                        - RowTitle: 屈ヒット
+                          RowDetail: ダウン
+                    - Rows:
+                        - Presented:
+                            SkillName: Giant Palm Bomber (EX)
+                            CharacterCode: "06"
+                            ViewController: FramesPlayerViewController
+                            SkillCode: "036"
+                          RowTitle: モーション
+          - Rows:
+              - RowTitle: 補足
+                Next:
+                  Sections:
+                    - SectionTitle: 通常
+                      Rows:
+                        - RowTitle: |-
+                            ・発生は遅いが判定が強く、技後の硬直が有利なため、どんどん使っていける
+                            ・近距離でヒットした時と、画面端で空中ヒットした時は追撃可能
+                            ・攻撃判定を飛び道具にぶつけることで、単発飛び道具を相殺、多段飛び道具のヒット数を「1」減らすことができる
+                            ・キャンセル猶予時間は14フレーム
+                    - SectionTitle: EX
+                      Rows:
+                        - RowTitle: |-
+                            ・攻撃判定を飛び道具にぶつけることで、単発飛び道具を相殺、多段飛び道具のヒット数を「3」減らすことができる
+                            ・ヒット後、相手を浮かせる事が可能。さらに追撃可能
+                            ・キャンセル猶予時間は1段目が1フレーム、2段目が2～3フレーム、3段目が4～19フレーム
+    - RowTitle: モンスターラリアット
+      Next:
+        Sections:
+          - Rows:
+              - RowTitle: モンスターラリアット【小】
+                Next:
+                  Sections:
+                    - Rows:
+                        - RowTitle: 技名
+                          RowDetail: モンスターラリアット【小】
+                        - RowTitle: コマンド
+                          RowDetail: 236+小K
+                        - RowTitle: SC
+                          RowDetail: ×
+                        - RowTitle: ガード
+                          RowDetail: 両方
+                        - RowTitle: BL
+                          RowDetail: →
+                        - RowTitle: 発生
+                          RowDetail: "11"
+                        - RowTitle: 持続
+                          RowDetail: "5"
+                        - RowTitle: 硬直
+                          RowDetail: 21～25
+                        - RowTitle: 攻撃力
+                          RowDetail: "150"
+                        - RowTitle: ケズリ
+                          RowDetail: "19"
+                        - RowTitle: スタン値
+                          RowDetail: "11"
+                        - RowTitle: 削減値
+                          RowDetail: "15"
+                    - SectionTitle: ゲージ増加量
+                      Rows:
+                        - RowTitle: 空振り
+                          RowDetail: "3"
+                        - RowTitle: ガード
+                          RowDetail: "8"
+                        - RowTitle: ヒット
+                          RowDetail: "13"
+                        - RowTitle: BL
+                          RowDetail: "4"
+                    - SectionTitle: ヒット&ガード硬直時間差
+                      Rows:
+                        - RowTitle: ガード
+                          RowDetail: "-8"
+                        - RowTitle: 立ヒット
+                          RowDetail: ダウン
+                        - RowTitle: 屈ヒット
+                          RowDetail: ダウン
+                    - Rows:
+                        - Presented:
+                            SkillName: Monster Lariat (Short)
+                            CharacterCode: "06"
+                            ViewController: FramesPlayerViewController
+                            SkillCode: "037"
+                          RowTitle: モーション
+              - RowTitle: モンスターラリアット【中】
+                Next:
+                  Sections:
+                    - Rows:
+                        - RowTitle: 技名
+                          RowDetail: モンスターラリアット【中】
+                        - RowTitle: コマンド
+                          RowDetail: 236+中K
+                        - RowTitle: SC
+                          RowDetail: ×
+                        - RowTitle: ガード
+                          RowDetail: 両方
+                        - RowTitle: BL
+                          RowDetail: →
+                        - RowTitle: 発生
+                          RowDetail: "15"
+                        - RowTitle: 持続
+                          RowDetail: "5"
+                        - RowTitle: 硬直
+                          RowDetail: 23～27
+                        - RowTitle: 攻撃力
+                          RowDetail: "160"
+                        - RowTitle: ケズリ
+                          RowDetail: "20"
+                        - RowTitle: スタン値
+                          RowDetail: "13"
+                        - RowTitle: 削減値
+                          RowDetail: "15"
+                    - SectionTitle: ゲージ増加量
+                      Rows:
+                        - RowTitle: 空振り
+                          RowDetail: "3"
+                        - RowTitle: ガード
+                          RowDetail: "8"
+                        - RowTitle: ヒット
+                          RowDetail: "13"
+                        - RowTitle: BL
+                          RowDetail: "4"
+                    - SectionTitle: ヒット&ガード硬直時間差
+                      Rows:
+                        - RowTitle: ガード
+                          RowDetail: "-10"
+                        - RowTitle: 立ヒット
+                          RowDetail: ダウン
+                        - RowTitle: 屈ヒット
+                          RowDetail: ダウン
+                    - Rows:
+                        - Presented:
+                            SkillName: Monster Lariat (Forward)
+                            CharacterCode: "06"
+                            ViewController: FramesPlayerViewController
+                            SkillCode: "038"
+                          RowTitle: モーション
+              - RowTitle: モンスターラリアット【大】
+                Next:
+                  Sections:
+                    - Rows:
+                        - RowTitle: 技名
+                          RowDetail: モンスターラリアット【大】
+                        - RowTitle: コマンド
+                          RowDetail: 236+大K
+                        - RowTitle: SC
+                          RowDetail: ×
+                        - RowTitle: ガード
+                          RowDetail: 両方
+                        - RowTitle: BL
+                          RowDetail: →
+                        - RowTitle: 発生
+                          RowDetail: "24"
+                        - RowTitle: 持続
+                          RowDetail: "5"
+                        - RowTitle: 硬直
+                          RowDetail: 24～28
+                        - RowTitle: 攻撃力
+                          RowDetail: "170"
+                        - RowTitle: ケズリ
+                          RowDetail: "21"
+                        - RowTitle: スタン値
+                          RowDetail: "15"
+                        - RowTitle: 削減値
+                          RowDetail: "15"
+                    - SectionTitle: ゲージ増加量
+                      Rows:
+                        - RowTitle: 空振り
+                          RowDetail: "3"
+                        - RowTitle: ガード
+                          RowDetail: "8"
+                        - RowTitle: ヒット
+                          RowDetail: "13"
+                        - RowTitle: BL
+                          RowDetail: "4"
+                    - SectionTitle: ヒット&ガード硬直時間差
+                      Rows:
+                        - RowTitle: ガード
+                          RowDetail: "-11"
+                        - RowTitle: 立ヒット
+                          RowDetail: ダウン
+                        - RowTitle: 屈ヒット
+                          RowDetail: ダウン
+                    - Rows:
+                        - Presented:
+                            SkillName: Monster Lariat (RH)
+                            CharacterCode: "06"
+                            ViewController: FramesPlayerViewController
+                            SkillCode: "039"
+                          RowTitle: モーション
+              - RowTitle: モンスターラリアット【EX】
+                Next:
+                  Sections:
+                    - Rows:
+                        - RowTitle: 技名
+                          RowDetail: モンスターラリアット【EX】
+                        - RowTitle: コマンド
+                          RowDetail: 236+KK
+                        - RowTitle: SC
+                          RowDetail: ×
+                        - RowTitle: ガード
+                          RowDetail: 両方
+                        - RowTitle: BL
+                          RowDetail: →
+                        - RowTitle: 発生
+                          RowDetail: 6～26
+                        - RowTitle: 持続
+                          RowDetail: "6"
+                        - RowTitle: 硬直
+                          RowDetail: 31～35
+                        - RowTitle: 攻撃力
+                          RowDetail: 140～180
+                        - RowTitle: ケズリ
+                          RowDetail: 18～23
+                        - RowTitle: スタン値
+                          RowDetail: 13～17
+                        - RowTitle: 削減値
+                          RowDetail: "15"
+                    - SectionTitle: ゲージ増加量
+                      Rows:
+                        - RowTitle: 空振り
+                          RowDetail: "3"
+                        - RowTitle: ガード
+                          RowDetail: "8"
+                        - RowTitle: ヒット
+                          RowDetail: "13"
+                        - RowTitle: BL
+                          RowDetail: "4"
+                    - SectionTitle: ヒット&ガード硬直時間差
+                      Rows:
+                        - RowTitle: ガード
+                          RowDetail: "-22"
+                        - RowTitle: 立ヒット
+                          RowDetail: ダウン
+                        - RowTitle: 屈ヒット
+                          RowDetail: ダウン
+                    - Rows:
+                        - Presented:
+                            SkillName: Monster Lariat (EX)
+                            CharacterCode: "06"
+                            ViewController: FramesPlayerViewController
+                            SkillCode: "040"
+                          RowTitle: モーション
+          - Rows:
+              - RowTitle: 補足
+                Next:
+                  Sections:
+                    - SectionTitle: 通常
+                      Rows:
+                        - RowTitle: |-
+                            ・ボタンによって走る距離、攻撃力、スタン値が変化
+                            ・持続時間中のヒットした時間帯により硬直が変化
+                    - SectionTitle: EX
+                      Rows:
+                        - RowTitle: |-
+                            ・発生はボタンを押す長さで変化
+                            ・ボタン押しっぱなしで走る距離がのび、最大で画面端から端まで走る。走る距離がのびるほど攻撃力とスタン値が上昇
+                            ・持続時間中のヒットした時間帯により硬直が変化
+                            ・技の出が速くなり、小技からコンボにする事が可能
+- SectionTitle: 【スーパーアーツ】
+  Rows:
+    - RowTitle: ギガスブリーカー
+      Next:
+        Sections:
+          - Rows:
+              - RowTitle: 技名
+                RowDetail: ギガスブリーカー
+              - RowTitle: コマンド
+                RowDetail: レバー2回転+P
+              - RowTitle: ストック数
+                RowDetail: １
+              - RowTitle: ゲージの長さ
+                RowDetail: 128ドット
+              - RowTitle: ガード
+                RowDetail: ×
+              - RowTitle: BL
+                RowDetail: ×
+              - RowTitle: 発生
+                RowDetail: "0"
+              - RowTitle: 持続
+                RowDetail: "2"
+              - RowTitle: 硬直
+                RowDetail: 36(28)
+              - RowTitle: 攻撃力
+                RowDetail: "630"
+              - RowTitle: ケズリ
+                RowDetail: ―
+              - RowTitle: スタン値
+                RowDetail: "7"
+              - RowTitle: 投げ間合い
+                RowDetail: "70"
+              - RowTitle: 削減値
+                RowDetail: ―
+          - SectionTitle: ヒット&ガード硬直時間差
+            Rows:
+              - RowTitle: ガード
+                RowDetail: ―
+              - RowTitle: 立ヒット
+                RowDetail: ダウン
+              - RowTitle: 屈ヒット
+                RowDetail: ダウン
+          - SectionTitle: 補足
+            Rows:
+              - RowTitle: "・コマンド完成後、暗転50フレーム、相手行動不能時間54フレーム。コマンド完成から56フレーム間無敵 \n・つかみ判定発生まで完全無敵。つかみ判定発生から2フレーム打撃無敵 \n・SAコマンド完成後の、暗転直後4フレーム間の先行ジャンプ入力でも回避できない。当然、暗転後のジャンプでも回避できない\n・相手と同時にSAを入力してギガスが先に暗転した場合、相手には暗転させない\n・コマンドは2回転となっているが、1回転半で出す事が可能\n・硬直欄のカッコ内の数値はしゃがみ状態で着地した時のもの\n\n【立ちギガス】\nヒューゴーはハイジャンプの出掛かりモーションが長いため、素早くレバーを回せばハイジャンプキャンセルを利用してジャンプするまでにコマンド入力が間に合うというテクニック。\n上手く出来ない人は、入力の際にレバーをニュートラルから回し始めるよう意識する事。\nとにかく肩がはずれるくらい速くまわせば、誰でも「出すこと」は出来る(笑)\n\n【空振りギガス】\n相手のBL仕込み空ジャンプや、相手の起き上がりに当てないように技を空振りして、その間にギガスコマンドを完成させるテクニック。\n飛込みに対しては立小Kや屈小K、起き上がりには立中Pやリープ、投げスカリなどを空振りさせてから仕込んでおくとやりやすい。\n\n【分割ギガス】\nギガスコマンドの受付時間が長いのを利用して、何らかの技を出して(ガードさせて)る最中に予め1回転させた後、少し歩いて残りの半回転で出すというテクニック。 ギガス受付タイマーを最大限に利用した場合、かなりの距離を歩くことが出来る。"
+          - Rows:
+              - Presented:
+                  SkillName: Gigas Breaker
+                  CharacterCode: "06"
+                  ViewController: FramesPlayerViewController
+                  SkillCode: "044"
+                RowTitle: モーション
+    - RowTitle: メガトンプレス
+      Next:
+        Sections:
+          - Rows:
+              - RowTitle: メガトンプレス【小】
+                Next:
+                  Sections:
+                    - Rows:
+                        - RowTitle: 技名
+                          RowDetail: メガトンプレス【小】
+                        - RowTitle: コマンド
+                          RowDetail: 236236+小K
+                        - RowTitle: ストック数
+                          RowDetail: "2"
+                        - RowTitle: ゲージの長さ
+                          RowDetail: 112ドット
+                        - RowTitle: ガード
+                          RowDetail: ×
+                        - RowTitle: BL
+                          RowDetail: ×
+                        - RowTitle: 発生
+                          RowDetail: "3"
+                        - RowTitle: 持続
+                          RowDetail: "12"
+                        - RowTitle: 硬直
+                          RowDetail: 30(22)
+                        - RowTitle: 攻撃力
+                          RowDetail: "450"
+                        - RowTitle: ケズリ
+                          RowDetail: ―
+                        - RowTitle: スタン値
+                          RowDetail: "25"
+                        - RowTitle: 削減値
+                          RowDetail: R・1
+                    - SectionTitle: 投げ間合い
+                      Rows:
+                        - RowTitle: 前方
+                          RowDetail: "50"
+                        - RowTitle: 上下
+                          RowDetail: 60～133
+                    - SectionTitle: ヒット&ガード硬直時間差
+                      Rows:
+                        - RowTitle: ガード
+                          RowDetail: ―
+                        - RowTitle: 立ヒット
+                          RowDetail: ダウン
+                        - RowTitle: 屈ヒット
+                          RowDetail: ダウン
+                    - Rows:
+                        - Presented:
+                            SkillName: Megaton Press (LK)
+                            CharacterCode: "06"
+                            ViewController: FramesPlayerViewController
+                            SkillCode: "045"
+                          RowTitle: モーション
+              - RowTitle: メガトンプレス【中】
+                Next:
+                  Sections:
+                    - Rows:
+                        - RowTitle: 技名
+                          RowDetail: メガトンプレス【中】
+                        - RowTitle: コマンド
+                          RowDetail: 236236+中K
+                        - RowTitle: ストック数
+                          RowDetail: "2"
+                        - RowTitle: ゲージの長さ
+                          RowDetail: 112ドット
+                        - RowTitle: ガード
+                          RowDetail: ×
+                        - RowTitle: BL
+                          RowDetail: ×
+                        - RowTitle: 発生
+                          RowDetail: "5"
+                        - RowTitle: 持続
+                          RowDetail: "16"
+                        - RowTitle: 硬直
+                          RowDetail: 34(26)
+                        - RowTitle: 攻撃力
+                          RowDetail: "450"
+                        - RowTitle: ケズリ
+                          RowDetail: ―
+                        - RowTitle: スタン値
+                          RowDetail: "25"
+                        - RowTitle: 削減値
+                          RowDetail: R・1
+                    - SectionTitle: 投げ間合い
+                      Rows:
+                        - RowTitle: 前方
+                          RowDetail: "50"
+                        - RowTitle: 上下
+                          RowDetail: 60～133
+                    - SectionTitle: ヒット&ガード硬直時間差
+                      Rows:
+                        - RowTitle: ガード
+                          RowDetail: ―
+                        - RowTitle: 立ヒット
+                          RowDetail: ダウン
+                        - RowTitle: 屈ヒット
+                          RowDetail: ダウン
+                    - Rows:
+                        - Presented:
+                            SkillName: Megaton Press (MK)
+                            CharacterCode: "06"
+                            ViewController: FramesPlayerViewController
+                            SkillCode: "046"
+                          RowTitle: モーション
+              - RowTitle: メガトンプレス【大】
+                Next:
+                  Sections:
+                    - Rows:
+                        - RowTitle: 技名
+                          RowDetail: メガトンプレス【大】
+                        - RowTitle: コマンド
+                          RowDetail: 236236+大K
+                        - RowTitle: ストック数
+                          RowDetail: "2"
+                        - RowTitle: ゲージの長さ
+                          RowDetail: 112ドット
+                        - RowTitle: ガード
+                          RowDetail: ×
+                        - RowTitle: BL
+                          RowDetail: ×
+                        - RowTitle: 発生
+                          RowDetail: "7"
+                        - RowTitle: 持続
+                          RowDetail: "20"
+                        - RowTitle: 硬直
+                          RowDetail: 36(28)
+                        - RowTitle: 攻撃力
+                          RowDetail: "450"
+                        - RowTitle: ケズリ
+                          RowDetail: ―
+                        - RowTitle: スタン値
+                          RowDetail: "25"
+                        - RowTitle: 削減値
+                          RowDetail: R・1
+                    - SectionTitle: 投げ間合い
+                      Rows:
+                        - RowTitle: 前方
+                          RowDetail: "50"
+                        - RowTitle: 上下
+                          RowDetail: 60～133
+                    - SectionTitle: ヒット&ガード硬直時間差
+                      Rows:
+                        - RowTitle: ガード
+                          RowDetail: ―
+                        - RowTitle: 立ヒット
+                          RowDetail: ダウン
+                        - RowTitle: 屈ヒット
+                          RowDetail: ダウン
+                    - Rows:
+                        - Presented:
+                            SkillName: Megaton Press (HK)
+                            CharacterCode: "06"
+                            ViewController: FramesPlayerViewController
+                            SkillCode: "047"
+                          RowTitle: モーション
+          - Rows:
+              - RowTitle: 補足
+                Next:
+                  Sections:
+                    - Rows:
+                        - RowTitle: "・コマンド完成後、暗転50フレーム、相手行動不能時間50フレーム。コマンド完成から52フレーム間無敵 \n・暗転終了後、3フレーム目から空中判定に移行(空中判定になるまでは完全無敵)\n・攻撃発生(小は「1」、中は「3」、大は「5」)フレーム前に無敵終了。食らい判定出現(技を重ねられていたら潰される) \n・硬直欄のカッコ内の数値はしゃがみ着地した時のもの\n・対空投げ。ボタンによりジャンプ軌道が変化する。なお地上に居る相手には決まらない \n・ウルトラスルーからの連続技や対空として使用"
+    - RowTitle: ハンマーマウンテン
+      Next:
+        Sections:
+          - Rows:
+              - RowTitle: 技名
+                RowDetail: ハンマーマウンテン
+              - RowTitle: コマンド
+                RowDetail: 236236+P
+              - RowTitle: ストック数
+                RowDetail: "2"
+              - RowTitle: ゲージの長さ
+                RowDetail: 88ドット
+              - RowTitle: ガード
+                RowDetail: 両方・両方・立・立・両方
+              - RowTitle: BL
+                RowDetail: 両方・両方・→・→・両方
+              - RowTitle: 発生
+                RowDetail: 5～35
+              - RowTitle: 持続
+                RowDetail: 5・3・6・2・2
+              - RowTitle: 硬直
+                RowDetail: "47"
+              - RowTitle: 攻撃力
+                RowDetail: |-
+                  390(5ヒット)
+                  (80+90+80+60+120)
+              - RowTitle: ケズリ
+                RowDetail: |-
+                  107(5回ガード)
+                  (20+22+20+15+30)
+              - RowTitle: スタン値
+                RowDetail: |-
+                  20(5ヒット)
+                  (7+5×3+7)
+              - RowTitle: 削減値
+                RowDetail: 1×4・7
+          - SectionTitle: ヒット&ガード硬直時間差
+            Rows:
+              - RowTitle: ガード
+                RowDetail: "-29"
+              - RowTitle: 立ヒット
+                RowDetail: ダウン
+              - RowTitle: 屈ヒット
+                RowDetail: ダウン
+          - SectionTitle: 補足
+            Rows:
+              - RowTitle: "・コマンド完成後、暗転50フレーム、相手行動不能時間50フレーム。コマンド完成から53フレーム間無敵\n・攻撃発生まで完全無敵。攻撃発生後、2フレーム完全無敵 \n・コマンド完成後、P押しっぱなしで攻撃を出さず前進。この場合、Pボタンを離した4フレーム後に攻撃が発生\n・攻撃発生はボタンを押す長さで変化\n・ボタンを85フレーム間押し続けた場合、攻撃判定が出ずに停止。その場合の硬直は「24」\n・主に「屈小P×2」やジャンプ大攻撃からヒット確認して連続技に使用\n・ヒットの仕方が2種類あり、初段の発生5フレーム中の最初の2フレームを当てるとより遠くへと移動する。逆に後半3フレームを当てても移動距離は延びない（動画参照）"
+          - Rows:
+              - Presented:
+                  SkillName: Hammer Frenzy
+                  CharacterCode: "06"
+                  ViewController: FramesPlayerViewController
+                  SkillCode: "048"
+                RowTitle: モーション
