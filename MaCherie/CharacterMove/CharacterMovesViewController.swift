@@ -35,7 +35,7 @@ class CharacterMovesViewController: UIViewController {
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         switch segue.identifier {
-        case R.segue.characterMovesViewController.showMotionPlayer.identifier:
+        case "ShowMotionPlayer":
             let indexPath = tableView.indexPathForSelectedRow!
 
             let player = (segue.destination as! UINavigationController).topViewController as! MotionPlayerViewController
@@ -63,20 +63,20 @@ extension CharacterMovesViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let characterMove = sections[indexPath.section].rows[indexPath.row]
         if let _ = characterMove.presented {
-            let cell = tableView.dequeueReusableCell(withIdentifier: R.reuseIdentifier.characterMoveFramesCell, for: indexPath)!
+            let cell = tableView.dequeueReusableCell(withIdentifier: "CharacterMoveFramesCell", for: indexPath) as! CharacterMoveFramesCell
             cell.rowTitleLabel.text = characterMove.rowTitle
             return cell
         } else if let _ = characterMove.next {
-            let cell = tableView.dequeueReusableCell(withIdentifier: R.reuseIdentifier.characterMoveCell, for: indexPath)!
+            let cell = tableView.dequeueReusableCell(withIdentifier: "CharacterMoveCell", for: indexPath) as! CharacterMoveCell
             cell.rowTitleLabel.text = characterMove.rowTitle
             return cell
         } else if let _ = characterMove.rowDetail {
-            let cell = tableView.dequeueReusableCell(withIdentifier: R.reuseIdentifier.characterMoveDetailCell, for: indexPath)!
+            let cell = tableView.dequeueReusableCell(withIdentifier: "CharacterMoveDetailCell", for: indexPath) as! CharacterMoveDetailCell
             cell.rowTitleLabel.text = characterMove.rowTitle
             cell.rowDetailLabel.text = characterMove.rowDetail
             return cell
         } else {
-            let cell = tableView.dequeueReusableCell(withIdentifier: R.reuseIdentifier.characterSupplementaryCell, for: indexPath)!
+            let cell = tableView.dequeueReusableCell(withIdentifier: "CharacterSupplementaryCell", for: indexPath) as! CharacterSupplementaryCell
             cell.rowTitleLabel.text = characterMove.rowTitle
             return cell
         }
@@ -93,7 +93,7 @@ extension CharacterMovesViewController: UITableViewDelegate {
         if let presented = characterMove.presented {
             let presentedViewControllerName = presented.viewController
             if presentedViewControllerName == "FramesPlayerViewController" {
-                performSegue(withIdentifier: R.segue.characterMovesViewController.showMotionPlayer, sender: self)
+                performSegue(withIdentifier: "ShowMotionPlayer", sender: self)
             }
         } else if let next = characterMove.next {
             let nextViewController = storyboard?.instantiateViewController(withIdentifier: "CharacterMovesViewController") as! CharacterMovesViewController

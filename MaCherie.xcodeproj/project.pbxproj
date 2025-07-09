@@ -12,7 +12,6 @@
 		3505351920D21AC300078847 /* MotionPlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3505351820D21AC300078847 /* MotionPlayerViewController.swift */; };
 		352FE9672382840D0083CCF0 /* CharacterBackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 352FE9662382840D0083CCF0 /* CharacterBackgroundView.swift */; };
 		35375CAC20D0FE45004642CB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 35375CAB20D0FE45004642CB /* LaunchScreen.storyboard */; };
-		355F2D202BA0205E00B97A41 /* RswiftLibrary in Frameworks */ = {isa = PBXBuildFile; productRef = 355F2D1F2BA0205E00B97A41 /* RswiftLibrary */; };
 		3566755320D2692F00DD26A4 /* UIColor+Integer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3566755220D2692F00DD26A4 /* UIColor+Integer.swift */; };
 		3566755520D26A2800DD26A4 /* ApplicationDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3566755420D26A2800DD26A4 /* ApplicationDataManager.swift */; };
 		3566755720D26A4D00DD26A4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3566755620D26A4D00DD26A4 /* AppDelegate.swift */; };
@@ -112,7 +111,6 @@
 				EEE27AF4176C1470008A41AB /* MessageUI.framework in Frameworks */,
 				EEE27AF6176C147C008A41AB /* QuartzCore.framework in Frameworks */,
 				EEA48CA31775E59F00351CAB /* Security.framework in Frameworks */,
-				355F2D202BA0205E00B97A41 /* RswiftLibrary in Frameworks */,
 				EEE27AFA176C1490008A41AB /* SystemConfiguration.framework in Frameworks */,
 				EEE27ACF176C1347008A41AB /* UIKit.framework in Frameworks */,
 			);
@@ -247,11 +245,9 @@
 			buildRules = (
 			);
 			dependencies = (
-				355F2D272BA021C700B97A41 /* PBXTargetDependency */,
 			);
 			name = MaCherie;
 			packageProductDependencies = (
-				355F2D1F2BA0205E00B97A41 /* RswiftLibrary */,
 				3583FA652DBDF97300778995 /* Yams */,
 			);
 			productName = MaCherie;
@@ -292,7 +288,6 @@
 			);
 			mainGroup = EEE27AC2176C1347008A41AB;
 			packageReferences = (
-				355F2D1E2BA0205E00B97A41 /* XCRemoteSwiftPackageReference "R.swift" */,
 				3583FA642DBDF97300778995 /* XCRemoteSwiftPackageReference "Yams" */,
 			);
 			productRefGroup = EEE27ACC176C1347008A41AB /* Products */;
@@ -349,13 +344,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		355F2D272BA021C700B97A41 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			productRef = 355F2D262BA021C700B97A41 /* RswiftGenerateInternalResources */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		EEE27AE6176C1347008A41AB /* Debug */ = {
@@ -541,14 +529,6 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		355F2D1E2BA0205E00B97A41 /* XCRemoteSwiftPackageReference "R.swift" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/mac-cain13/R.swift.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 7.5.0;
-			};
-		};
 		3583FA642DBDF97300778995 /* XCRemoteSwiftPackageReference "Yams" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/jpsim/Yams.git";
@@ -560,16 +540,6 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		355F2D1F2BA0205E00B97A41 /* RswiftLibrary */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 355F2D1E2BA0205E00B97A41 /* XCRemoteSwiftPackageReference "R.swift" */;
-			productName = RswiftLibrary;
-		};
-		355F2D262BA021C700B97A41 /* RswiftGenerateInternalResources */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 355F2D1E2BA0205E00B97A41 /* XCRemoteSwiftPackageReference "R.swift" */;
-			productName = "plugin:RswiftGenerateInternalResources";
-		};
 		3583FA652DBDF97300778995 /* Yams */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 3583FA642DBDF97300778995 /* XCRemoteSwiftPackageReference "Yams" */;

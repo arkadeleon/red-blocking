@@ -58,7 +58,7 @@ class CharactersViewController: UIViewController {
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         switch segue.identifier {
-        case R.segue.charactersViewController.showDetail.identifier:
+        case "ShowDetail":
             let indexPath = tableView.indexPathForSelectedRow!
             let character = characters[indexPath.row]
 
@@ -97,7 +97,7 @@ extension CharactersViewController: UITableViewDataSource {
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let character = characters[indexPath.row]
-        let cell = tableView.dequeueReusableCell(withIdentifier: R.reuseIdentifier.characterCell, for: indexPath)!
+        let cell = tableView.dequeueReusableCell(withIdentifier: "CharacterCell", for: indexPath) as! CharacterCell
         cell.rowImageView.image = UIImage(named: character.rowImage)
         cell.rowTitleLabel.text = character.rowTitle
         return cell
