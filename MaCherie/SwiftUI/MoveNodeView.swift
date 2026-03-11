@@ -14,11 +14,15 @@ struct MoveNodeView: View {
     let node: MoveNode
 
     var body: some View {
-        MoveBrowserView(
-            model: MoveBrowserModel(
-                node: node,
-                navigation: appModel.navigation
+        ZStack {
+            CharacterDetailBackgroundView(selection: appModel.navigation.selectedCharacter)
+
+            MoveBrowserView(
+                model: MoveBrowserModel(
+                    node: node,
+                    navigation: appModel.navigation
+                )
             )
-        )
+        }
     }
 }

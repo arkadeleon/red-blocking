@@ -9,9 +9,13 @@
 import SwiftUI
 
 struct MoveBrowserView: View {
+    @Environment(\.horizontalSizeClass) private var horizontalSizeClass
+
     let model: MoveBrowserModel
 
     var body: some View {
+        let rowBackground = Color(uiColor: .systemBackground).opacity(rowBackgroundOpacity)
+
         List {
             if let errorMessage = model.errorMessage {
                 Section {
@@ -20,6 +24,7 @@ struct MoveBrowserView: View {
                         systemImage: "exclamationmark.triangle",
                         description: Text(errorMessage)
                     )
+                    .listRowBackground(rowBackground)
                 }
             } else if model.sections.isEmpty {
                 Section {
@@ -28,6 +33,7 @@ struct MoveBrowserView: View {
                         systemImage: "list.bullet.rectangle",
                         description: Text("This move node does not contain any rows.")
                     )
+                    .listRowBackground(rowBackground)
                 }
             } else {
                 ForEach(Array(model.sections.enumerated()), id: \.offset) { sectionIndex, section in
@@ -40,6 +46,7 @@ struct MoveBrowserView: View {
                                 ) {
                                     model.open(move)
                                 }
+                                .listRowBackground(rowBackground)
                             } else if model.isMovePlayerEntry(move) {
                                 MovePlayerEntryRowView(
                                     title: model.title(for: move),
@@ -47,15 +54,18 @@ struct MoveBrowserView: View {
                                 ) {
                                     model.open(move)
                                 }
+                                .listRowBackground(rowBackground)
                             } else if let detail = move.rowDetail {
                                 MoveDetailRowView(
                                     title: model.title(for: move),
                                     detail: detail
                                 )
+                                .listRowBackground(rowBackground)
                             } else {
                                 MoveSupplementaryRowView(
                                     title: model.title(for: move)
                                 )
+                                .listRowBackground(rowBackground)
                             }
                         }
                     } header: {
@@ -66,6 +76,11 @@ struct MoveBrowserView: View {
                 }
             }
         }
+        .scrollContentBackground(.hidden)
         .navigationTitle(model.node.title)
+    }
+
+    private var rowBackgroundOpacity: Double {
+        horizontalSizeClass == .compact ? 0.9 : 0.76
     }
 }

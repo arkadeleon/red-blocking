@@ -38,6 +38,8 @@
 		36A100192F03250300778995 /* MoveDetailRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36A100182F03250300778995 /* MoveDetailRowView.swift */; };
 		36A1001B2F03250400778995 /* MoveSupplementaryRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36A1001A2F03250400778995 /* MoveSupplementaryRowView.swift */; };
 		36A1001D2F03250500778995 /* MovePlayerEntryRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36A1001C2F03250500778995 /* MovePlayerEntryRowView.swift */; };
+		36A100212F03250600778995 /* CharacterDetailBackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36A100202F03250600778995 /* CharacterDetailBackgroundView.swift */; };
+		36A100252F03250800778995 /* DetailRootContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36A100242F03250800778995 /* DetailRootContentView.swift */; };
 		35AFF43E2BA093B500737E1A /* FrameData in Resources */ = {isa = PBXBuildFile; fileRef = 35AFF43D2BA093B500737E1A /* FrameData */; };
 		35B69A2420D8DA2700F05A2C /* CharacterSupplementaryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35B69A2220D8DA2700F05A2C /* CharacterSupplementaryCell.swift */; };
 		35B69A2820D8DA4700F05A2C /* CharacterMoveCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35B69A2620D8DA4700F05A2C /* CharacterMoveCell.swift */; };
@@ -109,6 +111,8 @@
 		36A100182F03250300778995 /* MoveDetailRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoveDetailRowView.swift; sourceTree = "<group>"; };
 		36A1001A2F03250400778995 /* MoveSupplementaryRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoveSupplementaryRowView.swift; sourceTree = "<group>"; };
 		36A1001C2F03250500778995 /* MovePlayerEntryRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovePlayerEntryRowView.swift; sourceTree = "<group>"; };
+		36A100202F03250600778995 /* CharacterDetailBackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterDetailBackgroundView.swift; sourceTree = "<group>"; };
+		36A100242F03250800778995 /* DetailRootContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailRootContentView.swift; sourceTree = "<group>"; };
 		35AFF43D2BA093B500737E1A /* FrameData */ = {isa = PBXFileReference; lastKnownFileType = folder; path = FrameData; sourceTree = "<group>"; };
 		35B69A2220D8DA2700F05A2C /* CharacterSupplementaryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterSupplementaryCell.swift; sourceTree = "<group>"; };
 		35B69A2620D8DA4700F05A2C /* CharacterMoveCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterMoveCell.swift; sourceTree = "<group>"; };
@@ -219,7 +223,9 @@
 			children = (
 				3591000D2F03000100778995 /* Legacy */,
 				3591000E2F03000100778995 /* Models */,
+				36A100202F03250600778995 /* CharacterDetailBackgroundView.swift */,
 				359100122F03210100778995 /* CharacterSidebarView.swift */,
+				36A100242F03250800778995 /* DetailRootContentView.swift */,
 				359100012F03000100778995 /* MaCherieApp.swift */,
 				359100022F03000100778995 /* MaCherieRootView.swift */,
 				36A100142F03250100778995 /* MoveBrowserView.swift */,
@@ -442,9 +448,11 @@
 				3591001B2F03210500778995 /* CharacterSelection.swift in Sources */,
 				35B69A2C20D8DB0D00F05A2C /* CharacterMoveDetailCell.swift in Sources */,
 				36A100052F03111100778995 /* CharacterRepository.swift in Sources */,
+				36A100212F03250600778995 /* CharacterDetailBackgroundView.swift in Sources */,
 				359100132F03210100778995 /* CharacterSidebarView.swift in Sources */,
 				35B69A2420D8DA2700F05A2C /* CharacterSupplementaryCell.swift in Sources */,
 				352FE9672382840D0083CCF0 /* CharacterBackgroundView.swift in Sources */,
+				36A100252F03250800778995 /* DetailRootContentView.swift in Sources */,
 				36A1000D2F03111300778995 /* HitboxColorSettings.swift in Sources */,
 				36A1000B2F03111200778995 /* HitboxVisibilitySettings.swift in Sources */,
 				35C41F4C237D3E7E00A1EBF7 /* MotionPlayer.swift in Sources */,
