@@ -9,10 +9,7 @@
 import SwiftUI
 
 struct MaCherieRootView: View {
-    @Environment(AppModel.self) private var appModel
-
     var body: some View {
-        LegacyRootContainerView(controller: appModel.legacyAppController)
-            .ignoresSafeArea()
+        NavigationRootView()
     }
 }

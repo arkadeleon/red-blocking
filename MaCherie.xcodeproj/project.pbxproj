@@ -8,19 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		04580D341A25CB1800A4A9B2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04580D161A25CB1800A4A9B2 /* Main.storyboard */; };
-		359100072F03000100778995 /* MaCherieApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 359100012F03000100778995 /* MaCherieApp.swift */; };
-		359100082F03000100778995 /* MaCherieRootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 359100022F03000100778995 /* MaCherieRootView.swift */; };
-		359100092F03000100778995 /* LegacyAppController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 359100032F03000100778995 /* LegacyAppController.swift */; };
-		3591000A2F03000100778995 /* LegacyRootContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 359100042F03000100778995 /* LegacyRootContainerView.swift */; };
-		3591000B2F03000100778995 /* AppModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 359100052F03000100778995 /* AppModel.swift */; };
-		3591000C2F03000100778995 /* AppSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 359100062F03000100778995 /* AppSettings.swift */; };
-		36A1000B2F03111200778995 /* HitboxVisibilitySettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36A1000A2F03111200778995 /* HitboxVisibilitySettings.swift */; };
-		36A1000D2F03111300778995 /* HitboxColorSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36A1000C2F03111300778995 /* HitboxColorSettings.swift */; };
-		36A1000F2F03111400778995 /* PlaybackSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36A1000E2F03111400778995 /* PlaybackSettings.swift */; };
-		36A100032F03111100778995 /* BundleResourceLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36A100022F03111100778995 /* BundleResourceLoader.swift */; };
-		36A100052F03111100778995 /* CharacterRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36A100042F03111100778995 /* CharacterRepository.swift */; };
-		36A100072F03111100778995 /* MoveRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36A100062F03111100778995 /* MoveRepository.swift */; };
-		36A100092F03111100778995 /* MotionRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36A100082F03111100778995 /* MotionRepository.swift */; };
 		3505351520D1FDA600078847 /* CharacterMovesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3505351420D1FDA600078847 /* CharacterMovesViewController.swift */; };
 		3505351920D21AC300078847 /* MotionPlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3505351820D21AC300078847 /* MotionPlayerViewController.swift */; };
 		352FE9672382840D0083CCF0 /* CharacterBackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 352FE9662382840D0083CCF0 /* CharacterBackgroundView.swift */; };
@@ -31,6 +18,20 @@
 		3566755920D2702C00DD26A4 /* MotionDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3566755820D2702C00DD26A4 /* MotionDownloader.swift */; };
 		3583FA322DBB640F00778995 /* CharacterData in Resources */ = {isa = PBXBuildFile; fileRef = 3583FA312DBB63E800778995 /* CharacterData */; };
 		3583FA662DBDF97300778995 /* Yams in Frameworks */ = {isa = PBXBuildFile; productRef = 3583FA652DBDF97300778995 /* Yams */; };
+		359100072F03000100778995 /* MaCherieApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 359100012F03000100778995 /* MaCherieApp.swift */; };
+		359100082F03000100778995 /* MaCherieRootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 359100022F03000100778995 /* MaCherieRootView.swift */; };
+		359100092F03000100778995 /* LegacyAppController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 359100032F03000100778995 /* LegacyAppController.swift */; };
+		3591000A2F03000100778995 /* LegacyRootContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 359100042F03000100778995 /* LegacyRootContainerView.swift */; };
+		3591000B2F03000100778995 /* AppModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 359100052F03000100778995 /* AppModel.swift */; };
+		3591000C2F03000100778995 /* AppSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 359100062F03000100778995 /* AppSettings.swift */; };
+		359100112F03210000778995 /* NavigationRootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 359100102F03210000778995 /* NavigationRootView.swift */; };
+		359100132F03210100778995 /* CharacterSidebarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 359100122F03210100778995 /* CharacterSidebarView.swift */; };
+		359100152F03210200778995 /* MoveNodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 359100142F03210200778995 /* MoveNodeView.swift */; };
+		359100172F03210300778995 /* MoveDestinationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 359100162F03210300778995 /* MoveDestinationView.swift */; };
+		359100192F03210400778995 /* AppNavigationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 359100182F03210400778995 /* AppNavigationModel.swift */; };
+		3591001B2F03210500778995 /* CharacterSelection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3591001A2F03210500778995 /* CharacterSelection.swift */; };
+		3591001D2F03210600778995 /* MoveNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3591001C2F03210600778995 /* MoveNode.swift */; };
+		3591001F2F03210700778995 /* MoveDestination.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3591001E2F03210700778995 /* MoveDestination.swift */; };
 		35AFF43E2BA093B500737E1A /* FrameData in Resources */ = {isa = PBXBuildFile; fileRef = 35AFF43D2BA093B500737E1A /* FrameData */; };
 		35B69A2420D8DA2700F05A2C /* CharacterSupplementaryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35B69A2220D8DA2700F05A2C /* CharacterSupplementaryCell.swift */; };
 		35B69A2820D8DA4700F05A2C /* CharacterMoveCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35B69A2620D8DA4700F05A2C /* CharacterMoveCell.swift */; };
@@ -46,6 +47,13 @@
 		35EFE5C620D3A709007EB379 /* PopInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35EFE5C520D3A709007EB379 /* PopInteractor.swift */; };
 		35FA31A220D8B33C009A5D7B /* Character.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35FA31A120D8B33C009A5D7B /* Character.swift */; };
 		35FA31A520D8B55A009A5D7B /* CharacterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35FA31A320D8B55A009A5D7B /* CharacterCell.swift */; };
+		36A100032F03111100778995 /* BundleResourceLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36A100022F03111100778995 /* BundleResourceLoader.swift */; };
+		36A100052F03111100778995 /* CharacterRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36A100042F03111100778995 /* CharacterRepository.swift */; };
+		36A100072F03111100778995 /* MoveRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36A100062F03111100778995 /* MoveRepository.swift */; };
+		36A100092F03111100778995 /* MotionRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36A100082F03111100778995 /* MotionRepository.swift */; };
+		36A1000B2F03111200778995 /* HitboxVisibilitySettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36A1000A2F03111200778995 /* HitboxVisibilitySettings.swift */; };
+		36A1000D2F03111300778995 /* HitboxColorSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36A1000C2F03111300778995 /* HitboxColorSettings.swift */; };
+		36A1000F2F03111400778995 /* PlaybackSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36A1000E2F03111400778995 /* PlaybackSettings.swift */; };
 		EE318CB5183E363E0081370B /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE318CB4183E363E0081370B /* AudioToolbox.framework */; };
 		EEA48CA31775E59F00351CAB /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEA48CA21775E59F00351CAB /* Security.framework */; };
 		EEA48CA51775E79000351CAB /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEA48CA41775E79000351CAB /* ImageIO.framework */; };
@@ -64,19 +72,6 @@
 
 /* Begin PBXFileReference section */
 		04580D161A25CB1800A4A9B2 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
-		359100012F03000100778995 /* MaCherieApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaCherieApp.swift; sourceTree = "<group>"; };
-		359100022F03000100778995 /* MaCherieRootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaCherieRootView.swift; sourceTree = "<group>"; };
-		359100032F03000100778995 /* LegacyAppController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LegacyAppController.swift; sourceTree = "<group>"; };
-		359100042F03000100778995 /* LegacyRootContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LegacyRootContainerView.swift; sourceTree = "<group>"; };
-		359100052F03000100778995 /* AppModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppModel.swift; sourceTree = "<group>"; };
-		359100062F03000100778995 /* AppSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppSettings.swift; sourceTree = "<group>"; };
-		36A1000A2F03111200778995 /* HitboxVisibilitySettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HitboxVisibilitySettings.swift; sourceTree = "<group>"; };
-		36A1000C2F03111300778995 /* HitboxColorSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HitboxColorSettings.swift; sourceTree = "<group>"; };
-		36A1000E2F03111400778995 /* PlaybackSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaybackSettings.swift; sourceTree = "<group>"; };
-		36A100022F03111100778995 /* BundleResourceLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BundleResourceLoader.swift; sourceTree = "<group>"; };
-		36A100042F03111100778995 /* CharacterRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterRepository.swift; sourceTree = "<group>"; };
-		36A100062F03111100778995 /* MoveRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoveRepository.swift; sourceTree = "<group>"; };
-		36A100082F03111100778995 /* MotionRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotionRepository.swift; sourceTree = "<group>"; };
 		3505351420D1FDA600078847 /* CharacterMovesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CharacterMovesViewController.swift; sourceTree = "<group>"; };
 		3505351820D21AC300078847 /* MotionPlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotionPlayerViewController.swift; sourceTree = "<group>"; };
 		352FE9662382840D0083CCF0 /* CharacterBackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterBackgroundView.swift; sourceTree = "<group>"; };
@@ -87,6 +82,20 @@
 		3566755820D2702C00DD26A4 /* MotionDownloader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotionDownloader.swift; sourceTree = "<group>"; };
 		3583FA312DBB63E800778995 /* CharacterData */ = {isa = PBXFileReference; lastKnownFileType = folder; path = CharacterData; sourceTree = "<group>"; };
 		3583FA5D2DBB65EE00778995 /* PropertyLists */ = {isa = PBXFileReference; lastKnownFileType = folder; path = PropertyLists; sourceTree = "<group>"; };
+		359100012F03000100778995 /* MaCherieApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaCherieApp.swift; sourceTree = "<group>"; };
+		359100022F03000100778995 /* MaCherieRootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaCherieRootView.swift; sourceTree = "<group>"; };
+		359100032F03000100778995 /* LegacyAppController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LegacyAppController.swift; sourceTree = "<group>"; };
+		359100042F03000100778995 /* LegacyRootContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LegacyRootContainerView.swift; sourceTree = "<group>"; };
+		359100052F03000100778995 /* AppModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppModel.swift; sourceTree = "<group>"; };
+		359100062F03000100778995 /* AppSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppSettings.swift; sourceTree = "<group>"; };
+		359100102F03210000778995 /* NavigationRootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationRootView.swift; sourceTree = "<group>"; };
+		359100122F03210100778995 /* CharacterSidebarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterSidebarView.swift; sourceTree = "<group>"; };
+		359100142F03210200778995 /* MoveNodeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoveNodeView.swift; sourceTree = "<group>"; };
+		359100162F03210300778995 /* MoveDestinationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoveDestinationView.swift; sourceTree = "<group>"; };
+		359100182F03210400778995 /* AppNavigationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppNavigationModel.swift; sourceTree = "<group>"; };
+		3591001A2F03210500778995 /* CharacterSelection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterSelection.swift; sourceTree = "<group>"; };
+		3591001C2F03210600778995 /* MoveNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoveNode.swift; sourceTree = "<group>"; };
+		3591001E2F03210700778995 /* MoveDestination.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoveDestination.swift; sourceTree = "<group>"; };
 		35AFF43D2BA093B500737E1A /* FrameData */ = {isa = PBXFileReference; lastKnownFileType = folder; path = FrameData; sourceTree = "<group>"; };
 		35B69A2220D8DA2700F05A2C /* CharacterSupplementaryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterSupplementaryCell.swift; sourceTree = "<group>"; };
 		35B69A2620D8DA4700F05A2C /* CharacterMoveCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterMoveCell.swift; sourceTree = "<group>"; };
@@ -102,6 +111,13 @@
 		35EFE5C520D3A709007EB379 /* PopInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopInteractor.swift; sourceTree = "<group>"; };
 		35FA31A120D8B33C009A5D7B /* Character.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Character.swift; sourceTree = "<group>"; };
 		35FA31A320D8B55A009A5D7B /* CharacterCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterCell.swift; sourceTree = "<group>"; };
+		36A100022F03111100778995 /* BundleResourceLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BundleResourceLoader.swift; sourceTree = "<group>"; };
+		36A100042F03111100778995 /* CharacterRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterRepository.swift; sourceTree = "<group>"; };
+		36A100062F03111100778995 /* MoveRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoveRepository.swift; sourceTree = "<group>"; };
+		36A100082F03111100778995 /* MotionRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotionRepository.swift; sourceTree = "<group>"; };
+		36A1000A2F03111200778995 /* HitboxVisibilitySettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HitboxVisibilitySettings.swift; sourceTree = "<group>"; };
+		36A1000C2F03111300778995 /* HitboxColorSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HitboxColorSettings.swift; sourceTree = "<group>"; };
+		36A1000E2F03111400778995 /* PlaybackSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaybackSettings.swift; sourceTree = "<group>"; };
 		EE318CB4183E363E0081370B /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		EEA48CA21775E59F00351CAB /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		EEA48CA41775E79000351CAB /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
@@ -145,15 +161,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		36A100002F03111100778995 /* Data */ = {
+		3572AF8D20D1021F00C15871 /* Core */ = {
 			isa = PBXGroup;
 			children = (
-				36A100022F03111100778995 /* BundleResourceLoader.swift */,
-				36A100042F03111100778995 /* CharacterRepository.swift */,
-				36A100062F03111100778995 /* MoveRepository.swift */,
-				36A100082F03111100778995 /* MotionRepository.swift */,
+				3566755420D26A2800DD26A4 /* ApplicationDataManager.swift */,
+				35EFE5C320D3A3B3007EB379 /* PopAnimator.swift */,
+				35EFE5C520D3A709007EB379 /* PopInteractor.swift */,
+				35EFE5C120D3A187007EB379 /* PushAnimator.swift */,
+				3566755220D2692F00DD26A4 /* UIColor+Integer.swift */,
 			);
-			path = Data;
+			path = Core;
 			sourceTree = "<group>";
 		};
 		3591000D2F03000100778995 /* Legacy */ = {
@@ -168,10 +185,14 @@
 		3591000E2F03000100778995 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				359100182F03210400778995 /* AppNavigationModel.swift */,
 				359100052F03000100778995 /* AppModel.swift */,
 				359100062F03000100778995 /* AppSettings.swift */,
+				3591001A2F03210500778995 /* CharacterSelection.swift */,
 				36A1000A2F03111200778995 /* HitboxVisibilitySettings.swift */,
 				36A1000C2F03111300778995 /* HitboxColorSettings.swift */,
+				3591001E2F03210700778995 /* MoveDestination.swift */,
+				3591001C2F03210600778995 /* MoveNode.swift */,
 				36A1000E2F03111400778995 /* PlaybackSettings.swift */,
 			);
 			path = Models;
@@ -180,24 +201,16 @@
 		3591000F2F03000100778995 /* SwiftUI */ = {
 			isa = PBXGroup;
 			children = (
-				359100012F03000100778995 /* MaCherieApp.swift */,
-				359100022F03000100778995 /* MaCherieRootView.swift */,
 				3591000D2F03000100778995 /* Legacy */,
 				3591000E2F03000100778995 /* Models */,
+				359100122F03210100778995 /* CharacterSidebarView.swift */,
+				359100012F03000100778995 /* MaCherieApp.swift */,
+				359100022F03000100778995 /* MaCherieRootView.swift */,
+				359100162F03210300778995 /* MoveDestinationView.swift */,
+				359100142F03210200778995 /* MoveNodeView.swift */,
+				359100102F03210000778995 /* NavigationRootView.swift */,
 			);
 			path = SwiftUI;
-			sourceTree = "<group>";
-		};
-		3572AF8D20D1021F00C15871 /* Core */ = {
-			isa = PBXGroup;
-			children = (
-				3566755420D26A2800DD26A4 /* ApplicationDataManager.swift */,
-				35EFE5C320D3A3B3007EB379 /* PopAnimator.swift */,
-				35EFE5C520D3A709007EB379 /* PopInteractor.swift */,
-				35EFE5C120D3A187007EB379 /* PushAnimator.swift */,
-				3566755220D2692F00DD26A4 /* UIColor+Integer.swift */,
-			);
-			path = Core;
 			sourceTree = "<group>";
 		};
 		35B69A3220D8DE8500F05A2C /* Character */ = {
@@ -234,6 +247,17 @@
 				3505351820D21AC300078847 /* MotionPlayerViewController.swift */,
 			);
 			path = Motion;
+			sourceTree = "<group>";
+		};
+		36A100002F03111100778995 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				36A100022F03111100778995 /* BundleResourceLoader.swift */,
+				36A100042F03111100778995 /* CharacterRepository.swift */,
+				36A100062F03111100778995 /* MoveRepository.swift */,
+				36A100082F03111100778995 /* MotionRepository.swift */,
+			);
+			path = Data;
 			sourceTree = "<group>";
 		};
 		EEE27AC2176C1347008A41AB = {
@@ -277,7 +301,6 @@
 			isa = PBXGroup;
 			children = (
 				3566755620D26A4D00DD26A4 /* AppDelegate.swift */,
-				3591000F2F03000100778995 /* SwiftUI */,
 				35375CAB20D0FE45004642CB /* LaunchScreen.storyboard */,
 				04580D161A25CB1800A4A9B2 /* Main.storyboard */,
 				3572AF8D20D1021F00C15871 /* Core */,
@@ -285,6 +308,7 @@
 				35B69A3220D8DE8500F05A2C /* Character */,
 				35B69A3320D8DEA600F05A2C /* CharacterMove */,
 				35B69A3420D8DEBD00F05A2C /* Motion */,
+				3591000F2F03000100778995 /* SwiftUI */,
 				EEE27AD5176C1347008A41AB /* Supporting Files */,
 				3583FA5D2DBB65EE00778995 /* PropertyLists */,
 				3583FA312DBB63E800778995 /* CharacterData */,
@@ -391,9 +415,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				3591000C2F03000100778995 /* AppSettings.swift in Sources */,
+				359100192F03210400778995 /* AppNavigationModel.swift in Sources */,
 				36A100032F03111100778995 /* BundleResourceLoader.swift in Sources */,
+				3591001B2F03210500778995 /* CharacterSelection.swift in Sources */,
 				35B69A2C20D8DB0D00F05A2C /* CharacterMoveDetailCell.swift in Sources */,
 				36A100052F03111100778995 /* CharacterRepository.swift in Sources */,
+				359100132F03210100778995 /* CharacterSidebarView.swift in Sources */,
 				35B69A2420D8DA2700F05A2C /* CharacterSupplementaryCell.swift in Sources */,
 				352FE9672382840D0083CCF0 /* CharacterBackgroundView.swift in Sources */,
 				36A1000D2F03111300778995 /* HitboxColorSettings.swift in Sources */,
@@ -409,10 +436,15 @@
 				3566755720D26A4D00DD26A4 /* AppDelegate.swift in Sources */,
 				35B9241A20D1194B0081BD00 /* CharactersViewController.swift in Sources */,
 				3505351520D1FDA600078847 /* CharacterMovesViewController.swift in Sources */,
+				3591001F2F03210700778995 /* MoveDestination.swift in Sources */,
 				3566755320D2692F00DD26A4 /* UIColor+Integer.swift in Sources */,
 				35C41F4A237D35A900A1EBF7 /* MotionPlayerLayer.swift in Sources */,
+				359100172F03210300778995 /* MoveDestinationView.swift in Sources */,
 				35C41F3D237AB26000A1EBF7 /* MotionInfo.swift in Sources */,
+				3591001D2F03210600778995 /* MoveNode.swift in Sources */,
+				359100152F03210200778995 /* MoveNodeView.swift in Sources */,
 				36A100072F03111100778995 /* MoveRepository.swift in Sources */,
+				359100112F03210000778995 /* NavigationRootView.swift in Sources */,
 				35EFE5C620D3A709007EB379 /* PopInteractor.swift in Sources */,
 				359100072F03000100778995 /* MaCherieApp.swift in Sources */,
 				36A100092F03111100778995 /* MotionRepository.swift in Sources */,
