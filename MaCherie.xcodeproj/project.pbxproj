@@ -7,21 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		04580D341A25CB1800A4A9B2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04580D161A25CB1800A4A9B2 /* Main.storyboard */; };
-		3505351520D1FDA600078847 /* CharacterMovesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3505351420D1FDA600078847 /* CharacterMovesViewController.swift */; };
-		3505351920D21AC300078847 /* MotionPlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3505351820D21AC300078847 /* MotionPlayerViewController.swift */; };
-		352FE9672382840D0083CCF0 /* CharacterBackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 352FE9662382840D0083CCF0 /* CharacterBackgroundView.swift */; };
 		35375CAC20D0FE45004642CB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 35375CAB20D0FE45004642CB /* LaunchScreen.storyboard */; };
 		3566755320D2692F00DD26A4 /* UIColor+Integer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3566755220D2692F00DD26A4 /* UIColor+Integer.swift */; };
 		3566755520D26A2800DD26A4 /* ApplicationDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3566755420D26A2800DD26A4 /* ApplicationDataManager.swift */; };
-		3566755720D26A4D00DD26A4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3566755620D26A4D00DD26A4 /* AppDelegate.swift */; };
 		3566755920D2702C00DD26A4 /* MotionDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3566755820D2702C00DD26A4 /* MotionDownloader.swift */; };
 		3583FA322DBB640F00778995 /* CharacterData in Resources */ = {isa = PBXBuildFile; fileRef = 3583FA312DBB63E800778995 /* CharacterData */; };
 		3583FA662DBDF97300778995 /* Yams in Frameworks */ = {isa = PBXBuildFile; productRef = 3583FA652DBDF97300778995 /* Yams */; };
 		359100072F03000100778995 /* MaCherieApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 359100012F03000100778995 /* MaCherieApp.swift */; };
 		359100082F03000100778995 /* MaCherieRootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 359100022F03000100778995 /* MaCherieRootView.swift */; };
-		359100092F03000100778995 /* LegacyAppController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 359100032F03000100778995 /* LegacyAppController.swift */; };
-		3591000A2F03000100778995 /* LegacyRootContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 359100042F03000100778995 /* LegacyRootContainerView.swift */; };
 		3591000B2F03000100778995 /* AppModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 359100052F03000100778995 /* AppModel.swift */; };
 		3591000C2F03000100778995 /* AppSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 359100062F03000100778995 /* AppSettings.swift */; };
 		359100112F03210000778995 /* NavigationRootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 359100102F03210000778995 /* NavigationRootView.swift */; };
@@ -41,20 +34,11 @@
 		36A100212F03250600778995 /* CharacterDetailBackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36A100202F03250600778995 /* CharacterDetailBackgroundView.swift */; };
 		36A100252F03250800778995 /* DetailRootContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36A100242F03250800778995 /* DetailRootContentView.swift */; };
 		35AFF43E2BA093B500737E1A /* FrameData in Resources */ = {isa = PBXBuildFile; fileRef = 35AFF43D2BA093B500737E1A /* FrameData */; };
-		35B69A2420D8DA2700F05A2C /* CharacterSupplementaryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35B69A2220D8DA2700F05A2C /* CharacterSupplementaryCell.swift */; };
-		35B69A2820D8DA4700F05A2C /* CharacterMoveCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35B69A2620D8DA4700F05A2C /* CharacterMoveCell.swift */; };
-		35B69A2C20D8DB0D00F05A2C /* CharacterMoveDetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35B69A2A20D8DB0D00F05A2C /* CharacterMoveDetailCell.swift */; };
-		35B69A3020D8DC0300F05A2C /* CharacterMoveFramesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35B69A2E20D8DC0300F05A2C /* CharacterMoveFramesCell.swift */; };
 		35B69A3620D8DECE00F05A2C /* CharacterMove.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35B69A3520D8DECE00F05A2C /* CharacterMove.swift */; };
-		35B9241A20D1194B0081BD00 /* CharactersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35B9241920D1194B0081BD00 /* CharactersViewController.swift */; };
 		35C41F3D237AB26000A1EBF7 /* MotionInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35C41F3C237AB26000A1EBF7 /* MotionInfo.swift */; };
 		35C41F4A237D35A900A1EBF7 /* MotionPlayerLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35C41F49237D35A900A1EBF7 /* MotionPlayerLayer.swift */; };
 		35C41F4C237D3E7E00A1EBF7 /* MotionPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35C41F4B237D3E7E00A1EBF7 /* MotionPlayer.swift */; };
-		35EFE5C220D3A187007EB379 /* PushAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35EFE5C120D3A187007EB379 /* PushAnimator.swift */; };
-		35EFE5C420D3A3B3007EB379 /* PopAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35EFE5C320D3A3B3007EB379 /* PopAnimator.swift */; };
-		35EFE5C620D3A709007EB379 /* PopInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35EFE5C520D3A709007EB379 /* PopInteractor.swift */; };
 		35FA31A220D8B33C009A5D7B /* Character.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35FA31A120D8B33C009A5D7B /* Character.swift */; };
-		35FA31A520D8B55A009A5D7B /* CharacterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35FA31A320D8B55A009A5D7B /* CharacterCell.swift */; };
 		36A100032F03111100778995 /* BundleResourceLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36A100022F03111100778995 /* BundleResourceLoader.swift */; };
 		36A100052F03111100778995 /* CharacterRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36A100042F03111100778995 /* CharacterRepository.swift */; };
 		36A100072F03111100778995 /* MoveRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36A100062F03111100778995 /* MoveRepository.swift */; };
@@ -97,21 +81,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		04580D161A25CB1800A4A9B2 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
-		3505351420D1FDA600078847 /* CharacterMovesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CharacterMovesViewController.swift; sourceTree = "<group>"; };
-		3505351820D21AC300078847 /* MotionPlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotionPlayerViewController.swift; sourceTree = "<group>"; };
-		352FE9662382840D0083CCF0 /* CharacterBackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterBackgroundView.swift; sourceTree = "<group>"; };
 		35375CAB20D0FE45004642CB /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3566755220D2692F00DD26A4 /* UIColor+Integer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Integer.swift"; sourceTree = "<group>"; };
 		3566755420D26A2800DD26A4 /* ApplicationDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationDataManager.swift; sourceTree = "<group>"; };
-		3566755620D26A4D00DD26A4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3566755820D2702C00DD26A4 /* MotionDownloader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotionDownloader.swift; sourceTree = "<group>"; };
 		3583FA312DBB63E800778995 /* CharacterData */ = {isa = PBXFileReference; lastKnownFileType = folder; path = CharacterData; sourceTree = "<group>"; };
 		3583FA5D2DBB65EE00778995 /* PropertyLists */ = {isa = PBXFileReference; lastKnownFileType = folder; path = PropertyLists; sourceTree = "<group>"; };
 		359100012F03000100778995 /* MaCherieApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaCherieApp.swift; sourceTree = "<group>"; };
 		359100022F03000100778995 /* MaCherieRootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaCherieRootView.swift; sourceTree = "<group>"; };
-		359100032F03000100778995 /* LegacyAppController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LegacyAppController.swift; sourceTree = "<group>"; };
-		359100042F03000100778995 /* LegacyRootContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LegacyRootContainerView.swift; sourceTree = "<group>"; };
 		359100052F03000100778995 /* AppModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppModel.swift; sourceTree = "<group>"; };
 		359100062F03000100778995 /* AppSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppSettings.swift; sourceTree = "<group>"; };
 		359100102F03210000778995 /* NavigationRootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationRootView.swift; sourceTree = "<group>"; };
@@ -147,20 +124,11 @@
 		36B1002C2F03500700778995 /* MotionPlayerHitboxVisibilityGroupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotionPlayerHitboxVisibilityGroupView.swift; sourceTree = "<group>"; };
 		36B1002E2F03500800778995 /* MotionPlayerHitboxToggleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotionPlayerHitboxToggleView.swift; sourceTree = "<group>"; };
 		35AFF43D2BA093B500737E1A /* FrameData */ = {isa = PBXFileReference; lastKnownFileType = folder; path = FrameData; sourceTree = "<group>"; };
-		35B69A2220D8DA2700F05A2C /* CharacterSupplementaryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterSupplementaryCell.swift; sourceTree = "<group>"; };
-		35B69A2620D8DA4700F05A2C /* CharacterMoveCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterMoveCell.swift; sourceTree = "<group>"; };
-		35B69A2A20D8DB0D00F05A2C /* CharacterMoveDetailCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterMoveDetailCell.swift; sourceTree = "<group>"; };
-		35B69A2E20D8DC0300F05A2C /* CharacterMoveFramesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterMoveFramesCell.swift; sourceTree = "<group>"; };
 		35B69A3520D8DECE00F05A2C /* CharacterMove.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterMove.swift; sourceTree = "<group>"; };
-		35B9241920D1194B0081BD00 /* CharactersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersViewController.swift; sourceTree = "<group>"; };
 		35C41F3C237AB26000A1EBF7 /* MotionInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotionInfo.swift; sourceTree = "<group>"; };
 		35C41F49237D35A900A1EBF7 /* MotionPlayerLayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MotionPlayerLayer.swift; sourceTree = "<group>"; };
 		35C41F4B237D3E7E00A1EBF7 /* MotionPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotionPlayer.swift; sourceTree = "<group>"; };
-		35EFE5C120D3A187007EB379 /* PushAnimator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PushAnimator.swift; sourceTree = "<group>"; };
-		35EFE5C320D3A3B3007EB379 /* PopAnimator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopAnimator.swift; sourceTree = "<group>"; };
-		35EFE5C520D3A709007EB379 /* PopInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopInteractor.swift; sourceTree = "<group>"; };
 		35FA31A120D8B33C009A5D7B /* Character.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Character.swift; sourceTree = "<group>"; };
-		35FA31A320D8B55A009A5D7B /* CharacterCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterCell.swift; sourceTree = "<group>"; };
 		36A100022F03111100778995 /* BundleResourceLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BundleResourceLoader.swift; sourceTree = "<group>"; };
 		36A100042F03111100778995 /* CharacterRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterRepository.swift; sourceTree = "<group>"; };
 		36A100062F03111100778995 /* MoveRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoveRepository.swift; sourceTree = "<group>"; };
@@ -217,21 +185,9 @@
 			isa = PBXGroup;
 			children = (
 				3566755420D26A2800DD26A4 /* ApplicationDataManager.swift */,
-				35EFE5C320D3A3B3007EB379 /* PopAnimator.swift */,
-				35EFE5C520D3A709007EB379 /* PopInteractor.swift */,
-				35EFE5C120D3A187007EB379 /* PushAnimator.swift */,
 				3566755220D2692F00DD26A4 /* UIColor+Integer.swift */,
 			);
 			path = Core;
-			sourceTree = "<group>";
-		};
-		3591000D2F03000100778995 /* Legacy */ = {
-			isa = PBXGroup;
-			children = (
-				359100032F03000100778995 /* LegacyAppController.swift */,
-				359100042F03000100778995 /* LegacyRootContainerView.swift */,
-			);
-			path = Legacy;
 			sourceTree = "<group>";
 		};
 		3591000E2F03000100778995 /* Models */ = {
@@ -256,7 +212,6 @@
 		3591000F2F03000100778995 /* SwiftUI */ = {
 			isa = PBXGroup;
 			children = (
-				3591000D2F03000100778995 /* Legacy */,
 				3591000E2F03000100778995 /* Models */,
 				36A100202F03250600778995 /* CharacterDetailBackgroundView.swift */,
 				359100122F03210100778995 /* CharacterSidebarView.swift */,
@@ -291,9 +246,6 @@
 			isa = PBXGroup;
 			children = (
 				35FA31A120D8B33C009A5D7B /* Character.swift */,
-				35FA31A320D8B55A009A5D7B /* CharacterCell.swift */,
-				35B9241920D1194B0081BD00 /* CharactersViewController.swift */,
-				352FE9662382840D0083CCF0 /* CharacterBackgroundView.swift */,
 			);
 			path = Character;
 			sourceTree = "<group>";
@@ -302,11 +254,6 @@
 			isa = PBXGroup;
 			children = (
 				35B69A3520D8DECE00F05A2C /* CharacterMove.swift */,
-				35B69A2620D8DA4700F05A2C /* CharacterMoveCell.swift */,
-				35B69A2A20D8DB0D00F05A2C /* CharacterMoveDetailCell.swift */,
-				35B69A2E20D8DC0300F05A2C /* CharacterMoveFramesCell.swift */,
-				35B69A2220D8DA2700F05A2C /* CharacterSupplementaryCell.swift */,
-				3505351420D1FDA600078847 /* CharacterMovesViewController.swift */,
 			);
 			path = CharacterMove;
 			sourceTree = "<group>";
@@ -322,7 +269,6 @@
 				3566755820D2702C00DD26A4 /* MotionDownloader.swift */,
 				35C41F4B237D3E7E00A1EBF7 /* MotionPlayer.swift */,
 				35C41F49237D35A900A1EBF7 /* MotionPlayerLayer.swift */,
-				3505351820D21AC300078847 /* MotionPlayerViewController.swift */,
 			);
 			path = Motion;
 			sourceTree = "<group>";
@@ -378,9 +324,7 @@
 		EEE27AD4176C1347008A41AB /* MaCherie */ = {
 			isa = PBXGroup;
 			children = (
-				3566755620D26A4D00DD26A4 /* AppDelegate.swift */,
 				35375CAB20D0FE45004642CB /* LaunchScreen.storyboard */,
-				04580D161A25CB1800A4A9B2 /* Main.storyboard */,
 				3572AF8D20D1021F00C15871 /* Core */,
 				36A100002F03111100778995 /* Data */,
 				35B69A3220D8DE8500F05A2C /* Character */,
@@ -481,7 +425,6 @@
 				35AFF43E2BA093B500737E1A /* FrameData in Resources */,
 				EEADB06C17FA72B3004E2F60 /* Assets.xcassets in Resources */,
 				35375CAC20D0FE45004642CB /* LaunchScreen.storyboard in Resources */,
-				04580D341A25CB1800A4A9B2 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -497,12 +440,9 @@
 				36A100032F03111100778995 /* BundleResourceLoader.swift in Sources */,
 				36A100112F03111500778995 /* CharacterListModel.swift in Sources */,
 				3591001B2F03210500778995 /* CharacterSelection.swift in Sources */,
-				35B69A2C20D8DB0D00F05A2C /* CharacterMoveDetailCell.swift in Sources */,
 				36A100052F03111100778995 /* CharacterRepository.swift in Sources */,
 				36A100212F03250600778995 /* CharacterDetailBackgroundView.swift in Sources */,
 				359100132F03210100778995 /* CharacterSidebarView.swift in Sources */,
-				35B69A2420D8DA2700F05A2C /* CharacterSupplementaryCell.swift in Sources */,
-				352FE9672382840D0083CCF0 /* CharacterBackgroundView.swift in Sources */,
 				36A100252F03250800778995 /* DetailRootContentView.swift in Sources */,
 				36B1000D2F03400B00778995 /* MotionCanvasConfiguration.swift in Sources */,
 				36B1000E2F03400C00778995 /* MotionCanvasRenderer.swift in Sources */,
@@ -524,16 +464,9 @@
 				36B100292F03500500778995 /* MotionPlayerTransportControlsView.swift in Sources */,
 				35C41F4C237D3E7E00A1EBF7 /* MotionPlayer.swift in Sources */,
 				36B100212F03500100778995 /* MotionPlayerView.swift in Sources */,
-				35EFE5C220D3A187007EB379 /* PushAnimator.swift in Sources */,
-				359100092F03000100778995 /* LegacyAppController.swift in Sources */,
-				35FA31A520D8B55A009A5D7B /* CharacterCell.swift in Sources */,
 				3566755920D2702C00DD26A4 /* MotionDownloader.swift in Sources */,
 				35B69A3620D8DECE00F05A2C /* CharacterMove.swift in Sources */,
-				35EFE5C420D3A3B3007EB379 /* PopAnimator.swift in Sources */,
 				359100082F03000100778995 /* MaCherieRootView.swift in Sources */,
-				3566755720D26A4D00DD26A4 /* AppDelegate.swift in Sources */,
-				35B9241A20D1194B0081BD00 /* CharactersViewController.swift in Sources */,
-				3505351520D1FDA600078847 /* CharacterMovesViewController.swift in Sources */,
 				3591001F2F03210700778995 /* MoveDestination.swift in Sources */,
 				36A100192F03250300778995 /* MoveDetailRowView.swift in Sources */,
 				36A100132F03250000778995 /* MoveBrowserModel.swift in Sources */,
@@ -549,17 +482,12 @@
 				36A1001D2F03250500778995 /* MovePlayerEntryRowView.swift in Sources */,
 				36A1001B2F03250400778995 /* MoveSupplementaryRowView.swift in Sources */,
 				359100112F03210000778995 /* NavigationRootView.swift in Sources */,
-				35EFE5C620D3A709007EB379 /* PopInteractor.swift in Sources */,
 				359100072F03000100778995 /* MaCherieApp.swift in Sources */,
 				36A100092F03111100778995 /* MotionRepository.swift in Sources */,
 				36A1000F2F03111400778995 /* PlaybackSettings.swift in Sources */,
 				3566755520D26A2800DD26A4 /* ApplicationDataManager.swift in Sources */,
 				3591000B2F03000100778995 /* AppModel.swift in Sources */,
 				35FA31A220D8B33C009A5D7B /* Character.swift in Sources */,
-				35B69A2820D8DA4700F05A2C /* CharacterMoveCell.swift in Sources */,
-				3591000A2F03000100778995 /* LegacyRootContainerView.swift in Sources */,
-				35B69A3020D8DC0300F05A2C /* CharacterMoveFramesCell.swift in Sources */,
-				3505351920D21AC300078847 /* MotionPlayerViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -12,7 +12,6 @@ import Observation
 @Observable
 final class AppModel {
     let settings: AppSettings
-    let legacyAppController: LegacyAppController
     let characterRepository: CharacterRepository
     let moveRepository: MoveRepository
     let motionRepository: MotionRepository
@@ -21,7 +20,6 @@ final class AppModel {
 
     init(
         settings: AppSettings = .standard,
-        legacyAppController: LegacyAppController = .shared,
         characterRepository: CharacterRepository = CharacterRepository(),
         moveRepository: MoveRepository = MoveRepository(),
         motionRepository: MotionRepository = MotionRepository(),
@@ -29,7 +27,6 @@ final class AppModel {
         characterList: CharacterListModel? = nil
     ) {
         self.settings = settings
-        self.legacyAppController = legacyAppController
         self.characterRepository = characterRepository
         self.moveRepository = moveRepository
         self.motionRepository = motionRepository
