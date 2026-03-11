@@ -15,21 +15,21 @@ struct MovePlayerEntryRowView: View {
 
     var body: some View {
         Button(action: action) {
-            HStack(spacing: 12) {
-                Spacer(minLength: 0)
-
-                VStack(spacing: 2) {
+            HStack(alignment: .top, spacing: 12) {
+                VStack(alignment: .leading, spacing: 4) {
                     Text(title)
                         .foregroundStyle(.primary)
+                        .fixedSize(horizontal: false, vertical: true)
 
                     if let subtitle {
                         Text(subtitle)
-                            .font(.caption)
+                            .font(.subheadline)
                             .foregroundStyle(.secondary)
+                            .fixedSize(horizontal: false, vertical: true)
                     }
                 }
 
-                Spacer(minLength: 0)
+                Spacer(minLength: 12)
 
                 Image(systemName: "play.rectangle")
                     .font(.headline)
@@ -39,5 +39,7 @@ struct MovePlayerEntryRowView: View {
             .contentShape(Rectangle())
         }
         .buttonStyle(.plain)
+        .accessibilityElement(children: .combine)
+        .accessibilityHint("Opens the motion player.")
     }
 }

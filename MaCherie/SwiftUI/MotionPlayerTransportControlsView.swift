@@ -9,6 +9,9 @@
 import SwiftUI
 
 struct MotionPlayerTransportControlsView: View {
+    @Environment(\.dynamicTypeSize) private var dynamicTypeSize
+    @Environment(\.accessibilityReduceMotion) private var reduceMotion
+
     let motionData: MotionPlaybackData
     let playerModel: MotionPlayerModel
 
@@ -56,6 +59,7 @@ struct MotionPlayerTransportControlsView: View {
                         onEditingChanged: handleScrubbingChange
                     )
                     .accessibilityLabel("Frame Position")
+                    .accessibilityValue("Frame \(formattedFrame(playerModel.currentFrameIndex)) of \(formattedFrame(playerModel.totalFrames))")
                     .onChange(of: scrubbedFrame) { _, newValue in
                         guard isScrubbing else {
                             return
@@ -74,47 +78,60 @@ struct MotionPlayerTransportControlsView: View {
                 }
             }
 
-            HStack(spacing: 12) {
-                Button("Previous Frame", systemImage: "backward.frame", action: playerModel.stepBackward)
-                    .disabled(playerModel.totalFrames == 0)
-
-                Button(
-                    playerModel.isPlaying ? "Pause" : "Play",
-                    systemImage: playerModel.isPlaying ? "pause.circle" : "play.circle",
-                    action: togglePlayback
-                )
-                .disabled(playerModel.totalFrames == 0)
-
-                Button("Stop", systemImage: "stop.circle", action: playerModel.stop)
-                    .disabled(playerModel.totalFrames == 0)
-
-                Button("Next Frame", systemImage: "forward.frame", action: playerModel.stepForward)
-                    .disabled(playerModel.totalFrames == 0)
+            Group {
+                if dynamicTypeSize.isAccessibilitySize {
+                    transportButtonGrid
+                        .labelStyle(.titleAndIcon)
+                } else {
+                    transportButtonGrid
+                        .labelStyle(.iconOnly)
+                }
             }
-            .labelStyle(.iconOnly)
-            .buttonStyle(.borderedProminent)
-            .accessibilityElement(children: .contain)
+            .buttonStyle(.bordered)
+            .controlSize(.large)
 
-            HStack(spacing: 12) {
-                Text("FPS")
-                    .font(.subheadline.weight(.medium))
+            ViewThatFits(in: .horizontal) {
+                HStack(spacing: 12) {
+                    Text("FPS")
+                        .font(.subheadline.weight(.medium))
 
-                Spacer()
+                    Spacer()
 
-                TextField("Frames Per Second", value: $playerModel.framesPerSecond, format: .number)
-                    .textFieldStyle(.roundedBorder)
-                    .multilineTextAlignment(.trailing)
-                    .frame(width: 84)
-                    .keyboardType(.numberPad)
+                    TextField("Frames Per Second", value: $playerModel.framesPerSecond, format: .number)
+                        .textFieldStyle(.roundedBorder)
+                        .multilineTextAlignment(.trailing)
+                        .frame(minWidth: 84, maxWidth: 100)
+                        .keyboardType(.numberPad)
 
-                Stepper("Frames Per Second", value: $playerModel.framesPerSecond, in: PlaybackSettings.supportedFPSRange)
-                    .labelsHidden()
+                    Stepper("Frames Per Second", value: $playerModel.framesPerSecond, in: PlaybackSettings.supportedFPSRange)
+                        .labelsHidden()
+                        .accessibilityLabel("Frames Per Second")
+                }
+
+                VStack(alignment: .leading, spacing: 12) {
+                    Text("FPS")
+                        .font(.subheadline.weight(.medium))
+
+                    TextField("Frames Per Second", value: $playerModel.framesPerSecond, format: .number)
+                        .textFieldStyle(.roundedBorder)
+                        .keyboardType(.numberPad)
+
+                    Stepper("Frames Per Second", value: $playerModel.framesPerSecond, in: PlaybackSettings.supportedFPSRange)
+                }
             }
 
             if playerModel.framesPerSecond == 0 {
                 Text("0 FPS freezes the preview on the current frame until the speed is raised again.")
                     .font(.footnote)
                     .foregroundStyle(.secondary)
+                    .fixedSize(horizontal: false, vertical: true)
+            }
+
+            if reduceMotion {
+                Text("Reduce Motion is enabled, so continuous playback is paused. Use the frame slider or step controls to inspect the motion.")
+                    .font(.footnote)
+                    .foregroundStyle(.secondary)
+                    .fixedSize(horizontal: false, vertical: true)
             }
         }
         .padding(20)
@@ -122,6 +139,11 @@ struct MotionPlayerTransportControlsView: View {
     }
 
     private func togglePlayback() {
+        guard reduceMotion == false else {
+            playerModel.pause()
+            return
+        }
+
         if playerModel.isPlaying {
             playerModel.pause()
         } else {
@@ -143,5 +165,36 @@ struct MotionPlayerTransportControlsView: View {
 
     private func formattedFrame(_ frame: Int) -> String {
         frame.formatted(frameNumberFormat)
+    }
+
+    private var transportColumns: [GridItem] {
+        let count = dynamicTypeSize.isAccessibilitySize ? 1 : 2
+        return Array(repeating: GridItem(.flexible(), spacing: 12), count: count)
+    }
+
+    private var transportButtonGrid: some View {
+        LazyVGrid(columns: transportColumns, alignment: .leading, spacing: 12) {
+            Button("Previous Frame", systemImage: "backward.frame", action: playerModel.stepBackward)
+                .disabled(playerModel.totalFrames == 0)
+                .frame(maxWidth: .infinity, minHeight: 44)
+
+            Button(
+                playerModel.isPlaying ? "Pause" : "Play",
+                systemImage: playerModel.isPlaying ? "pause.circle" : "play.circle",
+                action: togglePlayback
+            )
+            .disabled(playerModel.totalFrames == 0 || reduceMotion)
+            .accessibilityHint(reduceMotion ? "Continuous playback is unavailable while Reduce Motion is enabled." : "Toggles motion playback.")
+            .frame(maxWidth: .infinity, minHeight: 44)
+            .buttonStyle(.borderedProminent)
+
+            Button("Stop", systemImage: "stop.circle", action: playerModel.stop)
+                .disabled(playerModel.totalFrames == 0)
+                .frame(maxWidth: .infinity, minHeight: 44)
+
+            Button("Next Frame", systemImage: "forward.frame", action: playerModel.stepForward)
+                .disabled(playerModel.totalFrames == 0)
+                .frame(maxWidth: .infinity, minHeight: 44)
+        }
     }
 }

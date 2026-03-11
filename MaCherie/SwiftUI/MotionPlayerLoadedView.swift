@@ -10,6 +10,7 @@ import SwiftUI
 
 struct MotionPlayerLoadedView: View {
     @Environment(\.horizontalSizeClass) private var horizontalSizeClass
+    @Environment(\.dynamicTypeSize) private var dynamicTypeSize
 
     let motionData: MotionPlaybackData
     let playerModel: MotionPlayerModel
@@ -58,7 +59,7 @@ struct MotionPlayerLoadedView: View {
     }
 
     private var layout: AnyLayout {
-        if horizontalSizeClass == .compact {
+        if horizontalSizeClass == .compact || dynamicTypeSize.isAccessibilitySize {
             AnyLayout(VStackLayout(spacing: 20))
         } else {
             AnyLayout(HStackLayout(alignment: .top, spacing: 24))

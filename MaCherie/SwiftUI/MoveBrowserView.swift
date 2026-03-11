@@ -10,12 +10,29 @@ import SwiftUI
 
 struct MoveBrowserView: View {
     @Environment(\.horizontalSizeClass) private var horizontalSizeClass
+    @Environment(\.dynamicTypeSize) private var dynamicTypeSize
 
     let model: MoveBrowserModel
 
     var body: some View {
         let rowBackground = Color(uiColor: .systemBackground).opacity(rowBackgroundOpacity)
 
+        Group {
+            if dynamicTypeSize.isAccessibilitySize {
+                listContent(rowBackground: rowBackground)
+                    .listStyle(.insetGrouped)
+            } else {
+                listContent(rowBackground: rowBackground)
+                    .listStyle(.plain)
+            }
+        }
+        .scrollContentBackground(.hidden)
+        .contentMargins(.top, 16, for: .scrollContent)
+        .contentMargins(.horizontal, horizontalContentMargin, for: .scrollContent)
+        .navigationTitle(model.node.title)
+    }
+
+    private func listContent(rowBackground: Color) -> some View {
         List {
             if let errorMessage = model.errorMessage {
                 Section {
@@ -36,7 +53,7 @@ struct MoveBrowserView: View {
                     .listRowBackground(rowBackground)
                 }
             } else {
-                ForEach(Array(model.sections.enumerated()), id: \.offset) { sectionIndex, section in
+                ForEach(Array(model.sections.enumerated()), id: \.offset) { _, section in
                     Section {
                         ForEach(Array(section.rows.enumerated()), id: \.offset) { _, move in
                             if move.next != nil {
@@ -76,11 +93,13 @@ struct MoveBrowserView: View {
                 }
             }
         }
-        .scrollContentBackground(.hidden)
-        .navigationTitle(model.node.title)
     }
 
     private var rowBackgroundOpacity: Double {
         horizontalSizeClass == .compact ? 0.9 : 0.76
+    }
+
+    private var horizontalContentMargin: CGFloat {
+        horizontalSizeClass == .regular ? 24 : 0
     }
 }

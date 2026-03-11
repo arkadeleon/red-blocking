@@ -15,19 +15,21 @@ struct MoveNextRowView: View {
 
     var body: some View {
         Button(action: action) {
-            HStack(spacing: 12) {
+            HStack(alignment: .top, spacing: 12) {
                 VStack(alignment: .leading, spacing: 4) {
                     Text(title)
                         .foregroundStyle(.primary)
+                        .fixedSize(horizontal: false, vertical: true)
 
                     if let subtitle {
                         Text(subtitle)
                             .font(.subheadline)
                             .foregroundStyle(.secondary)
+                            .fixedSize(horizontal: false, vertical: true)
                     }
                 }
 
-                Spacer()
+                Spacer(minLength: 12)
 
                 Image(systemName: "chevron.right")
                     .font(.footnote.weight(.semibold))
@@ -37,5 +39,7 @@ struct MoveNextRowView: View {
             .contentShape(Rectangle())
         }
         .buttonStyle(.plain)
+        .accessibilityElement(children: .combine)
+        .accessibilityHint("Opens the next move list.")
     }
 }

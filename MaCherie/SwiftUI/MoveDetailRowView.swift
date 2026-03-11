@@ -13,16 +13,31 @@ struct MoveDetailRowView: View {
     let detail: String
 
     var body: some View {
-        HStack(alignment: .firstTextBaseline, spacing: 12) {
-            Text(title)
-                .foregroundStyle(.primary)
+        ViewThatFits(in: .horizontal) {
+            HStack(alignment: .firstTextBaseline, spacing: 12) {
+                titleText
+                Spacer(minLength: 8)
+                detailText(multilineAlignment: .trailing)
+            }
 
-            Spacer(minLength: 8)
-
-            Text(detail)
-                .font(.subheadline)
-                .foregroundStyle(.secondary)
-                .multilineTextAlignment(.trailing)
+            VStack(alignment: .leading, spacing: 4) {
+                titleText
+                detailText(multilineAlignment: .leading)
+            }
         }
+    }
+
+    private var titleText: some View {
+        Text(title)
+            .foregroundStyle(.primary)
+            .fixedSize(horizontal: false, vertical: true)
+    }
+
+    private func detailText(multilineAlignment: TextAlignment) -> some View {
+        Text(detail)
+            .font(.subheadline)
+            .foregroundStyle(.secondary)
+            .multilineTextAlignment(multilineAlignment)
+            .fixedSize(horizontal: false, vertical: true)
     }
 }

@@ -10,6 +10,7 @@ import SwiftUI
 
 struct MotionPlayerView: View {
     @Environment(AppModel.self) private var appModel
+    @Environment(\.accessibilityReduceMotion) private var reduceMotion
 
     let title: String
     let characterCode: String
@@ -64,6 +65,13 @@ struct MotionPlayerView: View {
         .navigationTitle(title)
         .navigationBarTitleDisplayMode(.inline)
         .task(id: taskID, loadMotion)
+        .onChange(of: reduceMotion, initial: true) { _, newValue in
+            guard newValue else {
+                return
+            }
+
+            playerModel?.pause()
+        }
     }
 
     private var taskID: String {

@@ -16,11 +16,13 @@ struct NavigationRootView: View {
 
         NavigationSplitView {
             CharacterListView(model: appModel.characterList)
+                .navigationSplitViewColumnWidth(min: 280, ideal: 320, max: 360)
         } detail: {
             NavigationStack(path: $navigation.detailPath) {
                 DetailRootContentView()
             }
             .navigationDestination(for: MoveDestination.self, destination: MoveDestinationView.init)
         }
+        .navigationSplitViewStyle(.balanced)
     }
 }

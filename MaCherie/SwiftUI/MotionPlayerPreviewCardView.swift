@@ -9,6 +9,7 @@
 import SwiftUI
 
 struct MotionPlayerPreviewCardView: View {
+    @Environment(\.dynamicTypeSize) private var dynamicTypeSize
     @Environment(AppModel.self) private var appModel
 
     let motionData: MotionPlaybackData
@@ -20,21 +21,17 @@ struct MotionPlayerPreviewCardView: View {
 
     var body: some View {
         VStack(alignment: .leading, spacing: 16) {
-            HStack(alignment: .firstTextBaseline) {
-                VStack(alignment: .leading, spacing: 4) {
-                    Text("Motion Preview")
-                        .font(.headline)
-
-                    Text(playbackStateLabel(for: playerModel.state))
-                        .font(.subheadline.weight(.medium))
-                        .foregroundStyle(.secondary)
+            ViewThatFits(in: .horizontal) {
+                HStack(alignment: .firstTextBaseline) {
+                    headerText
+                    Spacer()
+                    currentFrameLabel
                 }
 
-                Spacer()
-
-                Text("Frame \(formattedFrame(playerModel.currentFrameIndex))")
-                    .font(.headline.monospacedDigit())
-                    .foregroundStyle(.secondary)
+                VStack(alignment: .leading, spacing: 8) {
+                    headerText
+                    currentFrameLabel
+                }
             }
 
             if let currentFrame = playerModel.currentFrame {
@@ -68,6 +65,7 @@ struct MotionPlayerPreviewCardView: View {
                     Text("Sprite frame count differs from motion data. Playback uses the best available image for each frame.")
                         .font(.footnote)
                         .foregroundStyle(.secondary)
+                        .fixedSize(horizontal: false, vertical: true)
                 }
             }
             .font(.subheadline)
@@ -75,6 +73,7 @@ struct MotionPlayerPreviewCardView: View {
         }
         .padding(20)
         .background(.thinMaterial, in: RoundedRectangle(cornerRadius: 28, style: .continuous))
+        .accessibilityElement(children: .contain)
     }
 
     private func playbackStateLabel(for state: MotionPlayerModel.State) -> String {
@@ -92,5 +91,22 @@ struct MotionPlayerPreviewCardView: View {
 
     private func formattedFrame(_ frame: Int) -> String {
         frame.formatted(frameNumberFormat)
+    }
+
+    private var headerText: some View {
+        VStack(alignment: .leading, spacing: 4) {
+            Text("Motion Preview")
+                .font(.headline)
+
+            Text(playbackStateLabel(for: playerModel.state))
+                .font(.subheadline.weight(.medium))
+                .foregroundStyle(.secondary)
+        }
+    }
+
+    private var currentFrameLabel: some View {
+        Text("Frame \(formattedFrame(playerModel.currentFrameIndex))")
+            .font(dynamicTypeSize.isAccessibilitySize ? .title3.monospacedDigit() : .headline.monospacedDigit())
+            .foregroundStyle(.secondary)
     }
 }
