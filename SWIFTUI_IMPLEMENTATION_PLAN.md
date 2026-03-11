@@ -37,6 +37,39 @@
 
 - `xcodebuild -project MaCherie.xcodeproj -scheme MaCherie -destination 'generic/platform=iOS Simulator' build`
 
+### Baseline Snapshot (Recorded 2026-03-11)
+
+- Build baseline
+  - Command: `xcodebuild -project MaCherie.xcodeproj -scheme MaCherie -destination 'generic/platform=iOS Simulator' build`
+  - Result: `BUILD SUCCEEDED`
+  - Environment observed during baseline build:
+    - Xcode build version `17C529`
+    - iPhone Simulator SDK `26.2`
+    - Swift Package dependency: `Yams` `5.3.1`
+- Current UIKit flow
+  - App launches from `Main.storyboard`, whose initial view controller is a `UISplitViewController`.
+  - `@UIApplicationMain` `AppDelegate` configures the split view plus both navigation controller delegates.
+  - Master flow starts in `CharactersViewController`, which decodes `CharacterData/Characters.yml` into `[Character]`.
+  - Selecting a character loads `CharacterData/<character.next>` as YAML, decodes `[CharacterMove.Section]`, and passes the result to `CharacterMovesViewController`.
+  - On iPad, the first character is preselected in `viewDidLoad()` and immediately drives the detail pane.
+  - Selecting a row with `Presented.ViewController == "FramesPlayerViewController"` triggers `ShowMotionPlayer` and presents `MotionPlayerViewController`.
+  - `MotionPlayerViewController` loads playback data from `FrameData/<characterCode>/<characterCode>_<skillCode>.json` and `FrameData/<characterCode>/<characterCode>_<skillCode>.png`.
+- Current resource sources
+  - `CharacterData/*.yml`: active runtime source for character list and move tree decoding in UIKit flow.
+  - `FrameData/*`: per-character frame JSON + sprite PNG resources consumed by the motion player.
+  - `Assets.xcassets`:
+    - `Head/*.imageset` provides list icons via `Character.rowImage`
+    - `Body/*.imageset` provides detail background art via `Character.nextBackgroundImage`
+- Current configuration baseline
+  - iOS deployment target: `13.0`
+  - Swift language version: `5.0`
+  - App lifecycle: storyboard-based UIKit
+    - `UIMainStoryboardFile = Main`
+    - `UILaunchStoryboardName = LaunchScreen`
+    - `AppDelegate` owns startup and default `UserDefaults` registration
+
+Phase 0 status: complete. The pre-migration UIKit app still builds successfully with the baseline command above.
+
 ## Phase 1: Raise Platform Baseline
 
 ### Goal
