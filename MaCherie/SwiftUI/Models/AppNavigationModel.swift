@@ -12,14 +12,10 @@ import Observation
 @MainActor
 @Observable
 final class AppNavigationModel {
-    private let characterRepository: CharacterRepository
     private let moveRepository: MoveRepository
 
-    private(set) var characters: [CharacterSelection] = []
     private(set) var currentRootNode: MoveNode?
-
-    var sidebarErrorMessage: String?
-    var selectedCharacter: CharacterSelection? {
+    private(set) var selectedCharacter: CharacterSelection? {
         didSet {
             guard selectedCharacter?.id != oldValue?.id else {
                 return
@@ -40,34 +36,9 @@ final class AppNavigationModel {
     private var nodeErrors: [MoveNode.ID: String] = [:]
 
     init(
-        characterRepository: CharacterRepository = CharacterRepository(),
         moveRepository: MoveRepository = MoveRepository()
     ) {
-        self.characterRepository = characterRepository
         self.moveRepository = moveRepository
-        loadCharacters()
-    }
-
-    func loadCharacters() {
-        do {
-            let loadedCharacters = try characterRepository.loadCharacters().map(CharacterSelection.init)
-            let previousSelectionID = selectedCharacter?.id
-
-            characters = loadedCharacters
-            sidebarErrorMessage = nil
-
-            if let previousSelectionID {
-                selectedCharacter = loadedCharacters.first { $0.id == previousSelectionID }
-            } else {
-                selectedCharacter = nil
-            }
-        } catch {
-            characters = []
-            selectedCharacter = nil
-            currentRootNode = nil
-            detailPath.removeAll()
-            sidebarErrorMessage = "Failed to load the character list."
-        }
     }
 
     func sections(for node: MoveNode) -> [CharacterMove.Section] {
@@ -93,6 +64,10 @@ final class AppNavigationModel {
                 skillCode: skillCode
             )
         )
+    }
+
+    func showCharacter(_ selection: CharacterSelection?) {
+        selectedCharacter = selection
     }
 
     private func makeRootNode(for selection: CharacterSelection) -> MoveNode {

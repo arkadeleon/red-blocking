@@ -54,6 +54,7 @@
 		36A1000B2F03111200778995 /* HitboxVisibilitySettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36A1000A2F03111200778995 /* HitboxVisibilitySettings.swift */; };
 		36A1000D2F03111300778995 /* HitboxColorSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36A1000C2F03111300778995 /* HitboxColorSettings.swift */; };
 		36A1000F2F03111400778995 /* PlaybackSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36A1000E2F03111400778995 /* PlaybackSettings.swift */; };
+		36A100112F03111500778995 /* CharacterListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36A100102F03111500778995 /* CharacterListModel.swift */; };
 		EE318CB5183E363E0081370B /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE318CB4183E363E0081370B /* AudioToolbox.framework */; };
 		EEA48CA31775E59F00351CAB /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEA48CA21775E59F00351CAB /* Security.framework */; };
 		EEA48CA51775E79000351CAB /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEA48CA41775E79000351CAB /* ImageIO.framework */; };
@@ -118,6 +119,7 @@
 		36A1000A2F03111200778995 /* HitboxVisibilitySettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HitboxVisibilitySettings.swift; sourceTree = "<group>"; };
 		36A1000C2F03111300778995 /* HitboxColorSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HitboxColorSettings.swift; sourceTree = "<group>"; };
 		36A1000E2F03111400778995 /* PlaybackSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaybackSettings.swift; sourceTree = "<group>"; };
+		36A100102F03111500778995 /* CharacterListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterListModel.swift; sourceTree = "<group>"; };
 		EE318CB4183E363E0081370B /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		EEA48CA21775E59F00351CAB /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		EEA48CA41775E79000351CAB /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
@@ -188,6 +190,7 @@
 				359100182F03210400778995 /* AppNavigationModel.swift */,
 				359100052F03000100778995 /* AppModel.swift */,
 				359100062F03000100778995 /* AppSettings.swift */,
+				36A100102F03111500778995 /* CharacterListModel.swift */,
 				3591001A2F03210500778995 /* CharacterSelection.swift */,
 				36A1000A2F03111200778995 /* HitboxVisibilitySettings.swift */,
 				36A1000C2F03111300778995 /* HitboxColorSettings.swift */,
@@ -417,6 +420,7 @@
 				3591000C2F03000100778995 /* AppSettings.swift in Sources */,
 				359100192F03210400778995 /* AppNavigationModel.swift in Sources */,
 				36A100032F03111100778995 /* BundleResourceLoader.swift in Sources */,
+				36A100112F03111500778995 /* CharacterListModel.swift in Sources */,
 				3591001B2F03210500778995 /* CharacterSelection.swift in Sources */,
 				35B69A2C20D8DB0D00F05A2C /* CharacterMoveDetailCell.swift in Sources */,
 				36A100052F03111100778995 /* CharacterRepository.swift in Sources */,

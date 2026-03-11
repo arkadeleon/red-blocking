@@ -15,24 +15,20 @@ struct NavigationRootView: View {
         @Bindable var navigation = appModel.navigation
 
         NavigationSplitView {
-            CharacterSidebarView(
-                selectedCharacter: $navigation.selectedCharacter,
-                characters: navigation.characters,
-                errorMessage: navigation.sidebarErrorMessage
-            )
+            CharacterListView(model: appModel.characterList)
         } detail: {
             NavigationStack(path: $navigation.detailPath) {
-                detailContent(navigation: navigation)
+                detailContent
             }
             .navigationDestination(for: MoveDestination.self, destination: MoveDestinationView.init)
         }
     }
 
     @ViewBuilder
-    private func detailContent(navigation: AppNavigationModel) -> some View {
-        if let rootNode = navigation.currentRootNode {
+    private var detailContent: some View {
+        if let rootNode = appModel.navigation.currentRootNode {
             MoveNodeView(node: rootNode)
-        } else if let errorMessage = navigation.sidebarErrorMessage {
+        } else if let errorMessage = appModel.characterList.errorMessage {
             ContentUnavailableView(
                 "Characters Unavailable",
                 systemImage: "exclamationmark.triangle",

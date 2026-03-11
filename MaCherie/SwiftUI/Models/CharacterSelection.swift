@@ -6,6 +6,8 @@
 //  Copyright © 2026 Leon & Vane. All rights reserved.
 //
 
+import Foundation
+
 struct CharacterSelection: Hashable, Identifiable {
     let title: String
     let moveResourceName: String
@@ -14,6 +16,14 @@ struct CharacterSelection: Hashable, Identifiable {
 
     var id: String {
         moveResourceName
+    }
+
+    var rowAssetName: String {
+        (rowImageName as NSString).deletingPathExtension
+    }
+
+    var backgroundAssetName: String {
+        (backgroundImageName as NSString).deletingPathExtension
     }
 
     init(character: Character) {

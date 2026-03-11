@@ -17,6 +17,7 @@ final class AppModel {
     let moveRepository: MoveRepository
     let motionRepository: MotionRepository
     let navigation: AppNavigationModel
+    let characterList: CharacterListModel
 
     init(
         settings: AppSettings = .standard,
@@ -24,16 +25,21 @@ final class AppModel {
         characterRepository: CharacterRepository = CharacterRepository(),
         moveRepository: MoveRepository = MoveRepository(),
         motionRepository: MotionRepository = MotionRepository(),
-        navigation: AppNavigationModel? = nil
+        navigation: AppNavigationModel? = nil,
+        characterList: CharacterListModel? = nil
     ) {
         self.settings = settings
         self.legacyAppController = legacyAppController
         self.characterRepository = characterRepository
         self.moveRepository = moveRepository
         self.motionRepository = motionRepository
-        self.navigation = navigation ?? AppNavigationModel(
-            characterRepository: characterRepository,
+        let resolvedNavigation = navigation ?? AppNavigationModel(
             moveRepository: moveRepository
+        )
+        self.navigation = resolvedNavigation
+        self.characterList = characterList ?? CharacterListModel(
+            characterRepository: characterRepository,
+            navigation: resolvedNavigation
         )
     }
 }

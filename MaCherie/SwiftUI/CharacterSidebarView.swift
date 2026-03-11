@@ -8,22 +8,23 @@
 
 import SwiftUI
 
-struct CharacterSidebarView: View {
-    @Binding var selectedCharacter: CharacterSelection?
+struct CharacterListView: View {
+    @Environment(\.horizontalSizeClass) private var horizontalSizeClass
 
-    let characters: [CharacterSelection]
-    let errorMessage: String?
+    let model: CharacterListModel
 
     var body: some View {
-        List(selection: $selectedCharacter) {
-            if let errorMessage {
+        @Bindable var model = model
+
+        List(selection: $model.selectedCharacter) {
+            if let errorMessage = model.errorMessage {
                 Section {
                     Text(errorMessage)
                         .foregroundStyle(.secondary)
                 }
             }
 
-            if characters.isEmpty, errorMessage == nil {
+            if model.characters.isEmpty, model.errorMessage == nil {
                 ContentUnavailableView(
                     "No Characters",
                     systemImage: "person.slash",
@@ -31,14 +32,35 @@ struct CharacterSidebarView: View {
                 )
             } else {
                 Section("Characters") {
-                    ForEach(characters) { character in
+                    ForEach(model.characters) { character in
                         NavigationLink(value: character) {
-                            Text(character.title)
+                            row(for: character)
                         }
                     }
                 }
             }
         }
         .navigationTitle("Characters")
+        .onChange(of: horizontalSizeClass, initial: true) { _, newValue in
+            model.applyDefaultSelectionIfNeeded(for: newValue)
+        }
+        .onChange(of: model.characters, initial: true) { _, _ in
+            model.applyDefaultSelectionIfNeeded(for: horizontalSizeClass)
+        }
+    }
+
+    private func row(for character: CharacterSelection) -> some View {
+        HStack(spacing: 12) {
+            Image(character.rowAssetName)
+                .resizable()
+                .scaledToFit()
+                .frame(width: 44, height: 44)
+                .clipShape(RoundedRectangle(cornerRadius: 8))
+                .accessibilityHidden(true)
+
+            Text(character.title)
+                .font(.headline)
+        }
+        .padding(.vertical, 4)
     }
 }
