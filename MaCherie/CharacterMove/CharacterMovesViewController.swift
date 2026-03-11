@@ -22,7 +22,7 @@ class CharacterMovesViewController: UIViewController {
         tableView.backgroundColor = .clear
         view.backgroundColor = .clear
 
-        navigationController?.delegate = AppDelegate.shared
+        navigationController?.delegate = LegacyAppController.shared
     }
 
     override func viewWillAppear(_ animated: Bool) {

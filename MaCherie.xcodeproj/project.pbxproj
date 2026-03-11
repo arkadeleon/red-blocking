@@ -8,6 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		04580D341A25CB1800A4A9B2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04580D161A25CB1800A4A9B2 /* Main.storyboard */; };
+		359100072F03000100778995 /* MaCherieApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 359100012F03000100778995 /* MaCherieApp.swift */; };
+		359100082F03000100778995 /* MaCherieRootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 359100022F03000100778995 /* MaCherieRootView.swift */; };
+		359100092F03000100778995 /* LegacyAppController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 359100032F03000100778995 /* LegacyAppController.swift */; };
+		3591000A2F03000100778995 /* LegacyRootContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 359100042F03000100778995 /* LegacyRootContainerView.swift */; };
+		3591000B2F03000100778995 /* AppModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 359100052F03000100778995 /* AppModel.swift */; };
+		3591000C2F03000100778995 /* AppSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 359100062F03000100778995 /* AppSettings.swift */; };
 		3505351520D1FDA600078847 /* CharacterMovesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3505351420D1FDA600078847 /* CharacterMovesViewController.swift */; };
 		3505351920D21AC300078847 /* MotionPlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3505351820D21AC300078847 /* MotionPlayerViewController.swift */; };
 		352FE9672382840D0083CCF0 /* CharacterBackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 352FE9662382840D0083CCF0 /* CharacterBackgroundView.swift */; };
@@ -51,6 +57,12 @@
 
 /* Begin PBXFileReference section */
 		04580D161A25CB1800A4A9B2 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		359100012F03000100778995 /* MaCherieApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaCherieApp.swift; sourceTree = "<group>"; };
+		359100022F03000100778995 /* MaCherieRootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaCherieRootView.swift; sourceTree = "<group>"; };
+		359100032F03000100778995 /* LegacyAppController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LegacyAppController.swift; sourceTree = "<group>"; };
+		359100042F03000100778995 /* LegacyRootContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LegacyRootContainerView.swift; sourceTree = "<group>"; };
+		359100052F03000100778995 /* AppModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppModel.swift; sourceTree = "<group>"; };
+		359100062F03000100778995 /* AppSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppSettings.swift; sourceTree = "<group>"; };
 		3505351420D1FDA600078847 /* CharacterMovesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CharacterMovesViewController.swift; sourceTree = "<group>"; };
 		3505351820D21AC300078847 /* MotionPlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotionPlayerViewController.swift; sourceTree = "<group>"; };
 		352FE9662382840D0083CCF0 /* CharacterBackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterBackgroundView.swift; sourceTree = "<group>"; };
@@ -119,6 +131,35 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3591000D2F03000100778995 /* Legacy */ = {
+			isa = PBXGroup;
+			children = (
+				359100032F03000100778995 /* LegacyAppController.swift */,
+				359100042F03000100778995 /* LegacyRootContainerView.swift */,
+			);
+			path = Legacy;
+			sourceTree = "<group>";
+		};
+		3591000E2F03000100778995 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				359100052F03000100778995 /* AppModel.swift */,
+				359100062F03000100778995 /* AppSettings.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		3591000F2F03000100778995 /* SwiftUI */ = {
+			isa = PBXGroup;
+			children = (
+				359100012F03000100778995 /* MaCherieApp.swift */,
+				359100022F03000100778995 /* MaCherieRootView.swift */,
+				3591000D2F03000100778995 /* Legacy */,
+				3591000E2F03000100778995 /* Models */,
+			);
+			path = SwiftUI;
+			sourceTree = "<group>";
+		};
 		3572AF8D20D1021F00C15871 /* Core */ = {
 			isa = PBXGroup;
 			children = (
@@ -208,6 +249,7 @@
 			isa = PBXGroup;
 			children = (
 				3566755620D26A4D00DD26A4 /* AppDelegate.swift */,
+				3591000F2F03000100778995 /* SwiftUI */,
 				35375CAB20D0FE45004642CB /* LaunchScreen.storyboard */,
 				04580D161A25CB1800A4A9B2 /* Main.storyboard */,
 				3572AF8D20D1021F00C15871 /* Core */,
@@ -319,15 +361,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3591000C2F03000100778995 /* AppSettings.swift in Sources */,
 				35B69A2C20D8DB0D00F05A2C /* CharacterMoveDetailCell.swift in Sources */,
 				35B69A2420D8DA2700F05A2C /* CharacterSupplementaryCell.swift in Sources */,
 				352FE9672382840D0083CCF0 /* CharacterBackgroundView.swift in Sources */,
 				35C41F4C237D3E7E00A1EBF7 /* MotionPlayer.swift in Sources */,
 				35EFE5C220D3A187007EB379 /* PushAnimator.swift in Sources */,
+				359100092F03000100778995 /* LegacyAppController.swift in Sources */,
 				35FA31A520D8B55A009A5D7B /* CharacterCell.swift in Sources */,
 				3566755920D2702C00DD26A4 /* MotionDownloader.swift in Sources */,
 				35B69A3620D8DECE00F05A2C /* CharacterMove.swift in Sources */,
 				35EFE5C420D3A3B3007EB379 /* PopAnimator.swift in Sources */,
+				359100082F03000100778995 /* MaCherieRootView.swift in Sources */,
 				3566755720D26A4D00DD26A4 /* AppDelegate.swift in Sources */,
 				35B9241A20D1194B0081BD00 /* CharactersViewController.swift in Sources */,
 				3505351520D1FDA600078847 /* CharacterMovesViewController.swift in Sources */,
@@ -335,9 +380,12 @@
 				35C41F4A237D35A900A1EBF7 /* MotionPlayerLayer.swift in Sources */,
 				35C41F3D237AB26000A1EBF7 /* MotionInfo.swift in Sources */,
 				35EFE5C620D3A709007EB379 /* PopInteractor.swift in Sources */,
+				359100072F03000100778995 /* MaCherieApp.swift in Sources */,
 				3566755520D26A2800DD26A4 /* ApplicationDataManager.swift in Sources */,
+				3591000B2F03000100778995 /* AppModel.swift in Sources */,
 				35FA31A220D8B33C009A5D7B /* Character.swift in Sources */,
 				35B69A2820D8DA4700F05A2C /* CharacterMoveCell.swift in Sources */,
+				3591000A2F03000100778995 /* LegacyRootContainerView.swift in Sources */,
 				35B69A3020D8DC0300F05A2C /* CharacterMoveFramesCell.swift in Sources */,
 				3505351920D21AC300078847 /* MotionPlayerViewController.swift in Sources */,
 			);
