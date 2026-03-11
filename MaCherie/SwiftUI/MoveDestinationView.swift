@@ -16,7 +16,7 @@ struct MoveDestinationView: View {
         case let .moveNode(node):
             MoveNodeView(node: node)
         case let .motionPlayer(title, characterCode, skillCode):
-            MotionDataPipelineView(
+            MotionPlayerView(
                 title: title,
                 characterCode: characterCode,
                 skillCode: skillCode

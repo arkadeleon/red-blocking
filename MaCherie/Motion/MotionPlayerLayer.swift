@@ -181,28 +181,40 @@ class MotionPlayerLayer: CALayer {
             let hitbox = hitboxes[i]
 
             if hitbox != "0,0,0,0" {
-                let right = hitboxToDraw[0]
-                let left = hitboxToDraw[1]
-                let top = hitboxToDraw[2]
-                let bottom = hitboxToDraw[3]
-                drawHitbox(top: top, left: left, bottom: bottom, right: right, with: color, in: ctx)
+                let rect = normalizedRect(
+                    top: hitboxToDraw[2],
+                    left: hitboxToDraw[1],
+                    bottom: hitboxToDraw[3],
+                    right: hitboxToDraw[0]
+                )
+
+                if rect.isNull == false, rect.isEmpty == false {
+                    drawHitbox(rect, with: color, in: ctx)
+                }
             }
         }
     }
 
-    private func drawHitbox(top: Int, left: Int, bottom: Int, right: Int, with color: UIColor, in ctx: CGContext) {
-        let rect = CGRect(
-            x: CGFloat(left),
-            y: CGFloat(top),
-            width: CGFloat(right - left),
-            height: CGFloat(bottom - top)
-        )
-
+    private func drawHitbox(_ rect: CGRect, with color: UIColor, in ctx: CGContext) {
         ctx.setFillColor(color.withAlphaComponent(0.3).cgColor)
         ctx.fill(rect)
 
         ctx.setStrokeColor(color.withAlphaComponent(1).cgColor)
         ctx.stroke(rect)
+    }
+
+    private func normalizedRect(top: Int, left: Int, bottom: Int, right: Int) -> CGRect {
+        let minX = CGFloat(min(left, right))
+        let maxX = CGFloat(max(left, right))
+        let minY = CGFloat(min(top, bottom))
+        let maxY = CGFloat(max(top, bottom))
+
+        return CGRect(
+            x: minX,
+            y: minY,
+            width: maxX - minX,
+            height: maxY - minY
+        )
     }
 
     private func drawAxe(x: CGFloat, y: CGFloat, in ctx: CGContext) {

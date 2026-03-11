@@ -203,16 +203,16 @@ struct MotionCanvasRenderer {
                 continue
             }
 
-            let right = CGFloat(hitboxToDraw[0]) * scaleX
-            let left = CGFloat(hitboxToDraw[1]) * scaleX
-            let top = CGFloat(hitboxToDraw[2]) * scaleY
-            let bottom = CGFloat(hitboxToDraw[3]) * scaleY
-            let rect = CGRect(
-                x: left,
-                y: top,
-                width: right - left,
-                height: bottom - top
+            let rect = normalizedRect(
+                right: CGFloat(hitboxToDraw[0]) * scaleX,
+                left: CGFloat(hitboxToDraw[1]) * scaleX,
+                top: CGFloat(hitboxToDraw[2]) * scaleY,
+                bottom: CGFloat(hitboxToDraw[3]) * scaleY
             )
+
+            guard rect.isNull == false, rect.isEmpty == false else {
+                continue
+            }
 
             context.setFillColor(fillColor)
             context.fill(rect)
@@ -221,6 +221,25 @@ struct MotionCanvasRenderer {
             context.setLineWidth(strokeWidth)
             context.stroke(rect)
         }
+    }
+
+    private func normalizedRect(
+        right: CGFloat,
+        left: CGFloat,
+        top: CGFloat,
+        bottom: CGFloat
+    ) -> CGRect {
+        let minX = min(left, right)
+        let maxX = max(left, right)
+        let minY = min(top, bottom)
+        let maxY = max(top, bottom)
+
+        return CGRect(
+            x: minX,
+            y: minY,
+            width: maxX - minX,
+            height: maxY - minY
+        )
     }
 
     private func makeColor(rgb: Int, alpha: CGFloat) -> CGColor {

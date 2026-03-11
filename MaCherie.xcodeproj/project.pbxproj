@@ -72,6 +72,14 @@
 		36B1000D2F03400B00778995 /* MotionCanvasConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36B100102F03400E00778995 /* MotionCanvasConfiguration.swift */; };
 		36B1000E2F03400C00778995 /* MotionCanvasRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36B100112F03400F00778995 /* MotionCanvasRenderer.swift */; };
 		36B1000F2F03400D00778995 /* MotionCanvasView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36B100122F03401000778995 /* MotionCanvasView.swift */; };
+		36B100212F03500100778995 /* MotionPlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36B100202F03500100778995 /* MotionPlayerView.swift */; };
+		36B100232F03500200778995 /* MotionPlayerLoadState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36B100222F03500200778995 /* MotionPlayerLoadState.swift */; };
+		36B100252F03500300778995 /* MotionPlayerLoadedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36B100242F03500300778995 /* MotionPlayerLoadedView.swift */; };
+		36B100272F03500400778995 /* MotionPlayerPreviewCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36B100262F03500400778995 /* MotionPlayerPreviewCardView.swift */; };
+		36B100292F03500500778995 /* MotionPlayerTransportControlsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36B100282F03500500778995 /* MotionPlayerTransportControlsView.swift */; };
+		36B1002B2F03500600778995 /* MotionPlayerHitboxControlsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36B1002A2F03500600778995 /* MotionPlayerHitboxControlsView.swift */; };
+		36B1002D2F03500700778995 /* MotionPlayerHitboxVisibilityGroupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36B1002C2F03500700778995 /* MotionPlayerHitboxVisibilityGroupView.swift */; };
+		36B1002F2F03500800778995 /* MotionPlayerHitboxToggleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36B1002E2F03500800778995 /* MotionPlayerHitboxToggleView.swift */; };
 		EE318CB5183E363E0081370B /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE318CB4183E363E0081370B /* AudioToolbox.framework */; };
 		EEA48CA31775E59F00351CAB /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEA48CA21775E59F00351CAB /* Security.framework */; };
 		EEA48CA51775E79000351CAB /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEA48CA41775E79000351CAB /* ImageIO.framework */; };
@@ -130,6 +138,14 @@
 		36B100102F03400E00778995 /* MotionCanvasConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotionCanvasConfiguration.swift; sourceTree = "<group>"; };
 		36B100112F03400F00778995 /* MotionCanvasRenderer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotionCanvasRenderer.swift; sourceTree = "<group>"; };
 		36B100122F03401000778995 /* MotionCanvasView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotionCanvasView.swift; sourceTree = "<group>"; };
+		36B100202F03500100778995 /* MotionPlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotionPlayerView.swift; sourceTree = "<group>"; };
+		36B100222F03500200778995 /* MotionPlayerLoadState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotionPlayerLoadState.swift; sourceTree = "<group>"; };
+		36B100242F03500300778995 /* MotionPlayerLoadedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotionPlayerLoadedView.swift; sourceTree = "<group>"; };
+		36B100262F03500400778995 /* MotionPlayerPreviewCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotionPlayerPreviewCardView.swift; sourceTree = "<group>"; };
+		36B100282F03500500778995 /* MotionPlayerTransportControlsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotionPlayerTransportControlsView.swift; sourceTree = "<group>"; };
+		36B1002A2F03500600778995 /* MotionPlayerHitboxControlsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotionPlayerHitboxControlsView.swift; sourceTree = "<group>"; };
+		36B1002C2F03500700778995 /* MotionPlayerHitboxVisibilityGroupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotionPlayerHitboxVisibilityGroupView.swift; sourceTree = "<group>"; };
+		36B1002E2F03500800778995 /* MotionPlayerHitboxToggleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotionPlayerHitboxToggleView.swift; sourceTree = "<group>"; };
 		35AFF43D2BA093B500737E1A /* FrameData */ = {isa = PBXFileReference; lastKnownFileType = folder; path = FrameData; sourceTree = "<group>"; };
 		35B69A2220D8DA2700F05A2C /* CharacterSupplementaryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterSupplementaryCell.swift; sourceTree = "<group>"; };
 		35B69A2620D8DA4700F05A2C /* CharacterMoveCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterMoveCell.swift; sourceTree = "<group>"; };
@@ -251,6 +267,14 @@
 				36B100112F03400F00778995 /* MotionCanvasRenderer.swift */,
 				36B100122F03401000778995 /* MotionCanvasView.swift */,
 				36B100052F03400400778995 /* MotionDataPipelineView.swift */,
+				36B1002A2F03500600778995 /* MotionPlayerHitboxControlsView.swift */,
+				36B1002E2F03500800778995 /* MotionPlayerHitboxToggleView.swift */,
+				36B1002C2F03500700778995 /* MotionPlayerHitboxVisibilityGroupView.swift */,
+				36B100222F03500200778995 /* MotionPlayerLoadState.swift */,
+				36B100242F03500300778995 /* MotionPlayerLoadedView.swift */,
+				36B100262F03500400778995 /* MotionPlayerPreviewCardView.swift */,
+				36B100282F03500500778995 /* MotionPlayerTransportControlsView.swift */,
+				36B100202F03500100778995 /* MotionPlayerView.swift */,
 				36A100142F03250100778995 /* MoveBrowserView.swift */,
 				36A100182F03250300778995 /* MoveDetailRowView.swift */,
 				359100162F03210300778995 /* MoveDestinationView.swift */,
@@ -484,14 +508,22 @@
 				36B1000E2F03400C00778995 /* MotionCanvasRenderer.swift in Sources */,
 				36B1000F2F03400D00778995 /* MotionCanvasView.swift in Sources */,
 				36B1000A2F03400900778995 /* MotionDataPipelineView.swift in Sources */,
+				36B1002B2F03500600778995 /* MotionPlayerHitboxControlsView.swift in Sources */,
+				36B1002F2F03500800778995 /* MotionPlayerHitboxToggleView.swift in Sources */,
+				36B1002D2F03500700778995 /* MotionPlayerHitboxVisibilityGroupView.swift in Sources */,
 				36A1000D2F03111300778995 /* HitboxColorSettings.swift in Sources */,
 				36A1000B2F03111200778995 /* HitboxVisibilitySettings.swift in Sources */,
 				36B100082F03400700778995 /* MotionFrame.swift in Sources */,
 				36B100062F03400500778995 /* MotionFrameImageStore.swift in Sources */,
 				36B100072F03400600778995 /* MotionFrameResource.swift in Sources */,
 				36B100092F03400800778995 /* MotionPlaybackData.swift in Sources */,
+				36B100232F03500200778995 /* MotionPlayerLoadState.swift in Sources */,
+				36B100252F03500300778995 /* MotionPlayerLoadedView.swift in Sources */,
 				36B1000B2F03400A00778995 /* MotionPlayerModel.swift in Sources */,
+				36B100272F03500400778995 /* MotionPlayerPreviewCardView.swift in Sources */,
+				36B100292F03500500778995 /* MotionPlayerTransportControlsView.swift in Sources */,
 				35C41F4C237D3E7E00A1EBF7 /* MotionPlayer.swift in Sources */,
+				36B100212F03500100778995 /* MotionPlayerView.swift in Sources */,
 				35EFE5C220D3A187007EB379 /* PushAnimator.swift in Sources */,
 				359100092F03000100778995 /* LegacyAppController.swift in Sources */,
 				35FA31A520D8B55A009A5D7B /* CharacterCell.swift in Sources */,
