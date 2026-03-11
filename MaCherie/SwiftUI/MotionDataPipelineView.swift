@@ -171,6 +171,10 @@ struct MotionDataPipelineView: View {
                         Text("Phase 10 now drives frame advancement through MotionPlayerModel, using a single clock-based task instead of multiple UIKit timers.")
                             .font(.footnote)
                             .foregroundStyle(.secondary)
+
+                        Text("Phase 11 renders the sprite and hitbox overlays through a SwiftUI Canvas, so hitbox visibility and color settings refresh directly inside the preview.")
+                            .font(.footnote)
+                            .foregroundStyle(.secondary)
                     }
                 }
                 .frame(maxWidth: .infinity, alignment: .leading)
@@ -196,14 +200,14 @@ struct MotionDataPipelineView: View {
     @ViewBuilder
     private func previewCard(for playerModel: MotionPlayerModel) -> some View {
         VStack(spacing: 16) {
-            if let previewImage = playerModel.currentFrame?.resource.cgImage {
+            if let currentFrame = playerModel.currentFrame {
                 VStack(spacing: 12) {
-                    Image(decorative: previewImage, scale: 1)
-                        .resizable()
-                        .interpolation(.none)
-                        .scaledToFit()
-                        .frame(maxWidth: 420)
-                        .accessibilityHidden(true)
+                    MotionCanvasView(
+                        motionFrame: currentFrame,
+                        hitboxVisibilitySettings: appModel.settings.hitboxVisibility,
+                        hitboxColorSettings: appModel.settings.hitboxColors
+                    )
+                    .frame(maxWidth: 420)
 
                     Text("Current frame: \(formattedFrame(playerModel.currentFrameIndex))")
                         .font(.headline.monospacedDigit())

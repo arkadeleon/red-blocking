@@ -69,6 +69,9 @@
 		36B100082F03400700778995 /* MotionFrame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36B100032F03400200778995 /* MotionFrame.swift */; };
 		36B100092F03400800778995 /* MotionPlaybackData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36B100042F03400300778995 /* MotionPlaybackData.swift */; };
 		36B1000A2F03400900778995 /* MotionDataPipelineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36B100052F03400400778995 /* MotionDataPipelineView.swift */; };
+		36B1000D2F03400B00778995 /* MotionCanvasConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36B100102F03400E00778995 /* MotionCanvasConfiguration.swift */; };
+		36B1000E2F03400C00778995 /* MotionCanvasRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36B100112F03400F00778995 /* MotionCanvasRenderer.swift */; };
+		36B1000F2F03400D00778995 /* MotionCanvasView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36B100122F03401000778995 /* MotionCanvasView.swift */; };
 		EE318CB5183E363E0081370B /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE318CB4183E363E0081370B /* AudioToolbox.framework */; };
 		EEA48CA31775E59F00351CAB /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEA48CA21775E59F00351CAB /* Security.framework */; };
 		EEA48CA51775E79000351CAB /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEA48CA41775E79000351CAB /* ImageIO.framework */; };
@@ -124,6 +127,9 @@
 		36B100032F03400200778995 /* MotionFrame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotionFrame.swift; sourceTree = "<group>"; };
 		36B100042F03400300778995 /* MotionPlaybackData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotionPlaybackData.swift; sourceTree = "<group>"; };
 		36B100052F03400400778995 /* MotionDataPipelineView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotionDataPipelineView.swift; sourceTree = "<group>"; };
+		36B100102F03400E00778995 /* MotionCanvasConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotionCanvasConfiguration.swift; sourceTree = "<group>"; };
+		36B100112F03400F00778995 /* MotionCanvasRenderer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotionCanvasRenderer.swift; sourceTree = "<group>"; };
+		36B100122F03401000778995 /* MotionCanvasView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotionCanvasView.swift; sourceTree = "<group>"; };
 		35AFF43D2BA093B500737E1A /* FrameData */ = {isa = PBXFileReference; lastKnownFileType = folder; path = FrameData; sourceTree = "<group>"; };
 		35B69A2220D8DA2700F05A2C /* CharacterSupplementaryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterSupplementaryCell.swift; sourceTree = "<group>"; };
 		35B69A2620D8DA4700F05A2C /* CharacterMoveCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterMoveCell.swift; sourceTree = "<group>"; };
@@ -241,6 +247,9 @@
 				36A100242F03250800778995 /* DetailRootContentView.swift */,
 				359100012F03000100778995 /* MaCherieApp.swift */,
 				359100022F03000100778995 /* MaCherieRootView.swift */,
+				36B100102F03400E00778995 /* MotionCanvasConfiguration.swift */,
+				36B100112F03400F00778995 /* MotionCanvasRenderer.swift */,
+				36B100122F03401000778995 /* MotionCanvasView.swift */,
 				36B100052F03400400778995 /* MotionDataPipelineView.swift */,
 				36A100142F03250100778995 /* MoveBrowserView.swift */,
 				36A100182F03250300778995 /* MoveDetailRowView.swift */,
@@ -471,6 +480,9 @@
 				35B69A2420D8DA2700F05A2C /* CharacterSupplementaryCell.swift in Sources */,
 				352FE9672382840D0083CCF0 /* CharacterBackgroundView.swift in Sources */,
 				36A100252F03250800778995 /* DetailRootContentView.swift in Sources */,
+				36B1000D2F03400B00778995 /* MotionCanvasConfiguration.swift in Sources */,
+				36B1000E2F03400C00778995 /* MotionCanvasRenderer.swift in Sources */,
+				36B1000F2F03400D00778995 /* MotionCanvasView.swift in Sources */,
 				36B1000A2F03400900778995 /* MotionDataPipelineView.swift in Sources */,
 				36A1000D2F03111300778995 /* HitboxColorSettings.swift in Sources */,
 				36A1000B2F03111200778995 /* HitboxVisibilitySettings.swift in Sources */,
