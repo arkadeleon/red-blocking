@@ -7,16 +7,20 @@
 //
 
 import UIKit
-import Yams
 
 class CharactersViewController: UIViewController {
     @IBOutlet var tableView: UITableView!
 
-    let characters: [Character] = {
-        let url = Bundle.main.bundleURL.appendingPathComponent("CharacterData/Characters.yml")
-        let data = try! Data(contentsOf: url)
-        let characters = try! YAMLDecoder().decode([Character].self, from: data)
-        return characters
+    private let characterRepository = CharacterRepository()
+    private let moveRepository = MoveRepository()
+
+    private lazy var characters: [Character] = {
+        do {
+            return try characterRepository.loadCharacters()
+        } catch {
+            assertionFailure("Failed to load character list: \(error)")
+            return []
+        }
     }()
 
     lazy var characterBackgroundView: CharacterBackgroundView = {
@@ -37,7 +41,7 @@ class CharactersViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        if UIDevice.current.userInterfaceIdiom == .pad {
+        if UIDevice.current.userInterfaceIdiom == .pad, !characters.isEmpty {
             let indexPath = IndexPath(row: 0, section: 0)
             tableView.selectRow(at: indexPath, animated: false, scrollPosition: .none)
 
@@ -62,15 +66,11 @@ class CharactersViewController: UIViewController {
             let indexPath = tableView.indexPathForSelectedRow!
             let character = characters[indexPath.row]
 
-            let url = Bundle.main.bundleURL.appendingPathComponent("CharacterData/\(character.next)")
-            let data = try! Data(contentsOf: url)
-            let sections = try! YAMLDecoder().decode([CharacterMove.Section].self, from: data)
-
             let detailViewController = (segue.destination as! UINavigationController).topViewController as! CharacterMovesViewController
             detailViewController.title = character.rowTitle
-            detailViewController.sections = sections
+            detailViewController.sections = loadSections(for: character)
 
-            characterBackgroundView.imageView.image = UIImage(named: character.nextBackgroundImage)
+            characterBackgroundView.imageView.image = characterRepository.backgroundImage(for: character)
         default:
             break
         }
@@ -79,14 +79,19 @@ class CharactersViewController: UIViewController {
     func displayDetailViewController(_ detailViewController: CharacterMovesViewController, withSelectedIndexPath indexPath: IndexPath) {
         let character = characters[indexPath.row]
 
-        let url = Bundle.main.bundleURL.appendingPathComponent("CharacterData/\(character.next)")
-        let data = try! Data(contentsOf: url)
-        let sections = try! YAMLDecoder().decode([CharacterMove.Section].self, from: data)
-
         detailViewController.title = character.rowTitle
-        detailViewController.sections = sections
+        detailViewController.sections = loadSections(for: character)
 
-        characterBackgroundView.imageView.image = UIImage(named: character.nextBackgroundImage)
+        characterBackgroundView.imageView.image = characterRepository.backgroundImage(for: character)
+    }
+
+    private func loadSections(for character: Character) -> [CharacterMove.Section] {
+        do {
+            return try moveRepository.loadSections(for: character)
+        } catch {
+            assertionFailure("Failed to load move sections for \(character.rowTitle): \(error)")
+            return []
+        }
     }
 }
 
@@ -98,7 +103,7 @@ extension CharactersViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let character = characters[indexPath.row]
         let cell = tableView.dequeueReusableCell(withIdentifier: "CharacterCell", for: indexPath) as! CharacterCell
-        cell.rowImageView.image = UIImage(named: character.rowImage)
+        cell.rowImageView.image = characterRepository.rowImage(for: character)
         cell.rowTitleLabel.text = character.rowTitle
         return cell
     }

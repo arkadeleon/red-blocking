@@ -13,13 +13,22 @@ import Observation
 final class AppModel {
     let settings: AppSettings
     let legacyAppController: LegacyAppController
+    let characterRepository: CharacterRepository
+    let moveRepository: MoveRepository
+    let motionRepository: MotionRepository
 
     init(
         settings: AppSettings = AppSettings(),
-        legacyAppController: LegacyAppController = .shared
+        legacyAppController: LegacyAppController = .shared,
+        characterRepository: CharacterRepository = CharacterRepository(),
+        moveRepository: MoveRepository = MoveRepository(),
+        motionRepository: MotionRepository = MotionRepository()
     ) {
         self.settings = settings
         self.legacyAppController = legacyAppController
+        self.characterRepository = characterRepository
+        self.moveRepository = moveRepository
+        self.motionRepository = motionRepository
 
         settings.registerDefaults()
     }
