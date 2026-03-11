@@ -32,6 +32,12 @@
 		3591001B2F03210500778995 /* CharacterSelection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3591001A2F03210500778995 /* CharacterSelection.swift */; };
 		3591001D2F03210600778995 /* MoveNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3591001C2F03210600778995 /* MoveNode.swift */; };
 		3591001F2F03210700778995 /* MoveDestination.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3591001E2F03210700778995 /* MoveDestination.swift */; };
+		36A100132F03250000778995 /* MoveBrowserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36A100122F03250000778995 /* MoveBrowserModel.swift */; };
+		36A100152F03250100778995 /* MoveBrowserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36A100142F03250100778995 /* MoveBrowserView.swift */; };
+		36A100172F03250200778995 /* MoveNextRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36A100162F03250200778995 /* MoveNextRowView.swift */; };
+		36A100192F03250300778995 /* MoveDetailRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36A100182F03250300778995 /* MoveDetailRowView.swift */; };
+		36A1001B2F03250400778995 /* MoveSupplementaryRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36A1001A2F03250400778995 /* MoveSupplementaryRowView.swift */; };
+		36A1001D2F03250500778995 /* MovePlayerEntryRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36A1001C2F03250500778995 /* MovePlayerEntryRowView.swift */; };
 		35AFF43E2BA093B500737E1A /* FrameData in Resources */ = {isa = PBXBuildFile; fileRef = 35AFF43D2BA093B500737E1A /* FrameData */; };
 		35B69A2420D8DA2700F05A2C /* CharacterSupplementaryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35B69A2220D8DA2700F05A2C /* CharacterSupplementaryCell.swift */; };
 		35B69A2820D8DA4700F05A2C /* CharacterMoveCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35B69A2620D8DA4700F05A2C /* CharacterMoveCell.swift */; };
@@ -97,6 +103,12 @@
 		3591001A2F03210500778995 /* CharacterSelection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterSelection.swift; sourceTree = "<group>"; };
 		3591001C2F03210600778995 /* MoveNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoveNode.swift; sourceTree = "<group>"; };
 		3591001E2F03210700778995 /* MoveDestination.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoveDestination.swift; sourceTree = "<group>"; };
+		36A100122F03250000778995 /* MoveBrowserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoveBrowserModel.swift; sourceTree = "<group>"; };
+		36A100142F03250100778995 /* MoveBrowserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoveBrowserView.swift; sourceTree = "<group>"; };
+		36A100162F03250200778995 /* MoveNextRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoveNextRowView.swift; sourceTree = "<group>"; };
+		36A100182F03250300778995 /* MoveDetailRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoveDetailRowView.swift; sourceTree = "<group>"; };
+		36A1001A2F03250400778995 /* MoveSupplementaryRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoveSupplementaryRowView.swift; sourceTree = "<group>"; };
+		36A1001C2F03250500778995 /* MovePlayerEntryRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovePlayerEntryRowView.swift; sourceTree = "<group>"; };
 		35AFF43D2BA093B500737E1A /* FrameData */ = {isa = PBXFileReference; lastKnownFileType = folder; path = FrameData; sourceTree = "<group>"; };
 		35B69A2220D8DA2700F05A2C /* CharacterSupplementaryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterSupplementaryCell.swift; sourceTree = "<group>"; };
 		35B69A2620D8DA4700F05A2C /* CharacterMoveCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterMoveCell.swift; sourceTree = "<group>"; };
@@ -194,6 +206,7 @@
 				3591001A2F03210500778995 /* CharacterSelection.swift */,
 				36A1000A2F03111200778995 /* HitboxVisibilitySettings.swift */,
 				36A1000C2F03111300778995 /* HitboxColorSettings.swift */,
+				36A100122F03250000778995 /* MoveBrowserModel.swift */,
 				3591001E2F03210700778995 /* MoveDestination.swift */,
 				3591001C2F03210600778995 /* MoveNode.swift */,
 				36A1000E2F03111400778995 /* PlaybackSettings.swift */,
@@ -209,8 +222,13 @@
 				359100122F03210100778995 /* CharacterSidebarView.swift */,
 				359100012F03000100778995 /* MaCherieApp.swift */,
 				359100022F03000100778995 /* MaCherieRootView.swift */,
+				36A100142F03250100778995 /* MoveBrowserView.swift */,
+				36A100182F03250300778995 /* MoveDetailRowView.swift */,
 				359100162F03210300778995 /* MoveDestinationView.swift */,
 				359100142F03210200778995 /* MoveNodeView.swift */,
+				36A100162F03250200778995 /* MoveNextRowView.swift */,
+				36A1001C2F03250500778995 /* MovePlayerEntryRowView.swift */,
+				36A1001A2F03250400778995 /* MoveSupplementaryRowView.swift */,
 				359100102F03210000778995 /* NavigationRootView.swift */,
 			);
 			path = SwiftUI;
@@ -441,13 +459,19 @@
 				35B9241A20D1194B0081BD00 /* CharactersViewController.swift in Sources */,
 				3505351520D1FDA600078847 /* CharacterMovesViewController.swift in Sources */,
 				3591001F2F03210700778995 /* MoveDestination.swift in Sources */,
+				36A100192F03250300778995 /* MoveDetailRowView.swift in Sources */,
+				36A100132F03250000778995 /* MoveBrowserModel.swift in Sources */,
+				36A100152F03250100778995 /* MoveBrowserView.swift in Sources */,
 				3566755320D2692F00DD26A4 /* UIColor+Integer.swift in Sources */,
 				35C41F4A237D35A900A1EBF7 /* MotionPlayerLayer.swift in Sources */,
 				359100172F03210300778995 /* MoveDestinationView.swift in Sources */,
 				35C41F3D237AB26000A1EBF7 /* MotionInfo.swift in Sources */,
 				3591001D2F03210600778995 /* MoveNode.swift in Sources */,
 				359100152F03210200778995 /* MoveNodeView.swift in Sources */,
+				36A100172F03250200778995 /* MoveNextRowView.swift in Sources */,
 				36A100072F03111100778995 /* MoveRepository.swift in Sources */,
+				36A1001D2F03250500778995 /* MovePlayerEntryRowView.swift in Sources */,
+				36A1001B2F03250400778995 /* MoveSupplementaryRowView.swift in Sources */,
 				359100112F03210000778995 /* NavigationRootView.swift in Sources */,
 				35EFE5C620D3A709007EB379 /* PopInteractor.swift in Sources */,
 				359100072F03000100778995 /* MaCherieApp.swift in Sources */,
