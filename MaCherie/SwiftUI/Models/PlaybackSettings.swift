@@ -15,6 +15,8 @@ final class PlaybackSettings {
         static let framesPerSecond = "PreferredFramesPerSecond"
     }
 
+    static let supportedFPSRange = 0...60
+
     private let userDefaults: UserDefaults
 
     var framesPerSecond: Int {
@@ -36,8 +38,8 @@ final class PlaybackSettings {
         framesPerSecond = Self.clamp(userDefaults.integer(forKey: Keys.framesPerSecond))
     }
 
-    private static func clamp(_ value: Int) -> Int {
-        min(max(value, 0), 60)
+    static func clamp(_ value: Int) -> Int {
+        min(max(value, supportedFPSRange.lowerBound), supportedFPSRange.upperBound)
     }
 
     static func defaultValues() -> [String: Any] {

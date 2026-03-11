@@ -16,6 +16,13 @@ struct MotionDataPipelineView: View {
     let skillCode: String
 
     @State private var loadState: LoadState = .idle
+    @State private var playerModel: MotionPlayerModel?
+    @State private var scrubbedFrame = 0.0
+    @State private var isScrubbing = false
+
+    private let frameNumberFormat = IntegerFormatStyle<Int>.number
+        .grouping(.never)
+        .precision(.integerLength(3...))
 
     var body: some View {
         ZStack {
@@ -44,9 +51,98 @@ struct MotionDataPipelineView: View {
             .padding(24)
             .background(.regularMaterial, in: RoundedRectangle(cornerRadius: 24, style: .continuous))
         case let .loaded(motionData):
-            ScrollView {
-                VStack(spacing: 20) {
-                    previewCard(for: motionData)
+            if let playerModel {
+                loadedContent(motionData: motionData, playerModel: playerModel)
+            } else {
+                ProgressView("Configuring player...")
+                    .padding(24)
+                    .background(.regularMaterial, in: RoundedRectangle(cornerRadius: 24, style: .continuous))
+            }
+        }
+    }
+
+    private func loadedContent(
+        motionData: MotionPlaybackData,
+        playerModel: MotionPlayerModel
+    ) -> some View {
+        ScrollView {
+            VStack(spacing: 20) {
+                previewCard(for: playerModel)
+
+                VStack(alignment: .leading, spacing: 16) {
+                    LabeledContent("Playback State", value: playbackStateLabel(for: playerModel.state))
+                    LabeledContent(
+                        "Frame",
+                        value: "\(formattedFrame(playerModel.currentFrameIndex)) / \(formattedFrame(motionData.frameCount))"
+                    )
+                    LabeledContent("FPS", value: "\(playerModel.framesPerSecond)")
+
+                    if motionData.frameCount > 1 {
+                        VStack(alignment: .leading, spacing: 8) {
+                            Text("Seek")
+                                .font(.headline)
+
+                            Slider(
+                                value: $scrubbedFrame,
+                                in: 0...Double(motionData.frameCount - 1),
+                                step: 1,
+                                onEditingChanged: handleScrubbingChange
+                            )
+                            .accessibilityLabel("Frame Position")
+                            .onChange(of: scrubbedFrame) { _, newValue in
+                                guard isScrubbing else {
+                                    return
+                                }
+
+                                playerModel.seek(to: Int(newValue))
+                            }
+
+                            HStack {
+                                Text(formattedFrame(0))
+                                Spacer()
+                                Text(formattedFrame(motionData.frameCount - 1))
+                            }
+                            .font(.caption.monospacedDigit())
+                            .foregroundStyle(.secondary)
+                        }
+                    }
+
+                    HStack(spacing: 12) {
+                        Button(action: playerModel.stepBackward) {
+                            Image(systemName: "backward.frame")
+                        }
+                        .accessibilityLabel("Previous Frame")
+
+                        Button {
+                            if playerModel.isPlaying {
+                                playerModel.pause()
+                            } else {
+                                playerModel.play()
+                            }
+                        } label: {
+                            Image(systemName: playerModel.isPlaying ? "pause.circle" : "play.circle")
+                        }
+                        .accessibilityLabel(playerModel.isPlaying ? "Pause" : "Play")
+
+                        Button(action: playerModel.stop) {
+                            Image(systemName: "stop.circle")
+                        }
+                        .accessibilityLabel("Stop")
+
+                        Button(action: playerModel.stepForward) {
+                            Image(systemName: "forward.frame")
+                        }
+                        .accessibilityLabel("Next Frame")
+                    }
+                    .buttonStyle(.borderedProminent)
+
+                    Stepper {
+                        Label("\(playerModel.framesPerSecond) FPS", systemImage: "gauge.with.dots.needle.33percent")
+                    } onIncrement: {
+                        playerModel.framesPerSecond += 1
+                    } onDecrement: {
+                        playerModel.framesPerSecond -= 1
+                    }
 
                     VStack(alignment: .leading, spacing: 12) {
                         Label("\(motionData.frameCount) motion frames", systemImage: "list.number")
@@ -66,36 +162,57 @@ struct MotionDataPipelineView: View {
                                 .foregroundStyle(.secondary)
                         }
 
-                        Text("Phase 9 is now loading and assembling motion playback data without going through UIKit views or controllers.")
+                        if playerModel.framesPerSecond == 0 {
+                            Text("0 FPS keeps the player on the current frame until the playback speed is raised.")
+                                .font(.footnote)
+                                .foregroundStyle(.secondary)
+                        }
+
+                        Text("Phase 10 now drives frame advancement through MotionPlayerModel, using a single clock-based task instead of multiple UIKit timers.")
                             .font(.footnote)
                             .foregroundStyle(.secondary)
                     }
-                    .frame(maxWidth: .infinity, alignment: .leading)
-                    .padding(20)
-                    .background(.regularMaterial, in: RoundedRectangle(cornerRadius: 28, style: .continuous))
                 }
-                .frame(maxWidth: 560)
-                .frame(maxWidth: .infinity)
+                .frame(maxWidth: .infinity, alignment: .leading)
+                .padding(20)
+                .background(.regularMaterial, in: RoundedRectangle(cornerRadius: 28, style: .continuous))
             }
-            .scrollIndicators(.hidden)
+            .frame(maxWidth: 560)
+            .frame(maxWidth: .infinity)
+        }
+        .scrollIndicators(.hidden)
+        .onChange(of: playerModel.currentFrameIndex, initial: true) { _, newValue in
+            guard !isScrubbing else {
+                return
+            }
+
+            scrubbedFrame = Double(newValue)
+        }
+        .onDisappear {
+            playerModel.pause()
         }
     }
 
     @ViewBuilder
-    private func previewCard(for motionData: MotionPlaybackData) -> some View {
+    private func previewCard(for playerModel: MotionPlayerModel) -> some View {
         VStack(spacing: 16) {
-            if let previewImage = motionData.previewFrame?.resource.cgImage {
-                Image(decorative: previewImage, scale: 1)
-                    .resizable()
-                    .interpolation(.none)
-                    .scaledToFit()
-                    .frame(maxWidth: 420)
-                    .accessibilityHidden(true)
+            if let previewImage = playerModel.currentFrame?.resource.cgImage {
+                VStack(spacing: 12) {
+                    Image(decorative: previewImage, scale: 1)
+                        .resizable()
+                        .interpolation(.none)
+                        .scaledToFit()
+                        .frame(maxWidth: 420)
+                        .accessibilityHidden(true)
+
+                    Text("Current frame: \(formattedFrame(playerModel.currentFrameIndex))")
+                        .font(.headline.monospacedDigit())
+                }
             } else {
                 ContentUnavailableView(
                     "Preview Unavailable",
                     systemImage: "photo",
-                    description: Text("The motion data decoded successfully, but the first sprite frame is missing.")
+                    description: Text("The motion data decoded successfully, but the current sprite frame is missing.")
                 )
             }
         }
@@ -110,6 +227,10 @@ struct MotionDataPipelineView: View {
 
     @MainActor
     private func loadMotion() async {
+        playerModel?.pause()
+        playerModel = nil
+        scrubbedFrame = 0
+        isScrubbing = false
         loadState = .loading
 
         do {
@@ -117,10 +238,47 @@ struct MotionDataPipelineView: View {
                 characterCode: characterCode,
                 skillCode: skillCode
             )
+            playerModel = MotionPlayerModel(
+                motionData: motionData,
+                playbackSettings: appModel.settings.playback
+            )
             loadState = .loaded(motionData)
         } catch {
             loadState = .failed(error.localizedDescription)
         }
+    }
+
+    private func handleScrubbingChange(_ isEditing: Bool) {
+        guard let playerModel else {
+            return
+        }
+
+        isScrubbing = isEditing
+
+        if isEditing {
+            playerModel.beginSeeking()
+            playerModel.seek(to: Int(scrubbedFrame))
+        } else {
+            playerModel.seek(to: Int(scrubbedFrame))
+            playerModel.endSeeking()
+        }
+    }
+
+    private func playbackStateLabel(for state: MotionPlayerModel.State) -> String {
+        switch state {
+        case .stopped:
+            "Stopped"
+        case .playing:
+            "Playing"
+        case .paused:
+            "Paused"
+        case .seeking:
+            "Seeking"
+        }
+    }
+
+    private func formattedFrame(_ frame: Int) -> String {
+        frame.formatted(frameNumberFormat)
     }
 }
 
