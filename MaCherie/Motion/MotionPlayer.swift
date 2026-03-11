@@ -25,13 +25,21 @@ extension MotionPlayer {
 final class MotionPlayer: NSObject, ObservableObject {
     var motionInfo: MotionInfo
 
-    var currentFPS = UserDefaults.standard.integer(forKey: PreferredFramesPerSecondKey) {
+    private let playbackSettings: PlaybackSettings
+
+    var currentFPS: Int {
         didSet {
-            UserDefaults.standard.set(currentFPS, forKey: PreferredFramesPerSecondKey)
+            let clampedFPS = min(max(currentFPS, 0), 60)
+            if currentFPS != clampedFPS {
+                currentFPS = clampedFPS
+                return
+            }
+
+            playbackSettings.framesPerSecond = clampedFPS
 
             if state == .playing {
                 playTimer?.invalidate()
-                playTimer = Timer.scheduledTimer(timeInterval: 1 / Double(currentFPS), target: self, selector: #selector(advanceFrame), userInfo: nil, repeats: true)
+                playTimer = Timer.scheduledTimer(timeInterval: 1 / Double(clampedFPS), target: self, selector: #selector(advanceFrame), userInfo: nil, repeats: true)
             }
         }
     }
@@ -45,8 +53,10 @@ final class MotionPlayer: NSObject, ObservableObject {
     private var seekForwardTimer: Timer?
     private var seekBackwardTimer: Timer?
 
-    init(motionInfo: MotionInfo) {
+    init(motionInfo: MotionInfo, playbackSettings: PlaybackSettings = AppSettings.standard.playback) {
         self.motionInfo = motionInfo
+        self.playbackSettings = playbackSettings
+        self.currentFPS = playbackSettings.framesPerSecond
         super.init()
     }
 

@@ -18,7 +18,7 @@ final class AppModel {
     let motionRepository: MotionRepository
 
     init(
-        settings: AppSettings = AppSettings(),
+        settings: AppSettings = .standard,
         legacyAppController: LegacyAppController = .shared,
         characterRepository: CharacterRepository = CharacterRepository(),
         moveRepository: MoveRepository = MoveRepository(),
@@ -29,7 +29,5 @@ final class AppModel {
         self.characterRepository = characterRepository
         self.moveRepository = moveRepository
         self.motionRepository = motionRepository
-
-        settings.registerDefaults()
     }
 }

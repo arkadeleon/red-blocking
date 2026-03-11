@@ -14,6 +14,9 @@
 		3591000A2F03000100778995 /* LegacyRootContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 359100042F03000100778995 /* LegacyRootContainerView.swift */; };
 		3591000B2F03000100778995 /* AppModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 359100052F03000100778995 /* AppModel.swift */; };
 		3591000C2F03000100778995 /* AppSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 359100062F03000100778995 /* AppSettings.swift */; };
+		36A1000B2F03111200778995 /* HitboxVisibilitySettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36A1000A2F03111200778995 /* HitboxVisibilitySettings.swift */; };
+		36A1000D2F03111300778995 /* HitboxColorSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36A1000C2F03111300778995 /* HitboxColorSettings.swift */; };
+		36A1000F2F03111400778995 /* PlaybackSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36A1000E2F03111400778995 /* PlaybackSettings.swift */; };
 		36A100032F03111100778995 /* BundleResourceLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36A100022F03111100778995 /* BundleResourceLoader.swift */; };
 		36A100052F03111100778995 /* CharacterRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36A100042F03111100778995 /* CharacterRepository.swift */; };
 		36A100072F03111100778995 /* MoveRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36A100062F03111100778995 /* MoveRepository.swift */; };
@@ -67,6 +70,9 @@
 		359100042F03000100778995 /* LegacyRootContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LegacyRootContainerView.swift; sourceTree = "<group>"; };
 		359100052F03000100778995 /* AppModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppModel.swift; sourceTree = "<group>"; };
 		359100062F03000100778995 /* AppSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppSettings.swift; sourceTree = "<group>"; };
+		36A1000A2F03111200778995 /* HitboxVisibilitySettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HitboxVisibilitySettings.swift; sourceTree = "<group>"; };
+		36A1000C2F03111300778995 /* HitboxColorSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HitboxColorSettings.swift; sourceTree = "<group>"; };
+		36A1000E2F03111400778995 /* PlaybackSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaybackSettings.swift; sourceTree = "<group>"; };
 		36A100022F03111100778995 /* BundleResourceLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BundleResourceLoader.swift; sourceTree = "<group>"; };
 		36A100042F03111100778995 /* CharacterRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterRepository.swift; sourceTree = "<group>"; };
 		36A100062F03111100778995 /* MoveRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoveRepository.swift; sourceTree = "<group>"; };
@@ -164,6 +170,9 @@
 			children = (
 				359100052F03000100778995 /* AppModel.swift */,
 				359100062F03000100778995 /* AppSettings.swift */,
+				36A1000A2F03111200778995 /* HitboxVisibilitySettings.swift */,
+				36A1000C2F03111300778995 /* HitboxColorSettings.swift */,
+				36A1000E2F03111400778995 /* PlaybackSettings.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -387,6 +396,8 @@
 				36A100052F03111100778995 /* CharacterRepository.swift in Sources */,
 				35B69A2420D8DA2700F05A2C /* CharacterSupplementaryCell.swift in Sources */,
 				352FE9672382840D0083CCF0 /* CharacterBackgroundView.swift in Sources */,
+				36A1000D2F03111300778995 /* HitboxColorSettings.swift in Sources */,
+				36A1000B2F03111200778995 /* HitboxVisibilitySettings.swift in Sources */,
 				35C41F4C237D3E7E00A1EBF7 /* MotionPlayer.swift in Sources */,
 				35EFE5C220D3A187007EB379 /* PushAnimator.swift in Sources */,
 				359100092F03000100778995 /* LegacyAppController.swift in Sources */,
@@ -405,6 +416,7 @@
 				35EFE5C620D3A709007EB379 /* PopInteractor.swift in Sources */,
 				359100072F03000100778995 /* MaCherieApp.swift in Sources */,
 				36A100092F03111100778995 /* MotionRepository.swift in Sources */,
+				36A1000F2F03111400778995 /* PlaybackSettings.swift in Sources */,
 				3566755520D26A2800DD26A4 /* ApplicationDataManager.swift in Sources */,
 				3591000B2F03000100778995 /* AppModel.swift in Sources */,
 				35FA31A220D8B33C009A5D7B /* Character.swift in Sources */,

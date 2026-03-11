@@ -10,6 +10,8 @@ import UIKit
 import Combine
 
 class MotionPlayerViewController: UIViewController {
+    private let settings = AppSettings.standard
+
     @IBOutlet var playerView: UIView!
     private var playerLayer: MotionPlayerLayer!
 
@@ -48,37 +50,14 @@ class MotionPlayerViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        playerLayer = MotionPlayerLayer()
+        playerLayer = MotionPlayerLayer(
+            hitboxVisibilitySettings: settings.hitboxVisibility,
+            hitboxColorSettings: settings.hitboxColors
+        )
         playerLayer.frame = playerView.bounds
         playerView.layer.addSublayer(playerLayer)
 
-        player1PassiveHitboxesCheckbox.isSelected = !UserDefaults.standard.bool(forKey: Player1PassiveHitboxHiddenKey)
-        player1OtherVulnerabilityHitboxesCheckbox.isSelected = !UserDefaults.standard.bool(forKey: Player1OtherVulnerabilityHitboxHiddenKey)
-        player1ActiveHitboxesCheckbox.isSelected = !UserDefaults.standard.bool(forKey: Player1ActiveHitboxHiddenKey)
-        player1ThrowHitboxesCheckbox.isSelected = !UserDefaults.standard.bool(forKey: Player1ThrowHitboxHiddenKey)
-        player1ThrowableHitboxesCheckbox.isSelected = !UserDefaults.standard.bool(forKey: Player1ThrowableHitboxHiddenKey)
-        player1PushHitboxesCheckbox.isSelected = !UserDefaults.standard.bool(forKey: Player1PushHitboxHiddenKey)
-
-        player2PassiveHitboxesCheckbox.isSelected = !UserDefaults.standard.bool(forKey: Player2PassiveHitboxHiddenKey)
-        player2OtherVulnerabilityHitboxesCheckbox.isSelected = !UserDefaults.standard.bool(forKey: Player2OtherVulnerabilityHitboxHiddenKey)
-        player2ActiveHitboxesCheckbox.isSelected = !UserDefaults.standard.bool(forKey: Player2ActiveHitboxHiddenKey)
-        player2ThrowHitboxesCheckbox.isSelected = !UserDefaults.standard.bool(forKey: Player2ThrowHitboxHiddenKey)
-        player2ThrowableHitboxesCheckbox.isSelected = !UserDefaults.standard.bool(forKey: Player2ThrowableHitboxHiddenKey)
-        player2PushHitboxesCheckbox.isSelected = !UserDefaults.standard.bool(forKey: Player2PushHitboxHiddenKey)
-
-        player1PassiveHitboxesCheckbox.tintColor = UIColor(rgb: UserDefaults.standard.integer(forKey: PreferredPassiveHitboxRGBColorKey), alpha:1)
-        player1OtherVulnerabilityHitboxesCheckbox.tintColor = UIColor(rgb: UserDefaults.standard.integer(forKey: PreferredOtherVulnerabilityHitboxRGBColorKey), alpha:1)
-        player1ActiveHitboxesCheckbox.tintColor = UIColor(rgb: UserDefaults.standard.integer(forKey: PreferredActiveHitboxRGBColorKey), alpha:1)
-        player1ThrowHitboxesCheckbox.tintColor = UIColor(rgb: UserDefaults.standard.integer(forKey: PreferredThrowHitboxRGBColorKey), alpha:1)
-        player1ThrowableHitboxesCheckbox.tintColor = UIColor(rgb: UserDefaults.standard.integer(forKey: PreferredThrowableHitboxRGBColorKey), alpha:1)
-        player1PushHitboxesCheckbox.tintColor = UIColor(rgb: UserDefaults.standard.integer(forKey: PreferredPushHitboxRGBColorKey), alpha:1)
-
-        player2PassiveHitboxesCheckbox.tintColor = UIColor(rgb: UserDefaults.standard.integer(forKey: PreferredPassiveHitboxRGBColorKey), alpha:1)
-        player2OtherVulnerabilityHitboxesCheckbox.tintColor = UIColor(rgb: UserDefaults.standard.integer(forKey: PreferredOtherVulnerabilityHitboxRGBColorKey), alpha:1)
-        player2ActiveHitboxesCheckbox.tintColor = UIColor(rgb: UserDefaults.standard.integer(forKey: PreferredActiveHitboxRGBColorKey), alpha:1)
-        player2ThrowHitboxesCheckbox.tintColor = UIColor(rgb: UserDefaults.standard.integer(forKey: PreferredThrowHitboxRGBColorKey), alpha:1)
-        player2ThrowableHitboxesCheckbox.tintColor = UIColor(rgb: UserDefaults.standard.integer(forKey: PreferredThrowableHitboxRGBColorKey), alpha:1)
-        player2PushHitboxesCheckbox.tintColor = UIColor(rgb: UserDefaults.standard.integer(forKey: PreferredPushHitboxRGBColorKey), alpha:1)
+        configureHitboxCheckboxes()
 
         let checkboxes: [UIButton] = [
             player1PassiveHitboxesCheckbox,
@@ -140,8 +119,7 @@ class MotionPlayerViewController: UIViewController {
 
     @IBAction func fpsChanged(_ sender: Any) {
         var currentFPS = fpsTextField.text.flatMap { Int($0) } ?? 0
-        currentFPS = max(currentFPS, 0)
-        currentFPS = min(currentFPS, 60)
+        currentFPS = min(max(currentFPS, 0), 60)
         fpsTextField.text = String(currentFPS)
         player?.currentFPS = currentFPS
     }
@@ -165,75 +143,51 @@ class MotionPlayerViewController: UIViewController {
     }
 
     @IBAction func togglePlayer1PassiveHitboxes(_ checkbox: UIButton) {
-        checkbox.isSelected = !checkbox.isSelected
-        checkbox.backgroundColor = checkbox.isSelected ? checkbox.tintColor : .clear
-        UserDefaults.standard.set(!checkbox.isSelected, forKey: Player1PassiveHitboxHiddenKey)
+        toggle(checkbox, visibility: \.player1PassiveVisible)
     }
 
     @IBAction func togglePlayer1OtherVulnerabilityHitboxes(_ checkbox: UIButton) {
-        checkbox.isSelected = !checkbox.isSelected
-        checkbox.backgroundColor = checkbox.isSelected ? checkbox.tintColor : .clear
-        UserDefaults.standard.set(!checkbox.isSelected, forKey: Player1OtherVulnerabilityHitboxHiddenKey)
+        toggle(checkbox, visibility: \.player1OtherVulnerabilityVisible)
     }
 
     @IBAction func togglePlayer1ActiveHitboxes(_ checkbox: UIButton) {
-        checkbox.isSelected = !checkbox.isSelected
-        checkbox.backgroundColor = checkbox.isSelected ? checkbox.tintColor : .clear
-        UserDefaults.standard.set(!checkbox.isSelected, forKey: Player1ActiveHitboxHiddenKey)
+        toggle(checkbox, visibility: \.player1ActiveVisible)
     }
 
     @IBAction func togglePlayer1ThrowHitboxes(_ checkbox: UIButton) {
-        checkbox.isSelected = !checkbox.isSelected
-        checkbox.backgroundColor = checkbox.isSelected ? checkbox.tintColor : .clear
-        UserDefaults.standard.set(!checkbox.isSelected, forKey: Player1ThrowHitboxHiddenKey)
+        toggle(checkbox, visibility: \.player1ThrowVisible)
     }
 
     @IBAction func togglePlayer1ThrowableHitboxes(_ checkbox: UIButton) {
-        checkbox.isSelected = !checkbox.isSelected
-        checkbox.backgroundColor = checkbox.isSelected ? checkbox.tintColor : .clear
-        UserDefaults.standard.set(!checkbox.isSelected, forKey: Player1ThrowableHitboxHiddenKey)
+        toggle(checkbox, visibility: \.player1ThrowableVisible)
     }
 
     @IBAction func togglePlayer1PushHitboxes(_ checkbox: UIButton) {
-        checkbox.isSelected = !checkbox.isSelected
-        checkbox.backgroundColor = checkbox.isSelected ? checkbox.tintColor : .clear
-        UserDefaults.standard.set(!checkbox.isSelected, forKey: Player1PushHitboxHiddenKey)
+        toggle(checkbox, visibility: \.player1PushVisible)
     }
 
     @IBAction func togglePlayer2PassiveHitboxes(_ checkbox: UIButton) {
-        checkbox.isSelected = !checkbox.isSelected
-        checkbox.backgroundColor = checkbox.isSelected ? checkbox.tintColor : .clear
-        UserDefaults.standard.set(!checkbox.isSelected, forKey: Player2PassiveHitboxHiddenKey)
+        toggle(checkbox, visibility: \.player2PassiveVisible)
     }
 
     @IBAction func togglePlayer2OtherVulnerabilityHitboxes(_ checkbox: UIButton) {
-        checkbox.isSelected = !checkbox.isSelected
-        checkbox.backgroundColor = checkbox.isSelected ? checkbox.tintColor : .clear
-        UserDefaults.standard.set(!checkbox.isSelected, forKey: Player2OtherVulnerabilityHitboxHiddenKey)
+        toggle(checkbox, visibility: \.player2OtherVulnerabilityVisible)
     }
 
     @IBAction func togglePlayer2ActiveHitboxes(_ checkbox: UIButton) {
-        checkbox.isSelected = !checkbox.isSelected
-        checkbox.backgroundColor = checkbox.isSelected ? checkbox.tintColor : .clear
-        UserDefaults.standard.set(!checkbox.isSelected, forKey: Player2ActiveHitboxHiddenKey)
+        toggle(checkbox, visibility: \.player2ActiveVisible)
     }
 
     @IBAction func togglePlayer2ThrowHitboxes(_ checkbox: UIButton) {
-        checkbox.isSelected = !checkbox.isSelected
-        checkbox.backgroundColor = checkbox.isSelected ? checkbox.tintColor : .clear
-        UserDefaults.standard.set(!checkbox.isSelected, forKey: Player2ThrowHitboxHiddenKey)
+        toggle(checkbox, visibility: \.player2ThrowVisible)
     }
 
     @IBAction func togglePlayer2ThrowableHitboxes(_ checkbox: UIButton) {
-        checkbox.isSelected = !checkbox.isSelected
-        checkbox.backgroundColor = checkbox.isSelected ? checkbox.tintColor : .clear
-        UserDefaults.standard.set(!checkbox.isSelected, forKey: Player2ThrowableHitboxHiddenKey)
+        toggle(checkbox, visibility: \.player2ThrowableVisible)
     }
 
     @IBAction func togglePlayer2PushHitboxes(_ checkbox: UIButton) {
-        checkbox.isSelected = !checkbox.isSelected
-        checkbox.backgroundColor = checkbox.isSelected ? checkbox.tintColor : .clear
-        UserDefaults.standard.set(!checkbox.isSelected, forKey: Player2PushHitboxHiddenKey)
+        toggle(checkbox, visibility: \.player2PushVisible)
     }
 
     // MARK: - Playback
@@ -265,7 +219,7 @@ class MotionPlayerViewController: UIViewController {
             return
         }
 
-        let player = MotionPlayer(motionInfo: motionInfo)
+        let player = MotionPlayer(motionInfo: motionInfo, playbackSettings: settings.playback)
         playSubscription = player.objectWillChange.sink(receiveValue: { _ in
             let currentFrame = player.currentFrame
             self.playerLayer.motionFrame = motionInfo.frames[currentFrame]
@@ -273,6 +227,41 @@ class MotionPlayerViewController: UIViewController {
             self.progressControl.value = Float(currentFrame)
         })
         self.player = player
+        fpsTextField.text = String(player.currentFPS)
+    }
+
+    private func configureHitboxCheckboxes() {
+        let visibility = settings.hitboxVisibility
+        let colors = settings.hitboxColors
+
+        configureHitboxCheckbox(player1PassiveHitboxesCheckbox, isVisible: visibility.player1PassiveVisible, rgb: colors.passiveRGB)
+        configureHitboxCheckbox(player1OtherVulnerabilityHitboxesCheckbox, isVisible: visibility.player1OtherVulnerabilityVisible, rgb: colors.otherVulnerabilityRGB)
+        configureHitboxCheckbox(player1ActiveHitboxesCheckbox, isVisible: visibility.player1ActiveVisible, rgb: colors.activeRGB)
+        configureHitboxCheckbox(player1ThrowHitboxesCheckbox, isVisible: visibility.player1ThrowVisible, rgb: colors.throwRGB)
+        configureHitboxCheckbox(player1ThrowableHitboxesCheckbox, isVisible: visibility.player1ThrowableVisible, rgb: colors.throwableRGB)
+        configureHitboxCheckbox(player1PushHitboxesCheckbox, isVisible: visibility.player1PushVisible, rgb: colors.pushRGB)
+
+        configureHitboxCheckbox(player2PassiveHitboxesCheckbox, isVisible: visibility.player2PassiveVisible, rgb: colors.passiveRGB)
+        configureHitboxCheckbox(player2OtherVulnerabilityHitboxesCheckbox, isVisible: visibility.player2OtherVulnerabilityVisible, rgb: colors.otherVulnerabilityRGB)
+        configureHitboxCheckbox(player2ActiveHitboxesCheckbox, isVisible: visibility.player2ActiveVisible, rgb: colors.activeRGB)
+        configureHitboxCheckbox(player2ThrowHitboxesCheckbox, isVisible: visibility.player2ThrowVisible, rgb: colors.throwRGB)
+        configureHitboxCheckbox(player2ThrowableHitboxesCheckbox, isVisible: visibility.player2ThrowableVisible, rgb: colors.throwableRGB)
+        configureHitboxCheckbox(player2PushHitboxesCheckbox, isVisible: visibility.player2PushVisible, rgb: colors.pushRGB)
+    }
+
+    private func configureHitboxCheckbox(_ checkbox: UIButton, isVisible: Bool, rgb: Int) {
+        checkbox.isSelected = isVisible
+        checkbox.tintColor = UIColor(rgb: rgb, alpha: 1)
+    }
+
+    private func toggle(
+        _ checkbox: UIButton,
+        visibility: ReferenceWritableKeyPath<HitboxVisibilitySettings, Bool>
+    ) {
+        checkbox.isSelected.toggle()
+        checkbox.backgroundColor = checkbox.isSelected ? checkbox.tintColor : .clear
+        settings.hitboxVisibility[keyPath: visibility] = checkbox.isSelected
+        playerLayer.setNeedsDisplay()
     }
 }
 

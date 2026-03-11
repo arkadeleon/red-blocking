@@ -9,40 +9,33 @@
 import Foundation
 import Observation
 
-@MainActor
 @Observable
 final class AppSettings {
+    nonisolated(unsafe) static let standard = AppSettings()
+
     let userDefaults: UserDefaults
 
-    init(userDefaults: UserDefaults = .standard) {
+    let hitboxVisibility: HitboxVisibilitySettings
+    let hitboxColors: HitboxColorSettings
+    let playback: PlaybackSettings
+
+    init(
+        userDefaults: UserDefaults = .standard,
+        hitboxVisibility: HitboxVisibilitySettings? = nil,
+        hitboxColors: HitboxColorSettings? = nil,
+        playback: PlaybackSettings? = nil
+    ) {
         self.userDefaults = userDefaults
+        userDefaults.register(defaults: Self.defaultValues())
+
+        self.hitboxVisibility = hitboxVisibility ?? HitboxVisibilitySettings(userDefaults: userDefaults)
+        self.hitboxColors = hitboxColors ?? HitboxColorSettings(userDefaults: userDefaults)
+        self.playback = playback ?? PlaybackSettings(userDefaults: userDefaults)
     }
 
-    func registerDefaults() {
-        userDefaults.register(defaults: defaultValues)
-    }
-
-    private var defaultValues: [String: Any] {
-        [
-            Player1PassiveHitboxHiddenKey: false,
-            Player1OtherVulnerabilityHitboxHiddenKey: false,
-            Player1ActiveHitboxHiddenKey: false,
-            Player1ThrowHitboxHiddenKey: false,
-            Player1ThrowableHitboxHiddenKey: false,
-            Player1PushHitboxHiddenKey: false,
-            Player2PassiveHitboxHiddenKey: true,
-            Player2OtherVulnerabilityHitboxHiddenKey: true,
-            Player2ActiveHitboxHiddenKey: true,
-            Player2ThrowHitboxHiddenKey: true,
-            Player2ThrowableHitboxHiddenKey: true,
-            Player2PushHitboxHiddenKey: true,
-            PreferredPassiveHitboxRGBColorKey: 0x0000FF,
-            PreferredOtherVulnerabilityHitboxRGBColorKey: 0x007FFF,
-            PreferredActiveHitboxRGBColorKey: 0xFF0000,
-            PreferredThrowHitboxRGBColorKey: 0xFF7F00,
-            PreferredThrowableHitboxRGBColorKey: 0x00FF00,
-            PreferredPushHitboxRGBColorKey: 0x7F00FF,
-            PreferredFramesPerSecondKey: 30,
-        ]
+    private static func defaultValues() -> [String: Any] {
+        HitboxVisibilitySettings.defaultValues()
+            .merging(HitboxColorSettings.defaultValues()) { _, newValue in newValue }
+            .merging(PlaybackSettings.defaultValues()) { _, newValue in newValue }
     }
 }
