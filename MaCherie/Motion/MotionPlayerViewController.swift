@@ -38,29 +38,12 @@ class MotionPlayerViewController: UIViewController {
     var characterCode = ""
     var skillCode = ""
 
-    private var observer: NSObjectProtocol!
-
     private var motionInfo: MotionInfo?
 
     private var player: MotionPlayer?
 
     private var downloadSubscription: AnyCancellable?
     private var playSubscription: AnyCancellable?
-
-    required init?(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder)
-
-        observer = NotificationCenter.default.addObserver(forName: UIApplication.didEnterBackgroundNotification, object: nil, queue: nil) { _ in
-            var backgroundTaskIdentifier = UIBackgroundTaskIdentifier(rawValue: 0)
-            backgroundTaskIdentifier = UIApplication.shared.beginBackgroundTask(expirationHandler: {
-                UIApplication.shared.endBackgroundTask(backgroundTaskIdentifier)
-            })
-        }
-    }
-
-    deinit {
-        NotificationCenter.default.removeObserver(observer)
-    }
 
     override func viewDidLoad() {
         super.viewDidLoad()

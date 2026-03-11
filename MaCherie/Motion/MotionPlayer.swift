@@ -21,7 +21,8 @@ extension MotionPlayer {
     }
 }
 
-class MotionPlayer: ObservableObject {
+@MainActor
+final class MotionPlayer: NSObject, ObservableObject {
     var motionInfo: MotionInfo
 
     var currentFPS = UserDefaults.standard.integer(forKey: PreferredFramesPerSecondKey) {
@@ -30,9 +31,7 @@ class MotionPlayer: ObservableObject {
 
             if state == .playing {
                 playTimer?.invalidate()
-                playTimer = Timer.scheduledTimer(withTimeInterval: 1 / Double(currentFPS), repeats: true) { [unowned self] _ in
-                    self.currentFrame = (self.currentFrame + 1) % self.totalFrames
-                }
+                playTimer = Timer.scheduledTimer(timeInterval: 1 / Double(currentFPS), target: self, selector: #selector(advanceFrame), userInfo: nil, repeats: true)
             }
         }
     }
@@ -48,17 +47,20 @@ class MotionPlayer: ObservableObject {
 
     init(motionInfo: MotionInfo) {
         self.motionInfo = motionInfo
+        super.init()
     }
 
     deinit {
-        playTimer?.invalidate()
-        playTimer = nil
+        MainActor.assumeIsolated {
+            playTimer?.invalidate()
+            playTimer = nil
 
-        seekBackwardTimer?.invalidate()
-        seekBackwardTimer = nil
+            seekForwardTimer?.invalidate()
+            seekForwardTimer = nil
 
-        seekBackwardTimer?.invalidate()
-        seekBackwardTimer = nil
+            seekBackwardTimer?.invalidate()
+            seekBackwardTimer = nil
+        }
     }
 
     func play() {
@@ -67,9 +69,7 @@ class MotionPlayer: ObservableObject {
         currentFrame = (currentFrame + 1) % totalFrames
 
         if playTimer == nil {
-            playTimer = Timer.scheduledTimer(withTimeInterval: 1 / Double(currentFPS), repeats: true) { [unowned self] _ in
-                self.currentFrame = (self.currentFrame + 1) % self.totalFrames
-            }
+            playTimer = Timer.scheduledTimer(timeInterval: 1 / Double(currentFPS), target: self, selector: #selector(advanceFrame), userInfo: nil, repeats: true)
         }
     }
 
@@ -119,9 +119,7 @@ class MotionPlayer: ObservableObject {
         currentFrame = (currentFrame + 1) % totalFrames
 
         if seekForwardTimer == nil {
-            seekForwardTimer = Timer.scheduledTimer(withTimeInterval: 1 / Double(self.currentFPS), repeats: true) { [unowned self] _ in
-                self.currentFrame = (self.currentFrame + 1) % self.totalFrames
-            }
+            seekForwardTimer = Timer.scheduledTimer(timeInterval: 1 / Double(currentFPS), target: self, selector: #selector(advanceFrame), userInfo: nil, repeats: true)
         }
     }
 
@@ -147,9 +145,7 @@ class MotionPlayer: ObservableObject {
         currentFrame = (currentFrame - 1 + totalFrames) % totalFrames
 
         if seekBackwardTimer == nil {
-            seekBackwardTimer = Timer.scheduledTimer(withTimeInterval: 1 / Double(self.currentFPS), repeats: true) { [unowned self] _ in
-                self.currentFrame = (self.currentFrame - 1 + self.totalFrames) % self.totalFrames
-            }
+            seekBackwardTimer = Timer.scheduledTimer(timeInterval: 1 / Double(currentFPS), target: self, selector: #selector(rewindFrame), userInfo: nil, repeats: true)
         }
     }
 
@@ -158,5 +154,13 @@ class MotionPlayer: ObservableObject {
 
         seekBackwardTimer?.invalidate()
         seekBackwardTimer = nil
+    }
+
+    @objc private func advanceFrame() {
+        currentFrame = (currentFrame + 1) % totalFrames
+    }
+
+    @objc private func rewindFrame() {
+        currentFrame = (currentFrame - 1 + totalFrames) % totalFrames
     }
 }

@@ -8,8 +8,8 @@
 
 import UIKit
 
-@UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate {
+@main
+final class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
     var popInteractor: PopInteractor?
 
@@ -20,7 +20,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
         let splitViewController = window!.rootViewController as! UISplitViewController
         splitViewController.delegate = self
-        splitViewController.preferredDisplayMode = .allVisible
+        splitViewController.preferredDisplayMode = .oneBesideSecondary
         (splitViewController.viewControllers[0] as! UINavigationController).delegate = self
         (splitViewController.viewControllers[1] as! UINavigationController).delegate = self
 
