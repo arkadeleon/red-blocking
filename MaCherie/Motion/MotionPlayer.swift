@@ -23,7 +23,7 @@ extension MotionPlayer {
 
 @MainActor
 final class MotionPlayer: NSObject, ObservableObject {
-    var motionInfo: MotionInfo
+    let motionData: MotionPlaybackData
 
     private let playbackSettings: PlaybackSettings
 
@@ -45,7 +45,7 @@ final class MotionPlayer: NSObject, ObservableObject {
     }
 
     @Published private(set) var currentFrame = 0
-    private var totalFrames: Int { motionInfo.frames.count }
+    private var totalFrames: Int { motionData.frames.count }
 
     private(set) var state: State = .stopped
 
@@ -53,8 +53,8 @@ final class MotionPlayer: NSObject, ObservableObject {
     private var seekForwardTimer: Timer?
     private var seekBackwardTimer: Timer?
 
-    init(motionInfo: MotionInfo, playbackSettings: PlaybackSettings = AppSettings.standard.playback) {
-        self.motionInfo = motionInfo
+    init(motionData: MotionPlaybackData, playbackSettings: PlaybackSettings = AppSettings.standard.playback) {
+        self.motionData = motionData
         self.playbackSettings = playbackSettings
         self.currentFPS = playbackSettings.framesPerSecond
         super.init()

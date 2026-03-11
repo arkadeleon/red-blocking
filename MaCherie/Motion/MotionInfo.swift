@@ -6,22 +6,21 @@
 //  Copyright © 2019 Leon & Vane. All rights reserved.
 //
 
-import UIKit
+import Foundation
 
 struct MotionInfo {
-    var frames: [Frame]
+    let frames: [Frame]
 
     init(data: Data) throws {
-        let frames = try JSONDecoder().decode([String : Frame].self, from: data)
-        self.frames = frames.sorted { $0.key < $1.key }.map { $0.value }
+        let decodedFrames = try JSONDecoder().decode([String: Frame].self, from: data)
+        frames = decodedFrames.sorted { $0.key < $1.key }.map(\.value)
     }
 }
 
 extension MotionInfo {
     struct Frame: Decodable {
-        var image: UIImage?
-        var player1: Player
-        var player2: Player
+        let player1: Player
+        let player2: Player
 
         enum CodingKeys: String, CodingKey {
             case player1 = "P1"
@@ -32,25 +31,25 @@ extension MotionInfo {
 
 extension MotionInfo {
     struct Player: Decodable {
-        var hitboxes: Hitboxes
+        let hitboxes: Hitboxes
     }
 }
 
 extension MotionInfo.Player {
     struct Hitboxes: Decodable {
-        var passive: [String]
-        var otherVulnerability: [String]
-        var active: [String]
-        var `throw`: [String]
-        var throwable: [String]
-        var push: [String]
+        let passive: [String]
+        let otherVulnerability: [String]
+        let active: [String]
+        let `throw`: [String]
+        let throwable: [String]
+        let push: [String]
 
-        var passiveToDraw: [[Int]]
-        var otherVulnerabilityToDraw: [[Int]]
-        var activeToDraw: [[Int]]
-        var throwToDraw: [[Int]]
-        var throwableToDraw: [[Int]]
-        var pushToDraw: [[Int]]
+        let passiveToDraw: [[Int]]
+        let otherVulnerabilityToDraw: [[Int]]
+        let activeToDraw: [[Int]]
+        let throwToDraw: [[Int]]
+        let throwableToDraw: [[Int]]
+        let pushToDraw: [[Int]]
 
         enum CodingKeys: String, CodingKey {
             case passive = "p_hb"

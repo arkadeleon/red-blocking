@@ -8,7 +8,20 @@
 
 import Foundation
 import ImageIO
-import UIKit
+
+enum MotionRepositoryError: LocalizedError {
+    case emptyMotionData(path: String)
+    case emptySpriteSheet(path: String)
+
+    var errorDescription: String? {
+        switch self {
+        case let .emptyMotionData(path):
+            "Motion data is empty at path: \(path)"
+        case let .emptySpriteSheet(path):
+            "Sprite sheet has no decodable frames at path: \(path)"
+        }
+    }
+}
 
 struct MotionRepository {
     private let resourceLoader: BundleResourceLoader
@@ -17,30 +30,37 @@ struct MotionRepository {
         resourceLoader = BundleResourceLoader(bundle: bundle)
     }
 
-    func loadMotion(characterCode: String, skillCode: String) throws -> MotionInfo {
+    func prepareMotion(characterCode: String, skillCode: String) throws -> MotionPlaybackData {
         let path = "FrameData/\(characterCode)/\(characterCode)_\(skillCode)"
         let data = try resourceLoader.data(at: "\(path).json")
-        var motionInfo = try MotionInfo(data: data)
-        let images = try loadImages(at: "\(path).png")
+        let motionInfo = try MotionInfo(data: data)
 
-        for (index, image) in images.enumerated() where motionInfo.frames.indices.contains(index) {
-            motionInfo.frames[index].image = image.map(UIImage.init(cgImage:))
+        guard motionInfo.frames.isEmpty == false else {
+            throw MotionRepositoryError.emptyMotionData(path: "\(path).json")
         }
 
-        return motionInfo
-    }
+        let imageStore = MotionFrameImageStore(
+            imageSource: try resourceLoader.imageSource(at: "\(path).png")
+        )
 
-    private func loadImages(at path: String) throws -> [CGImage?] {
-        let imageSource = try resourceLoader.imageSource(at: path)
-        let count = CGImageSourceGetCount(imageSource)
-        var images: [CGImage?] = []
-        images.reserveCapacity(count)
-
-        for index in 0..<count {
-            let image = CGImageSourceCreateImageAtIndex(imageSource, index, nil)
-            images.append(image)
+        guard imageStore.frameCount > 0 else {
+            throw MotionRepositoryError.emptySpriteSheet(path: "\(path).png")
         }
 
-        return images
+        let frames = motionInfo.frames.enumerated().map { index, frame in
+            MotionFrame(
+                index: index,
+                player1: frame.player1,
+                player2: frame.player2,
+                resource: MotionFrameResource(index: index, imageStore: imageStore)
+            )
+        }
+
+        return MotionPlaybackData(
+            characterCode: characterCode,
+            skillCode: skillCode,
+            spriteFrameCount: imageStore.frameCount,
+            frames: frames
+        )
     }
 }

@@ -19,7 +19,7 @@ class MotionPlayerLayer: CALayer {
     let hitboxVisibilitySettings: HitboxVisibilitySettings
     let hitboxColorSettings: HitboxColorSettings
 
-    var motionFrame: MotionInfo.Frame? {
+    var motionFrame: MotionFrame? {
         didSet {
             setNeedsDisplay()
         }
@@ -53,7 +53,7 @@ class MotionPlayerLayer: CALayer {
 
         let boundingBox = ctx.boundingBoxOfClipPath
 
-        if let image = frame.image?.cgImage {
+        if let image = frame.resource.cgImage {
             ctx.saveGState()
             ctx.translateBy(x: 0, y: boundingBox.height)
             ctx.scaleBy(x: 1, y: -1)

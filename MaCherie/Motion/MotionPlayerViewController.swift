@@ -40,12 +40,16 @@ class MotionPlayerViewController: UIViewController {
     var characterCode = ""
     var skillCode = ""
 
-    private var motionInfo: MotionInfo?
+    private var motionData: MotionPlaybackData?
 
     private var player: MotionPlayer?
 
     private var downloadSubscription: AnyCancellable?
     private var playSubscription: AnyCancellable?
+
+    private let frameNumberFormat = IntegerFormatStyle<Int>.number
+        .grouping(.never)
+        .precision(.integerLength(3...))
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -198,36 +202,41 @@ class MotionPlayerViewController: UIViewController {
         progressControl.isUserInteractionEnabled = false
 
         Task {
-            let downloader = MotionDownloader(characterCode: characterCode, skillCode: skillCode)
-            let motionInfo = try await downloader.download()
+            do {
+                let downloader = MotionDownloader(characterCode: characterCode, skillCode: skillCode)
+                let motionData = try await downloader.download()
 
-            self.motionInfo = motionInfo
+                self.motionData = motionData
 
-            self.currentFrameLabel.text = "000"
-            self.totalFrameLabel.text = String(format: "%03d", motionInfo.frames.count)
-            self.progressControl.maximumValue = Float(motionInfo.frames.count - 1)
-            self.downloadProgressView.isHidden = false
+                currentFrameLabel.text = frameLabelText(for: 0)
+                totalFrameLabel.text = frameLabelText(for: motionData.frameCount)
+                progressControl.maximumValue = Float(motionData.frameCount - 1)
+                downloadProgressView.isHidden = false
 
-            self.downloadProgressView.isHidden = true
-            self.progressControl.isUserInteractionEnabled = true
-            self.prepareToPlay()
+                downloadProgressView.isHidden = true
+                progressControl.isUserInteractionEnabled = true
+                prepareToPlay()
+            } catch {
+                handleDownloadFailure(error)
+            }
         }
     }
 
     private func prepareToPlay() {
-        guard let motionInfo = motionInfo else {
+        guard let motionData else {
             return
         }
 
-        let player = MotionPlayer(motionInfo: motionInfo, playbackSettings: settings.playback)
+        let player = MotionPlayer(motionData: motionData, playbackSettings: settings.playback)
         playSubscription = player.objectWillChange.sink(receiveValue: { _ in
             let currentFrame = player.currentFrame
-            self.playerLayer.motionFrame = motionInfo.frames[currentFrame]
-            self.currentFrameLabel.text = String(format: "%03d", currentFrame)
+            self.playerLayer.motionFrame = motionData.frames[currentFrame]
+            self.currentFrameLabel.text = self.frameLabelText(for: currentFrame)
             self.progressControl.value = Float(currentFrame)
         })
         self.player = player
         fpsTextField.text = String(player.currentFPS)
+        playerLayer.motionFrame = motionData.frames[player.currentFrame]
     }
 
     private func configureHitboxCheckboxes() {
@@ -262,6 +271,24 @@ class MotionPlayerViewController: UIViewController {
         checkbox.backgroundColor = checkbox.isSelected ? checkbox.tintColor : .clear
         settings.hitboxVisibility[keyPath: visibility] = checkbox.isSelected
         playerLayer.setNeedsDisplay()
+    }
+
+    private func frameLabelText(for frame: Int) -> String {
+        frame.formatted(frameNumberFormat)
+    }
+
+    private func handleDownloadFailure(_ error: Error) {
+        downloadProgressView.isHidden = true
+        progressControl.isUserInteractionEnabled = false
+        motionData = nil
+
+        let alert = UIAlertController(
+            title: "Unable to Load Motion",
+            message: error.localizedDescription,
+            preferredStyle: .alert
+        )
+        alert.addAction(UIAlertAction(title: "OK", style: .default))
+        present(alert, animated: true)
     }
 }
 

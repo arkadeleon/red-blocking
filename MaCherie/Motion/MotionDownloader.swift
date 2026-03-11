@@ -22,7 +22,7 @@ class MotionDownloader {
         self.repository = repository
     }
 
-    func download() async throws -> MotionInfo {
-        try repository.loadMotion(characterCode: characterCode, skillCode: skillCode)
+    func download() async throws -> MotionPlaybackData {
+        try repository.prepareMotion(characterCode: characterCode, skillCode: skillCode)
     }
 }

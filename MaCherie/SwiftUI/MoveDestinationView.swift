@@ -16,12 +16,11 @@ struct MoveDestinationView: View {
         case let .moveNode(node):
             MoveNodeView(node: node)
         case let .motionPlayer(title, characterCode, skillCode):
-            ContentUnavailableView(
-                title,
-                systemImage: "play.rectangle.on.rectangle",
-                description: Text("\(characterCode) / \(skillCode)\nMotion player UI will land in a later phase.")
+            MotionDataPipelineView(
+                title: title,
+                characterCode: characterCode,
+                skillCode: skillCode
             )
-            .navigationTitle(title)
         }
     }
 }
