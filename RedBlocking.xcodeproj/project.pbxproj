@@ -63,20 +63,7 @@
 		36B1002F2F03500800778995 /* MotionPlayerHitboxToggleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36B1002E2F03500800778995 /* MotionPlayerHitboxToggleView.swift */; };
 		36B100312F03510000778995 /* Color+Integer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36B100302F03510000778995 /* Color+Integer.swift */; };
 		36B100332F03510100778995 /* PreviewAppModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36B100322F03510100778995 /* PreviewAppModel.swift */; };
-		EE318CB5183E363E0081370B /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE318CB4183E363E0081370B /* AudioToolbox.framework */; };
-		EEA48CA31775E59F00351CAB /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEA48CA21775E59F00351CAB /* Security.framework */; };
-		EEA48CA51775E79000351CAB /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEA48CA41775E79000351CAB /* ImageIO.framework */; };
 		EEADB06C17FA72B3004E2F60 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EEADB06B17FA72B3004E2F60 /* Assets.xcassets */; };
-		EEE27ACF176C1347008A41AB /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEE27ACE176C1347008A41AB /* UIKit.framework */; };
-		EEE27AD1176C1347008A41AB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEE27AD0176C1347008A41AB /* Foundation.framework */; };
-		EEE27AD3176C1347008A41AB /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEE27AD2176C1347008A41AB /* CoreGraphics.framework */; };
-		EEE27AEC176C1424008A41AB /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEE27AEB176C1424008A41AB /* AVFoundation.framework */; };
-		EEE27AEE176C1430008A41AB /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEE27AED176C1430008A41AB /* CoreData.framework */; };
-		EEE27AF0176C1457008A41AB /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEE27AEF176C1457008A41AB /* CoreMedia.framework */; };
-		EEE27AF2176C1465008A41AB /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEE27AF1176C1465008A41AB /* MediaPlayer.framework */; };
-		EEE27AF4176C1470008A41AB /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEE27AF3176C1470008A41AB /* MessageUI.framework */; };
-		EEE27AF6176C147C008A41AB /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEE27AF5176C147C008A41AB /* QuartzCore.framework */; };
-		EEE27AFA176C1490008A41AB /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEE27AF9176C1490008A41AB /* SystemConfiguration.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -136,22 +123,9 @@
 		36B1002E2F03500800778995 /* MotionPlayerHitboxToggleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotionPlayerHitboxToggleView.swift; sourceTree = "<group>"; };
 		36B100302F03510000778995 /* Color+Integer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Integer.swift"; sourceTree = "<group>"; };
 		36B100322F03510100778995 /* PreviewAppModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewAppModel.swift; sourceTree = "<group>"; };
-		EE318CB4183E363E0081370B /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
-		EEA48CA21775E59F00351CAB /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
-		EEA48CA41775E79000351CAB /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
 		EEADB06B17FA72B3004E2F60 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EEE27ACB176C1347008A41AB /* RedBlocking.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RedBlocking.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		EEE27ACE176C1347008A41AB /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
-		EEE27AD0176C1347008A41AB /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		EEE27AD2176C1347008A41AB /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		EEE27AD6176C1347008A41AB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		EEE27AEB176C1424008A41AB /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
-		EEE27AED176C1430008A41AB /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
-		EEE27AEF176C1457008A41AB /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
-		EEE27AF1176C1465008A41AB /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
-		EEE27AF3176C1470008A41AB /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
-		EEE27AF5176C147C008A41AB /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
-		EEE27AF9176C1490008A41AB /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -159,20 +133,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EE318CB5183E363E0081370B /* AudioToolbox.framework in Frameworks */,
 				3583FA662DBDF97300778995 /* Yams in Frameworks */,
-				EEE27AEC176C1424008A41AB /* AVFoundation.framework in Frameworks */,
-				EEE27AEE176C1430008A41AB /* CoreData.framework in Frameworks */,
-				EEE27AD3176C1347008A41AB /* CoreGraphics.framework in Frameworks */,
-				EEE27AF0176C1457008A41AB /* CoreMedia.framework in Frameworks */,
-				EEE27AD1176C1347008A41AB /* Foundation.framework in Frameworks */,
-				EEA48CA51775E79000351CAB /* ImageIO.framework in Frameworks */,
-				EEE27AF2176C1465008A41AB /* MediaPlayer.framework in Frameworks */,
-				EEE27AF4176C1470008A41AB /* MessageUI.framework in Frameworks */,
-				EEE27AF6176C147C008A41AB /* QuartzCore.framework in Frameworks */,
-				EEA48CA31775E59F00351CAB /* Security.framework in Frameworks */,
-				EEE27AFA176C1490008A41AB /* SystemConfiguration.framework in Frameworks */,
-				EEE27ACF176C1347008A41AB /* UIKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -285,7 +246,6 @@
 			isa = PBXGroup;
 			children = (
 				EEE27AD4176C1347008A41AB /* RedBlocking */,
-				EEE27ACD176C1347008A41AB /* Frameworks */,
 				EEE27ACC176C1347008A41AB /* Products */,
 			);
 			sourceTree = "<group>";
@@ -296,26 +256,6 @@
 				EEE27ACB176C1347008A41AB /* RedBlocking.app */,
 			);
 			name = Products;
-			sourceTree = "<group>";
-		};
-		EEE27ACD176C1347008A41AB /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				EE318CB4183E363E0081370B /* AudioToolbox.framework */,
-				EEE27AEB176C1424008A41AB /* AVFoundation.framework */,
-				EEE27AED176C1430008A41AB /* CoreData.framework */,
-				EEE27AD2176C1347008A41AB /* CoreGraphics.framework */,
-				EEE27AEF176C1457008A41AB /* CoreMedia.framework */,
-				EEE27AD0176C1347008A41AB /* Foundation.framework */,
-				EEA48CA41775E79000351CAB /* ImageIO.framework */,
-				EEE27AF1176C1465008A41AB /* MediaPlayer.framework */,
-				EEE27AF3176C1470008A41AB /* MessageUI.framework */,
-				EEE27AF5176C147C008A41AB /* QuartzCore.framework */,
-				EEA48CA21775E59F00351CAB /* Security.framework */,
-				EEE27AF9176C1490008A41AB /* SystemConfiguration.framework */,
-				EEE27ACE176C1347008A41AB /* UIKit.framework */,
-			);
-			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		EEE27AD4176C1347008A41AB /* RedBlocking */ = {
@@ -678,7 +618,7 @@
 			repositoryURL = "https://github.com/jpsim/Yams.git";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 5.3.1;
+				minimumVersion = 6.2.1;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
