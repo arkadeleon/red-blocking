@@ -3,130 +3,31 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 54;
+	objectVersion = 70;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		35375CAC20D0FE45004642CB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 35375CAB20D0FE45004642CB /* LaunchScreen.storyboard */; };
-		3566755520D26A2800DD26A4 /* ApplicationDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3566755420D26A2800DD26A4 /* ApplicationDataManager.swift */; };
-		3566755920D2702C00DD26A4 /* MotionDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3566755820D2702C00DD26A4 /* MotionDownloader.swift */; };
-		3583FA322DBB640F00778995 /* CharacterData in Resources */ = {isa = PBXBuildFile; fileRef = 3583FA312DBB63E800778995 /* CharacterData */; };
 		3583FA662DBDF97300778995 /* Yams in Frameworks */ = {isa = PBXBuildFile; productRef = 3583FA652DBDF97300778995 /* Yams */; };
-		359100072F03000100778995 /* RedBlockingApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 359100012F03000100778995 /* RedBlockingApp.swift */; };
-		359100082F03000100778995 /* RedBlockingRootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 359100022F03000100778995 /* RedBlockingRootView.swift */; };
-		3591000B2F03000100778995 /* AppModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 359100052F03000100778995 /* AppModel.swift */; };
-		3591000C2F03000100778995 /* AppSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 359100062F03000100778995 /* AppSettings.swift */; };
-		359100112F03210000778995 /* NavigationRootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 359100102F03210000778995 /* NavigationRootView.swift */; };
-		359100132F03210100778995 /* CharacterListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 359100122F03210100778995 /* CharacterListView.swift */; };
-		359100152F03210200778995 /* MoveNodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 359100142F03210200778995 /* MoveNodeView.swift */; };
-		359100172F03210300778995 /* MoveDestinationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 359100162F03210300778995 /* MoveDestinationView.swift */; };
-		359100192F03210400778995 /* AppNavigationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 359100182F03210400778995 /* AppNavigationModel.swift */; };
-		3591001B2F03210500778995 /* CharacterSelection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3591001A2F03210500778995 /* CharacterSelection.swift */; };
-		3591001D2F03210600778995 /* MoveNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3591001C2F03210600778995 /* MoveNode.swift */; };
-		3591001F2F03210700778995 /* MoveDestination.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3591001E2F03210700778995 /* MoveDestination.swift */; };
-		35AFF43E2BA093B500737E1A /* FrameData in Resources */ = {isa = PBXBuildFile; fileRef = 35AFF43D2BA093B500737E1A /* FrameData */; };
-		35B69A3620D8DECE00F05A2C /* CharacterMove.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35B69A3520D8DECE00F05A2C /* CharacterMove.swift */; };
-		35C41F3D237AB26000A1EBF7 /* MotionInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35C41F3C237AB26000A1EBF7 /* MotionInfo.swift */; };
-		35C41F4C237D3E7E00A1EBF7 /* MotionPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35C41F4B237D3E7E00A1EBF7 /* MotionPlayer.swift */; };
-		35FA31A220D8B33C009A5D7B /* Character.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35FA31A120D8B33C009A5D7B /* Character.swift */; };
-		36A100032F03111100778995 /* BundleResourceLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36A100022F03111100778995 /* BundleResourceLoader.swift */; };
-		36A100052F03111100778995 /* CharacterRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36A100042F03111100778995 /* CharacterRepository.swift */; };
-		36A100072F03111100778995 /* MoveRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36A100062F03111100778995 /* MoveRepository.swift */; };
-		36A100092F03111100778995 /* MotionRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36A100082F03111100778995 /* MotionRepository.swift */; };
-		36A1000B2F03111200778995 /* HitboxVisibilitySettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36A1000A2F03111200778995 /* HitboxVisibilitySettings.swift */; };
-		36A1000D2F03111300778995 /* HitboxColorSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36A1000C2F03111300778995 /* HitboxColorSettings.swift */; };
-		36A1000F2F03111400778995 /* PlaybackSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36A1000E2F03111400778995 /* PlaybackSettings.swift */; };
-		36A100112F03111500778995 /* CharacterListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36A100102F03111500778995 /* CharacterListModel.swift */; };
-		36A100132F03250000778995 /* MoveBrowserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36A100122F03250000778995 /* MoveBrowserModel.swift */; };
-		36A100152F03250100778995 /* MoveBrowserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36A100142F03250100778995 /* MoveBrowserView.swift */; };
-		36A100172F03250200778995 /* MoveNextRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36A100162F03250200778995 /* MoveNextRowView.swift */; };
-		36A100192F03250300778995 /* MoveDetailRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36A100182F03250300778995 /* MoveDetailRowView.swift */; };
-		36A1001B2F03250400778995 /* MoveSupplementaryRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36A1001A2F03250400778995 /* MoveSupplementaryRowView.swift */; };
-		36A1001D2F03250500778995 /* MovePlayerEntryRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36A1001C2F03250500778995 /* MovePlayerEntryRowView.swift */; };
-		36A100212F03250600778995 /* CharacterDetailBackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36A100202F03250600778995 /* CharacterDetailBackgroundView.swift */; };
-		36A100252F03250800778995 /* DetailRootContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36A100242F03250800778995 /* DetailRootContentView.swift */; };
-		36B100062F03400500778995 /* MotionFrameImageStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36B100012F03400000778995 /* MotionFrameImageStore.swift */; };
-		36B100072F03400600778995 /* MotionFrameResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36B100022F03400100778995 /* MotionFrameResource.swift */; };
-		36B100082F03400700778995 /* MotionFrame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36B100032F03400200778995 /* MotionFrame.swift */; };
-		36B100092F03400800778995 /* MotionPlaybackData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36B100042F03400300778995 /* MotionPlaybackData.swift */; };
-		36B1000B2F03400A00778995 /* MotionPlayerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36B1000C2F03400A00778995 /* MotionPlayerModel.swift */; };
-		36B1000D2F03400B00778995 /* MotionCanvasConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36B100102F03400E00778995 /* MotionCanvasConfiguration.swift */; };
-		36B1000E2F03400C00778995 /* MotionCanvasRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36B100112F03400F00778995 /* MotionCanvasRenderer.swift */; };
-		36B1000F2F03400D00778995 /* MotionCanvasView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36B100122F03401000778995 /* MotionCanvasView.swift */; };
-		36B100212F03500100778995 /* MotionPlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36B100202F03500100778995 /* MotionPlayerView.swift */; };
-		36B100232F03500200778995 /* MotionPlayerLoadState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36B100222F03500200778995 /* MotionPlayerLoadState.swift */; };
-		36B100252F03500300778995 /* MotionPlayerLoadedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36B100242F03500300778995 /* MotionPlayerLoadedView.swift */; };
-		36B100272F03500400778995 /* MotionPlayerPreviewCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36B100262F03500400778995 /* MotionPlayerPreviewCardView.swift */; };
-		36B100292F03500500778995 /* MotionPlayerTransportControlsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36B100282F03500500778995 /* MotionPlayerTransportControlsView.swift */; };
-		36B1002B2F03500600778995 /* MotionPlayerHitboxControlsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36B1002A2F03500600778995 /* MotionPlayerHitboxControlsView.swift */; };
-		36B1002D2F03500700778995 /* MotionPlayerHitboxVisibilityGroupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36B1002C2F03500700778995 /* MotionPlayerHitboxVisibilityGroupView.swift */; };
-		36B1002F2F03500800778995 /* MotionPlayerHitboxToggleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36B1002E2F03500800778995 /* MotionPlayerHitboxToggleView.swift */; };
-		36B100312F03510000778995 /* Color+Integer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36B100302F03510000778995 /* Color+Integer.swift */; };
-		36B100332F03510100778995 /* PreviewAppModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36B100322F03510100778995 /* PreviewAppModel.swift */; };
-		EEADB06C17FA72B3004E2F60 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EEADB06B17FA72B3004E2F60 /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		35375CAB20D0FE45004642CB /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
-		3566755420D26A2800DD26A4 /* ApplicationDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationDataManager.swift; sourceTree = "<group>"; };
-		3566755820D2702C00DD26A4 /* MotionDownloader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotionDownloader.swift; sourceTree = "<group>"; };
-		3583FA312DBB63E800778995 /* CharacterData */ = {isa = PBXFileReference; lastKnownFileType = folder; path = CharacterData; sourceTree = "<group>"; };
-		3583FA5D2DBB65EE00778995 /* PropertyLists */ = {isa = PBXFileReference; lastKnownFileType = folder; path = PropertyLists; sourceTree = "<group>"; };
-		359100012F03000100778995 /* RedBlockingApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RedBlockingApp.swift; sourceTree = "<group>"; };
-		359100022F03000100778995 /* RedBlockingRootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RedBlockingRootView.swift; sourceTree = "<group>"; };
-		359100052F03000100778995 /* AppModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppModel.swift; sourceTree = "<group>"; };
-		359100062F03000100778995 /* AppSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppSettings.swift; sourceTree = "<group>"; };
-		359100102F03210000778995 /* NavigationRootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationRootView.swift; sourceTree = "<group>"; };
-		359100122F03210100778995 /* CharacterListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterListView.swift; sourceTree = "<group>"; };
-		359100142F03210200778995 /* MoveNodeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoveNodeView.swift; sourceTree = "<group>"; };
-		359100162F03210300778995 /* MoveDestinationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoveDestinationView.swift; sourceTree = "<group>"; };
-		359100182F03210400778995 /* AppNavigationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppNavigationModel.swift; sourceTree = "<group>"; };
-		3591001A2F03210500778995 /* CharacterSelection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterSelection.swift; sourceTree = "<group>"; };
-		3591001C2F03210600778995 /* MoveNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoveNode.swift; sourceTree = "<group>"; };
-		3591001E2F03210700778995 /* MoveDestination.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoveDestination.swift; sourceTree = "<group>"; };
-		35AFF43D2BA093B500737E1A /* FrameData */ = {isa = PBXFileReference; lastKnownFileType = folder; path = FrameData; sourceTree = "<group>"; };
-		35B69A3520D8DECE00F05A2C /* CharacterMove.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterMove.swift; sourceTree = "<group>"; };
-		35C41F3C237AB26000A1EBF7 /* MotionInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotionInfo.swift; sourceTree = "<group>"; };
-		35C41F4B237D3E7E00A1EBF7 /* MotionPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotionPlayer.swift; sourceTree = "<group>"; };
-		35FA31A120D8B33C009A5D7B /* Character.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Character.swift; sourceTree = "<group>"; };
-		36A100022F03111100778995 /* BundleResourceLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BundleResourceLoader.swift; sourceTree = "<group>"; };
-		36A100042F03111100778995 /* CharacterRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterRepository.swift; sourceTree = "<group>"; };
-		36A100062F03111100778995 /* MoveRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoveRepository.swift; sourceTree = "<group>"; };
-		36A100082F03111100778995 /* MotionRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotionRepository.swift; sourceTree = "<group>"; };
-		36A1000A2F03111200778995 /* HitboxVisibilitySettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HitboxVisibilitySettings.swift; sourceTree = "<group>"; };
-		36A1000C2F03111300778995 /* HitboxColorSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HitboxColorSettings.swift; sourceTree = "<group>"; };
-		36A1000E2F03111400778995 /* PlaybackSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaybackSettings.swift; sourceTree = "<group>"; };
-		36A100102F03111500778995 /* CharacterListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterListModel.swift; sourceTree = "<group>"; };
-		36A100122F03250000778995 /* MoveBrowserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoveBrowserModel.swift; sourceTree = "<group>"; };
-		36A100142F03250100778995 /* MoveBrowserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoveBrowserView.swift; sourceTree = "<group>"; };
-		36A100162F03250200778995 /* MoveNextRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoveNextRowView.swift; sourceTree = "<group>"; };
-		36A100182F03250300778995 /* MoveDetailRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoveDetailRowView.swift; sourceTree = "<group>"; };
-		36A1001A2F03250400778995 /* MoveSupplementaryRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoveSupplementaryRowView.swift; sourceTree = "<group>"; };
-		36A1001C2F03250500778995 /* MovePlayerEntryRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovePlayerEntryRowView.swift; sourceTree = "<group>"; };
-		36A100202F03250600778995 /* CharacterDetailBackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterDetailBackgroundView.swift; sourceTree = "<group>"; };
-		36A100242F03250800778995 /* DetailRootContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailRootContentView.swift; sourceTree = "<group>"; };
-		36B100012F03400000778995 /* MotionFrameImageStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotionFrameImageStore.swift; sourceTree = "<group>"; };
-		36B100022F03400100778995 /* MotionFrameResource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotionFrameResource.swift; sourceTree = "<group>"; };
-		36B100032F03400200778995 /* MotionFrame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotionFrame.swift; sourceTree = "<group>"; };
-		36B100042F03400300778995 /* MotionPlaybackData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotionPlaybackData.swift; sourceTree = "<group>"; };
-		36B1000C2F03400A00778995 /* MotionPlayerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotionPlayerModel.swift; sourceTree = "<group>"; };
-		36B100102F03400E00778995 /* MotionCanvasConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotionCanvasConfiguration.swift; sourceTree = "<group>"; };
-		36B100112F03400F00778995 /* MotionCanvasRenderer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotionCanvasRenderer.swift; sourceTree = "<group>"; };
-		36B100122F03401000778995 /* MotionCanvasView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotionCanvasView.swift; sourceTree = "<group>"; };
-		36B100202F03500100778995 /* MotionPlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotionPlayerView.swift; sourceTree = "<group>"; };
-		36B100222F03500200778995 /* MotionPlayerLoadState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotionPlayerLoadState.swift; sourceTree = "<group>"; };
-		36B100242F03500300778995 /* MotionPlayerLoadedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotionPlayerLoadedView.swift; sourceTree = "<group>"; };
-		36B100262F03500400778995 /* MotionPlayerPreviewCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotionPlayerPreviewCardView.swift; sourceTree = "<group>"; };
-		36B100282F03500500778995 /* MotionPlayerTransportControlsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotionPlayerTransportControlsView.swift; sourceTree = "<group>"; };
-		36B1002A2F03500600778995 /* MotionPlayerHitboxControlsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotionPlayerHitboxControlsView.swift; sourceTree = "<group>"; };
-		36B1002C2F03500700778995 /* MotionPlayerHitboxVisibilityGroupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotionPlayerHitboxVisibilityGroupView.swift; sourceTree = "<group>"; };
-		36B1002E2F03500800778995 /* MotionPlayerHitboxToggleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotionPlayerHitboxToggleView.swift; sourceTree = "<group>"; };
-		36B100302F03510000778995 /* Color+Integer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Integer.swift"; sourceTree = "<group>"; };
-		36B100322F03510100778995 /* PreviewAppModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewAppModel.swift; sourceTree = "<group>"; };
-		EEADB06B17FA72B3004E2F60 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EEE27ACB176C1347008A41AB /* RedBlocking.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RedBlocking.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		EEE27AD6176C1347008A41AB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		35F48A322F62A29700D65B56 /* PBXFileSystemSynchronizedBuildFileExceptionSet */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+				Resources/PropertyLists,
+			);
+			target = EEE27ACA176C1347008A41AB /* RedBlocking */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		35F489F72F62A29700D65B56 /* RedBlocking */ = {isa = PBXFileSystemSynchronizedRootGroup; exceptions = (35F48A322F62A29700D65B56 /* PBXFileSystemSynchronizedBuildFileExceptionSet */, ); explicitFileTypes = {}; explicitFolders = (Resources/CharacterData, Resources/FrameData, Resources/PropertyLists, ); path = RedBlocking; sourceTree = "<group>"; };
+/* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		EEE27AC8176C1347008A41AB /* Frameworks */ = {
@@ -140,112 +41,10 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		3572AF8D20D1021F00C15871 /* Core */ = {
-			isa = PBXGroup;
-			children = (
-				3566755420D26A2800DD26A4 /* ApplicationDataManager.swift */,
-			);
-			path = Core;
-			sourceTree = "<group>";
-		};
-		3591000E2F03000100778995 /* Models */ = {
-			isa = PBXGroup;
-			children = (
-				359100182F03210400778995 /* AppNavigationModel.swift */,
-				359100052F03000100778995 /* AppModel.swift */,
-				359100062F03000100778995 /* AppSettings.swift */,
-				36A100102F03111500778995 /* CharacterListModel.swift */,
-				3591001A2F03210500778995 /* CharacterSelection.swift */,
-				36A1000A2F03111200778995 /* HitboxVisibilitySettings.swift */,
-				36A1000C2F03111300778995 /* HitboxColorSettings.swift */,
-				36A100122F03250000778995 /* MoveBrowserModel.swift */,
-				3591001E2F03210700778995 /* MoveDestination.swift */,
-				3591001C2F03210600778995 /* MoveNode.swift */,
-				36B1000C2F03400A00778995 /* MotionPlayerModel.swift */,
-				36A1000E2F03111400778995 /* PlaybackSettings.swift */,
-			);
-			path = Models;
-			sourceTree = "<group>";
-		};
-		3591000F2F03000100778995 /* SwiftUI */ = {
-			isa = PBXGroup;
-			children = (
-				3591000E2F03000100778995 /* Models */,
-				36A100202F03250600778995 /* CharacterDetailBackgroundView.swift */,
-				359100122F03210100778995 /* CharacterListView.swift */,
-				36B100302F03510000778995 /* Color+Integer.swift */,
-				36A100242F03250800778995 /* DetailRootContentView.swift */,
-				359100012F03000100778995 /* RedBlockingApp.swift */,
-				359100022F03000100778995 /* RedBlockingRootView.swift */,
-				36B100102F03400E00778995 /* MotionCanvasConfiguration.swift */,
-				36B100112F03400F00778995 /* MotionCanvasRenderer.swift */,
-				36B100122F03401000778995 /* MotionCanvasView.swift */,
-				36B1002A2F03500600778995 /* MotionPlayerHitboxControlsView.swift */,
-				36B1002E2F03500800778995 /* MotionPlayerHitboxToggleView.swift */,
-				36B1002C2F03500700778995 /* MotionPlayerHitboxVisibilityGroupView.swift */,
-				36B100222F03500200778995 /* MotionPlayerLoadState.swift */,
-				36B100242F03500300778995 /* MotionPlayerLoadedView.swift */,
-				36B100262F03500400778995 /* MotionPlayerPreviewCardView.swift */,
-				36B100282F03500500778995 /* MotionPlayerTransportControlsView.swift */,
-				36B100202F03500100778995 /* MotionPlayerView.swift */,
-				36B100322F03510100778995 /* PreviewAppModel.swift */,
-				36A100142F03250100778995 /* MoveBrowserView.swift */,
-				36A100182F03250300778995 /* MoveDetailRowView.swift */,
-				359100162F03210300778995 /* MoveDestinationView.swift */,
-				359100142F03210200778995 /* MoveNodeView.swift */,
-				36A100162F03250200778995 /* MoveNextRowView.swift */,
-				36A1001C2F03250500778995 /* MovePlayerEntryRowView.swift */,
-				36A1001A2F03250400778995 /* MoveSupplementaryRowView.swift */,
-				359100102F03210000778995 /* NavigationRootView.swift */,
-			);
-			path = SwiftUI;
-			sourceTree = "<group>";
-		};
-		35B69A3220D8DE8500F05A2C /* Character */ = {
-			isa = PBXGroup;
-			children = (
-				35FA31A120D8B33C009A5D7B /* Character.swift */,
-			);
-			path = Character;
-			sourceTree = "<group>";
-		};
-		35B69A3320D8DEA600F05A2C /* CharacterMove */ = {
-			isa = PBXGroup;
-			children = (
-				35B69A3520D8DECE00F05A2C /* CharacterMove.swift */,
-			);
-			path = CharacterMove;
-			sourceTree = "<group>";
-		};
-		35B69A3420D8DEBD00F05A2C /* Motion */ = {
-			isa = PBXGroup;
-			children = (
-				35C41F3C237AB26000A1EBF7 /* MotionInfo.swift */,
-				36B100032F03400200778995 /* MotionFrame.swift */,
-				36B100012F03400000778995 /* MotionFrameImageStore.swift */,
-				36B100022F03400100778995 /* MotionFrameResource.swift */,
-				36B100042F03400300778995 /* MotionPlaybackData.swift */,
-				3566755820D2702C00DD26A4 /* MotionDownloader.swift */,
-				35C41F4B237D3E7E00A1EBF7 /* MotionPlayer.swift */,
-			);
-			path = Motion;
-			sourceTree = "<group>";
-		};
-		36A100002F03111100778995 /* Data */ = {
-			isa = PBXGroup;
-			children = (
-				36A100022F03111100778995 /* BundleResourceLoader.swift */,
-				36A100042F03111100778995 /* CharacterRepository.swift */,
-				36A100062F03111100778995 /* MoveRepository.swift */,
-				36A100082F03111100778995 /* MotionRepository.swift */,
-			);
-			path = Data;
-			sourceTree = "<group>";
-		};
 		EEE27AC2176C1347008A41AB = {
 			isa = PBXGroup;
 			children = (
-				EEE27AD4176C1347008A41AB /* RedBlocking */,
+				35F489F72F62A29700D65B56 /* RedBlocking */,
 				EEE27ACC176C1347008A41AB /* Products */,
 			);
 			sourceTree = "<group>";
@@ -256,33 +55,6 @@
 				EEE27ACB176C1347008A41AB /* RedBlocking.app */,
 			);
 			name = Products;
-			sourceTree = "<group>";
-		};
-		EEE27AD4176C1347008A41AB /* RedBlocking */ = {
-			isa = PBXGroup;
-			children = (
-				35375CAB20D0FE45004642CB /* LaunchScreen.storyboard */,
-				3572AF8D20D1021F00C15871 /* Core */,
-				36A100002F03111100778995 /* Data */,
-				35B69A3220D8DE8500F05A2C /* Character */,
-				35B69A3320D8DEA600F05A2C /* CharacterMove */,
-				35B69A3420D8DEBD00F05A2C /* Motion */,
-				3591000F2F03000100778995 /* SwiftUI */,
-				EEE27AD5176C1347008A41AB /* Supporting Files */,
-				3583FA5D2DBB65EE00778995 /* PropertyLists */,
-				3583FA312DBB63E800778995 /* CharacterData */,
-				35AFF43D2BA093B500737E1A /* FrameData */,
-				EEADB06B17FA72B3004E2F60 /* Assets.xcassets */,
-			);
-			path = RedBlocking;
-			sourceTree = "<group>";
-		};
-		EEE27AD5176C1347008A41AB /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				EEE27AD6176C1347008A41AB /* Info.plist */,
-			);
-			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -299,6 +71,9 @@
 			buildRules = (
 			);
 			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				35F489F72F62A29700D65B56 /* RedBlocking */,
 			);
 			name = RedBlocking;
 			packageProductDependencies = (
@@ -358,10 +133,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3583FA322DBB640F00778995 /* CharacterData in Resources */,
-				35AFF43E2BA093B500737E1A /* FrameData in Resources */,
-				EEADB06C17FA72B3004E2F60 /* Assets.xcassets in Resources */,
-				35375CAC20D0FE45004642CB /* LaunchScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -372,58 +143,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3591000C2F03000100778995 /* AppSettings.swift in Sources */,
-				359100192F03210400778995 /* AppNavigationModel.swift in Sources */,
-				36A100032F03111100778995 /* BundleResourceLoader.swift in Sources */,
-				36A100112F03111500778995 /* CharacterListModel.swift in Sources */,
-				3591001B2F03210500778995 /* CharacterSelection.swift in Sources */,
-				36A100052F03111100778995 /* CharacterRepository.swift in Sources */,
-				36A100212F03250600778995 /* CharacterDetailBackgroundView.swift in Sources */,
-				359100132F03210100778995 /* CharacterListView.swift in Sources */,
-				36B100312F03510000778995 /* Color+Integer.swift in Sources */,
-				36A100252F03250800778995 /* DetailRootContentView.swift in Sources */,
-				36B1000D2F03400B00778995 /* MotionCanvasConfiguration.swift in Sources */,
-				36B1000E2F03400C00778995 /* MotionCanvasRenderer.swift in Sources */,
-				36B1000F2F03400D00778995 /* MotionCanvasView.swift in Sources */,
-				36B1002B2F03500600778995 /* MotionPlayerHitboxControlsView.swift in Sources */,
-				36B1002F2F03500800778995 /* MotionPlayerHitboxToggleView.swift in Sources */,
-				36B1002D2F03500700778995 /* MotionPlayerHitboxVisibilityGroupView.swift in Sources */,
-				36A1000D2F03111300778995 /* HitboxColorSettings.swift in Sources */,
-				36A1000B2F03111200778995 /* HitboxVisibilitySettings.swift in Sources */,
-				36B100082F03400700778995 /* MotionFrame.swift in Sources */,
-				36B100062F03400500778995 /* MotionFrameImageStore.swift in Sources */,
-				36B100072F03400600778995 /* MotionFrameResource.swift in Sources */,
-				36B100092F03400800778995 /* MotionPlaybackData.swift in Sources */,
-				36B100232F03500200778995 /* MotionPlayerLoadState.swift in Sources */,
-				36B100252F03500300778995 /* MotionPlayerLoadedView.swift in Sources */,
-				36B1000B2F03400A00778995 /* MotionPlayerModel.swift in Sources */,
-				36B100272F03500400778995 /* MotionPlayerPreviewCardView.swift in Sources */,
-				36B100292F03500500778995 /* MotionPlayerTransportControlsView.swift in Sources */,
-				35C41F4C237D3E7E00A1EBF7 /* MotionPlayer.swift in Sources */,
-				36B100212F03500100778995 /* MotionPlayerView.swift in Sources */,
-				36B100332F03510100778995 /* PreviewAppModel.swift in Sources */,
-				3566755920D2702C00DD26A4 /* MotionDownloader.swift in Sources */,
-				35B69A3620D8DECE00F05A2C /* CharacterMove.swift in Sources */,
-				359100082F03000100778995 /* RedBlockingRootView.swift in Sources */,
-				3591001F2F03210700778995 /* MoveDestination.swift in Sources */,
-				36A100192F03250300778995 /* MoveDetailRowView.swift in Sources */,
-				36A100132F03250000778995 /* MoveBrowserModel.swift in Sources */,
-				36A100152F03250100778995 /* MoveBrowserView.swift in Sources */,
-				359100172F03210300778995 /* MoveDestinationView.swift in Sources */,
-				35C41F3D237AB26000A1EBF7 /* MotionInfo.swift in Sources */,
-				3591001D2F03210600778995 /* MoveNode.swift in Sources */,
-				359100152F03210200778995 /* MoveNodeView.swift in Sources */,
-				36A100172F03250200778995 /* MoveNextRowView.swift in Sources */,
-				36A100072F03111100778995 /* MoveRepository.swift in Sources */,
-				36A1001D2F03250500778995 /* MovePlayerEntryRowView.swift in Sources */,
-				36A1001B2F03250400778995 /* MoveSupplementaryRowView.swift in Sources */,
-				359100112F03210000778995 /* NavigationRootView.swift in Sources */,
-				359100072F03000100778995 /* RedBlockingApp.swift in Sources */,
-				36A100092F03111100778995 /* MotionRepository.swift in Sources */,
-				36A1000F2F03111400778995 /* PlaybackSettings.swift in Sources */,
-				3566755520D26A2800DD26A4 /* ApplicationDataManager.swift in Sources */,
-				3591000B2F03000100778995 /* AppModel.swift in Sources */,
-				35FA31A220D8B33C009A5D7B /* Character.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
