@@ -10,88 +10,66 @@ import SwiftUI
 
 struct CharacterListView: View {
     @Environment(\.horizontalSizeClass) private var horizontalSizeClass
-    @Environment(\.dynamicTypeSize) private var dynamicTypeSize
 
     let model: CharacterListModel
+    let onActivateSelection: (CharacterSelection) -> Void
 
     var body: some View {
         @Bindable var model = model
 
-        Group {
-            if horizontalSizeClass == .regular {
-                listContent(selection: $model.selectedCharacter)
-                    .listStyle(.sidebar)
-            } else {
-                listContent(selection: $model.selectedCharacter)
-                    .listStyle(.insetGrouped)
+        GeometryReader { proxy in
+            ZStack {
+                CharacterRosterBackgroundView()
+
+                if let errorMessage = model.errorMessage {
+                    VStack {
+                        ContentUnavailableView(
+                            "Characters Unavailable",
+                            systemImage: "exclamationmark.triangle",
+                            description: Text(errorMessage)
+                        )
+                        .padding(24)
+                        .background(.regularMaterial, in: RoundedRectangle(cornerRadius: 24, style: .continuous))
+                    }
+                    .frame(maxWidth: .infinity, maxHeight: .infinity)
+                    .padding(24)
+                } else if model.characters.isEmpty {
+                    VStack {
+                        ContentUnavailableView(
+                            "No Characters",
+                            systemImage: "person.slash",
+                            description: Text("The select board will populate once character data is available.")
+                        )
+                        .padding(24)
+                        .background(.regularMaterial, in: RoundedRectangle(cornerRadius: 24, style: .continuous))
+                    }
+                    .frame(maxWidth: .infinity, maxHeight: .infinity)
+                    .padding(24)
+                } else {
+                    ScrollView(.vertical, showsIndicators: false) {
+                        CharacterRosterBoardView(
+                            characters: model.characters,
+                            selectedCharacter: model.selectedCharacter,
+                            containerWidth: proxy.size.width,
+                            minimumHeight: proxy.size.height,
+                            activateCharacter: { selection in
+                                model.selectedCharacter = selection
+                                onActivateSelection(selection)
+                            }
+                        )
+                    }
+                    .scrollBounceBehavior(.basedOnSize)
+                }
             }
         }
-        .scrollContentBackground(.hidden)
-        .background(listBackground)
-        .navigationTitle("Characters")
+        .navigationTitle("Character Select")
+        .toolbarTitleDisplayMode(.inline)
+        .toolbarVisibility(.hidden, for: .navigationBar)
         .onChange(of: horizontalSizeClass, initial: true) { _, newValue in
             model.applyDefaultSelectionIfNeeded(for: newValue)
         }
         .onChange(of: model.characters, initial: true) { _, _ in
             model.applyDefaultSelectionIfNeeded(for: horizontalSizeClass)
         }
-    }
-
-    private func listContent(selection: Binding<CharacterSelection?>) -> some View {
-        List(selection: selection) {
-            if let errorMessage = model.errorMessage {
-                Section {
-                    Text(errorMessage)
-                        .foregroundStyle(.secondary)
-                }
-            }
-
-            if model.characters.isEmpty, model.errorMessage == nil {
-                ContentUnavailableView(
-                    "No Characters",
-                    systemImage: "person.slash",
-                    description: Text("The sidebar will populate once character data is available.")
-                )
-            } else {
-                Section("Characters") {
-                    ForEach(model.characters) { character in
-                        NavigationLink(value: character) {
-                            row(for: character)
-                        }
-                        .accessibilityLabel(character.title)
-                    }
-                }
-            }
-        }
-    }
-
-    private func row(for character: CharacterSelection) -> some View {
-        HStack(spacing: 12) {
-            Image(character.rowAssetName)
-                .resizable()
-                .scaledToFit()
-                .frame(
-                    width: dynamicTypeSize.isAccessibilitySize ? 52 : 44,
-                    height: dynamicTypeSize.isAccessibilitySize ? 52 : 44
-                )
-                .clipShape(RoundedRectangle(cornerRadius: 8))
-                .accessibilityHidden(true)
-
-            VStack(alignment: .leading, spacing: 2) {
-                Text(character.title)
-                    .font(.headline)
-                    .lineLimit(2)
-                    .fixedSize(horizontal: false, vertical: true)
-            }
-
-            Spacer(minLength: 0)
-        }
-        .padding(.vertical, dynamicTypeSize.isAccessibilitySize ? 8 : 4)
-        .contentShape(Rectangle())
-    }
-
-    private var listBackground: some View {
-        Color(uiColor: horizontalSizeClass == .regular ? .secondarySystemGroupedBackground : .systemGroupedBackground)
-            .ignoresSafeArea()
     }
 }

@@ -10,13 +10,25 @@ import SwiftUI
 
 struct NavigationRootView: View {
     @Environment(AppModel.self) private var appModel
+    @Environment(\.horizontalSizeClass) private var horizontalSizeClass
+
+    @State private var preferredCompactColumn: NavigationSplitViewColumn = .sidebar
 
     var body: some View {
         @Bindable var navigation = appModel.navigation
 
-        NavigationSplitView {
-            CharacterListView(model: appModel.characterList)
-                .navigationSplitViewColumnWidth(min: 280, ideal: 320, max: 360)
+        NavigationSplitView(preferredCompactColumn: $preferredCompactColumn) {
+            CharacterListView(
+                model: appModel.characterList,
+                onActivateSelection: { _ in
+                    guard horizontalSizeClass == .compact else {
+                        return
+                    }
+
+                    preferredCompactColumn = .detail
+                }
+            )
+            .navigationSplitViewColumnWidth(min: 280, ideal: 320, max: 360)
         } detail: {
             NavigationStack(path: $navigation.detailPath) {
                 NavigationDetailView()

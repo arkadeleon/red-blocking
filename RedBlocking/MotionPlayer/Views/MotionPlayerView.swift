@@ -63,7 +63,7 @@ struct MotionPlayerView: View {
             }
         }
         .navigationTitle(title)
-        .navigationBarTitleDisplayMode(.inline)
+        .toolbarTitleDisplayMode(.inline)
         .task(id: taskID, loadMotion)
         .onChange(of: reduceMotion, initial: true) { _, newValue in
             guard newValue else {

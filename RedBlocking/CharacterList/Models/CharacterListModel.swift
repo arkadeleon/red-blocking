@@ -12,6 +12,7 @@ import SwiftUI
 @MainActor
 @Observable
 final class CharacterListModel {
+    private let rosterLayout = CharacterRosterLayout.streetFighterIIIThirdStrike
     private let characterRepository: CharacterRepository
     private let navigation: AppNavigationModel
 
@@ -61,6 +62,6 @@ final class CharacterListModel {
             return
         }
 
-        selectedCharacter = characters.first
+        selectedCharacter = rosterLayout.defaultCharacter(from: characters)
     }
 }

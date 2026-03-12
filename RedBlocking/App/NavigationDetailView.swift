@@ -31,7 +31,7 @@ struct NavigationDetailView: View {
                 ContentUnavailableView(
                     "Select a Character",
                     systemImage: "rectangle.split.2x1",
-                    description: Text("Choose a character in the sidebar to drive the SwiftUI detail stack.")
+                    description: Text("Choose a character on the select board to drive the SwiftUI detail stack.")
                 )
                 .padding(24)
                 .background(.regularMaterial, in: RoundedRectangle(cornerRadius: 24, style: .continuous))
