@@ -1,5 +1,5 @@
 //
-//  DetailRootContentView.swift
+//  NavigationDetailView.swift
 //  RedBlocking
 //
 //  Created by Leon Li on 2026/3/11.
@@ -8,7 +8,7 @@
 
 import SwiftUI
 
-struct DetailRootContentView: View {
+struct NavigationDetailView: View {
     @Environment(AppModel.self) private var appModel
 
     var body: some View {

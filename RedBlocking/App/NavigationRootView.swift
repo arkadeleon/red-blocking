@@ -19,9 +19,11 @@ struct NavigationRootView: View {
                 .navigationSplitViewColumnWidth(min: 280, ideal: 320, max: 360)
         } detail: {
             NavigationStack(path: $navigation.detailPath) {
-                DetailRootContentView()
+                NavigationDetailView()
             }
-            .navigationDestination(for: MoveDestination.self, destination: MoveDestinationView.init)
+            .navigationDestination(for: MoveDestination.self) { destination in
+                MoveDestinationView(destination: destination)
+            }
         }
         .navigationSplitViewStyle(.balanced)
     }

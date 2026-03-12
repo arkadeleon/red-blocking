@@ -14,7 +14,7 @@ struct RedBlockingApp: App {
 
     var body: some Scene {
         WindowGroup {
-            RedBlockingRootView()
+            NavigationRootView()
                 .environment(appModel)
         }
     }
