@@ -1,11 +1,11 @@
-# MaCherie SwiftUI 全量迁移计划
+# RedBlocking SwiftUI 全量迁移计划
 
 ## Summary
 
 将当前 UIKit/storyboard 应用完整迁移为 SwiftUI 应用，minimum deployment target 升到 iOS 18，保持现有功能完整，但把导航、状态管理、播放器界面和可访问性升级到 SwiftUI / iOS 18 的原生实现方式。
 
 当前基线已确认：
-- 现有工程可成功 build（`xcodebuild -project MaCherie.xcodeproj -scheme MaCherie -destination 'generic/platform=iOS Simulator' build` 成功）。
+- 现有工程可成功 build（`xcodebuild -project RedBlocking.xcodeproj -scheme RedBlocking -destination 'generic/platform=iOS Simulator' build` 成功）。
 - 当前功能主线是：角色列表 -> 招式树 -> 动画播放器。
 - 数据当前实际以 YAML + Yams 驱动，JSON 是并存副本；本次按已定方案继续保留 YAML 作为真源。
 - 播放器按已定方案做纯 SwiftUI 重写，不保留 UIKit 视图层作为过渡方案。
@@ -14,7 +14,7 @@
 
 ### 1. App Shell 与工程结构
 
-- 移除 `Main.storyboard` 入口，改为 `@main` 的 `MaCherieApp`。
+- 移除 `Main.storyboard` 入口，改为 `@main` 的 `RedBlockingApp`。
 - 保留 `LaunchScreen.storyboard`，删除 `UIMainStoryboardFile`、`@UIApplicationMain`、`AppDelegate` 中的 UI 装配逻辑。
 - 工程配置统一升级：
   - `IPHONEOS_DEPLOYMENT_TARGET = 18.0`
@@ -101,7 +101,7 @@
 
 ## Important Interface Changes
 
-- 新增 `@main struct MaCherieApp: App`
+- 新增 `@main struct RedBlockingApp: App`
 - 新增 `@Observable` 类型：
   - `AppModel`
   - `CharacterListModel`

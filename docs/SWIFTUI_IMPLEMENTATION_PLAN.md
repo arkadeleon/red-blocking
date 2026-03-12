@@ -1,4 +1,4 @@
-# MaCherie SwiftUI Implementation Plan
+# RedBlocking SwiftUI Implementation Plan
 
 ## Summary
 
@@ -35,12 +35,12 @@
 
 ### Verification
 
-- `xcodebuild -project MaCherie.xcodeproj -scheme MaCherie -destination 'generic/platform=iOS Simulator' build`
+- `xcodebuild -project RedBlocking.xcodeproj -scheme RedBlocking -destination 'generic/platform=iOS Simulator' build`
 
 ### Baseline Snapshot (Recorded 2026-03-11)
 
 - Build baseline
-  - Command: `xcodebuild -project MaCherie.xcodeproj -scheme MaCherie -destination 'generic/platform=iOS Simulator' build`
+  - Command: `xcodebuild -project RedBlocking.xcodeproj -scheme RedBlocking -destination 'generic/platform=iOS Simulator' build`
   - Result: `BUILD SUCCEEDED`
   - Environment observed during baseline build:
     - Xcode build version `17C529`
@@ -101,7 +101,7 @@ Phase 0 status: complete. The pre-migration UIKit app still builds successfully 
 
 ### Tasks
 
-- 新增 `MaCherieApp`。
+- 新增 `RedBlockingApp`。
 - 引入根级 app model / settings 容器的最小骨架。
 - 让 app 启动进入一个最小 SwiftUI root view。
 - 保留 `LaunchScreen.storyboard`。
