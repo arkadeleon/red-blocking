@@ -9,6 +9,7 @@
 import Foundation
 import Observation
 
+@MainActor
 @Observable
 final class HitboxColorSettings {
     private enum Keys {

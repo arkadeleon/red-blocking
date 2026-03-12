@@ -1,5 +1,5 @@
 //
-//  CharacterSidebarView.swift
+//  CharacterListView.swift
 //  MaCherie
 //
 //  Created by Leon Li on 2026/3/11.

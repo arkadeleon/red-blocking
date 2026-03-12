@@ -7,7 +7,6 @@
 //
 
 import SwiftUI
-import UIKit
 
 struct MotionPlayerHitboxVisibilityGroupView: View {
     let title: String
@@ -64,46 +63,42 @@ struct MotionPlayerHitboxVisibilityGroupView: View {
                 MotionPlayerHitboxToggleView(
                     title: "Passive",
                     symbolName: "shield",
-                    tintColor: color(for: passiveColorRGB),
+                    tintColor: Color(rgb: passiveColorRGB),
                     isOn: $passiveVisible
                 )
                 MotionPlayerHitboxToggleView(
                     title: "Vulnerability",
                     symbolName: "shield.lefthalf.filled",
-                    tintColor: color(for: otherVulnerabilityColorRGB),
+                    tintColor: Color(rgb: otherVulnerabilityColorRGB),
                     isOn: $otherVulnerabilityVisible
                 )
                 MotionPlayerHitboxToggleView(
                     title: "Active",
                     symbolName: "burst.fill",
-                    tintColor: color(for: activeColorRGB),
+                    tintColor: Color(rgb: activeColorRGB),
                     isOn: $activeVisible
                 )
                 MotionPlayerHitboxToggleView(
                     title: "Throw",
                     symbolName: "hand.raised.fill",
-                    tintColor: color(for: throwColorRGB),
+                    tintColor: Color(rgb: throwColorRGB),
                     isOn: $throwVisible
                 )
                 MotionPlayerHitboxToggleView(
                     title: "Throwable",
                     symbolName: "figure.fall",
-                    tintColor: color(for: throwableColorRGB),
+                    tintColor: Color(rgb: throwableColorRGB),
                     isOn: $throwableVisible
                 )
                 MotionPlayerHitboxToggleView(
                     title: "Push",
                     symbolName: "arrow.left.and.right.circle.fill",
-                    tintColor: color(for: pushColorRGB),
+                    tintColor: Color(rgb: pushColorRGB),
                     isOn: $pushVisible
                 )
             }
         }
         .padding(16)
         .background(.background.opacity(0.72), in: RoundedRectangle(cornerRadius: 22, style: .continuous))
-    }
-
-    private func color(for rgb: Int) -> Color {
-        Color(uiColor: UIColor(rgb: rgb, alpha: 1))
     }
 }

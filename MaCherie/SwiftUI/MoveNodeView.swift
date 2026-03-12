@@ -26,3 +26,10 @@ struct MoveNodeView: View {
         }
     }
 }
+
+#Preview("Move Browser") {
+    let preview = PreviewAppModel.moveBrowser()
+
+    return MoveNodeView(node: preview.node)
+        .environment(preview.appModel)
+}

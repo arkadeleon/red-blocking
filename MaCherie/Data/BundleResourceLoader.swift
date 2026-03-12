@@ -8,7 +8,6 @@
 
 import Foundation
 import ImageIO
-import UIKit
 
 enum BundleResourceLoaderError: LocalizedError {
     case missingResource(path: String)
@@ -35,11 +34,6 @@ struct BundleResourceLoader {
         let url = try resourceURL(at: path)
         return try Data(contentsOf: url)
     }
-
-    func image(named name: String) -> UIImage? {
-        UIImage(named: name, in: bundle, compatibleWith: nil)
-    }
-
     func imageSource(at path: String) throws -> CGImageSource {
         let url = try resourceURL(at: path)
         guard let imageSource = CGImageSourceCreateWithURL(url as CFURL, nil) else {

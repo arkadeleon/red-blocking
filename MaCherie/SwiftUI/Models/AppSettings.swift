@@ -9,9 +9,10 @@
 import Foundation
 import Observation
 
+@MainActor
 @Observable
 final class AppSettings {
-    nonisolated(unsafe) static let standard = AppSettings()
+    static let standard = AppSettings()
 
     let userDefaults: UserDefaults
 

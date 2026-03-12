@@ -437,20 +437,21 @@ Phase 0 status: complete. The pre-migration UIKit app still builds successfully 
 
 ### Goal
 
-做迁移收尾，保证代码结构和功能链路稳定。
+做迁移收尾，先保证代码结构和功能链路稳定，不在这一阶段继续收缩资源或更新说明文档。
 
 ### Tasks
 
-- 清理未使用资源与过时注释。
+- 清理过时注释与无用代码。
+- 暂时保留现有 `plist` 和 `json` 资源文件，不在此阶段删除或合并。
 - 校验每种主要导航路径。
 - 统一文件组织、命名和 feature 目录。
 - 补充必要的预览或开发辅助数据。
-- 更新 README 或迁移说明。
+- README 与迁移说明暂不调整，留到后续单独处理。
 
 ### Done When
 
 - 代码结构符合新架构。
-- 迁移说明与工程现状一致。
+- 主流程回归结果明确，且当前资源保留策略已落实。
 
 ### Verification
 
@@ -460,6 +461,8 @@ Phase 0 status: complete. The pre-migration UIKit app still builds successfully 
   - 招式树递进
   - 动画播放器
   - 设置持久化
+
+Phase 15 status: complete. The SwiftUI app now builds successfully after the final cleanup pass, plist/json resources remain in place, and README changes are still deferred.
 
 ## Recommended Execution Order
 

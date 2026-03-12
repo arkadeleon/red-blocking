@@ -28,6 +28,7 @@ struct MotionCanvasConfiguration {
     let throwableRGB: Int
     let pushRGB: Int
 
+    @MainActor
     init(
         hitboxVisibilitySettings: HitboxVisibilitySettings,
         hitboxColorSettings: HitboxColorSettings

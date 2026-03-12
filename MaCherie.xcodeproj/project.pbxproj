@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		35375CAC20D0FE45004642CB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 35375CAB20D0FE45004642CB /* LaunchScreen.storyboard */; };
-		3566755320D2692F00DD26A4 /* UIColor+Integer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3566755220D2692F00DD26A4 /* UIColor+Integer.swift */; };
 		3566755520D26A2800DD26A4 /* ApplicationDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3566755420D26A2800DD26A4 /* ApplicationDataManager.swift */; };
 		3566755920D2702C00DD26A4 /* MotionDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3566755820D2702C00DD26A4 /* MotionDownloader.swift */; };
 		3583FA322DBB640F00778995 /* CharacterData in Resources */ = {isa = PBXBuildFile; fileRef = 3583FA312DBB63E800778995 /* CharacterData */; };
@@ -18,7 +17,7 @@
 		3591000B2F03000100778995 /* AppModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 359100052F03000100778995 /* AppModel.swift */; };
 		3591000C2F03000100778995 /* AppSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 359100062F03000100778995 /* AppSettings.swift */; };
 		359100112F03210000778995 /* NavigationRootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 359100102F03210000778995 /* NavigationRootView.swift */; };
-		359100132F03210100778995 /* CharacterSidebarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 359100122F03210100778995 /* CharacterSidebarView.swift */; };
+		359100132F03210100778995 /* CharacterListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 359100122F03210100778995 /* CharacterListView.swift */; };
 		359100152F03210200778995 /* MoveNodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 359100142F03210200778995 /* MoveNodeView.swift */; };
 		359100172F03210300778995 /* MoveDestinationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 359100162F03210300778995 /* MoveDestinationView.swift */; };
 		359100192F03210400778995 /* AppNavigationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 359100182F03210400778995 /* AppNavigationModel.swift */; };
@@ -36,7 +35,6 @@
 		35AFF43E2BA093B500737E1A /* FrameData in Resources */ = {isa = PBXBuildFile; fileRef = 35AFF43D2BA093B500737E1A /* FrameData */; };
 		35B69A3620D8DECE00F05A2C /* CharacterMove.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35B69A3520D8DECE00F05A2C /* CharacterMove.swift */; };
 		35C41F3D237AB26000A1EBF7 /* MotionInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35C41F3C237AB26000A1EBF7 /* MotionInfo.swift */; };
-		35C41F4A237D35A900A1EBF7 /* MotionPlayerLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35C41F49237D35A900A1EBF7 /* MotionPlayerLayer.swift */; };
 		35C41F4C237D3E7E00A1EBF7 /* MotionPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35C41F4B237D3E7E00A1EBF7 /* MotionPlayer.swift */; };
 		35FA31A220D8B33C009A5D7B /* Character.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35FA31A120D8B33C009A5D7B /* Character.swift */; };
 		36A100032F03111100778995 /* BundleResourceLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36A100022F03111100778995 /* BundleResourceLoader.swift */; };
@@ -52,7 +50,6 @@
 		36B100072F03400600778995 /* MotionFrameResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36B100022F03400100778995 /* MotionFrameResource.swift */; };
 		36B100082F03400700778995 /* MotionFrame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36B100032F03400200778995 /* MotionFrame.swift */; };
 		36B100092F03400800778995 /* MotionPlaybackData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36B100042F03400300778995 /* MotionPlaybackData.swift */; };
-		36B1000A2F03400900778995 /* MotionDataPipelineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36B100052F03400400778995 /* MotionDataPipelineView.swift */; };
 		36B1000D2F03400B00778995 /* MotionCanvasConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36B100102F03400E00778995 /* MotionCanvasConfiguration.swift */; };
 		36B1000E2F03400C00778995 /* MotionCanvasRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36B100112F03400F00778995 /* MotionCanvasRenderer.swift */; };
 		36B1000F2F03400D00778995 /* MotionCanvasView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36B100122F03401000778995 /* MotionCanvasView.swift */; };
@@ -64,6 +61,8 @@
 		36B1002B2F03500600778995 /* MotionPlayerHitboxControlsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36B1002A2F03500600778995 /* MotionPlayerHitboxControlsView.swift */; };
 		36B1002D2F03500700778995 /* MotionPlayerHitboxVisibilityGroupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36B1002C2F03500700778995 /* MotionPlayerHitboxVisibilityGroupView.swift */; };
 		36B1002F2F03500800778995 /* MotionPlayerHitboxToggleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36B1002E2F03500800778995 /* MotionPlayerHitboxToggleView.swift */; };
+		36B100312F03510000778995 /* Color+Integer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36B100302F03510000778995 /* Color+Integer.swift */; };
+		36B100332F03510100778995 /* PreviewAppModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36B100322F03510100778995 /* PreviewAppModel.swift */; };
 		EE318CB5183E363E0081370B /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE318CB4183E363E0081370B /* AudioToolbox.framework */; };
 		EEA48CA31775E59F00351CAB /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEA48CA21775E59F00351CAB /* Security.framework */; };
 		EEA48CA51775E79000351CAB /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEA48CA41775E79000351CAB /* ImageIO.framework */; };
@@ -82,7 +81,6 @@
 
 /* Begin PBXFileReference section */
 		35375CAB20D0FE45004642CB /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
-		3566755220D2692F00DD26A4 /* UIColor+Integer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Integer.swift"; sourceTree = "<group>"; };
 		3566755420D26A2800DD26A4 /* ApplicationDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationDataManager.swift; sourceTree = "<group>"; };
 		3566755820D2702C00DD26A4 /* MotionDownloader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotionDownloader.swift; sourceTree = "<group>"; };
 		3583FA312DBB63E800778995 /* CharacterData */ = {isa = PBXFileReference; lastKnownFileType = folder; path = CharacterData; sourceTree = "<group>"; };
@@ -92,7 +90,7 @@
 		359100052F03000100778995 /* AppModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppModel.swift; sourceTree = "<group>"; };
 		359100062F03000100778995 /* AppSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppSettings.swift; sourceTree = "<group>"; };
 		359100102F03210000778995 /* NavigationRootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationRootView.swift; sourceTree = "<group>"; };
-		359100122F03210100778995 /* CharacterSidebarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterSidebarView.swift; sourceTree = "<group>"; };
+		359100122F03210100778995 /* CharacterListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterListView.swift; sourceTree = "<group>"; };
 		359100142F03210200778995 /* MoveNodeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoveNodeView.swift; sourceTree = "<group>"; };
 		359100162F03210300778995 /* MoveDestinationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoveDestinationView.swift; sourceTree = "<group>"; };
 		359100182F03210400778995 /* AppNavigationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppNavigationModel.swift; sourceTree = "<group>"; };
@@ -111,7 +109,6 @@
 		36B100022F03400100778995 /* MotionFrameResource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotionFrameResource.swift; sourceTree = "<group>"; };
 		36B100032F03400200778995 /* MotionFrame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotionFrame.swift; sourceTree = "<group>"; };
 		36B100042F03400300778995 /* MotionPlaybackData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotionPlaybackData.swift; sourceTree = "<group>"; };
-		36B100052F03400400778995 /* MotionDataPipelineView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotionDataPipelineView.swift; sourceTree = "<group>"; };
 		36B100102F03400E00778995 /* MotionCanvasConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotionCanvasConfiguration.swift; sourceTree = "<group>"; };
 		36B100112F03400F00778995 /* MotionCanvasRenderer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotionCanvasRenderer.swift; sourceTree = "<group>"; };
 		36B100122F03401000778995 /* MotionCanvasView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotionCanvasView.swift; sourceTree = "<group>"; };
@@ -123,10 +120,11 @@
 		36B1002A2F03500600778995 /* MotionPlayerHitboxControlsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotionPlayerHitboxControlsView.swift; sourceTree = "<group>"; };
 		36B1002C2F03500700778995 /* MotionPlayerHitboxVisibilityGroupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotionPlayerHitboxVisibilityGroupView.swift; sourceTree = "<group>"; };
 		36B1002E2F03500800778995 /* MotionPlayerHitboxToggleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotionPlayerHitboxToggleView.swift; sourceTree = "<group>"; };
+		36B100302F03510000778995 /* Color+Integer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Integer.swift"; sourceTree = "<group>"; };
+		36B100322F03510100778995 /* PreviewAppModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewAppModel.swift; sourceTree = "<group>"; };
 		35AFF43D2BA093B500737E1A /* FrameData */ = {isa = PBXFileReference; lastKnownFileType = folder; path = FrameData; sourceTree = "<group>"; };
 		35B69A3520D8DECE00F05A2C /* CharacterMove.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterMove.swift; sourceTree = "<group>"; };
 		35C41F3C237AB26000A1EBF7 /* MotionInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotionInfo.swift; sourceTree = "<group>"; };
-		35C41F49237D35A900A1EBF7 /* MotionPlayerLayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MotionPlayerLayer.swift; sourceTree = "<group>"; };
 		35C41F4B237D3E7E00A1EBF7 /* MotionPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotionPlayer.swift; sourceTree = "<group>"; };
 		35FA31A120D8B33C009A5D7B /* Character.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Character.swift; sourceTree = "<group>"; };
 		36A100022F03111100778995 /* BundleResourceLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BundleResourceLoader.swift; sourceTree = "<group>"; };
@@ -185,7 +183,6 @@
 			isa = PBXGroup;
 			children = (
 				3566755420D26A2800DD26A4 /* ApplicationDataManager.swift */,
-				3566755220D2692F00DD26A4 /* UIColor+Integer.swift */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -214,14 +211,14 @@
 			children = (
 				3591000E2F03000100778995 /* Models */,
 				36A100202F03250600778995 /* CharacterDetailBackgroundView.swift */,
-				359100122F03210100778995 /* CharacterSidebarView.swift */,
+				359100122F03210100778995 /* CharacterListView.swift */,
+				36B100302F03510000778995 /* Color+Integer.swift */,
 				36A100242F03250800778995 /* DetailRootContentView.swift */,
 				359100012F03000100778995 /* MaCherieApp.swift */,
 				359100022F03000100778995 /* MaCherieRootView.swift */,
 				36B100102F03400E00778995 /* MotionCanvasConfiguration.swift */,
 				36B100112F03400F00778995 /* MotionCanvasRenderer.swift */,
 				36B100122F03401000778995 /* MotionCanvasView.swift */,
-				36B100052F03400400778995 /* MotionDataPipelineView.swift */,
 				36B1002A2F03500600778995 /* MotionPlayerHitboxControlsView.swift */,
 				36B1002E2F03500800778995 /* MotionPlayerHitboxToggleView.swift */,
 				36B1002C2F03500700778995 /* MotionPlayerHitboxVisibilityGroupView.swift */,
@@ -230,6 +227,7 @@
 				36B100262F03500400778995 /* MotionPlayerPreviewCardView.swift */,
 				36B100282F03500500778995 /* MotionPlayerTransportControlsView.swift */,
 				36B100202F03500100778995 /* MotionPlayerView.swift */,
+				36B100322F03510100778995 /* PreviewAppModel.swift */,
 				36A100142F03250100778995 /* MoveBrowserView.swift */,
 				36A100182F03250300778995 /* MoveDetailRowView.swift */,
 				359100162F03210300778995 /* MoveDestinationView.swift */,
@@ -268,7 +266,6 @@
 				36B100042F03400300778995 /* MotionPlaybackData.swift */,
 				3566755820D2702C00DD26A4 /* MotionDownloader.swift */,
 				35C41F4B237D3E7E00A1EBF7 /* MotionPlayer.swift */,
-				35C41F49237D35A900A1EBF7 /* MotionPlayerLayer.swift */,
 			);
 			path = Motion;
 			sourceTree = "<group>";
@@ -442,12 +439,12 @@
 				3591001B2F03210500778995 /* CharacterSelection.swift in Sources */,
 				36A100052F03111100778995 /* CharacterRepository.swift in Sources */,
 				36A100212F03250600778995 /* CharacterDetailBackgroundView.swift in Sources */,
-				359100132F03210100778995 /* CharacterSidebarView.swift in Sources */,
+				359100132F03210100778995 /* CharacterListView.swift in Sources */,
+				36B100312F03510000778995 /* Color+Integer.swift in Sources */,
 				36A100252F03250800778995 /* DetailRootContentView.swift in Sources */,
 				36B1000D2F03400B00778995 /* MotionCanvasConfiguration.swift in Sources */,
 				36B1000E2F03400C00778995 /* MotionCanvasRenderer.swift in Sources */,
 				36B1000F2F03400D00778995 /* MotionCanvasView.swift in Sources */,
-				36B1000A2F03400900778995 /* MotionDataPipelineView.swift in Sources */,
 				36B1002B2F03500600778995 /* MotionPlayerHitboxControlsView.swift in Sources */,
 				36B1002F2F03500800778995 /* MotionPlayerHitboxToggleView.swift in Sources */,
 				36B1002D2F03500700778995 /* MotionPlayerHitboxVisibilityGroupView.swift in Sources */,
@@ -464,6 +461,7 @@
 				36B100292F03500500778995 /* MotionPlayerTransportControlsView.swift in Sources */,
 				35C41F4C237D3E7E00A1EBF7 /* MotionPlayer.swift in Sources */,
 				36B100212F03500100778995 /* MotionPlayerView.swift in Sources */,
+				36B100332F03510100778995 /* PreviewAppModel.swift in Sources */,
 				3566755920D2702C00DD26A4 /* MotionDownloader.swift in Sources */,
 				35B69A3620D8DECE00F05A2C /* CharacterMove.swift in Sources */,
 				359100082F03000100778995 /* MaCherieRootView.swift in Sources */,
@@ -471,8 +469,6 @@
 				36A100192F03250300778995 /* MoveDetailRowView.swift in Sources */,
 				36A100132F03250000778995 /* MoveBrowserModel.swift in Sources */,
 				36A100152F03250100778995 /* MoveBrowserView.swift in Sources */,
-				3566755320D2692F00DD26A4 /* UIColor+Integer.swift in Sources */,
-				35C41F4A237D35A900A1EBF7 /* MotionPlayerLayer.swift in Sources */,
 				359100172F03210300778995 /* MoveDestinationView.swift in Sources */,
 				35C41F3D237AB26000A1EBF7 /* MotionInfo.swift in Sources */,
 				3591001D2F03210600778995 /* MoveNode.swift in Sources */,

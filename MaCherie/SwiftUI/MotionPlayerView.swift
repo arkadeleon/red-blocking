@@ -101,3 +101,20 @@ struct MotionPlayerView: View {
         }
     }
 }
+
+#Preview("Motion Player") {
+    if let preview = PreviewAppModel.motionPlayer() {
+        MotionPlayerView(
+            title: preview.title,
+            characterCode: preview.characterCode,
+            skillCode: preview.skillCode
+        )
+        .environment(preview.appModel)
+    } else {
+        ContentUnavailableView(
+            "Preview Unavailable",
+            systemImage: "exclamationmark.triangle",
+            description: Text("No bundled motion preview data is available.")
+        )
+    }
+}

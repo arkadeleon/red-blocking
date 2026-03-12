@@ -19,14 +19,15 @@ final class AppModel {
     let characterList: CharacterListModel
 
     init(
-        settings: AppSettings = .standard,
+        settings: AppSettings? = nil,
         characterRepository: CharacterRepository = CharacterRepository(),
         moveRepository: MoveRepository = MoveRepository(),
         motionRepository: MotionRepository = MotionRepository(),
         navigation: AppNavigationModel? = nil,
         characterList: CharacterListModel? = nil
     ) {
-        self.settings = settings
+        let resolvedSettings = settings ?? .standard
+        self.settings = resolvedSettings
         self.characterRepository = characterRepository
         self.moveRepository = moveRepository
         self.motionRepository = motionRepository

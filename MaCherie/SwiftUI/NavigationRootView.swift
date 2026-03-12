@@ -26,3 +26,10 @@ struct NavigationRootView: View {
         .navigationSplitViewStyle(.balanced)
     }
 }
+
+#Preview("Navigation Root") {
+    let appModel = PreviewAppModel.rootNavigation()
+
+    return NavigationRootView()
+        .environment(appModel)
+}
