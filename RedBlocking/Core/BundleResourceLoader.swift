@@ -34,6 +34,7 @@ struct BundleResourceLoader {
         let url = try resourceURL(at: path)
         return try Data(contentsOf: url)
     }
+
     func imageSource(at path: String) throws -> CGImageSource {
         let url = try resourceURL(at: path)
         guard let imageSource = CGImageSourceCreateWithURL(url as CFURL, nil) else {
