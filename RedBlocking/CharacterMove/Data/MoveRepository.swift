@@ -23,6 +23,7 @@ enum MoveRepositoryError: LocalizedError {
 struct MoveRepository {
     private let resourceLoader: BundleResourceLoader
     private let decoder = YAMLDecoder()
+    private let browserProjector = MoveBrowserProjector()
 
     init(bundle: Bundle = .main, resourceRootURL: URL? = nil) {
         resourceLoader = BundleResourceLoader(bundle: bundle, rootURL: resourceRootURL)
@@ -50,6 +51,15 @@ struct MoveRepository {
         } catch {
             throw MoveRepositoryError.invalidStructuredProfile(path: path, underlying: error)
         }
+    }
+
+    func loadBrowserPage(for character: Character) throws -> MoveBrowserPage {
+        try loadBrowserPage(resourceName: character.next)
+    }
+
+    func loadBrowserPage(resourceName: String) throws -> MoveBrowserPage {
+        let profile = try loadProfile(resourceName: resourceName)
+        return browserProjector.project(profile: profile)
     }
 
     private func loadMoveData(resourceName: String) throws -> Data {
