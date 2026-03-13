@@ -15,6 +15,8 @@ final class AppNavigationModel {
     private let moveRepository: MoveRepository
 
     private(set) var currentRootNode: MoveNode?
+    private(set) var currentProfile: CharacterProfile?
+    private(set) var currentProfileErrorMessage: String?
     private(set) var selectedCharacter: CharacterSelection? {
         didSet {
             guard selectedCharacter?.id != oldValue?.id else {
@@ -23,8 +25,11 @@ final class AppNavigationModel {
 
             detailPath.removeAll()
             currentRootNode = selectedCharacter.map(makeRootNode(for:))
+            currentProfile = nil
+            currentProfileErrorMessage = nil
 
             if let selectedCharacter {
+                loadCurrentProfile(for: selectedCharacter)
                 loadRootSections(for: selectedCharacter)
             }
         }
@@ -83,6 +88,16 @@ final class AppNavigationModel {
         } catch {
             nodeSections[node.id] = []
             nodeErrors[node.id] = "Couldn't load moves for \(selection.title)."
+        }
+    }
+
+    private func loadCurrentProfile(for selection: CharacterSelection) {
+        do {
+            currentProfile = try moveRepository.loadProfile(resourceName: selection.moveResourceName)
+            currentProfileErrorMessage = nil
+        } catch {
+            currentProfile = nil
+            currentProfileErrorMessage = error.localizedDescription
         }
     }
 }

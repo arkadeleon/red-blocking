@@ -27,9 +27,11 @@ enum BundleResourceLoaderError: LocalizedError {
 
 struct BundleResourceLoader {
     let bundle: Bundle
+    let rootURL: URL?
 
-    init(bundle: Bundle = .main) {
+    init(bundle: Bundle = .main, rootURL: URL? = nil) {
         self.bundle = bundle
+        self.rootURL = rootURL
     }
 
     func data(at path: String) throws -> Data {
@@ -47,7 +49,8 @@ struct BundleResourceLoader {
     }
 
     private func resourceURL(at path: String) throws -> URL {
-        let url = (bundle.resourceURL ?? bundle.bundleURL).appendingPathComponent(path)
+        let baseURL = rootURL ?? bundle.resourceURL ?? bundle.bundleURL
+        let url = baseURL.appendingPathComponent(path)
         guard FileManager.default.fileExists(atPath: url.path) else {
             throw BundleResourceLoaderError.missingResource(path: path)
         }
