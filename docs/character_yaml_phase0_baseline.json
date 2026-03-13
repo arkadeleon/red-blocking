@@ -1,0 +1,3294 @@
+{
+  "generatedAt": "2026-03-13T06:11:19Z",
+  "sourceDirectory": "RedBlocking/Resources/CharacterData",
+  "verification": {
+    "passed": true,
+    "characterCount": 19,
+    "expectedGameplaySectionTitles": [
+      "【空中通常技】",
+      "【地上通常技】",
+      "【特殊入力技】",
+      "【必殺技】",
+      "【スーパーアーツ】"
+    ],
+    "failures": []
+  },
+  "aggregate": {
+    "fixedGameplaySectionTitlesConfirmedForAllCharacters": true,
+    "deepestNavigation": {
+      "characterId": "Yun",
+      "depth": 4
+    },
+    "rowKindTotals": {
+      "detail": 19089,
+      "motion_player": 1031,
+      "next": 1699,
+      "supplementary": 895
+    },
+    "actionEntryTotals": {
+      "open_motion_player": 1031,
+      "open_next": 1699
+    },
+    "customNestedSectionTitleCatalog": [
+      {
+        "title": "1回目",
+        "characters": [
+          "Dudley",
+          "Yang"
+        ]
+      },
+      {
+        "title": "1回目のサマー",
+        "characters": [
+          "Remy"
+        ]
+      },
+      {
+        "title": "1回目の昇龍拳",
+        "characters": [
+          "Ken"
+        ]
+      },
+      {
+        "title": "1回目の蹴り上げ",
+        "characters": [
+          "Elena"
+        ]
+      },
+      {
+        "title": "1回目ゲージ増加量",
+        "characters": [
+          "Yang"
+        ]
+      },
+      {
+        "title": "1回目ヒット&ガード硬直時間差",
+        "characters": [
+          "Yang"
+        ]
+      },
+      {
+        "title": "1段目",
+        "characters": [
+          "Necro"
+        ]
+      },
+      {
+        "title": "2・3段目",
+        "characters": [
+          "Necro"
+        ]
+      },
+      {
+        "title": "2回目",
+        "characters": [
+          "Dudley",
+          "Yang"
+        ]
+      },
+      {
+        "title": "2回目のサマー",
+        "characters": [
+          "Remy"
+        ]
+      },
+      {
+        "title": "2回目の昇龍拳",
+        "characters": [
+          "Gouki",
+          "Ken"
+        ]
+      },
+      {
+        "title": "2回目の百裂脚",
+        "characters": [
+          "Chun-Li"
+        ]
+      },
+      {
+        "title": "2回目の蹴り上げ",
+        "characters": [
+          "Elena"
+        ]
+      },
+      {
+        "title": "2回目ゲージ増加量",
+        "characters": [
+          "Yang"
+        ]
+      },
+      {
+        "title": "2回目ヒット&ガード硬直時間差",
+        "characters": [
+          "Yang"
+        ]
+      },
+      {
+        "title": "3回目",
+        "characters": [
+          "Dudley",
+          "Yang"
+        ]
+      },
+      {
+        "title": "3回目のサマー",
+        "characters": [
+          "Remy"
+        ]
+      },
+      {
+        "title": "3回目の昇龍拳",
+        "characters": [
+          "Gouki",
+          "Ken"
+        ]
+      },
+      {
+        "title": "3回目の蹴り上げ",
+        "characters": [
+          "Elena"
+        ]
+      },
+      {
+        "title": "3回目ゲージ増加量",
+        "characters": [
+          "Yang"
+        ]
+      },
+      {
+        "title": "3回目ヒット&ガード硬直時間差",
+        "characters": [
+          "Yang"
+        ]
+      },
+      {
+        "title": "4回目",
+        "characters": [
+          "Yang"
+        ]
+      },
+      {
+        "title": "4回目ゲージ増加量",
+        "characters": [
+          "Yang"
+        ]
+      },
+      {
+        "title": "4回目ヒット&ガード硬直時間差",
+        "characters": [
+          "Yang"
+        ]
+      },
+      {
+        "title": "5回目",
+        "characters": [
+          "Yang"
+        ]
+      },
+      {
+        "title": "5回目ゲージ増加量",
+        "characters": [
+          "Yang"
+        ]
+      },
+      {
+        "title": "5回目ヒット&ガード硬直時間差",
+        "characters": [
+          "Yang"
+        ]
+      },
+      {
+        "title": "6小K",
+        "characters": [
+          "Makoto"
+        ]
+      },
+      {
+        "title": "Q",
+        "characters": [
+          "Makoto"
+        ]
+      },
+      {
+        "title": "しゃがみ状態で竜巻がヒットするキャラ",
+        "characters": [
+          "Ryu"
+        ]
+      },
+      {
+        "title": "カス当たり時",
+        "characters": [
+          "Ryu"
+        ]
+      },
+      {
+        "title": "クロダ電刃(通称)",
+        "characters": [
+          "Ryu"
+        ]
+      },
+      {
+        "title": "ケズリ",
+        "characters": [
+          "Urien"
+        ]
+      },
+      {
+        "title": "ゲージ増加量(追加入力)",
+        "characters": [
+          "Ibuki"
+        ]
+      },
+      {
+        "title": "スタン値",
+        "characters": [
+          "Urien"
+        ]
+      },
+      {
+        "title": "ダッドリー",
+        "characters": [
+          "Makoto"
+        ]
+      },
+      {
+        "title": "トゥエルヴ",
+        "characters": [
+          "Makoto"
+        ]
+      },
+      {
+        "title": "ネクロ",
+        "characters": [
+          "Makoto"
+        ]
+      },
+      {
+        "title": "バックドロップ",
+        "characters": [
+          "Alex"
+        ]
+      },
+      {
+        "title": "パワーボム",
+        "characters": [
+          "Alex"
+        ]
+      },
+      {
+        "title": "ヒット&ガード硬直時間差(4+大P)",
+        "characters": [
+          "Yang",
+          "Yun"
+        ]
+      },
+      {
+        "title": "ヒット&ガード硬直時間差(6小K)",
+        "characters": [
+          "Ibuki"
+        ]
+      },
+      {
+        "title": "ヒット&ガード硬直時間差(中K)",
+        "characters": [
+          "Dudley",
+          "Ibuki"
+        ]
+      },
+      {
+        "title": "ヒット&ガード硬直時間差(中P)",
+        "characters": [
+          "Dudley",
+          "Ibuki"
+        ]
+      },
+      {
+        "title": "ヒット&ガード硬直時間差(大K)",
+        "characters": [
+          "Dudley",
+          "Ibuki"
+        ]
+      },
+      {
+        "title": "ヒット&ガード硬直時間差(大P)",
+        "characters": [
+          "Dudley",
+          "Ibuki"
+        ]
+      },
+      {
+        "title": "ヒット&ガード硬直時間差(屈中P)",
+        "characters": [
+          "Dudley"
+        ]
+      },
+      {
+        "title": "ヒット&ガード硬直時間差(屈大K)",
+        "characters": [
+          "Ibuki"
+        ]
+      },
+      {
+        "title": "ヒット&ガード硬直時間差(屈大P)",
+        "characters": [
+          "Dudley"
+        ]
+      },
+      {
+        "title": "ヒット&ガード硬直時間差(立中K)",
+        "characters": [
+          "Yang"
+        ]
+      },
+      {
+        "title": "ヒット&ガード硬直時間差(立中P)",
+        "characters": [
+          "Yun"
+        ]
+      },
+      {
+        "title": "ヒット&ガード硬直時間差(立大K)",
+        "characters": [
+          "Ibuki",
+          "Yang"
+        ]
+      },
+      {
+        "title": "ヒット&ガード硬直時間差(立大P)",
+        "characters": [
+          "Yang",
+          "Yun"
+        ]
+      },
+      {
+        "title": "ヒット&ガード硬直時間差(立小K)",
+        "characters": [
+          "Yun"
+        ]
+      },
+      {
+        "title": "ヒット&ガード硬直時間差(追加入力)",
+        "characters": [
+          "Ibuki"
+        ]
+      },
+      {
+        "title": "ヤン",
+        "characters": [
+          "Makoto"
+        ]
+      },
+      {
+        "title": "ユン",
+        "characters": [
+          "Makoto"
+        ]
+      },
+      {
+        "title": "ラストの回し蹴り部分",
+        "characters": [
+          "Gouki"
+        ]
+      },
+      {
+        "title": "ラストの蹴り上げ",
+        "characters": [
+          "Chun-Li"
+        ]
+      },
+      {
+        "title": "ラリアットカス当たり数値",
+        "characters": [
+          "Urien"
+        ]
+      },
+      {
+        "title": "上昇竜巻部分",
+        "characters": [
+          "Gouki",
+          "Ken"
+        ]
+      },
+      {
+        "title": "上段(1・2・3段目)",
+        "characters": [
+          "Ibuki"
+        ]
+      },
+      {
+        "title": "上段(1・2段目)",
+        "characters": [
+          "Ibuki"
+        ]
+      },
+      {
+        "title": "上段(4段目)",
+        "characters": [
+          "Ibuki"
+        ]
+      },
+      {
+        "title": "下段(2・3段目)",
+        "characters": [
+          "Ibuki"
+        ]
+      },
+      {
+        "title": "下段(2段目)",
+        "characters": [
+          "Ibuki"
+        ]
+      },
+      {
+        "title": "下段(3段目)",
+        "characters": [
+          "Ibuki"
+        ]
+      },
+      {
+        "title": "下段(4段目)",
+        "characters": [
+          "Ibuki"
+        ]
+      },
+      {
+        "title": "下降竜巻部分\n(実際にはヒットしない)",
+        "characters": [
+          "Ken"
+        ]
+      },
+      {
+        "title": "中",
+        "characters": [
+          "Ibuki"
+        ]
+      },
+      {
+        "title": "中疾風",
+        "characters": [
+          "Makoto"
+        ]
+      },
+      {
+        "title": "共通",
+        "characters": [
+          "Ibuki"
+        ]
+      },
+      {
+        "title": "初段の稲妻部分",
+        "characters": [
+          "Gouki"
+        ]
+      },
+      {
+        "title": "固定ヒット部分",
+        "characters": [
+          "Ken"
+        ]
+      },
+      {
+        "title": "地上乱舞部分",
+        "characters": [
+          "Ken"
+        ]
+      },
+      {
+        "title": "大",
+        "characters": [
+          "Ibuki"
+        ]
+      },
+      {
+        "title": "小",
+        "characters": [
+          "Ibuki"
+        ]
+      },
+      {
+        "title": "小疾風",
+        "characters": [
+          "Makoto"
+        ]
+      },
+      {
+        "title": "幻影陣中の性能",
+        "characters": [
+          "Yun"
+        ]
+      },
+      {
+        "title": "打撃版",
+        "characters": [
+          "Ibuki"
+        ]
+      },
+      {
+        "title": "打撃部分",
+        "characters": [
+          "Alex"
+        ]
+      },
+      {
+        "title": "投げ版",
+        "characters": [
+          "Ibuki"
+        ]
+      },
+      {
+        "title": "持続",
+        "characters": [
+          "Makoto"
+        ]
+      },
+      {
+        "title": "攻撃力",
+        "characters": [
+          "Urien"
+        ]
+      },
+      {
+        "title": "昇龍拳がヒットするキャラ",
+        "characters": [
+          "Ryu"
+        ]
+      },
+      {
+        "title": "最初の昇龍拳",
+        "characters": [
+          "Gouki"
+        ]
+      },
+      {
+        "title": "最初の百裂脚",
+        "characters": [
+          "Chun-Li"
+        ]
+      },
+      {
+        "title": "最後の吹っ飛び部分",
+        "characters": [
+          "Necro"
+        ]
+      },
+      {
+        "title": "発生",
+        "characters": [
+          "Urien"
+        ]
+      },
+      {
+        "title": "立中K",
+        "characters": [
+          "Makoto"
+        ]
+      },
+      {
+        "title": "立大P",
+        "characters": [
+          "Makoto"
+        ]
+      },
+      {
+        "title": "膝部分",
+        "characters": [
+          "Gouki"
+        ]
+      },
+      {
+        "title": "衝撃波部分",
+        "characters": [
+          "Gouki"
+        ]
+      },
+      {
+        "title": "追加入力",
+        "characters": [
+          "Elena"
+        ]
+      },
+      {
+        "title": "追加入力「中」",
+        "characters": [
+          "Elena"
+        ]
+      },
+      {
+        "title": "追加入力「大」",
+        "characters": [
+          "Elena"
+        ]
+      },
+      {
+        "title": "追加入力「小」",
+        "characters": [
+          "Elena"
+        ]
+      },
+      {
+        "title": "追加入力「無し」",
+        "characters": [
+          "Elena"
+        ]
+      },
+      {
+        "title": "追加入力ゲージ増加量",
+        "characters": [
+          "Elena"
+        ]
+      },
+      {
+        "title": "追加入力ヒット&ガード硬直時間差",
+        "characters": [
+          "Elena"
+        ]
+      },
+      {
+        "title": "連打による追加(1)",
+        "characters": [
+          "Ken"
+        ]
+      },
+      {
+        "title": "連打による追加(2)",
+        "characters": [
+          "Ken"
+        ]
+      },
+      {
+        "title": "連打による追加(3)",
+        "characters": [
+          "Ken"
+        ]
+      },
+      {
+        "title": "連打による追加(4)",
+        "characters": [
+          "Ken"
+        ]
+      },
+      {
+        "title": "連打部分(最大4ループ)",
+        "characters": [
+          "Necro"
+        ]
+      },
+      {
+        "title": "電刃波動拳のタメについて",
+        "characters": [
+          "Ryu"
+        ]
+      }
+    ],
+    "specialPatterns": [
+      {
+        "id": "deep_navigation_chains",
+        "title": "Deep navigation chains",
+        "description": "A move requires three or more Next hops before detail rows appear.",
+        "characterCount": 3,
+        "characters": [
+          "Dudley",
+          "Necro",
+          "Yun"
+        ],
+        "examples": [
+          {
+            "path": "【必殺技】 > ダッキング系 > ダッキング > ダッキング【小】",
+            "navigationDepth": 3,
+            "characterId": "Dudley"
+          },
+          {
+            "path": "【特殊入力技】 > レバー入れ技 > ドリルキック > ドリルキック小(30度)",
+            "navigationDepth": 3,
+            "characterId": "Necro"
+          },
+          {
+            "path": "【スーパーアーツ】 > 幻影陣(げんえいじん) > 幻影陣中の各技の数値 > 【空中通常技】 > ジャンプ小パンチ",
+            "navigationDepth": 3,
+            "characterId": "Yun"
+          }
+        ]
+      },
+      {
+        "id": "normal_ex_splits",
+        "title": "通常 / EX split blocks",
+        "description": "Supplementary note groups are split into separate 通常 and EX sections.",
+        "characterCount": 17,
+        "characters": [
+          "Alex",
+          "Chun-Li",
+          "Dudley",
+          "Elena",
+          "Hugo",
+          "Ibuki",
+          "Ken",
+          "Makoto",
+          "Oro",
+          "Q",
+          "Remy",
+          "Ryu",
+          "Sean",
+          "Twelve",
+          "Urien",
+          "Yang",
+          "Yun"
+        ],
+        "examples": [
+          {
+            "path": "【必殺技】 > フラッシュチョップ > 補足 > 通常",
+            "navigationDepth": 2,
+            "characterId": "Alex"
+          },
+          {
+            "path": "【必殺技】 > 百裂脚 > 補足 > 通常",
+            "navigationDepth": 2,
+            "characterId": "Chun-Li"
+          },
+          {
+            "path": "【必殺技】 > ジェットアッパー > 補足 > 通常",
+            "navigationDepth": 2,
+            "characterId": "Dudley"
+          },
+          {
+            "path": "【必殺技】 > スクラッチホイール > 補足 > 通常",
+            "navigationDepth": 2,
+            "characterId": "Elena"
+          },
+          {
+            "path": "【必殺技】 > ジャイアントパームボンバー > 補足 > 通常",
+            "navigationDepth": 2,
+            "characterId": "Hugo"
+          },
+          {
+            "path": "【必殺技】 > 苦無 > 補足 > 通常",
+            "navigationDepth": 2,
+            "characterId": "Ibuki"
+          }
+        ]
+      },
+      {
+        "id": "variant_input_or_strength_blocks",
+        "title": "Variant input / strength blocks",
+        "description": "Nested sections differentiate follow-up inputs, button strengths, or attack variants.",
+        "characterCount": 2,
+        "characters": [
+          "Elena",
+          "Ibuki"
+        ],
+        "examples": [
+          {
+            "path": "【必殺技】 > スピンサイズ > スピンサイズ【小】 > 追加入力",
+            "navigationDepth": 2,
+            "characterId": "Elena"
+          },
+          {
+            "path": "【必殺技】 > 旋 > 補足 > 共通",
+            "navigationDepth": 2,
+            "characterId": "Ibuki"
+          }
+        ]
+      },
+      {
+        "id": "multi_stage_or_component_breakdowns",
+        "title": "Multi-stage / component breakdowns",
+        "description": "A move is decomposed into stages or hit components such as 1回目, 段目, or 部分.",
+        "characterCount": 10,
+        "characters": [
+          "Alex",
+          "Chun-Li",
+          "Dudley",
+          "Elena",
+          "Gouki",
+          "Ibuki",
+          "Ken",
+          "Necro",
+          "Remy",
+          "Yang"
+        ],
+        "examples": [
+          {
+            "path": "【スーパーアーツ】 > ブーメランレイド > 打撃部分",
+            "navigationDepth": 1,
+            "characterId": "Alex"
+          },
+          {
+            "path": "【スーパーアーツ】 > 鳳翼扇 > 最初の百裂脚",
+            "navigationDepth": 1,
+            "characterId": "Chun-Li"
+          },
+          {
+            "path": "【スーパーアーツ】 > ロケットアッパー > 1回目",
+            "navigationDepth": 1,
+            "characterId": "Dudley"
+          },
+          {
+            "path": "【スーパーアーツ】 > スピニングビート > 1回目の蹴り上げ",
+            "navigationDepth": 1,
+            "characterId": "Elena"
+          },
+          {
+            "path": "【スーパーアーツ】 > 滅殺豪昇龍 > 最初の昇龍拳",
+            "navigationDepth": 1,
+            "characterId": "Gouki"
+          },
+          {
+            "path": "【必殺技】 > 旋 > 旋【小】 > 上段(1・2段目)",
+            "navigationDepth": 2,
+            "characterId": "Ibuki"
+          }
+        ]
+      },
+      {
+        "id": "specialized_stat_subsections",
+        "title": "Specialized stat subsections",
+        "description": "Custom stat buckets extend beyond the common ゲージ増加量 / ヒット&ガード硬直時間差 / 補足 trio.",
+        "characterCount": 6,
+        "characters": [
+          "Dudley",
+          "Ibuki",
+          "Makoto",
+          "Urien",
+          "Yang",
+          "Yun"
+        ],
+        "examples": [
+          {
+            "path": "【特殊入力技】 > ターゲットコンボ > 立小P→中P→中K > ヒット&ガード硬直時間差(中P)",
+            "navigationDepth": 2,
+            "characterId": "Dudley"
+          },
+          {
+            "path": "【特殊入力技】 > ターゲットコンボ > 近立小P→立中P→立大P > ヒット&ガード硬直時間差(中P)",
+            "navigationDepth": 2,
+            "characterId": "Ibuki"
+          },
+          {
+            "path": "【スーパーアーツ】 > 暴れ土佐波砕き > 持続",
+            "navigationDepth": 1,
+            "characterId": "Makoto"
+          },
+          {
+            "path": "【スーパーアーツ】 > ユピテルサンダー > 攻撃力",
+            "navigationDepth": 1,
+            "characterId": "Urien"
+          },
+          {
+            "path": "【特殊入力技】 > ターゲットコンボ > 立小K→立中K→立大K > ヒット&ガード硬直時間差(立中K)",
+            "navigationDepth": 2,
+            "characterId": "Yang"
+          },
+          {
+            "path": "【特殊入力技】 > ターゲットコンボ > 近立小P→立小K→立中P > ヒット&ガード硬直時間差(立小K)",
+            "navigationDepth": 2,
+            "characterId": "Yun"
+          }
+        ]
+      },
+      {
+        "id": "state_specific_performance_blocks",
+        "title": "State-specific performance blocks",
+        "description": "A move embeds alternate stats for a special state such as 幻影陣中の性能.",
+        "characterCount": 1,
+        "characters": [
+          "Yun"
+        ],
+        "examples": [
+          {
+            "path": "【空中通常技】 > ジャンプ中キック > 斜めジャンプ中キック > 幻影陣中の性能",
+            "navigationDepth": 2,
+            "characterId": "Yun"
+          }
+        ]
+      },
+      {
+        "id": "nested_gameplay_group_reuse",
+        "title": "Nested gameplay group reuse",
+        "description": "A move reuses top-level gameplay section titles inside a deeper branch.",
+        "characterCount": 1,
+        "characters": [
+          "Yun"
+        ],
+        "examples": [
+          {
+            "path": "【スーパーアーツ】 > 幻影陣(げんえいじん) > 幻影陣中の各技の数値 > 【空中通常技】",
+            "navigationDepth": 2,
+            "characterId": "Yun"
+          }
+        ]
+      },
+      {
+        "id": "matchup_or_character_specific_blocks",
+        "title": "Matchup / character-specific blocks",
+        "description": "Notes or stats branch by target character or matchup-specific conditions.",
+        "characterCount": 2,
+        "characters": [
+          "Makoto",
+          "Ryu"
+        ],
+        "examples": [
+          {
+            "path": "【スーパーアーツ】 > 正中線五段突き > ダッドリー",
+            "navigationDepth": 1,
+            "characterId": "Makoto"
+          },
+          {
+            "path": "【必殺技】 > 竜巻旋風脚 > 竜巻旋風脚【小】 > しゃがみ状態で竜巻がヒットするキャラ",
+            "navigationDepth": 2,
+            "characterId": "Ryu"
+          }
+        ]
+      },
+      {
+        "id": "unclassified_custom_sections",
+        "title": "Unclassified custom sections",
+        "description": "Custom nested section titles that do not fit the known buckets yet.",
+        "characterCount": 5,
+        "characters": [
+          "Alex",
+          "Ibuki",
+          "Makoto",
+          "Ryu",
+          "Urien"
+        ],
+        "examples": [
+          {
+            "path": "【スーパーアーツ】 > ブーメランレイド > バックドロップ",
+            "navigationDepth": 1,
+            "characterId": "Alex"
+          },
+          {
+            "path": "【必殺技】 > 旋 > 旋【中】 > ゲージ増加量(追加入力)",
+            "navigationDepth": 2,
+            "characterId": "Ibuki"
+          },
+          {
+            "path": "【必殺技】 > 突進正拳突き 「疾風」(はやて) > 追撃技の追撃可能キャラ > 6小K",
+            "navigationDepth": 2,
+            "characterId": "Makoto"
+          },
+          {
+            "path": "【スーパーアーツ】 > 真・昇龍拳 > カス当たり時",
+            "navigationDepth": 1,
+            "characterId": "Ryu"
+          },
+          {
+            "path": "【スーパーアーツ】 > タイラントパニッシュ > ラリアットカス当たり数値",
+            "navigationDepth": 1,
+            "characterId": "Urien"
+          }
+        ]
+      }
+    ]
+  },
+  "parityChecklist": [
+    {
+      "field": "section_title",
+      "description": "List section header text from SectionTitle when the title is non-empty.",
+      "source": "RedBlocking/CharacterMove/Views/MoveBrowserView.swift"
+    },
+    {
+      "field": "row_title",
+      "description": "Primary row text resolved with the same fallback rules as MoveBrowserModel.title(for:).",
+      "source": "RedBlocking/CharacterMove/Models/MoveBrowserModel.swift"
+    },
+    {
+      "field": "row_subtitle",
+      "description": "Secondary row text from RowDetail for branch rows, or Presented.SkillName when the player entry title differs.",
+      "source": "RedBlocking/CharacterMove/Models/MoveBrowserModel.swift"
+    },
+    {
+      "field": "row_kind",
+      "description": "Visible row style: next, motion_player, detail, or supplementary.",
+      "source": "RedBlocking/CharacterMove/Views/MoveBrowserView.swift"
+    },
+    {
+      "field": "navigation_title",
+      "description": "Root page title comes from the selected character; pushed move pages and motion player pages use the resolved row title.",
+      "source": "RedBlocking/CharacterMove/Models/AppNavigationModel.swift"
+    },
+    {
+      "field": "navigation_depth",
+      "description": "Number of Next hops required before the destination page appears.",
+      "source": "RedBlocking/CharacterMove/Models/AppNavigationModel.swift"
+    },
+    {
+      "field": "action_entry",
+      "description": "Whether a row opens another move page, opens the motion player, or has no action.",
+      "source": "RedBlocking/CharacterMove/Models/MoveBrowserModel.swift"
+    }
+  ],
+  "characters": [
+    {
+      "characterId": "Alex",
+      "file": "RedBlocking/Resources/CharacterData/Alex.yml",
+      "topLevelSectionTitles": [
+        "【パワーエイジ】",
+        "【空中通常技】",
+        "【地上通常技】",
+        "【特殊入力技】",
+        "【必殺技】",
+        "【スーパーアーツ】"
+      ],
+      "introductionSectionTitle": "【パワーエイジ】",
+      "gameplaySectionTitles": [
+        "【空中通常技】",
+        "【地上通常技】",
+        "【特殊入力技】",
+        "【必殺技】",
+        "【スーパーアーツ】"
+      ],
+      "maxNavigationDepth": 2,
+      "rowKindCounts": {
+        "detail": 1076,
+        "motion_player": 55,
+        "next": 92,
+        "supplementary": 54
+      },
+      "actionEntryCounts": {
+        "open_motion_player": 55,
+        "open_next": 92
+      },
+      "customNestedSectionTitles": {
+        "バックドロップ": {
+          "count": 1,
+          "examplePath": "【スーパーアーツ】 > ブーメランレイド > バックドロップ"
+        },
+        "パワーボム": {
+          "count": 1,
+          "examplePath": "【スーパーアーツ】 > ブーメランレイド > パワーボム"
+        },
+        "打撃部分": {
+          "count": 1,
+          "examplePath": "【スーパーアーツ】 > ブーメランレイド > 打撃部分"
+        }
+      },
+      "specialPatterns": [
+        {
+          "id": "normal_ex_splits",
+          "title": "通常 / EX split blocks",
+          "description": "Supplementary note groups are split into separate 通常 and EX sections.",
+          "count": 8,
+          "examples": [
+            {
+              "path": "【必殺技】 > フラッシュチョップ > 補足 > 通常",
+              "navigationDepth": 2
+            },
+            {
+              "path": "【必殺技】 > フラッシュチョップ > 補足 > EX",
+              "navigationDepth": 2
+            },
+            {
+              "path": "【必殺技】 > エアニースマッシュ > 補足 > 通常",
+              "navigationDepth": 2
+            },
+            {
+              "path": "【必殺技】 > エアニースマッシュ > 補足 > EX",
+              "navigationDepth": 2
+            },
+            {
+              "path": "【必殺技】 > エアスタンピート > 補足 > 通常",
+              "navigationDepth": 2
+            }
+          ]
+        },
+        {
+          "id": "multi_stage_or_component_breakdowns",
+          "title": "Multi-stage / component breakdowns",
+          "description": "A move is decomposed into stages or hit components such as 1回目, 段目, or 部分.",
+          "count": 1,
+          "examples": [
+            {
+              "path": "【スーパーアーツ】 > ブーメランレイド > 打撃部分",
+              "navigationDepth": 1
+            }
+          ]
+        },
+        {
+          "id": "unclassified_custom_sections",
+          "title": "Unclassified custom sections",
+          "description": "Custom nested section titles that do not fit the known buckets yet.",
+          "count": 2,
+          "examples": [
+            {
+              "path": "【スーパーアーツ】 > ブーメランレイド > バックドロップ",
+              "navigationDepth": 1
+            },
+            {
+              "path": "【スーパーアーツ】 > ブーメランレイド > パワーボム",
+              "navigationDepth": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "characterId": "Chun-Li",
+      "file": "RedBlocking/Resources/CharacterData/Chun-Li.yml",
+      "topLevelSectionTitles": [
+        "【麗しき脚線美ふたたび】",
+        "【空中通常技】",
+        "【地上通常技】",
+        "【特殊入力技】",
+        "【必殺技】",
+        "【スーパーアーツ】"
+      ],
+      "introductionSectionTitle": "【麗しき脚線美ふたたび】",
+      "gameplaySectionTitles": [
+        "【空中通常技】",
+        "【地上通常技】",
+        "【特殊入力技】",
+        "【必殺技】",
+        "【スーパーアーツ】"
+      ],
+      "maxNavigationDepth": 2,
+      "rowKindCounts": {
+        "detail": 996,
+        "motion_player": 54,
+        "next": 87,
+        "supplementary": 48
+      },
+      "actionEntryCounts": {
+        "open_motion_player": 54,
+        "open_next": 87
+      },
+      "customNestedSectionTitles": {
+        "2回目の百裂脚": {
+          "count": 1,
+          "examplePath": "【スーパーアーツ】 > 鳳翼扇 > 2回目の百裂脚"
+        },
+        "ラストの蹴り上げ": {
+          "count": 1,
+          "examplePath": "【スーパーアーツ】 > 鳳翼扇 > ラストの蹴り上げ"
+        },
+        "最初の百裂脚": {
+          "count": 1,
+          "examplePath": "【スーパーアーツ】 > 鳳翼扇 > 最初の百裂脚"
+        }
+      },
+      "specialPatterns": [
+        {
+          "id": "normal_ex_splits",
+          "title": "通常 / EX split blocks",
+          "description": "Supplementary note groups are split into separate 通常 and EX sections.",
+          "count": 8,
+          "examples": [
+            {
+              "path": "【必殺技】 > 百裂脚 > 補足 > 通常",
+              "navigationDepth": 2
+            },
+            {
+              "path": "【必殺技】 > 百裂脚 > 補足 > EX",
+              "navigationDepth": 2
+            },
+            {
+              "path": "【必殺技】 > 気功拳 > 補足 > 通常",
+              "navigationDepth": 2
+            },
+            {
+              "path": "【必殺技】 > 気功拳 > 補足 > EX",
+              "navigationDepth": 2
+            },
+            {
+              "path": "【必殺技】 > スピニングバードキック > 補足 > 通常",
+              "navigationDepth": 2
+            }
+          ]
+        },
+        {
+          "id": "multi_stage_or_component_breakdowns",
+          "title": "Multi-stage / component breakdowns",
+          "description": "A move is decomposed into stages or hit components such as 1回目, 段目, or 部分.",
+          "count": 3,
+          "examples": [
+            {
+              "path": "【スーパーアーツ】 > 鳳翼扇 > 最初の百裂脚",
+              "navigationDepth": 1
+            },
+            {
+              "path": "【スーパーアーツ】 > 鳳翼扇 > 2回目の百裂脚",
+              "navigationDepth": 1
+            },
+            {
+              "path": "【スーパーアーツ】 > 鳳翼扇 > ラストの蹴り上げ",
+              "navigationDepth": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "characterId": "Dudley",
+      "file": "RedBlocking/Resources/CharacterData/Dudley.yml",
+      "topLevelSectionTitles": [
+        "【拳闘紳士】",
+        "【空中通常技】",
+        "【地上通常技】",
+        "【特殊入力技】",
+        "【必殺技】",
+        "【スーパーアーツ】"
+      ],
+      "introductionSectionTitle": "【拳闘紳士】",
+      "gameplaySectionTitles": [
+        "【空中通常技】",
+        "【地上通常技】",
+        "【特殊入力技】",
+        "【必殺技】",
+        "【スーパーアーツ】"
+      ],
+      "maxNavigationDepth": 3,
+      "rowKindCounts": {
+        "detail": 1194,
+        "motion_player": 49,
+        "next": 102,
+        "supplementary": 51
+      },
+      "actionEntryCounts": {
+        "open_motion_player": 49,
+        "open_next": 102
+      },
+      "customNestedSectionTitles": {
+        "1回目": {
+          "count": 1,
+          "examplePath": "【スーパーアーツ】 > ロケットアッパー > 1回目"
+        },
+        "2回目": {
+          "count": 1,
+          "examplePath": "【スーパーアーツ】 > ロケットアッパー > 2回目"
+        },
+        "3回目": {
+          "count": 1,
+          "examplePath": "【スーパーアーツ】 > ロケットアッパー > 3回目"
+        },
+        "ヒット&ガード硬直時間差(中K)": {
+          "count": 4,
+          "examplePath": "【特殊入力技】 > ターゲットコンボ > 立小P→中P→中K > ヒット&ガード硬直時間差(中K)"
+        },
+        "ヒット&ガード硬直時間差(中P)": {
+          "count": 2,
+          "examplePath": "【特殊入力技】 > ターゲットコンボ > 立小P→中P→中K > ヒット&ガード硬直時間差(中P)"
+        },
+        "ヒット&ガード硬直時間差(大K)": {
+          "count": 1,
+          "examplePath": "【特殊入力技】 > ターゲットコンボ > 立中K→大K→大P > ヒット&ガード硬直時間差(大K)"
+        },
+        "ヒット&ガード硬直時間差(大P)": {
+          "count": 4,
+          "examplePath": "【特殊入力技】 > ターゲットコンボ > 立小K→中K→中P→大P > ヒット&ガード硬直時間差(大P)"
+        },
+        "ヒット&ガード硬直時間差(屈中P)": {
+          "count": 1,
+          "examplePath": "【特殊入力技】 > ターゲットコンボ > 屈小K→屈中P→屈大P > ヒット&ガード硬直時間差(屈中P)"
+        },
+        "ヒット&ガード硬直時間差(屈大P)": {
+          "count": 1,
+          "examplePath": "【特殊入力技】 > ターゲットコンボ > 屈小K→屈中P→屈大P > ヒット&ガード硬直時間差(屈大P)"
+        }
+      },
+      "specialPatterns": [
+        {
+          "id": "deep_navigation_chains",
+          "title": "Deep navigation chains",
+          "description": "A move requires three or more Next hops before detail rows appear.",
+          "count": 17,
+          "examples": [
+            {
+              "path": "【必殺技】 > ダッキング系 > ダッキング > ダッキング【小】",
+              "navigationDepth": 3
+            },
+            {
+              "path": "【必殺技】 > ダッキング系 > ダッキング > ダッキング【中】",
+              "navigationDepth": 3
+            },
+            {
+              "path": "【必殺技】 > ダッキング系 > ダッキング > ダッキング【大】",
+              "navigationDepth": 3
+            },
+            {
+              "path": "【必殺技】 > ダッキング系 > ダッキングストレート > ダッキングストレート【小】",
+              "navigationDepth": 3
+            },
+            {
+              "path": "【必殺技】 > ダッキング系 > ダッキングストレート > ダッキングストレート【中】",
+              "navigationDepth": 3
+            }
+          ]
+        },
+        {
+          "id": "normal_ex_splits",
+          "title": "通常 / EX split blocks",
+          "description": "Supplementary note groups are split into separate 通常 and EX sections.",
+          "count": 6,
+          "examples": [
+            {
+              "path": "【必殺技】 > ジェットアッパー > 補足 > 通常",
+              "navigationDepth": 2
+            },
+            {
+              "path": "【必殺技】 > ジェットアッパー > 補足 > EX",
+              "navigationDepth": 2
+            },
+            {
+              "path": "【必殺技】 > マシンガンブロー > 補足 > 通常",
+              "navigationDepth": 2
+            },
+            {
+              "path": "【必殺技】 > マシンガンブロー > 補足 > EX",
+              "navigationDepth": 2
+            },
+            {
+              "path": "【必殺技】 > ショートスイングブロー > 補足 > 通常",
+              "navigationDepth": 2
+            }
+          ]
+        },
+        {
+          "id": "multi_stage_or_component_breakdowns",
+          "title": "Multi-stage / component breakdowns",
+          "description": "A move is decomposed into stages or hit components such as 1回目, 段目, or 部分.",
+          "count": 3,
+          "examples": [
+            {
+              "path": "【スーパーアーツ】 > ロケットアッパー > 1回目",
+              "navigationDepth": 1
+            },
+            {
+              "path": "【スーパーアーツ】 > ロケットアッパー > 2回目",
+              "navigationDepth": 1
+            },
+            {
+              "path": "【スーパーアーツ】 > ロケットアッパー > 3回目",
+              "navigationDepth": 1
+            }
+          ]
+        },
+        {
+          "id": "specialized_stat_subsections",
+          "title": "Specialized stat subsections",
+          "description": "Custom stat buckets extend beyond the common ゲージ増加量 / ヒット&ガード硬直時間差 / 補足 trio.",
+          "count": 13,
+          "examples": [
+            {
+              "path": "【特殊入力技】 > ターゲットコンボ > 立小P→中P→中K > ヒット&ガード硬直時間差(中P)",
+              "navigationDepth": 2
+            },
+            {
+              "path": "【特殊入力技】 > ターゲットコンボ > 立小P→中P→中K > ヒット&ガード硬直時間差(中K)",
+              "navigationDepth": 2
+            },
+            {
+              "path": "【特殊入力技】 > ターゲットコンボ > 屈小K→屈中P→屈大P > ヒット&ガード硬直時間差(屈中P)",
+              "navigationDepth": 2
+            },
+            {
+              "path": "【特殊入力技】 > ターゲットコンボ > 屈小K→屈中P→屈大P > ヒット&ガード硬直時間差(屈大P)",
+              "navigationDepth": 2
+            },
+            {
+              "path": "【特殊入力技】 > ターゲットコンボ > 立小K→中K→中P→大P > ヒット&ガード硬直時間差(中K)",
+              "navigationDepth": 2
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "characterId": "Elena",
+      "file": "RedBlocking/Resources/CharacterData/Elena.yml",
+      "topLevelSectionTitles": [
+        "【大地の戦士】",
+        "【空中通常技】",
+        "【地上通常技】",
+        "【特殊入力技】",
+        "【必殺技】",
+        "【スーパーアーツ】"
+      ],
+      "introductionSectionTitle": "【大地の戦士】",
+      "gameplaySectionTitles": [
+        "【空中通常技】",
+        "【地上通常技】",
+        "【特殊入力技】",
+        "【必殺技】",
+        "【スーパーアーツ】"
+      ],
+      "maxNavigationDepth": 2,
+      "rowKindCounts": {
+        "detail": 1015,
+        "motion_player": 48,
+        "next": 82,
+        "supplementary": 46
+      },
+      "actionEntryCounts": {
+        "open_motion_player": 48,
+        "open_next": 82
+      },
+      "customNestedSectionTitles": {
+        "1回目の蹴り上げ": {
+          "count": 1,
+          "examplePath": "【スーパーアーツ】 > スピニングビート > 1回目の蹴り上げ"
+        },
+        "2回目の蹴り上げ": {
+          "count": 1,
+          "examplePath": "【スーパーアーツ】 > スピニングビート > 2回目の蹴り上げ"
+        },
+        "3回目の蹴り上げ": {
+          "count": 1,
+          "examplePath": "【スーパーアーツ】 > スピニングビート > 3回目の蹴り上げ"
+        },
+        "追加入力": {
+          "count": 3,
+          "examplePath": "【必殺技】 > スピンサイズ > スピンサイズ【小】 > 追加入力"
+        },
+        "追加入力「中」": {
+          "count": 1,
+          "examplePath": "【必殺技】 > スピンサイズ > スピンサイズ【EX】 > 追加入力「中」"
+        },
+        "追加入力「大」": {
+          "count": 1,
+          "examplePath": "【必殺技】 > スピンサイズ > スピンサイズ【EX】 > 追加入力「大」"
+        },
+        "追加入力「小」": {
+          "count": 1,
+          "examplePath": "【必殺技】 > スピンサイズ > スピンサイズ【EX】 > 追加入力「小」"
+        },
+        "追加入力「無し」": {
+          "count": 1,
+          "examplePath": "【必殺技】 > スピンサイズ > スピンサイズ【EX】 > 追加入力「無し」"
+        },
+        "追加入力ゲージ増加量": {
+          "count": 4,
+          "examplePath": "【必殺技】 > スピンサイズ > スピンサイズ【小】 > 追加入力ゲージ増加量"
+        },
+        "追加入力ヒット&ガード硬直時間差": {
+          "count": 4,
+          "examplePath": "【必殺技】 > スピンサイズ > スピンサイズ【小】 > 追加入力ヒット&ガード硬直時間差"
+        }
+      },
+      "specialPatterns": [
+        {
+          "id": "normal_ex_splits",
+          "title": "通常 / EX split blocks",
+          "description": "Supplementary note groups are split into separate 通常 and EX sections.",
+          "count": 8,
+          "examples": [
+            {
+              "path": "【必殺技】 > スクラッチホイール > 補足 > 通常",
+              "navigationDepth": 2
+            },
+            {
+              "path": "【必殺技】 > スクラッチホイール > 補足 > EX",
+              "navigationDepth": 2
+            },
+            {
+              "path": "【必殺技】 > ライノホーン > 補足 > 通常",
+              "navigationDepth": 2
+            },
+            {
+              "path": "【必殺技】 > ライノホーン > 補足 > EX",
+              "navigationDepth": 2
+            },
+            {
+              "path": "【必殺技】 > マレットスマッシュ > 補足 > 通常",
+              "navigationDepth": 2
+            }
+          ]
+        },
+        {
+          "id": "variant_input_or_strength_blocks",
+          "title": "Variant input / strength blocks",
+          "description": "Nested sections differentiate follow-up inputs, button strengths, or attack variants.",
+          "count": 15,
+          "examples": [
+            {
+              "path": "【必殺技】 > スピンサイズ > スピンサイズ【小】 > 追加入力",
+              "navigationDepth": 2
+            },
+            {
+              "path": "【必殺技】 > スピンサイズ > スピンサイズ【小】 > 追加入力ゲージ増加量",
+              "navigationDepth": 2
+            },
+            {
+              "path": "【必殺技】 > スピンサイズ > スピンサイズ【小】 > 追加入力ヒット&ガード硬直時間差",
+              "navigationDepth": 2
+            },
+            {
+              "path": "【必殺技】 > スピンサイズ > スピンサイズ【中】 > 追加入力",
+              "navigationDepth": 2
+            },
+            {
+              "path": "【必殺技】 > スピンサイズ > スピンサイズ【中】 > 追加入力ゲージ増加量",
+              "navigationDepth": 2
+            }
+          ]
+        },
+        {
+          "id": "multi_stage_or_component_breakdowns",
+          "title": "Multi-stage / component breakdowns",
+          "description": "A move is decomposed into stages or hit components such as 1回目, 段目, or 部分.",
+          "count": 3,
+          "examples": [
+            {
+              "path": "【スーパーアーツ】 > スピニングビート > 1回目の蹴り上げ",
+              "navigationDepth": 1
+            },
+            {
+              "path": "【スーパーアーツ】 > スピニングビート > 2回目の蹴り上げ",
+              "navigationDepth": 1
+            },
+            {
+              "path": "【スーパーアーツ】 > スピニングビート > 3回目の蹴り上げ",
+              "navigationDepth": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "characterId": "Gouki",
+      "file": "RedBlocking/Resources/CharacterData/Gouki.yml",
+      "topLevelSectionTitles": [
+        "【拳を極めし者】",
+        "【空中通常技】",
+        "【地上通常技】",
+        "【特殊入力技】",
+        "【必殺技】",
+        "【スーパーアーツ】"
+      ],
+      "introductionSectionTitle": "【拳を極めし者】",
+      "gameplaySectionTitles": [
+        "【空中通常技】",
+        "【地上通常技】",
+        "【特殊入力技】",
+        "【必殺技】",
+        "【スーパーアーツ】"
+      ],
+      "maxNavigationDepth": 2,
+      "rowKindCounts": {
+        "detail": 1045,
+        "motion_player": 58,
+        "next": 92,
+        "supplementary": 45
+      },
+      "actionEntryCounts": {
+        "open_motion_player": 58,
+        "open_next": 92
+      },
+      "customNestedSectionTitles": {
+        "2回目の昇龍拳": {
+          "count": 1,
+          "examplePath": "【スーパーアーツ】 > 滅殺豪昇龍 > 2回目の昇龍拳"
+        },
+        "3回目の昇龍拳": {
+          "count": 1,
+          "examplePath": "【スーパーアーツ】 > 滅殺豪昇龍 > 3回目の昇龍拳"
+        },
+        "ラストの回し蹴り部分": {
+          "count": 2,
+          "examplePath": "【スーパーアーツ】 > 滅殺豪螺旋 > 滅殺豪螺旋(地上) > ラストの回し蹴り部分"
+        },
+        "上昇竜巻部分": {
+          "count": 2,
+          "examplePath": "【スーパーアーツ】 > 滅殺豪螺旋 > 滅殺豪螺旋(地上) > 上昇竜巻部分"
+        },
+        "初段の稲妻部分": {
+          "count": 1,
+          "examplePath": "【スーパーアーツ】 > 金剛國裂斬 > 初段の稲妻部分"
+        },
+        "最初の昇龍拳": {
+          "count": 1,
+          "examplePath": "【スーパーアーツ】 > 滅殺豪昇龍 > 最初の昇龍拳"
+        },
+        "膝部分": {
+          "count": 2,
+          "examplePath": "【スーパーアーツ】 > 滅殺豪螺旋 > 滅殺豪螺旋(地上) > 膝部分"
+        },
+        "衝撃波部分": {
+          "count": 1,
+          "examplePath": "【スーパーアーツ】 > 金剛國裂斬 > 衝撃波部分"
+        }
+      },
+      "specialPatterns": [
+        {
+          "id": "multi_stage_or_component_breakdowns",
+          "title": "Multi-stage / component breakdowns",
+          "description": "A move is decomposed into stages or hit components such as 1回目, 段目, or 部分.",
+          "count": 11,
+          "examples": [
+            {
+              "path": "【スーパーアーツ】 > 滅殺豪昇龍 > 最初の昇龍拳",
+              "navigationDepth": 1
+            },
+            {
+              "path": "【スーパーアーツ】 > 滅殺豪昇龍 > 2回目の昇龍拳",
+              "navigationDepth": 1
+            },
+            {
+              "path": "【スーパーアーツ】 > 滅殺豪昇龍 > 3回目の昇龍拳",
+              "navigationDepth": 1
+            },
+            {
+              "path": "【スーパーアーツ】 > 滅殺豪螺旋 > 滅殺豪螺旋(地上) > 膝部分",
+              "navigationDepth": 2
+            },
+            {
+              "path": "【スーパーアーツ】 > 滅殺豪螺旋 > 滅殺豪螺旋(地上) > 上昇竜巻部分",
+              "navigationDepth": 2
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "characterId": "Hugo",
+      "file": "RedBlocking/Resources/CharacterData/Hugo.yml",
+      "topLevelSectionTitles": [
+        "【熱血の大巨人】",
+        "【空中通常技】",
+        "【地上通常技】",
+        "【特殊入力技】",
+        "【必殺技】",
+        "【スーパーアーツ】"
+      ],
+      "introductionSectionTitle": "【熱血の大巨人】",
+      "gameplaySectionTitles": [
+        "【空中通常技】",
+        "【地上通常技】",
+        "【特殊入力技】",
+        "【必殺技】",
+        "【スーパーアーツ】"
+      ],
+      "maxNavigationDepth": 2,
+      "rowKindCounts": {
+        "detail": 922,
+        "motion_player": 48,
+        "next": 86,
+        "supplementary": 33
+      },
+      "actionEntryCounts": {
+        "open_motion_player": 48,
+        "open_next": 86
+      },
+      "customNestedSectionTitles": {},
+      "specialPatterns": [
+        {
+          "id": "normal_ex_splits",
+          "title": "通常 / EX split blocks",
+          "description": "Supplementary note groups are split into separate 通常 and EX sections.",
+          "count": 4,
+          "examples": [
+            {
+              "path": "【必殺技】 > ジャイアントパームボンバー > 補足 > 通常",
+              "navigationDepth": 2
+            },
+            {
+              "path": "【必殺技】 > ジャイアントパームボンバー > 補足 > EX",
+              "navigationDepth": 2
+            },
+            {
+              "path": "【必殺技】 > モンスターラリアット > 補足 > 通常",
+              "navigationDepth": 2
+            },
+            {
+              "path": "【必殺技】 > モンスターラリアット > 補足 > EX",
+              "navigationDepth": 2
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "characterId": "Ibuki",
+      "file": "RedBlocking/Resources/CharacterData/Ibuki.yml",
+      "topLevelSectionTitles": [
+        "【高校生忍者】",
+        "【空中通常技】",
+        "【地上通常技】",
+        "【特殊入力技】",
+        "【必殺技】",
+        "【スーパーアーツ】"
+      ],
+      "introductionSectionTitle": "【高校生忍者】",
+      "gameplaySectionTitles": [
+        "【空中通常技】",
+        "【地上通常技】",
+        "【特殊入力技】",
+        "【必殺技】",
+        "【スーパーアーツ】"
+      ],
+      "maxNavigationDepth": 2,
+      "rowKindCounts": {
+        "detail": 1379,
+        "motion_player": 64,
+        "next": 110,
+        "supplementary": 65
+      },
+      "actionEntryCounts": {
+        "open_motion_player": 64,
+        "open_next": 110
+      },
+      "customNestedSectionTitles": {
+        "ゲージ増加量(追加入力)": {
+          "count": 1,
+          "examplePath": "【必殺技】 > 旋 > 旋【中】 > ゲージ増加量(追加入力)"
+        },
+        "ヒット&ガード硬直時間差(6小K)": {
+          "count": 1,
+          "examplePath": "【特殊入力技】 > ターゲットコンボ > 遠立小P→立中P→6小K > ヒット&ガード硬直時間差(6小K)"
+        },
+        "ヒット&ガード硬直時間差(中K)": {
+          "count": 1,
+          "examplePath": "【特殊入力技】 > ターゲットコンボ > 立小K→立中K→立大K > ヒット&ガード硬直時間差(中K)"
+        },
+        "ヒット&ガード硬直時間差(中P)": {
+          "count": 3,
+          "examplePath": "【特殊入力技】 > ターゲットコンボ > 近立小P→立中P→立大P > ヒット&ガード硬直時間差(中P)"
+        },
+        "ヒット&ガード硬直時間差(大K)": {
+          "count": 1,
+          "examplePath": "【特殊入力技】 > ターゲットコンボ > 立小K→立中K→立大K > ヒット&ガード硬直時間差(大K)"
+        },
+        "ヒット&ガード硬直時間差(大P)": {
+          "count": 1,
+          "examplePath": "【特殊入力技】 > ターゲットコンボ > 近立小P→立中P→立大P > ヒット&ガード硬直時間差(大P)"
+        },
+        "ヒット&ガード硬直時間差(屈大K)": {
+          "count": 2,
+          "examplePath": "【特殊入力技】 > ターゲットコンボ > 近立大P→屈大K→立大K > ヒット&ガード硬直時間差(屈大K)"
+        },
+        "ヒット&ガード硬直時間差(立大K)": {
+          "count": 2,
+          "examplePath": "【特殊入力技】 > ターゲットコンボ > 近立大P→屈大K→立大K > ヒット&ガード硬直時間差(立大K)"
+        },
+        "ヒット&ガード硬直時間差(追加入力)": {
+          "count": 1,
+          "examplePath": "【必殺技】 > 旋 > 旋【中】 > ヒット&ガード硬直時間差(追加入力)"
+        },
+        "上段(1・2・3段目)": {
+          "count": 3,
+          "examplePath": "【必殺技】 > 旋 > 旋【中】 > 上段(1・2・3段目)"
+        },
+        "上段(1・2段目)": {
+          "count": 1,
+          "examplePath": "【必殺技】 > 旋 > 旋【小】 > 上段(1・2段目)"
+        },
+        "上段(4段目)": {
+          "count": 1,
+          "examplePath": "【必殺技】 > 旋 > 旋【EX】 > 上段(4段目)"
+        },
+        "下段(2・3段目)": {
+          "count": 1,
+          "examplePath": "【必殺技】 > 旋 > 旋【EX】 > 下段(2・3段目)"
+        },
+        "下段(2段目)": {
+          "count": 1,
+          "examplePath": "【必殺技】 > 旋 > 旋【小】 > 下段(2段目)"
+        },
+        "下段(3段目)": {
+          "count": 2,
+          "examplePath": "【必殺技】 > 旋 > 旋【中】 > 下段(3段目)"
+        },
+        "下段(4段目)": {
+          "count": 1,
+          "examplePath": "【必殺技】 > 旋 > 旋【EX】 > 下段(4段目)"
+        },
+        "中": {
+          "count": 1,
+          "examplePath": "【必殺技】 > 旋 > 補足 > 中"
+        },
+        "共通": {
+          "count": 1,
+          "examplePath": "【必殺技】 > 旋 > 補足 > 共通"
+        },
+        "大": {
+          "count": 1,
+          "examplePath": "【必殺技】 > 旋 > 補足 > 大"
+        },
+        "小": {
+          "count": 1,
+          "examplePath": "【必殺技】 > 旋 > 補足 > 小"
+        },
+        "打撃版": {
+          "count": 1,
+          "examplePath": "【スーパーアーツ】 > 鎧通し > 打撃版"
+        },
+        "投げ版": {
+          "count": 1,
+          "examplePath": "【スーパーアーツ】 > 鎧通し > 投げ版"
+        }
+      },
+      "specialPatterns": [
+        {
+          "id": "normal_ex_splits",
+          "title": "通常 / EX split blocks",
+          "description": "Supplementary note groups are split into separate 通常 and EX sections.",
+          "count": 5,
+          "examples": [
+            {
+              "path": "【必殺技】 > 苦無 > 補足 > 通常",
+              "navigationDepth": 2
+            },
+            {
+              "path": "【必殺技】 > 苦無 > 補足 > EX",
+              "navigationDepth": 2
+            },
+            {
+              "path": "【必殺技】 > 風斬り > 補足 > 通常",
+              "navigationDepth": 2
+            },
+            {
+              "path": "【必殺技】 > 風斬り > 補足 > EX",
+              "navigationDepth": 2
+            },
+            {
+              "path": "【必殺技】 > 旋 > 補足 > EX",
+              "navigationDepth": 2
+            }
+          ]
+        },
+        {
+          "id": "variant_input_or_strength_blocks",
+          "title": "Variant input / strength blocks",
+          "description": "Nested sections differentiate follow-up inputs, button strengths, or attack variants.",
+          "count": 6,
+          "examples": [
+            {
+              "path": "【必殺技】 > 旋 > 補足 > 共通",
+              "navigationDepth": 2
+            },
+            {
+              "path": "【必殺技】 > 旋 > 補足 > 小",
+              "navigationDepth": 2
+            },
+            {
+              "path": "【必殺技】 > 旋 > 補足 > 中",
+              "navigationDepth": 2
+            },
+            {
+              "path": "【必殺技】 > 旋 > 補足 > 大",
+              "navigationDepth": 2
+            },
+            {
+              "path": "【スーパーアーツ】 > 鎧通し > 投げ版",
+              "navigationDepth": 1
+            }
+          ]
+        },
+        {
+          "id": "multi_stage_or_component_breakdowns",
+          "title": "Multi-stage / component breakdowns",
+          "description": "A move is decomposed into stages or hit components such as 1回目, 段目, or 部分.",
+          "count": 10,
+          "examples": [
+            {
+              "path": "【必殺技】 > 旋 > 旋【小】 > 上段(1・2段目)",
+              "navigationDepth": 2
+            },
+            {
+              "path": "【必殺技】 > 旋 > 旋【小】 > 下段(2段目)",
+              "navigationDepth": 2
+            },
+            {
+              "path": "【必殺技】 > 旋 > 旋【中】 > 上段(1・2・3段目)",
+              "navigationDepth": 2
+            },
+            {
+              "path": "【必殺技】 > 旋 > 旋【中】 > 下段(3段目)",
+              "navigationDepth": 2
+            },
+            {
+              "path": "【必殺技】 > 旋 > 旋【大】 > 上段(1・2・3段目)",
+              "navigationDepth": 2
+            }
+          ]
+        },
+        {
+          "id": "specialized_stat_subsections",
+          "title": "Specialized stat subsections",
+          "description": "Custom stat buckets extend beyond the common ゲージ増加量 / ヒット&ガード硬直時間差 / 補足 trio.",
+          "count": 12,
+          "examples": [
+            {
+              "path": "【特殊入力技】 > ターゲットコンボ > 近立小P→立中P→立大P > ヒット&ガード硬直時間差(中P)",
+              "navigationDepth": 2
+            },
+            {
+              "path": "【特殊入力技】 > ターゲットコンボ > 近立小P→立中P→立大P > ヒット&ガード硬直時間差(大P)",
+              "navigationDepth": 2
+            },
+            {
+              "path": "【特殊入力技】 > ターゲットコンボ > 遠立小P→立中P→6小K > ヒット&ガード硬直時間差(中P)",
+              "navigationDepth": 2
+            },
+            {
+              "path": "【特殊入力技】 > ターゲットコンボ > 遠立小P→立中P→6小K > ヒット&ガード硬直時間差(6小K)",
+              "navigationDepth": 2
+            },
+            {
+              "path": "【特殊入力技】 > ターゲットコンボ > 立小K→立中K→立大K > ヒット&ガード硬直時間差(中K)",
+              "navigationDepth": 2
+            }
+          ]
+        },
+        {
+          "id": "unclassified_custom_sections",
+          "title": "Unclassified custom sections",
+          "description": "Custom nested section titles that do not fit the known buckets yet.",
+          "count": 1,
+          "examples": [
+            {
+              "path": "【必殺技】 > 旋 > 旋【中】 > ゲージ増加量(追加入力)",
+              "navigationDepth": 2
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "characterId": "Ken",
+      "file": "RedBlocking/Resources/CharacterData/Ken.yml",
+      "topLevelSectionTitles": [
+        "【炎の昇龍】",
+        "【空中通常技】",
+        "【地上通常技】",
+        "【特殊入力技】",
+        "【必殺技】",
+        "【スーパーアーツ】"
+      ],
+      "introductionSectionTitle": "【炎の昇龍】",
+      "gameplaySectionTitles": [
+        "【空中通常技】",
+        "【地上通常技】",
+        "【特殊入力技】",
+        "【必殺技】",
+        "【スーパーアーツ】"
+      ],
+      "maxNavigationDepth": 2,
+      "rowKindCounts": {
+        "detail": 916,
+        "motion_player": 55,
+        "next": 80,
+        "supplementary": 45
+      },
+      "actionEntryCounts": {
+        "open_motion_player": 55,
+        "open_next": 80
+      },
+      "customNestedSectionTitles": {
+        "1回目の昇龍拳": {
+          "count": 1,
+          "examplePath": "【スーパーアーツ】 > 昇龍裂破 > 1回目の昇龍拳"
+        },
+        "2回目の昇龍拳": {
+          "count": 1,
+          "examplePath": "【スーパーアーツ】 > 昇龍裂破 > 2回目の昇龍拳"
+        },
+        "3回目の昇龍拳": {
+          "count": 1,
+          "examplePath": "【スーパーアーツ】 > 昇龍裂破 > 3回目の昇龍拳"
+        },
+        "上昇竜巻部分": {
+          "count": 1,
+          "examplePath": "【スーパーアーツ】 > 疾風迅雷脚 > 上昇竜巻部分"
+        },
+        "下降竜巻部分\n(実際にはヒットしない)": {
+          "count": 1,
+          "examplePath": "【スーパーアーツ】 > 疾風迅雷脚 > 下降竜巻部分 (実際にはヒットしない)"
+        },
+        "固定ヒット部分": {
+          "count": 1,
+          "examplePath": "【スーパーアーツ】 > 神龍拳 > 固定ヒット部分"
+        },
+        "地上乱舞部分": {
+          "count": 1,
+          "examplePath": "【スーパーアーツ】 > 疾風迅雷脚 > 地上乱舞部分"
+        },
+        "連打による追加(1)": {
+          "count": 1,
+          "examplePath": "【スーパーアーツ】 > 神龍拳 > 連打による追加(1)"
+        },
+        "連打による追加(2)": {
+          "count": 1,
+          "examplePath": "【スーパーアーツ】 > 神龍拳 > 連打による追加(2)"
+        },
+        "連打による追加(3)": {
+          "count": 1,
+          "examplePath": "【スーパーアーツ】 > 神龍拳 > 連打による追加(3)"
+        },
+        "連打による追加(4)": {
+          "count": 1,
+          "examplePath": "【スーパーアーツ】 > 神龍拳 > 連打による追加(4)"
+        }
+      },
+      "specialPatterns": [
+        {
+          "id": "normal_ex_splits",
+          "title": "通常 / EX split blocks",
+          "description": "Supplementary note groups are split into separate 通常 and EX sections.",
+          "count": 4,
+          "examples": [
+            {
+              "path": "【必殺技】 > 波動拳 > 補足 > 通常",
+              "navigationDepth": 2
+            },
+            {
+              "path": "【必殺技】 > 波動拳 > 補足 > EX",
+              "navigationDepth": 2
+            },
+            {
+              "path": "【必殺技】 > 昇龍拳 > 補足 > 通常",
+              "navigationDepth": 2
+            },
+            {
+              "path": "【必殺技】 > 昇龍拳 > 補足 > EX",
+              "navigationDepth": 2
+            }
+          ]
+        },
+        {
+          "id": "multi_stage_or_component_breakdowns",
+          "title": "Multi-stage / component breakdowns",
+          "description": "A move is decomposed into stages or hit components such as 1回目, 段目, or 部分.",
+          "count": 11,
+          "examples": [
+            {
+              "path": "【スーパーアーツ】 > 昇龍裂破 > 1回目の昇龍拳",
+              "navigationDepth": 1
+            },
+            {
+              "path": "【スーパーアーツ】 > 昇龍裂破 > 2回目の昇龍拳",
+              "navigationDepth": 1
+            },
+            {
+              "path": "【スーパーアーツ】 > 昇龍裂破 > 3回目の昇龍拳",
+              "navigationDepth": 1
+            },
+            {
+              "path": "【スーパーアーツ】 > 神龍拳 > 固定ヒット部分",
+              "navigationDepth": 1
+            },
+            {
+              "path": "【スーパーアーツ】 > 神龍拳 > 連打による追加(1)",
+              "navigationDepth": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "characterId": "Makoto",
+      "file": "RedBlocking/Resources/CharacterData/Makoto.yml",
+      "topLevelSectionTitles": [
+        "【超硬派空手少女】",
+        "【空中通常技】",
+        "【地上通常技】",
+        "【特殊入力技】",
+        "【必殺技】",
+        "【スーパーアーツ】"
+      ],
+      "introductionSectionTitle": "【超硬派空手少女】",
+      "gameplaySectionTitles": [
+        "【空中通常技】",
+        "【地上通常技】",
+        "【特殊入力技】",
+        "【必殺技】",
+        "【スーパーアーツ】"
+      ],
+      "maxNavigationDepth": 2,
+      "rowKindCounts": {
+        "detail": 1066,
+        "motion_player": 55,
+        "next": 92,
+        "supplementary": 54
+      },
+      "actionEntryCounts": {
+        "open_motion_player": 55,
+        "open_next": 92
+      },
+      "customNestedSectionTitles": {
+        "6小K": {
+          "count": 1,
+          "examplePath": "【必殺技】 > 突進正拳突き 「疾風」(はやて) > 追撃技の追撃可能キャラ > 6小K"
+        },
+        "Q": {
+          "count": 1,
+          "examplePath": "【スーパーアーツ】 > 正中線五段突き > Q"
+        },
+        "ダッドリー": {
+          "count": 1,
+          "examplePath": "【スーパーアーツ】 > 正中線五段突き > ダッドリー"
+        },
+        "トゥエルヴ": {
+          "count": 1,
+          "examplePath": "【スーパーアーツ】 > 正中線五段突き > トゥエルヴ"
+        },
+        "ネクロ": {
+          "count": 1,
+          "examplePath": "【スーパーアーツ】 > 正中線五段突き > ネクロ"
+        },
+        "ヤン": {
+          "count": 1,
+          "examplePath": "【スーパーアーツ】 > 正中線五段突き > ヤン"
+        },
+        "ユン": {
+          "count": 1,
+          "examplePath": "【スーパーアーツ】 > 正中線五段突き > ユン"
+        },
+        "中疾風": {
+          "count": 1,
+          "examplePath": "【必殺技】 > 突進正拳突き 「疾風」(はやて) > 追撃技の追撃可能キャラ > 中疾風"
+        },
+        "小疾風": {
+          "count": 1,
+          "examplePath": "【必殺技】 > 突進正拳突き 「疾風」(はやて) > 追撃技の追撃可能キャラ > 小疾風"
+        },
+        "持続": {
+          "count": 1,
+          "examplePath": "【スーパーアーツ】 > 暴れ土佐波砕き > 持続"
+        },
+        "立中K": {
+          "count": 1,
+          "examplePath": "【必殺技】 > 突進正拳突き 「疾風」(はやて) > 追撃技の追撃可能キャラ > 立中K"
+        },
+        "立大P": {
+          "count": 1,
+          "examplePath": "【必殺技】 > 突進正拳突き 「疾風」(はやて) > 追撃技の追撃可能キャラ > 立大P"
+        }
+      },
+      "specialPatterns": [
+        {
+          "id": "normal_ex_splits",
+          "title": "通常 / EX split blocks",
+          "description": "Supplementary note groups are split into separate 通常 and EX sections.",
+          "count": 6,
+          "examples": [
+            {
+              "path": "【必殺技】 > 突進正拳突き 「疾風」(はやて) > 補足 > 通常",
+              "navigationDepth": 2
+            },
+            {
+              "path": "【必殺技】 > 突進正拳突き 「疾風」(はやて) > 補足 > EX",
+              "navigationDepth": 2
+            },
+            {
+              "path": "【必殺技】 > 直上正拳突き 「吹上」(ふきあげ) > 補足 > 通常",
+              "navigationDepth": 2
+            },
+            {
+              "path": "【必殺技】 > 直上正拳突き 「吹上」(ふきあげ) > 補足 > EX",
+              "navigationDepth": 2
+            },
+            {
+              "path": "【必殺技】 > 閃空カカト落とし 「剣」(つるぎ) > 補足 > 通常",
+              "navigationDepth": 2
+            }
+          ]
+        },
+        {
+          "id": "specialized_stat_subsections",
+          "title": "Specialized stat subsections",
+          "description": "Custom stat buckets extend beyond the common ゲージ増加量 / ヒット&ガード硬直時間差 / 補足 trio.",
+          "count": 1,
+          "examples": [
+            {
+              "path": "【スーパーアーツ】 > 暴れ土佐波砕き > 持続",
+              "navigationDepth": 1
+            }
+          ]
+        },
+        {
+          "id": "matchup_or_character_specific_blocks",
+          "title": "Matchup / character-specific blocks",
+          "description": "Notes or stats branch by target character or matchup-specific conditions.",
+          "count": 6,
+          "examples": [
+            {
+              "path": "【スーパーアーツ】 > 正中線五段突き > ダッドリー",
+              "navigationDepth": 1
+            },
+            {
+              "path": "【スーパーアーツ】 > 正中線五段突き > ヤン",
+              "navigationDepth": 1
+            },
+            {
+              "path": "【スーパーアーツ】 > 正中線五段突き > ネクロ",
+              "navigationDepth": 1
+            },
+            {
+              "path": "【スーパーアーツ】 > 正中線五段突き > トゥエルヴ",
+              "navigationDepth": 1
+            },
+            {
+              "path": "【スーパーアーツ】 > 正中線五段突き > ユン",
+              "navigationDepth": 1
+            }
+          ]
+        },
+        {
+          "id": "unclassified_custom_sections",
+          "title": "Unclassified custom sections",
+          "description": "Custom nested section titles that do not fit the known buckets yet.",
+          "count": 5,
+          "examples": [
+            {
+              "path": "【必殺技】 > 突進正拳突き 「疾風」(はやて) > 追撃技の追撃可能キャラ > 6小K",
+              "navigationDepth": 2
+            },
+            {
+              "path": "【必殺技】 > 突進正拳突き 「疾風」(はやて) > 追撃技の追撃可能キャラ > 立中K",
+              "navigationDepth": 2
+            },
+            {
+              "path": "【必殺技】 > 突進正拳突き 「疾風」(はやて) > 追撃技の追撃可能キャラ > 小疾風",
+              "navigationDepth": 2
+            },
+            {
+              "path": "【必殺技】 > 突進正拳突き 「疾風」(はやて) > 追撃技の追撃可能キャラ > 中疾風",
+              "navigationDepth": 2
+            },
+            {
+              "path": "【必殺技】 > 突進正拳突き 「疾風」(はやて) > 追撃技の追撃可能キャラ > 立大P",
+              "navigationDepth": 2
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "characterId": "Necro",
+      "file": "RedBlocking/Resources/CharacterData/Necro.yml",
+      "topLevelSectionTitles": [
+        "【バイオサイバー】",
+        "【空中通常技】",
+        "【地上通常技】",
+        "【特殊入力技】",
+        "【必殺技】",
+        "【スーパーアーツ】"
+      ],
+      "introductionSectionTitle": "【バイオサイバー】",
+      "gameplaySectionTitles": [
+        "【空中通常技】",
+        "【地上通常技】",
+        "【特殊入力技】",
+        "【必殺技】",
+        "【スーパーアーツ】"
+      ],
+      "maxNavigationDepth": 3,
+      "rowKindCounts": {
+        "detail": 1039,
+        "motion_player": 57,
+        "next": 93,
+        "supplementary": 41
+      },
+      "actionEntryCounts": {
+        "open_motion_player": 57,
+        "open_next": 93
+      },
+      "customNestedSectionTitles": {
+        "1段目": {
+          "count": 1,
+          "examplePath": "【スーパーアーツ】 > 超電磁ストーム > 1段目"
+        },
+        "2・3段目": {
+          "count": 1,
+          "examplePath": "【スーパーアーツ】 > 超電磁ストーム > 2・3段目"
+        },
+        "最後の吹っ飛び部分": {
+          "count": 1,
+          "examplePath": "【スーパーアーツ】 > 超電磁ストーム > 最後の吹っ飛び部分"
+        },
+        "連打部分(最大4ループ)": {
+          "count": 1,
+          "examplePath": "【スーパーアーツ】 > 超電磁ストーム > 連打部分(最大4ループ)"
+        }
+      },
+      "specialPatterns": [
+        {
+          "id": "deep_navigation_chains",
+          "title": "Deep navigation chains",
+          "description": "A move requires three or more Next hops before detail rows appear.",
+          "count": 4,
+          "examples": [
+            {
+              "path": "【特殊入力技】 > レバー入れ技 > ドリルキック > ドリルキック小(30度)",
+              "navigationDepth": 3
+            },
+            {
+              "path": "【特殊入力技】 > レバー入れ技 > ドリルキック > ドリルキック中(45度)",
+              "navigationDepth": 3
+            },
+            {
+              "path": "【特殊入力技】 > レバー入れ技 > ドリルキック > ドリルキック大(80度)",
+              "navigationDepth": 3
+            },
+            {
+              "path": "【特殊入力技】 > レバー入れ技 > ドリルキック > 補足",
+              "navigationDepth": 3
+            }
+          ]
+        },
+        {
+          "id": "multi_stage_or_component_breakdowns",
+          "title": "Multi-stage / component breakdowns",
+          "description": "A move is decomposed into stages or hit components such as 1回目, 段目, or 部分.",
+          "count": 4,
+          "examples": [
+            {
+              "path": "【スーパーアーツ】 > 超電磁ストーム > 1段目",
+              "navigationDepth": 1
+            },
+            {
+              "path": "【スーパーアーツ】 > 超電磁ストーム > 2・3段目",
+              "navigationDepth": 1
+            },
+            {
+              "path": "【スーパーアーツ】 > 超電磁ストーム > 連打部分(最大4ループ)",
+              "navigationDepth": 1
+            },
+            {
+              "path": "【スーパーアーツ】 > 超電磁ストーム > 最後の吹っ飛び部分",
+              "navigationDepth": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "characterId": "Oro",
+      "file": "RedBlocking/Resources/CharacterData/Oro.yml",
+      "topLevelSectionTitles": [
+        "【仙術の怪老】",
+        "【空中通常技】",
+        "【地上通常技】",
+        "【特殊入力技】",
+        "【必殺技】",
+        "【スーパーアーツ】"
+      ],
+      "introductionSectionTitle": "【仙術の怪老】",
+      "gameplaySectionTitles": [
+        "【空中通常技】",
+        "【地上通常技】",
+        "【特殊入力技】",
+        "【必殺技】",
+        "【スーパーアーツ】"
+      ],
+      "maxNavigationDepth": 2,
+      "rowKindCounts": {
+        "detail": 962,
+        "motion_player": 59,
+        "next": 89,
+        "supplementary": 42
+      },
+      "actionEntryCounts": {
+        "open_motion_player": 59,
+        "open_next": 89
+      },
+      "customNestedSectionTitles": {},
+      "specialPatterns": [
+        {
+          "id": "normal_ex_splits",
+          "title": "通常 / EX split blocks",
+          "description": "Supplementary note groups are split into separate 通常 and EX sections.",
+          "count": 4,
+          "examples": [
+            {
+              "path": "【必殺技】 > 日輪掌 > 補足 > 通常",
+              "navigationDepth": 2
+            },
+            {
+              "path": "【必殺技】 > 日輪掌 > 補足 > EX",
+              "navigationDepth": 2
+            },
+            {
+              "path": "【必殺技】 > 鬼ヤンマ > 補足 > 通常",
+              "navigationDepth": 2
+            },
+            {
+              "path": "【必殺技】 > 鬼ヤンマ > 補足 > EX",
+              "navigationDepth": 2
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "characterId": "Q",
+      "file": "RedBlocking/Resources/CharacterData/Q.yml",
+      "topLevelSectionTitles": [
+        "【謎の存在】",
+        "【空中通常技】",
+        "【地上通常技】",
+        "【特殊入力技】",
+        "【必殺技】",
+        "【スーパーアーツ】"
+      ],
+      "introductionSectionTitle": "【謎の存在】",
+      "gameplaySectionTitles": [
+        "【空中通常技】",
+        "【地上通常技】",
+        "【特殊入力技】",
+        "【必殺技】",
+        "【スーパーアーツ】"
+      ],
+      "maxNavigationDepth": 2,
+      "rowKindCounts": {
+        "detail": 907,
+        "motion_player": 50,
+        "next": 82,
+        "supplementary": 45
+      },
+      "actionEntryCounts": {
+        "open_motion_player": 50,
+        "open_next": 82
+      },
+      "customNestedSectionTitles": {},
+      "specialPatterns": [
+        {
+          "id": "normal_ex_splits",
+          "title": "通常 / EX split blocks",
+          "description": "Supplementary note groups are split into separate 通常 and EX sections.",
+          "count": 4,
+          "examples": [
+            {
+              "path": "【必殺技】 > 突進頭部打撃(仮) > 補足 > 通常",
+              "navigationDepth": 2
+            },
+            {
+              "path": "【必殺技】 > 突進頭部打撃(仮) > 補足 > EX",
+              "navigationDepth": 2
+            },
+            {
+              "path": "【必殺技】 > 高速度連続打撃(仮) > 補足 > 通常",
+              "navigationDepth": 2
+            },
+            {
+              "path": "【必殺技】 > 高速度連続打撃(仮) > 補足 > EX",
+              "navigationDepth": 2
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "characterId": "Remy",
+      "file": "RedBlocking/Resources/CharacterData/Remy.yml",
+      "topLevelSectionTitles": [
+        "【愛と憎しみの狭間で】",
+        "【空中通常技】",
+        "【地上通常技】",
+        "【特殊入力技】",
+        "【必殺技】",
+        "【スーパーアーツ】"
+      ],
+      "introductionSectionTitle": "【愛と憎しみの狭間で】",
+      "gameplaySectionTitles": [
+        "【空中通常技】",
+        "【地上通常技】",
+        "【特殊入力技】",
+        "【必殺技】",
+        "【スーパーアーツ】"
+      ],
+      "maxNavigationDepth": 2,
+      "rowKindCounts": {
+        "detail": 904,
+        "motion_player": 50,
+        "next": 81,
+        "supplementary": 41
+      },
+      "actionEntryCounts": {
+        "open_motion_player": 50,
+        "open_next": 81
+      },
+      "customNestedSectionTitles": {
+        "1回目のサマー": {
+          "count": 1,
+          "examplePath": "【スーパーアーツ】 > ヴィエルジュに安息を > 1回目のサマー"
+        },
+        "2回目のサマー": {
+          "count": 1,
+          "examplePath": "【スーパーアーツ】 > ヴィエルジュに安息を > 2回目のサマー"
+        },
+        "3回目のサマー": {
+          "count": 1,
+          "examplePath": "【スーパーアーツ】 > ヴィエルジュに安息を > 3回目のサマー"
+        }
+      },
+      "specialPatterns": [
+        {
+          "id": "normal_ex_splits",
+          "title": "通常 / EX split blocks",
+          "description": "Supplementary note groups are split into separate 通常 and EX sections.",
+          "count": 6,
+          "examples": [
+            {
+              "path": "【必殺技】 > ヴェルテュの残光 オット > 補足 > 通常",
+              "navigationDepth": 2
+            },
+            {
+              "path": "【必殺技】 > ヴェルテュの残光 オット > 補足 > EX",
+              "navigationDepth": 2
+            },
+            {
+              "path": "【必殺技】 > ヴェルテュの残光 パス > 補足 > 通常",
+              "navigationDepth": 2
+            },
+            {
+              "path": "【必殺技】 > ヴェルテュの残光 パス > 補足 > EX",
+              "navigationDepth": 2
+            },
+            {
+              "path": "【必殺技】 > マ・シェリの悲哀 > 補足 > 通常",
+              "navigationDepth": 2
+            }
+          ]
+        },
+        {
+          "id": "multi_stage_or_component_breakdowns",
+          "title": "Multi-stage / component breakdowns",
+          "description": "A move is decomposed into stages or hit components such as 1回目, 段目, or 部分.",
+          "count": 3,
+          "examples": [
+            {
+              "path": "【スーパーアーツ】 > ヴィエルジュに安息を > 1回目のサマー",
+              "navigationDepth": 1
+            },
+            {
+              "path": "【スーパーアーツ】 > ヴィエルジュに安息を > 2回目のサマー",
+              "navigationDepth": 1
+            },
+            {
+              "path": "【スーパーアーツ】 > ヴィエルジュに安息を > 3回目のサマー",
+              "navigationDepth": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "characterId": "Ryu",
+      "file": "RedBlocking/Resources/CharacterData/Ryu.yml",
+      "topLevelSectionTitles": [
+        "【孤高の求道者】",
+        "【空中通常技】",
+        "【地上通常技】",
+        "【特殊入力技】",
+        "【必殺技】",
+        "【スーパーアーツ】"
+      ],
+      "introductionSectionTitle": "【孤高の求道者】",
+      "gameplaySectionTitles": [
+        "【空中通常技】",
+        "【地上通常技】",
+        "【特殊入力技】",
+        "【必殺技】",
+        "【スーパーアーツ】"
+      ],
+      "maxNavigationDepth": 2,
+      "rowKindCounts": {
+        "detail": 923,
+        "motion_player": 56,
+        "next": 83,
+        "supplementary": 49
+      },
+      "actionEntryCounts": {
+        "open_motion_player": 56,
+        "open_next": 83
+      },
+      "customNestedSectionTitles": {
+        "しゃがみ状態で竜巻がヒットするキャラ": {
+          "count": 3,
+          "examplePath": "【必殺技】 > 竜巻旋風脚 > 竜巻旋風脚【小】 > しゃがみ状態で竜巻がヒットするキャラ"
+        },
+        "カス当たり時": {
+          "count": 1,
+          "examplePath": "【スーパーアーツ】 > 真・昇龍拳 > カス当たり時"
+        },
+        "クロダ電刃(通称)": {
+          "count": 1,
+          "examplePath": "【スーパーアーツ】 > 電刃波動拳 > クロダ電刃(通称)"
+        },
+        "昇龍拳がヒットするキャラ": {
+          "count": 1,
+          "examplePath": "【必殺技】 > 竜巻旋風脚 > 真空竜巻旋風脚 > 昇龍拳がヒットするキャラ"
+        },
+        "電刃波動拳のタメについて": {
+          "count": 1,
+          "examplePath": "【スーパーアーツ】 > 電刃波動拳 > 電刃波動拳のタメについて"
+        }
+      },
+      "specialPatterns": [
+        {
+          "id": "normal_ex_splits",
+          "title": "通常 / EX split blocks",
+          "description": "Supplementary note groups are split into separate 通常 and EX sections.",
+          "count": 8,
+          "examples": [
+            {
+              "path": "【必殺技】 > 波動拳 > 補足 > 通常",
+              "navigationDepth": 2
+            },
+            {
+              "path": "【必殺技】 > 波動拳 > 補足 > EX",
+              "navigationDepth": 2
+            },
+            {
+              "path": "【必殺技】 > 昇龍拳 > 補足 > 通常",
+              "navigationDepth": 2
+            },
+            {
+              "path": "【必殺技】 > 昇龍拳 > 補足 > EX",
+              "navigationDepth": 2
+            },
+            {
+              "path": "【必殺技】 > 竜巻旋風脚 > 補足 > 通常",
+              "navigationDepth": 2
+            }
+          ]
+        },
+        {
+          "id": "matchup_or_character_specific_blocks",
+          "title": "Matchup / character-specific blocks",
+          "description": "Notes or stats branch by target character or matchup-specific conditions.",
+          "count": 4,
+          "examples": [
+            {
+              "path": "【必殺技】 > 竜巻旋風脚 > 竜巻旋風脚【小】 > しゃがみ状態で竜巻がヒットするキャラ",
+              "navigationDepth": 2
+            },
+            {
+              "path": "【必殺技】 > 竜巻旋風脚 > 竜巻旋風脚【中】 > しゃがみ状態で竜巻がヒットするキャラ",
+              "navigationDepth": 2
+            },
+            {
+              "path": "【必殺技】 > 竜巻旋風脚 > 竜巻旋風脚【大】 > しゃがみ状態で竜巻がヒットするキャラ",
+              "navigationDepth": 2
+            },
+            {
+              "path": "【必殺技】 > 竜巻旋風脚 > 真空竜巻旋風脚 > 昇龍拳がヒットするキャラ",
+              "navigationDepth": 2
+            }
+          ]
+        },
+        {
+          "id": "unclassified_custom_sections",
+          "title": "Unclassified custom sections",
+          "description": "Custom nested section titles that do not fit the known buckets yet.",
+          "count": 3,
+          "examples": [
+            {
+              "path": "【スーパーアーツ】 > 真・昇龍拳 > カス当たり時",
+              "navigationDepth": 1
+            },
+            {
+              "path": "【スーパーアーツ】 > 電刃波動拳 > 電刃波動拳のタメについて",
+              "navigationDepth": 1
+            },
+            {
+              "path": "【スーパーアーツ】 > 電刃波動拳 > クロダ電刃(通称)",
+              "navigationDepth": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "characterId": "Sean",
+      "file": "RedBlocking/Resources/CharacterData/Sean.yml",
+      "topLevelSectionTitles": [
+        "【熱風キッド】",
+        "【空中通常技】",
+        "【地上通常技】",
+        "【特殊入力技】",
+        "【必殺技】",
+        "【スーパーアーツ】"
+      ],
+      "introductionSectionTitle": "【熱風キッド】",
+      "gameplaySectionTitles": [
+        "【空中通常技】",
+        "【地上通常技】",
+        "【特殊入力技】",
+        "【必殺技】",
+        "【スーパーアーツ】"
+      ],
+      "maxNavigationDepth": 2,
+      "rowKindCounts": {
+        "detail": 892,
+        "motion_player": 55,
+        "next": 82,
+        "supplementary": 38
+      },
+      "actionEntryCounts": {
+        "open_motion_player": 55,
+        "open_next": 82
+      },
+      "customNestedSectionTitles": {},
+      "specialPatterns": [
+        {
+          "id": "normal_ex_splits",
+          "title": "通常 / EX split blocks",
+          "description": "Supplementary note groups are split into separate 通常 and EX sections.",
+          "count": 2,
+          "examples": [
+            {
+              "path": "【必殺技】 > ドラゴンスマッシュ > 補足 > 通常",
+              "navigationDepth": 2
+            },
+            {
+              "path": "【必殺技】 > ドラゴンスマッシュ > 補足 > EX",
+              "navigationDepth": 2
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "characterId": "Twelve",
+      "file": "RedBlocking/Resources/CharacterData/Twelve.yml",
+      "topLevelSectionTitles": [
+        "【白い殺戮マシーン】",
+        "【空中通常技】",
+        "【地上通常技】",
+        "【特殊入力技】",
+        "【必殺技】",
+        "【スーパーアーツ】"
+      ],
+      "introductionSectionTitle": "【白い殺戮マシーン】",
+      "gameplaySectionTitles": [
+        "【空中通常技】",
+        "【地上通常技】",
+        "【特殊入力技】",
+        "【必殺技】",
+        "【スーパーアーツ】"
+      ],
+      "maxNavigationDepth": 2,
+      "rowKindCounts": {
+        "detail": 815,
+        "motion_player": 46,
+        "next": 74,
+        "supplementary": 45
+      },
+      "actionEntryCounts": {
+        "open_motion_player": 46,
+        "open_next": 74
+      },
+      "customNestedSectionTitles": {},
+      "specialPatterns": [
+        {
+          "id": "normal_ex_splits",
+          "title": "通常 / EX split blocks",
+          "description": "Supplementary note groups are split into separate 通常 and EX sections.",
+          "count": 8,
+          "examples": [
+            {
+              "path": "【必殺技】 > N.D.L. > 補足 > 通常",
+              "navigationDepth": 2
+            },
+            {
+              "path": "【必殺技】 > N.D.L. > 補足 > EX",
+              "navigationDepth": 2
+            },
+            {
+              "path": "【必殺技】 > A.X.E. > 補足 > 通常",
+              "navigationDepth": 2
+            },
+            {
+              "path": "【必殺技】 > A.X.E. > 補足 > EX",
+              "navigationDepth": 2
+            },
+            {
+              "path": "【必殺技】 > 空中A.X.E. > 補足 > 通常",
+              "navigationDepth": 2
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "characterId": "Urien",
+      "file": "RedBlocking/Resources/CharacterData/Urien.yml",
+      "topLevelSectionTitles": [
+        "【反逆の使徒】",
+        "【空中通常技】",
+        "【地上通常技】",
+        "【特殊入力技】",
+        "【必殺技】",
+        "【スーパーアーツ】"
+      ],
+      "introductionSectionTitle": "【反逆の使徒】",
+      "gameplaySectionTitles": [
+        "【空中通常技】",
+        "【地上通常技】",
+        "【特殊入力技】",
+        "【必殺技】",
+        "【スーパーアーツ】"
+      ],
+      "maxNavigationDepth": 2,
+      "rowKindCounts": {
+        "detail": 828,
+        "motion_player": 41,
+        "next": 75,
+        "supplementary": 45
+      },
+      "actionEntryCounts": {
+        "open_motion_player": 41,
+        "open_next": 75
+      },
+      "customNestedSectionTitles": {
+        "ケズリ": {
+          "count": 1,
+          "examplePath": "【スーパーアーツ】 > ユピテルサンダー > ケズリ"
+        },
+        "スタン値": {
+          "count": 1,
+          "examplePath": "【スーパーアーツ】 > ユピテルサンダー > スタン値"
+        },
+        "ラリアットカス当たり数値": {
+          "count": 1,
+          "examplePath": "【スーパーアーツ】 > タイラントパニッシュ > ラリアットカス当たり数値"
+        },
+        "攻撃力": {
+          "count": 1,
+          "examplePath": "【スーパーアーツ】 > ユピテルサンダー > 攻撃力"
+        },
+        "発生": {
+          "count": 1,
+          "examplePath": "【スーパーアーツ】 > エイジスリフレクター > 発生"
+        }
+      },
+      "specialPatterns": [
+        {
+          "id": "normal_ex_splits",
+          "title": "通常 / EX split blocks",
+          "description": "Supplementary note groups are split into separate 通常 and EX sections.",
+          "count": 8,
+          "examples": [
+            {
+              "path": "【必殺技】 > メタリックスフィア > 補足 > 通常",
+              "navigationDepth": 2
+            },
+            {
+              "path": "【必殺技】 > メタリックスフィア > 補足 > EX",
+              "navigationDepth": 2
+            },
+            {
+              "path": "【必殺技】 > チャリオットタックル > 補足 > 通常",
+              "navigationDepth": 2
+            },
+            {
+              "path": "【必殺技】 > チャリオットタックル > 補足 > EX",
+              "navigationDepth": 2
+            },
+            {
+              "path": "【必殺技】 > バイオレンスニードロップ > 補足 > 通常",
+              "navigationDepth": 2
+            }
+          ]
+        },
+        {
+          "id": "specialized_stat_subsections",
+          "title": "Specialized stat subsections",
+          "description": "Custom stat buckets extend beyond the common ゲージ増加量 / ヒット&ガード硬直時間差 / 補足 trio.",
+          "count": 4,
+          "examples": [
+            {
+              "path": "【スーパーアーツ】 > ユピテルサンダー > 攻撃力",
+              "navigationDepth": 1
+            },
+            {
+              "path": "【スーパーアーツ】 > ユピテルサンダー > ケズリ",
+              "navigationDepth": 1
+            },
+            {
+              "path": "【スーパーアーツ】 > ユピテルサンダー > スタン値",
+              "navigationDepth": 1
+            },
+            {
+              "path": "【スーパーアーツ】 > エイジスリフレクター > 発生",
+              "navigationDepth": 1
+            }
+          ]
+        },
+        {
+          "id": "unclassified_custom_sections",
+          "title": "Unclassified custom sections",
+          "description": "Custom nested section titles that do not fit the known buckets yet.",
+          "count": 1,
+          "examples": [
+            {
+              "path": "【スーパーアーツ】 > タイラントパニッシュ > ラリアットカス当たり数値",
+              "navigationDepth": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "characterId": "Yang",
+      "file": "RedBlocking/Resources/CharacterData/Yang.yml",
+      "topLevelSectionTitles": [
+        "【若き双龍】",
+        "【空中通常技】",
+        "【地上通常技】",
+        "【特殊入力技】",
+        "【必殺技】",
+        "【スーパーアーツ】"
+      ],
+      "introductionSectionTitle": "【若き双龍】",
+      "gameplaySectionTitles": [
+        "【空中通常技】",
+        "【地上通常技】",
+        "【特殊入力技】",
+        "【必殺技】",
+        "【スーパーアーツ】"
+      ],
+      "maxNavigationDepth": 2,
+      "rowKindCounts": {
+        "detail": 1010,
+        "motion_player": 47,
+        "next": 75,
+        "supplementary": 50
+      },
+      "actionEntryCounts": {
+        "open_motion_player": 47,
+        "open_next": 75
+      },
+      "customNestedSectionTitles": {
+        "1回目": {
+          "count": 4,
+          "examplePath": "【必殺技】 > 蟷螂斬(とうろうざん) > 蟷螂斬(とうろうざん)【小】 > 1回目"
+        },
+        "1回目ゲージ増加量": {
+          "count": 4,
+          "examplePath": "【必殺技】 > 蟷螂斬(とうろうざん) > 蟷螂斬(とうろうざん)【小】 > 1回目ゲージ増加量"
+        },
+        "1回目ヒット&ガード硬直時間差": {
+          "count": 4,
+          "examplePath": "【必殺技】 > 蟷螂斬(とうろうざん) > 蟷螂斬(とうろうざん)【小】 > 1回目ヒット&ガード硬直時間差"
+        },
+        "2回目": {
+          "count": 4,
+          "examplePath": "【必殺技】 > 蟷螂斬(とうろうざん) > 蟷螂斬(とうろうざん)【小】 > 2回目"
+        },
+        "2回目ゲージ増加量": {
+          "count": 4,
+          "examplePath": "【必殺技】 > 蟷螂斬(とうろうざん) > 蟷螂斬(とうろうざん)【小】 > 2回目ゲージ増加量"
+        },
+        "2回目ヒット&ガード硬直時間差": {
+          "count": 4,
+          "examplePath": "【必殺技】 > 蟷螂斬(とうろうざん) > 蟷螂斬(とうろうざん)【小】 > 2回目ヒット&ガード硬直時間差"
+        },
+        "3回目": {
+          "count": 4,
+          "examplePath": "【必殺技】 > 蟷螂斬(とうろうざん) > 蟷螂斬(とうろうざん)【小】 > 3回目"
+        },
+        "3回目ゲージ増加量": {
+          "count": 4,
+          "examplePath": "【必殺技】 > 蟷螂斬(とうろうざん) > 蟷螂斬(とうろうざん)【小】 > 3回目ゲージ増加量"
+        },
+        "3回目ヒット&ガード硬直時間差": {
+          "count": 4,
+          "examplePath": "【必殺技】 > 蟷螂斬(とうろうざん) > 蟷螂斬(とうろうざん)【小】 > 3回目ヒット&ガード硬直時間差"
+        },
+        "4回目": {
+          "count": 1,
+          "examplePath": "【必殺技】 > 蟷螂斬(とうろうざん) > 蟷螂斬(とうろうざん)【EX】 > 4回目"
+        },
+        "4回目ゲージ増加量": {
+          "count": 1,
+          "examplePath": "【必殺技】 > 蟷螂斬(とうろうざん) > 蟷螂斬(とうろうざん)【EX】 > 4回目ゲージ増加量"
+        },
+        "4回目ヒット&ガード硬直時間差": {
+          "count": 1,
+          "examplePath": "【必殺技】 > 蟷螂斬(とうろうざん) > 蟷螂斬(とうろうざん)【EX】 > 4回目ヒット&ガード硬直時間差"
+        },
+        "5回目": {
+          "count": 1,
+          "examplePath": "【必殺技】 > 蟷螂斬(とうろうざん) > 蟷螂斬(とうろうざん)【EX】 > 5回目"
+        },
+        "5回目ゲージ増加量": {
+          "count": 1,
+          "examplePath": "【必殺技】 > 蟷螂斬(とうろうざん) > 蟷螂斬(とうろうざん)【EX】 > 5回目ゲージ増加量"
+        },
+        "5回目ヒット&ガード硬直時間差": {
+          "count": 1,
+          "examplePath": "【必殺技】 > 蟷螂斬(とうろうざん) > 蟷螂斬(とうろうざん)【EX】 > 5回目ヒット&ガード硬直時間差"
+        },
+        "ヒット&ガード硬直時間差(4+大P)": {
+          "count": 2,
+          "examplePath": "【特殊入力技】 > ターゲットコンボ > 近中P→立大P→4+大P > ヒット&ガード硬直時間差(4+大P)"
+        },
+        "ヒット&ガード硬直時間差(立中K)": {
+          "count": 1,
+          "examplePath": "【特殊入力技】 > ターゲットコンボ > 立小K→立中K→立大K > ヒット&ガード硬直時間差(立中K)"
+        },
+        "ヒット&ガード硬直時間差(立大K)": {
+          "count": 1,
+          "examplePath": "【特殊入力技】 > ターゲットコンボ > 立小K→立中K→立大K > ヒット&ガード硬直時間差(立大K)"
+        },
+        "ヒット&ガード硬直時間差(立大P)": {
+          "count": 2,
+          "examplePath": "【特殊入力技】 > ターゲットコンボ > 近中P→立大P→4+大P > ヒット&ガード硬直時間差(立大P)"
+        }
+      },
+      "specialPatterns": [
+        {
+          "id": "normal_ex_splits",
+          "title": "通常 / EX split blocks",
+          "description": "Supplementary note groups are split into separate 通常 and EX sections.",
+          "count": 2,
+          "examples": [
+            {
+              "path": "【必殺技】 > 穿弓腿(せんきゅうたい) > 補足 > 通常",
+              "navigationDepth": 2
+            },
+            {
+              "path": "【必殺技】 > 穿弓腿(せんきゅうたい) > 補足 > EX",
+              "navigationDepth": 2
+            }
+          ]
+        },
+        {
+          "id": "multi_stage_or_component_breakdowns",
+          "title": "Multi-stage / component breakdowns",
+          "description": "A move is decomposed into stages or hit components such as 1回目, 段目, or 部分.",
+          "count": 42,
+          "examples": [
+            {
+              "path": "【必殺技】 > 蟷螂斬(とうろうざん) > 蟷螂斬(とうろうざん)【小】 > 1回目",
+              "navigationDepth": 2
+            },
+            {
+              "path": "【必殺技】 > 蟷螂斬(とうろうざん) > 蟷螂斬(とうろうざん)【小】 > 1回目ゲージ増加量",
+              "navigationDepth": 2
+            },
+            {
+              "path": "【必殺技】 > 蟷螂斬(とうろうざん) > 蟷螂斬(とうろうざん)【小】 > 1回目ヒット&ガード硬直時間差",
+              "navigationDepth": 2
+            },
+            {
+              "path": "【必殺技】 > 蟷螂斬(とうろうざん) > 蟷螂斬(とうろうざん)【小】 > 2回目",
+              "navigationDepth": 2
+            },
+            {
+              "path": "【必殺技】 > 蟷螂斬(とうろうざん) > 蟷螂斬(とうろうざん)【小】 > 2回目ゲージ増加量",
+              "navigationDepth": 2
+            }
+          ]
+        },
+        {
+          "id": "specialized_stat_subsections",
+          "title": "Specialized stat subsections",
+          "description": "Custom stat buckets extend beyond the common ゲージ増加量 / ヒット&ガード硬直時間差 / 補足 trio.",
+          "count": 6,
+          "examples": [
+            {
+              "path": "【特殊入力技】 > ターゲットコンボ > 立小K→立中K→立大K > ヒット&ガード硬直時間差(立中K)",
+              "navigationDepth": 2
+            },
+            {
+              "path": "【特殊入力技】 > ターゲットコンボ > 立小K→立中K→立大K > ヒット&ガード硬直時間差(立大K)",
+              "navigationDepth": 2
+            },
+            {
+              "path": "【特殊入力技】 > ターゲットコンボ > 近中P→立大P→4+大P > ヒット&ガード硬直時間差(立大P)",
+              "navigationDepth": 2
+            },
+            {
+              "path": "【特殊入力技】 > ターゲットコンボ > 近中P→立大P→4+大P > ヒット&ガード硬直時間差(4+大P)",
+              "navigationDepth": 2
+            },
+            {
+              "path": "【特殊入力技】 > ターゲットコンボ > 遠中P→立大P→4+大P > ヒット&ガード硬直時間差(立大P)",
+              "navigationDepth": 2
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "characterId": "Yun",
+      "file": "RedBlocking/Resources/CharacterData/Yun.yml",
+      "topLevelSectionTitles": [
+        "【若き双龍】",
+        "【空中通常技】",
+        "【地上通常技】",
+        "【特殊入力技】",
+        "【必殺技】",
+        "【スーパーアーツ】"
+      ],
+      "introductionSectionTitle": "【若き双龍】",
+      "gameplaySectionTitles": [
+        "【空中通常技】",
+        "【地上通常技】",
+        "【特殊入力技】",
+        "【必殺技】",
+        "【スーパーアーツ】"
+      ],
+      "maxNavigationDepth": 4,
+      "rowKindCounts": {
+        "detail": 1200,
+        "motion_player": 84,
+        "next": 142,
+        "supplementary": 58
+      },
+      "actionEntryCounts": {
+        "open_motion_player": 84,
+        "open_next": 142
+      },
+      "customNestedSectionTitles": {
+        "ヒット&ガード硬直時間差(4+大P)": {
+          "count": 2,
+          "examplePath": "【特殊入力技】 > ターゲットコンボ > 近中P→立大P→4+大P > ヒット&ガード硬直時間差(4+大P)"
+        },
+        "ヒット&ガード硬直時間差(立中P)": {
+          "count": 1,
+          "examplePath": "【特殊入力技】 > ターゲットコンボ > 近立小P→立小K→立中P > ヒット&ガード硬直時間差(立中P)"
+        },
+        "ヒット&ガード硬直時間差(立大P)": {
+          "count": 2,
+          "examplePath": "【特殊入力技】 > ターゲットコンボ > 近中P→立大P→4+大P > ヒット&ガード硬直時間差(立大P)"
+        },
+        "ヒット&ガード硬直時間差(立小K)": {
+          "count": 1,
+          "examplePath": "【特殊入力技】 > ターゲットコンボ > 近立小P→立小K→立中P > ヒット&ガード硬直時間差(立小K)"
+        },
+        "幻影陣中の性能": {
+          "count": 11,
+          "examplePath": "【空中通常技】 > ジャンプ中キック > 斜めジャンプ中キック > 幻影陣中の性能"
+        }
+      },
+      "specialPatterns": [
+        {
+          "id": "deep_navigation_chains",
+          "title": "Deep navigation chains",
+          "description": "A move requires three or more Next hops before detail rows appear.",
+          "count": 61,
+          "examples": [
+            {
+              "path": "【スーパーアーツ】 > 幻影陣(げんえいじん) > 幻影陣中の各技の数値 > 【空中通常技】 > ジャンプ小パンチ",
+              "navigationDepth": 3
+            },
+            {
+              "path": "【スーパーアーツ】 > 幻影陣(げんえいじん) > 幻影陣中の各技の数値 > 【空中通常技】 > ジャンプ小パンチ > 垂直ジャンプ小パンチ",
+              "navigationDepth": 4
+            },
+            {
+              "path": "【スーパーアーツ】 > 幻影陣(げんえいじん) > 幻影陣中の各技の数値 > 【空中通常技】 > ジャンプ小パンチ > 斜めジャンプ小パンチ",
+              "navigationDepth": 4
+            },
+            {
+              "path": "【スーパーアーツ】 > 幻影陣(げんえいじん) > 幻影陣中の各技の数値 > 【空中通常技】 > ジャンプ中パンチ",
+              "navigationDepth": 3
+            },
+            {
+              "path": "【スーパーアーツ】 > 幻影陣(げんえいじん) > 幻影陣中の各技の数値 > 【空中通常技】 > ジャンプ中パンチ > 垂直ジャンプ中パンチ",
+              "navigationDepth": 4
+            }
+          ]
+        },
+        {
+          "id": "normal_ex_splits",
+          "title": "通常 / EX split blocks",
+          "description": "Supplementary note groups are split into separate 通常 and EX sections.",
+          "count": 4,
+          "examples": [
+            {
+              "path": "【必殺技】 > 鉄山靠(てつざんこう) > 補足 > 通常",
+              "navigationDepth": 2
+            },
+            {
+              "path": "【必殺技】 > 鉄山靠(てつざんこう) > 補足 > EX",
+              "navigationDepth": 2
+            },
+            {
+              "path": "【必殺技】 > ニ翔脚(にしょうきゃく) > 補足 > 通常",
+              "navigationDepth": 2
+            },
+            {
+              "path": "【必殺技】 > ニ翔脚(にしょうきゃく) > 補足 > EX",
+              "navigationDepth": 2
+            }
+          ]
+        },
+        {
+          "id": "specialized_stat_subsections",
+          "title": "Specialized stat subsections",
+          "description": "Custom stat buckets extend beyond the common ゲージ増加量 / ヒット&ガード硬直時間差 / 補足 trio.",
+          "count": 6,
+          "examples": [
+            {
+              "path": "【特殊入力技】 > ターゲットコンボ > 近立小P→立小K→立中P > ヒット&ガード硬直時間差(立小K)",
+              "navigationDepth": 2
+            },
+            {
+              "path": "【特殊入力技】 > ターゲットコンボ > 近立小P→立小K→立中P > ヒット&ガード硬直時間差(立中P)",
+              "navigationDepth": 2
+            },
+            {
+              "path": "【特殊入力技】 > ターゲットコンボ > 近中P→立大P→4+大P > ヒット&ガード硬直時間差(立大P)",
+              "navigationDepth": 2
+            },
+            {
+              "path": "【特殊入力技】 > ターゲットコンボ > 近中P→立大P→4+大P > ヒット&ガード硬直時間差(4+大P)",
+              "navigationDepth": 2
+            },
+            {
+              "path": "【特殊入力技】 > ターゲットコンボ > 遠中P→立大P→4+大P > ヒット&ガード硬直時間差(立大P)",
+              "navigationDepth": 2
+            }
+          ]
+        },
+        {
+          "id": "state_specific_performance_blocks",
+          "title": "State-specific performance blocks",
+          "description": "A move embeds alternate stats for a special state such as 幻影陣中の性能.",
+          "count": 11,
+          "examples": [
+            {
+              "path": "【空中通常技】 > ジャンプ中キック > 斜めジャンプ中キック > 幻影陣中の性能",
+              "navigationDepth": 2
+            },
+            {
+              "path": "【地上通常技】 > 中パンチ > 遠距離立ち中パンチ > 幻影陣中の性能",
+              "navigationDepth": 2
+            },
+            {
+              "path": "【地上通常技】 > 大パンチ > 遠距離立ち大パンチ > 幻影陣中の性能",
+              "navigationDepth": 2
+            },
+            {
+              "path": "【地上通常技】 > 小キック > しゃがみ小キック > 幻影陣中の性能",
+              "navigationDepth": 2
+            },
+            {
+              "path": "【地上通常技】 > 中キック > 近距離立ち中キック > 幻影陣中の性能",
+              "navigationDepth": 2
+            }
+          ]
+        },
+        {
+          "id": "nested_gameplay_group_reuse",
+          "title": "Nested gameplay group reuse",
+          "description": "A move reuses top-level gameplay section titles inside a deeper branch.",
+          "count": 4,
+          "examples": [
+            {
+              "path": "【スーパーアーツ】 > 幻影陣(げんえいじん) > 幻影陣中の各技の数値 > 【空中通常技】",
+              "navigationDepth": 2
+            },
+            {
+              "path": "【スーパーアーツ】 > 幻影陣(げんえいじん) > 幻影陣中の各技の数値 > 【地上通常技】",
+              "navigationDepth": 2
+            },
+            {
+              "path": "【スーパーアーツ】 > 幻影陣(げんえいじん) > 幻影陣中の各技の数値 > 【特殊入力技】",
+              "navigationDepth": 2
+            },
+            {
+              "path": "【スーパーアーツ】 > 幻影陣(げんえいじん) > 幻影陣中の各技の数値 > 【必殺技】",
+              "navigationDepth": 2
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
