@@ -119,6 +119,10 @@
 - schema 可以覆盖 Alex、Dudley、Yun 这类不同复杂度角色。
 - 不存在未决字段命名或层级归属问题。
 
+### Deliverable
+
+- 产出并维护 [`CHARACTER_YAML_STRUCTURED_SCHEMA.md`](./CHARACTER_YAML_STRUCTURED_SCHEMA.md) 作为唯一 schema 规范。
+
 ## Phase 3: Add Structured Runtime Models
 
 ### Goal

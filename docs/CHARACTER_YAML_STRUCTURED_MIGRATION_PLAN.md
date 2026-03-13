@@ -16,6 +16,8 @@
 
 ## 新数据结构
 
+结构化字段和约束已在 [`CHARACTER_YAML_STRUCTURED_SCHEMA.md`](./CHARACTER_YAML_STRUCTURED_SCHEMA.md) 定稿。下面的内容保留为迁移背景与方向说明；如与 schema 细节有冲突，以 schema 文档为准。
+
 ### 根节点
 
 每个角色文件保留现有文件名，根节点统一为：
@@ -94,7 +96,7 @@ moveGroups:
 - `command`
 - `superCancel`
 - `guard`
-- `block`
+- `blocking`
 - `startup`
 - `active`
 - `recovery`
@@ -127,16 +129,26 @@ detail:
   stun: "9"
   stunReduction: "3"
   meterGain:
-    whiff: "0"
-    guard: "1"
-    hit: "2"
-    block: "4"
+    - id: whiff
+      label: 空振り
+      value: "0"
+    - id: guard
+      label: ガード
+      value: "1"
+    - id: hit
+      label: ヒット
+      value: "2"
+    - id: blocking
+      label: BL
+      value: "4"
   noteGroups:
     - id: notes
       displayTitle: 補足
-      lines:
+      entries:
         - 攻撃判定発生が早く、持続が長い上に小攻撃にしてはスタン値が高い
   media:
+    kind: motion_player
+    displayLabel: モーション
     skillName: Jumping Jab
     characterCode: "01"
     skillCode: "008"
