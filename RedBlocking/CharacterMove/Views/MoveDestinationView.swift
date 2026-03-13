@@ -13,13 +13,13 @@ struct MoveDestinationView: View {
 
     var body: some View {
         switch destination {
-        case let .moveNode(node):
-            MoveNodeView(node: node)
-        case let .motionPlayer(title, characterCode, skillCode):
+        case let .movePage(page):
+            MoveBrowserPageView(page: page)
+        case let .motionPlayer(link):
             MotionPlayerView(
-                title: title,
-                characterCode: characterCode,
-                skillCode: skillCode
+                title: link.title,
+                characterCode: link.characterCode,
+                skillCode: link.skillCode
             )
         }
     }

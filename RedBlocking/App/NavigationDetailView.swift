@@ -12,13 +12,19 @@ struct NavigationDetailView: View {
     @Environment(AppModel.self) private var appModel
 
     var body: some View {
-        if let rootNode = appModel.navigation.currentRootNode {
-            MoveNodeView(node: rootNode)
+        if let rootPage = appModel.navigation.currentRootPage {
+            MoveBrowserPageView(page: rootPage)
         } else {
             ZStack {
                 CharacterDetailBackgroundView(selection: appModel.navigation.selectedCharacter)
 
-                if let errorMessage = appModel.characterList.errorMessage {
+                if let errorMessage = appModel.navigation.currentProfileErrorMessage {
+                    unavailableState(
+                        title: "Couldn't Load Moves",
+                        systemImage: "exclamationmark.triangle",
+                        description: Text(errorMessage)
+                    )
+                } else if let errorMessage = appModel.characterList.errorMessage {
                     unavailableState(
                         title: "Couldn't Load Characters",
                         systemImage: "exclamationmark.triangle",

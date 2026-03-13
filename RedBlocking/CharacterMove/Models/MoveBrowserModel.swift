@@ -11,72 +11,29 @@ import Observation
 @MainActor
 @Observable
 final class MoveBrowserModel {
-    let node: MoveNode
-    let sections: [CharacterMove.Section]
+    let page: MoveBrowserPage
     let errorMessage: String?
 
     private let navigation: AppNavigationModel
 
-    init(node: MoveNode, navigation: AppNavigationModel) {
-        self.node = node
+    init(
+        page: MoveBrowserPage,
+        errorMessage: String? = nil,
+        navigation: AppNavigationModel
+    ) {
+        self.page = page
+        self.errorMessage = errorMessage
         self.navigation = navigation
-        sections = navigation.sections(for: node)
-        errorMessage = navigation.errorMessage(for: node)
     }
 
-    func open(_ move: CharacterMove) {
-        if let next = move.next {
-            navigation.pushNextNode(
-                title: title(for: move),
-                sections: next
-            )
-        } else if let presented = move.presented, supportsMotionPlayer(presented) {
-            navigation.pushMotionPlayer(
-                title: title(for: move),
-                characterCode: presented.characterCode,
-                skillCode: presented.skillCode
-            )
+    func open(_ row: MoveBrowserRow) {
+        switch row.action {
+        case let .openPage(page):
+            navigation.pushPage(page)
+        case let .openMotionPlayer(link):
+            navigation.pushMotionPlayer(link)
+        case .none:
+            break
         }
-    }
-
-    func title(for move: CharacterMove) -> String {
-        if let rowTitle = move.rowTitle, rowTitle.isEmpty == false {
-            return rowTitle
-        }
-
-        if let presented = move.presented {
-            return presented.skillName
-        }
-
-        return "Unknown Move"
-    }
-
-    func subtitle(for move: CharacterMove) -> String? {
-        move.rowDetail
-    }
-
-    func playerSubtitle(for move: CharacterMove) -> String? {
-        guard let presented = move.presented else {
-            return nil
-        }
-
-        let title = title(for: move)
-        if title != presented.skillName {
-            return presented.skillName
-        }
-
-        return nil
-    }
-
-    func isMovePlayerEntry(_ move: CharacterMove) -> Bool {
-        guard let presented = move.presented else {
-            return false
-        }
-
-        return supportsMotionPlayer(presented)
-    }
-
-    private func supportsMotionPlayer(_ presented: CharacterMove.Frames) -> Bool {
-        presented.viewController == "FramesPlayerViewController"
     }
 }

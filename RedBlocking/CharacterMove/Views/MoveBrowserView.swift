@@ -21,7 +21,7 @@ struct MoveBrowserView: View {
             .scrollContentBackground(.hidden)
             .contentMargins(.top, 16, for: .scrollContent)
             .contentMargins(.horizontal, horizontalContentMargin, for: .scrollContent)
-            .navigationTitle(model.node.title)
+            .navigationTitle(model.page.navigationTitle)
     }
 
     private func listContent(rowBackground: Color) -> some View {
@@ -35,7 +35,7 @@ struct MoveBrowserView: View {
                     )
                     .listRowBackground(rowBackground)
                 }
-            } else if model.sections.isEmpty {
+            } else if model.page.sections.isEmpty {
                 Section {
                     ContentUnavailableView(
                         "No Moves Here",
@@ -45,40 +45,43 @@ struct MoveBrowserView: View {
                     .listRowBackground(rowBackground)
                 }
             } else {
-                ForEach(Array(model.sections.enumerated()), id: \.offset) { _, section in
+                ForEach(model.page.sections) { section in
                     Section {
-                        ForEach(Array(section.rows.enumerated()), id: \.offset) { _, move in
-                            if move.next != nil {
+                        ForEach(section.rows) { row in
+                            switch row.kind {
+                            case .next:
                                 MoveNextRowView(
-                                    title: model.title(for: move),
-                                    subtitle: model.subtitle(for: move)
+                                    title: row.title,
+                                    subtitle: row.subtitle
                                 ) {
-                                    model.open(move)
+                                    model.open(row)
                                 }
                                 .listRowBackground(rowBackground)
-                            } else if model.isMovePlayerEntry(move) {
+                            case .motionPlayer:
                                 MovePlayerEntryRowView(
-                                    title: model.title(for: move),
-                                    subtitle: model.playerSubtitle(for: move)
+                                    title: row.title,
+                                    subtitle: row.subtitle
                                 ) {
-                                    model.open(move)
+                                    model.open(row)
                                 }
                                 .listRowBackground(rowBackground)
-                            } else if let detail = move.rowDetail {
-                                MoveDetailRowView(
-                                    title: model.title(for: move),
-                                    detail: detail
-                                )
-                                .listRowBackground(rowBackground)
-                            } else {
+                            case .detail:
+                                if let detail = row.detail {
+                                    MoveDetailRowView(
+                                        title: row.title,
+                                        detail: detail
+                                    )
+                                    .listRowBackground(rowBackground)
+                                }
+                            case .supplementary:
                                 MoveSupplementaryRowView(
-                                    title: model.title(for: move)
+                                    title: row.title
                                 )
                                 .listRowBackground(rowBackground)
                             }
                         }
                     } header: {
-                        if let sectionTitle = section.sectionTitle, sectionTitle.isEmpty == false {
+                        if let sectionTitle = section.title, sectionTitle.isEmpty == false {
                             Text(sectionTitle)
                         }
                     }

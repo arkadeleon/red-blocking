@@ -8,10 +8,16 @@
 
 import SwiftUI
 
-struct MoveNodeView: View {
+struct MoveBrowserPageView: View {
     @Environment(AppModel.self) private var appModel
 
-    let node: MoveNode
+    let page: MoveBrowserPage
+    let errorMessage: String?
+
+    init(page: MoveBrowserPage, errorMessage: String? = nil) {
+        self.page = page
+        self.errorMessage = errorMessage
+    }
 
     var body: some View {
         ZStack {
@@ -19,7 +25,8 @@ struct MoveNodeView: View {
 
             MoveBrowserView(
                 model: MoveBrowserModel(
-                    node: node,
+                    page: page,
+                    errorMessage: errorMessage,
                     navigation: appModel.navigation
                 )
             )
@@ -30,6 +37,6 @@ struct MoveNodeView: View {
 #Preview("Move Browser") {
     let preview = PreviewAppModel.moveBrowser()
 
-    return MoveNodeView(node: preview.node)
+    return MoveBrowserPageView(page: preview.page)
         .environment(preview.appModel)
 }

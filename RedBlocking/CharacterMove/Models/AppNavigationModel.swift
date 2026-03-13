@@ -13,8 +13,9 @@ import Observation
 @Observable
 final class AppNavigationModel {
     private let moveRepository: MoveRepository
+    private let browserProjector = MoveBrowserProjector()
 
-    private(set) var currentRootNode: MoveNode?
+    private(set) var currentRootPage: MoveBrowserPage?
     private(set) var currentProfile: CharacterProfile?
     private(set) var currentProfileErrorMessage: String?
     private(set) var selectedCharacter: CharacterSelection? {
@@ -24,21 +25,17 @@ final class AppNavigationModel {
             }
 
             detailPath.removeAll()
-            currentRootNode = selectedCharacter.map(makeRootNode(for:))
+            currentRootPage = nil
             currentProfile = nil
             currentProfileErrorMessage = nil
 
             if let selectedCharacter {
                 loadCurrentProfile(for: selectedCharacter)
-                loadRootSections(for: selectedCharacter)
             }
         }
     }
 
     var detailPath: [MoveDestination] = []
-
-    private var nodeSections: [MoveNode.ID: [CharacterMove.Section]] = [:]
-    private var nodeErrors: [MoveNode.ID: String] = [:]
 
     init(
         moveRepository: MoveRepository = MoveRepository()
@@ -46,57 +43,27 @@ final class AppNavigationModel {
         self.moveRepository = moveRepository
     }
 
-    func sections(for node: MoveNode) -> [CharacterMove.Section] {
-        nodeSections[node.id] ?? []
+    func pushPage(_ page: MoveBrowserPage) {
+        detailPath.append(.movePage(page))
     }
 
-    func errorMessage(for node: MoveNode) -> String? {
-        nodeErrors[node.id]
-    }
-
-    func pushNextNode(title: String, sections: [CharacterMove.Section]) {
-        let node = MoveNode(id: "move:\(UUID().uuidString)", title: title)
-        nodeSections[node.id] = sections
-        nodeErrors[node.id] = nil
-        detailPath.append(.moveNode(node))
-    }
-
-    func pushMotionPlayer(title: String, characterCode: String, skillCode: String) {
-        detailPath.append(
-            .motionPlayer(
-                title: title,
-                characterCode: characterCode,
-                skillCode: skillCode
-            )
-        )
+    func pushMotionPlayer(_ link: MoveBrowserAction.MotionPlayerLink) {
+        detailPath.append(.motionPlayer(link))
     }
 
     func showCharacter(_ selection: CharacterSelection?) {
         selectedCharacter = selection
     }
 
-    private func makeRootNode(for selection: CharacterSelection) -> MoveNode {
-        MoveNode(id: "character:\(selection.id)", title: selection.title)
-    }
-
-    private func loadRootSections(for selection: CharacterSelection) {
-        let node = makeRootNode(for: selection)
-
-        do {
-            nodeSections[node.id] = try moveRepository.loadSections(resourceName: selection.moveResourceName)
-            nodeErrors[node.id] = nil
-        } catch {
-            nodeSections[node.id] = []
-            nodeErrors[node.id] = "Couldn't load moves for \(selection.title)."
-        }
-    }
-
     private func loadCurrentProfile(for selection: CharacterSelection) {
         do {
-            currentProfile = try moveRepository.loadProfile(resourceName: selection.moveResourceName)
+            let profile = try moveRepository.loadProfile(resourceName: selection.moveResourceName)
+            currentProfile = profile
+            currentRootPage = browserProjector.project(profile: profile)
             currentProfileErrorMessage = nil
         } catch {
             currentProfile = nil
+            currentRootPage = nil
             currentProfileErrorMessage = error.localizedDescription
         }
     }

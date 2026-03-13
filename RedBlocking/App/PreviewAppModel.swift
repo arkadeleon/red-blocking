@@ -23,27 +23,28 @@ enum PreviewAppModel {
         return appModel
     }
 
-    static func moveBrowser() -> (appModel: AppModel, node: MoveNode) {
+    static func moveBrowser() -> (appModel: AppModel, page: MoveBrowserPage) {
         let appModel = rootNavigation()
-        let node = appModel.navigation.currentRootNode ?? MoveNode(
+        let page = appModel.navigation.currentRootPage ?? MoveBrowserPage(
             id: "preview:root",
-            title: "Preview"
+            navigationTitle: "Preview",
+            sections: []
         )
-        return (appModel, node)
+        return (appModel, page)
     }
 
     static func motionPlayer() -> MotionPlayerPreviewConfiguration? {
         let appModel = rootNavigation()
         guard
-            let rootNode = appModel.navigation.currentRootNode,
-            let playableMove = firstPlayableMove(in: appModel.navigation.sections(for: rootNode))
+            let rootPage = appModel.navigation.currentRootPage,
+            let playableMove = firstPlayableMove(in: rootPage)
         else {
             return nil
         }
 
         return MotionPlayerPreviewConfiguration(
             appModel: appModel,
-            title: playableMove.skillName,
+            title: playableMove.title,
             characterCode: playableMove.characterCode,
             skillCode: playableMove.skillCode
         )
@@ -71,14 +72,14 @@ enum PreviewAppModel {
         appModel.characterList.selectedCharacter = selection
     }
 
-    private static func firstPlayableMove(in sections: [CharacterMove.Section]) -> CharacterMove.Frames? {
-        for section in sections {
-            for move in section.rows {
-                if let presented = move.presented, presented.viewController == "FramesPlayerViewController" {
-                    return presented
+    private static func firstPlayableMove(in page: MoveBrowserPage) -> MoveBrowserAction.MotionPlayerLink? {
+        for section in page.sections {
+            for row in section.rows {
+                if let link = row.action.motionPlayerLink {
+                    return link
                 }
 
-                if let next = move.next, let nestedMove = firstPlayableMove(in: next) {
+                if let nextPage = row.action.page, let nestedMove = firstPlayableMove(in: nextPage) {
                     return nestedMove
                 }
             }

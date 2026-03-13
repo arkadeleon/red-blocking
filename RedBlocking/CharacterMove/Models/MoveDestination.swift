@@ -7,6 +7,6 @@
 //
 
 enum MoveDestination: Hashable {
-    case moveNode(MoveNode)
-    case motionPlayer(title: String, characterCode: String, skillCode: String)
+    case movePage(MoveBrowserPage)
+    case motionPlayer(MoveBrowserAction.MotionPlayerLink)
 }
