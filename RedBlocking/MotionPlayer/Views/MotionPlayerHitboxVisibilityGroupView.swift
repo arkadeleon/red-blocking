@@ -99,6 +99,6 @@ struct MotionPlayerHitboxVisibilityGroupView: View {
             }
         }
         .padding(16)
-        .background(.background.opacity(0.72), in: RoundedRectangle(cornerRadius: 22, style: .continuous))
+        .redBlockingInsetPanel()
     }
 }

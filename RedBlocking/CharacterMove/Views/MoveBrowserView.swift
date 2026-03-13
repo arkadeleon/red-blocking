@@ -10,26 +10,18 @@ import SwiftUI
 
 struct MoveBrowserView: View {
     @Environment(\.horizontalSizeClass) private var horizontalSizeClass
-    @Environment(\.dynamicTypeSize) private var dynamicTypeSize
 
     let model: MoveBrowserModel
 
     var body: some View {
-        let rowBackground = Color(uiColor: .systemBackground).opacity(rowBackgroundOpacity)
+        let rowBackground = Color.rbPanel.opacity(rowBackgroundOpacity)
 
-        Group {
-            if dynamicTypeSize.isAccessibilitySize {
-                listContent(rowBackground: rowBackground)
-                    .listStyle(.insetGrouped)
-            } else {
-                listContent(rowBackground: rowBackground)
-                    .listStyle(.plain)
-            }
-        }
-        .scrollContentBackground(.hidden)
-        .contentMargins(.top, 16, for: .scrollContent)
-        .contentMargins(.horizontal, horizontalContentMargin, for: .scrollContent)
-        .navigationTitle(model.node.title)
+        listContent(rowBackground: rowBackground)
+            .listStyle(.insetGrouped)
+            .scrollContentBackground(.hidden)
+            .contentMargins(.top, 16, for: .scrollContent)
+            .contentMargins(.horizontal, horizontalContentMargin, for: .scrollContent)
+            .navigationTitle(model.node.title)
     }
 
     private func listContent(rowBackground: Color) -> some View {
@@ -93,6 +85,7 @@ struct MoveBrowserView: View {
                 }
             }
         }
+        .listRowSeparatorTint(Color.rbPanelBorder.opacity(0.28))
     }
 
     private var rowBackgroundOpacity: Double {

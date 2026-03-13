@@ -29,7 +29,7 @@ struct CharacterListView: View {
                             description: Text(errorMessage)
                         )
                         .padding(24)
-                        .background(.regularMaterial, in: RoundedRectangle(cornerRadius: 24, style: .continuous))
+                        .redBlockingPanel()
                     }
                     .frame(maxWidth: .infinity, maxHeight: .infinity)
                     .padding(24)
@@ -41,7 +41,7 @@ struct CharacterListView: View {
                             description: Text("Characters will appear here once the data is available.")
                         )
                         .padding(24)
-                        .background(.regularMaterial, in: RoundedRectangle(cornerRadius: 24, style: .continuous))
+                        .redBlockingPanel()
                     }
                     .frame(maxWidth: .infinity, maxHeight: .infinity)
                     .padding(24)

@@ -21,7 +21,7 @@ struct CharacterRosterCharacterButton: View {
         Button(action: action) {
             ZStack {
                 Circle()
-                    .fill(Color.black.opacity(0.96))
+                    .fill(Color.rbCoal)
 
                 Circle()
                     .fill(
@@ -47,7 +47,7 @@ struct CharacterRosterCharacterButton: View {
                     .accessibilityHidden(true)
 
                 Circle()
-                    .strokeBorder(Color.black.opacity(0.78), lineWidth: diameter * 0.035)
+                    .strokeBorder(Color.rbPanelBorder.opacity(0.58), lineWidth: diameter * 0.035)
                     .padding(diameter * 0.06)
 
                 if isSelected {
@@ -55,8 +55,8 @@ struct CharacterRosterCharacterButton: View {
                         .strokeBorder(
                             LinearGradient(
                                 colors: [
-                                    Color(red: 1.00, green: 0.96, blue: 0.68),
-                                    Color(red: 1.00, green: 0.58, blue: 0.11)
+                                    Color.rbGold,
+                                    Color.rbAmber
                                 ],
                                 startPoint: .topLeading,
                                 endPoint: .bottomTrailing
@@ -93,7 +93,7 @@ struct CharacterRosterCharacterButton: View {
             .frame(width: diameter, height: diameter)
             .contentShape(Circle())
             .shadow(
-                color: Color.black.opacity(isSelected ? 0.46 : 0.28),
+                color: isSelected ? Color.rbScarlet.opacity(0.28) : Color.black.opacity(0.28),
                 radius: isSelected ? diameter * 0.10 : diameter * 0.05,
                 x: 0,
                 y: isSelected ? diameter * 0.05 : diameter * 0.03

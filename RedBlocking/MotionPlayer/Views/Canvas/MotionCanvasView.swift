@@ -24,7 +24,7 @@ struct MotionCanvasView: View {
             renderer.render(motionFrame: motionFrame, in: &context, size: size)
         }
         .aspectRatio(MotionCanvasRenderer.aspectRatio, contentMode: .fit)
-        .background(Color.black.opacity(0.16), in: RoundedRectangle(cornerRadius: 18, style: .continuous))
+        .background(Color.rbCanvas, in: RoundedRectangle(cornerRadius: 18, style: .continuous))
         .accessibilityHidden(true)
     }
 }

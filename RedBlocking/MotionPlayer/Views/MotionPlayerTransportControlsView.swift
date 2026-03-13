@@ -135,7 +135,7 @@ struct MotionPlayerTransportControlsView: View {
             }
         }
         .padding(20)
-        .background(.regularMaterial, in: RoundedRectangle(cornerRadius: 28, style: .continuous))
+        .redBlockingPanel(cornerRadius: 28)
     }
 
     private func togglePlayback() {

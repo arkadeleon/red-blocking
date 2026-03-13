@@ -14,10 +14,10 @@ struct CharacterRosterBackgroundView: View {
             ZStack {
                 LinearGradient(
                     colors: [
-                        Color(red: 0.98, green: 0.77, blue: 0.07),
-                        Color(red: 0.76, green: 0.31, blue: 0.02),
-                        Color(red: 0.26, green: 0.07, blue: 0.01),
-                        Color(red: 0.10, green: 0.02, blue: 0.00)
+                        Color.rbGold,
+                        Color.rbAmber,
+                        Color.rbEmber,
+                        Color.rbCoal
                     ],
                     startPoint: .topLeading,
                     endPoint: .bottomTrailing
@@ -25,9 +25,9 @@ struct CharacterRosterBackgroundView: View {
 
                 RadialGradient(
                     colors: [
-                        Color(red: 1.00, green: 0.89, blue: 0.39).opacity(0.55),
-                        Color(red: 1.00, green: 0.56, blue: 0.08).opacity(0.22),
-                        .clear
+                        Color.rbGold.opacity(0.55),
+                        Color.rbAmber.opacity(0.22),
+                        Color.clear
                     ],
                     center: .topLeading,
                     startRadius: 0,
@@ -39,8 +39,8 @@ struct CharacterRosterBackgroundView: View {
                     .fill(
                         LinearGradient(
                             colors: [
-                                Color(red: 0.49, green: 0.17, blue: 0.00).opacity(0.0),
-                                Color(red: 0.16, green: 0.03, blue: 0.00).opacity(0.32)
+                                Color.rbScarlet.opacity(0.0),
+                                Color.rbBurgundy.opacity(0.32)
                             ],
                             startPoint: .top,
                             endPoint: .bottom
@@ -51,9 +51,9 @@ struct CharacterRosterBackgroundView: View {
                     .fill(
                         LinearGradient(
                             colors: [
-                                .clear,
+                                Color.clear,
                                 Color.black.opacity(0.18),
-                                Color(red: 0.11, green: 0.02, blue: 0.00).opacity(0.50)
+                                Color.rbCoal.opacity(0.50)
                             ],
                             startPoint: .leading,
                             endPoint: .trailing
@@ -64,7 +64,7 @@ struct CharacterRosterBackgroundView: View {
                     .fill(
                         LinearGradient(
                             colors: [
-                                Color.orange.opacity(0.14),
+                                Color.rbAmber.opacity(0.14),
                                 Color.black.opacity(0.05),
                                 Color.black.opacity(0.0)
                             ],

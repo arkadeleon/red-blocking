@@ -16,6 +16,8 @@ struct RedBlockingApp: App {
         WindowGroup {
             NavigationRootView()
                 .environment(appModel)
+                .preferredColorScheme(.dark)
+                .tint(.rbAmber)
         }
     }
 }

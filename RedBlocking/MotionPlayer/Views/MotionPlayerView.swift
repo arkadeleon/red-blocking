@@ -29,7 +29,7 @@ struct MotionPlayerView: View {
             case .idle, .loading:
                 ProgressView("Loading move preview...")
                     .padding(24)
-                    .background(.regularMaterial, in: RoundedRectangle(cornerRadius: 24, style: .continuous))
+                    .redBlockingPanel()
             case let .failed(message):
                 ContentUnavailableView(
                     "Couldn't Load Preview",
@@ -37,7 +37,7 @@ struct MotionPlayerView: View {
                     description: Text(message)
                 )
                 .padding(24)
-                .background(.regularMaterial, in: RoundedRectangle(cornerRadius: 24, style: .continuous))
+                .redBlockingPanel()
                 .padding(24)
             case let .loaded(motionData):
                 if let playerModel {
@@ -58,7 +58,7 @@ struct MotionPlayerView: View {
                 } else {
                     ProgressView("Setting up preview...")
                         .padding(24)
-                        .background(.regularMaterial, in: RoundedRectangle(cornerRadius: 24, style: .continuous))
+                        .redBlockingPanel()
                 }
             }
         }

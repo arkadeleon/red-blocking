@@ -72,7 +72,7 @@ struct MotionPlayerPreviewCardView: View {
             .foregroundStyle(.secondary)
         }
         .padding(20)
-        .background(.thinMaterial, in: RoundedRectangle(cornerRadius: 28, style: .continuous))
+        .redBlockingPanel(cornerRadius: 28, elevated: true)
         .accessibilityElement(children: .contain)
     }
 

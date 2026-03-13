@@ -17,7 +17,27 @@ struct CharacterDetailBackgroundView: View {
     var body: some View {
         GeometryReader { proxy in
             ZStack(alignment: imageAlignment) {
-                Color(uiColor: .systemGroupedBackground)
+                LinearGradient(
+                    colors: [
+                        Color.rbCoal,
+                        Color.rbBurgundy,
+                        Color.rbCoal
+                    ],
+                    startPoint: .topLeading,
+                    endPoint: .bottomTrailing
+                )
+
+                RadialGradient(
+                    colors: [
+                        Color.rbAmber.opacity(0.26),
+                        Color.rbScarlet.opacity(0.12),
+                        Color.clear
+                    ],
+                    center: .topTrailing,
+                    startRadius: 0,
+                    endRadius: min(proxy.size.width, proxy.size.height) * 0.88
+                )
+                .blendMode(.screen)
 
                 if let selection {
                     LinearGradient(
@@ -55,15 +75,15 @@ struct CharacterDetailBackgroundView: View {
     private var overlayColors: [Color] {
         if horizontalSizeClass == .compact {
             [
-                Color(uiColor: .systemBackground).opacity(0.96),
-                Color(uiColor: .systemBackground).opacity(0.82),
-                Color(uiColor: .systemBackground).opacity(0.52)
+                Color.rbPanel.opacity(0.98),
+                Color.rbPanelElevated.opacity(0.86),
+                Color.rbCoal.opacity(0.58)
             ]
         } else {
             [
-                Color(uiColor: .systemBackground).opacity(0.88),
-                Color(uiColor: .systemBackground).opacity(0.56),
-                Color(uiColor: .systemBackground).opacity(0.18)
+                Color.rbPanel.opacity(0.92),
+                Color.rbPanelElevated.opacity(0.60),
+                Color.rbCoal.opacity(0.18)
             ]
         }
     }

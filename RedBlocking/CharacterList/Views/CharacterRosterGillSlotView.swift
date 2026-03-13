@@ -14,15 +14,15 @@ struct CharacterRosterGillSlotView: View {
     var body: some View {
         ZStack {
             Circle()
-                .fill(Color.black.opacity(0.96))
+                .fill(Color.rbCoal)
 
             Circle()
                 .fill(
                     LinearGradient(
                         colors: [
-                            Color(red: 0.96, green: 0.78, blue: 0.16),
-                            Color(red: 0.92, green: 0.37, blue: 0.10),
-                            Color(red: 0.35, green: 0.54, blue: 0.92)
+                            Color.rbGold,
+                            Color.rbAmber,
+                            Color.rbCobalt
                         ],
                         startPoint: .topLeading,
                         endPoint: .bottomTrailing
@@ -36,7 +36,7 @@ struct CharacterRosterGillSlotView: View {
                 }
 
             Circle()
-                .strokeBorder(Color.black.opacity(0.72), lineWidth: diameter * 0.035)
+                .strokeBorder(Color.rbPanelBorder.opacity(0.62), lineWidth: diameter * 0.035)
                 .padding(diameter * 0.06)
 
             Image(systemName: "lock.fill")
