@@ -37,7 +37,7 @@ struct MoveBrowserView: View {
             if let errorMessage = model.errorMessage {
                 Section {
                     ContentUnavailableView(
-                        "Moves Unavailable",
+                        "Couldn't Load Moves",
                         systemImage: "exclamationmark.triangle",
                         description: Text(errorMessage)
                     )
@@ -46,9 +46,9 @@ struct MoveBrowserView: View {
             } else if model.sections.isEmpty {
                 Section {
                     ContentUnavailableView(
-                        "No Moves",
+                        "No Moves Here",
                         systemImage: "list.bullet.rectangle",
-                        description: Text("This move node does not contain any rows.")
+                        description: Text("This section doesn't contain any moves.")
                     )
                     .listRowBackground(rowBackground)
                 }

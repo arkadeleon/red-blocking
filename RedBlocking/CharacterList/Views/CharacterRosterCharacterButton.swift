@@ -105,7 +105,7 @@ struct CharacterRosterCharacterButton: View {
         .buttonStyle(.plain)
         .frame(minWidth: 44, minHeight: 44)
         .accessibilityLabel(character.title)
-        .accessibilityHint("Show \(character.title) moves")
+        .accessibilityHint("Browse \(character.title)'s moves.")
         .accessibilityAddTraits(isSelected ? [.isSelected] : [])
     }
 

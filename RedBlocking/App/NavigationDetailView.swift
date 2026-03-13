@@ -17,7 +17,7 @@ struct NavigationDetailView: View {
         } else if let errorMessage = appModel.characterList.errorMessage {
             VStack {
                 ContentUnavailableView(
-                    "Characters Unavailable",
+                    "Couldn't Load Characters",
                     systemImage: "exclamationmark.triangle",
                     description: Text(errorMessage)
                 )
@@ -31,7 +31,7 @@ struct NavigationDetailView: View {
                 ContentUnavailableView(
                     "Select a Character",
                     systemImage: "rectangle.split.2x1",
-                    description: Text("Choose a character on the select board to drive the SwiftUI detail stack.")
+                    description: Text("Choose a character to browse their moves.")
                 )
                 .padding(24)
                 .background(.regularMaterial, in: RoundedRectangle(cornerRadius: 24, style: .continuous))

@@ -40,6 +40,6 @@ struct MovePlayerEntryRowView: View {
         }
         .buttonStyle(.plain)
         .accessibilityElement(children: .combine)
-        .accessibilityHint("Opens the motion player.")
+        .accessibilityHint("Opens the move preview.")
     }
 }

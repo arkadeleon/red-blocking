@@ -121,7 +121,7 @@ struct MotionPlayerTransportControlsView: View {
             }
 
             if playerModel.framesPerSecond == 0 {
-                Text("0 FPS freezes the preview on the current frame until the speed is raised again.")
+                Text("0 FPS keeps the preview on the current frame until you increase the speed again.")
                     .font(.footnote)
                     .foregroundStyle(.secondary)
                     .fixedSize(horizontal: false, vertical: true)
@@ -184,7 +184,7 @@ struct MotionPlayerTransportControlsView: View {
                 action: togglePlayback
             )
             .disabled(playerModel.totalFrames == 0 || reduceMotion)
-            .accessibilityHint(reduceMotion ? "Continuous playback is unavailable while Reduce Motion is enabled." : "Toggles motion playback.")
+            .accessibilityHint(reduceMotion ? "Playback is unavailable while Reduce Motion is enabled." : "Plays or pauses the preview.")
             .frame(maxWidth: .infinity, minHeight: 44)
             .buttonStyle(.borderedProminent)
 

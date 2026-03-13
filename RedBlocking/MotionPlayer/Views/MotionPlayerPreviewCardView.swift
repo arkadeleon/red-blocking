@@ -45,7 +45,7 @@ struct MotionPlayerPreviewCardView: View {
                 ContentUnavailableView(
                     "Preview Unavailable",
                     systemImage: "photo",
-                    description: Text("The motion data decoded successfully, but the current sprite frame is missing.")
+                    description: Text("The move loaded, but the current preview image is missing.")
                 )
             }
 
@@ -62,7 +62,7 @@ struct MotionPlayerPreviewCardView: View {
                 }
 
                 if motionData.hasSpriteCountMismatch {
-                    Text("Sprite frame count differs from motion data. Playback uses the best available image for each frame.")
+                    Text("Some preview frames are missing, so the closest available image is used.")
                         .font(.footnote)
                         .foregroundStyle(.secondary)
                         .fixedSize(horizontal: false, vertical: true)

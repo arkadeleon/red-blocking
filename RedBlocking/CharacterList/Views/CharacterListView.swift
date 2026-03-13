@@ -24,7 +24,7 @@ struct CharacterListView: View {
                 if let errorMessage = model.errorMessage {
                     VStack {
                         ContentUnavailableView(
-                            "Characters Unavailable",
+                            "Couldn't Load Characters",
                             systemImage: "exclamationmark.triangle",
                             description: Text(errorMessage)
                         )
@@ -36,9 +36,9 @@ struct CharacterListView: View {
                 } else if model.characters.isEmpty {
                     VStack {
                         ContentUnavailableView(
-                            "No Characters",
+                            "No Characters Yet",
                             systemImage: "person.slash",
-                            description: Text("The select board will populate once character data is available.")
+                            description: Text("Characters will appear here once the data is available.")
                         )
                         .padding(24)
                         .background(.regularMaterial, in: RoundedRectangle(cornerRadius: 24, style: .continuous))

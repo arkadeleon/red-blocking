@@ -82,7 +82,7 @@ final class AppNavigationModel {
             nodeErrors[node.id] = nil
         } catch {
             nodeSections[node.id] = []
-            nodeErrors[node.id] = "Failed to load moves for \(selection.title)."
+            nodeErrors[node.id] = "Couldn't load moves for \(selection.title)."
         }
     }
 }

@@ -16,9 +16,11 @@ enum BundleResourceLoaderError: LocalizedError {
     var errorDescription: String? {
         switch self {
         case let .missingResource(path):
-            "Missing bundled resource at path: \(path)"
+            _ = path
+            return "Required app data is missing."
         case let .unreadableImageSource(path):
-            "Unable to create image source for bundled resource at path: \(path)"
+            _ = path
+            return "A required preview image couldn't be loaded."
         }
     }
 }

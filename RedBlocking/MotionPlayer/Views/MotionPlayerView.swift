@@ -27,12 +27,12 @@ struct MotionPlayerView: View {
 
             switch loadState {
             case .idle, .loading:
-                ProgressView("Preparing motion data...")
+                ProgressView("Loading move preview...")
                     .padding(24)
                     .background(.regularMaterial, in: RoundedRectangle(cornerRadius: 24, style: .continuous))
             case let .failed(message):
                 ContentUnavailableView(
-                    "Motion Unavailable",
+                    "Couldn't Load Preview",
                     systemImage: "exclamationmark.triangle",
                     description: Text(message)
                 )
@@ -56,7 +56,7 @@ struct MotionPlayerView: View {
                     }
                     .onDisappear(perform: playerModel.pause)
                 } else {
-                    ProgressView("Configuring player...")
+                    ProgressView("Setting up preview...")
                         .padding(24)
                         .background(.regularMaterial, in: RoundedRectangle(cornerRadius: 24, style: .continuous))
                 }
@@ -114,7 +114,7 @@ struct MotionPlayerView: View {
         ContentUnavailableView(
             "Preview Unavailable",
             systemImage: "exclamationmark.triangle",
-            description: Text("No bundled motion preview data is available.")
+            description: Text("No preview data is available.")
         )
     }
 }

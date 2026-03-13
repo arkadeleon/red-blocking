@@ -52,7 +52,7 @@ final class CharacterListModel {
             }
         } catch {
             characters = []
-            errorMessage = "Failed to load the character list."
+            errorMessage = "Couldn't load the character list."
             selectedCharacter = nil
         }
     }

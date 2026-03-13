@@ -40,6 +40,6 @@ struct MoveNextRowView: View {
         }
         .buttonStyle(.plain)
         .accessibilityElement(children: .combine)
-        .accessibilityHint("Opens the next move list.")
+        .accessibilityHint("Opens this move category.")
     }
 }

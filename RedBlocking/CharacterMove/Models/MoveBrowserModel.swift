@@ -48,7 +48,7 @@ final class MoveBrowserModel {
             return presented.skillName
         }
 
-        return "Untitled"
+        return "Unknown Move"
     }
 
     func subtitle(for move: CharacterMove) -> String? {

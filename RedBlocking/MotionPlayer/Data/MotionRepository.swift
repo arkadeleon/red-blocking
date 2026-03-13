@@ -16,9 +16,11 @@ enum MotionRepositoryError: LocalizedError {
     var errorDescription: String? {
         switch self {
         case let .emptyMotionData(path):
-            "Motion data is empty at path: \(path)"
+            _ = path
+            return "No preview data is available for this move."
         case let .emptySpriteSheet(path):
-            "Sprite sheet has no decodable frames at path: \(path)"
+            _ = path
+            return "No preview images are available for this move."
         }
     }
 }
