@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct CharacterProfile: Decodable, Equatable {
+struct CharacterProfile: Decodable, Equatable, Hashable {
     let id: String
     let displayName: String
     let introduction: CharacterIntroduction
@@ -46,7 +46,7 @@ extension CharacterProfile {
     }
 }
 
-struct CharacterIntroduction: Decodable, Equatable {
+struct CharacterIntroduction: Decodable, Equatable, Hashable {
     let displayTitle: String
     let body: String
 
@@ -72,13 +72,13 @@ extension CharacterIntroduction {
     }
 }
 
-struct MoveGroup: Decodable, Equatable {
+struct MoveGroup: Decodable, Equatable, Hashable {
     let id: MoveGroupID
     let displayTitle: String
     let entries: [MoveEntry]
 }
 
-enum MoveGroupID: String, CaseIterable, Decodable, Equatable {
+enum MoveGroupID: String, CaseIterable, Decodable, Equatable, Hashable {
     case airNormals = "air_normals"
     case groundNormals = "ground_normals"
     case commandNormals = "command_normals"
@@ -86,7 +86,7 @@ enum MoveGroupID: String, CaseIterable, Decodable, Equatable {
     case superArts = "super_arts"
 }
 
-struct MoveEntry: Decodable, Equatable {
+struct MoveEntry: Decodable, Equatable, Hashable {
     let id: String
     let displayName: String
     let children: [MoveEntry]?
@@ -129,7 +129,7 @@ extension MoveEntry {
     }
 }
 
-struct MoveDetail: Decodable, Equatable {
+struct MoveDetail: Decodable, Equatable, Hashable {
     let displayName: String
     let command: String?
     let superCancel: String?
@@ -201,7 +201,7 @@ extension MoveDetail {
     }
 }
 
-struct MoveMedia: Decodable, Equatable {
+struct MoveMedia: Decodable, Equatable, Hashable {
     let kind: Kind
     let displayLabel: String
     let skillName: String
@@ -210,18 +210,18 @@ struct MoveMedia: Decodable, Equatable {
 }
 
 extension MoveMedia {
-    enum Kind: String, Decodable, Equatable {
+    enum Kind: String, Decodable, Equatable, Hashable {
         case motionPlayer = "motion_player"
     }
 }
 
-struct MoveLabeledValue: Decodable, Equatable {
+struct MoveLabeledValue: Decodable, Equatable, Hashable {
     let id: String
     let label: String
     let value: String
 }
 
-struct MoveNoteGroup: Decodable, Equatable {
+struct MoveNoteGroup: Decodable, Equatable, Hashable {
     let id: String
     let displayTitle: String
     let entries: [String]

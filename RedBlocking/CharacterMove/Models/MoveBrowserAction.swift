@@ -8,15 +8,15 @@
 
 indirect enum MoveBrowserAction: Hashable {
     case none
-    case openPage(MoveBrowserPage)
+    case openNode(MoveNode)
     case openMotionPlayer(MotionPlayerLink)
 
-    var page: MoveBrowserPage? {
-        guard case let .openPage(page) = self else {
+    var node: MoveNode? {
+        guard case let .openNode(node) = self else {
             return nil
         }
 
-        return page
+        return node
     }
 
     var motionPlayerLink: MotionPlayerLink? {

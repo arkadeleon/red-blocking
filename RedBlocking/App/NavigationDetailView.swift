@@ -12,8 +12,8 @@ struct NavigationDetailView: View {
     @Environment(AppModel.self) private var appModel
 
     var body: some View {
-        if let rootPage = appModel.navigation.currentRootPage {
-            MoveBrowserPageView(page: rootPage)
+        if let rootNode = appModel.navigation.currentRootNode {
+            MoveBrowserPageView(node: rootNode)
         } else {
             ZStack {
                 CharacterDetailBackgroundView(selection: appModel.navigation.selectedCharacter)

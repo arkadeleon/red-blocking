@@ -14,14 +14,14 @@ struct MoveBrowserRow: Hashable, Identifiable {
     let kind: Kind
     let action: MoveBrowserAction
 
-    static func next(id: String, title: String, page: MoveBrowserPage) -> MoveBrowserRow {
+    static func next(id: String, title: String, node: MoveNode) -> MoveBrowserRow {
         MoveBrowserRow(
             id: id,
             title: title,
             subtitle: nil,
             detail: nil,
             kind: .next,
-            action: .openPage(page)
+            action: .openNode(node)
         )
     }
 

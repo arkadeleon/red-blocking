@@ -23,21 +23,25 @@ enum PreviewAppModel {
         return appModel
     }
 
-    static func moveBrowser() -> (appModel: AppModel, page: MoveBrowserPage) {
+    static func moveBrowser() -> (appModel: AppModel, node: MoveNode) {
         let appModel = rootNavigation()
-        let page = appModel.navigation.currentRootPage ?? MoveBrowserPage(
-            id: "preview:root",
-            navigationTitle: "Preview",
-            sections: []
-        )
-        return (appModel, page)
+        guard let node = appModel.navigation.currentRootNode else {
+            preconditionFailure("Couldn't build a move browser preview without a root node.")
+        }
+
+        return (appModel, node)
     }
 
     static func motionPlayer() -> MotionPlayerPreviewConfiguration? {
         let appModel = rootNavigation()
+        let browserProjector = MoveBrowserProjector()
+
         guard
-            let rootPage = appModel.navigation.currentRootPage,
-            let playableMove = firstPlayableMove(in: rootPage)
+            let rootNode = appModel.navigation.currentRootNode,
+            let playableMove = firstPlayableMove(
+                in: browserProjector.project(rootNode),
+                browserProjector: browserProjector
+            )
         else {
             return nil
         }
@@ -72,14 +76,21 @@ enum PreviewAppModel {
         appModel.characterList.selectedCharacter = selection
     }
 
-    private static func firstPlayableMove(in page: MoveBrowserPage) -> MoveBrowserAction.MotionPlayerLink? {
+    private static func firstPlayableMove(
+        in page: MoveBrowserPage,
+        browserProjector: MoveBrowserProjector
+    ) -> MoveBrowserAction.MotionPlayerLink? {
         for section in page.sections {
             for row in section.rows {
                 if let link = row.action.motionPlayerLink {
                     return link
                 }
 
-                if let nextPage = row.action.page, let nestedMove = firstPlayableMove(in: nextPage) {
+                if let nextNode = row.action.node,
+                   let nestedMove = firstPlayableMove(
+                       in: browserProjector.project(nextNode),
+                       browserProjector: browserProjector
+                   ) {
                     return nestedMove
                 }
             }

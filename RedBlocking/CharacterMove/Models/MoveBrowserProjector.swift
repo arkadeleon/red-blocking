@@ -9,6 +9,15 @@
 import Foundation
 
 struct MoveBrowserProjector {
+    func project(_ node: MoveNode) -> MoveBrowserPage {
+        switch node {
+        case let .profile(profile):
+            return project(profile: profile)
+        case let .entry(entry):
+            return projectPage(for: entry)
+        }
+    }
+
     func project(profile: CharacterProfile) -> MoveBrowserPage {
         MoveBrowserPage(
             id: "profile:\(profile.id)",
@@ -46,7 +55,7 @@ struct MoveBrowserProjector {
         .next(
             id: entry.id,
             title: entry.displayName,
-            page: projectPage(for: entry)
+            node: .entry(entry)
         )
     }
 

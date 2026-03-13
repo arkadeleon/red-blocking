@@ -13,8 +13,8 @@ struct MoveDestinationView: View {
 
     var body: some View {
         switch destination {
-        case let .movePage(page):
-            MoveBrowserPageView(page: page)
+        case let .moveNode(node):
+            MoveBrowserPageView(node: node)
         case let .motionPlayer(link):
             MotionPlayerView(
                 title: link.title,

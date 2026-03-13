@@ -11,11 +11,11 @@ import SwiftUI
 struct MoveBrowserPageView: View {
     @Environment(AppModel.self) private var appModel
 
-    let page: MoveBrowserPage
+    let node: MoveNode
     let errorMessage: String?
 
-    init(page: MoveBrowserPage, errorMessage: String? = nil) {
-        self.page = page
+    init(node: MoveNode, errorMessage: String? = nil) {
+        self.node = node
         self.errorMessage = errorMessage
     }
 
@@ -25,7 +25,7 @@ struct MoveBrowserPageView: View {
 
             MoveBrowserView(
                 model: MoveBrowserModel(
-                    page: page,
+                    node: node,
                     errorMessage: errorMessage,
                     navigation: appModel.navigation
                 )
@@ -37,6 +37,6 @@ struct MoveBrowserPageView: View {
 #Preview("Move Browser") {
     let preview = PreviewAppModel.moveBrowser()
 
-    return MoveBrowserPageView(page: preview.page)
+    return MoveBrowserPageView(node: preview.node)
         .environment(preview.appModel)
 }

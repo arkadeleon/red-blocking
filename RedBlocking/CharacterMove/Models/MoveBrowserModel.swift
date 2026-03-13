@@ -11,25 +11,28 @@ import Observation
 @MainActor
 @Observable
 final class MoveBrowserModel {
+    let node: MoveNode
     let page: MoveBrowserPage
     let errorMessage: String?
 
     private let navigation: AppNavigationModel
 
     init(
-        page: MoveBrowserPage,
+        node: MoveNode,
         errorMessage: String? = nil,
-        navigation: AppNavigationModel
+        navigation: AppNavigationModel,
+        browserProjector: MoveBrowserProjector = MoveBrowserProjector()
     ) {
-        self.page = page
+        self.node = node
+        page = browserProjector.project(node)
         self.errorMessage = errorMessage
         self.navigation = navigation
     }
 
     func open(_ row: MoveBrowserRow) {
         switch row.action {
-        case let .openPage(page):
-            navigation.pushPage(page)
+        case let .openNode(node):
+            navigation.pushNode(node)
         case let .openMotionPlayer(link):
             navigation.pushMotionPlayer(link)
         case .none:

@@ -6,7 +6,16 @@
 //  Copyright © 2026 Leon & Vane. All rights reserved.
 //
 
-struct MoveNode: Hashable, Identifiable {
-    let id: String
-    let title: String
+enum MoveNode: Hashable, Identifiable {
+    case profile(CharacterProfile)
+    case entry(MoveEntry)
+
+    var id: String {
+        switch self {
+        case let .profile(profile):
+            return "profile:\(profile.id)"
+        case let .entry(entry):
+            return "entry:\(entry.id)"
+        }
+    }
 }

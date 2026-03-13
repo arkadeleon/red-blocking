@@ -13,9 +13,8 @@ import Observation
 @Observable
 final class AppNavigationModel {
     private let moveRepository: MoveRepository
-    private let browserProjector = MoveBrowserProjector()
 
-    private(set) var currentRootPage: MoveBrowserPage?
+    private(set) var currentRootNode: MoveNode?
     private(set) var currentProfile: CharacterProfile?
     private(set) var currentProfileErrorMessage: String?
     private(set) var selectedCharacter: CharacterSelection? {
@@ -25,7 +24,7 @@ final class AppNavigationModel {
             }
 
             detailPath.removeAll()
-            currentRootPage = nil
+            currentRootNode = nil
             currentProfile = nil
             currentProfileErrorMessage = nil
 
@@ -43,8 +42,8 @@ final class AppNavigationModel {
         self.moveRepository = moveRepository
     }
 
-    func pushPage(_ page: MoveBrowserPage) {
-        detailPath.append(.movePage(page))
+    func pushNode(_ node: MoveNode) {
+        detailPath.append(.moveNode(node))
     }
 
     func pushMotionPlayer(_ link: MoveBrowserAction.MotionPlayerLink) {
@@ -59,11 +58,11 @@ final class AppNavigationModel {
         do {
             let profile = try moveRepository.loadProfile(resourceName: selection.moveResourceName)
             currentProfile = profile
-            currentRootPage = browserProjector.project(profile: profile)
+            currentRootNode = .profile(profile)
             currentProfileErrorMessage = nil
         } catch {
             currentProfile = nil
-            currentRootPage = nil
+            currentRootNode = nil
             currentProfileErrorMessage = error.localizedDescription
         }
     }
