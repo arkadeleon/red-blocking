@@ -19,14 +19,13 @@
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
 				Info.plist,
-				Resources/PropertyLists,
 			);
 			target = EEE27ACA176C1347008A41AB /* RedBlocking */;
 		};
 /* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
-		35F489F72F62A29700D65B56 /* RedBlocking */ = {isa = PBXFileSystemSynchronizedRootGroup; exceptions = (35F48A322F62A29700D65B56 /* PBXFileSystemSynchronizedBuildFileExceptionSet */, ); explicitFileTypes = {}; explicitFolders = (Resources/CharacterData, Resources/FrameData, Resources/PropertyLists, ); path = RedBlocking; sourceTree = "<group>"; };
+		35F489F72F62A29700D65B56 /* RedBlocking */ = {isa = PBXFileSystemSynchronizedRootGroup; exceptions = (35F48A322F62A29700D65B56 /* PBXFileSystemSynchronizedBuildFileExceptionSet */, ); explicitFileTypes = {}; explicitFolders = (Resources/CharacterData, Resources/FrameData, ); path = RedBlocking; sourceTree = "<group>"; };
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
