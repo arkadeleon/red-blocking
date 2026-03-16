@@ -12,6 +12,7 @@
 
 /* Begin PBXFileReference section */
 		EEE27ACB176C1347008A41AB /* RedBlocking.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RedBlocking.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		35BB0002ABCDEF0100000002 /* RedBlockingTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RedBlockingTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
@@ -26,6 +27,7 @@
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		35F489F72F62A29700D65B56 /* RedBlocking */ = {isa = PBXFileSystemSynchronizedRootGroup; exceptions = (35F48A322F62A29700D65B56 /* PBXFileSystemSynchronizedBuildFileExceptionSet */, ); explicitFileTypes = {}; explicitFolders = (Resources/CharacterData, Resources/FrameData, ); path = RedBlocking; sourceTree = "<group>"; };
+		35BB0003ABCDEF0100000003 /* RedBlockingTests */ = {isa = PBXFileSystemSynchronizedRootGroup; path = RedBlockingTests; sourceTree = "<group>"; };
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,6 +39,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		35BB0006ABCDEF0100000006 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -44,6 +53,7 @@
 			isa = PBXGroup;
 			children = (
 				35F489F72F62A29700D65B56 /* RedBlocking */,
+				35BB0003ABCDEF0100000003 /* RedBlockingTests */,
 				EEE27ACC176C1347008A41AB /* Products */,
 			);
 			sourceTree = "<group>";
@@ -52,6 +62,7 @@
 			isa = PBXGroup;
 			children = (
 				EEE27ACB176C1347008A41AB /* RedBlocking.app */,
+				35BB0002ABCDEF0100000002 /* RedBlockingTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -82,6 +93,26 @@
 			productReference = EEE27ACB176C1347008A41AB /* RedBlocking.app */;
 			productType = "com.apple.product-type.application";
 		};
+		35BB0004ABCDEF0100000004 /* RedBlockingTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 35BB0009ABCDEF0100000009 /* Build configuration list for PBXNativeTarget "RedBlockingTests" */;
+			buildPhases = (
+				35BB0005ABCDEF0100000005 /* Sources */,
+				35BB0006ABCDEF0100000006 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				35BB000AABCDEF0100000010 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				35BB0003ABCDEF0100000003 /* RedBlockingTests */,
+			);
+			name = RedBlockingTests;
+			productName = RedBlockingTests;
+			productReference = 35BB0002ABCDEF0100000002 /* RedBlockingTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -104,6 +135,10 @@
 							};
 						};
 					};
+					35BB0004ABCDEF0100000004 = {
+						ProvisioningStyle = Automatic;
+						TestTargetID = EEE27ACA176C1347008A41AB;
+					};
 				};
 			};
 			buildConfigurationList = EEE27AC6176C1347008A41AB /* Build configuration list for PBXProject "RedBlocking" */;
@@ -123,9 +158,28 @@
 			projectRoot = "";
 			targets = (
 				EEE27ACA176C1347008A41AB /* RedBlocking */,
+				35BB0004ABCDEF0100000004 /* RedBlockingTests */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXContainerItemProxy section */
+		35BB000BABCDEF0100000011 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EEE27AC3176C1347008A41AB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EEE27ACA176C1347008A41AB;
+			remoteInfo = RedBlocking;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXTargetDependency section */
+		35BB000AABCDEF0100000010 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EEE27ACA176C1347008A41AB /* RedBlocking */;
+			targetProxy = 35BB000BABCDEF0100000011 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXResourcesBuildPhase section */
 		EEE27AC9176C1347008A41AB /* Resources */ = {
@@ -139,6 +193,13 @@
 
 /* Begin PBXSourcesBuildPhase section */
 		EEE27AC7176C1347008A41AB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		35BB0005ABCDEF0100000005 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -307,6 +368,47 @@
 			};
 			name = Release;
 		};
+		35BB0007ABCDEF0100000007 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
+				DEVELOPMENT_TEAM = GG76KD534U;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.github.arkadeleon.red-blocking-tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 6.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RedBlocking.app/RedBlocking";
+			};
+			name = Debug;
+		};
+		35BB0008ABCDEF0100000008 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
+				DEVELOPMENT_TEAM = GG76KD534U;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.github.arkadeleon.red-blocking-tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 6.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RedBlocking.app/RedBlocking";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -324,6 +426,15 @@
 			buildConfigurations = (
 				EEE27AE9176C1347008A41AB /* Debug */,
 				EEE27AEA176C1347008A41AB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		35BB0009ABCDEF0100000009 /* Build configuration list for PBXNativeTarget "RedBlockingTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				35BB0007ABCDEF0100000007 /* Debug */,
+				35BB0008ABCDEF0100000008 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
