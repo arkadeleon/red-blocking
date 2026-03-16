@@ -323,6 +323,10 @@
 - 清理旧适配逻辑和无用模型。
 - 更新相关文档，记录最终运行方式和回归资产。
 
+### Deliverable
+
+- 维护 [`CHARACTER_YAML_STRUCTURED_RUNTIME.md`](./CHARACTER_YAML_STRUCTURED_RUNTIME.md) 记录最终结构化运行链路与保留的回归资产。
+
 ### Done When
 
 - 运行时已不依赖旧角色 YAML 结构。

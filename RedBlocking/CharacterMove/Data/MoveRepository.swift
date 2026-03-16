@@ -29,15 +29,6 @@ struct MoveRepository {
         resourceLoader = BundleResourceLoader(bundle: bundle, rootURL: resourceRootURL)
     }
 
-    func loadSections(for character: Character) throws -> [CharacterMove.Section] {
-        try loadSections(resourceName: character.next)
-    }
-
-    func loadSections(resourceName: String) throws -> [CharacterMove.Section] {
-        let data = try loadMoveData(resourceName: resourceName)
-        return try decoder.decode([CharacterMove.Section].self, from: data)
-    }
-
     func loadProfile(for character: Character) throws -> CharacterProfile {
         try loadProfile(resourceName: character.next)
     }

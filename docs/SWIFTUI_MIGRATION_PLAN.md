@@ -48,7 +48,7 @@
   - `CharacterRepository`
   - `MoveRepository`
   - `MotionRepository`
-- `Character`、`CharacterMove.Section`、`CharacterMove`、`CharacterMove.Frames`、`MotionInfo` 整理到独立文件，每个类型单独成文件。
+- `Character`、`CharacterProfile`、`MoveGroup`、`MoveEntry`、`MoveDetail`、`MoveMedia`、`MotionInfo` 整理到独立文件。
 - 为 SwiftUI 列表/导航补齐稳定标识：
   - 角色模型 conform `Identifiable`
   - 招式节点建立稳定 id（基于 character + 路径）
@@ -112,7 +112,8 @@
   - `PlaybackSettings`
 - 新增 repository/service 接口：
   - `CharacterRepository.loadCharacters() async throws -> [Character]`
-  - `MoveRepository.loadSections(for character: Character) async throws -> [CharacterMove.Section]`
+  - `MoveRepository.loadProfile(for character: Character) throws -> CharacterProfile`
+  - `MoveRepository.loadBrowserPage(for character: Character) throws -> MoveBrowserPage`
   - `MotionRepository.loadMotion(characterCode: String, skillCode: String) async throws -> MotionInfo`
 - `MotionInfo` 调整为“解码数据”和“渲染资源”分离的结构；视图不直接持有 UIKit 图像状态。
 - 删除旧入口/导航接口：

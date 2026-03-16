@@ -10,9 +10,19 @@
 		3583FA662DBDF97300778995 /* Yams in Frameworks */ = {isa = PBXBuildFile; productRef = 3583FA652DBDF97300778995 /* Yams */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		35BB000BABCDEF0100000011 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EEE27AC3176C1347008A41AB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EEE27ACA176C1347008A41AB;
+			remoteInfo = RedBlocking;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
-		EEE27ACB176C1347008A41AB /* RedBlocking.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RedBlocking.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		35BB0002ABCDEF0100000002 /* RedBlockingTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RedBlockingTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		EEE27ACB176C1347008A41AB /* RedBlocking.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RedBlocking.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
@@ -26,23 +36,23 @@
 /* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
+		35BB0003ABCDEF0100000003 /* RedBlockingTests */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = RedBlockingTests; sourceTree = "<group>"; };
 		35F489F72F62A29700D65B56 /* RedBlocking */ = {isa = PBXFileSystemSynchronizedRootGroup; exceptions = (35F48A322F62A29700D65B56 /* PBXFileSystemSynchronizedBuildFileExceptionSet */, ); explicitFileTypes = {}; explicitFolders = (Resources/CharacterData, Resources/FrameData, ); path = RedBlocking; sourceTree = "<group>"; };
-		35BB0003ABCDEF0100000003 /* RedBlockingTests */ = {isa = PBXFileSystemSynchronizedRootGroup; path = RedBlockingTests; sourceTree = "<group>"; };
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		35BB0006ABCDEF0100000006 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		EEE27AC8176C1347008A41AB /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				3583FA662DBDF97300778995 /* Yams in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		35BB0006ABCDEF0100000006 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -70,6 +80,26 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		35BB0004ABCDEF0100000004 /* RedBlockingTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 35BB0009ABCDEF0100000009 /* Build configuration list for PBXNativeTarget "RedBlockingTests" */;
+			buildPhases = (
+				35BB0005ABCDEF0100000005 /* Sources */,
+				35BB0006ABCDEF0100000006 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				35BB000AABCDEF0100000010 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				35BB0003ABCDEF0100000003 /* RedBlockingTests */,
+			);
+			name = RedBlockingTests;
+			productName = RedBlockingTests;
+			productReference = 35BB0002ABCDEF0100000002 /* RedBlockingTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		EEE27ACA176C1347008A41AB /* RedBlocking */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = EEE27AE8176C1347008A41AB /* Build configuration list for PBXNativeTarget "RedBlocking" */;
@@ -93,26 +123,6 @@
 			productReference = EEE27ACB176C1347008A41AB /* RedBlocking.app */;
 			productType = "com.apple.product-type.application";
 		};
-		35BB0004ABCDEF0100000004 /* RedBlockingTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 35BB0009ABCDEF0100000009 /* Build configuration list for PBXNativeTarget "RedBlockingTests" */;
-			buildPhases = (
-				35BB0005ABCDEF0100000005 /* Sources */,
-				35BB0006ABCDEF0100000006 /* Frameworks */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				35BB000AABCDEF0100000010 /* PBXTargetDependency */,
-			);
-			fileSystemSynchronizedGroups = (
-				35BB0003ABCDEF0100000003 /* RedBlockingTests */,
-			);
-			name = RedBlockingTests;
-			productName = RedBlockingTests;
-			productReference = 35BB0002ABCDEF0100000002 /* RedBlockingTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -123,6 +133,10 @@
 				LastUpgradeCheck = 1520;
 				ORGANIZATIONNAME = "Leon & Vane";
 				TargetAttributes = {
+					35BB0004ABCDEF0100000004 = {
+						ProvisioningStyle = Automatic;
+						TestTargetID = EEE27ACA176C1347008A41AB;
+					};
 					EEE27ACA176C1347008A41AB = {
 						LastSwiftMigration = 1120;
 						ProvisioningStyle = Automatic;
@@ -134,10 +148,6 @@
 								enabled = 0;
 							};
 						};
-					};
-					35BB0004ABCDEF0100000004 = {
-						ProvisioningStyle = Automatic;
-						TestTargetID = EEE27ACA176C1347008A41AB;
 					};
 				};
 			};
@@ -163,24 +173,6 @@
 		};
 /* End PBXProject section */
 
-/* Begin PBXContainerItemProxy section */
-		35BB000BABCDEF0100000011 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = EEE27AC3176C1347008A41AB /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = EEE27ACA176C1347008A41AB;
-			remoteInfo = RedBlocking;
-		};
-/* End PBXContainerItemProxy section */
-
-/* Begin PBXTargetDependency section */
-		35BB000AABCDEF0100000010 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = EEE27ACA176C1347008A41AB /* RedBlocking */;
-			targetProxy = 35BB000BABCDEF0100000011 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
-
 /* Begin PBXResourcesBuildPhase section */
 		EEE27AC9176C1347008A41AB /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
@@ -192,14 +184,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		EEE27AC7176C1347008A41AB /* Sources */ = {
+		35BB0005ABCDEF0100000005 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		35BB0005ABCDEF0100000005 /* Sources */ = {
+		EEE27AC7176C1347008A41AB /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -208,7 +200,56 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		35BB000AABCDEF0100000010 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EEE27ACA176C1347008A41AB /* RedBlocking */;
+			targetProxy = 35BB000BABCDEF0100000011 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
+		35BB0007ABCDEF0100000007 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
+				DEVELOPMENT_TEAM = GG76KD534U;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.github.arkadeleon.red-blocking-tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 6.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RedBlocking.app/RedBlocking";
+			};
+			name = Debug;
+		};
+		35BB0008ABCDEF0100000008 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
+				DEVELOPMENT_TEAM = GG76KD534U;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.github.arkadeleon.red-blocking-tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 6.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RedBlocking.app/RedBlocking";
+			};
+			name = Release;
+		};
 		EEE27AE6176C1347008A41AB /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -368,50 +409,18 @@
 			};
 			name = Release;
 		};
-		35BB0007ABCDEF0100000007 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CLANG_ENABLE_MODULES = YES;
-				DEVELOPMENT_TEAM = GG76KD534U;
-				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.github.arkadeleon.red-blocking-tests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 6.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RedBlocking.app/RedBlocking";
-			};
-			name = Debug;
-		};
-		35BB0008ABCDEF0100000008 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CLANG_ENABLE_MODULES = YES;
-				DEVELOPMENT_TEAM = GG76KD534U;
-				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.github.arkadeleon.red-blocking-tests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 6.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RedBlocking.app/RedBlocking";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		35BB0009ABCDEF0100000009 /* Build configuration list for PBXNativeTarget "RedBlockingTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				35BB0007ABCDEF0100000007 /* Debug */,
+				35BB0008ABCDEF0100000008 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		EEE27AC6176C1347008A41AB /* Build configuration list for PBXProject "RedBlocking" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -426,15 +435,6 @@
 			buildConfigurations = (
 				EEE27AE9176C1347008A41AB /* Debug */,
 				EEE27AEA176C1347008A41AB /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		35BB0009ABCDEF0100000009 /* Build configuration list for PBXNativeTarget "RedBlockingTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				35BB0007ABCDEF0100000007 /* Debug */,
-				35BB0008ABCDEF0100000008 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
