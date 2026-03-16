@@ -99,29 +99,35 @@ struct MoveBrowserProjector {
         var sections: [MoveBrowserSection] = []
         var primaryRows = projectPrimaryRows(detail, pageID: pageID)
 
-        if !detail.meterGain.isEmpty {
-            sections.append(
-                projectLabeledValueSection(
-                    title: "ゲージ増加量",
-                    values: detail.meterGain,
-                    pageID: pageID,
-                    sectionID: "meter_gain"
+        if let meterGain = detail.meterGain {
+            let values = meterGain.asLabeledValues
+            if !values.isEmpty {
+                sections.append(
+                    projectLabeledValueSection(
+                        title: "ゲージ増加量",
+                        values: values,
+                        pageID: pageID,
+                        sectionID: "meter_gain"
+                    )
                 )
-            )
+            }
         }
 
-        if !detail.frameAdvantage.isEmpty {
-            sections.append(
-                projectLabeledValueSection(
-                    title: "ヒット&ガード硬直時間差",
-                    values: detail.frameAdvantage,
-                    pageID: pageID,
-                    sectionID: "frame_advantage"
+        if let frameAdvantage = detail.frameAdvantage {
+            let values = frameAdvantage.asLabeledValues
+            if !values.isEmpty {
+                sections.append(
+                    projectLabeledValueSection(
+                        title: "ヒット&ガード硬直時間差",
+                        values: values,
+                        pageID: pageID,
+                        sectionID: "frame_advantage"
+                    )
                 )
-            )
+            }
         }
 
-        let statSections = projectStatSections(detail.stats, pageID: pageID)
+        let statSections = detail.stats.map { projectStatSections($0, pageID: pageID) } ?? []
         if let firstStatSection = statSections.first, firstStatSection.title == nil {
             primaryRows.append(contentsOf: firstStatSection.rows)
             sections.append(contentsOf: statSections.dropFirst())
@@ -217,28 +223,28 @@ struct MoveBrowserProjector {
     }
 
     private func projectStatSections(
-        _ stats: [MoveLabeledValue],
+        _ stats: LabeledValueMap,
         pageID: String
     ) -> [MoveBrowserSection] {
         var fragments: [StatSectionFragment] = []
 
-        for labeledValue in stats {
-            let rowID = "\(pageID):stats:\(labeledValue.id)"
+        for (label, value) in stats.pairs {
+            let rowID = "\(pageID):stats:\(label)"
             let row: MoveBrowserRow
             let title: String?
 
-            if let splitLabel = splitStatLabel(labeledValue.label) {
+            if let splitLabel = splitStatLabel(label) {
                 row = .detail(
                     id: rowID,
                     title: splitLabel.rowTitle,
-                    value: labeledValue.value
+                    value: value
                 )
                 title = splitLabel.sectionTitle
             } else {
                 row = .detail(
                     id: rowID,
-                    title: labeledValue.label,
-                    value: labeledValue.value
+                    title: label,
+                    value: value
                 )
                 title = nil
             }
@@ -319,5 +325,29 @@ private extension MoveBrowserProjector {
     struct StatSectionFragment {
         let title: String?
         var rows: [MoveBrowserRow]
+    }
+}
+
+private extension MeterGain {
+    var asLabeledValues: [MoveLabeledValue] {
+        var result: [MoveLabeledValue] = []
+        if let v = whiff        { result.append(.init(id: "whiff",        label: "空振り",    value: v)) }
+        if let v = `guard`      { result.append(.init(id: "guard",        label: "ガード",    value: v)) }
+        if let v = hit          { result.append(.init(id: "hit",          label: "ヒット",    value: v)) }
+        if let v = bl           { result.append(.init(id: "bl",           label: "BL",        value: v)) }
+        if let v = throwSuccess { result.append(.init(id: "throwSuccess", label: "投げ成功時", value: v)) }
+        if let v = onWhiff      { result.append(.init(id: "onWhiff",      label: "空振り時",  value: v)) }
+        return result
+    }
+}
+
+private extension FrameAdvantage {
+    var asLabeledValues: [MoveLabeledValue] {
+        var result: [MoveLabeledValue] = []
+        if let v = `guard`      { result.append(.init(id: "guard",        label: "ガード",  value: v)) }
+        if let v = hit          { result.append(.init(id: "hit",          label: "ヒット",  value: v)) }
+        if let v = standingHit  { result.append(.init(id: "standingHit",  label: "立ヒット", value: v)) }
+        if let v = crouchingHit { result.append(.init(id: "crouchingHit", label: "屈ヒット", value: v)) }
+        return result
     }
 }

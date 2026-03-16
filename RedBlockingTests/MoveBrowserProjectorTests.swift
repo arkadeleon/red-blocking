@@ -394,9 +394,7 @@ private enum Fixtures {
             detail:
               displayName: "技"
               stats:
-                - id: stat_1
-                  label: "通常 ヒット"
-                  value: "+3"
+                "通常 ヒット": "+3"
     """
 
     // Stats entry with a label without a space — should not be split.
@@ -428,8 +426,6 @@ private enum Fixtures {
             detail:
               displayName: "技"
               stats:
-                - id: stat_1
-                  label: "スタン"
-                  value: "200"
+                スタン: "200"
     """
 }

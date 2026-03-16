@@ -25,18 +25,10 @@ moveGroups:
         stun: '5'
         stunReduction: '3'
         meterGain:
-        - id: item_42cecce534
-          label: 空振り
-          value: '0'
-        - id: item_5d6ebc9016
-          label: ガード
-          value: '1'
-        - id: item_f5c94c17e2
-          label: ヒット
-          value: '2'
-        - id: bl
-          label: BL
-          value: '4'
+          whiff: '0'
+          guard: '1'
+          hit: '2'
+          bl: '4'
         media:
           kind: motion_player
           displayLabel: モーション
@@ -53,18 +45,10 @@ moveGroups:
         stun: '7'
         stunReduction: '3'
         meterGain:
-        - id: item_42cecce534
-          label: 空振り
-          value: '0'
-        - id: item_5d6ebc9016
-          label: ガード
-          value: '1'
-        - id: item_f5c94c17e2
-          label: ヒット
-          value: '2'
-        - id: bl
-          label: BL
-          value: '4'
+          whiff: '0'
+          guard: '1'
+          hit: '2'
+          bl: '4'
         noteGroups:
         - id: item_cf8aa5b927
           displayTitle: 補足
@@ -89,18 +73,10 @@ moveGroups:
         stun: '9'
         stunReduction: '3'
         meterGain:
-        - id: item_42cecce534
-          label: 空振り
-          value: '1'
-        - id: item_5d6ebc9016
-          label: ガード
-          value: '5'
-        - id: item_f5c94c17e2
-          label: ヒット
-          value: '9'
-        - id: bl
-          label: BL
-          value: '4'
+          whiff: '1'
+          guard: '5'
+          hit: '9'
+          bl: '4'
         media:
           kind: motion_player
           displayLabel: モーション
@@ -117,18 +93,10 @@ moveGroups:
         stun: '11'
         stunReduction: '3'
         meterGain:
-        - id: item_42cecce534
-          label: 空振り
-          value: '1'
-        - id: item_5d6ebc9016
-          label: ガード
-          value: '5'
-        - id: item_f5c94c17e2
-          label: ヒット
-          value: '9'
-        - id: bl
-          label: BL
-          value: '4'
+          whiff: '1'
+          guard: '5'
+          hit: '9'
+          bl: '4'
         media:
           kind: motion_player
           displayLabel: モーション
@@ -148,18 +116,10 @@ moveGroups:
         stun: '13'
         stunReduction: '3'
         meterGain:
-        - id: item_42cecce534
-          label: 空振り
-          value: '2'
-        - id: item_5d6ebc9016
-          label: ガード
-          value: '7'
-        - id: item_f5c94c17e2
-          label: ヒット
-          value: '15'
-        - id: bl
-          label: BL
-          value: '4'
+          whiff: '2'
+          guard: '7'
+          hit: '15'
+          bl: '4'
         media:
           kind: motion_player
           displayLabel: モーション
@@ -176,18 +136,10 @@ moveGroups:
         stun: 18(9+9)
         stunReduction: '3'
         meterGain:
-        - id: item_42cecce534
-          label: 空振り
-          value: '2'
-        - id: item_5d6ebc9016
-          label: ガード
-          value: 8(7+1)
-        - id: item_f5c94c17e2
-          label: ヒット
-          value: 17(15+2)
-        - id: bl
-          label: BL
-          value: 8(4+4)
+          whiff: '2'
+          guard: 8(7+1)
+          hit: 17(15+2)
+          bl: 8(4+4)
         noteGroups:
         - id: item_cf8aa5b927
           displayTitle: 補足
@@ -212,18 +164,10 @@ moveGroups:
         stun: '7'
         stunReduction: '3'
         meterGain:
-        - id: item_42cecce534
-          label: 空振り
-          value: '0'
-        - id: item_5d6ebc9016
-          label: ガード
-          value: '1'
-        - id: item_f5c94c17e2
-          label: ヒット
-          value: '2'
-        - id: bl
-          label: BL
-          value: '4'
+          whiff: '0'
+          guard: '1'
+          hit: '2'
+          bl: '4'
         media:
           kind: motion_player
           displayLabel: モーション
@@ -240,18 +184,10 @@ moveGroups:
         stun: '5'
         stunReduction: '3'
         meterGain:
-        - id: item_42cecce534
-          label: 空振り
-          value: '0'
-        - id: item_5d6ebc9016
-          label: ガード
-          value: '1'
-        - id: item_f5c94c17e2
-          label: ヒット
-          value: '2'
-        - id: bl
-          label: BL
-          value: '4'
+          whiff: '0'
+          guard: '1'
+          hit: '2'
+          bl: '4'
         media:
           kind: motion_player
           displayLabel: モーション
@@ -271,18 +207,10 @@ moveGroups:
         stun: '11'
         stunReduction: '3'
         meterGain:
-        - id: item_42cecce534
-          label: 空振り
-          value: '1'
-        - id: item_5d6ebc9016
-          label: ガード
-          value: '5'
-        - id: item_f5c94c17e2
-          label: ヒット
-          value: '9'
-        - id: bl
-          label: BL
-          value: '4'
+          whiff: '1'
+          guard: '5'
+          hit: '9'
+          bl: '4'
         media:
           kind: motion_player
           displayLabel: モーション
@@ -299,18 +227,10 @@ moveGroups:
         stun: '9'
         stunReduction: '3'
         meterGain:
-        - id: item_42cecce534
-          label: 空振り
-          value: '1'
-        - id: item_5d6ebc9016
-          label: ガード
-          value: '5'
-        - id: item_f5c94c17e2
-          label: ヒット
-          value: '9'
-        - id: bl
-          label: BL
-          value: '4'
+          whiff: '1'
+          guard: '5'
+          hit: '9'
+          bl: '4'
         noteGroups:
         - id: item_cf8aa5b927
           displayTitle: 補足
@@ -337,18 +257,10 @@ moveGroups:
         stun: '15'
         stunReduction: '3'
         meterGain:
-        - id: item_42cecce534
-          label: 空振り
-          value: '2'
-        - id: item_5d6ebc9016
-          label: ガード
-          value: '7'
-        - id: item_f5c94c17e2
-          label: ヒット
-          value: '15'
-        - id: bl
-          label: BL
-          value: '4'
+          whiff: '2'
+          guard: '7'
+          hit: '15'
+          bl: '4'
         noteGroups:
         - id: item_cf8aa5b927
           displayTitle: 補足
@@ -370,18 +282,10 @@ moveGroups:
         stun: '13'
         stunReduction: '3'
         meterGain:
-        - id: item_42cecce534
-          label: 空振り
-          value: '2'
-        - id: item_5d6ebc9016
-          label: ガード
-          value: '7'
-        - id: item_f5c94c17e2
-          label: ヒット
-          value: '15'
-        - id: bl
-          label: BL
-          value: '4'
+          whiff: '2'
+          guard: '7'
+          hit: '15'
+          bl: '4'
         media:
           kind: motion_player
           displayLabel: モーション
@@ -407,32 +311,16 @@ moveGroups:
         stun: '3'
         stunReduction: '1'
         meterGain:
-        - id: item_42cecce534
-          label: 空振り
-          value: '0'
-        - id: item_5d6ebc9016
-          label: ガード
-          value: '1'
-        - id: item_f5c94c17e2
-          label: ヒット
-          value: '2'
-        - id: bl
-          label: BL
-          value: '4'
+          whiff: '0'
+          guard: '1'
+          hit: '2'
+          bl: '4'
         frameAdvantage:
-        - id: item_5d6ebc9016
-          label: ガード
-          value: "+5"
-        - id: item_1272286f89
-          label: 立ヒット
-          value: "+5"
-        - id: item_a3b78ed257
-          label: 屈ヒット
-          value: "+5"
+          guard: "+5"
+          standingHit: "+5"
+          crouchingHit: "+5"
         stats:
-        - id: c_sc
-          label: C/SC
-          value: "○"
+          C/SC: "○"
         noteGroups:
         - id: item_cf8aa5b927
           displayTitle: 補足
@@ -457,32 +345,16 @@ moveGroups:
         stun: '3'
         stunReduction: '1'
         meterGain:
-        - id: item_42cecce534
-          label: 空振り
-          value: '0'
-        - id: item_5d6ebc9016
-          label: ガード
-          value: '1'
-        - id: item_f5c94c17e2
-          label: ヒット
-          value: '2'
-        - id: bl
-          label: BL
-          value: '4'
+          whiff: '0'
+          guard: '1'
+          hit: '2'
+          bl: '4'
         frameAdvantage:
-        - id: item_5d6ebc9016
-          label: ガード
-          value: '0'
-        - id: item_1272286f89
-          label: 立ヒット
-          value: '0'
-        - id: item_a3b78ed257
-          label: 屈ヒット
-          value: '0'
+          guard: '0'
+          standingHit: '0'
+          crouchingHit: '0'
         stats:
-        - id: c_sc
-          label: C/SC
-          value: "○"
+          C/SC: "○"
         media:
           kind: motion_player
           displayLabel: モーション
@@ -502,32 +374,16 @@ moveGroups:
         stun: '3'
         stunReduction: '1'
         meterGain:
-        - id: item_42cecce534
-          label: 空振り
-          value: '0'
-        - id: item_5d6ebc9016
-          label: ガード
-          value: '1'
-        - id: item_f5c94c17e2
-          label: ヒット
-          value: '2'
-        - id: bl
-          label: BL
-          value: '4'
+          whiff: '0'
+          guard: '1'
+          hit: '2'
+          bl: '4'
         frameAdvantage:
-        - id: item_5d6ebc9016
-          label: ガード
-          value: "+1"
-        - id: item_1272286f89
-          label: 立ヒット
-          value: "+1"
-        - id: item_a3b78ed257
-          label: 屈ヒット
-          value: "+1"
+          guard: "+1"
+          standingHit: "+1"
+          crouchingHit: "+1"
         stats:
-        - id: c_sc
-          label: C/SC
-          value: "○"
+          C/SC: "○"
         media:
           kind: motion_player
           displayLabel: モーション
@@ -550,32 +406,16 @@ moveGroups:
         stun: 10(5+5)
         stunReduction: 1・3
         meterGain:
-        - id: item_42cecce534
-          label: 空振り
-          value: '1'
-        - id: item_5d6ebc9016
-          label: ガード
-          value: 6(5+1)
-        - id: item_f5c94c17e2
-          label: ヒット
-          value: 11(9+2)
-        - id: bl
-          label: BL
-          value: 8(4+4)
+          whiff: '1'
+          guard: 6(5+1)
+          hit: 11(9+2)
+          bl: 8(4+4)
         frameAdvantage:
-        - id: item_5d6ebc9016
-          label: ガード
-          value: "-2"
-        - id: item_1272286f89
-          label: 立ヒット
-          value: ダウン
-        - id: item_a3b78ed257
-          label: 屈ヒット
-          value: ダウン
+          guard: "-2"
+          standingHit: ダウン
+          crouchingHit: ダウン
         stats:
-        - id: c_sc
-          label: C/SC
-          value: "○・○"
+          C/SC: "○・○"
         noteGroups:
         - id: item_cf8aa5b927
           displayTitle: 補足
@@ -603,32 +443,16 @@ moveGroups:
         stun: '11'
         stunReduction: '15'
         meterGain:
-        - id: item_42cecce534
-          label: 空振り
-          value: '1'
-        - id: item_5d6ebc9016
-          label: ガード
-          value: '5'
-        - id: item_f5c94c17e2
-          label: ヒット
-          value: '9'
-        - id: bl
-          label: BL
-          value: '4'
+          whiff: '1'
+          guard: '5'
+          hit: '9'
+          bl: '4'
         frameAdvantage:
-        - id: item_5d6ebc9016
-          label: ガード
-          value: "-2"
-        - id: item_1272286f89
-          label: 立ヒット
-          value: "-1"
-        - id: item_a3b78ed257
-          label: 屈ヒット
-          value: '0'
+          guard: "-2"
+          standingHit: "-1"
+          crouchingHit: '0'
         stats:
-        - id: c_sc
-          label: C/SC
-          value: "×"
+          C/SC: "×"
         noteGroups:
         - id: item_cf8aa5b927
           displayTitle: 補足
@@ -653,32 +477,16 @@ moveGroups:
         stun: '3'
         stunReduction: '1'
         meterGain:
-        - id: item_42cecce534
-          label: 空振り
-          value: '1'
-        - id: item_5d6ebc9016
-          label: ガード
-          value: '5'
-        - id: item_f5c94c17e2
-          label: ヒット
-          value: '9'
-        - id: bl
-          label: BL
-          value: '4'
+          whiff: '1'
+          guard: '5'
+          hit: '9'
+          bl: '4'
         frameAdvantage:
-        - id: item_5d6ebc9016
-          label: ガード
-          value: "-5"
-        - id: item_1272286f89
-          label: 立ヒット
-          value: "-4"
-        - id: item_a3b78ed257
-          label: 屈ヒット
-          value: "-3"
+          guard: "-5"
+          standingHit: "-4"
+          crouchingHit: "-3"
         stats:
-        - id: c_sc
-          label: C/SC
-          value: "○"
+          C/SC: "○"
         noteGroups:
         - id: item_cf8aa5b927
           displayTitle: 補足
@@ -706,32 +514,16 @@ moveGroups:
         stun: 14(7+7)
         stunReduction: 1・1
         meterGain:
-        - id: item_42cecce534
-          label: 空振り
-          value: '2'
-        - id: item_5d6ebc9016
-          label: ガード
-          value: 6(5+1)
-        - id: item_f5c94c17e2
-          label: ヒット
-          value: 15(13+2)
-        - id: bl
-          label: BL
-          value: 8(4+4)
+          whiff: '2'
+          guard: 6(5+1)
+          hit: 15(13+2)
+          bl: 8(4+4)
         frameAdvantage:
-        - id: item_5d6ebc9016
-          label: ガード
-          value: "-5"
-        - id: item_1272286f89
-          label: 立ヒット
-          value: "-3"
-        - id: item_a3b78ed257
-          label: 屈ヒット
-          value: "-1"
+          guard: "-5"
+          standingHit: "-3"
+          crouchingHit: "-1"
         stats:
-        - id: c_sc
-          label: C/SC
-          value: "×・×"
+          C/SC: "×・×"
         noteGroups:
         - id: item_cf8aa5b927
           displayTitle: 補足
@@ -756,32 +548,16 @@ moveGroups:
         stun: '11'
         stunReduction: '1'
         meterGain:
-        - id: item_42cecce534
-          label: 空振り
-          value: '2'
-        - id: item_5d6ebc9016
-          label: ガード
-          value: '7'
-        - id: item_f5c94c17e2
-          label: ヒット
-          value: '15'
-        - id: bl
-          label: BL
-          value: '4'
+          whiff: '2'
+          guard: '7'
+          hit: '15'
+          bl: '4'
         frameAdvantage:
-        - id: item_5d6ebc9016
-          label: ガード
-          value: "-2"
-        - id: item_1272286f89
-          label: 立ヒット
-          value: '0'
-        - id: item_a3b78ed257
-          label: 屈ヒット
-          value: '0'
+          guard: "-2"
+          standingHit: '0'
+          crouchingHit: '0'
         stats:
-        - id: c_sc
-          label: C/SC
-          value: "×/○"
+          C/SC: "×/○"
         noteGroups:
         - id: item_cf8aa5b927
           displayTitle: 補足
@@ -813,32 +589,16 @@ moveGroups:
         stun: '3'
         stunReduction: '1'
         meterGain:
-        - id: item_42cecce534
-          label: 空振り
-          value: '0'
-        - id: item_5d6ebc9016
-          label: ガード
-          value: '1'
-        - id: item_f5c94c17e2
-          label: ヒット
-          value: '2'
-        - id: bl
-          label: BL
-          value: '4'
+          whiff: '0'
+          guard: '1'
+          hit: '2'
+          bl: '4'
         frameAdvantage:
-        - id: item_5d6ebc9016
-          label: ガード
-          value: "+4"
-        - id: item_1272286f89
-          label: 立ヒット
-          value: "+4"
-        - id: item_a3b78ed257
-          label: 屈ヒット
-          value: "+4"
+          guard: "+4"
+          standingHit: "+4"
+          crouchingHit: "+4"
         stats:
-        - id: c_sc
-          label: C/SC
-          value: "○"
+          C/SC: "○"
         noteGroups:
         - id: item_cf8aa5b927
           displayTitle: 補足
@@ -865,32 +625,16 @@ moveGroups:
         stun: '3'
         stunReduction: '1'
         meterGain:
-        - id: item_42cecce534
-          label: 空振り
-          value: '0'
-        - id: item_5d6ebc9016
-          label: ガード
-          value: '1'
-        - id: item_f5c94c17e2
-          label: ヒット
-          value: '2'
-        - id: bl
-          label: BL
-          value: '4'
+          whiff: '0'
+          guard: '1'
+          hit: '2'
+          bl: '4'
         frameAdvantage:
-        - id: item_5d6ebc9016
-          label: ガード
-          value: "+2"
-        - id: item_1272286f89
-          label: 立ヒット
-          value: "+2"
-        - id: item_a3b78ed257
-          label: 屈ヒット
-          value: "+2"
+          guard: "+2"
+          standingHit: "+2"
+          crouchingHit: "+2"
         stats:
-        - id: c_sc
-          label: C/SC
-          value: "○"
+          C/SC: "○"
         noteGroups:
         - id: item_cf8aa5b927
           displayTitle: 補足
@@ -915,32 +659,16 @@ moveGroups:
         stun: '3'
         stunReduction: '1'
         meterGain:
-        - id: item_42cecce534
-          label: 空振り
-          value: '0'
-        - id: item_5d6ebc9016
-          label: ガード
-          value: '1'
-        - id: item_f5c94c17e2
-          label: ヒット
-          value: '2'
-        - id: bl
-          label: BL
-          value: '4'
+          whiff: '0'
+          guard: '1'
+          hit: '2'
+          bl: '4'
         frameAdvantage:
-        - id: item_5d6ebc9016
-          label: ガード
-          value: "+1"
-        - id: item_1272286f89
-          label: 立ヒット
-          value: "+1"
-        - id: item_a3b78ed257
-          label: 屈ヒット
-          value: "+1"
+          guard: "+1"
+          standingHit: "+1"
+          crouchingHit: "+1"
         stats:
-        - id: c_sc
-          label: C/SC
-          value: "○"
+          C/SC: "○"
         noteGroups:
         - id: item_cf8aa5b927
           displayTitle: 補足
@@ -968,32 +696,16 @@ moveGroups:
         stun: '11'
         stunReduction: '1'
         meterGain:
-        - id: item_42cecce534
-          label: 空振り
-          value: '1'
-        - id: item_5d6ebc9016
-          label: ガード
-          value: '5'
-        - id: item_f5c94c17e2
-          label: ヒット
-          value: '9'
-        - id: bl
-          label: BL
-          value: '4'
+          whiff: '1'
+          guard: '5'
+          hit: '9'
+          bl: '4'
         frameAdvantage:
-        - id: item_5d6ebc9016
-          label: ガード
-          value: "-5"
-        - id: item_1272286f89
-          label: 立ヒット
-          value: "-4"
-        - id: item_a3b78ed257
-          label: 屈ヒット
-          value: "-3"
+          guard: "-5"
+          standingHit: "-4"
+          crouchingHit: "-3"
         stats:
-        - id: c_sc
-          label: C/SC
-          value: "○"
+          C/SC: "○"
         noteGroups:
         - id: item_cf8aa5b927
           displayTitle: 補足
@@ -1020,32 +732,16 @@ moveGroups:
         stun: '13'
         stunReduction: '1'
         meterGain:
-        - id: item_42cecce534
-          label: 空振り
-          value: '1'
-        - id: item_5d6ebc9016
-          label: ガード
-          value: '5'
-        - id: item_f5c94c17e2
-          label: ヒット
-          value: '9'
-        - id: bl
-          label: BL
-          value: '4'
+          whiff: '1'
+          guard: '5'
+          hit: '9'
+          bl: '4'
         frameAdvantage:
-        - id: item_5d6ebc9016
-          label: ガード
-          value: "-5"
-        - id: item_1272286f89
-          label: 立ヒット
-          value: "-4"
-        - id: item_a3b78ed257
-          label: 屈ヒット
-          value: "-3"
+          guard: "-5"
+          standingHit: "-4"
+          crouchingHit: "-3"
         stats:
-        - id: c_sc
-          label: C/SC
-          value: "×"
+          C/SC: "×"
         noteGroups:
         - id: item_cf8aa5b927
           displayTitle: 補足
@@ -1070,32 +766,16 @@ moveGroups:
         stun: '3'
         stunReduction: '1'
         meterGain:
-        - id: item_42cecce534
-          label: 空振り
-          value: '1'
-        - id: item_5d6ebc9016
-          label: ガード
-          value: '5'
-        - id: item_f5c94c17e2
-          label: ヒット
-          value: '9'
-        - id: bl
-          label: BL
-          value: '4'
+          whiff: '1'
+          guard: '5'
+          hit: '9'
+          bl: '4'
         frameAdvantage:
-        - id: item_5d6ebc9016
-          label: ガード
-          value: '0'
-        - id: item_1272286f89
-          label: 立ヒット
-          value: "+1"
-        - id: item_a3b78ed257
-          label: 屈ヒット
-          value: "+2"
+          guard: '0'
+          standingHit: "+1"
+          crouchingHit: "+2"
         stats:
-        - id: c_sc
-          label: C/SC
-          value: "○"
+          C/SC: "○"
         noteGroups:
         - id: item_cf8aa5b927
           displayTitle: 補足
@@ -1125,32 +805,16 @@ moveGroups:
         stun: '19'
         stunReduction: '1'
         meterGain:
-        - id: item_42cecce534
-          label: 空振り
-          value: '2'
-        - id: item_5d6ebc9016
-          label: ガード
-          value: '7'
-        - id: item_f5c94c17e2
-          label: ヒット
-          value: '15'
-        - id: bl
-          label: BL
-          value: '4'
+          whiff: '2'
+          guard: '7'
+          hit: '15'
+          bl: '4'
         frameAdvantage:
-        - id: item_5d6ebc9016
-          label: ガード
-          value: "-5"
-        - id: item_1272286f89
-          label: 立ヒット
-          value: "-3"
-        - id: item_a3b78ed257
-          label: 屈ヒット
-          value: "-1"
+          guard: "-5"
+          standingHit: "-3"
+          crouchingHit: "-1"
         stats:
-        - id: c_sc
-          label: C/SC
-          value: "×"
+          C/SC: "×"
         noteGroups:
         - id: item_cf8aa5b927
           displayTitle: 補足
@@ -1177,32 +841,16 @@ moveGroups:
         stun: '3'
         stunReduction: '1'
         meterGain:
-        - id: item_42cecce534
-          label: 空振り
-          value: '2'
-        - id: item_5d6ebc9016
-          label: ガード
-          value: '7'
-        - id: item_f5c94c17e2
-          label: ヒット
-          value: '15'
-        - id: bl
-          label: BL
-          value: '4'
+          whiff: '2'
+          guard: '7'
+          hit: '15'
+          bl: '4'
         frameAdvantage:
-        - id: item_5d6ebc9016
-          label: ガード
-          value: "-6"
-        - id: item_1272286f89
-          label: 立ヒット
-          value: ダウン
-        - id: item_a3b78ed257
-          label: 屈ヒット
-          value: ダウン
+          guard: "-6"
+          standingHit: ダウン
+          crouchingHit: ダウン
         stats:
-        - id: c_sc
-          label: C/SC
-          value: "×"
+          C/SC: "×"
         noteGroups:
         - id: item_cf8aa5b927
           displayTitle: 補足
@@ -1233,18 +881,12 @@ moveGroups:
         damage: 115(6ヒット)
         stun: 20(6ヒット)
         meterGain:
-        - id: item_f6fcd6085b
-          label: 空振り時
-          value: '0'
-        - id: item_739b20fd9b
-          label: 投げ成功時
-          value: |-
+          onWhiff: '0'
+          throwSuccess: |-
             12(6ヒット時)
             (2×6)
         stats:
-        - id: item_7c11c7fd25
-          label: 投げ間合い
-          value: '25'
+          投げ間合い: '25'
         noteGroups:
         - id: item_cf8aa5b927
           displayTitle: 補足
@@ -1272,16 +914,10 @@ moveGroups:
         damage: '120'
         stun: '15'
         meterGain:
-        - id: item_f6fcd6085b
-          label: 空振り時
-          value: '0'
-        - id: item_739b20fd9b
-          label: 投げ成功時
-          value: '7'
+          onWhiff: '0'
+          throwSuccess: '7'
         stats:
-        - id: item_7c11c7fd25
-          label: 投げ間合い
-          value: '25'
+          投げ間合い: '25'
         noteGroups:
         - id: item_cf8aa5b927
           displayTitle: 補足
@@ -1306,19 +942,11 @@ moveGroups:
         damage: '180'
         stun: '15'
         meterGain:
-        - id: item_f6fcd6085b
-          label: 空振り時
-          value: '0'
-        - id: item_739b20fd9b
-          label: 投げ成功時
-          value: '7'
+          onWhiff: '0'
+          throwSuccess: '7'
         stats:
-        - id: item_933eb330c3
-          label: 投げ間合い 前方
-          value: '19'
-        - id: item_f3da867883
-          label: 投げ間合い 上下
-          value: 62～91
+          投げ間合い 前方: '19'
+          投げ間合い 上下: 62～91
         noteGroups:
         - id: item_cf8aa5b927
           displayTitle: 補足
@@ -1346,32 +974,16 @@ moveGroups:
       stun: '3'
       stunReduction: '1'
       meterGain:
-      - id: item_42cecce534
-        label: 空振り
-        value: '0'
-      - id: item_5d6ebc9016
-        label: ガード
-        value: '1'
-      - id: item_f5c94c17e2
-        label: ヒット
-        value: '2'
-      - id: bl
-        label: BL
-        value: '4'
+        whiff: '0'
+        guard: '1'
+        hit: '2'
+        bl: '4'
       frameAdvantage:
-      - id: item_5d6ebc9016
-        label: ガード
-        value: "-5～+7"
-      - id: item_1272286f89
-        label: 立ヒット
-        value: 0～+8
-      - id: item_a3b78ed257
-        label: 屈ヒット
-        value: "+1～+9"
+        guard: "-5～+7"
+        standingHit: 0～+8
+        crouchingHit: "+1～+9"
       stats:
-      - id: c_sc
-        label: C/SC
-        value: "×"
+        C/SC: "×"
       noteGroups:
       - id: item_cf8aa5b927
         displayTitle: 補足
@@ -1399,12 +1011,8 @@ moveGroups:
       stun: "―"
       stunReduction: "―"
       stats:
-      - id: c_sc
-        label: C/SC
-        value: "―"
-      - id: item_054b7dace5
-        label: ゲージ増加
-        value: 3(6)
+        C/SC: "―"
+        ゲージ増加: 3(6)
       noteGroups:
       - id: item_f11e32f4cf
         displayTitle: 効果
@@ -1435,32 +1043,16 @@ moveGroups:
         stun: '13'
         stunReduction: '15'
         meterGain:
-        - id: item_42cecce534
-          label: 空振り
-          value: '1'
-        - id: item_5d6ebc9016
-          label: ガード
-          value: '5'
-        - id: item_f5c94c17e2
-          label: ヒット
-          value: '9'
-        - id: bl
-          label: BL
-          value: '4'
+          whiff: '1'
+          guard: '5'
+          hit: '9'
+          bl: '4'
         frameAdvantage:
-        - id: item_5d6ebc9016
-          label: ガード
-          value: "-5"
-        - id: item_1272286f89
-          label: 立ヒット
-          value: "-4"
-        - id: item_a3b78ed257
-          label: 屈ヒット
-          value: "-3"
+          guard: "-5"
+          standingHit: "-4"
+          crouchingHit: "-3"
         stats:
-        - id: c_sc
-          label: C/SC
-          value: "×"
+          C/SC: "×"
         noteGroups:
         - id: item_cf8aa5b927
           displayTitle: 補足
@@ -1488,32 +1080,16 @@ moveGroups:
         stun: "―"
         stunReduction: "―"
         meterGain:
-        - id: item_42cecce534
-          label: 空振り
-          value: "―"
-        - id: item_5d6ebc9016
-          label: ガード
-          value: "―"
-        - id: item_f5c94c17e2
-          label: ヒット
-          value: "―"
-        - id: bl
-          label: BL
-          value: "―"
+          whiff: "―"
+          guard: "―"
+          hit: "―"
+          bl: "―"
         frameAdvantage:
-        - id: item_5d6ebc9016
-          label: ガード
-          value: "―"
-        - id: item_1272286f89
-          label: 立ヒット
-          value: "―"
-        - id: item_a3b78ed257
-          label: 屈ヒット
-          value: "―"
+          guard: "―"
+          standingHit: "―"
+          crouchingHit: "―"
         stats:
-        - id: c_sc
-          label: C/SC
-          value: "―"
+          C/SC: "―"
         noteGroups:
         - id: item_cf8aa5b927
           displayTitle: 補足
@@ -1535,22 +1111,12 @@ moveGroups:
         stun: 3/5
         stunReduction: 1/3
         frameAdvantage:
-        - id: item_5d6ebc9016
-          label: ガード
-          value: "-5"
-        - id: item_1272286f89
-          label: 立ヒット
-          value: "-4"
-        - id: item_a3b78ed257
-          label: 屈ヒット
-          value: "-3"
+          guard: "-5"
+          standingHit: "-4"
+          crouchingHit: "-3"
         stats:
-        - id: item_ae5ceeefcd
-          label: 入力
-          value: 近中P→近大P
-        - id: c
-          label: C
-          value: "○/×"
+          入力: 近中P→近大P
+          C: "○/×"
         noteGroups:
         - id: item_cf8aa5b927
           displayTitle: 補足
@@ -1580,28 +1146,14 @@ moveGroups:
         stun: '7'
         stunReduction: '1'
         meterGain:
-        - id: item_42cecce534
-          label: 空振り
-          value: '0'
-        - id: item_5d6ebc9016
-          label: ガード
-          value: '1'
-        - id: item_f5c94c17e2
-          label: ヒット
-          value: '2'
-        - id: bl
-          label: BL
-          value: '4'
+          whiff: '0'
+          guard: '1'
+          hit: '2'
+          bl: '4'
         frameAdvantage:
-        - id: item_5d6ebc9016
-          label: ガード
-          value: "-6"
-        - id: item_1272286f89
-          label: 立ヒット
-          value: "-5"
-        - id: item_a3b78ed257
-          label: 屈ヒット
-          value: "-4"
+          guard: "-6"
+          standingHit: "-5"
+          crouchingHit: "-4"
         media:
           kind: motion_player
           displayLabel: モーション
@@ -1624,28 +1176,14 @@ moveGroups:
         stun: '7'
         stunReduction: '1'
         meterGain:
-        - id: item_42cecce534
-          label: 空振り
-          value: '0'
-        - id: item_5d6ebc9016
-          label: ガード
-          value: '1'
-        - id: item_f5c94c17e2
-          label: ヒット
-          value: '2'
-        - id: bl
-          label: BL
-          value: '4'
+          whiff: '0'
+          guard: '1'
+          hit: '2'
+          bl: '4'
         frameAdvantage:
-        - id: item_5d6ebc9016
-          label: ガード
-          value: "-4"
-        - id: item_1272286f89
-          label: 立ヒット
-          value: "-3"
-        - id: item_a3b78ed257
-          label: 屈ヒット
-          value: "-2"
+          guard: "-4"
+          standingHit: "-3"
+          crouchingHit: "-2"
         media:
           kind: motion_player
           displayLabel: モーション
@@ -1668,28 +1206,14 @@ moveGroups:
         stun: '11'
         stunReduction: '1'
         meterGain:
-        - id: item_42cecce534
-          label: 空振り
-          value: '0'
-        - id: item_5d6ebc9016
-          label: ガード
-          value: '1'
-        - id: item_f5c94c17e2
-          label: ヒット
-          value: '2'
-        - id: bl
-          label: BL
-          value: '4'
+          whiff: '0'
+          guard: '1'
+          hit: '2'
+          bl: '4'
         frameAdvantage:
-        - id: item_5d6ebc9016
-          label: ガード
-          value: "-2"
-        - id: item_1272286f89
-          label: 立ヒット
-          value: "-1"
-        - id: item_a3b78ed257
-          label: 屈ヒット
-          value: '0'
+          guard: "-2"
+          standingHit: "-1"
+          crouchingHit: '0'
         media:
           kind: motion_player
           displayLabel: モーション
@@ -1712,28 +1236,14 @@ moveGroups:
         stun: 14(7+7)
         stunReduction: 1・1
         meterGain:
-        - id: item_42cecce534
-          label: 空振り
-          value: "―"
-        - id: item_5d6ebc9016
-          label: ガード
-          value: "―"
-        - id: item_f5c94c17e2
-          label: ヒット
-          value: "―"
-        - id: bl
-          label: BL
-          value: 8(4+4)
+          whiff: "―"
+          guard: "―"
+          hit: "―"
+          bl: 8(4+4)
         frameAdvantage:
-        - id: item_5d6ebc9016
-          label: ガード
-          value: "+1"
-        - id: item_1272286f89
-          label: 立ヒット
-          value: "+2"
-        - id: item_a3b78ed257
-          label: 屈ヒット
-          value: "+3"
+          guard: "+1"
+          standingHit: "+2"
+          crouchingHit: "+3"
         media:
           kind: motion_player
           displayLabel: モーション
@@ -1756,28 +1266,14 @@ moveGroups:
         stun: 14(7+7)
         stunReduction: 1・1
         meterGain:
-        - id: item_42cecce534
-          label: 空振り
-          value: "―"
-        - id: item_5d6ebc9016
-          label: ガード
-          value: "―"
-        - id: item_f5c94c17e2
-          label: ヒット
-          value: "―"
-        - id: bl
-          label: BL
-          value: 8(4+4)
+          whiff: "―"
+          guard: "―"
+          hit: "―"
+          bl: 8(4+4)
         frameAdvantage:
-        - id: item_5d6ebc9016
-          label: ガード
-          value: "+1"
-        - id: item_1272286f89
-          label: 立ヒット
-          value: "+2"
-        - id: item_a3b78ed257
-          label: 屈ヒット
-          value: "+3"
+          guard: "+1"
+          standingHit: "+2"
+          crouchingHit: "+3"
         media:
           kind: motion_player
           displayLabel: モーション
@@ -1821,28 +1317,14 @@ moveGroups:
         stun: 15(3(3))
         stunReduction: 7(7・7)
         meterGain:
-        - id: item_42cecce534
-          label: 空振り
-          value: '3'
-        - id: item_5d6ebc9016
-          label: ガード
-          value: '10'
-        - id: item_f5c94c17e2
-          label: ヒット
-          value: '15'
-        - id: bl
-          label: BL
-          value: '4'
+          whiff: '3'
+          guard: '10'
+          hit: '15'
+          bl: '4'
         frameAdvantage:
-        - id: item_5d6ebc9016
-          label: ガード
-          value: "-22"
-        - id: item_1272286f89
-          label: 立ヒット
-          value: ダウン
-        - id: item_a3b78ed257
-          label: 屈ヒット
-          value: ダウン
+          guard: "-22"
+          standingHit: ダウン
+          crouchingHit: ダウン
         media:
           kind: motion_player
           displayLabel: モーション
@@ -1865,28 +1347,14 @@ moveGroups:
         stun: 15(3(3))
         stunReduction: 7(7・7)
         meterGain:
-        - id: item_42cecce534
-          label: 空振り
-          value: '3'
-        - id: item_5d6ebc9016
-          label: ガード
-          value: '10'
-        - id: item_f5c94c17e2
-          label: ヒット
-          value: '15'
-        - id: bl
-          label: BL
-          value: '4'
+          whiff: '3'
+          guard: '10'
+          hit: '15'
+          bl: '4'
         frameAdvantage:
-        - id: item_5d6ebc9016
-          label: ガード
-          value: "-30"
-        - id: item_1272286f89
-          label: 立ヒット
-          value: ダウン
-        - id: item_a3b78ed257
-          label: 屈ヒット
-          value: ダウン
+          guard: "-30"
+          standingHit: ダウン
+          crouchingHit: ダウン
         media:
           kind: motion_player
           displayLabel: モーション
@@ -1911,28 +1379,14 @@ moveGroups:
         stun: 20(19+3+3+3)
         stunReduction: 7・7・(7・7)
         meterGain:
-        - id: item_42cecce534
-          label: 空振り
-          value: '3'
-        - id: item_5d6ebc9016
-          label: ガード
-          value: 11(10+1)
-        - id: item_f5c94c17e2
-          label: ヒット
-          value: 17(15+2)
-        - id: bl
-          label: BL
-          value: 8(4+4)
+          whiff: '3'
+          guard: 11(10+1)
+          hit: 17(15+2)
+          bl: 8(4+4)
         frameAdvantage:
-        - id: item_5d6ebc9016
-          label: ガード
-          value: "-38"
-        - id: item_1272286f89
-          label: 立ヒット
-          value: ダウン
-        - id: item_a3b78ed257
-          label: 屈ヒット
-          value: ダウン
+          guard: "-38"
+          standingHit: ダウン
+          crouchingHit: ダウン
         media:
           kind: motion_player
           displayLabel: モーション
@@ -1957,28 +1411,14 @@ moveGroups:
         stun: 24(15+3×3)
         stunReduction: 1・3・3・3
         meterGain:
-        - id: item_42cecce534
-          label: 空振り
-          value: "―"
-        - id: item_5d6ebc9016
-          label: ガード
-          value: "―"
-        - id: item_f5c94c17e2
-          label: ヒット
-          value: "―"
-        - id: bl
-          label: BL
-          value: 8(4+4)
+          whiff: "―"
+          guard: "―"
+          hit: "―"
+          bl: 8(4+4)
         frameAdvantage:
-        - id: item_5d6ebc9016
-          label: ガード
-          value: "-48"
-        - id: item_1272286f89
-          label: 立ヒット
-          value: ダウン
-        - id: item_a3b78ed257
-          label: 屈ヒット
-          value: ダウン
+          guard: "-48"
+          standingHit: ダウン
+          crouchingHit: ダウン
         media:
           kind: motion_player
           displayLabel: モーション
@@ -2025,28 +1465,14 @@ moveGroups:
         stun: 10(5+5)
         stunReduction: 1・1
         meterGain:
-        - id: item_42cecce534
-          label: 空振り
-          value: '3'
-        - id: item_5d6ebc9016
-          label: ガード
-          value: '11'
-        - id: item_f5c94c17e2
-          label: ヒット
-          value: '17'
-        - id: bl
-          label: BL
-          value: 8(4+4)
+          whiff: '3'
+          guard: '11'
+          hit: '17'
+          bl: 8(4+4)
         frameAdvantage:
-        - id: item_5d6ebc9016
-          label: ガード
-          value: "―"
-        - id: item_1272286f89
-          label: 立ヒット
-          value: "―"
-        - id: item_a3b78ed257
-          label: 屈ヒット
-          value: "―"
+          guard: "―"
+          standingHit: "―"
+          crouchingHit: "―"
         media:
           kind: motion_player
           displayLabel: モーション
@@ -2069,28 +1495,14 @@ moveGroups:
         stun: 10(5+5)
         stunReduction: 1・1
         meterGain:
-        - id: item_42cecce534
-          label: 空振り
-          value: '3'
-        - id: item_5d6ebc9016
-          label: ガード
-          value: '11'
-        - id: item_f5c94c17e2
-          label: ヒット
-          value: '17'
-        - id: bl
-          label: BL
-          value: 8(4+4)
+          whiff: '3'
+          guard: '11'
+          hit: '17'
+          bl: 8(4+4)
         frameAdvantage:
-        - id: item_5d6ebc9016
-          label: ガード
-          value: "―"
-        - id: item_1272286f89
-          label: 立ヒット
-          value: "―"
-        - id: item_a3b78ed257
-          label: 屈ヒット
-          value: "―"
+          guard: "―"
+          standingHit: "―"
+          crouchingHit: "―"
         media:
           kind: motion_player
           displayLabel: モーション
@@ -2113,28 +1525,14 @@ moveGroups:
         stun: 10(5+5)
         stunReduction: 1・1
         meterGain:
-        - id: item_42cecce534
-          label: 空振り
-          value: '3'
-        - id: item_5d6ebc9016
-          label: ガード
-          value: '11'
-        - id: item_f5c94c17e2
-          label: ヒット
-          value: '17'
-        - id: bl
-          label: BL
-          value: 8(4+4)
+          whiff: '3'
+          guard: '11'
+          hit: '17'
+          bl: 8(4+4)
         frameAdvantage:
-        - id: item_5d6ebc9016
-          label: ガード
-          value: "―"
-        - id: item_1272286f89
-          label: 立ヒット
-          value: "―"
-        - id: item_a3b78ed257
-          label: 屈ヒット
-          value: "―"
+          guard: "―"
+          standingHit: "―"
+          crouchingHit: "―"
         media:
           kind: motion_player
           displayLabel: モーション
@@ -2157,28 +1555,14 @@ moveGroups:
         stun: 15(5+5+5)
         stunReduction: 1・1・1
         meterGain:
-        - id: item_42cecce534
-          label: 空振り
-          value: "―"
-        - id: item_5d6ebc9016
-          label: ガード
-          value: "―"
-        - id: item_f5c94c17e2
-          label: ヒット
-          value: "―"
-        - id: bl
-          label: BL
-          value: 12(4+4+4)
+          whiff: "―"
+          guard: "―"
+          hit: "―"
+          bl: 12(4+4+4)
         frameAdvantage:
-        - id: item_5d6ebc9016
-          label: ガード
-          value: "―"
-        - id: item_1272286f89
-          label: 立ヒット
-          value: "―"
-        - id: item_a3b78ed257
-          label: 屈ヒット
-          value: "―"
+          guard: "―"
+          standingHit: "―"
+          crouchingHit: "―"
         media:
           kind: motion_player
           displayLabel: モーション
@@ -2222,28 +1606,14 @@ moveGroups:
           (5+5+0×6)
         stunReduction: "(1×4)・(1×4)"
         meterGain:
-        - id: item_42cecce534
-          label: 空振り
-          value: '6'
-        - id: item_5d6ebc9016
-          label: ガード
-          value: '10'
-        - id: item_f5c94c17e2
-          label: ヒット
-          value: '30'
-        - id: bl
-          label: BL
-          value: 32(4×8)
+          whiff: '6'
+          guard: '10'
+          hit: '30'
+          bl: 32(4×8)
         frameAdvantage:
-        - id: item_5d6ebc9016
-          label: ガード
-          value: "―"
-        - id: item_1272286f89
-          label: 立ヒット
-          value: ダウン
-        - id: item_a3b78ed257
-          label: 屈ヒット
-          value: ダウン
+          guard: "―"
+          standingHit: ダウン
+          crouchingHit: ダウン
         media:
           kind: motion_player
           displayLabel: モーション
@@ -2270,28 +1640,14 @@ moveGroups:
           (7+7+0×6)
         stunReduction: "(1×4)・(1×5)"
         meterGain:
-        - id: item_42cecce534
-          label: 空振り
-          value: "―"
-        - id: item_5d6ebc9016
-          label: ガード
-          value: "―"
-        - id: item_f5c94c17e2
-          label: ヒット
-          value: "―"
-        - id: bl
-          label: BL
-          value: 36(4×9)
+          whiff: "―"
+          guard: "―"
+          hit: "―"
+          bl: 36(4×9)
         frameAdvantage:
-        - id: item_5d6ebc9016
-          label: ガード
-          value: "―"
-        - id: item_1272286f89
-          label: 立ヒット
-          value: ダウン
-        - id: item_a3b78ed257
-          label: 屈ヒット
-          value: ダウン
+          guard: "―"
+          standingHit: ダウン
+          crouchingHit: ダウン
         media:
           kind: motion_player
           displayLabel: モーション
@@ -2329,32 +1685,16 @@ moveGroups:
         stun: '23'
         stunReduction: "―"
         meterGain:
-        - id: item_42cecce534
-          label: 空振り
-          value: '1'
-        - id: item_5d6ebc9016
-          label: ガード
-          value: '7'
-        - id: item_f5c94c17e2
-          label: ヒット
-          value: '20'
-        - id: bl
-          label: BL
-          value: "―"
+          whiff: '1'
+          guard: '7'
+          hit: '20'
+          bl: "―"
         frameAdvantage:
-        - id: item_5d6ebc9016
-          label: ガード
-          value: "-15"
-        - id: item_1272286f89
-          label: 立ヒット
-          value: ダウン
-        - id: item_a3b78ed257
-          label: 屈ヒット
-          value: ダウン
+          guard: "-15"
+          standingHit: ダウン
+          crouchingHit: ダウン
         stats:
-        - id: item_7c11c7fd25
-          label: 投げ間合い
-          value: '79'
+          投げ間合い: '79'
         media:
           kind: motion_player
           displayLabel: モーション
@@ -2377,32 +1717,16 @@ moveGroups:
         stun: '23'
         stunReduction: "―"
         meterGain:
-        - id: item_42cecce534
-          label: 空振り
-          value: '1'
-        - id: item_5d6ebc9016
-          label: ガード
-          value: '7'
-        - id: item_f5c94c17e2
-          label: ヒット
-          value: '20'
-        - id: bl
-          label: BL
-          value: "―"
+          whiff: '1'
+          guard: '7'
+          hit: '20'
+          bl: "―"
         frameAdvantage:
-        - id: item_5d6ebc9016
-          label: ガード
-          value: "-15"
-        - id: item_1272286f89
-          label: 立ヒット
-          value: ダウン
-        - id: item_a3b78ed257
-          label: 屈ヒット
-          value: ダウン
+          guard: "-15"
+          standingHit: ダウン
+          crouchingHit: ダウン
         stats:
-        - id: item_7c11c7fd25
-          label: 投げ間合い
-          value: '79'
+          投げ間合い: '79'
         media:
           kind: motion_player
           displayLabel: モーション
@@ -2425,32 +1749,16 @@ moveGroups:
         stun: '23'
         stunReduction: "―"
         meterGain:
-        - id: item_42cecce534
-          label: 空振り
-          value: '1'
-        - id: item_5d6ebc9016
-          label: ガード
-          value: '7'
-        - id: item_f5c94c17e2
-          label: ヒット
-          value: '20'
-        - id: bl
-          label: BL
-          value: "―"
+          whiff: '1'
+          guard: '7'
+          hit: '20'
+          bl: "―"
         frameAdvantage:
-        - id: item_5d6ebc9016
-          label: ガード
-          value: "-15"
-        - id: item_1272286f89
-          label: 立ヒット
-          value: ダウン
-        - id: item_a3b78ed257
-          label: 屈ヒット
-          value: ダウン
+          guard: "-15"
+          standingHit: ダウン
+          crouchingHit: ダウン
         stats:
-        - id: item_7c11c7fd25
-          label: 投げ間合い
-          value: '79'
+          投げ間合い: '79'
         media:
           kind: motion_player
           displayLabel: モーション
@@ -2495,35 +1803,19 @@ moveGroups:
         stun: "―"
         stunReduction: "―"
         frameAdvantage:
-        - id: item_5d6ebc9016
-          label: ガード
-          value: "―"
-        - id: item_1272286f89
-          label: 立ヒット
-          value: ダウン
-        - id: item_a3b78ed257
-          label: 屈ヒット
-          value: ダウン
+          guard: "―"
+          standingHit: ダウン
+          crouchingHit: ダウン
         stats:
-        - id: item_1143708263
-          label: ストック数
-          value: '1'
-        - id: item_0b597471fb
-          label: ゲージの長さ
-          value: 104ドット
-        - id: sa
-          label: SA発生
-          value: '17'
-        - id: item_5fe84d2985
-          label: 投げ発生
-          value: |-
+          ストック数: '1'
+          ゲージの長さ: 104ドット
+          SA発生: '17'
+          投げ発生: |-
             4(小)
             7(中)
             10(大)
             8(仁王力コマンド)
-        - id: item_7c11c7fd25
-          label: 投げ間合い
-          value: |-
+          投げ間合い: |-
             40(小)
             52(中)
             66(大)
@@ -2554,28 +1846,14 @@ moveGroups:
         stun: '0'
         stunReduction: R
         frameAdvantage:
-        - id: item_5d6ebc9016
-          label: ガード
-          value: "―"
-        - id: item_1272286f89
-          label: 立ヒット
-          value: ダウン
-        - id: item_a3b78ed257
-          label: 屈ヒット
-          value: ダウン
+          guard: "―"
+          standingHit: ダウン
+          crouchingHit: ダウン
         stats:
-        - id: item_1143708263
-          label: ストック数
-          value: '1'
-        - id: item_0b597471fb
-          label: ゲージの長さ
-          value: 104ドット
-        - id: item_933eb330c3
-          label: 投げ間合い 前方
-          value: '42'
-        - id: item_f3da867883
-          label: 投げ間合い 上下
-          value: 72～94
+          ストック数: '1'
+          ゲージの長さ: 104ドット
+          投げ間合い 前方: '42'
+          投げ間合い 上下: 72～94
         noteGroups:
         - id: item_cf8aa5b927
           displayTitle: 補足
@@ -2605,25 +1883,13 @@ moveGroups:
         stun: '0'
         stunReduction: "―"
         frameAdvantage:
-        - id: item_5d6ebc9016
-          label: ガード
-          value: "―"
-        - id: item_1272286f89
-          label: 立ヒット
-          value: ダウン
-        - id: item_a3b78ed257
-          label: 屈ヒット
-          value: ダウン
+          guard: "―"
+          standingHit: ダウン
+          crouchingHit: ダウン
         stats:
-        - id: item_1143708263
-          label: ストック数
-          value: '1'
-        - id: item_0b597471fb
-          label: ゲージの長さ
-          value: 104ドット
-        - id: item_7c11c7fd25
-          label: 投げ間合い
-          value: '66'
+          ストック数: '1'
+          ゲージの長さ: 104ドット
+          投げ間合い: '66'
         noteGroups:
         - id: item_cf8aa5b927
           displayTitle: 補足
@@ -2669,22 +1935,12 @@ moveGroups:
           (3×4)
         stunReduction: 1・1・1・1
         frameAdvantage:
-        - id: item_5d6ebc9016
-          label: ガード
-          value: "+27"
-        - id: item_1272286f89
-          label: 立ヒット
-          value: "+28"
-        - id: item_a3b78ed257
-          label: 屈ヒット
-          value: "+29"
+          guard: "+27"
+          standingHit: "+28"
+          crouchingHit: "+29"
         stats:
-        - id: item_1143708263
-          label: ストック数
-          value: '3'
-        - id: item_0b597471fb
-          label: ゲージの長さ
-          value: 88ドット
+          ストック数: '3'
+          ゲージの長さ: 88ドット
         noteGroups:
         - id: item_cf8aa5b927
           displayTitle: 補足
@@ -2717,22 +1973,12 @@ moveGroups:
           (3×13)
         stunReduction: R×13
         frameAdvantage:
-        - id: item_5d6ebc9016
-          label: ガード
-          value: "+73"
-        - id: item_1272286f89
-          label: 立ヒット
-          value: "+74"
-        - id: item_a3b78ed257
-          label: 屈ヒット
-          value: "+75"
+          guard: "+73"
+          standingHit: "+74"
+          crouchingHit: "+75"
         stats:
-        - id: item_1143708263
-          label: ストック数
-          value: '1'
-        - id: item_0b597471fb
-          label: ゲージの長さ
-          value: 264ドット
+          ストック数: '1'
+          ゲージの長さ: 264ドット
         noteGroups:
         - id: item_cf8aa5b927
           displayTitle: 補足
@@ -2771,22 +2017,12 @@ moveGroups:
         stun: '0'
         stunReduction: オプションは全て2
         frameAdvantage:
-        - id: item_5d6ebc9016
-          label: ガード
-          value: "―"
-        - id: item_1272286f89
-          label: 立ヒット
-          value: ダウン
-        - id: item_a3b78ed257
-          label: 屈ヒット
-          value: ダウン
+          guard: "―"
+          standingHit: ダウン
+          crouchingHit: ダウン
         stats:
-        - id: item_1143708263
-          label: ストック数
-          value: '1'
-        - id: item_0b597471fb
-          label: ゲージの長さ
-          value: 112ドット
+          ストック数: '1'
+          ゲージの長さ: 112ドット
         noteGroups:
         - id: item_cf8aa5b927
           displayTitle: 補足
@@ -2825,22 +2061,12 @@ moveGroups:
         stun: '0'
         stunReduction: オプションは全てR
         frameAdvantage:
-        - id: item_5d6ebc9016
-          label: ガード
-          value: "―"
-        - id: item_1272286f89
-          label: 立ヒット
-          value: ダウン
-        - id: item_a3b78ed257
-          label: 屈ヒット
-          value: ダウン
+          guard: "―"
+          standingHit: ダウン
+          crouchingHit: ダウン
         stats:
-        - id: item_1143708263
-          label: ストック数
-          value: '1'
-        - id: item_0b597471fb
-          label: ゲージの長さ
-          value: 112ドット
+          ストック数: '1'
+          ゲージの長さ: 112ドット
         noteGroups:
         - id: item_cf8aa5b927
           displayTitle: 補足

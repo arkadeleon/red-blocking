@@ -142,9 +142,9 @@ struct MoveDetail: Decodable, Equatable, Hashable {
     let chipDamage: String?
     let stun: String?
     let stunReduction: String?
-    let meterGain: [MoveLabeledValue]
-    let frameAdvantage: [MoveLabeledValue]
-    let stats: [MoveLabeledValue]
+    let meterGain: MeterGain?
+    let frameAdvantage: FrameAdvantage?
+    let stats: LabeledValueMap?
     let noteGroups: [MoveNoteGroup]
     let media: MoveMedia?
 
@@ -163,9 +163,9 @@ struct MoveDetail: Decodable, Equatable, Hashable {
         chipDamage = try container.decodeIfPresent(String.self, forKey: .chipDamage)
         stun = try container.decodeIfPresent(String.self, forKey: .stun)
         stunReduction = try container.decodeIfPresent(String.self, forKey: .stunReduction)
-        meterGain = try container.decodeIfPresent([MoveLabeledValue].self, forKey: .meterGain) ?? []
-        frameAdvantage = try container.decodeIfPresent([MoveLabeledValue].self, forKey: .frameAdvantage) ?? []
-        stats = try container.decodeIfPresent([MoveLabeledValue].self, forKey: .stats) ?? []
+        meterGain = try container.decodeIfPresent(MeterGain.self, forKey: .meterGain)
+        frameAdvantage = try container.decodeIfPresent(FrameAdvantage.self, forKey: .frameAdvantage)
+        stats = try container.decodeIfPresent(LabeledValueMap.self, forKey: .stats)
         noteGroups = try container.decodeIfPresent([MoveNoteGroup].self, forKey: .noteGroups) ?? []
         media = try container.decodeIfPresent(MoveMedia.self, forKey: .media)
 
@@ -219,6 +219,55 @@ struct MoveLabeledValue: Decodable, Equatable, Hashable {
     let id: String
     let label: String
     let value: String
+}
+
+struct MeterGain: Decodable, Equatable, Hashable {
+    let whiff: String?
+    let `guard`: String?
+    let hit: String?
+    let bl: String?
+    let throwSuccess: String?
+    let onWhiff: String?
+}
+
+struct FrameAdvantage: Decodable, Equatable, Hashable {
+    let `guard`: String?
+    let hit: String?
+    let standingHit: String?
+    let crouchingHit: String?
+}
+
+struct LabeledValueMap: Decodable, Equatable, Hashable {
+    let pairs: [(label: String, value: String)]
+
+    init(from decoder: Decoder) throws {
+        let container = try decoder.container(keyedBy: DynamicKey.self)
+        pairs = try container.allKeys.map { key in
+            let value = try container.decode(String.self, forKey: key)
+            return (label: key.stringValue, value: value)
+        }
+    }
+
+    static func == (lhs: Self, rhs: Self) -> Bool {
+        guard lhs.pairs.count == rhs.pairs.count else { return false }
+        return zip(lhs.pairs, rhs.pairs).allSatisfy { l, r in l.label == r.label && l.value == r.value }
+    }
+
+    func hash(into hasher: inout Hasher) {
+        for pair in pairs {
+            hasher.combine(pair.label)
+            hasher.combine(pair.value)
+        }
+    }
+
+    var isEmpty: Bool { pairs.isEmpty }
+}
+
+private struct DynamicKey: CodingKey {
+    var stringValue: String
+    var intValue: Int?
+    init(stringValue: String) { self.stringValue = stringValue }
+    init?(intValue: Int) { nil }
 }
 
 struct MoveNoteGroup: Decodable, Equatable, Hashable {
