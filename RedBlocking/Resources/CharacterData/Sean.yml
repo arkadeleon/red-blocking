@@ -1,2868 +1,2580 @@
-- SectionTitle: 【熱風キッド】
-  Rows:
-    - RowTitle: |-
-        ショーンもいよいよ格闘選手権に出場する事になった。だが師匠のケンは厳しく言い放つ。
-        「お前の今の実力じゃ恥をかくだけだ」
-        大会予選まであとわずか。
-        なんとしても、ケンを唸らせる「自分だけの型(スタイル)」を会得しなければ!
-- SectionTitle: 【空中通常技】
-  Rows:
-    - RowTitle: ジャンプ小パンチ
-      Next:
-        Sections:
-          - Rows:
-              - RowTitle: 垂直ジャンプ小パンチ
-                Next:
-                  Sections:
-                    - Rows:
-                        - RowTitle: 技名
-                          RowDetail: エルボーアタック
-                        - RowTitle: 発生
-                          RowDetail: "5"
-                        - RowTitle: 持続
-                          RowDetail: 着地まで
-                        - RowTitle: 攻撃力
-                          RowDetail: "40"
-                        - RowTitle: スタン値
-                          RowDetail: "7"
-                        - RowTitle: 削減値
-                          RowDetail: "3"
-                    - SectionTitle: ゲージ増加量
-                      Rows:
-                        - RowTitle: 空振り
-                          RowDetail: "0"
-                        - RowTitle: ガード
-                          RowDetail: "1"
-                        - RowTitle: ヒット
-                          RowDetail: "2"
-                        - RowTitle: BL
-                          RowDetail: "4"
-                    - Rows:
-                        - Presented:
-                            SkillName: Neutral Jumping Jab
-                            CharacterCode: "12"
-                            ViewController: FramesPlayerViewController
-                            SkillCode: "009"
-                          RowTitle: モーション
-              - RowTitle: 斜めジャンプ小パンチ
-                Next:
-                  Sections:
-                    - Rows:
-                        - RowTitle: 技名
-                          RowDetail: エルボーアタック
-                        - RowTitle: 発生
-                          RowDetail: "4"
-                        - RowTitle: 持続
-                          RowDetail: 着地まで
-                        - RowTitle: 攻撃力
-                          RowDetail: "50"
-                        - RowTitle: スタン値
-                          RowDetail: "7"
-                        - RowTitle: 削減値
-                          RowDetail: "3"
-                    - SectionTitle: ゲージ増加量
-                      Rows:
-                        - RowTitle: 空振り
-                          RowDetail: "0"
-                        - RowTitle: ガード
-                          RowDetail: "1"
-                        - RowTitle: ヒット
-                          RowDetail: "2"
-                        - RowTitle: BL
-                          RowDetail: "4"
-                    - Rows:
-                        - Presented:
-                            SkillName: Jumping Jab
-                            CharacterCode: "12"
-                            ViewController: FramesPlayerViewController
-                            SkillCode: "012"
-                          RowTitle: モーション
-    - RowTitle: ジャンプ中パンチ
-      Next:
-        Sections:
-          - Rows:
-              - RowTitle: 垂直ジャンプ中パンチ
-                Next:
-                  Sections:
-                    - Rows:
-                        - RowTitle: 技名
-                          RowDetail: ストレート
-                        - RowTitle: 発生
-                          RowDetail: "6"
-                        - RowTitle: 持続
-                          RowDetail: "5"
-                        - RowTitle: 攻撃力
-                          RowDetail: "90"
-                        - RowTitle: スタン値
-                          RowDetail: "11"
-                        - RowTitle: 削減値
-                          RowDetail: "3"
-                    - SectionTitle: ゲージ増加量
-                      Rows:
-                        - RowTitle: 空振り
-                          RowDetail: "2"
-                        - RowTitle: ガード
-                          RowDetail: "4"
-                        - RowTitle: ヒット
-                          RowDetail: "8"
-                        - RowTitle: BL
-                          RowDetail: "4"
-                    - Rows:
-                        - Presented:
-                            SkillName: Neutral Jumping Strong
-                            CharacterCode: "12"
-                            ViewController: FramesPlayerViewController
-                            SkillCode: "010"
-                          RowTitle: モーション
-              - RowTitle: 斜めジャンプ中パンチ
-                Next:
-                  Sections:
-                    - Rows:
-                        - RowTitle: 技名
-                          RowDetail: ストレート
-                        - RowTitle: 発生
-                          RowDetail: "5"
-                        - RowTitle: 持続
-                          RowDetail: "5"
-                        - RowTitle: 攻撃力
-                          RowDetail: "90"
-                        - RowTitle: スタン値
-                          RowDetail: "9"
-                        - RowTitle: 削減値
-                          RowDetail: "3"
-                    - SectionTitle: ゲージ増加量
-                      Rows:
-                        - RowTitle: 空振り
-                          RowDetail: "2"
-                        - RowTitle: ガード
-                          RowDetail: "4"
-                        - RowTitle: ヒット
-                          RowDetail: "8"
-                        - RowTitle: BL
-                          RowDetail: "4"
-                    - Rows:
-                        - Presented:
-                            SkillName: Jumping Strong
-                            CharacterCode: "12"
-                            ViewController: FramesPlayerViewController
-                            SkillCode: "013"
-                          RowTitle: モーション
-    - RowTitle: ジャンプ大パンチ
-      Next:
-        Sections:
-          - Rows:
-              - RowTitle: 垂直ジャンプ大パンチ
-                Next:
-                  Sections:
-                    - Rows:
-                        - RowTitle: 技名
-                          RowDetail: チョップ
-                        - RowTitle: 発生
-                          RowDetail: "7"
-                        - RowTitle: 持続
-                          RowDetail: "3"
-                        - RowTitle: 攻撃力
-                          RowDetail: "130"
-                        - RowTitle: スタン値
-                          RowDetail: "15"
-                        - RowTitle: 削減値
-                          RowDetail: "3"
-                    - SectionTitle: ゲージ増加量
-                      Rows:
-                        - RowTitle: 空振り
-                          RowDetail: "3"
-                        - RowTitle: ガード
-                          RowDetail: "6"
-                        - RowTitle: ヒット
-                          RowDetail: "14"
-                        - RowTitle: BL
-                          RowDetail: "4"
-                    - SectionTitle: 補足
-                      Rows:
-                        - RowTitle: スタン値が高く、真横に判定が出るので空対空に使用
-                    - Rows:
-                        - Presented:
-                            SkillName: Neutral Jumping Fierce
-                            CharacterCode: "12"
-                            ViewController: FramesPlayerViewController
-                            SkillCode: "011"
-                          RowTitle: モーション
-              - RowTitle: 斜めジャンプ大パンチ
-                Next:
-                  Sections:
-                    - Rows:
-                        - RowTitle: 技名
-                          RowDetail: ストレート
-                        - RowTitle: 発生
-                          RowDetail: "6"
-                        - RowTitle: 持続
-                          RowDetail: "4"
-                        - RowTitle: 攻撃力
-                          RowDetail: "130"
-                        - RowTitle: スタン値
-                          RowDetail: "13"
-                        - RowTitle: 削減値
-                          RowDetail: "3"
-                    - SectionTitle: ゲージ増加量
-                      Rows:
-                        - RowTitle: 空振り
-                          RowDetail: "3"
-                        - RowTitle: ガード
-                          RowDetail: "6"
-                        - RowTitle: ヒット
-                          RowDetail: "14"
-                        - RowTitle: BL
-                          RowDetail: "4"
-                    - SectionTitle: 補足
-                      Rows:
-                        - RowTitle: 主に飛び込みに使用。ただし打点が高いためしゃがみヒットさせにくい
-                    - Rows:
-                        - Presented:
-                            SkillName: Jumping Fierce
-                            CharacterCode: "12"
-                            ViewController: FramesPlayerViewController
-                            SkillCode: "014"
-                          RowTitle: モーション
-    - RowTitle: ジャンプ小キック
-      Next:
-        Sections:
-          - Rows:
-              - RowTitle: 垂直ジャンプ小キック
-                Next:
-                  Sections:
-                    - Rows:
-                        - RowTitle: 技名
-                          RowDetail: ジャンプニー
-                        - RowTitle: 発生
-                          RowDetail: "5"
-                        - RowTitle: 持続
-                          RowDetail: "19"
-                        - RowTitle: 攻撃力
-                          RowDetail: "50"
-                        - RowTitle: スタン値
-                          RowDetail: "7"
-                        - RowTitle: 削減値
-                          RowDetail: "3"
-                    - SectionTitle: ゲージ増加量
-                      Rows:
-                        - RowTitle: 空振り
-                          RowDetail: "0"
-                        - RowTitle: ガード
-                          RowDetail: "1"
-                        - RowTitle: ヒット
-                          RowDetail: "2"
-                        - RowTitle: BL
-                          RowDetail: "4"
-                    - Rows:
-                        - Presented:
-                            SkillName: Neutral Jumping Short
-                            CharacterCode: "12"
-                            ViewController: FramesPlayerViewController
-                            SkillCode: "022"
-                          RowTitle: モーション
-              - RowTitle: 斜めジャンプ小キック
-                Next:
-                  Sections:
-                    - Rows:
-                        - RowTitle: 技名
-                          RowDetail: ジャンプニー
-                        - RowTitle: 発生
-                          RowDetail: "4"
-                        - RowTitle: 持続
-                          RowDetail: "10"
-                        - RowTitle: 攻撃力
-                          RowDetail: "50"
-                        - RowTitle: スタン値
-                          RowDetail: "5"
-                        - RowTitle: 削減値
-                          RowDetail: "3"
-                    - SectionTitle: ゲージ増加量
-                      Rows:
-                        - RowTitle: 空振り
-                          RowDetail: "0"
-                        - RowTitle: ガード
-                          RowDetail: "1"
-                        - RowTitle: ヒット
-                          RowDetail: "2"
-                        - RowTitle: BL
-                          RowDetail: "4"
-                    - Rows:
-                        - Presented:
-                            SkillName: Jumping Short
-                            CharacterCode: "12"
-                            ViewController: FramesPlayerViewController
-                            SkillCode: "025"
-                          RowTitle: モーション
-    - RowTitle: ジャンプ中キック
-      Next:
-        Sections:
-          - Rows:
-              - RowTitle: 垂直ジャンプ中キック
-                Next:
-                  Sections:
-                    - Rows:
-                        - RowTitle: 技名
-                          RowDetail: フロントキック
-                        - RowTitle: 発生
-                          RowDetail: "5"
-                        - RowTitle: 持続
-                          RowDetail: "6"
-                        - RowTitle: 攻撃力
-                          RowDetail: "90"
-                        - RowTitle: スタン値
-                          RowDetail: "9"
-                        - RowTitle: 削減値
-                          RowDetail: "3"
-                    - SectionTitle: ゲージ増加量
-                      Rows:
-                        - RowTitle: 空振り
-                          RowDetail: "2"
-                        - RowTitle: ガード
-                          RowDetail: "4"
-                        - RowTitle: ヒット
-                          RowDetail: "8"
-                        - RowTitle: BL
-                          RowDetail: "4"
-                    - SectionTitle: 補足
-                      Rows:
-                        - RowTitle: 遠めの空対空に使用
-                    - Rows:
-                        - Presented:
-                            SkillName: Neutral Jumping Forward
-                            CharacterCode: "12"
-                            ViewController: FramesPlayerViewController
-                            SkillCode: "023"
-                          RowTitle: モーション
-              - RowTitle: 斜めジャンプ中キック
-                Next:
-                  Sections:
-                    - Rows:
-                        - RowTitle: 技名
-                          RowDetail: ジャンプキック
-                        - RowTitle: 発生
-                          RowDetail: "5"
-                        - RowTitle: 持続
-                          RowDetail: "6"
-                        - RowTitle: 攻撃力
-                          RowDetail: "90"
-                        - RowTitle: スタン値
-                          RowDetail: "9"
-                        - RowTitle: 削減値
-                          RowDetail: "3"
-                    - SectionTitle: ゲージ増加量
-                      Rows:
-                        - RowTitle: 空振り
-                          RowDetail: "2"
-                        - RowTitle: ガード
-                          RowDetail: "4"
-                        - RowTitle: ヒット
-                          RowDetail: "8"
-                        - RowTitle: BL
-                          RowDetail: "4"
-                    - Rows:
-                        - Presented:
-                            SkillName: Jumping Forward
-                            CharacterCode: "12"
-                            ViewController: FramesPlayerViewController
-                            SkillCode: "026"
-                          RowTitle: モーション
-    - RowTitle: ジャンプ大キック
-      Next:
-        Sections:
-          - Rows:
-              - RowTitle: 垂直ジャンプ大キック
-                Next:
-                  Sections:
-                    - Rows:
-                        - RowTitle: 技名
-                          RowDetail: ラウンドキック
-                        - RowTitle: 発生
-                          RowDetail: "7"
-                        - RowTitle: 持続
-                          RowDetail: "5"
-                        - RowTitle: 攻撃力
-                          RowDetail: "130"
-                        - RowTitle: スタン値
-                          RowDetail: "13"
-                        - RowTitle: 削減値
-                          RowDetail: "3"
-                    - SectionTitle: ゲージ増加量
-                      Rows:
-                        - RowTitle: 空振り
-                          RowDetail: "3"
-                        - RowTitle: ガード
-                          RowDetail: "6"
-                        - RowTitle: ヒット
-                          RowDetail: "14"
-                        - RowTitle: BL
-                          RowDetail: "4"
-                    - SectionTitle: 補足
-                      Rows:
-                        - RowTitle: 真横から斜め上に判定が強いため、空対空に使用
-                    - Rows:
-                        - Presented:
-                            SkillName: Neutral Jumping Roundhouse
-                            CharacterCode: "12"
-                            ViewController: FramesPlayerViewController
-                            SkillCode: "024"
-                          RowTitle: モーション
-              - RowTitle: 斜めジャンプ大キック
-                Next:
-                  Sections:
-                    - Rows:
-                        - RowTitle: 技名
-                          RowDetail: ジャンプキック
-                        - RowTitle: 発生
-                          RowDetail: "6"
-                        - RowTitle: 持続
-                          RowDetail: "4"
-                        - RowTitle: 攻撃力
-                          RowDetail: "110"
-                        - RowTitle: スタン値
-                          RowDetail: "13"
-                        - RowTitle: 削減値
-                          RowDetail: "3"
-                    - SectionTitle: ゲージ増加量
-                      Rows:
-                        - RowTitle: 空振り
-                          RowDetail: "3"
-                        - RowTitle: ガード
-                          RowDetail: "6"
-                        - RowTitle: ヒット
-                          RowDetail: "14"
-                        - RowTitle: BL
-                          RowDetail: "4"
-                    - SectionTitle: 補足
-                      Rows:
-                        - RowTitle: |-
-                            ・主に飛び込みに使用
-                            ・若干のめくり性能あり
-                    - Rows:
-                        - Presented:
-                            SkillName: Jumping Roundhouse
-                            CharacterCode: "12"
-                            ViewController: FramesPlayerViewController
-                            SkillCode: "027"
-                          RowTitle: モーション
-- SectionTitle: 【地上通常技】
-  Rows:
-    - RowTitle: 小パンチ
-      Next:
-        Sections:
-          - Rows:
-              - RowTitle: 近距離立ち小パンチ
-                Next:
-                  Sections:
-                    - Rows:
-                        - RowTitle: 技名
-                          RowDetail: ジャブ
-                        - RowTitle: C/SC
-                          RowDetail: ☆/○
-                        - RowTitle: ガード
-                          RowDetail: 両方
-                        - RowTitle: BL
-                          RowDetail: 両方
-                        - RowTitle: 発生
-                          RowDetail: "3"
-                        - RowTitle: 持続
-                          RowDetail: "2"
-                        - RowTitle: 硬直
-                          RowDetail: "5"
-                        - RowTitle: 攻撃力
-                          RowDetail: "15"
-                        - RowTitle: スタン値
-                          RowDetail: "3"
-                        - RowTitle: 削減値
-                          RowDetail: "15"
-                    - SectionTitle: ゲージ増加量
-                      Rows:
-                        - RowTitle: 空振り
-                          RowDetail: "0"
-                        - RowTitle: ガード
-                          RowDetail: "1"
-                        - RowTitle: ヒット
-                          RowDetail: "2"
-                        - RowTitle: BL
-                          RowDetail: "4"
-                    - SectionTitle: ヒット&ガード硬直時間差
-                      Rows:
-                        - RowTitle: ガード
-                          RowDetail: "+5"
-                        - RowTitle: 立ヒット
-                          RowDetail: "+5"
-                        - RowTitle: 屈ヒット
-                          RowDetail: "+5"
-                    - SectionTitle: 補足
-                      Rows:
-                        - RowTitle: |-
-                            ・小型キャラのしゃがみ&しゃがみ状態が低いキャラには当たらないので注意
-                            ・しゃがみ状態でも当たるキャラはダッドリー、ヒューゴー、ユリアン、Q
-                    - Rows:
-                        - Presented:
-                            SkillName: Jab
-                            CharacterCode: "12"
-                            ViewController: FramesPlayerViewController
-                            SkillCode: "001"
-                          RowTitle: モーション
-              - RowTitle: しゃがみ小パンチ
-                Next:
-                  Sections:
-                    - Rows:
-                        - RowTitle: 技名
-                          RowDetail: ジャブ
-                        - RowTitle: C/SC
-                          RowDetail: ○
-                        - RowTitle: ガード
-                          RowDetail: 両方
-                        - RowTitle: BL
-                          RowDetail: 両方
-                        - RowTitle: 発生
-                          RowDetail: "4"
-                        - RowTitle: 持続
-                          RowDetail: "3"
-                        - RowTitle: 硬直
-                          RowDetail: "5"
-                        - RowTitle: 攻撃力
-                          RowDetail: "15"
-                        - RowTitle: スタン値
-                          RowDetail: "3"
-                        - RowTitle: 削減値
-                          RowDetail: "15"
-                    - SectionTitle: ゲージ増加量
-                      Rows:
-                        - RowTitle: 空振り
-                          RowDetail: "0"
-                        - RowTitle: ガード
-                          RowDetail: "1"
-                        - RowTitle: ヒット
-                          RowDetail: "2"
-                        - RowTitle: BL
-                          RowDetail: "4"
-                    - SectionTitle: ヒット&ガード硬直時間差
-                      Rows:
-                        - RowTitle: ガード
-                          RowDetail: "+3"
-                        - RowTitle: 立ヒット
-                          RowDetail: "+3"
-                        - RowTitle: 屈ヒット
-                          RowDetail: "+3"
-                    - SectionTitle: 補足
-                      Rows:
-                        - RowTitle: |-
-                            ・屈GDと組み合わせて、屈小P×2や屈小P→屈小Kからヒット確認SAを狙うことが出来る
-                            ・ヒットバックが少なく、間合いが離れにくい
-                    - Rows:
-                        - Presented:
-                            SkillName: Crouching Jab
-                            CharacterCode: "12"
-                            ViewController: FramesPlayerViewController
-                            SkillCode: "006"
-                          RowTitle: モーション
-    - RowTitle: 中パンチ
-      Next:
-        Sections:
-          - Rows:
-              - RowTitle: 近距離立ち中パンチ
-                Next:
-                  Sections:
-                    - Rows:
-                        - RowTitle: 技名
-                          RowDetail: ボディブロー
-                        - RowTitle: C/SC
-                          RowDetail: ○
-                        - RowTitle: ガード
-                          RowDetail: 両方
-                        - RowTitle: BL
-                          RowDetail: →
-                        - RowTitle: 発生
-                          RowDetail: "4"
-                        - RowTitle: 持続
-                          RowDetail: "5"
-                        - RowTitle: 硬直
-                          RowDetail: "10"
-                        - RowTitle: 攻撃力
-                          RowDetail: "90"
-                        - RowTitle: スタン値
-                          RowDetail: "9"
-                        - RowTitle: 削減値
-                          RowDetail: "3"
-                    - SectionTitle: ゲージ増加量
-                      Rows:
-                        - RowTitle: 空振り
-                          RowDetail: "2"
-                        - RowTitle: ガード
-                          RowDetail: "4"
-                        - RowTitle: ヒット
-                          RowDetail: "8"
-                        - RowTitle: BL
-                          RowDetail: "4"
-                    - SectionTitle: ヒット&ガード硬直時間差
-                      Rows:
-                        - RowTitle: ガード
-                          RowDetail: "0"
-                        - RowTitle: 立ヒット
-                          RowDetail: "+1"
-                        - RowTitle: 屈ヒット
-                          RowDetail: "+2"
-                    - SectionTitle: 補足
-                      Rows:
-                        - RowTitle: TCで大Kに繋ぐことが可能
-                    - Rows:
-                        - Presented:
-                            SkillName: Strong
-                            CharacterCode: "12"
-                            ViewController: FramesPlayerViewController
-                            SkillCode: "002"
-                          RowTitle: モーション
-              - RowTitle: 遠距離立ち中パンチ
-                Next:
-                  Sections:
-                    - Rows:
-                        - RowTitle: 技名
-                          RowDetail: ストレート
-                        - RowTitle: C/SC
-                          RowDetail: ×
-                        - RowTitle: ガード
-                          RowDetail: 両方
-                        - RowTitle: BL
-                          RowDetail: →
-                        - RowTitle: 発生
-                          RowDetail: "5"
-                        - RowTitle: 持続
-                          RowDetail: "4"
-                        - RowTitle: 硬直
-                          RowDetail: "13"
-                        - RowTitle: 攻撃力
-                          RowDetail: "80"
-                        - RowTitle: スタン値
-                          RowDetail: "11"
-                        - RowTitle: 削減値
-                          RowDetail: "15"
-                    - SectionTitle: ゲージ増加量
-                      Rows:
-                        - RowTitle: 空振り
-                          RowDetail: "2"
-                        - RowTitle: ガード
-                          RowDetail: "4"
-                        - RowTitle: ヒット
-                          RowDetail: "8"
-                        - RowTitle: BL
-                          RowDetail: "4"
-                    - SectionTitle: ヒット&ガード硬直時間差
-                      Rows:
-                        - RowTitle: ガード
-                          RowDetail: "0"
-                        - RowTitle: 立ヒット
-                          RowDetail: "+1"
-                        - RowTitle: 屈ヒット
-                          RowDetail: "+2"
-                    - Rows:
-                        - Presented:
-                            SkillName: Far Strong
-                            CharacterCode: "12"
-                            ViewController: FramesPlayerViewController
-                            SkillCode: "004"
-                          RowTitle: モーション
-              - RowTitle: しゃがみ中パンチ
-                Next:
-                  Sections:
-                    - Rows:
-                        - RowTitle: 技名
-                          RowDetail: ジャブ
-                        - RowTitle: C/SC
-                          RowDetail: ○
-                        - RowTitle: ガード
-                          RowDetail: 両方
-                        - RowTitle: BL
-                          RowDetail: 両方
-                        - RowTitle: 発生
-                          RowDetail: "5"
-                        - RowTitle: 持続
-                          RowDetail: "4"
-                        - RowTitle: 硬直
-                          RowDetail: "7"
-                        - RowTitle: 攻撃力
-                          RowDetail: "80"
-                        - RowTitle: スタン値
-                          RowDetail: "7"
-                        - RowTitle: 削減値
-                          RowDetail: "15"
-                    - SectionTitle: ゲージ増加量
-                      Rows:
-                        - RowTitle: 空振り
-                          RowDetail: "2"
-                        - RowTitle: ガード
-                          RowDetail: "4"
-                        - RowTitle: ヒット
-                          RowDetail: "8"
-                        - RowTitle: BL
-                          RowDetail: "4"
-                    - SectionTitle: ヒット&ガード硬直時間差
-                      Rows:
-                        - RowTitle: ガード
-                          RowDetail: "+3"
-                        - RowTitle: 立ヒット
-                          RowDetail: "+4"
-                        - RowTitle: 屈ヒット
-                          RowDetail: "+5"
-                    - SectionTitle: 補足
-                      Rows:
-                        - RowTitle: "・ゲージをためるのに有効。また判定が強いので相手の技を潰すことも良くある \n・キャンセル猶予時間はSAが11フレーム、必殺技が12フレーム\n・近距離でヒット時、ノーキャンセルでSA1か3に繋ぐ事が可能。その場合、キャンセル猶予時間はSA1が18～19フレーム、SA3が18～20フレーム"
-                    - Rows:
-                        - Presented:
-                            SkillName: Crouching Strong
-                            CharacterCode: "12"
-                            ViewController: FramesPlayerViewController
-                            SkillCode: "007"
-                          RowTitle: モーション
-    - RowTitle: 大パンチ
-      Next:
-        Sections:
-          - Rows:
-              - RowTitle: 近距離立ち大パンチ
-                Next:
-                  Sections:
-                    - Rows:
-                        - RowTitle: 技名
-                          RowDetail: アッパー
-                        - RowTitle: C/SC
-                          RowDetail: ○
-                        - RowTitle: ガード
-                          RowDetail: 両方
-                        - RowTitle: BL
-                          RowDetail: →
-                        - RowTitle: 発生
-                          RowDetail: "5"
-                        - RowTitle: 持続
-                          RowDetail: "5"
-                        - RowTitle: 硬直
-                          RowDetail: "15"
-                        - RowTitle: 攻撃力
-                          RowDetail: "120"
-                        - RowTitle: スタン値
-                          RowDetail: "13"
-                        - RowTitle: 削減値
-                          RowDetail: "15"
-                    - SectionTitle: ゲージ増加量
-                      Rows:
-                        - RowTitle: 空振り
-                          RowDetail: "3"
-                        - RowTitle: ガード
-                          RowDetail: "6"
-                        - RowTitle: ヒット
-                          RowDetail: "14"
-                        - RowTitle: BL
-                          RowDetail: "4"
-                    - SectionTitle: ヒット&ガード硬直時間差
-                      Rows:
-                        - RowTitle: ガード
-                          RowDetail: "-4"
-                        - RowTitle: 立ヒット
-                          RowDetail: "-2"
-                        - RowTitle: 屈ヒット
-                          RowDetail: "0"
-                    - SectionTitle: 補足
-                      Rows:
-                        - RowTitle: |-
-                            ・TCで6大Pに繋ぐことが可能
-                            ・相手をもぐって落とすのに適した技。また対空ヒット時、キャンセル大タックルで裏回り可能
-                            ・キャンセル猶予時間は13フレーム
-                    - Rows:
-                        - Presented:
-                            SkillName: Fierce
-                            CharacterCode: "12"
-                            ViewController: FramesPlayerViewController
-                            SkillCode: "003"
-                          RowTitle: モーション
-              - RowTitle: 遠距離立ち大パンチ
-                Next:
-                  Sections:
-                    - Rows:
-                        - RowTitle: 技名
-                          RowDetail: ルーキーフック
-                        - RowTitle: C/SC
-                          RowDetail: ×
-                        - RowTitle: ガード
-                          RowDetail: 両方
-                        - RowTitle: BL
-                          RowDetail: →
-                        - RowTitle: 発生
-                          RowDetail: "9"
-                        - RowTitle: 持続
-                          RowDetail: "4"
-                        - RowTitle: 硬直
-                          RowDetail: "19"
-                        - RowTitle: 攻撃力
-                          RowDetail: 120(100)
-                        - RowTitle: スタン値
-                          RowDetail: "11"
-                        - RowTitle: 削減値
-                          RowDetail: "3"
-                    - SectionTitle: ゲージ増加量
-                      Rows:
-                        - RowTitle: 空振り
-                          RowDetail: "2"
-                        - RowTitle: ガード
-                          RowDetail: "4"
-                        - RowTitle: ヒット
-                          RowDetail: "8"
-                        - RowTitle: BL
-                          RowDetail: "4"
-                    - SectionTitle: ヒット&ガード硬直時間差
-                      Rows:
-                        - RowTitle: ガード
-                          RowDetail: "-7"
-                        - RowTitle: 立ヒット
-                          RowDetail: "-5"
-                        - RowTitle: 屈ヒット
-                          RowDetail: "-3"
-                    - SectionTitle: 補足
-                      Rows:
-                        - RowTitle: "・見た目よりリーチが長く、遠くまで届いてしゃがんだ相手にも当てる事が可能 \n・画面端で空中ヒット時、SAで追撃可能\n・他の大攻撃と比べ、なぜかSAゲージ増加量が中攻撃のものになっている"
-                    - Rows:
-                        - Presented:
-                            SkillName: Far Fierce
-                            CharacterCode: "12"
-                            ViewController: FramesPlayerViewController
-                            SkillCode: "005"
-                          RowTitle: モーション
-              - RowTitle: しゃがみ大パンチ
-                Next:
-                  Sections:
-                    - Rows:
-                        - RowTitle: 技名
-                          RowDetail: 突き上げアッパー
-                        - RowTitle: C/SC
-                          RowDetail: ○
-                        - RowTitle: ガード
-                          RowDetail: 両方
-                        - RowTitle: BL
-                          RowDetail: 両方
-                        - RowTitle: 発生
-                          RowDetail: "7"
-                        - RowTitle: 持続
-                          RowDetail: "5"
-                        - RowTitle: 硬直
-                          RowDetail: "17"
-                        - RowTitle: 攻撃力
-                          RowDetail: "120"
-                        - RowTitle: スタン値
-                          RowDetail: "13"
-                        - RowTitle: 削減値
-                          RowDetail: "15"
-                    - SectionTitle: ゲージ増加量
-                      Rows:
-                        - RowTitle: 空振り
-                          RowDetail: "3"
-                        - RowTitle: ガード
-                          RowDetail: "6"
-                        - RowTitle: ヒット
-                          RowDetail: "14"
-                        - RowTitle: BL
-                          RowDetail: "4"
-                    - SectionTitle: ヒット&ガード硬直時間差
-                      Rows:
-                        - RowTitle: ガード
-                          RowDetail: "-9"
-                        - RowTitle: 立ヒット
-                          RowDetail: "-7"
-                        - RowTitle: 屈ヒット
-                          RowDetail: "-5"
-                    - SectionTitle: 補足
-                      Rows:
-                        - RowTitle: "・判定が強く、キャンセルもかかり対空にも使用可能\n・技の後半部分はキャンセルをかけることが出来ない \n・技の根元の部分は横に判定が強く、ユリアンの屈中Kなどを一方的に潰す事が可能\n・対空ヒット時、キャンセル大タックルで裏回り可能\n・キャンセル猶予時間は12フレーム"
-                    - Rows:
-                        - Presented:
-                            SkillName: Crouching Fierce
-                            CharacterCode: "12"
-                            ViewController: FramesPlayerViewController
-                            SkillCode: "008"
-                          RowTitle: モーション
-    - RowTitle: 小キック
-      Next:
-        Sections:
-          - Rows:
-              - RowTitle: 立ち小キック
-                Next:
-                  Sections:
-                    - Rows:
-                        - RowTitle: 技名
-                          RowDetail: ローキック
-                        - RowTitle: C/SC
-                          RowDetail: ×
-                        - RowTitle: ガード
-                          RowDetail: 両方
-                        - RowTitle: BL
-                          RowDetail: 両方
-                        - RowTitle: 発生
-                          RowDetail: "4"
-                        - RowTitle: 持続
-                          RowDetail: "4"
-                        - RowTitle: 硬直
-                          RowDetail: "7"
-                        - RowTitle: 攻撃力
-                          RowDetail: "30"
-                        - RowTitle: スタン値
-                          RowDetail: "3"
-                        - RowTitle: 削減値
-                          RowDetail: "15"
-                    - SectionTitle: ゲージ増加量
-                      Rows:
-                        - RowTitle: 空振り
-                          RowDetail: "0"
-                        - RowTitle: ガード
-                          RowDetail: "1"
-                        - RowTitle: ヒット
-                          RowDetail: "2"
-                        - RowTitle: BL
-                          RowDetail: "4"
-                    - SectionTitle: ヒット&ガード硬直時間差
-                      Rows:
-                        - RowTitle: ガード
-                          RowDetail: "+2"
-                        - RowTitle: 立ヒット
-                          RowDetail: "+2"
-                        - RowTitle: 屈ヒット
-                          RowDetail: "+2"
-                    - SectionTitle: 補足
-                      Rows:
-                        - RowTitle: ガードされても有利で、足払い系の技を止めるのに適している
-                    - Rows:
-                        - Presented:
-                            SkillName: Short
-                            CharacterCode: "12"
-                            ViewController: FramesPlayerViewController
-                            SkillCode: "015"
-                          RowTitle: モーション
-              - RowTitle: しゃがみ小キック
-                Next:
-                  Sections:
-                    - Rows:
-                        - RowTitle: 技名
-                          RowDetail: キック
-                        - RowTitle: C/SC
-                          RowDetail: ☆/○
-                        - RowTitle: ガード
-                          RowDetail: 屈
-                        - RowTitle: BL
-                          RowDetail: ↓
-                        - RowTitle: 発生
-                          RowDetail: "5"
-                        - RowTitle: 持続
-                          RowDetail: "3"
-                        - RowTitle: 硬直
-                          RowDetail: "7"
-                        - RowTitle: 攻撃力
-                          RowDetail: "20"
-                        - RowTitle: スタン値
-                          RowDetail: "3"
-                        - RowTitle: 削減値
-                          RowDetail: "15"
-                    - SectionTitle: ゲージ増加量
-                      Rows:
-                        - RowTitle: 空振り
-                          RowDetail: "0"
-                        - RowTitle: ガード
-                          RowDetail: "1"
-                        - RowTitle: ヒット
-                          RowDetail: "2"
-                        - RowTitle: BL
-                          RowDetail: "4"
-                    - SectionTitle: ヒット&ガード硬直時間差
-                      Rows:
-                        - RowTitle: ガード
-                          RowDetail: "+1"
-                        - RowTitle: 立ヒット
-                          RowDetail: "+1"
-                        - RowTitle: 屈ヒット
-                          RowDetail: "+1"
-                    - SectionTitle: 補足
-                      Rows:
-                        - RowTitle: |-
-                            ・近距離下段の主力技。ヒット確認や当ててからのN択が強力
-                            ・連打からSAに繋ぐ事が可能
-                            ・屈小K×2からのキャンセル猶予時間は最遅入力で23フレーム
-                    - Rows:
-                        - Presented:
-                            SkillName: Crouching Short
-                            CharacterCode: "12"
-                            ViewController: FramesPlayerViewController
-                            SkillCode: "019"
-                          RowTitle: モーション
-    - RowTitle: 中キック
-      Next:
-        Sections:
-          - Rows:
-              - RowTitle: 立ち中キック
-                Next:
-                  Sections:
-                    - Rows:
-                        - RowTitle: 技名
-                          RowDetail: ケンセイキック
-                        - RowTitle: C/SC
-                          RowDetail: ×
-                        - RowTitle: ガード
-                          RowDetail: 両方
-                        - RowTitle: BL
-                          RowDetail: 両方
-                        - RowTitle: 発生
-                          RowDetail: "6"
-                        - RowTitle: 持続
-                          RowDetail: "4"
-                        - RowTitle: 硬直
-                          RowDetail: "15"
-                        - RowTitle: 攻撃力
-                          RowDetail: "90"
-                        - RowTitle: スタン値
-                          RowDetail: "5"
-                        - RowTitle: 削減値
-                          RowDetail: "15"
-                    - SectionTitle: ゲージ増加量
-                      Rows:
-                        - RowTitle: 空振り
-                          RowDetail: "2"
-                        - RowTitle: ガード
-                          RowDetail: "4"
-                        - RowTitle: ヒット
-                          RowDetail: "8"
-                        - RowTitle: BL
-                          RowDetail: "4"
-                    - SectionTitle: ヒット&ガード硬直時間差
-                      Rows:
-                        - RowTitle: ガード
-                          RowDetail: "-2"
-                        - RowTitle: 立ヒット
-                          RowDetail: "-1"
-                        - RowTitle: 屈ヒット
-                          RowDetail: "0"
-                    - SectionTitle: 補足
-                      Rows:
-                        - RowTitle: 相手の足払い系の技や牽制の屈中Pなどを潰し易い
-                    - Rows:
-                        - Presented:
-                            SkillName: Forward
-                            CharacterCode: "12"
-                            ViewController: FramesPlayerViewController
-                            SkillCode: "016"
-                          RowTitle: モーション
-              - RowTitle: しゃがみ中キック
-                Next:
-                  Sections:
-                    - Rows:
-                        - RowTitle: 技名
-                          RowDetail: クルブシキック
-                        - RowTitle: C/SC
-                          RowDetail: ○
-                        - RowTitle: ガード
-                          RowDetail: 屈
-                        - RowTitle: BL
-                          RowDetail: ↓
-                        - RowTitle: 発生
-                          RowDetail: "7"
-                        - RowTitle: 持続
-                          RowDetail: "5"
-                        - RowTitle: 硬直
-                          RowDetail: "17"
-                        - RowTitle: 攻撃力
-                          RowDetail: "70"
-                        - RowTitle: スタン値
-                          RowDetail: "3"
-                        - RowTitle: 削減値
-                          RowDetail: "15"
-                    - SectionTitle: ゲージ増加量
-                      Rows:
-                        - RowTitle: 空振り
-                          RowDetail: "2"
-                        - RowTitle: ガード
-                          RowDetail: "4"
-                        - RowTitle: ヒット
-                          RowDetail: "8"
-                        - RowTitle: BL
-                          RowDetail: "4"
-                    - SectionTitle: ヒット&ガード硬直時間差
-                      Rows:
-                        - RowTitle: ガード
-                          RowDetail: "-4"
-                        - RowTitle: 立ヒット
-                          RowDetail: "-3"
-                        - RowTitle: 屈ヒット
-                          RowDetail: "-2"
-                    - SectionTitle: 補足
-                      Rows:
-                        - RowTitle: |-
-                            ・リーチもありキャンセルもかかる優秀な技。この技を起点に攻めを組み立てたりする
-                            ・キャンセル猶予時間は13フレーム
-                    - Rows:
-                        - Presented:
-                            SkillName: Crouching Forward
-                            CharacterCode: "12"
-                            ViewController: FramesPlayerViewController
-                            SkillCode: "020"
-                          RowTitle: モーション
-    - RowTitle: 大キック
-      Next:
-        Sections:
-          - Rows:
-              - RowTitle: 近距離立ち大キック
-                Next:
-                  Sections:
-                    - Rows:
-                        - RowTitle: 技名
-                          RowDetail: ニーキック
-                        - RowTitle: C/SC
-                          RowDetail: ○
-                        - RowTitle: ガード
-                          RowDetail: 両方
-                        - RowTitle: BL
-                          RowDetail: →
-                        - RowTitle: 発生
-                          RowDetail: "5"
-                        - RowTitle: 持続
-                          RowDetail: "5"
-                        - RowTitle: 硬直
-                          RowDetail: "10"
-                        - RowTitle: 攻撃力
-                          RowDetail: "145"
-                        - RowTitle: スタン値
-                          RowDetail: "11"
-                        - RowTitle: 削減値
-                          RowDetail: "15"
-                    - SectionTitle: ゲージ増加量
-                      Rows:
-                        - RowTitle: 空振り
-                          RowDetail: "3"
-                        - RowTitle: ガード
-                          RowDetail: "6"
-                        - RowTitle: ヒット
-                          RowDetail: "14"
-                        - RowTitle: BL
-                          RowDetail: "4"
-                    - SectionTitle: ヒット&ガード硬直時間差
-                      Rows:
-                        - RowTitle: ガード
-                          RowDetail: "+2"
-                        - RowTitle: 立ヒット
-                          RowDetail: "+4"
-                        - RowTitle: 屈ヒット
-                          RowDetail: "+6"
-                    - SectionTitle: 補足
-                      Rows:
-                        - RowTitle: |-
-                            ・近距離戦での主力技。識間合いが広く判定も強い
-                            ・キャンセル猶予時間は15フレーム
-                            ・ヒット時、ノーキャンセルでSA1か3に繋ぐ事が可能。。その場合、キャンセル猶予時間は25～26フレーム
-                            　ただしSA1はキャラ限定あり(しゃがみヒットなら全キャラOK)
-                    - Rows:
-                        - Presented:
-                            SkillName: Roundhouse
-                            CharacterCode: "12"
-                            ViewController: FramesPlayerViewController
-                            SkillCode: "017"
-                          RowTitle: モーション
-              - RowTitle: 遠距離立ち大キック
-                Next:
-                  Sections:
-                    - Rows:
-                        - RowTitle: 技名
-                          RowDetail: マスターズキック
-                        - RowTitle: C/SC
-                          RowDetail: ×
-                        - RowTitle: ガード
-                          RowDetail: 両方
-                        - RowTitle: BL
-                          RowDetail: →
-                        - RowTitle: 発生
-                          RowDetail: "7"
-                        - RowTitle: 持続
-                          RowDetail: "4"
-                        - RowTitle: 硬直
-                          RowDetail: "26"
-                        - RowTitle: 攻撃力
-                          RowDetail: 120(100)
-                        - RowTitle: スタン値
-                          RowDetail: 11(9)
-                        - RowTitle: 削減値
-                          RowDetail: "3"
-                    - SectionTitle: ゲージ増加量
-                      Rows:
-                        - RowTitle: 空振り
-                          RowDetail: "3"
-                        - RowTitle: ガード
-                          RowDetail: "6"
-                        - RowTitle: ヒット
-                          RowDetail: "14"
-                        - RowTitle: BL
-                          RowDetail: "4"
-                    - SectionTitle: ヒット&ガード硬直時間差
-                      Rows:
-                        - RowTitle: ガード
-                          RowDetail: "-9"
-                        - RowTitle: 立ヒット
-                          RowDetail: "-7"
-                        - RowTitle: 屈ヒット
-                          RowDetail: "-5"
-                    - SectionTitle: 補足
-                      Rows:
-                        - RowTitle: |-
-                            ・攻撃力とスタン値欄のカッコ内の数値は技の後半部分のもの
-                            ・足先の判定が強いので、主に対空に使用
-                    - Rows:
-                        - Presented:
-                            SkillName: Far Roundhouse
-                            CharacterCode: "12"
-                            ViewController: FramesPlayerViewController
-                            SkillCode: "018"
-                          RowTitle: モーション
-              - RowTitle: しゃがみ大キック
-                Next:
-                  Sections:
-                    - Rows:
-                        - RowTitle: 技名
-                          RowDetail: アシバライ
-                        - RowTitle: C/SC
-                          RowDetail: ×
-                        - RowTitle: ガード
-                          RowDetail: 屈
-                        - RowTitle: BL
-                          RowDetail: ↓
-                        - RowTitle: 発生
-                          RowDetail: "8"
-                        - RowTitle: 持続
-                          RowDetail: "5"
-                        - RowTitle: 硬直
-                          RowDetail: "26"
-                        - RowTitle: 攻撃力
-                          RowDetail: "120"
-                        - RowTitle: スタン値
-                          RowDetail: "3"
-                        - RowTitle: 削減値
-                          RowDetail: "15"
-                    - SectionTitle: ゲージ増加量
-                      Rows:
-                        - RowTitle: 空振り
-                          RowDetail: "3"
-                        - RowTitle: ガード
-                          RowDetail: "6"
-                        - RowTitle: ヒット
-                          RowDetail: "14"
-                        - RowTitle: BL
-                          RowDetail: "4"
-                    - SectionTitle: ヒット&ガード硬直時間差
-                      Rows:
-                        - RowTitle: ガード
-                          RowDetail: -16(-13)
-                        - RowTitle: 立ヒット
-                          RowDetail: ダウン
-                        - RowTitle: 屈ヒット
-                          RowDetail: ダウン
-                    - SectionTitle: 補足
-                      Rows:
-                        - RowTitle: |-
-                            ・ヒット&ガード硬直時間差のカッコ内の数値は持続当てした時のもの
-                            ・リーチが長く、ヒット時相手をダウンさせる事ができる。ただし隙が大きめなので注意
-                            ・先端を当てるように使用すると反撃を受けにくいが、確定反撃を持つキャラには注意
-                    - Rows:
-                        - Presented:
-                            SkillName: Crouching Roundhouse
-                            CharacterCode: "12"
-                            ViewController: FramesPlayerViewController
-                            SkillCode: "021"
-                          RowTitle: モーション
-- SectionTitle: 【特殊入力技】
-  Rows:
-    - RowTitle: 通常投げ
-      Next:
-        Sections:
-          - Rows:
-              - RowTitle: セオイスルー
-                Next:
-                  Sections:
-                    - Rows:
-                        - RowTitle: 技名
-                          RowDetail: セオイスルー
-                        - RowTitle: コマンド
-                          RowDetail: |-
-                            小P+小K
-                            →+小P+小K
-                        - RowTitle: 発生
-                          RowDetail: "2"
-                        - RowTitle: 持続
-                          RowDetail: "1"
-                        - RowTitle: 硬直
-                          RowDetail: "21"
-                        - RowTitle: 攻撃力
-                          RowDetail: "120"
-                        - RowTitle: スタン値
-                          RowDetail: "11"
-                        - RowTitle: 投げ間合い
-                          RowDetail: "20"
-                    - SectionTitle: ゲージ増加量
-                      Rows:
-                        - RowTitle: 空振り時
-                          RowDetail: "0"
-                        - RowTitle: 投げ成功時
-                          RowDetail: "7"
-                    - SectionTitle: 補足
-                      Rows:
-                        - RowTitle: |-
-                            ・硬直は投げ失敗時のフレーム
-                            ・投げた後、ほぼ距離が離れないため起き攻めがしやすい
-                    - Rows:
-                        - Presented:
-                            SkillName: Throw
-                            CharacterCode: "12"
-                            ViewController: FramesPlayerViewController
-                            SkillCode: "030"
-                          RowTitle: モーション
-              - RowTitle: トモエスルー
-                Next:
-                  Sections:
-                    - Rows:
-                        - RowTitle: 技名
-                          RowDetail: トモエスルー
-                        - RowTitle: コマンド
-                          RowDetail: ←+小P+小K
-                        - RowTitle: 発生
-                          RowDetail: "2"
-                        - RowTitle: 持続
-                          RowDetail: "1"
-                        - RowTitle: 硬直
-                          RowDetail: "21"
-                        - RowTitle: 攻撃力
-                          RowDetail: "140"
-                        - RowTitle: スタン値
-                          RowDetail: "5"
-                        - RowTitle: 投げ間合い
-                          RowDetail: "20"
-                    - SectionTitle: ゲージ増加量
-                      Rows:
-                        - RowTitle: 空振り時
-                          RowDetail: "0"
-                        - RowTitle: 投げ成功時
-                          RowDetail: "7"
-                    - SectionTitle: 補足
-                      Rows:
-                        - RowTitle: "・硬直は投げ失敗時のフレーム \n・相手と場所を入れ替える事が可能。また距離が離れるが、端に追い込みやすい"
-                    - Rows:
-                        - Presented:
-                            SkillName: Back + Throw
-                            CharacterCode: "12"
-                            ViewController: FramesPlayerViewController
-                            SkillCode: "031"
-                          RowTitle: モーション
-    - RowTitle: リープアタック
-      Next:
-        Sections:
-          - Rows:
-              - RowTitle: 技名
-                RowDetail: ストレート
-              - RowTitle: コマンド
-                RowDetail: 中P+中K
-              - RowTitle: C/SC
-                RowDetail: ×
-              - RowTitle: ガード
-                RowDetail: 立
-              - RowTitle: BL
-                RowDetail: →
-              - RowTitle: 発生
-                RowDetail: "15"
-              - RowTitle: 持続
-                RowDetail: "8"
-              - RowTitle: 硬直
-                RowDetail: "7"
-              - RowTitle: 攻撃力
-                RowDetail: "40"
-              - RowTitle: スタン値
-                RowDetail: "3"
-              - RowTitle: 削減値
-                RowDetail: "1"
-          - SectionTitle: ゲージ増加量
-            Rows:
-              - RowTitle: 空振り
-                RowDetail: "0"
-              - RowTitle: ガード
-                RowDetail: "1"
-              - RowTitle: ヒット
-                RowDetail: "2"
-              - RowTitle: BL
-                RowDetail: "4"
-          - SectionTitle: ヒット&ガード硬直時間差
-            Rows:
-              - RowTitle: ガード
-                RowDetail: -5～+7
-              - RowTitle: 立ヒット
-                RowDetail: 0～+8
-              - RowTitle: 屈ヒット
-                RowDetail: +1～+9
-          - SectionTitle: 補足
-            Rows:
-              - RowTitle: |-
-                  ・コマンド完成後、5フレーム目から空中判定に移行
-                  ・技の下りを当てることで、SAや発生の速い通常技に繋ぐことが可能
-          - Rows:
-              - Presented:
-                  SkillName: Universal Overhead
-                  CharacterCode: "12"
-                  ViewController: FramesPlayerViewController
-                  SkillCode: "032"
-                RowTitle: モーション
-    - RowTitle: パーソナルアクション
-      Next:
-        Sections:
-          - Rows:
-              - RowTitle: 技名
-                RowDetail: ボールを投げる
-              - RowTitle: コマンド
-                RowDetail: 大P+大K
-              - RowTitle: C/SC
-                RowDetail: ×
-              - RowTitle: ガード
-                RowDetail: 両方
-              - RowTitle: BL
-                RowDetail: 両方
-              - RowTitle: 発生
-                RowDetail: "30"
-              - RowTitle: 持続
-                RowDetail: "1"
-              - RowTitle: 硬直
-                RowDetail: "20"
-              - RowTitle: 攻撃力
-                RowDetail: "5"
-              - RowTitle: スタン値
-                RowDetail: "0"
-              - RowTitle: ゲージ増加
-                RowDetail: 4(6)
-              - RowTitle: 削減値
-                RowDetail: "1"
-          - SectionTitle: 効果
-            Rows:
-              - RowTitle: |-
-                  ・直後に出した全ての攻撃のスタン値アップ
-                  ・ただしボールを投げた時に限り有効
-          - SectionTitle: 補足
-            Rows:
-              - RowTitle: |-
-                  ・飛び道具。ボールに攻撃判定、ケズリ能力あり
-                  ・コマンド完成後、6フレーム目から空中判定に移行
-                  ・ボールは通常技で撃墜可能
-                  ・ボールの判定が画面内に残っている間は次のボールは投げれない
-          - Rows:
-              - Presented:
-                  SkillName: Taunt
-                  CharacterCode: "12"
-                  ViewController: FramesPlayerViewController
-                  SkillCode: "033"
-                RowTitle: モーション
-    - RowTitle: レバー入れ技
-      Next:
-        Sections:
-          - Rows:
-              - RowTitle: ショーンパチキ
-                Next:
-                  Sections:
-                    - Rows:
-                        - RowTitle: 技名
-                          RowDetail: ショーンパチキ
-                        - RowTitle: コマンド
-                          RowDetail: 6+大P
-                        - RowTitle: C/SC
-                          RowDetail: ×
-                        - RowTitle: ガード
-                          RowDetail: 立・立
-                        - RowTitle: BL
-                          RowDetail: →・→
-                        - RowTitle: 発生
-                          RowDetail: "21"
-                        - RowTitle: 持続
-                          RowDetail: 2・5
-                        - RowTitle: 硬直
-                          RowDetail: 22(25)
-                        - RowTitle: 攻撃力
-                          RowDetail: 140(60+80)
-                        - RowTitle: スタン値
-                          RowDetail: 14(7+7)
-                        - RowTitle: 削減値
-                          RowDetail: 3・3
-                    - SectionTitle: ゲージ増加量
-                      Rows:
-                        - RowTitle: 空振り
-                          RowDetail: "3"
-                        - RowTitle: ガード
-                          RowDetail: 5(4+1)
-                        - RowTitle: ヒット
-                          RowDetail: 14(12+2)
-                        - RowTitle: BL
-                          RowDetail: 8(4+4)
-                    - SectionTitle: ヒット&ガード硬直時間差
-                      Rows:
-                        - RowTitle: ガード
-                          RowDetail: "-6"
-                        - RowTitle: 立ヒット
-                          RowDetail: "-4"
-                        - RowTitle: 屈ヒット
-                          RowDetail: "-2"
-                    - SectionTitle: 補足
-                      Rows:
-                        - RowTitle: |-
-                            ・硬直欄のカッコ内の数値は空振り時のもの
-                            ・移動投げに使用
-                    - Rows:
-                        - Presented:
-                            SkillName: Towards + Fierce
-                            CharacterCode: "12"
-                            ViewController: FramesPlayerViewController
-                            SkillCode: "028"
-                          RowTitle: モーション
-              - RowTitle: ローリングソバット
-                Next:
-                  Sections:
-                    - Rows:
-                        - RowTitle: 技名
-                          RowDetail: ローリングソバット
-                        - RowTitle: コマンド
-                          RowDetail: 6+大K
-                        - RowTitle: C/SC
-                          RowDetail: ×
-                        - RowTitle: ガード
-                          RowDetail: 両方
-                        - RowTitle: BL
-                          RowDetail: →
-                        - RowTitle: 発生
-                          RowDetail: "15"
-                        - RowTitle: 持続
-                          RowDetail: "5"
-                        - RowTitle: 硬直
-                          RowDetail: "18"
-                        - RowTitle: 攻撃力
-                          RowDetail: 90(70)
-                        - RowTitle: スタン値
-                          RowDetail: "9"
-                        - RowTitle: 削減値
-                          RowDetail: "3"
-                    - SectionTitle: ゲージ増加量
-                      Rows:
-                        - RowTitle: 空振り
-                          RowDetail: "2"
-                        - RowTitle: ガード
-                          RowDetail: "4"
-                        - RowTitle: ヒット
-                          RowDetail: "8"
-                        - RowTitle: BL
-                          RowDetail: "4"
-                    - SectionTitle: ヒット&ガード硬直時間差
-                      Rows:
-                        - RowTitle: ガード
-                          RowDetail: "-5"
-                        - RowTitle: 立ヒット
-                          RowDetail: ダウン
-                        - RowTitle: 屈ヒット
-                          RowDetail: ダウン
-                    - SectionTitle: 補足
-                      Rows:
-                        - RowTitle: |-
-                            ・攻撃力欄のカッコ内の数値は技の後半部分のもの
-                            ・コマンド完成後、6フレーム目から空中判定に移行
-                            ・下段技を避ける事が可能。ただし、しゃがんだ相手(ヒューゴー以外)に当たらないため使いにくい
-                            ・ヒット時、ダウン属性だが相手が空中で復帰する特殊な技
-                            ・画面中央でヒット時、一部のキャラにSA1で追撃可能。また画面端ならSA2で追撃も可能。ただしどちらも空中BL可能
-                    - Rows:
-                        - Presented:
-                            SkillName: Towards + Roundhouse
-                            CharacterCode: "12"
-                            ViewController: FramesPlayerViewController
-                            SkillCode: "029"
-                          RowTitle: モーション
-    - RowTitle: ターゲットコンボ
-      Next:
-        Sections:
-          - Rows:
-              - RowTitle: 近立中P→立大K
-                Next:
-                  Sections:
-                    - Rows:
-                        - RowTitle: 入力
-                          RowDetail: 近立中P→立大K
-                        - RowTitle: C
-                          RowDetail: ○/×
-                        - RowTitle: SC
-                          RowDetail: ○/×
-                        - RowTitle: ガード
-                          RowDetail: 両方/両方
-                        - RowTitle: BL
-                          RowDetail: →/→
-                        - RowTitle: 攻撃力
-                          RowDetail: 90/50
-                        - RowTitle: スタン値
-                          RowDetail: 9/3
-                        - RowTitle: 削減値
-                          RowDetail: 3/1
-                    - SectionTitle: ヒット&ガード硬直時間差
-                      Rows:
-                        - RowTitle: ガード
-                          RowDetail: "-2"
-                        - RowTitle: 立ヒット
-                          RowDetail: "0"
-                        - RowTitle: 屈ヒット
-                          RowDetail: "+2"
-                    - SectionTitle: 補足
-                      Rows:
-                        - RowTitle: "・2段目はしゃがんだユン、ヤンに当たらない。また大Kをディレイで出すといぶき、まことも当たらくなるので要注意 \n・空中ヒット時、一部のキャラにSA1で追撃可能。また画面端ならダッシュからのSA2で追撃も可能。ただしどちらも空中BL可能"
-              - RowTitle: 近立大P→6+大P
-                Next:
-                  Sections:
-                    - Rows:
-                        - RowTitle: 入力
-                          RowDetail: 近立大P→6+大P
-                        - RowTitle: C
-                          RowDetail: ○/×
-                        - RowTitle: SC
-                          RowDetail: ○/×
-                        - RowTitle: ガード
-                          RowDetail: 両方/立・立
-                        - RowTitle: BL
-                          RowDetail: →/→・→
-                        - RowTitle: 攻撃力
-                          RowDetail: 120/50+60
-                        - RowTitle: スタン値
-                          RowDetail: 13/5+3
-                        - RowTitle: 削減値
-                          RowDetail: 15/3・3
-                    - SectionTitle: ヒット&ガード硬直時間差
-                      Rows:
-                        - RowTitle: ガード
-                          RowDetail: "-6"
-                        - RowTitle: 立ヒット
-                          RowDetail: "-4"
-                        - RowTitle: 屈ヒット
-                          RowDetail: "-2"
-                    - SectionTitle: 補足
-                      Rows:
-                        - RowTitle: TCではあるが連係のため、繋がらない
-- SectionTitle: 【必殺技】
-  Rows:
-    - RowTitle: ショーンタックル
-      Next:
-        Sections:
-          - Rows:
-              - RowTitle: ショーンタックル【小】
-                Next:
-                  Sections:
-                    - Rows:
-                        - RowTitle: 技名
-                          RowDetail: ショーンタックル【小】
-                        - RowTitle: コマンド
-                          RowDetail: 41236+小P後、P押しっぱなし
-                        - RowTitle: SC
-                          RowDetail: ×
-                        - RowTitle: ガード
-                          RowDetail: 屈
-                        - RowTitle: BL
-                          RowDetail: ↓
-                        - RowTitle: 発生
-                          RowDetail: "18"
-                        - RowTitle: 持続
-                          RowDetail: "2"
-                        - RowTitle: 硬直
-                          RowDetail: "28"
-                        - RowTitle: 攻撃力
-                          RowDetail: "180"
-                        - RowTitle: ケズリ
-                          RowDetail: ―
-                        - RowTitle: スタン値
-                          RowDetail: "18"
-                        - RowTitle: 削減値
-                          RowDetail: ―
-                    - SectionTitle: ゲージ増加量
-                      Rows:
-                        - RowTitle: 空振り
-                          RowDetail: "2"
-                        - RowTitle: ガード
-                          RowDetail: "4"
-                        - RowTitle: ヒット
-                          RowDetail: "8"
-                        - RowTitle: BL
-                          RowDetail: "4"
-                    - SectionTitle: ヒット&ガード硬直時間差
-                      Rows:
-                        - RowTitle: ガード
-                          RowDetail: "-14"
-                        - RowTitle: 立ヒット
-                          RowDetail: ダウン
-                        - RowTitle: 屈ヒット
-                          RowDetail: ダウン
-                    - Rows:
-                        - Presented:
-                            SkillName: Tackle (All Versions)
-                            CharacterCode: "12"
-                            ViewController: FramesPlayerViewController
-                            SkillCode: "045"
-                          RowTitle: モーション
-              - RowTitle: ショーンタックル【中】
-                Next:
-                  Sections:
-                    - Rows:
-                        - RowTitle: 技名
-                          RowDetail: ショーンタックル【中】
-                        - RowTitle: コマンド
-                          RowDetail: 41236+中P後、P押しっぱなし
-                        - RowTitle: SC
-                          RowDetail: ×
-                        - RowTitle: ガード
-                          RowDetail: 屈
-                        - RowTitle: BL
-                          RowDetail: ↓
-                        - RowTitle: 発生
-                          RowDetail: "22"
-                        - RowTitle: 持続
-                          RowDetail: "2"
-                        - RowTitle: 硬直
-                          RowDetail: "28"
-                        - RowTitle: 攻撃力
-                          RowDetail: "180"
-                        - RowTitle: ケズリ
-                          RowDetail: ―
-                        - RowTitle: スタン値
-                          RowDetail: "18"
-                        - RowTitle: 削減値
-                          RowDetail: ―
-                    - SectionTitle: ゲージ増加量
-                      Rows:
-                        - RowTitle: 空振り
-                          RowDetail: "2"
-                        - RowTitle: ガード
-                          RowDetail: "4"
-                        - RowTitle: ヒット
-                          RowDetail: "8"
-                        - RowTitle: BL
-                          RowDetail: "4"
-                    - SectionTitle: ヒット&ガード硬直時間差
-                      Rows:
-                        - RowTitle: ガード
-                          RowDetail: "-14"
-                        - RowTitle: 立ヒット
-                          RowDetail: ダウン
-                        - RowTitle: 屈ヒット
-                          RowDetail: ダウン
-                    - Rows:
-                        - Presented:
-                            SkillName: Tackle (All Versions)
-                            CharacterCode: "12"
-                            ViewController: FramesPlayerViewController
-                            SkillCode: "045"
-                          RowTitle: モーション
-              - RowTitle: ショーンタックル【大】
-                Next:
-                  Sections:
-                    - Rows:
-                        - RowTitle: 技名
-                          RowDetail: ショーンタックル【大】
-                        - RowTitle: コマンド
-                          RowDetail: 41236+大P後、P押しっぱなし
-                        - RowTitle: SC
-                          RowDetail: ×
-                        - RowTitle: ガード
-                          RowDetail: 屈
-                        - RowTitle: BL
-                          RowDetail: ↓
-                        - RowTitle: 発生
-                          RowDetail: "26"
-                        - RowTitle: 持続
-                          RowDetail: "2"
-                        - RowTitle: 硬直
-                          RowDetail: "28"
-                        - RowTitle: 攻撃力
-                          RowDetail: "180"
-                        - RowTitle: ケズリ
-                          RowDetail: ―
-                        - RowTitle: スタン値
-                          RowDetail: "18"
-                        - RowTitle: 削減値
-                          RowDetail: ―
-                    - SectionTitle: ゲージ増加量
-                      Rows:
-                        - RowTitle: 空振り
-                          RowDetail: "2"
-                        - RowTitle: ガード
-                          RowDetail: "4"
-                        - RowTitle: ヒット
-                          RowDetail: "8"
-                        - RowTitle: BL
-                          RowDetail: "4"
-                    - SectionTitle: ヒット&ガード硬直時間差
-                      Rows:
-                        - RowTitle: ガード
-                          RowDetail: "-14"
-                        - RowTitle: 立ヒット
-                          RowDetail: ダウン
-                        - RowTitle: 屈ヒット
-                          RowDetail: ダウン
-                    - Rows:
-                        - Presented:
-                            SkillName: Tackle (All Versions)
-                            CharacterCode: "12"
-                            ViewController: FramesPlayerViewController
-                            SkillCode: "045"
-                          RowTitle: モーション
-              - RowTitle: ショーンタックル【EX】
-                Next:
-                  Sections:
-                    - Rows:
-                        - RowTitle: 技名
-                          RowDetail: ショーンタックル【EX】
-                        - RowTitle: コマンド
-                          RowDetail: 41236+PP後、P押しっぱなし
-                        - RowTitle: SC
-                          RowDetail: ×
-                        - RowTitle: ガード
-                          RowDetail: 屈
-                        - RowTitle: BL
-                          RowDetail: ↓
-                        - RowTitle: 発生
-                          RowDetail: "28"
-                        - RowTitle: 持続
-                          RowDetail: "2"
-                        - RowTitle: 硬直
-                          RowDetail: "28"
-                        - RowTitle: 攻撃力
-                          RowDetail: "260"
-                        - RowTitle: ケズリ
-                          RowDetail: ―
-                        - RowTitle: スタン値
-                          RowDetail: "25"
-                        - RowTitle: 削減値
-                          RowDetail: ―
-                    - SectionTitle: ゲージ増加量
-                      Rows:
-                        - RowTitle: 空振り
-                          RowDetail: ―
-                        - RowTitle: ガード
-                          RowDetail: ―
-                        - RowTitle: ヒット
-                          RowDetail: ―
-                        - RowTitle: BL
-                          RowDetail: "4"
-                    - SectionTitle: ヒット&ガード硬直時間差
-                      Rows:
-                        - RowTitle: ガード
-                          RowDetail: "-14"
-                        - RowTitle: 立ヒット
-                          RowDetail: ダウン
-                        - RowTitle: 屈ヒット
-                          RowDetail: ダウン
-                    - Rows:
-                        - Presented:
-                            SkillName: Tackle (EX)
-                            CharacterCode: "12"
-                            ViewController: FramesPlayerViewController
-                            SkillCode: "046"
-                          RowTitle: モーション
-          - Rows:
-              - RowTitle: 補足
-                Next:
-                  Sections:
-                    - Rows:
-                        - RowTitle: |-
-                            ・ボタンにより移動距離が変化。ボタンを押し続けると下段ガード・BL可能のつかみ投げに移行
-                            ・硬直は失敗時のもの
-                            ・投げ失敗時の隙が大きいため、基本的に通常技キャンセルで出し、移動技として使用する
-                            ・426＋Pの簡易コマンドでも出す事が可能
-    - RowTitle: ドラゴンスマッシュ
-      Next:
-        Sections:
-          - Rows:
-              - RowTitle: ドラゴンスマッシュ【小】
-                Next:
-                  Sections:
-                    - Rows:
-                        - RowTitle: 技名
-                          RowDetail: ドラゴンスマッシュ【小】
-                        - RowTitle: コマンド
-                          RowDetail: 623+小P
-                        - RowTitle: SC
-                          RowDetail: ○
-                        - RowTitle: ガード
-                          RowDetail: 両方
-                        - RowTitle: BL
-                          RowDetail: →
-                        - RowTitle: 発生
-                          RowDetail: "5"
-                        - RowTitle: 持続
-                          RowDetail: "6"
-                        - RowTitle: 硬直
-                          RowDetail: "36"
-                        - RowTitle: 攻撃力
-                          RowDetail: 130(90)
-                        - RowTitle: ケズリ
-                          RowDetail: "16"
-                        - RowTitle: スタン値
-                          RowDetail: 11(7)
-                        - RowTitle: 削減値
-                          RowDetail: "3"
-                    - SectionTitle: ゲージ増加量
-                      Rows:
-                        - RowTitle: 空振り
-                          RowDetail: "2"
-                        - RowTitle: ガード
-                          RowDetail: "4"
-                        - RowTitle: ヒット
-                          RowDetail: "8"
-                        - RowTitle: BL
-                          RowDetail: "4"
-                    - SectionTitle: ヒット&ガード硬直時間差
-                      Rows:
-                        - RowTitle: ガード
-                          RowDetail: "-24"
-                        - RowTitle: 立ヒット
-                          RowDetail: ダウン
-                        - RowTitle: 屈ヒット
-                          RowDetail: ダウン
-                    - Rows:
-                        - Presented:
-                            SkillName: Dragon Smash (Jab)
-                            CharacterCode: "12"
-                            ViewController: FramesPlayerViewController
-                            SkillCode: "047"
-                          RowTitle: モーション
-              - RowTitle: ドラゴンスマッシュ【中】
-                Next:
-                  Sections:
-                    - Rows:
-                        - RowTitle: 技名
-                          RowDetail: ドラゴンスマッシュ【中】
-                        - RowTitle: コマンド
-                          RowDetail: 623+中P
-                        - RowTitle: SC
-                          RowDetail: ○
-                        - RowTitle: ガード
-                          RowDetail: 両方
-                        - RowTitle: BL
-                          RowDetail: →
-                        - RowTitle: 発生
-                          RowDetail: "7"
-                        - RowTitle: 持続
-                          RowDetail: "8"
-                        - RowTitle: 硬直
-                          RowDetail: "39"
-                        - RowTitle: 攻撃力
-                          RowDetail: 130(90)
-                        - RowTitle: ケズリ
-                          RowDetail: "16"
-                        - RowTitle: スタン値
-                          RowDetail: 11(7)
-                        - RowTitle: 削減値
-                          RowDetail: "3"
-                    - SectionTitle: ゲージ増加量
-                      Rows:
-                        - RowTitle: 空振り
-                          RowDetail: "2"
-                        - RowTitle: ガード
-                          RowDetail: "4"
-                        - RowTitle: ヒット
-                          RowDetail: "8"
-                        - RowTitle: BL
-                          RowDetail: "4"
-                    - SectionTitle: ヒット&ガード硬直時間差
-                      Rows:
-                        - RowTitle: ガード
-                          RowDetail: "-30"
-                        - RowTitle: 立ヒット
-                          RowDetail: ダウン
-                        - RowTitle: 屈ヒット
-                          RowDetail: ダウン
-                    - Rows:
-                        - Presented:
-                            SkillName: Dragon Smash (Strong)
-                            CharacterCode: "12"
-                            ViewController: FramesPlayerViewController
-                            SkillCode: "048"
-                          RowTitle: モーション
-              - RowTitle: ドラゴンスマッシュ【大】
-                Next:
-                  Sections:
-                    - Rows:
-                        - RowTitle: 技名
-                          RowDetail: ドラゴンスマッシュ【大】
-                        - RowTitle: コマンド
-                          RowDetail: 623+大P
-                        - RowTitle: SC
-                          RowDetail: ○
-                        - RowTitle: ガード
-                          RowDetail: 両方
-                        - RowTitle: BL
-                          RowDetail: →
-                        - RowTitle: 発生
-                          RowDetail: "9"
-                        - RowTitle: 持続
-                          RowDetail: "9"
-                        - RowTitle: 硬直
-                          RowDetail: "42"
-                        - RowTitle: 攻撃力
-                          RowDetail: 130(90)
-                        - RowTitle: ケズリ
-                          RowDetail: "16"
-                        - RowTitle: スタン値
-                          RowDetail: 11(7)
-                        - RowTitle: 削減値
-                          RowDetail: "3"
-                    - SectionTitle: ゲージ増加量
-                      Rows:
-                        - RowTitle: 空振り
-                          RowDetail: "2"
-                        - RowTitle: ガード
-                          RowDetail: "4"
-                        - RowTitle: ヒット
-                          RowDetail: "8"
-                        - RowTitle: BL
-                          RowDetail: "4"
-                    - SectionTitle: ヒット&ガード硬直時間差
-                      Rows:
-                        - RowTitle: ガード
-                          RowDetail: "-34"
-                        - RowTitle: 立ヒット
-                          RowDetail: ダウン
-                        - RowTitle: 屈ヒット
-                          RowDetail: ダウン
-                    - Rows:
-                        - Presented:
-                            SkillName: Dragon Smash (Fierce)
-                            CharacterCode: "12"
-                            ViewController: FramesPlayerViewController
-                            SkillCode: "049"
-                          RowTitle: モーション
-              - RowTitle: ドラゴンスマッシュ【EX】
-                Next:
-                  Sections:
-                    - Rows:
-                        - RowTitle: 技名
-                          RowDetail: ドラゴンスマッシュ【EX】
-                        - RowTitle: コマンド
-                          RowDetail: 623+PP
-                        - RowTitle: SC
-                          RowDetail: ○・×
-                        - RowTitle: ガード
-                          RowDetail: 両方・両方
-                        - RowTitle: BL
-                          RowDetail: →・→
-                        - RowTitle: 発生
-                          RowDetail: 8・1
-                        - RowTitle: 持続
-                          RowDetail: 1・11
-                        - RowTitle: 硬直
-                          RowDetail: "42"
-                        - RowTitle: 攻撃力
-                          RowDetail: 180(90+90(60))
-                        - RowTitle: ケズリ
-                          RowDetail: 18(9+9)
-                        - RowTitle: スタン値
-                          RowDetail: 18(11+7)
-                        - RowTitle: 削減値
-                          RowDetail: 3・3
-                    - SectionTitle: ゲージ増加量
-                      Rows:
-                        - RowTitle: 空振り
-                          RowDetail: ―
-                        - RowTitle: ガード
-                          RowDetail: ―
-                        - RowTitle: ヒット
-                          RowDetail: ―
-                        - RowTitle: BL
-                          RowDetail: 8(4+4)
-                    - SectionTitle: ヒット&ガード硬直時間差
-                      Rows:
-                        - RowTitle: ガード
-                          RowDetail: "-37"
-                        - RowTitle: 立ヒット
-                          RowDetail: ダウン
-                        - RowTitle: 屈ヒット
-                          RowDetail: ダウン
-                    - Rows:
-                        - Presented:
-                            SkillName: Dragon Smash (EX)
-                            CharacterCode: "12"
-                            ViewController: FramesPlayerViewController
-                            SkillCode: "050"
-                          RowTitle: モーション
-          - Rows:
-              - RowTitle: 補足
-                Next:
-                  Sections:
-                    - SectionTitle: 通常
-                      Rows:
-                        - RowTitle: "・攻撃力とスタン値欄のカッコ内の数値は技の後半部分のもの\n・小は攻撃発生まで無敵無し。攻撃発生後、3フレーム(コマンド完成後、6～8フレーム間)上半身打撃無敵。9フレーム目から空中判定に移行\n・中・大は攻撃発生まで無敵無し。攻撃発生後、2フレーム(コマンド完成後、8～9フレーム間)上半身打撃無敵。10フレーム目から空中判定に移行 \n・空中の相手に技の後半部分がカス当たりすれば追撃可能"
-                    - SectionTitle: EX
-                      Rows:
-                        - RowTitle: |-
-                            ・攻撃力欄のカッコ内の数値は技の後半部分のもの
-                            ・コマンド完成後、8フレーム間完全無敵。9フレーム目(攻撃発生時)肩より上打撃無敵。10フレーム目から空中判定に移行
-    - RowTitle: トルネード
-      Next:
-        Sections:
-          - Rows:
-              - RowTitle: トルネード【小】
-                Next:
-                  Sections:
-                    - Rows:
-                        - RowTitle: 技名
-                          RowDetail: トルネード【小】
-                        - RowTitle: コマンド
-                          RowDetail: 214+小K
-                        - RowTitle: SC
-                          RowDetail: ×
-                        - RowTitle: ガード
-                          RowDetail: 両方・両方
-                        - RowTitle: BL
-                          RowDetail: →・→
-                        - RowTitle: 発生
-                          RowDetail: 11・4
-                        - RowTitle: 持続
-                          RowDetail: 2・2
-                        - RowTitle: 硬直
-                          RowDetail: "21"
-                        - RowTitle: 攻撃力
-                          RowDetail: 100(50+50)
-                        - RowTitle: ケズリ
-                          RowDetail: "9"
-                        - RowTitle: スタン値
-                          RowDetail: 10(5+5)
-                        - RowTitle: 削減値
-                          RowDetail: 7・3
-                    - SectionTitle: ゲージ増加量
-                      Rows:
-                        - RowTitle: 空振り
-                          RowDetail: "3"
-                        - RowTitle: ガード
-                          RowDetail: 9(8+1)
-                        - RowTitle: ヒット
-                          RowDetail: 15(13+2)
-                        - RowTitle: BL
-                          RowDetail: 8(4+4)
-                    - SectionTitle: ヒット&ガード硬直時間差
-                      Rows:
-                        - RowTitle: ガード
-                          RowDetail: "-7"
-                        - RowTitle: 立ヒット
-                          RowDetail: "-5"
-                        - RowTitle: 屈ヒット
-                          RowDetail: "-5"
-                    - Rows:
-                        - Presented:
-                            SkillName: Tornado Kick (Short)
-                            CharacterCode: "12"
-                            ViewController: FramesPlayerViewController
-                            SkillCode: "041"
-                          RowTitle: モーション
-              - RowTitle: トルネード【中】
-                Next:
-                  Sections:
-                    - Rows:
-                        - RowTitle: 技名
-                          RowDetail: トルネード【中】
-                        - RowTitle: コマンド
-                          RowDetail: 214+中K
-                        - RowTitle: SC
-                          RowDetail: ×
-                        - RowTitle: ガード
-                          RowDetail: 両方×3
-                        - RowTitle: BL
-                          RowDetail: →×3
-                        - RowTitle: 発生
-                          RowDetail: 14・6・8
-                        - RowTitle: 持続
-                          RowDetail: 4・2・2
-                        - RowTitle: 硬直
-                          RowDetail: "21"
-                        - RowTitle: 攻撃力
-                          RowDetail: 150(50×3)
-                        - RowTitle: ケズリ
-                          RowDetail: "13"
-                        - RowTitle: スタン値
-                          RowDetail: 15(5×3)
-                        - RowTitle: 削減値
-                          RowDetail: 7・3・3
-                    - SectionTitle: ゲージ増加量
-                      Rows:
-                        - RowTitle: 空振り
-                          RowDetail: "3"
-                        - RowTitle: ガード
-                          RowDetail: 10(8+1+1)
-                        - RowTitle: ヒット
-                          RowDetail: 17(13+2+2)
-                        - RowTitle: BL
-                          RowDetail: 12(4×3)
-                    - SectionTitle: ヒット&ガード硬直時間差
-                      Rows:
-                        - RowTitle: ガード
-                          RowDetail: "-6"
-                        - RowTitle: 立ヒット
-                          RowDetail: "-4"
-                        - RowTitle: 屈ヒット
-                          RowDetail: "-4"
-                    - Rows:
-                        - Presented:
-                            SkillName: Tornado Kick (Forward)
-                            CharacterCode: "12"
-                            ViewController: FramesPlayerViewController
-                            SkillCode: "042"
-                          RowTitle: モーション
-              - RowTitle: トルネード【大】
-                Next:
-                  Sections:
-                    - Rows:
-                        - RowTitle: 技名
-                          RowDetail: トルネード【大】
-                        - RowTitle: コマンド
-                          RowDetail: 214+大K
-                        - RowTitle: SC
-                          RowDetail: ×
-                        - RowTitle: ガード
-                          RowDetail: 両方×4
-                        - RowTitle: BL
-                          RowDetail: →×4
-                        - RowTitle: 発生
-                          RowDetail: 16・8・6・6
-                        - RowTitle: 持続
-                          RowDetail: 3・4・4・2
-                        - RowTitle: 硬直
-                          RowDetail: "21"
-                        - RowTitle: 攻撃力
-                          RowDetail: 160(50+40×3)
-                        - RowTitle: ケズリ
-                          RowDetail: "14"
-                        - RowTitle: スタン値
-                          RowDetail: 18(5×4)
-                        - RowTitle: 削減値
-                          RowDetail: 7・3・3・3
-                    - SectionTitle: ゲージ増加量
-                      Rows:
-                        - RowTitle: 空振り
-                          RowDetail: "3"
-                        - RowTitle: ガード
-                          RowDetail: 11(8+1×3)
-                        - RowTitle: ヒット
-                          RowDetail: 19(13+2×3)
-                        - RowTitle: BL
-                          RowDetail: 16(4×4)
-                    - SectionTitle: ヒット&ガード硬直時間差
-                      Rows:
-                        - RowTitle: ガード
-                          RowDetail: "-6"
-                        - RowTitle: 立ヒット
-                          RowDetail: "-4"
-                        - RowTitle: 屈ヒット
-                          RowDetail: "-4"
-                    - Rows:
-                        - Presented:
-                            SkillName: Tornado Kick (RH)
-                            CharacterCode: "12"
-                            ViewController: FramesPlayerViewController
-                            SkillCode: "043"
-                          RowTitle: モーション
-              - RowTitle: トルネード【EX】
-                Next:
-                  Sections:
-                    - Rows:
-                        - RowTitle: 技名
-                          RowDetail: トルネード【EX】
-                        - RowTitle: コマンド
-                          RowDetail: 214+KK
-                        - RowTitle: SC
-                          RowDetail: ×
-                        - RowTitle: ガード
-                          RowDetail: 両方×4
-                        - RowTitle: BL
-                          RowDetail: →×4
-                        - RowTitle: 発生
-                          RowDetail: 9・8・6・6
-                        - RowTitle: 持続
-                          RowDetail: 2・3・4・2
-                        - RowTitle: 硬直
-                          RowDetail: "17"
-                        - RowTitle: 攻撃力
-                          RowDetail: 175(60+40×3)
-                        - RowTitle: ケズリ
-                          RowDetail: "15"
-                        - RowTitle: スタン値
-                          RowDetail: 22(9+5×3)
-                        - RowTitle: 削減値
-                          RowDetail: 7・3・3・3
-                    - SectionTitle: ゲージ増加量
-                      Rows:
-                        - RowTitle: 空振り
-                          RowDetail: ―
-                        - RowTitle: ガード
-                          RowDetail: ―
-                        - RowTitle: ヒット
-                          RowDetail: ―
-                        - RowTitle: BL
-                          RowDetail: 16(4×4)
-                    - SectionTitle: ヒット&ガード硬直時間差
-                      Rows:
-                        - RowTitle: ガード
-                          RowDetail: "-3"
-                        - RowTitle: 立ヒット
-                          RowDetail: "-1"
-                        - RowTitle: 屈ヒット
-                          RowDetail: "-1"
-                    - Rows:
-                        - Presented:
-                            SkillName: Tornado Kick (EX)
-                            CharacterCode: "12"
-                            ViewController: FramesPlayerViewController
-                            SkillCode: "044"
-                          RowTitle: モーション
-          - Rows:
-              - RowTitle: 補足
-                Next:
-                  Sections:
-                    - Rows:
-                        - RowTitle: |-
-                            ・コマンド完成後、小は「9」、中・大は「11」、EXは「8」フレーム目から空中判定に移行
-                            ・1段目に強制立たせ効果あり。2段目以降から当たった場合はしゃがみ食らい状態が継続
-                            ・画面端付近で空中の相手に2段目以降が1ヒットだった場合、追撃可能
-    - RowTitle: リュウビキャク
-      Next:
-        Sections:
-          - Rows:
-              - RowTitle: リュウビキャク【小】
-                Next:
-                  Sections:
-                    - Rows:
-                        - RowTitle: 技名
-                          RowDetail: リュウビキャク【小】
-                        - RowTitle: コマンド
-                          RowDetail: 236+小K
-                        - RowTitle: SC
-                          RowDetail: ×
-                        - RowTitle: ガード
-                          RowDetail: 立
-                        - RowTitle: BL
-                          RowDetail: →
-                        - RowTitle: 発生
-                          RowDetail: "25"
-                        - RowTitle: 持続
-                          RowDetail: "8"
-                        - RowTitle: 硬直
-                          RowDetail: "15"
-                        - RowTitle: 攻撃力
-                          RowDetail: "120"
-                        - RowTitle: ケズリ
-                          RowDetail: "15"
-                        - RowTitle: スタン値
-                          RowDetail: "19"
-                        - RowTitle: 削減値
-                          RowDetail: "1"
-                    - SectionTitle: ゲージ増加量
-                      Rows:
-                        - RowTitle: 空振り
-                          RowDetail: "3"
-                        - RowTitle: ガード
-                          RowDetail: "10"
-                        - RowTitle: ヒット
-                          RowDetail: "15"
-                        - RowTitle: BL
-                          RowDetail: "4"
-                    - SectionTitle: ヒット&ガード硬直時間差
-                      Rows:
-                        - RowTitle: ガード
-                          RowDetail: "-3"
-                        - RowTitle: 立ヒット
-                          RowDetail: "-3"
-                        - RowTitle: 屈ヒット
-                          RowDetail: "0"
-                    - Rows:
-                        - Presented:
-                            SkillName: Ryuubi Kyaku (Short)
-                            CharacterCode: "12"
-                            ViewController: FramesPlayerViewController
-                            SkillCode: "037"
-                          RowTitle: モーション
-              - RowTitle: リュウビキャク【中】
-                Next:
-                  Sections:
-                    - Rows:
-                        - RowTitle: 技名
-                          RowDetail: リュウビキャク【中】
-                        - RowTitle: コマンド
-                          RowDetail: 236+中K
-                        - RowTitle: SC
-                          RowDetail: ×
-                        - RowTitle: ガード
-                          RowDetail: 立
-                        - RowTitle: BL
-                          RowDetail: →
-                        - RowTitle: 発生
-                          RowDetail: "25"
-                        - RowTitle: 持続
-                          RowDetail: "8"
-                        - RowTitle: 硬直
-                          RowDetail: "15"
-                        - RowTitle: 攻撃力
-                          RowDetail: "120"
-                        - RowTitle: ケズリ
-                          RowDetail: "15"
-                        - RowTitle: スタン値
-                          RowDetail: "19"
-                        - RowTitle: 削減値
-                          RowDetail: "1"
-                    - SectionTitle: ゲージ増加量
-                      Rows:
-                        - RowTitle: 空振り
-                          RowDetail: "3"
-                        - RowTitle: ガード
-                          RowDetail: "10"
-                        - RowTitle: ヒット
-                          RowDetail: "15"
-                        - RowTitle: BL
-                          RowDetail: "4"
-                    - SectionTitle: ヒット&ガード硬直時間差
-                      Rows:
-                        - RowTitle: ガード
-                          RowDetail: "-2"
-                        - RowTitle: 立ヒット
-                          RowDetail: "-3"
-                        - RowTitle: 屈ヒット
-                          RowDetail: "0"
-                    - Rows:
-                        - Presented:
-                            SkillName: Ryuubi Kyaku (Forward)
-                            CharacterCode: "12"
-                            ViewController: FramesPlayerViewController
-                            SkillCode: "038"
-                          RowTitle: モーション
-              - RowTitle: リュウビキャク【大】
-                Next:
-                  Sections:
-                    - Rows:
-                        - RowTitle: 技名
-                          RowDetail: リュウビキャク【大】
-                        - RowTitle: コマンド
-                          RowDetail: 236+大K
-                        - RowTitle: SC
-                          RowDetail: ×
-                        - RowTitle: ガード
-                          RowDetail: 立
-                        - RowTitle: BL
-                          RowDetail: →
-                        - RowTitle: 発生
-                          RowDetail: "25"
-                        - RowTitle: 持続
-                          RowDetail: "8"
-                        - RowTitle: 硬直
-                          RowDetail: "15"
-                        - RowTitle: 攻撃力
-                          RowDetail: "120"
-                        - RowTitle: ケズリ
-                          RowDetail: "15"
-                        - RowTitle: スタン値
-                          RowDetail: "19"
-                        - RowTitle: 削減値
-                          RowDetail: "1"
-                    - SectionTitle: ゲージ増加量
-                      Rows:
-                        - RowTitle: 空振り
-                          RowDetail: "3"
-                        - RowTitle: ガード
-                          RowDetail: "10"
-                        - RowTitle: ヒット
-                          RowDetail: "15"
-                        - RowTitle: BL
-                          RowDetail: "4"
-                    - SectionTitle: ヒット&ガード硬直時間差
-                      Rows:
-                        - RowTitle: ガード
-                          RowDetail: "-3"
-                        - RowTitle: 立ヒット
-                          RowDetail: "-3"
-                        - RowTitle: 屈ヒット
-                          RowDetail: "-1"
-                    - Rows:
-                        - Presented:
-                            SkillName: Ryuubi Kyaku (RH)
-                            CharacterCode: "12"
-                            ViewController: FramesPlayerViewController
-                            SkillCode: "039"
-                          RowTitle: モーション
-              - RowTitle: リュウビキャク【EX】
-                Next:
-                  Sections:
-                    - Rows:
-                        - RowTitle: 技名
-                          RowDetail: リュウビキャク【EX】
-                        - RowTitle: コマンド
-                          RowDetail: 236+KK
-                        - RowTitle: SC
-                          RowDetail: ×
-                        - RowTitle: ガード
-                          RowDetail: 立・立・立
-                        - RowTitle: BL
-                          RowDetail: →・→・→
-                        - RowTitle: 発生
-                          RowDetail: "27"
-                        - RowTitle: 持続
-                          RowDetail: 2・2・2
-                        - RowTitle: 硬直
-                          RowDetail: "15"
-                        - RowTitle: 攻撃力
-                          RowDetail: 200(60+70+70)
-                        - RowTitle: ケズリ
-                          RowDetail: 17(5+6+6)
-                        - RowTitle: スタン値
-                          RowDetail: 21(7×3)
-                        - RowTitle: 削減値
-                          RowDetail: 1・1・1
-                    - SectionTitle: ゲージ増加量
-                      Rows:
-                        - RowTitle: 空振り
-                          RowDetail: ―
-                        - RowTitle: ガード
-                          RowDetail: ―
-                        - RowTitle: ヒット
-                          RowDetail: ―
-                        - RowTitle: BL
-                          RowDetail: 12(4×3)
-                    - SectionTitle: ヒット&ガード硬直時間差
-                      Rows:
-                        - RowTitle: ガード
-                          RowDetail: "-1"
-                        - RowTitle: 立ヒット
-                          RowDetail: "-1"
-                        - RowTitle: 屈ヒット
-                          RowDetail: "-1"
-                    - Rows:
-                        - Presented:
-                            SkillName: Ryuubi Kyaku (EX)
-                            CharacterCode: "12"
-                            ViewController: FramesPlayerViewController
-                            SkillCode: "040"
-                          RowTitle: モーション
-          - Rows:
-              - RowTitle: 補足
-                Next:
-                  Sections:
-                    - Rows:
-                        - RowTitle: |-
-                            ・小→中→大の順に移動距離が長くなる。またEXはホーミングする
-                            ・コマンド完成後、小・中・大は「15」、EXは「11」フレーム目から空中判定に移行
-                            ・空中ヒット時、ダウンさせる事が可能
-                            ・一応、めくり能力あり
-    - RowTitle: 前転
-      Next:
-        Sections:
-          - Rows:
-              - RowTitle: 前転【小】
-                Next:
-                  Sections:
-                    - Rows:
-                        - RowTitle: 技名
-                          RowDetail: 前転【小】
-                        - RowTitle: コマンド
-                          RowDetail: 214+小P
-                        - RowTitle: SC
-                          RowDetail: ×
-                        - RowTitle: ガード
-                          RowDetail: ―
-                        - RowTitle: BL
-                          RowDetail: ―
-                        - RowTitle: 発生
-                          RowDetail: "2"
-                        - RowTitle: 持続
-                          RowDetail: "17"
-                        - RowTitle: 硬直
-                          RowDetail: "9"
-                        - RowTitle: 攻撃力
-                          RowDetail: ―
-                        - RowTitle: ケズリ
-                          RowDetail: ―
-                        - RowTitle: スタン値
-                          RowDetail: ―
-                        - RowTitle: 削減値
-                          RowDetail: ―
-                    - SectionTitle: ゲージ増加量
-                      Rows:
-                        - RowTitle: 空振り
-                          RowDetail: "0"
-                        - RowTitle: ガード
-                          RowDetail: ―
-                        - RowTitle: ヒット
-                          RowDetail: ―
-                        - RowTitle: BL
-                          RowDetail: ―
-                    - SectionTitle: ヒット&ガード硬直時間差
-                      Rows:
-                        - RowTitle: ガード
-                          RowDetail: ―
-                        - RowTitle: 立ヒット
-                          RowDetail: ―
-                        - RowTitle: 屈ヒット
-                          RowDetail: ―
-                    - Rows:
-                        - Presented:
-                            SkillName: Sean Roll (Jab)
-                            CharacterCode: "12"
-                            ViewController: FramesPlayerViewController
-                            SkillCode: "034"
-                          RowTitle: モーション
-              - RowTitle: 前転【中】
-                Next:
-                  Sections:
-                    - Rows:
-                        - RowTitle: 技名
-                          RowDetail: 前転【中】
-                        - RowTitle: コマンド
-                          RowDetail: 214+中P
-                        - RowTitle: SC
-                          RowDetail: ×
-                        - RowTitle: ガード
-                          RowDetail: ―
-                        - RowTitle: BL
-                          RowDetail: ―
-                        - RowTitle: 発生
-                          RowDetail: "2"
-                        - RowTitle: 持続
-                          RowDetail: "27"
-                        - RowTitle: 硬直
-                          RowDetail: "9"
-                        - RowTitle: 攻撃力
-                          RowDetail: ―
-                        - RowTitle: ケズリ
-                          RowDetail: ―
-                        - RowTitle: スタン値
-                          RowDetail: ―
-                        - RowTitle: 削減値
-                          RowDetail: ―
-                    - SectionTitle: ゲージ増加量
-                      Rows:
-                        - RowTitle: 空振り
-                          RowDetail: "0"
-                        - RowTitle: ガード
-                          RowDetail: ―
-                        - RowTitle: ヒット
-                          RowDetail: ―
-                        - RowTitle: BL
-                          RowDetail: ―
-                    - SectionTitle: ヒット&ガード硬直時間差
-                      Rows:
-                        - RowTitle: ガード
-                          RowDetail: ―
-                        - RowTitle: 立ヒット
-                          RowDetail: ―
-                        - RowTitle: 屈ヒット
-                          RowDetail: ―
-                    - Rows:
-                        - Presented:
-                            SkillName: Sean Roll (Strong)
-                            CharacterCode: "12"
-                            ViewController: FramesPlayerViewController
-                            SkillCode: "035"
-                          RowTitle: モーション
-              - RowTitle: 前転【大】
-                Next:
-                  Sections:
-                    - Rows:
-                        - RowTitle: 技名
-                          RowDetail: 前転【大】
-                        - RowTitle: コマンド
-                          RowDetail: 214+大P
-                        - RowTitle: SC
-                          RowDetail: ×
-                        - RowTitle: ガード
-                          RowDetail: ―
-                        - RowTitle: BL
-                          RowDetail: ―
-                        - RowTitle: 発生
-                          RowDetail: "2"
-                        - RowTitle: 持続
-                          RowDetail: "41"
-                        - RowTitle: 硬直
-                          RowDetail: "9"
-                        - RowTitle: 攻撃力
-                          RowDetail: ―
-                        - RowTitle: ケズリ
-                          RowDetail: ―
-                        - RowTitle: スタン値
-                          RowDetail: ―
-                        - RowTitle: 削減値
-                          RowDetail: ―
-                    - SectionTitle: ゲージ増加量
-                      Rows:
-                        - RowTitle: 空振り
-                          RowDetail: "0"
-                        - RowTitle: ガード
-                          RowDetail: ―
-                        - RowTitle: ヒット
-                          RowDetail: ―
-                        - RowTitle: BL
-                          RowDetail: ―
-                    - SectionTitle: ヒット&ガード硬直時間差
-                      Rows:
-                        - RowTitle: ガード
-                          RowDetail: ―
-                        - RowTitle: 立ヒット
-                          RowDetail: ―
-                        - RowTitle: 屈ヒット
-                          RowDetail: ―
-                    - Rows:
-                        - Presented:
-                            SkillName: Sean Roll (Fierce)
-                            CharacterCode: "12"
-                            ViewController: FramesPlayerViewController
-                            SkillCode: "036"
-                          RowTitle: モーション
-          - Rows:
-              - RowTitle: 補足
-                Next:
-                  Sections:
-                    - Rows:
-                        - RowTitle: |-
-                            ・ボタンにより転がる距離が変化。押し合い判定なし。また打点の高い技を回避可能
-                            ・コマンド完成後、3フレーム目から投げ無敵に移行。小は「18」、中は「29」、大は「43」フレーム間持続
-- SectionTitle: 【スーパーアーツ】
-  Rows:
-    - RowTitle: ハドウバースト
-      Next:
-        Sections:
-          - Rows:
-              - RowTitle: 技名
-                RowDetail: ハドウバースト
-              - RowTitle: コマンド
-                RowDetail: 236236+P
-              - RowTitle: ストック数
-                RowDetail: "3"
-              - RowTitle: ゲージの長さ
-                RowDetail: 72ドット
-              - RowTitle: ガード
-                RowDetail: 両方
-              - RowTitle: BL
-                RowDetail: →
-              - RowTitle: 発生
-                RowDetail: "2"
-              - RowTitle: 持続
-                RowDetail: "1"
-              - RowTitle: 硬直
-                RowDetail: "61"
-              - RowTitle: 攻撃力
-                RowDetail: "220"
-              - RowTitle: ケズリ
-                RowDetail: "14"
-              - RowTitle: スタン値
-                RowDetail: "9"
-              - RowTitle: 削減値
-                RowDetail: R
-          - SectionTitle: ヒット&ガード硬直時間差
-            Rows:
-              - RowTitle: ガード
-                RowDetail: "-39"
-              - RowTitle: 立ヒット
-                RowDetail: ダウン
-              - RowTitle: 屈ヒット
-                RowDetail: ダウン
-          - SectionTitle: 補足
-            Rows:
-              - RowTitle: "・コマンド完成後、暗転50フレーム、相手行動不能時間50フレーム。コマンド完成から51フレーム間無敵 \n・攻撃発生1フレーム前に無敵終了。食らい判定出現(技を重ねられていたら潰される)\n・単発の飛び道具を貫通する。ただし灼熱波動拳など2～3段の通常飛び道具は相殺する\n・SA判定の飛び道具はユピテル・憤怒は2段、真空波動拳・滅殺豪波動・夜行魂は3段目まで打ち消して一方的に負けるため注意\n・ゲージが短く、ストックが3本あるため、EX技感覚で使っていける"
-          - Rows:
-              - Presented:
-                  SkillName: Hadou Burst
-                  CharacterCode: "12"
-                  ViewController: FramesPlayerViewController
-                  SkillCode: "051"
-                RowTitle: モーション
-    - RowTitle: ショウリュウキャノン
-      Next:
-        Sections:
-          - Rows:
-              - RowTitle: 技名
-                RowDetail: ショウリュウキャノン
-              - RowTitle: コマンド
-                RowDetail: 236236+P後、P連打
-              - RowTitle: ストック数
-                RowDetail: "2"
-              - RowTitle: ゲージの長さ
-                RowDetail: 96ドット
-              - RowTitle: ガード
-                RowDetail: 両方×1～9
-              - RowTitle: BL
-                RowDetail: 両方×1～14
-              - RowTitle: 発生
-                RowDetail: "1"
-              - RowTitle: 持続
-                RowDetail: 2・7・2・2・2・(1×10)
-              - RowTitle: 硬直
-                RowDetail: "36"
-              - RowTitle: 攻撃力
-                RowDetail: |-
-                  390(14ヒット時)
-                  (80+50+35+35+40×9)
-              - RowTitle: ケズリ
-                RowDetail: |-
-                  90(7回ガード時)
-                  (18+12×6)
-              - RowTitle: スタン値
-                RowDetail: "0"
-              - RowTitle: 削減値
-                RowDetail: R×5・(R・R・R)×3・R・R
-          - SectionTitle: ヒット&ガード硬直時間差
-            Rows:
-              - RowTitle: ガード
-                RowDetail: "-43"
-              - RowTitle: 立ヒット
-                RowDetail: ダウン
-              - RowTitle: 屈ヒット
-                RowDetail: ダウン
-          - SectionTitle: 補足
-            Rows:
-              - RowTitle: "・コマンド完成後、暗転50フレーム、相手行動不能時間50フレーム。コマンド完成から60フレーム間無敵\n・攻撃発生まで完全無敵。攻撃発生後、9フレーム完全無敵 \n・削減値欄の「(R・R・R)×3」は連打部分\n・2回目のショウリュウ以降、ボタン連打でヒット数とダメージアップ\n・画面端でヒットさせた場合、追撃可能\n・初段の攻撃が1ヒットの場合、最大15ヒット。その時の攻撃力は「345」"
-          - Rows:
-              - Presented:
-                  SkillName: Shoryuu Cannon
-                  CharacterCode: "12"
-                  ViewController: FramesPlayerViewController
-                  SkillCode: "052"
-                RowTitle: モーション
-    - RowTitle: ハイパートルネード
-      Next:
-        Sections:
-          - Rows:
-              - RowTitle: 技名
-                RowDetail: ハイパートルネード
-              - RowTitle: コマンド
-                RowDetail: 236236+P
-              - RowTitle: ストック数
-                RowDetail: "1"
-              - RowTitle: ゲージの長さ
-                RowDetail: 120ドット
-              - RowTitle: ガード
-                RowDetail: 両方
-              - RowTitle: BL
-                RowDetail: 両方
-              - RowTitle: 発生
-                RowDetail: "2"
-              - RowTitle: 持続
-                RowDetail: "14"
-              - RowTitle: 硬直
-                RowDetail: "53"
-              - RowTitle: 攻撃力
-                RowDetail: "460"
-              - RowTitle: ケズリ
-                RowDetail: "3"
-              - RowTitle: スタン値
-                RowDetail: "10"
-              - RowTitle: 削減値
-                RowDetail: 3・3・1・R×7・1・1
-          - SectionTitle: ヒット&ガード硬直時間差
-            Rows:
-              - RowTitle: ガード
-                RowDetail: "-31"
-              - RowTitle: 立ヒット
-                RowDetail: ダウン
-              - RowTitle: 屈ヒット
-                RowDetail: ダウン
-          - SectionTitle: 補足
-            Rows:
-              - RowTitle: "・コマンド完成後、暗転50フレーム、相手行動不能時間50フレーム。コマンド完成から62フレーム間無敵\n・攻撃発生まで完全無敵。攻撃発生後、10フレーム完全無敵。11～14フレーム目まで投げ無敵\n・硬直は失敗時のもの\n・飛び道具(レミーの下ソニックは除く)をくぐる事が可能。近～中距離の飛び道具を見てから突っ込む事も可能 \n・1段目がヒットしないと2段目以降が出ない。また空中ヒット時には3ヒット(ダメージは105)しかしないカス当たりになる"
-          - Rows:
-              - Presented:
-                  SkillName: Hyper Tornado
-                  CharacterCode: "12"
-                  ViewController: FramesPlayerViewController
-                  SkillCode: "053"
-                RowTitle: モーション
+character:
+  id: sean
+  displayName: Sean
+introduction:
+  displayTitle: "【熱風キッド】"
+  body: |-
+    ショーンもいよいよ格闘選手権に出場する事になった。だが師匠のケンは厳しく言い放つ。
+    「お前の今の実力じゃ恥をかくだけだ」
+    大会予選まであとわずか。
+    なんとしても、ケンを唸らせる「自分だけの型(スタイル)」を会得しなければ!
+moveGroups:
+- id: air_normals
+  displayTitle: "【空中通常技】"
+  entries:
+  - id: item_0213bd1615
+    displayName: ジャンプ小パンチ
+    children:
+    - id: item_e0c2f756f3
+      displayName: 垂直ジャンプ小パンチ
+      detail:
+        displayName: エルボーアタック
+        startup: '5'
+        active: 着地まで
+        damage: '40'
+        stun: '7'
+        stunReduction: '3'
+        meterGain:
+        - id: item_42cecce534
+          label: 空振り
+          value: '0'
+        - id: item_5d6ebc9016
+          label: ガード
+          value: '1'
+        - id: item_f5c94c17e2
+          label: ヒット
+          value: '2'
+        - id: bl
+          label: BL
+          value: '4'
+        media:
+          kind: motion_player
+          displayLabel: モーション
+          skillName: Neutral Jumping Jab
+          characterCode: '12'
+          skillCode: '009'
+    - id: item_25ab24896c
+      displayName: 斜めジャンプ小パンチ
+      detail:
+        displayName: エルボーアタック
+        startup: '4'
+        active: 着地まで
+        damage: '50'
+        stun: '7'
+        stunReduction: '3'
+        meterGain:
+        - id: item_42cecce534
+          label: 空振り
+          value: '0'
+        - id: item_5d6ebc9016
+          label: ガード
+          value: '1'
+        - id: item_f5c94c17e2
+          label: ヒット
+          value: '2'
+        - id: bl
+          label: BL
+          value: '4'
+        media:
+          kind: motion_player
+          displayLabel: モーション
+          skillName: Jumping Jab
+          characterCode: '12'
+          skillCode: '012'
+  - id: item_a18c41f1f2
+    displayName: ジャンプ中パンチ
+    children:
+    - id: item_f37ec8ba39
+      displayName: 垂直ジャンプ中パンチ
+      detail:
+        displayName: ストレート
+        startup: '6'
+        active: '5'
+        damage: '90'
+        stun: '11'
+        stunReduction: '3'
+        meterGain:
+        - id: item_42cecce534
+          label: 空振り
+          value: '2'
+        - id: item_5d6ebc9016
+          label: ガード
+          value: '4'
+        - id: item_f5c94c17e2
+          label: ヒット
+          value: '8'
+        - id: bl
+          label: BL
+          value: '4'
+        media:
+          kind: motion_player
+          displayLabel: モーション
+          skillName: Neutral Jumping Strong
+          characterCode: '12'
+          skillCode: '010'
+    - id: item_a7ee982c0e
+      displayName: 斜めジャンプ中パンチ
+      detail:
+        displayName: ストレート
+        startup: '5'
+        active: '5'
+        damage: '90'
+        stun: '9'
+        stunReduction: '3'
+        meterGain:
+        - id: item_42cecce534
+          label: 空振り
+          value: '2'
+        - id: item_5d6ebc9016
+          label: ガード
+          value: '4'
+        - id: item_f5c94c17e2
+          label: ヒット
+          value: '8'
+        - id: bl
+          label: BL
+          value: '4'
+        media:
+          kind: motion_player
+          displayLabel: モーション
+          skillName: Jumping Strong
+          characterCode: '12'
+          skillCode: '013'
+  - id: item_18529f13be
+    displayName: ジャンプ大パンチ
+    children:
+    - id: item_ca5fa63a59
+      displayName: 垂直ジャンプ大パンチ
+      detail:
+        displayName: チョップ
+        startup: '7'
+        active: '3'
+        damage: '130'
+        stun: '15'
+        stunReduction: '3'
+        meterGain:
+        - id: item_42cecce534
+          label: 空振り
+          value: '3'
+        - id: item_5d6ebc9016
+          label: ガード
+          value: '6'
+        - id: item_f5c94c17e2
+          label: ヒット
+          value: '14'
+        - id: bl
+          label: BL
+          value: '4'
+        noteGroups:
+        - id: item_cf8aa5b927
+          displayTitle: 補足
+          entries:
+          - スタン値が高く、真横に判定が出るので空対空に使用
+        media:
+          kind: motion_player
+          displayLabel: モーション
+          skillName: Neutral Jumping Fierce
+          characterCode: '12'
+          skillCode: '011'
+    - id: item_c36fb09951
+      displayName: 斜めジャンプ大パンチ
+      detail:
+        displayName: ストレート
+        startup: '6'
+        active: '4'
+        damage: '130'
+        stun: '13'
+        stunReduction: '3'
+        meterGain:
+        - id: item_42cecce534
+          label: 空振り
+          value: '3'
+        - id: item_5d6ebc9016
+          label: ガード
+          value: '6'
+        - id: item_f5c94c17e2
+          label: ヒット
+          value: '14'
+        - id: bl
+          label: BL
+          value: '4'
+        noteGroups:
+        - id: item_cf8aa5b927
+          displayTitle: 補足
+          entries:
+          - 主に飛び込みに使用。ただし打点が高いためしゃがみヒットさせにくい
+        media:
+          kind: motion_player
+          displayLabel: モーション
+          skillName: Jumping Fierce
+          characterCode: '12'
+          skillCode: '014'
+  - id: item_a83e3f7cff
+    displayName: ジャンプ小キック
+    children:
+    - id: item_f48ae8dc16
+      displayName: 垂直ジャンプ小キック
+      detail:
+        displayName: ジャンプニー
+        startup: '5'
+        active: '19'
+        damage: '50'
+        stun: '7'
+        stunReduction: '3'
+        meterGain:
+        - id: item_42cecce534
+          label: 空振り
+          value: '0'
+        - id: item_5d6ebc9016
+          label: ガード
+          value: '1'
+        - id: item_f5c94c17e2
+          label: ヒット
+          value: '2'
+        - id: bl
+          label: BL
+          value: '4'
+        media:
+          kind: motion_player
+          displayLabel: モーション
+          skillName: Neutral Jumping Short
+          characterCode: '12'
+          skillCode: '022'
+    - id: item_adfe5e6bc9
+      displayName: 斜めジャンプ小キック
+      detail:
+        displayName: ジャンプニー
+        startup: '4'
+        active: '10'
+        damage: '50'
+        stun: '5'
+        stunReduction: '3'
+        meterGain:
+        - id: item_42cecce534
+          label: 空振り
+          value: '0'
+        - id: item_5d6ebc9016
+          label: ガード
+          value: '1'
+        - id: item_f5c94c17e2
+          label: ヒット
+          value: '2'
+        - id: bl
+          label: BL
+          value: '4'
+        media:
+          kind: motion_player
+          displayLabel: モーション
+          skillName: Jumping Short
+          characterCode: '12'
+          skillCode: '025'
+  - id: item_c3103eb1f9
+    displayName: ジャンプ中キック
+    children:
+    - id: item_5280b1f280
+      displayName: 垂直ジャンプ中キック
+      detail:
+        displayName: フロントキック
+        startup: '5'
+        active: '6'
+        damage: '90'
+        stun: '9'
+        stunReduction: '3'
+        meterGain:
+        - id: item_42cecce534
+          label: 空振り
+          value: '2'
+        - id: item_5d6ebc9016
+          label: ガード
+          value: '4'
+        - id: item_f5c94c17e2
+          label: ヒット
+          value: '8'
+        - id: bl
+          label: BL
+          value: '4'
+        noteGroups:
+        - id: item_cf8aa5b927
+          displayTitle: 補足
+          entries:
+          - 遠めの空対空に使用
+        media:
+          kind: motion_player
+          displayLabel: モーション
+          skillName: Neutral Jumping Forward
+          characterCode: '12'
+          skillCode: '023'
+    - id: item_83fba48c4f
+      displayName: 斜めジャンプ中キック
+      detail:
+        displayName: ジャンプキック
+        startup: '5'
+        active: '6'
+        damage: '90'
+        stun: '9'
+        stunReduction: '3'
+        meterGain:
+        - id: item_42cecce534
+          label: 空振り
+          value: '2'
+        - id: item_5d6ebc9016
+          label: ガード
+          value: '4'
+        - id: item_f5c94c17e2
+          label: ヒット
+          value: '8'
+        - id: bl
+          label: BL
+          value: '4'
+        media:
+          kind: motion_player
+          displayLabel: モーション
+          skillName: Jumping Forward
+          characterCode: '12'
+          skillCode: '026'
+  - id: item_86e58a160f
+    displayName: ジャンプ大キック
+    children:
+    - id: item_3b01b3c990
+      displayName: 垂直ジャンプ大キック
+      detail:
+        displayName: ラウンドキック
+        startup: '7'
+        active: '5'
+        damage: '130'
+        stun: '13'
+        stunReduction: '3'
+        meterGain:
+        - id: item_42cecce534
+          label: 空振り
+          value: '3'
+        - id: item_5d6ebc9016
+          label: ガード
+          value: '6'
+        - id: item_f5c94c17e2
+          label: ヒット
+          value: '14'
+        - id: bl
+          label: BL
+          value: '4'
+        noteGroups:
+        - id: item_cf8aa5b927
+          displayTitle: 補足
+          entries:
+          - 真横から斜め上に判定が強いため、空対空に使用
+        media:
+          kind: motion_player
+          displayLabel: モーション
+          skillName: Neutral Jumping Roundhouse
+          characterCode: '12'
+          skillCode: '024'
+    - id: item_3e728dc7eb
+      displayName: 斜めジャンプ大キック
+      detail:
+        displayName: ジャンプキック
+        startup: '6'
+        active: '4'
+        damage: '110'
+        stun: '13'
+        stunReduction: '3'
+        meterGain:
+        - id: item_42cecce534
+          label: 空振り
+          value: '3'
+        - id: item_5d6ebc9016
+          label: ガード
+          value: '6'
+        - id: item_f5c94c17e2
+          label: ヒット
+          value: '14'
+        - id: bl
+          label: BL
+          value: '4'
+        noteGroups:
+        - id: item_cf8aa5b927
+          displayTitle: 補足
+          entries:
+          - |-
+            ・主に飛び込みに使用
+            ・若干のめくり性能あり
+        media:
+          kind: motion_player
+          displayLabel: モーション
+          skillName: Jumping Roundhouse
+          characterCode: '12'
+          skillCode: '027'
+- id: ground_normals
+  displayTitle: "【地上通常技】"
+  entries:
+  - id: item_3ea1d5a710
+    displayName: 小パンチ
+    children:
+    - id: item_dff28b8913
+      displayName: 近距離立ち小パンチ
+      detail:
+        displayName: ジャブ
+        guard: 両方
+        blocking: 両方
+        startup: '3'
+        active: '2'
+        recovery: '5'
+        damage: '15'
+        stun: '3'
+        stunReduction: '15'
+        meterGain:
+        - id: item_42cecce534
+          label: 空振り
+          value: '0'
+        - id: item_5d6ebc9016
+          label: ガード
+          value: '1'
+        - id: item_f5c94c17e2
+          label: ヒット
+          value: '2'
+        - id: bl
+          label: BL
+          value: '4'
+        frameAdvantage:
+        - id: item_5d6ebc9016
+          label: ガード
+          value: "+5"
+        - id: item_1272286f89
+          label: 立ヒット
+          value: "+5"
+        - id: item_a3b78ed257
+          label: 屈ヒット
+          value: "+5"
+        stats:
+        - id: c_sc
+          label: C/SC
+          value: "☆/○"
+        noteGroups:
+        - id: item_cf8aa5b927
+          displayTitle: 補足
+          entries:
+          - |-
+            ・小型キャラのしゃがみ&しゃがみ状態が低いキャラには当たらないので注意
+            ・しゃがみ状態でも当たるキャラはダッドリー、ヒューゴー、ユリアン、Q
+        media:
+          kind: motion_player
+          displayLabel: モーション
+          skillName: Jab
+          characterCode: '12'
+          skillCode: '001'
+    - id: item_405c8e8de7
+      displayName: しゃがみ小パンチ
+      detail:
+        displayName: ジャブ
+        guard: 両方
+        blocking: 両方
+        startup: '4'
+        active: '3'
+        recovery: '5'
+        damage: '15'
+        stun: '3'
+        stunReduction: '15'
+        meterGain:
+        - id: item_42cecce534
+          label: 空振り
+          value: '0'
+        - id: item_5d6ebc9016
+          label: ガード
+          value: '1'
+        - id: item_f5c94c17e2
+          label: ヒット
+          value: '2'
+        - id: bl
+          label: BL
+          value: '4'
+        frameAdvantage:
+        - id: item_5d6ebc9016
+          label: ガード
+          value: "+3"
+        - id: item_1272286f89
+          label: 立ヒット
+          value: "+3"
+        - id: item_a3b78ed257
+          label: 屈ヒット
+          value: "+3"
+        stats:
+        - id: c_sc
+          label: C/SC
+          value: "○"
+        noteGroups:
+        - id: item_cf8aa5b927
+          displayTitle: 補足
+          entries:
+          - |-
+            ・屈GDと組み合わせて、屈小P×2や屈小P→屈小Kからヒット確認SAを狙うことが出来る
+            ・ヒットバックが少なく、間合いが離れにくい
+        media:
+          kind: motion_player
+          displayLabel: モーション
+          skillName: Crouching Jab
+          characterCode: '12'
+          skillCode: '006'
+  - id: item_e4873eadbb
+    displayName: 中パンチ
+    children:
+    - id: item_1a4ee0847e
+      displayName: 近距離立ち中パンチ
+      detail:
+        displayName: ボディブロー
+        guard: 両方
+        blocking: "→"
+        startup: '4'
+        active: '5'
+        recovery: '10'
+        damage: '90'
+        stun: '9'
+        stunReduction: '3'
+        meterGain:
+        - id: item_42cecce534
+          label: 空振り
+          value: '2'
+        - id: item_5d6ebc9016
+          label: ガード
+          value: '4'
+        - id: item_f5c94c17e2
+          label: ヒット
+          value: '8'
+        - id: bl
+          label: BL
+          value: '4'
+        frameAdvantage:
+        - id: item_5d6ebc9016
+          label: ガード
+          value: '0'
+        - id: item_1272286f89
+          label: 立ヒット
+          value: "+1"
+        - id: item_a3b78ed257
+          label: 屈ヒット
+          value: "+2"
+        stats:
+        - id: c_sc
+          label: C/SC
+          value: "○"
+        noteGroups:
+        - id: item_cf8aa5b927
+          displayTitle: 補足
+          entries:
+          - TCで大Kに繋ぐことが可能
+        media:
+          kind: motion_player
+          displayLabel: モーション
+          skillName: Strong
+          characterCode: '12'
+          skillCode: '002'
+    - id: item_e006f22d12
+      displayName: 遠距離立ち中パンチ
+      detail:
+        displayName: ストレート
+        guard: 両方
+        blocking: "→"
+        startup: '5'
+        active: '4'
+        recovery: '13'
+        damage: '80'
+        stun: '11'
+        stunReduction: '15'
+        meterGain:
+        - id: item_42cecce534
+          label: 空振り
+          value: '2'
+        - id: item_5d6ebc9016
+          label: ガード
+          value: '4'
+        - id: item_f5c94c17e2
+          label: ヒット
+          value: '8'
+        - id: bl
+          label: BL
+          value: '4'
+        frameAdvantage:
+        - id: item_5d6ebc9016
+          label: ガード
+          value: '0'
+        - id: item_1272286f89
+          label: 立ヒット
+          value: "+1"
+        - id: item_a3b78ed257
+          label: 屈ヒット
+          value: "+2"
+        stats:
+        - id: c_sc
+          label: C/SC
+          value: "×"
+        media:
+          kind: motion_player
+          displayLabel: モーション
+          skillName: Far Strong
+          characterCode: '12'
+          skillCode: '004'
+    - id: item_1a60e91335
+      displayName: しゃがみ中パンチ
+      detail:
+        displayName: ジャブ
+        guard: 両方
+        blocking: 両方
+        startup: '5'
+        active: '4'
+        recovery: '7'
+        damage: '80'
+        stun: '7'
+        stunReduction: '15'
+        meterGain:
+        - id: item_42cecce534
+          label: 空振り
+          value: '2'
+        - id: item_5d6ebc9016
+          label: ガード
+          value: '4'
+        - id: item_f5c94c17e2
+          label: ヒット
+          value: '8'
+        - id: bl
+          label: BL
+          value: '4'
+        frameAdvantage:
+        - id: item_5d6ebc9016
+          label: ガード
+          value: "+3"
+        - id: item_1272286f89
+          label: 立ヒット
+          value: "+4"
+        - id: item_a3b78ed257
+          label: 屈ヒット
+          value: "+5"
+        stats:
+        - id: c_sc
+          label: C/SC
+          value: "○"
+        noteGroups:
+        - id: item_cf8aa5b927
+          displayTitle: 補足
+          entries:
+          - "・ゲージをためるのに有効。また判定が強いので相手の技を潰すことも良くある \n・キャンセル猶予時間はSAが11フレーム、必殺技が12フレーム\n・近距離でヒット時、ノーキャンセルでSA1か3に繋ぐ事が可能。その場合、キャンセル猶予時間はSA1が18～19フレーム、SA3が18～20フレーム"
+        media:
+          kind: motion_player
+          displayLabel: モーション
+          skillName: Crouching Strong
+          characterCode: '12'
+          skillCode: '007'
+  - id: item_9cd6396df9
+    displayName: 大パンチ
+    children:
+    - id: item_01bc811525
+      displayName: 近距離立ち大パンチ
+      detail:
+        displayName: アッパー
+        guard: 両方
+        blocking: "→"
+        startup: '5'
+        active: '5'
+        recovery: '15'
+        damage: '120'
+        stun: '13'
+        stunReduction: '15'
+        meterGain:
+        - id: item_42cecce534
+          label: 空振り
+          value: '3'
+        - id: item_5d6ebc9016
+          label: ガード
+          value: '6'
+        - id: item_f5c94c17e2
+          label: ヒット
+          value: '14'
+        - id: bl
+          label: BL
+          value: '4'
+        frameAdvantage:
+        - id: item_5d6ebc9016
+          label: ガード
+          value: "-4"
+        - id: item_1272286f89
+          label: 立ヒット
+          value: "-2"
+        - id: item_a3b78ed257
+          label: 屈ヒット
+          value: '0'
+        stats:
+        - id: c_sc
+          label: C/SC
+          value: "○"
+        noteGroups:
+        - id: item_cf8aa5b927
+          displayTitle: 補足
+          entries:
+          - |-
+            ・TCで6大Pに繋ぐことが可能
+            ・相手をもぐって落とすのに適した技。また対空ヒット時、キャンセル大タックルで裏回り可能
+            ・キャンセル猶予時間は13フレーム
+        media:
+          kind: motion_player
+          displayLabel: モーション
+          skillName: Fierce
+          characterCode: '12'
+          skillCode: '003'
+    - id: item_0321a8772f
+      displayName: 遠距離立ち大パンチ
+      detail:
+        displayName: ルーキーフック
+        guard: 両方
+        blocking: "→"
+        startup: '9'
+        active: '4'
+        recovery: '19'
+        damage: 120(100)
+        stun: '11'
+        stunReduction: '3'
+        meterGain:
+        - id: item_42cecce534
+          label: 空振り
+          value: '2'
+        - id: item_5d6ebc9016
+          label: ガード
+          value: '4'
+        - id: item_f5c94c17e2
+          label: ヒット
+          value: '8'
+        - id: bl
+          label: BL
+          value: '4'
+        frameAdvantage:
+        - id: item_5d6ebc9016
+          label: ガード
+          value: "-7"
+        - id: item_1272286f89
+          label: 立ヒット
+          value: "-5"
+        - id: item_a3b78ed257
+          label: 屈ヒット
+          value: "-3"
+        stats:
+        - id: c_sc
+          label: C/SC
+          value: "×"
+        noteGroups:
+        - id: item_cf8aa5b927
+          displayTitle: 補足
+          entries:
+          - "・見た目よりリーチが長く、遠くまで届いてしゃがんだ相手にも当てる事が可能 \n・画面端で空中ヒット時、SAで追撃可能\n・他の大攻撃と比べ、なぜかSAゲージ増加量が中攻撃のものになっている"
+        media:
+          kind: motion_player
+          displayLabel: モーション
+          skillName: Far Fierce
+          characterCode: '12'
+          skillCode: '005'
+    - id: item_5fa451ab6c
+      displayName: しゃがみ大パンチ
+      detail:
+        displayName: 突き上げアッパー
+        guard: 両方
+        blocking: 両方
+        startup: '7'
+        active: '5'
+        recovery: '17'
+        damage: '120'
+        stun: '13'
+        stunReduction: '15'
+        meterGain:
+        - id: item_42cecce534
+          label: 空振り
+          value: '3'
+        - id: item_5d6ebc9016
+          label: ガード
+          value: '6'
+        - id: item_f5c94c17e2
+          label: ヒット
+          value: '14'
+        - id: bl
+          label: BL
+          value: '4'
+        frameAdvantage:
+        - id: item_5d6ebc9016
+          label: ガード
+          value: "-9"
+        - id: item_1272286f89
+          label: 立ヒット
+          value: "-7"
+        - id: item_a3b78ed257
+          label: 屈ヒット
+          value: "-5"
+        stats:
+        - id: c_sc
+          label: C/SC
+          value: "○"
+        noteGroups:
+        - id: item_cf8aa5b927
+          displayTitle: 補足
+          entries:
+          - "・判定が強く、キャンセルもかかり対空にも使用可能\n・技の後半部分はキャンセルをかけることが出来ない \n・技の根元の部分は横に判定が強く、ユリアンの屈中Kなどを一方的に潰す事が可能\n・対空ヒット時、キャンセル大タックルで裏回り可能\n・キャンセル猶予時間は12フレーム"
+        media:
+          kind: motion_player
+          displayLabel: モーション
+          skillName: Crouching Fierce
+          characterCode: '12'
+          skillCode: '008'
+  - id: item_d9b7c6ef7c
+    displayName: 小キック
+    children:
+    - id: item_c1732c476a
+      displayName: 立ち小キック
+      detail:
+        displayName: ローキック
+        guard: 両方
+        blocking: 両方
+        startup: '4'
+        active: '4'
+        recovery: '7'
+        damage: '30'
+        stun: '3'
+        stunReduction: '15'
+        meterGain:
+        - id: item_42cecce534
+          label: 空振り
+          value: '0'
+        - id: item_5d6ebc9016
+          label: ガード
+          value: '1'
+        - id: item_f5c94c17e2
+          label: ヒット
+          value: '2'
+        - id: bl
+          label: BL
+          value: '4'
+        frameAdvantage:
+        - id: item_5d6ebc9016
+          label: ガード
+          value: "+2"
+        - id: item_1272286f89
+          label: 立ヒット
+          value: "+2"
+        - id: item_a3b78ed257
+          label: 屈ヒット
+          value: "+2"
+        stats:
+        - id: c_sc
+          label: C/SC
+          value: "×"
+        noteGroups:
+        - id: item_cf8aa5b927
+          displayTitle: 補足
+          entries:
+          - ガードされても有利で、足払い系の技を止めるのに適している
+        media:
+          kind: motion_player
+          displayLabel: モーション
+          skillName: Short
+          characterCode: '12'
+          skillCode: '015'
+    - id: item_f39ad9b46e
+      displayName: しゃがみ小キック
+      detail:
+        displayName: キック
+        guard: 屈
+        blocking: "↓"
+        startup: '5'
+        active: '3'
+        recovery: '7'
+        damage: '20'
+        stun: '3'
+        stunReduction: '15'
+        meterGain:
+        - id: item_42cecce534
+          label: 空振り
+          value: '0'
+        - id: item_5d6ebc9016
+          label: ガード
+          value: '1'
+        - id: item_f5c94c17e2
+          label: ヒット
+          value: '2'
+        - id: bl
+          label: BL
+          value: '4'
+        frameAdvantage:
+        - id: item_5d6ebc9016
+          label: ガード
+          value: "+1"
+        - id: item_1272286f89
+          label: 立ヒット
+          value: "+1"
+        - id: item_a3b78ed257
+          label: 屈ヒット
+          value: "+1"
+        stats:
+        - id: c_sc
+          label: C/SC
+          value: "☆/○"
+        noteGroups:
+        - id: item_cf8aa5b927
+          displayTitle: 補足
+          entries:
+          - |-
+            ・近距離下段の主力技。ヒット確認や当ててからのN択が強力
+            ・連打からSAに繋ぐ事が可能
+            ・屈小K×2からのキャンセル猶予時間は最遅入力で23フレーム
+        media:
+          kind: motion_player
+          displayLabel: モーション
+          skillName: Crouching Short
+          characterCode: '12'
+          skillCode: '019'
+  - id: item_f57c120b54
+    displayName: 中キック
+    children:
+    - id: item_f26b91a736
+      displayName: 立ち中キック
+      detail:
+        displayName: ケンセイキック
+        guard: 両方
+        blocking: 両方
+        startup: '6'
+        active: '4'
+        recovery: '15'
+        damage: '90'
+        stun: '5'
+        stunReduction: '15'
+        meterGain:
+        - id: item_42cecce534
+          label: 空振り
+          value: '2'
+        - id: item_5d6ebc9016
+          label: ガード
+          value: '4'
+        - id: item_f5c94c17e2
+          label: ヒット
+          value: '8'
+        - id: bl
+          label: BL
+          value: '4'
+        frameAdvantage:
+        - id: item_5d6ebc9016
+          label: ガード
+          value: "-2"
+        - id: item_1272286f89
+          label: 立ヒット
+          value: "-1"
+        - id: item_a3b78ed257
+          label: 屈ヒット
+          value: '0'
+        stats:
+        - id: c_sc
+          label: C/SC
+          value: "×"
+        noteGroups:
+        - id: item_cf8aa5b927
+          displayTitle: 補足
+          entries:
+          - 相手の足払い系の技や牽制の屈中Pなどを潰し易い
+        media:
+          kind: motion_player
+          displayLabel: モーション
+          skillName: Forward
+          characterCode: '12'
+          skillCode: '016'
+    - id: item_472cfdbed3
+      displayName: しゃがみ中キック
+      detail:
+        displayName: クルブシキック
+        guard: 屈
+        blocking: "↓"
+        startup: '7'
+        active: '5'
+        recovery: '17'
+        damage: '70'
+        stun: '3'
+        stunReduction: '15'
+        meterGain:
+        - id: item_42cecce534
+          label: 空振り
+          value: '2'
+        - id: item_5d6ebc9016
+          label: ガード
+          value: '4'
+        - id: item_f5c94c17e2
+          label: ヒット
+          value: '8'
+        - id: bl
+          label: BL
+          value: '4'
+        frameAdvantage:
+        - id: item_5d6ebc9016
+          label: ガード
+          value: "-4"
+        - id: item_1272286f89
+          label: 立ヒット
+          value: "-3"
+        - id: item_a3b78ed257
+          label: 屈ヒット
+          value: "-2"
+        stats:
+        - id: c_sc
+          label: C/SC
+          value: "○"
+        noteGroups:
+        - id: item_cf8aa5b927
+          displayTitle: 補足
+          entries:
+          - |-
+            ・リーチもありキャンセルもかかる優秀な技。この技を起点に攻めを組み立てたりする
+            ・キャンセル猶予時間は13フレーム
+        media:
+          kind: motion_player
+          displayLabel: モーション
+          skillName: Crouching Forward
+          characterCode: '12'
+          skillCode: '020'
+  - id: item_e36c152d49
+    displayName: 大キック
+    children:
+    - id: item_208b61d79d
+      displayName: 近距離立ち大キック
+      detail:
+        displayName: ニーキック
+        guard: 両方
+        blocking: "→"
+        startup: '5'
+        active: '5'
+        recovery: '10'
+        damage: '145'
+        stun: '11'
+        stunReduction: '15'
+        meterGain:
+        - id: item_42cecce534
+          label: 空振り
+          value: '3'
+        - id: item_5d6ebc9016
+          label: ガード
+          value: '6'
+        - id: item_f5c94c17e2
+          label: ヒット
+          value: '14'
+        - id: bl
+          label: BL
+          value: '4'
+        frameAdvantage:
+        - id: item_5d6ebc9016
+          label: ガード
+          value: "+2"
+        - id: item_1272286f89
+          label: 立ヒット
+          value: "+4"
+        - id: item_a3b78ed257
+          label: 屈ヒット
+          value: "+6"
+        stats:
+        - id: c_sc
+          label: C/SC
+          value: "○"
+        noteGroups:
+        - id: item_cf8aa5b927
+          displayTitle: 補足
+          entries:
+          - |-
+            ・近距離戦での主力技。識間合いが広く判定も強い
+            ・キャンセル猶予時間は15フレーム
+            ・ヒット時、ノーキャンセルでSA1か3に繋ぐ事が可能。。その場合、キャンセル猶予時間は25～26フレーム
+            　ただしSA1はキャラ限定あり(しゃがみヒットなら全キャラOK)
+        media:
+          kind: motion_player
+          displayLabel: モーション
+          skillName: Roundhouse
+          characterCode: '12'
+          skillCode: '017'
+    - id: item_0525b221e2
+      displayName: 遠距離立ち大キック
+      detail:
+        displayName: マスターズキック
+        guard: 両方
+        blocking: "→"
+        startup: '7'
+        active: '4'
+        recovery: '26'
+        damage: 120(100)
+        stun: 11(9)
+        stunReduction: '3'
+        meterGain:
+        - id: item_42cecce534
+          label: 空振り
+          value: '3'
+        - id: item_5d6ebc9016
+          label: ガード
+          value: '6'
+        - id: item_f5c94c17e2
+          label: ヒット
+          value: '14'
+        - id: bl
+          label: BL
+          value: '4'
+        frameAdvantage:
+        - id: item_5d6ebc9016
+          label: ガード
+          value: "-9"
+        - id: item_1272286f89
+          label: 立ヒット
+          value: "-7"
+        - id: item_a3b78ed257
+          label: 屈ヒット
+          value: "-5"
+        stats:
+        - id: c_sc
+          label: C/SC
+          value: "×"
+        noteGroups:
+        - id: item_cf8aa5b927
+          displayTitle: 補足
+          entries:
+          - |-
+            ・攻撃力とスタン値欄のカッコ内の数値は技の後半部分のもの
+            ・足先の判定が強いので、主に対空に使用
+        media:
+          kind: motion_player
+          displayLabel: モーション
+          skillName: Far Roundhouse
+          characterCode: '12'
+          skillCode: '018'
+    - id: item_d653890f75
+      displayName: しゃがみ大キック
+      detail:
+        displayName: アシバライ
+        guard: 屈
+        blocking: "↓"
+        startup: '8'
+        active: '5'
+        recovery: '26'
+        damage: '120'
+        stun: '3'
+        stunReduction: '15'
+        meterGain:
+        - id: item_42cecce534
+          label: 空振り
+          value: '3'
+        - id: item_5d6ebc9016
+          label: ガード
+          value: '6'
+        - id: item_f5c94c17e2
+          label: ヒット
+          value: '14'
+        - id: bl
+          label: BL
+          value: '4'
+        frameAdvantage:
+        - id: item_5d6ebc9016
+          label: ガード
+          value: "-16(-13)"
+        - id: item_1272286f89
+          label: 立ヒット
+          value: ダウン
+        - id: item_a3b78ed257
+          label: 屈ヒット
+          value: ダウン
+        stats:
+        - id: c_sc
+          label: C/SC
+          value: "×"
+        noteGroups:
+        - id: item_cf8aa5b927
+          displayTitle: 補足
+          entries:
+          - |-
+            ・ヒット&ガード硬直時間差のカッコ内の数値は持続当てした時のもの
+            ・リーチが長く、ヒット時相手をダウンさせる事ができる。ただし隙が大きめなので注意
+            ・先端を当てるように使用すると反撃を受けにくいが、確定反撃を持つキャラには注意
+        media:
+          kind: motion_player
+          displayLabel: モーション
+          skillName: Crouching Roundhouse
+          characterCode: '12'
+          skillCode: '021'
+- id: command_normals
+  displayTitle: "【特殊入力技】"
+  entries:
+  - id: item_d42a0b9ca9
+    displayName: 通常投げ
+    children:
+    - id: item_e68ccaca0b
+      displayName: セオイスルー
+      detail:
+        displayName: セオイスルー
+        command: |-
+          小P+小K
+          →+小P+小K
+        startup: '2'
+        active: '1'
+        recovery: '21'
+        damage: '120'
+        stun: '11'
+        meterGain:
+        - id: item_f6fcd6085b
+          label: 空振り時
+          value: '0'
+        - id: item_739b20fd9b
+          label: 投げ成功時
+          value: '7'
+        stats:
+        - id: item_7c11c7fd25
+          label: 投げ間合い
+          value: '20'
+        noteGroups:
+        - id: item_cf8aa5b927
+          displayTitle: 補足
+          entries:
+          - |-
+            ・硬直は投げ失敗時のフレーム
+            ・投げた後、ほぼ距離が離れないため起き攻めがしやすい
+        media:
+          kind: motion_player
+          displayLabel: モーション
+          skillName: Throw
+          characterCode: '12'
+          skillCode: '030'
+    - id: item_918dc41165
+      displayName: トモエスルー
+      detail:
+        displayName: トモエスルー
+        command: "←+小P+小K"
+        startup: '2'
+        active: '1'
+        recovery: '21'
+        damage: '140'
+        stun: '5'
+        meterGain:
+        - id: item_f6fcd6085b
+          label: 空振り時
+          value: '0'
+        - id: item_739b20fd9b
+          label: 投げ成功時
+          value: '7'
+        stats:
+        - id: item_7c11c7fd25
+          label: 投げ間合い
+          value: '20'
+        noteGroups:
+        - id: item_cf8aa5b927
+          displayTitle: 補足
+          entries:
+          - "・硬直は投げ失敗時のフレーム \n・相手と場所を入れ替える事が可能。また距離が離れるが、端に追い込みやすい"
+        media:
+          kind: motion_player
+          displayLabel: モーション
+          skillName: Back + Throw
+          characterCode: '12'
+          skillCode: '031'
+  - id: item_ac52a72820
+    displayName: リープアタック
+    detail:
+      displayName: ストレート
+      command: 中P+中K
+      guard: 立
+      blocking: "→"
+      startup: '15'
+      active: '8'
+      recovery: '7'
+      damage: '40'
+      stun: '3'
+      stunReduction: '1'
+      meterGain:
+      - id: item_42cecce534
+        label: 空振り
+        value: '0'
+      - id: item_5d6ebc9016
+        label: ガード
+        value: '1'
+      - id: item_f5c94c17e2
+        label: ヒット
+        value: '2'
+      - id: bl
+        label: BL
+        value: '4'
+      frameAdvantage:
+      - id: item_5d6ebc9016
+        label: ガード
+        value: "-5～+7"
+      - id: item_1272286f89
+        label: 立ヒット
+        value: 0～+8
+      - id: item_a3b78ed257
+        label: 屈ヒット
+        value: "+1～+9"
+      stats:
+      - id: c_sc
+        label: C/SC
+        value: "×"
+      noteGroups:
+      - id: item_cf8aa5b927
+        displayTitle: 補足
+        entries:
+        - |-
+          ・コマンド完成後、5フレーム目から空中判定に移行
+          ・技の下りを当てることで、SAや発生の速い通常技に繋ぐことが可能
+      media:
+        kind: motion_player
+        displayLabel: モーション
+        skillName: Universal Overhead
+        characterCode: '12'
+        skillCode: '032'
+  - id: item_7ae3c90cde
+    displayName: パーソナルアクション
+    detail:
+      displayName: ボールを投げる
+      command: 大P+大K
+      guard: 両方
+      blocking: 両方
+      startup: '30'
+      active: '1'
+      recovery: '20'
+      damage: '5'
+      stun: '0'
+      stunReduction: '1'
+      stats:
+      - id: c_sc
+        label: C/SC
+        value: "×"
+      - id: item_054b7dace5
+        label: ゲージ増加
+        value: 4(6)
+      noteGroups:
+      - id: item_f11e32f4cf
+        displayTitle: 効果
+        entries:
+        - |-
+          ・直後に出した全ての攻撃のスタン値アップ
+          ・ただしボールを投げた時に限り有効
+      - id: item_cf8aa5b927
+        displayTitle: 補足
+        entries:
+        - |-
+          ・飛び道具。ボールに攻撃判定、ケズリ能力あり
+          ・コマンド完成後、6フレーム目から空中判定に移行
+          ・ボールは通常技で撃墜可能
+          ・ボールの判定が画面内に残っている間は次のボールは投げれない
+      media:
+        kind: motion_player
+        displayLabel: モーション
+        skillName: Taunt
+        characterCode: '12'
+        skillCode: '033'
+  - id: item_02dcefb22e
+    displayName: レバー入れ技
+    children:
+    - id: item_9a84efa8cb
+      displayName: ショーンパチキ
+      detail:
+        displayName: ショーンパチキ
+        command: 6+大P
+        guard: 立・立
+        blocking: "→・→"
+        startup: '21'
+        active: 2・5
+        recovery: 22(25)
+        damage: 140(60+80)
+        stun: 14(7+7)
+        stunReduction: 3・3
+        meterGain:
+        - id: item_42cecce534
+          label: 空振り
+          value: '3'
+        - id: item_5d6ebc9016
+          label: ガード
+          value: 5(4+1)
+        - id: item_f5c94c17e2
+          label: ヒット
+          value: 14(12+2)
+        - id: bl
+          label: BL
+          value: 8(4+4)
+        frameAdvantage:
+        - id: item_5d6ebc9016
+          label: ガード
+          value: "-6"
+        - id: item_1272286f89
+          label: 立ヒット
+          value: "-4"
+        - id: item_a3b78ed257
+          label: 屈ヒット
+          value: "-2"
+        stats:
+        - id: c_sc
+          label: C/SC
+          value: "×"
+        noteGroups:
+        - id: item_cf8aa5b927
+          displayTitle: 補足
+          entries:
+          - |-
+            ・硬直欄のカッコ内の数値は空振り時のもの
+            ・移動投げに使用
+        media:
+          kind: motion_player
+          displayLabel: モーション
+          skillName: Towards + Fierce
+          characterCode: '12'
+          skillCode: '028'
+    - id: item_0d206854dd
+      displayName: ローリングソバット
+      detail:
+        displayName: ローリングソバット
+        command: 6+大K
+        guard: 両方
+        blocking: "→"
+        startup: '15'
+        active: '5'
+        recovery: '18'
+        damage: 90(70)
+        stun: '9'
+        stunReduction: '3'
+        meterGain:
+        - id: item_42cecce534
+          label: 空振り
+          value: '2'
+        - id: item_5d6ebc9016
+          label: ガード
+          value: '4'
+        - id: item_f5c94c17e2
+          label: ヒット
+          value: '8'
+        - id: bl
+          label: BL
+          value: '4'
+        frameAdvantage:
+        - id: item_5d6ebc9016
+          label: ガード
+          value: "-5"
+        - id: item_1272286f89
+          label: 立ヒット
+          value: ダウン
+        - id: item_a3b78ed257
+          label: 屈ヒット
+          value: ダウン
+        stats:
+        - id: c_sc
+          label: C/SC
+          value: "×"
+        noteGroups:
+        - id: item_cf8aa5b927
+          displayTitle: 補足
+          entries:
+          - |-
+            ・攻撃力欄のカッコ内の数値は技の後半部分のもの
+            ・コマンド完成後、6フレーム目から空中判定に移行
+            ・下段技を避ける事が可能。ただし、しゃがんだ相手(ヒューゴー以外)に当たらないため使いにくい
+            ・ヒット時、ダウン属性だが相手が空中で復帰する特殊な技
+            ・画面中央でヒット時、一部のキャラにSA1で追撃可能。また画面端ならSA2で追撃も可能。ただしどちらも空中BL可能
+        media:
+          kind: motion_player
+          displayLabel: モーション
+          skillName: Towards + Roundhouse
+          characterCode: '12'
+          skillCode: '029'
+  - id: item_b46a9fbcad
+    displayName: ターゲットコンボ
+    children:
+    - id: pk
+      displayName: 近立中P→立大K
+      detail:
+        displayName: 近立中P→立大K
+        superCancel: "○/×"
+        guard: 両方/両方
+        blocking: "→/→"
+        damage: 90/50
+        stun: 9/3
+        stunReduction: 3/1
+        frameAdvantage:
+        - id: item_5d6ebc9016
+          label: ガード
+          value: "-2"
+        - id: item_1272286f89
+          label: 立ヒット
+          value: '0'
+        - id: item_a3b78ed257
+          label: 屈ヒット
+          value: "+2"
+        stats:
+        - id: item_ae5ceeefcd
+          label: 入力
+          value: 近立中P→立大K
+        - id: c
+          label: C
+          value: "○/×"
+        noteGroups:
+        - id: item_cf8aa5b927
+          displayTitle: 補足
+          entries:
+          - "・2段目はしゃがんだユン、ヤンに当たらない。また大Kをディレイで出すといぶき、まことも当たらくなるので要注意 \n・空中ヒット時、一部のキャラにSA1で追撃可能。また画面端ならダッシュからのSA2で追撃も可能。ただしどちらも空中BL可能"
+    - id: p6_p
+      displayName: 近立大P→6+大P
+      detail:
+        displayName: 近立大P→6+大P
+        superCancel: "○/×"
+        guard: 両方/立・立
+        blocking: "→/→・→"
+        damage: 120/50+60
+        stun: 13/5+3
+        stunReduction: 15/3・3
+        frameAdvantage:
+        - id: item_5d6ebc9016
+          label: ガード
+          value: "-6"
+        - id: item_1272286f89
+          label: 立ヒット
+          value: "-4"
+        - id: item_a3b78ed257
+          label: 屈ヒット
+          value: "-2"
+        stats:
+        - id: item_ae5ceeefcd
+          label: 入力
+          value: 近立大P→6+大P
+        - id: c
+          label: C
+          value: "○/×"
+        noteGroups:
+        - id: item_cf8aa5b927
+          displayTitle: 補足
+          entries:
+          - TCではあるが連係のため、繋がらない
+- id: special_moves
+  displayTitle: "【必殺技】"
+  entries:
+  - id: item_3ce6fa98db
+    displayName: ショーンタックル
+    children:
+    - id: item_cd6a7818eb
+      displayName: ショーンタックル【小】
+      detail:
+        displayName: ショーンタックル【小】
+        command: 41236+小P後、P押しっぱなし
+        superCancel: "×"
+        guard: 屈
+        blocking: "↓"
+        startup: '18'
+        active: '2'
+        recovery: '28'
+        damage: '180'
+        chipDamage: "―"
+        stun: '18'
+        stunReduction: "―"
+        meterGain:
+        - id: item_42cecce534
+          label: 空振り
+          value: '2'
+        - id: item_5d6ebc9016
+          label: ガード
+          value: '4'
+        - id: item_f5c94c17e2
+          label: ヒット
+          value: '8'
+        - id: bl
+          label: BL
+          value: '4'
+        frameAdvantage:
+        - id: item_5d6ebc9016
+          label: ガード
+          value: "-14"
+        - id: item_1272286f89
+          label: 立ヒット
+          value: ダウン
+        - id: item_a3b78ed257
+          label: 屈ヒット
+          value: ダウン
+        media:
+          kind: motion_player
+          displayLabel: モーション
+          skillName: Tackle (All Versions)
+          characterCode: '12'
+          skillCode: '045'
+    - id: item_a8c575e437
+      displayName: ショーンタックル【中】
+      detail:
+        displayName: ショーンタックル【中】
+        command: 41236+中P後、P押しっぱなし
+        superCancel: "×"
+        guard: 屈
+        blocking: "↓"
+        startup: '22'
+        active: '2'
+        recovery: '28'
+        damage: '180'
+        chipDamage: "―"
+        stun: '18'
+        stunReduction: "―"
+        meterGain:
+        - id: item_42cecce534
+          label: 空振り
+          value: '2'
+        - id: item_5d6ebc9016
+          label: ガード
+          value: '4'
+        - id: item_f5c94c17e2
+          label: ヒット
+          value: '8'
+        - id: bl
+          label: BL
+          value: '4'
+        frameAdvantage:
+        - id: item_5d6ebc9016
+          label: ガード
+          value: "-14"
+        - id: item_1272286f89
+          label: 立ヒット
+          value: ダウン
+        - id: item_a3b78ed257
+          label: 屈ヒット
+          value: ダウン
+        media:
+          kind: motion_player
+          displayLabel: モーション
+          skillName: Tackle (All Versions)
+          characterCode: '12'
+          skillCode: '045'
+    - id: item_ce75e097b0
+      displayName: ショーンタックル【大】
+      detail:
+        displayName: ショーンタックル【大】
+        command: 41236+大P後、P押しっぱなし
+        superCancel: "×"
+        guard: 屈
+        blocking: "↓"
+        startup: '26'
+        active: '2'
+        recovery: '28'
+        damage: '180'
+        chipDamage: "―"
+        stun: '18'
+        stunReduction: "―"
+        meterGain:
+        - id: item_42cecce534
+          label: 空振り
+          value: '2'
+        - id: item_5d6ebc9016
+          label: ガード
+          value: '4'
+        - id: item_f5c94c17e2
+          label: ヒット
+          value: '8'
+        - id: bl
+          label: BL
+          value: '4'
+        frameAdvantage:
+        - id: item_5d6ebc9016
+          label: ガード
+          value: "-14"
+        - id: item_1272286f89
+          label: 立ヒット
+          value: ダウン
+        - id: item_a3b78ed257
+          label: 屈ヒット
+          value: ダウン
+        media:
+          kind: motion_player
+          displayLabel: モーション
+          skillName: Tackle (All Versions)
+          characterCode: '12'
+          skillCode: '045'
+    - id: ex
+      displayName: ショーンタックル【EX】
+      detail:
+        displayName: ショーンタックル【EX】
+        command: 41236+PP後、P押しっぱなし
+        superCancel: "×"
+        guard: 屈
+        blocking: "↓"
+        startup: '28'
+        active: '2'
+        recovery: '28'
+        damage: '260'
+        chipDamage: "―"
+        stun: '25'
+        stunReduction: "―"
+        meterGain:
+        - id: item_42cecce534
+          label: 空振り
+          value: "―"
+        - id: item_5d6ebc9016
+          label: ガード
+          value: "―"
+        - id: item_f5c94c17e2
+          label: ヒット
+          value: "―"
+        - id: bl
+          label: BL
+          value: '4'
+        frameAdvantage:
+        - id: item_5d6ebc9016
+          label: ガード
+          value: "-14"
+        - id: item_1272286f89
+          label: 立ヒット
+          value: ダウン
+        - id: item_a3b78ed257
+          label: 屈ヒット
+          value: ダウン
+        media:
+          kind: motion_player
+          displayLabel: モーション
+          skillName: Tackle (EX)
+          characterCode: '12'
+          skillCode: '046'
+    - id: item_cf8aa5b927
+      displayName: 補足
+      detail:
+        displayName: 補足
+        noteGroups:
+        - id: item_cf8aa5b927
+          displayTitle: 補足
+          entries:
+          - |-
+            ・ボタンにより移動距離が変化。ボタンを押し続けると下段ガード・BL可能のつかみ投げに移行
+            ・硬直は失敗時のもの
+            ・投げ失敗時の隙が大きいため、基本的に通常技キャンセルで出し、移動技として使用する
+            ・426＋Pの簡易コマンドでも出す事が可能
+  - id: item_5a152db142
+    displayName: ドラゴンスマッシュ
+    children:
+    - id: item_66e3a55879
+      displayName: ドラゴンスマッシュ【小】
+      detail:
+        displayName: ドラゴンスマッシュ【小】
+        command: 623+小P
+        superCancel: "○"
+        guard: 両方
+        blocking: "→"
+        startup: '5'
+        active: '6'
+        recovery: '36'
+        damage: 130(90)
+        chipDamage: '16'
+        stun: 11(7)
+        stunReduction: '3'
+        meterGain:
+        - id: item_42cecce534
+          label: 空振り
+          value: '2'
+        - id: item_5d6ebc9016
+          label: ガード
+          value: '4'
+        - id: item_f5c94c17e2
+          label: ヒット
+          value: '8'
+        - id: bl
+          label: BL
+          value: '4'
+        frameAdvantage:
+        - id: item_5d6ebc9016
+          label: ガード
+          value: "-24"
+        - id: item_1272286f89
+          label: 立ヒット
+          value: ダウン
+        - id: item_a3b78ed257
+          label: 屈ヒット
+          value: ダウン
+        media:
+          kind: motion_player
+          displayLabel: モーション
+          skillName: Dragon Smash (Jab)
+          characterCode: '12'
+          skillCode: '047'
+    - id: item_5bd37f6fdc
+      displayName: ドラゴンスマッシュ【中】
+      detail:
+        displayName: ドラゴンスマッシュ【中】
+        command: 623+中P
+        superCancel: "○"
+        guard: 両方
+        blocking: "→"
+        startup: '7'
+        active: '8'
+        recovery: '39'
+        damage: 130(90)
+        chipDamage: '16'
+        stun: 11(7)
+        stunReduction: '3'
+        meterGain:
+        - id: item_42cecce534
+          label: 空振り
+          value: '2'
+        - id: item_5d6ebc9016
+          label: ガード
+          value: '4'
+        - id: item_f5c94c17e2
+          label: ヒット
+          value: '8'
+        - id: bl
+          label: BL
+          value: '4'
+        frameAdvantage:
+        - id: item_5d6ebc9016
+          label: ガード
+          value: "-30"
+        - id: item_1272286f89
+          label: 立ヒット
+          value: ダウン
+        - id: item_a3b78ed257
+          label: 屈ヒット
+          value: ダウン
+        media:
+          kind: motion_player
+          displayLabel: モーション
+          skillName: Dragon Smash (Strong)
+          characterCode: '12'
+          skillCode: '048'
+    - id: item_1336379b8d
+      displayName: ドラゴンスマッシュ【大】
+      detail:
+        displayName: ドラゴンスマッシュ【大】
+        command: 623+大P
+        superCancel: "○"
+        guard: 両方
+        blocking: "→"
+        startup: '9'
+        active: '9'
+        recovery: '42'
+        damage: 130(90)
+        chipDamage: '16'
+        stun: 11(7)
+        stunReduction: '3'
+        meterGain:
+        - id: item_42cecce534
+          label: 空振り
+          value: '2'
+        - id: item_5d6ebc9016
+          label: ガード
+          value: '4'
+        - id: item_f5c94c17e2
+          label: ヒット
+          value: '8'
+        - id: bl
+          label: BL
+          value: '4'
+        frameAdvantage:
+        - id: item_5d6ebc9016
+          label: ガード
+          value: "-34"
+        - id: item_1272286f89
+          label: 立ヒット
+          value: ダウン
+        - id: item_a3b78ed257
+          label: 屈ヒット
+          value: ダウン
+        media:
+          kind: motion_player
+          displayLabel: モーション
+          skillName: Dragon Smash (Fierce)
+          characterCode: '12'
+          skillCode: '049'
+    - id: ex
+      displayName: ドラゴンスマッシュ【EX】
+      detail:
+        displayName: ドラゴンスマッシュ【EX】
+        command: 623+PP
+        superCancel: "○・×"
+        guard: 両方・両方
+        blocking: "→・→"
+        startup: 8・1
+        active: 1・11
+        recovery: '42'
+        damage: 180(90+90(60))
+        chipDamage: 18(9+9)
+        stun: 18(11+7)
+        stunReduction: 3・3
+        meterGain:
+        - id: item_42cecce534
+          label: 空振り
+          value: "―"
+        - id: item_5d6ebc9016
+          label: ガード
+          value: "―"
+        - id: item_f5c94c17e2
+          label: ヒット
+          value: "―"
+        - id: bl
+          label: BL
+          value: 8(4+4)
+        frameAdvantage:
+        - id: item_5d6ebc9016
+          label: ガード
+          value: "-37"
+        - id: item_1272286f89
+          label: 立ヒット
+          value: ダウン
+        - id: item_a3b78ed257
+          label: 屈ヒット
+          value: ダウン
+        media:
+          kind: motion_player
+          displayLabel: モーション
+          skillName: Dragon Smash (EX)
+          characterCode: '12'
+          skillCode: '050'
+    - id: item_cf8aa5b927
+      displayName: 補足
+      detail:
+        displayName: 補足
+        noteGroups:
+        - id: item_bd3455e23b
+          displayTitle: 通常
+          entries:
+          - "・攻撃力とスタン値欄のカッコ内の数値は技の後半部分のもの\n・小は攻撃発生まで無敵無し。攻撃発生後、3フレーム(コマンド完成後、6～8フレーム間)上半身打撃無敵。9フレーム目から空中判定に移行\n・中・大は攻撃発生まで無敵無し。攻撃発生後、2フレーム(コマンド完成後、8～9フレーム間)上半身打撃無敵。10フレーム目から空中判定に移行 \n・空中の相手に技の後半部分がカス当たりすれば追撃可能"
+        - id: ex
+          displayTitle: EX
+          entries:
+          - |-
+            ・攻撃力欄のカッコ内の数値は技の後半部分のもの
+            ・コマンド完成後、8フレーム間完全無敵。9フレーム目(攻撃発生時)肩より上打撃無敵。10フレーム目から空中判定に移行
+  - id: item_9fe4e9044e
+    displayName: トルネード
+    children:
+    - id: item_f5370e69f6
+      displayName: トルネード【小】
+      detail:
+        displayName: トルネード【小】
+        command: 214+小K
+        superCancel: "×"
+        guard: 両方・両方
+        blocking: "→・→"
+        startup: 11・4
+        active: 2・2
+        recovery: '21'
+        damage: 100(50+50)
+        chipDamage: '9'
+        stun: 10(5+5)
+        stunReduction: 7・3
+        meterGain:
+        - id: item_42cecce534
+          label: 空振り
+          value: '3'
+        - id: item_5d6ebc9016
+          label: ガード
+          value: 9(8+1)
+        - id: item_f5c94c17e2
+          label: ヒット
+          value: 15(13+2)
+        - id: bl
+          label: BL
+          value: 8(4+4)
+        frameAdvantage:
+        - id: item_5d6ebc9016
+          label: ガード
+          value: "-7"
+        - id: item_1272286f89
+          label: 立ヒット
+          value: "-5"
+        - id: item_a3b78ed257
+          label: 屈ヒット
+          value: "-5"
+        media:
+          kind: motion_player
+          displayLabel: モーション
+          skillName: Tornado Kick (Short)
+          characterCode: '12'
+          skillCode: '041'
+    - id: item_0d6f6771e5
+      displayName: トルネード【中】
+      detail:
+        displayName: トルネード【中】
+        command: 214+中K
+        superCancel: "×"
+        guard: 両方×3
+        blocking: "→×3"
+        startup: 14・6・8
+        active: 4・2・2
+        recovery: '21'
+        damage: 150(50×3)
+        chipDamage: '13'
+        stun: 15(5×3)
+        stunReduction: 7・3・3
+        meterGain:
+        - id: item_42cecce534
+          label: 空振り
+          value: '3'
+        - id: item_5d6ebc9016
+          label: ガード
+          value: 10(8+1+1)
+        - id: item_f5c94c17e2
+          label: ヒット
+          value: 17(13+2+2)
+        - id: bl
+          label: BL
+          value: 12(4×3)
+        frameAdvantage:
+        - id: item_5d6ebc9016
+          label: ガード
+          value: "-6"
+        - id: item_1272286f89
+          label: 立ヒット
+          value: "-4"
+        - id: item_a3b78ed257
+          label: 屈ヒット
+          value: "-4"
+        media:
+          kind: motion_player
+          displayLabel: モーション
+          skillName: Tornado Kick (Forward)
+          characterCode: '12'
+          skillCode: '042'
+    - id: item_17a0fe6581
+      displayName: トルネード【大】
+      detail:
+        displayName: トルネード【大】
+        command: 214+大K
+        superCancel: "×"
+        guard: 両方×4
+        blocking: "→×4"
+        startup: 16・8・6・6
+        active: 3・4・4・2
+        recovery: '21'
+        damage: 160(50+40×3)
+        chipDamage: '14'
+        stun: 18(5×4)
+        stunReduction: 7・3・3・3
+        meterGain:
+        - id: item_42cecce534
+          label: 空振り
+          value: '3'
+        - id: item_5d6ebc9016
+          label: ガード
+          value: 11(8+1×3)
+        - id: item_f5c94c17e2
+          label: ヒット
+          value: 19(13+2×3)
+        - id: bl
+          label: BL
+          value: 16(4×4)
+        frameAdvantage:
+        - id: item_5d6ebc9016
+          label: ガード
+          value: "-6"
+        - id: item_1272286f89
+          label: 立ヒット
+          value: "-4"
+        - id: item_a3b78ed257
+          label: 屈ヒット
+          value: "-4"
+        media:
+          kind: motion_player
+          displayLabel: モーション
+          skillName: Tornado Kick (RH)
+          characterCode: '12'
+          skillCode: '043'
+    - id: ex
+      displayName: トルネード【EX】
+      detail:
+        displayName: トルネード【EX】
+        command: 214+KK
+        superCancel: "×"
+        guard: 両方×4
+        blocking: "→×4"
+        startup: 9・8・6・6
+        active: 2・3・4・2
+        recovery: '17'
+        damage: 175(60+40×3)
+        chipDamage: '15'
+        stun: 22(9+5×3)
+        stunReduction: 7・3・3・3
+        meterGain:
+        - id: item_42cecce534
+          label: 空振り
+          value: "―"
+        - id: item_5d6ebc9016
+          label: ガード
+          value: "―"
+        - id: item_f5c94c17e2
+          label: ヒット
+          value: "―"
+        - id: bl
+          label: BL
+          value: 16(4×4)
+        frameAdvantage:
+        - id: item_5d6ebc9016
+          label: ガード
+          value: "-3"
+        - id: item_1272286f89
+          label: 立ヒット
+          value: "-1"
+        - id: item_a3b78ed257
+          label: 屈ヒット
+          value: "-1"
+        media:
+          kind: motion_player
+          displayLabel: モーション
+          skillName: Tornado Kick (EX)
+          characterCode: '12'
+          skillCode: '044'
+    - id: item_cf8aa5b927
+      displayName: 補足
+      detail:
+        displayName: 補足
+        noteGroups:
+        - id: item_cf8aa5b927
+          displayTitle: 補足
+          entries:
+          - |-
+            ・コマンド完成後、小は「9」、中・大は「11」、EXは「8」フレーム目から空中判定に移行
+            ・1段目に強制立たせ効果あり。2段目以降から当たった場合はしゃがみ食らい状態が継続
+            ・画面端付近で空中の相手に2段目以降が1ヒットだった場合、追撃可能
+  - id: item_fbf0cc81a3
+    displayName: リュウビキャク
+    children:
+    - id: item_e8fcfb75ec
+      displayName: リュウビキャク【小】
+      detail:
+        displayName: リュウビキャク【小】
+        command: 236+小K
+        superCancel: "×"
+        guard: 立
+        blocking: "→"
+        startup: '25'
+        active: '8'
+        recovery: '15'
+        damage: '120'
+        chipDamage: '15'
+        stun: '19'
+        stunReduction: '1'
+        meterGain:
+        - id: item_42cecce534
+          label: 空振り
+          value: '3'
+        - id: item_5d6ebc9016
+          label: ガード
+          value: '10'
+        - id: item_f5c94c17e2
+          label: ヒット
+          value: '15'
+        - id: bl
+          label: BL
+          value: '4'
+        frameAdvantage:
+        - id: item_5d6ebc9016
+          label: ガード
+          value: "-3"
+        - id: item_1272286f89
+          label: 立ヒット
+          value: "-3"
+        - id: item_a3b78ed257
+          label: 屈ヒット
+          value: '0'
+        media:
+          kind: motion_player
+          displayLabel: モーション
+          skillName: Ryuubi Kyaku (Short)
+          characterCode: '12'
+          skillCode: '037'
+    - id: item_65495660f3
+      displayName: リュウビキャク【中】
+      detail:
+        displayName: リュウビキャク【中】
+        command: 236+中K
+        superCancel: "×"
+        guard: 立
+        blocking: "→"
+        startup: '25'
+        active: '8'
+        recovery: '15'
+        damage: '120'
+        chipDamage: '15'
+        stun: '19'
+        stunReduction: '1'
+        meterGain:
+        - id: item_42cecce534
+          label: 空振り
+          value: '3'
+        - id: item_5d6ebc9016
+          label: ガード
+          value: '10'
+        - id: item_f5c94c17e2
+          label: ヒット
+          value: '15'
+        - id: bl
+          label: BL
+          value: '4'
+        frameAdvantage:
+        - id: item_5d6ebc9016
+          label: ガード
+          value: "-2"
+        - id: item_1272286f89
+          label: 立ヒット
+          value: "-3"
+        - id: item_a3b78ed257
+          label: 屈ヒット
+          value: '0'
+        media:
+          kind: motion_player
+          displayLabel: モーション
+          skillName: Ryuubi Kyaku (Forward)
+          characterCode: '12'
+          skillCode: '038'
+    - id: item_c6585cb0cc
+      displayName: リュウビキャク【大】
+      detail:
+        displayName: リュウビキャク【大】
+        command: 236+大K
+        superCancel: "×"
+        guard: 立
+        blocking: "→"
+        startup: '25'
+        active: '8'
+        recovery: '15'
+        damage: '120'
+        chipDamage: '15'
+        stun: '19'
+        stunReduction: '1'
+        meterGain:
+        - id: item_42cecce534
+          label: 空振り
+          value: '3'
+        - id: item_5d6ebc9016
+          label: ガード
+          value: '10'
+        - id: item_f5c94c17e2
+          label: ヒット
+          value: '15'
+        - id: bl
+          label: BL
+          value: '4'
+        frameAdvantage:
+        - id: item_5d6ebc9016
+          label: ガード
+          value: "-3"
+        - id: item_1272286f89
+          label: 立ヒット
+          value: "-3"
+        - id: item_a3b78ed257
+          label: 屈ヒット
+          value: "-1"
+        media:
+          kind: motion_player
+          displayLabel: モーション
+          skillName: Ryuubi Kyaku (RH)
+          characterCode: '12'
+          skillCode: '039'
+    - id: ex
+      displayName: リュウビキャク【EX】
+      detail:
+        displayName: リュウビキャク【EX】
+        command: 236+KK
+        superCancel: "×"
+        guard: 立・立・立
+        blocking: "→・→・→"
+        startup: '27'
+        active: 2・2・2
+        recovery: '15'
+        damage: 200(60+70+70)
+        chipDamage: 17(5+6+6)
+        stun: 21(7×3)
+        stunReduction: 1・1・1
+        meterGain:
+        - id: item_42cecce534
+          label: 空振り
+          value: "―"
+        - id: item_5d6ebc9016
+          label: ガード
+          value: "―"
+        - id: item_f5c94c17e2
+          label: ヒット
+          value: "―"
+        - id: bl
+          label: BL
+          value: 12(4×3)
+        frameAdvantage:
+        - id: item_5d6ebc9016
+          label: ガード
+          value: "-1"
+        - id: item_1272286f89
+          label: 立ヒット
+          value: "-1"
+        - id: item_a3b78ed257
+          label: 屈ヒット
+          value: "-1"
+        media:
+          kind: motion_player
+          displayLabel: モーション
+          skillName: Ryuubi Kyaku (EX)
+          characterCode: '12'
+          skillCode: '040'
+    - id: item_cf8aa5b927
+      displayName: 補足
+      detail:
+        displayName: 補足
+        noteGroups:
+        - id: item_cf8aa5b927
+          displayTitle: 補足
+          entries:
+          - |-
+            ・小→中→大の順に移動距離が長くなる。またEXはホーミングする
+            ・コマンド完成後、小・中・大は「15」、EXは「11」フレーム目から空中判定に移行
+            ・空中ヒット時、ダウンさせる事が可能
+            ・一応、めくり能力あり
+  - id: item_2a69ba4ce6
+    displayName: 前転
+    children:
+    - id: item_6e047ce208
+      displayName: 前転【小】
+      detail:
+        displayName: 前転【小】
+        command: 214+小P
+        superCancel: "×"
+        guard: "―"
+        blocking: "―"
+        startup: '2'
+        active: '17'
+        recovery: '9'
+        damage: "―"
+        chipDamage: "―"
+        stun: "―"
+        stunReduction: "―"
+        meterGain:
+        - id: item_42cecce534
+          label: 空振り
+          value: '0'
+        - id: item_5d6ebc9016
+          label: ガード
+          value: "―"
+        - id: item_f5c94c17e2
+          label: ヒット
+          value: "―"
+        - id: bl
+          label: BL
+          value: "―"
+        frameAdvantage:
+        - id: item_5d6ebc9016
+          label: ガード
+          value: "―"
+        - id: item_1272286f89
+          label: 立ヒット
+          value: "―"
+        - id: item_a3b78ed257
+          label: 屈ヒット
+          value: "―"
+        media:
+          kind: motion_player
+          displayLabel: モーション
+          skillName: Sean Roll (Jab)
+          characterCode: '12'
+          skillCode: '034'
+    - id: item_9a5e50a17c
+      displayName: 前転【中】
+      detail:
+        displayName: 前転【中】
+        command: 214+中P
+        superCancel: "×"
+        guard: "―"
+        blocking: "―"
+        startup: '2'
+        active: '27'
+        recovery: '9'
+        damage: "―"
+        chipDamage: "―"
+        stun: "―"
+        stunReduction: "―"
+        meterGain:
+        - id: item_42cecce534
+          label: 空振り
+          value: '0'
+        - id: item_5d6ebc9016
+          label: ガード
+          value: "―"
+        - id: item_f5c94c17e2
+          label: ヒット
+          value: "―"
+        - id: bl
+          label: BL
+          value: "―"
+        frameAdvantage:
+        - id: item_5d6ebc9016
+          label: ガード
+          value: "―"
+        - id: item_1272286f89
+          label: 立ヒット
+          value: "―"
+        - id: item_a3b78ed257
+          label: 屈ヒット
+          value: "―"
+        media:
+          kind: motion_player
+          displayLabel: モーション
+          skillName: Sean Roll (Strong)
+          characterCode: '12'
+          skillCode: '035'
+    - id: item_328fb5004d
+      displayName: 前転【大】
+      detail:
+        displayName: 前転【大】
+        command: 214+大P
+        superCancel: "×"
+        guard: "―"
+        blocking: "―"
+        startup: '2'
+        active: '41'
+        recovery: '9'
+        damage: "―"
+        chipDamage: "―"
+        stun: "―"
+        stunReduction: "―"
+        meterGain:
+        - id: item_42cecce534
+          label: 空振り
+          value: '0'
+        - id: item_5d6ebc9016
+          label: ガード
+          value: "―"
+        - id: item_f5c94c17e2
+          label: ヒット
+          value: "―"
+        - id: bl
+          label: BL
+          value: "―"
+        frameAdvantage:
+        - id: item_5d6ebc9016
+          label: ガード
+          value: "―"
+        - id: item_1272286f89
+          label: 立ヒット
+          value: "―"
+        - id: item_a3b78ed257
+          label: 屈ヒット
+          value: "―"
+        media:
+          kind: motion_player
+          displayLabel: モーション
+          skillName: Sean Roll (Fierce)
+          characterCode: '12'
+          skillCode: '036'
+    - id: item_cf8aa5b927
+      displayName: 補足
+      detail:
+        displayName: 補足
+        noteGroups:
+        - id: item_cf8aa5b927
+          displayTitle: 補足
+          entries:
+          - |-
+            ・ボタンにより転がる距離が変化。押し合い判定なし。また打点の高い技を回避可能
+            ・コマンド完成後、3フレーム目から投げ無敵に移行。小は「18」、中は「29」、大は「43」フレーム間持続
+- id: super_arts
+  displayTitle: "【スーパーアーツ】"
+  entries:
+  - id: item_919fbc04d7
+    displayName: ハドウバースト
+    detail:
+      displayName: ハドウバースト
+      command: 236236+P
+      guard: 両方
+      blocking: "→"
+      startup: '2'
+      active: '1'
+      recovery: '61'
+      damage: '220'
+      chipDamage: '14'
+      stun: '9'
+      stunReduction: R
+      frameAdvantage:
+      - id: item_5d6ebc9016
+        label: ガード
+        value: "-39"
+      - id: item_1272286f89
+        label: 立ヒット
+        value: ダウン
+      - id: item_a3b78ed257
+        label: 屈ヒット
+        value: ダウン
+      stats:
+      - id: item_1143708263
+        label: ストック数
+        value: '3'
+      - id: item_0b597471fb
+        label: ゲージの長さ
+        value: 72ドット
+      noteGroups:
+      - id: item_cf8aa5b927
+        displayTitle: 補足
+        entries:
+        - "・コマンド完成後、暗転50フレーム、相手行動不能時間50フレーム。コマンド完成から51フレーム間無敵 \n・攻撃発生1フレーム前に無敵終了。食らい判定出現(技を重ねられていたら潰される)\n・単発の飛び道具を貫通する。ただし灼熱波動拳など2～3段の通常飛び道具は相殺する\n・SA判定の飛び道具はユピテル・憤怒は2段、真空波動拳・滅殺豪波動・夜行魂は3段目まで打ち消して一方的に負けるため注意\n・ゲージが短く、ストックが3本あるため、EX技感覚で使っていける"
+      media:
+        kind: motion_player
+        displayLabel: モーション
+        skillName: Hadou Burst
+        characterCode: '12'
+        skillCode: '051'
+  - id: item_bd3d3259d3
+    displayName: ショウリュウキャノン
+    detail:
+      displayName: ショウリュウキャノン
+      command: 236236+P後、P連打
+      guard: 両方×1～9
+      blocking: 両方×1～14
+      startup: '1'
+      active: 2・7・2・2・2・(1×10)
+      recovery: '36'
+      damage: |-
+        390(14ヒット時)
+        (80+50+35+35+40×9)
+      chipDamage: |-
+        90(7回ガード時)
+        (18+12×6)
+      stun: '0'
+      stunReduction: R×5・(R・R・R)×3・R・R
+      frameAdvantage:
+      - id: item_5d6ebc9016
+        label: ガード
+        value: "-43"
+      - id: item_1272286f89
+        label: 立ヒット
+        value: ダウン
+      - id: item_a3b78ed257
+        label: 屈ヒット
+        value: ダウン
+      stats:
+      - id: item_1143708263
+        label: ストック数
+        value: '2'
+      - id: item_0b597471fb
+        label: ゲージの長さ
+        value: 96ドット
+      noteGroups:
+      - id: item_cf8aa5b927
+        displayTitle: 補足
+        entries:
+        - "・コマンド完成後、暗転50フレーム、相手行動不能時間50フレーム。コマンド完成から60フレーム間無敵\n・攻撃発生まで完全無敵。攻撃発生後、9フレーム完全無敵 \n・削減値欄の「(R・R・R)×3」は連打部分\n・2回目のショウリュウ以降、ボタン連打でヒット数とダメージアップ\n・画面端でヒットさせた場合、追撃可能\n・初段の攻撃が1ヒットの場合、最大15ヒット。その時の攻撃力は「345」"
+      media:
+        kind: motion_player
+        displayLabel: モーション
+        skillName: Shoryuu Cannon
+        characterCode: '12'
+        skillCode: '052'
+  - id: item_80709bdbd3
+    displayName: ハイパートルネード
+    detail:
+      displayName: ハイパートルネード
+      command: 236236+P
+      guard: 両方
+      blocking: 両方
+      startup: '2'
+      active: '14'
+      recovery: '53'
+      damage: '460'
+      chipDamage: '3'
+      stun: '10'
+      stunReduction: 3・3・1・R×7・1・1
+      frameAdvantage:
+      - id: item_5d6ebc9016
+        label: ガード
+        value: "-31"
+      - id: item_1272286f89
+        label: 立ヒット
+        value: ダウン
+      - id: item_a3b78ed257
+        label: 屈ヒット
+        value: ダウン
+      stats:
+      - id: item_1143708263
+        label: ストック数
+        value: '1'
+      - id: item_0b597471fb
+        label: ゲージの長さ
+        value: 120ドット
+      noteGroups:
+      - id: item_cf8aa5b927
+        displayTitle: 補足
+        entries:
+        - "・コマンド完成後、暗転50フレーム、相手行動不能時間50フレーム。コマンド完成から62フレーム間無敵\n・攻撃発生まで完全無敵。攻撃発生後、10フレーム完全無敵。11～14フレーム目まで投げ無敵\n・硬直は失敗時のもの\n・飛び道具(レミーの下ソニックは除く)をくぐる事が可能。近～中距離の飛び道具を見てから突っ込む事も可能 \n・1段目がヒットしないと2段目以降が出ない。また空中ヒット時には3ヒット(ダメージは105)しかしないカス当たりになる"
+      media:
+        kind: motion_player
+        displayLabel: モーション
+        skillName: Hyper Tornado
+        characterCode: '12'
+        skillCode: '053'
