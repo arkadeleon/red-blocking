@@ -9,339 +9,6 @@ introduction:
     新しい出会いと甘い恋が待っている、そう思うだけで苦無磨きに力がこもる。
     「絶対、素敵な彼氏とキャンパスライフを楽しむんだから!」
 moveGroups:
-- id: air_normals
-  displayTitle: "【空中通常技】"
-  entries:
-  - id: item_0213bd1615
-    displayName: ジャンプ小パンチ
-    variants:
-    - id: item_e0c2f756f3
-      displayName: 垂直
-      detail:
-        displayName: 飛び手刀(とびしゅとう)
-        startup: '3'
-        active: 着地まで
-        damage: '50'
-        stun: '7'
-        stunReduction: '3'
-        meterGain:
-          whiff: '0'
-          guard: '1'
-          hit: '2'
-          bl: '4'
-        noteGroups:
-        - id: item_cf8aa5b927
-          displayTitle: 補足
-          entries:
-          - 発生が早いので咄嗟の空対空技として使い易い
-        media:
-          kind: motion_player
-          displayLabel: モーション
-          skillName: Neutral Jumping Jab
-          characterCode: '07'
-          skillCode: '009'
-    - id: item_25ab24896c
-      displayName: 斜め
-      detail:
-        displayName: 槍拳(そうけん)
-        startup: '3'
-        active: '19'
-        damage: '60'
-        stun: '5'
-        stunReduction: '3'
-        meterGain:
-          whiff: '0'
-          guard: '1'
-          hit: '2'
-          bl: '4'
-        noteGroups:
-        - id: item_cf8aa5b927
-          displayTitle: 補足
-          entries:
-          - |-
-            ・判定は弱いが、攻撃判定の位置的に使いやすい
-            ・TCでJ6大Pに繋ぐことが可能
-        media:
-          kind: motion_player
-          displayLabel: モーション
-          skillName: Jumping Jab
-          characterCode: '07'
-          skillCode: '012'
-  - id: item_a18c41f1f2
-    displayName: ジャンプ中パンチ
-    variants:
-    - id: item_f37ec8ba39
-      displayName: 垂直
-      detail:
-        displayName: 飛び手刀(とびしゅとう)
-        startup: '5'
-        active: '7'
-        damage: 80(70)
-        stun: 11(9)
-        stunReduction: '3'
-        meterGain:
-          whiff: '2'
-          guard: '4'
-          hit: '8'
-          bl: '4'
-        noteGroups:
-        - id: item_cf8aa5b927
-          displayTitle: 補足
-          entries:
-          - 攻撃力とスタン値欄のカッコ内の数値は技の後半部分が当たった場合のもの
-        media:
-          kind: motion_player
-          displayLabel: モーション
-          skillName: Neutral Jumping Strong
-          characterCode: '07'
-          skillCode: '010'
-    - id: item_a7ee982c0e
-      displayName: 斜め
-      detail:
-        displayName: 飛び掌打(とびしょうだ)
-        startup: '6'
-        active: '13'
-        damage: 80(70)
-        stun: 11(9)
-        stunReduction: '3'
-        meterGain:
-          whiff: '2'
-          guard: '4'
-          hit: '8'
-          bl: '4'
-        noteGroups:
-        - id: item_cf8aa5b927
-          displayTitle: 補足
-          entries:
-          - |-
-            ・攻撃力とスタン値欄のカッコ内の数値は技の後半部分が当たった場合のもの
-            ・判定が下方向にそこそこ強く、空対空で使用可能
-        media:
-          kind: motion_player
-          displayLabel: モーション
-          skillName: Jumping Strong
-          characterCode: '07'
-          skillCode: '013'
-  - id: item_18529f13be
-    displayName: ジャンプ大パンチ
-    variants:
-    - id: item_ca5fa63a59
-      displayName: 垂直
-      detail:
-        displayName: 飛び裏拳
-        startup: '11'
-        active: '5'
-        damage: '120'
-        stun: '13'
-        stunReduction: '3'
-        meterGain:
-          whiff: '3'
-          guard: '6'
-          hit: '14'
-          bl: '4'
-        noteGroups:
-        - id: item_cf8aa5b927
-          displayTitle: 補足
-          entries:
-          - |-
-            ・ヒット時、投げられ判定を持った振り向きのけぞりになるため、場所によっては鎧通し(投げの方)が確定
-            ・先端の判定が強く、BLされても反撃を受けにくい
-            ・TCでJ6中Kに繋ぐことが可能
-        media:
-          kind: motion_player
-          displayLabel: モーション
-          skillName: Neutral Jumping Fierce
-          characterCode: '07'
-          skillCode: '011'
-    - id: item_c36fb09951
-      displayName: 斜め
-      detail:
-        displayName: 飛び裏拳
-        startup: '11'
-        active: '5'
-        damage: '120'
-        stun: '13'
-        stunReduction: '3'
-        meterGain:
-          whiff: '3'
-          guard: '6'
-          hit: '14'
-          bl: '4'
-        noteGroups:
-        - id: item_cf8aa5b927
-          displayTitle: 補足
-          entries:
-          - |-
-            ・ヒット時、投げられ判定を持った振り向きのけぞりになるため、場所によっては鎧通し(投げの方)が確定
-            ・先端の判定が強く、BLされても反撃を受けにくい
-            ・TCでJ6中Kに繋ぐことが可能
-        media:
-          kind: motion_player
-          displayLabel: モーション
-          skillName: Jumping Fierce
-          characterCode: '07'
-          skillCode: '014'
-  - id: item_a83e3f7cff
-    displayName: ジャンプ小キック
-    variants:
-    - id: item_f48ae8dc16
-      displayName: 垂直
-      detail:
-        displayName: 飛び前蹴り
-        startup: '4'
-        active: 着地まで
-        damage: '50'
-        stun: '5'
-        stunReduction: '3'
-        meterGain:
-          whiff: '0'
-          guard: '1'
-          hit: '2'
-          bl: '4'
-        media:
-          kind: motion_player
-          displayLabel: モーション
-          skillName: Neutral Jumping Short
-          characterCode: '07'
-          skillCode: '022'
-    - id: item_adfe5e6bc9
-      displayName: 斜め
-      detail:
-        displayName: 当膝(あてひざ)
-        startup: '3'
-        active: 着地まで
-        damage: '40'
-        stun: '5'
-        stunReduction: '3'
-        meterGain:
-          whiff: '0'
-          guard: '1'
-          hit: '2'
-          bl: '4'
-        noteGroups:
-        - id: item_cf8aa5b927
-          displayTitle: 補足
-          entries:
-          - |-
-            ・発生が速く、判定が強いため飛び込みに使用する。めくりも可能
-            ・TCでJ6中Kに繋ぐことが可能
-        media:
-          kind: motion_player
-          displayLabel: モーション
-          skillName: Jumping Short
-          characterCode: '07'
-          skillCode: '025'
-  - id: item_c3103eb1f9
-    displayName: ジャンプ中キック
-    variants:
-    - id: item_5280b1f280
-      displayName: 垂直
-      detail:
-        displayName: 飛び前蹴り
-        startup: '5'
-        active: '7'
-        damage: 70(60)
-        stun: 9(7)
-        stunReduction: '1'
-        meterGain:
-          whiff: '2'
-          guard: '4'
-          hit: '8'
-          bl: '4'
-        noteGroups:
-        - id: item_cf8aa5b927
-          displayTitle: 補足
-          entries:
-          - |-
-            ・攻撃力とスタン値欄のカッコ内の数値は技の後半部分が当たった場合のもの
-            ・なぜかこのジャンプ攻撃のみ削減値が「1」
-        media:
-          kind: motion_player
-          displayLabel: モーション
-          skillName: Neutral Jumping Forward
-          characterCode: '07'
-          skillCode: '023'
-    - id: item_83fba48c4f
-      displayName: 斜め
-      detail:
-        displayName: 影矢(かげや)
-        startup: '7'
-        active: '13'
-        damage: 70(60)
-        stun: 9(7)
-        stunReduction: '3'
-        meterGain:
-          whiff: '2'
-          guard: '4'
-          hit: '8'
-          bl: '4'
-        noteGroups:
-        - id: item_cf8aa5b927
-          displayTitle: 補足
-          entries:
-          - |-
-            ・攻撃力とスタン値欄のカッコ内の数値は技の後半部分が当たった場合のもの
-            ・攻撃範囲が広いため、めくり狙いや先端当て飛び込みなどに使用
-            ・ヒット時、相手ののけぞりが長くないため、高い位置で当てると地上で小P位しか繋がらない
-        media:
-          kind: motion_player
-          displayLabel: モーション
-          skillName: Jumping Forward
-          characterCode: '07'
-          skillCode: '026'
-  - id: item_86e58a160f
-    displayName: ジャンプ大キック
-    variants:
-    - id: item_3b01b3c990
-      displayName: 垂直
-      detail:
-        displayName: 影鉈(かげなた)
-        startup: '10'
-        active: '3'
-        damage: 110(95(90))
-        stun: 13(13(11))
-        stunReduction: '3'
-        meterGain:
-          whiff: '3'
-          guard: '4'
-          hit: '12'
-          bl: '4'
-        noteGroups:
-        - id: item_cf8aa5b927
-          displayTitle: 補足
-          entries:
-          - "・攻撃力とスタン値欄のカッコ内の数値は技の後半部分が当たった場合のもの(3回変化する)\n・タイミングによって攻撃判定が変わり、また攻撃範囲も広い \n・ヒット時はQSが取りづらい叩き付けダウンになる"
-        media:
-          kind: motion_player
-          displayLabel: モーション
-          skillName: Neutral Jumping Roundhouse
-          characterCode: '07'
-          skillCode: '024'
-    - id: item_3e728dc7eb
-      displayName: 斜め
-      detail:
-        displayName: 影鉈(かげなた)
-        startup: '10'
-        active: '3'
-        damage: 110(95(90))
-        stun: 13(13(11))
-        stunReduction: '3'
-        meterGain:
-          whiff: '3'
-          guard: '4'
-          hit: '12'
-          bl: '4'
-        noteGroups:
-        - id: item_cf8aa5b927
-          displayTitle: 補足
-          entries:
-          - "・攻撃力とスタン値欄のカッコ内の数値は技の後半部分が当たった場合のもの(3回変化する)\n・タイミングによって攻撃判定が変わり、また攻撃範囲も広い \n・ヒット時はQSが取りづらい叩き付けダウンになる"
-        media:
-          kind: motion_player
-          displayLabel: モーション
-          skillName: Jumping Roundhouse
-          characterCode: '07'
-          skillCode: '027'
 - id: ground_normals
   displayTitle: "【地上通常技】"
   entries:
@@ -914,611 +581,339 @@ moveGroups:
           skillName: Crouching Roundhouse
           characterCode: '07'
           skillCode: '021'
-- id: normal_throws
-  displayTitle: "【通常投げ】"
+- id: air_normals
+  displayTitle: "【空中通常技】"
   entries:
-  - id: item_5ce1b1a9b3
-    displayName: 闇葛(やみかずら)
-    detail:
-      displayName: 闇葛(やみかずら)
-      command: |-
-        小P+小K
-        →+小P+小K
-        ←+小P+小K
-      startup: '2'
-      active: '1'
-      recovery: '21'
-      damage: '120'
-      stun: '13'
-      meterGain:
-        onWhiff: '0'
-        throwSuccess: '7'
-      stats:
-        投げ間合い: '16'
-      noteGroups:
-      - id: item_cf8aa5b927
-        displayTitle: 補足
-        entries:
-        - |-
-          ・硬直は投げ失敗時のフレーム
-          ・左右に投げ分けが可能
-          ・全キャラ中最低の投げ間合い
-          ・投げた後はそこそこ有利であるが、QSを取られると画面端以外では自由に起き攻め出来ない
-      media:
-        kind: motion_player
-        displayLabel: モーション
-        skillName: Throw
-        characterCode: '07'
-        skillCode: '034'
-  - id: item_346987532f
-    displayName: 飛び猿
-    detail:
-      displayName: 飛び猿
-      command: 空中で小P+小K
-      startup: '6'
-      active: '1'
-      recovery: "―"
-      damage: '160'
-      stun: '18'
-      meterGain:
-        onWhiff: '0'
-        throwSuccess: '14'
-      stats:
-        投げ間合い 前方: '12'
-        投げ間合い 上下: 44～67
-      noteGroups:
-      - id: item_cf8aa5b927
-        displayTitle: 補足
-        entries:
-        - 空中投げ
-- id: lever_input_moves
-  displayTitle: "【レバー入れ技】"
-  entries:
-  - id: item_ddb9dd8f71
-    displayName: 巻き蹴り
-    detail:
-      displayName: 巻き蹴り
-      command: 6+小K
-      guard: 両方
-      blocking: 両方
-      startup: '5'
-      active: '4'
-      recovery: '8'
-      damage: '20'
-      stun: '3'
-      stunReduction: '1'
-      meterGain:
-        whiff: '0'
-        guard: '1'
-        hit: '2'
-        bl: '4'
-      frameAdvantage:
-        guard: "-1"
-        standingHit: "-1"
-        crouchingHit: "-1"
-      stats:
-        C/SC: "☆/×"
-      noteGroups:
-      - id: item_cf8aa5b927
-        displayTitle: 補足
-        entries:
-        - ユリアンのタックルに反撃できる
-      media:
-        kind: motion_player
-        displayLabel: モーション
-        skillName: Towards + Short
-        characterCode: '07'
-        skillCode: '029'
-  - id: item_b35114bb44
-    displayName: 揚面(あげめん)
-    detail:
-      displayName: 揚面(あげめん)
-      command: 4+中P
-      guard: 両方・両方
-      blocking: "→・→"
-      startup: '6'
-      active: 1・6
-      recovery: '10'
-      damage: 80(30+60(50))
-      stun: 12(5+9(7))
-      stunReduction: 1・1
-      meterGain:
-        whiff: '2'
-        guard: 5(4+1)
-        hit: 10(8+2)
-        bl: 8(4+4)
-      frameAdvantage:
-        guard: "-2"
-        standingHit: "-1"
-        crouchingHit: '0'
-      stats:
-        C/SC: "○・×"
-      noteGroups:
-      - id: item_cf8aa5b927
-        displayTitle: 補足
-        entries:
-        - |-
-          ・攻撃力とスタン値欄のカッコ内の数値は技の後半部分のもの
-          ・TCで大P、屈大Kに繋ぐことが可能
-          ・1段目はそこまで判定が強くないが、多段対空に使える
-      media:
-        kind: motion_player
-        displayLabel: モーション
-        skillName: Back + Strong
-        characterCode: '07'
-        skillCode: '028'
-  - id: item_713b0898a0
-    displayName: 裏巻き蹴り
-    detail:
-      displayName: 裏巻き蹴り
-      command: 4+中K
-      guard: 両方
-      blocking: "→"
-      startup: '13'
-      active: '2'
-      recovery: '13'
-      damage: '70'
-      stun: '5'
-      stunReduction: '1'
-      meterGain:
-        whiff: '2'
-        guard: '4'
-        hit: '8'
-        bl: '4'
-      frameAdvantage:
-        guard: "-2"
-        standingHit: "-1"
-        crouchingHit: '0'
-      stats:
-        C/SC: "×"
-      noteGroups:
-      - id: item_cf8aa5b927
-        displayTitle: 補足
-        entries:
-        - |-
-          ・TCで6中Kに繋ぐことが可能
-          ・いぶきの技の中で最長クラスのリーチを持つ
-      media:
-        kind: motion_player
-        displayLabel: モーション
-        skillName: Back + Forward
-        characterCode: '07'
-        skillCode: '031'
-  - id: item_3963b60fb2
-    displayName: 頭砕き
-    detail:
-      displayName: 頭砕き
-      command: 6+中K
-      guard: 立
-      blocking: "→"
-      startup: '27'
-      active: '3'
-      recovery: 3(4)
-      damage: 80(70)
-      stun: '13'
-      stunReduction: '1'
-      meterGain:
-        whiff: '2'
-        guard: '4'
-        hit: '8'
-        bl: '4'
-      frameAdvantage:
-        guard: "+9"
-        standingHit: "+10"
-        crouchingHit: "+11"
-      stats:
-        C/SC: "×"
-      noteGroups:
-      - id: item_cf8aa5b927
-        displayTitle: 補足
-        entries:
-        - "・硬直欄のカッコ内の数値はしゃがみ状態で着地した時のもの\n・攻撃力欄のカッコ内の数値は技の後半部分のもの\n・コマンド完成後、8フレーム目から空中判定に移行。ただし12フレーム目までは地上に投げられ判定が残っている \n・BLされても発生3フレームまでの攻撃しか確定しない\n・ガードされても攻めを継続できる\n・ヒット時、ノーキャンセルで小P発動のSA3に繋ぐことが可能。その場合、キャンセル猶予時間は13～19フレーム"
-      media:
-        kind: motion_player
-        displayLabel: モーション
-        skillName: Towards + Forward
-        characterCode: '07'
-        skillCode: '030'
-  - id: item_1dc18def5e
-    displayName: 砂斬
-    detail:
-      displayName: 砂斬
-      command: 3+中K
-      guard: 屈
-      blocking: "↓"
-      startup: '6'
-      active: '11'
-      recovery: '9'
-      damage: '70'
-      stun: '3'
-      stunReduction: '1'
-      meterGain:
-        whiff: '3'
-        guard: '4'
-        hit: '12'
-        bl: '4'
-      frameAdvantage:
-        guard: "-16(-6)"
-        standingHit: "-6(+4)"
-        crouchingHit: "-5(+5)"
-      stats:
-        C/SC: "×"
-      noteGroups:
-      - id: item_cf8aa5b927
-        displayTitle: 補足
-        entries:
-        - |-
-          ・ヒット&ガード硬直時間差欄のカッコの数値は先端をガードさせた場合のもの
-          ・コマンド完成後、1フレーム目から姿勢が低くなり、17フレーム目まで上段攻撃と、一部の飛び道具を抜ける事が可能
-          ・牽制の要。相手の牽制技を避けつつ攻撃したり、姿勢の低さを生かして対空に使用可能
-          ・地面に接する飛び道具以外を潜れる。また多段飛び道具は初段をBLして残りを潜って避けることが出来る
-          ・リュウの電刃波動拳を抜けるのにも使える
-      media:
-        kind: motion_player
-        displayLabel: モーション
-        skillName: Down-Towards + Forward
-        characterCode: '07'
-        skillCode: '032'
-  - id: item_213bee827f
-    displayName: 追裏拳
-    detail:
-      displayName: 追裏拳
-      command: 遠大P中に大P
-      guard: 両方
-      blocking: "→"
-      startup: '2'
-      active: '3'
-      recovery: '31'
-      damage: '80'
-      stun: '17'
-      stunReduction: '1'
-      meterGain:
-        whiff: '3'
-        guard: '4'
-        hit: '12'
-        bl: '4'
-      frameAdvantage:
-        guard: "-1"
-        standingHit: "+1"
-        crouchingHit: "+3"
-      stats:
-        C/SC: "×"
-  - id: item_8b333152e1
-    displayName: 梵鐘蹴り
-    detail:
-      displayName: 梵鐘蹴り
-      command: 6+大K
-      guard: 両方
-      blocking: "→"
-      startup: '12'
-      active: '1'
-      recovery: 20(21)
-      damage: '130'
-      stun: '17'
-      stunReduction: '1'
-      meterGain:
-        whiff: '3'
-        guard: '6'
-        hit: '14'
-        bl: '4'
-      frameAdvantage:
-        guard: "-1"
-        standingHit: "+1"
-        crouchingHit: "+3"
-      stats:
-        C/SC: "×"
-      noteGroups:
-      - id: item_cf8aa5b927
-        displayTitle: 補足
-        entries:
-        - |-
-          ・硬直欄のカッコ内の数値はしゃがみ状態で着地した時のもの
-          ・コマンド完成後、8フレーム目から空中判定に移行
-          ・牽制の要。判定が強いが、打点が高いので小型キャラのしゃがみ状態には当たらないので注意
-          ・大きめのキャラ(しゃがんでも当たるキャラ)に対しては、牽制合戦で絶大な効果あり
-          ・跳び上がるため足払い系に対して強く、打点が高いため飛ぼうとした相手に当てることが可能
-          ・しゃがみヒット時、ノーキャンセルで小P発動のSA3に繋ぐことが可能。その場合、キャンセル猶予時間は30フレーム
-      media:
-        kind: motion_player
-        displayLabel: モーション
-        skillName: Towards + Roundhouse
-        characterCode: '07'
-        skillCode: '033'
-- id: target_combos
-  displayTitle: "【ターゲットコンボ】"
-  entries:
-  - id: jkj6k
-    displayName: J小K→J6中K
-    detail:
-      displayName: J小K→J6中K
-      superCancel: "×/×"
-      guard: 立
-      blocking: "→"
-      damage: 40/40
-      stun: 5/5
-      stunReduction: 3/1
-      frameAdvantage:
-        guard: "―"
-        standingHit: "―"
-        crouchingHit: "―"
-      stats:
-        入力: J小K→J6中K
-        C: "×/×"
-      noteGroups:
-      - id: item_cf8aa5b927
-        displayTitle: 補足
-        entries:
-        - |-
-          ・小K、中Kともにめくり性能を備えているので、2段ともめくり、2段目のみめくり、といった使い方も可能
-          ・2段目が中Kなので出す高度に注意
-  - id: jpj6p
-    displayName: J小P→J6大P
-    detail:
-      displayName: J小P→J6大P
-      superCancel: "×/×"
-      guard: 立
-      blocking: "→"
-      damage: 60/60
-      stun: 5/6
-      stunReduction: 3/1
-      frameAdvantage:
-        guard: "―"
-        standingHit: "―"
-        crouchingHit: "―"
-      stats:
-        入力: J小P→J6大P
-        C: "×/×"
-      noteGroups:
-      - id: item_cf8aa5b927
-        displayTitle: 補足
-        entries:
-        - "・1段目のJ小Pが位置的に当て易いため、主に正面からの飛び込みに使用\n・空対空にも強い\n・TCを出すタイミングを変えれるので、飛び込み時のBL対策に早出ししたり、引きつけたりして使い分ける \n・ヒット時は振り向きのけぞりになるため、鎧通しが連続技になる(ただしキャラによっては不安定)\n・EX風切りヒット後、「ヒューゴー、Q、ユリアン、レミー、アレックス、ダッドリー」にはTCを繋ぐ事が可能。なおTCにディレイを掛けて出すと、更に地上で追撃可能"
-  - id: jpj6k
-    displayName: J大P→J6中K
-    detail:
-      displayName: J大P→J6中K
-      superCancel: "×/×"
-      guard: 立
-      blocking: "→"
-      damage: 120/40
-      stun: 13/5
-      stunReduction: 3/1
-      frameAdvantage:
-        guard: "―"
-        standingHit: "―"
-        crouchingHit: "―"
-      stats:
-        入力: J大P→J6中K
-        C: "×/×"
-      noteGroups:
-      - id: item_cf8aa5b927
-        displayTitle: 補足
-        entries:
-        - |-
-          ・唯一、垂直ジャンプからも出すことが可能
-          ・起き攻めや、近立大Kヒット時の追撃に使用
-          ・TCが地上の相手にヒットした時は、「中K→旋」のコンボに繋ぐのが安定
-  - id: 4k6k
-    displayName: 4中K→6中K
-    detail:
-      displayName: 4中K→6中K
-      superCancel: "×/×"
-      guard: 両/立
-      blocking: "→/→"
-      damage: 70/70
-      stun: 5/13
-      stunReduction: 1/1
-      frameAdvantage:
-        guard: "+9"
-        standingHit: "+10"
-        crouchingHit: "+11"
-      stats:
-        入力: 4中K→6中K
-        C: "×/×"
-      noteGroups:
-      - id: item_cf8aa5b927
-        displayTitle: 補足
-        entries:
-        - TCではあるが連係のため、繋がらない
-  - id: ppp
-    displayName: 近立小P→立中P→立大P
-    detail:
-      displayName: 近立小P→立中P→立大P
-      superCancel: "○/○/○"
-      guard: 両方・両方・両方
-      blocking: 両方/→/両方
-      damage: 30/30/50
-      stun: 5/5/7
-      stunReduction: 1/1/1
-      stats:
-        入力: 近立小P→立中P→立大P
-        C: "○/○/○"
-        ヒット&ガード硬直時間差(中P) ガード: "-2"
-        ヒット&ガード硬直時間差(中P) 立ヒット: "-1"
-        ヒット&ガード硬直時間差(中P) 屈ヒット: '0'
-        ヒット&ガード硬直時間差(大P) ガード: "+3"
-        ヒット&ガード硬直時間差(大P) 立ヒット: "+5"
-        ヒット&ガード硬直時間差(大P) 屈ヒット: "+7"
-      noteGroups:
-      - id: item_cf8aa5b927
-        displayTitle: 補足
-        entries:
-        - "・4中Pからでも始動可能 \n・間合いが離れないので攻勢を維持し易いが、3段目が一部キャラのしゃがみに当たらないので注意\n・しゃがみヒット時は目押しで立中Kに繋げる事が可能"
-  - id: pp6k
-    displayName: 遠立小P→立中P→6小K
-    detail:
-      displayName: 遠立小P→立中P→6小K
-      superCancel: "×/×/×"
-      guard: 両方・両方・両方
-      blocking: 両方/→/両方
-      damage: 25/40/20
-      stun: 5/6/3
-      stunReduction: 1/1/1
-      stats:
-        入力: 遠立小P→立中P→6小K
-        C: "×/×/×"
-        ヒット&ガード硬直時間差(中P) ガード: "+6"
-        ヒット&ガード硬直時間差(中P) 立ヒット: "+7"
-        ヒット&ガード硬直時間差(中P) 屈ヒット: "+8"
-        ヒット&ガード硬直時間差(6小K) ガード: "+2"
-        ヒット&ガード硬直時間差(6小K) 立ヒット: "+3"
-        ヒット&ガード硬直時間差(6小K) 屈ヒット: "+4"
-      noteGroups:
-      - id: item_cf8aa5b927
-        displayTitle: 補足
-        entries:
-        - |-
-          ・中Pからでも始動可能
-          ・小Pで暴れて相手を押し返すときに使用
-  - id: kkk
-    displayName: 立小K→立中K→立大K
-    detail:
-      displayName: 立小K→立中K→立大K
-      superCancel: "○/○/×"
-      guard: 両方・両方・両方
-      blocking: 両方/→/→
-      damage: 20/50/50
-      stun: 3/5/5
-      stunReduction: 1/1/3
-      stats:
-        入力: 立小K→立中K→立大K
-        C: "○/○/×"
-        ヒット&ガード硬直時間差(中K) ガード: "+4"
-        ヒット&ガード硬直時間差(中K) 立ヒット: "+5"
-        ヒット&ガード硬直時間差(中K) 屈ヒット: "+6"
-        ヒット&ガード硬直時間差(大K) ガード: "-2"
-        ヒット&ガード硬直時間差(大K) 立ヒット: '0'
-        ヒット&ガード硬直時間差(大K) 屈ヒット: "+2"
-      noteGroups:
-      - id: item_cf8aa5b927
-        displayTitle: 補足
-        entries:
-        - "・中Kからでも始動可能 \n・最後の立大KはCHJ可能\n・2段目の中KからNCで闇時雨に繋ぐ事が可能 \n・通常は中Kまででヒット確認をして、キャンセル必殺技などに繋ぐ"
-  - id: pkk
-    displayName: 近立大P→屈大K→立大K
-    detail:
-      displayName: 近立大P→屈大K→立大K
-      superCancel: "○・×/×/×"
-      guard: 両方・両方/屈/両方
-      blocking: 両方・両方/↓/→
-      damage: 130(60+70)/50/40
-      stun: 15/3/4
-      stunReduction: 1・1/1/3
-      stats:
-        入力: 近立大P→屈大K→立大K
-        C: "○・×/×/×"
-        ヒット&ガード硬直時間差(屈大K) ガード: "-8"
-        ヒット&ガード硬直時間差(屈大K) 立ヒット: ダウン
-        ヒット&ガード硬直時間差(屈大K) 屈ヒット: ダウン
-        ヒット&ガード硬直時間差(立大K) ガード: "-2"
-        ヒット&ガード硬直時間差(立大K) 立ヒット: "-1"
-        ヒット&ガード硬直時間差(立大K) 屈ヒット: "+1"
-      noteGroups:
-      - id: item_cf8aa5b927
-        displayTitle: 補足
-        entries:
-        - "・屈大Kからでも始動可能\n・最後の立大KはCHJ可能 \n・対ユリアン戦でヘッド対策として起き攻めに使用"
-  - id: ppkk
-    displayName: 近立小P→立中P→屈大K→立大K
-    detail:
-      displayName: 近立小P→立中P→屈大K→立大K
-      superCancel: "○/○/×/×"
-      guard: 両方/両方/屈/両方
-      blocking: 両方/→/↓/→
-      damage: 30/40/40/30
-      stun: 5/6/3/3
-      stunReduction: 1/1/1/1・3
-      stats:
-        入力: 近立小P→立中P→屈大K→立大K
-        C: "○/○/×/×"
-        ヒット&ガード硬直時間差(中P) ガード: "-2"
-        ヒット&ガード硬直時間差(中P) 立ヒット: "-1"
-        ヒット&ガード硬直時間差(中P) 屈ヒット: '0'
-        ヒット&ガード硬直時間差(屈大K) ガード: "-8"
-        ヒット&ガード硬直時間差(屈大K) 立ヒット: ダウン
-        ヒット&ガード硬直時間差(屈大K) 屈ヒット: ダウン
-        ヒット&ガード硬直時間差(立大K) ガード: "-2"
-        ヒット&ガード硬直時間差(立大K) 立ヒット: "-1"
-        ヒット&ガード硬直時間差(立大K) 屈ヒット: "+1"
-      noteGroups:
-      - id: item_cf8aa5b927
-        displayTitle: 補足
-        entries:
-        - "・中Pからでも始動可能 \n・最後の立大Kはヒット時のみCHJ可能 \n・CHJで追いかけた後、もう1セットこのTCを入れると、大抵相手はスタンする\n・3段目がしゃがみ状態の小型キャラおよびアレックスに、最後の遠立大Kがしゃがみ状態のヤン、トゥエルヴに当たらない"
-
-- id: command_normals
-  displayTitle: "【特殊入力技】"
-  entries:
-  - id: item_ac52a72820
-    displayName: リープアタック
-    detail:
-      displayName: 槍拳(そうけん)
-      command: 中P+中K
-      guard: 立
-      blocking: "→"
-      startup: '15'
-      active: '10'
-      recovery: '5'
-      damage: '40'
-      stun: '3'
-      stunReduction: '1'
-      meterGain:
-        whiff: '0'
-        guard: '1'
-        hit: '2'
-        bl: '4'
-      frameAdvantage:
-        guard: "-5～+7"
-        standingHit: 0～+8
-        crouchingHit: "+1～+9"
-      stats:
-        C/SC: "×"
-      noteGroups:
-      - id: item_cf8aa5b927
-        displayTitle: 補足
-        entries:
-        - |-
-          ・コマンド完成後、5フレーム目から空中判定に移行
-          ・技の下りを当てることで、SAや発生の速い通常技に繋ぐことが可能
-      media:
-        kind: motion_player
-        displayLabel: モーション
-        skillName: Universal Overhead
-        characterCode: '07'
-        skillCode: '035'
-  - id: item_7ae3c90cde
-    displayName: パーソナルアクション
-    detail:
-      displayName: 馬跳び
-      command: 大P+大K
-      guard: 両方
-      blocking: 両方
-      startup: '14'
-      active: '9'
-      recovery: '8'
-      damage: '5'
-      stun: '7'
-      stunReduction: "―"
-      stats:
-        C/SC: "×"
-        ゲージ増加: 4(6)
-      noteGroups:
-      - id: item_f11e32f4cf
-        displayTitle: 効果
-        entries:
-        - 直後に出した全ての攻撃の攻撃力アップ(ただしPAがヒットした時に限る)
-      - id: item_cf8aa5b927
-        displayTitle: 補足
-        entries:
-        - |-
-          ・打撃投げ。ただしBLもGDも可能
-          ・ヒット後でも反撃を受ける
-      media:
-        kind: motion_player
-        displayLabel: モーション
-        skillName: Universal Overhead
-        characterCode: '07'
-        skillCode: '036'
+  - id: item_0213bd1615
+    displayName: ジャンプ小パンチ
+    variants:
+    - id: item_e0c2f756f3
+      displayName: 垂直
+      detail:
+        displayName: 飛び手刀(とびしゅとう)
+        startup: '3'
+        active: 着地まで
+        damage: '50'
+        stun: '7'
+        stunReduction: '3'
+        meterGain:
+          whiff: '0'
+          guard: '1'
+          hit: '2'
+          bl: '4'
+        noteGroups:
+        - id: item_cf8aa5b927
+          displayTitle: 補足
+          entries:
+          - 発生が早いので咄嗟の空対空技として使い易い
+        media:
+          kind: motion_player
+          displayLabel: モーション
+          skillName: Neutral Jumping Jab
+          characterCode: '07'
+          skillCode: '009'
+    - id: item_25ab24896c
+      displayName: 斜め
+      detail:
+        displayName: 槍拳(そうけん)
+        startup: '3'
+        active: '19'
+        damage: '60'
+        stun: '5'
+        stunReduction: '3'
+        meterGain:
+          whiff: '0'
+          guard: '1'
+          hit: '2'
+          bl: '4'
+        noteGroups:
+        - id: item_cf8aa5b927
+          displayTitle: 補足
+          entries:
+          - |-
+            ・判定は弱いが、攻撃判定の位置的に使いやすい
+            ・TCでJ6大Pに繋ぐことが可能
+        media:
+          kind: motion_player
+          displayLabel: モーション
+          skillName: Jumping Jab
+          characterCode: '07'
+          skillCode: '012'
+  - id: item_a18c41f1f2
+    displayName: ジャンプ中パンチ
+    variants:
+    - id: item_f37ec8ba39
+      displayName: 垂直
+      detail:
+        displayName: 飛び手刀(とびしゅとう)
+        startup: '5'
+        active: '7'
+        damage: 80(70)
+        stun: 11(9)
+        stunReduction: '3'
+        meterGain:
+          whiff: '2'
+          guard: '4'
+          hit: '8'
+          bl: '4'
+        noteGroups:
+        - id: item_cf8aa5b927
+          displayTitle: 補足
+          entries:
+          - 攻撃力とスタン値欄のカッコ内の数値は技の後半部分が当たった場合のもの
+        media:
+          kind: motion_player
+          displayLabel: モーション
+          skillName: Neutral Jumping Strong
+          characterCode: '07'
+          skillCode: '010'
+    - id: item_a7ee982c0e
+      displayName: 斜め
+      detail:
+        displayName: 飛び掌打(とびしょうだ)
+        startup: '6'
+        active: '13'
+        damage: 80(70)
+        stun: 11(9)
+        stunReduction: '3'
+        meterGain:
+          whiff: '2'
+          guard: '4'
+          hit: '8'
+          bl: '4'
+        noteGroups:
+        - id: item_cf8aa5b927
+          displayTitle: 補足
+          entries:
+          - |-
+            ・攻撃力とスタン値欄のカッコ内の数値は技の後半部分が当たった場合のもの
+            ・判定が下方向にそこそこ強く、空対空で使用可能
+        media:
+          kind: motion_player
+          displayLabel: モーション
+          skillName: Jumping Strong
+          characterCode: '07'
+          skillCode: '013'
+  - id: item_18529f13be
+    displayName: ジャンプ大パンチ
+    variants:
+    - id: item_ca5fa63a59
+      displayName: 垂直
+      detail:
+        displayName: 飛び裏拳
+        startup: '11'
+        active: '5'
+        damage: '120'
+        stun: '13'
+        stunReduction: '3'
+        meterGain:
+          whiff: '3'
+          guard: '6'
+          hit: '14'
+          bl: '4'
+        noteGroups:
+        - id: item_cf8aa5b927
+          displayTitle: 補足
+          entries:
+          - |-
+            ・ヒット時、投げられ判定を持った振り向きのけぞりになるため、場所によっては鎧通し(投げの方)が確定
+            ・先端の判定が強く、BLされても反撃を受けにくい
+            ・TCでJ6中Kに繋ぐことが可能
+        media:
+          kind: motion_player
+          displayLabel: モーション
+          skillName: Neutral Jumping Fierce
+          characterCode: '07'
+          skillCode: '011'
+    - id: item_c36fb09951
+      displayName: 斜め
+      detail:
+        displayName: 飛び裏拳
+        startup: '11'
+        active: '5'
+        damage: '120'
+        stun: '13'
+        stunReduction: '3'
+        meterGain:
+          whiff: '3'
+          guard: '6'
+          hit: '14'
+          bl: '4'
+        noteGroups:
+        - id: item_cf8aa5b927
+          displayTitle: 補足
+          entries:
+          - |-
+            ・ヒット時、投げられ判定を持った振り向きのけぞりになるため、場所によっては鎧通し(投げの方)が確定
+            ・先端の判定が強く、BLされても反撃を受けにくい
+            ・TCでJ6中Kに繋ぐことが可能
+        media:
+          kind: motion_player
+          displayLabel: モーション
+          skillName: Jumping Fierce
+          characterCode: '07'
+          skillCode: '014'
+  - id: item_a83e3f7cff
+    displayName: ジャンプ小キック
+    variants:
+    - id: item_f48ae8dc16
+      displayName: 垂直
+      detail:
+        displayName: 飛び前蹴り
+        startup: '4'
+        active: 着地まで
+        damage: '50'
+        stun: '5'
+        stunReduction: '3'
+        meterGain:
+          whiff: '0'
+          guard: '1'
+          hit: '2'
+          bl: '4'
+        media:
+          kind: motion_player
+          displayLabel: モーション
+          skillName: Neutral Jumping Short
+          characterCode: '07'
+          skillCode: '022'
+    - id: item_adfe5e6bc9
+      displayName: 斜め
+      detail:
+        displayName: 当膝(あてひざ)
+        startup: '3'
+        active: 着地まで
+        damage: '40'
+        stun: '5'
+        stunReduction: '3'
+        meterGain:
+          whiff: '0'
+          guard: '1'
+          hit: '2'
+          bl: '4'
+        noteGroups:
+        - id: item_cf8aa5b927
+          displayTitle: 補足
+          entries:
+          - |-
+            ・発生が速く、判定が強いため飛び込みに使用する。めくりも可能
+            ・TCでJ6中Kに繋ぐことが可能
+        media:
+          kind: motion_player
+          displayLabel: モーション
+          skillName: Jumping Short
+          characterCode: '07'
+          skillCode: '025'
+  - id: item_c3103eb1f9
+    displayName: ジャンプ中キック
+    variants:
+    - id: item_5280b1f280
+      displayName: 垂直
+      detail:
+        displayName: 飛び前蹴り
+        startup: '5'
+        active: '7'
+        damage: 70(60)
+        stun: 9(7)
+        stunReduction: '1'
+        meterGain:
+          whiff: '2'
+          guard: '4'
+          hit: '8'
+          bl: '4'
+        noteGroups:
+        - id: item_cf8aa5b927
+          displayTitle: 補足
+          entries:
+          - |-
+            ・攻撃力とスタン値欄のカッコ内の数値は技の後半部分が当たった場合のもの
+            ・なぜかこのジャンプ攻撃のみ削減値が「1」
+        media:
+          kind: motion_player
+          displayLabel: モーション
+          skillName: Neutral Jumping Forward
+          characterCode: '07'
+          skillCode: '023'
+    - id: item_83fba48c4f
+      displayName: 斜め
+      detail:
+        displayName: 影矢(かげや)
+        startup: '7'
+        active: '13'
+        damage: 70(60)
+        stun: 9(7)
+        stunReduction: '3'
+        meterGain:
+          whiff: '2'
+          guard: '4'
+          hit: '8'
+          bl: '4'
+        noteGroups:
+        - id: item_cf8aa5b927
+          displayTitle: 補足
+          entries:
+          - |-
+            ・攻撃力とスタン値欄のカッコ内の数値は技の後半部分が当たった場合のもの
+            ・攻撃範囲が広いため、めくり狙いや先端当て飛び込みなどに使用
+            ・ヒット時、相手ののけぞりが長くないため、高い位置で当てると地上で小P位しか繋がらない
+        media:
+          kind: motion_player
+          displayLabel: モーション
+          skillName: Jumping Forward
+          characterCode: '07'
+          skillCode: '026'
+  - id: item_86e58a160f
+    displayName: ジャンプ大キック
+    variants:
+    - id: item_3b01b3c990
+      displayName: 垂直
+      detail:
+        displayName: 影鉈(かげなた)
+        startup: '10'
+        active: '3'
+        damage: 110(95(90))
+        stun: 13(13(11))
+        stunReduction: '3'
+        meterGain:
+          whiff: '3'
+          guard: '4'
+          hit: '12'
+          bl: '4'
+        noteGroups:
+        - id: item_cf8aa5b927
+          displayTitle: 補足
+          entries:
+          - "・攻撃力とスタン値欄のカッコ内の数値は技の後半部分が当たった場合のもの(3回変化する)\n・タイミングによって攻撃判定が変わり、また攻撃範囲も広い \n・ヒット時はQSが取りづらい叩き付けダウンになる"
+        media:
+          kind: motion_player
+          displayLabel: モーション
+          skillName: Neutral Jumping Roundhouse
+          characterCode: '07'
+          skillCode: '024'
+    - id: item_3e728dc7eb
+      displayName: 斜め
+      detail:
+        displayName: 影鉈(かげなた)
+        startup: '10'
+        active: '3'
+        damage: 110(95(90))
+        stun: 13(13(11))
+        stunReduction: '3'
+        meterGain:
+          whiff: '3'
+          guard: '4'
+          hit: '12'
+          bl: '4'
+        noteGroups:
+        - id: item_cf8aa5b927
+          displayTitle: 補足
+          entries:
+          - "・攻撃力とスタン値欄のカッコ内の数値は技の後半部分が当たった場合のもの(3回変化する)\n・タイミングによって攻撃判定が変わり、また攻撃範囲も広い \n・ヒット時はQSが取りづらい叩き付けダウンになる"
+        media:
+          kind: motion_player
+          displayLabel: モーション
+          skillName: Jumping Roundhouse
+          characterCode: '07'
+          skillCode: '027'
 - id: special_moves
   displayTitle: "【必殺技】"
   entries:
@@ -3771,3 +3166,607 @@ moveGroups:
         skillName: Yami Shigure
         characterCode: '07'
         skillCode: '062'
+- id: lever_input_moves
+  displayTitle: "【レバー入れ技】"
+  entries:
+  - id: item_ddb9dd8f71
+    displayName: 巻き蹴り
+    detail:
+      displayName: 巻き蹴り
+      command: 6+小K
+      guard: 両方
+      blocking: 両方
+      startup: '5'
+      active: '4'
+      recovery: '8'
+      damage: '20'
+      stun: '3'
+      stunReduction: '1'
+      meterGain:
+        whiff: '0'
+        guard: '1'
+        hit: '2'
+        bl: '4'
+      frameAdvantage:
+        guard: "-1"
+        standingHit: "-1"
+        crouchingHit: "-1"
+      stats:
+        C/SC: "☆/×"
+      noteGroups:
+      - id: item_cf8aa5b927
+        displayTitle: 補足
+        entries:
+        - ユリアンのタックルに反撃できる
+      media:
+        kind: motion_player
+        displayLabel: モーション
+        skillName: Towards + Short
+        characterCode: '07'
+        skillCode: '029'
+  - id: item_b35114bb44
+    displayName: 揚面(あげめん)
+    detail:
+      displayName: 揚面(あげめん)
+      command: 4+中P
+      guard: 両方・両方
+      blocking: "→・→"
+      startup: '6'
+      active: 1・6
+      recovery: '10'
+      damage: 80(30+60(50))
+      stun: 12(5+9(7))
+      stunReduction: 1・1
+      meterGain:
+        whiff: '2'
+        guard: 5(4+1)
+        hit: 10(8+2)
+        bl: 8(4+4)
+      frameAdvantage:
+        guard: "-2"
+        standingHit: "-1"
+        crouchingHit: '0'
+      stats:
+        C/SC: "○・×"
+      noteGroups:
+      - id: item_cf8aa5b927
+        displayTitle: 補足
+        entries:
+        - |-
+          ・攻撃力とスタン値欄のカッコ内の数値は技の後半部分のもの
+          ・TCで大P、屈大Kに繋ぐことが可能
+          ・1段目はそこまで判定が強くないが、多段対空に使える
+      media:
+        kind: motion_player
+        displayLabel: モーション
+        skillName: Back + Strong
+        characterCode: '07'
+        skillCode: '028'
+  - id: item_713b0898a0
+    displayName: 裏巻き蹴り
+    detail:
+      displayName: 裏巻き蹴り
+      command: 4+中K
+      guard: 両方
+      blocking: "→"
+      startup: '13'
+      active: '2'
+      recovery: '13'
+      damage: '70'
+      stun: '5'
+      stunReduction: '1'
+      meterGain:
+        whiff: '2'
+        guard: '4'
+        hit: '8'
+        bl: '4'
+      frameAdvantage:
+        guard: "-2"
+        standingHit: "-1"
+        crouchingHit: '0'
+      stats:
+        C/SC: "×"
+      noteGroups:
+      - id: item_cf8aa5b927
+        displayTitle: 補足
+        entries:
+        - |-
+          ・TCで6中Kに繋ぐことが可能
+          ・いぶきの技の中で最長クラスのリーチを持つ
+      media:
+        kind: motion_player
+        displayLabel: モーション
+        skillName: Back + Forward
+        characterCode: '07'
+        skillCode: '031'
+  - id: item_3963b60fb2
+    displayName: 頭砕き
+    detail:
+      displayName: 頭砕き
+      command: 6+中K
+      guard: 立
+      blocking: "→"
+      startup: '27'
+      active: '3'
+      recovery: 3(4)
+      damage: 80(70)
+      stun: '13'
+      stunReduction: '1'
+      meterGain:
+        whiff: '2'
+        guard: '4'
+        hit: '8'
+        bl: '4'
+      frameAdvantage:
+        guard: "+9"
+        standingHit: "+10"
+        crouchingHit: "+11"
+      stats:
+        C/SC: "×"
+      noteGroups:
+      - id: item_cf8aa5b927
+        displayTitle: 補足
+        entries:
+        - "・硬直欄のカッコ内の数値はしゃがみ状態で着地した時のもの\n・攻撃力欄のカッコ内の数値は技の後半部分のもの\n・コマンド完成後、8フレーム目から空中判定に移行。ただし12フレーム目までは地上に投げられ判定が残っている \n・BLされても発生3フレームまでの攻撃しか確定しない\n・ガードされても攻めを継続できる\n・ヒット時、ノーキャンセルで小P発動のSA3に繋ぐことが可能。その場合、キャンセル猶予時間は13～19フレーム"
+      media:
+        kind: motion_player
+        displayLabel: モーション
+        skillName: Towards + Forward
+        characterCode: '07'
+        skillCode: '030'
+  - id: item_1dc18def5e
+    displayName: 砂斬
+    detail:
+      displayName: 砂斬
+      command: 3+中K
+      guard: 屈
+      blocking: "↓"
+      startup: '6'
+      active: '11'
+      recovery: '9'
+      damage: '70'
+      stun: '3'
+      stunReduction: '1'
+      meterGain:
+        whiff: '3'
+        guard: '4'
+        hit: '12'
+        bl: '4'
+      frameAdvantage:
+        guard: "-16(-6)"
+        standingHit: "-6(+4)"
+        crouchingHit: "-5(+5)"
+      stats:
+        C/SC: "×"
+      noteGroups:
+      - id: item_cf8aa5b927
+        displayTitle: 補足
+        entries:
+        - |-
+          ・ヒット&ガード硬直時間差欄のカッコの数値は先端をガードさせた場合のもの
+          ・コマンド完成後、1フレーム目から姿勢が低くなり、17フレーム目まで上段攻撃と、一部の飛び道具を抜ける事が可能
+          ・牽制の要。相手の牽制技を避けつつ攻撃したり、姿勢の低さを生かして対空に使用可能
+          ・地面に接する飛び道具以外を潜れる。また多段飛び道具は初段をBLして残りを潜って避けることが出来る
+          ・リュウの電刃波動拳を抜けるのにも使える
+      media:
+        kind: motion_player
+        displayLabel: モーション
+        skillName: Down-Towards + Forward
+        characterCode: '07'
+        skillCode: '032'
+  - id: item_213bee827f
+    displayName: 追裏拳
+    detail:
+      displayName: 追裏拳
+      command: 遠大P中に大P
+      guard: 両方
+      blocking: "→"
+      startup: '2'
+      active: '3'
+      recovery: '31'
+      damage: '80'
+      stun: '17'
+      stunReduction: '1'
+      meterGain:
+        whiff: '3'
+        guard: '4'
+        hit: '12'
+        bl: '4'
+      frameAdvantage:
+        guard: "-1"
+        standingHit: "+1"
+        crouchingHit: "+3"
+      stats:
+        C/SC: "×"
+  - id: item_8b333152e1
+    displayName: 梵鐘蹴り
+    detail:
+      displayName: 梵鐘蹴り
+      command: 6+大K
+      guard: 両方
+      blocking: "→"
+      startup: '12'
+      active: '1'
+      recovery: 20(21)
+      damage: '130'
+      stun: '17'
+      stunReduction: '1'
+      meterGain:
+        whiff: '3'
+        guard: '6'
+        hit: '14'
+        bl: '4'
+      frameAdvantage:
+        guard: "-1"
+        standingHit: "+1"
+        crouchingHit: "+3"
+      stats:
+        C/SC: "×"
+      noteGroups:
+      - id: item_cf8aa5b927
+        displayTitle: 補足
+        entries:
+        - |-
+          ・硬直欄のカッコ内の数値はしゃがみ状態で着地した時のもの
+          ・コマンド完成後、8フレーム目から空中判定に移行
+          ・牽制の要。判定が強いが、打点が高いので小型キャラのしゃがみ状態には当たらないので注意
+          ・大きめのキャラ(しゃがんでも当たるキャラ)に対しては、牽制合戦で絶大な効果あり
+          ・跳び上がるため足払い系に対して強く、打点が高いため飛ぼうとした相手に当てることが可能
+          ・しゃがみヒット時、ノーキャンセルで小P発動のSA3に繋ぐことが可能。その場合、キャンセル猶予時間は30フレーム
+      media:
+        kind: motion_player
+        displayLabel: モーション
+        skillName: Towards + Roundhouse
+        characterCode: '07'
+        skillCode: '033'
+- id: normal_throws
+  displayTitle: "【通常投げ】"
+  entries:
+  - id: item_5ce1b1a9b3
+    displayName: 闇葛(やみかずら)
+    detail:
+      displayName: 闇葛(やみかずら)
+      command: |-
+        小P+小K
+        →+小P+小K
+        ←+小P+小K
+      startup: '2'
+      active: '1'
+      recovery: '21'
+      damage: '120'
+      stun: '13'
+      meterGain:
+        onWhiff: '0'
+        throwSuccess: '7'
+      stats:
+        投げ間合い: '16'
+      noteGroups:
+      - id: item_cf8aa5b927
+        displayTitle: 補足
+        entries:
+        - |-
+          ・硬直は投げ失敗時のフレーム
+          ・左右に投げ分けが可能
+          ・全キャラ中最低の投げ間合い
+          ・投げた後はそこそこ有利であるが、QSを取られると画面端以外では自由に起き攻め出来ない
+      media:
+        kind: motion_player
+        displayLabel: モーション
+        skillName: Throw
+        characterCode: '07'
+        skillCode: '034'
+  - id: item_346987532f
+    displayName: 飛び猿
+    detail:
+      displayName: 飛び猿
+      command: 空中で小P+小K
+      startup: '6'
+      active: '1'
+      recovery: "―"
+      damage: '160'
+      stun: '18'
+      meterGain:
+        onWhiff: '0'
+        throwSuccess: '14'
+      stats:
+        投げ間合い 前方: '12'
+        投げ間合い 上下: 44～67
+      noteGroups:
+      - id: item_cf8aa5b927
+        displayTitle: 補足
+        entries:
+        - 空中投げ
+- id: common_moves
+  displayTitle: "【特殊入力技】"
+  entries:
+  - id: item_ac52a72820
+    displayName: リープアタック
+    detail:
+      displayName: 槍拳(そうけん)
+      command: 中P+中K
+      guard: 立
+      blocking: "→"
+      startup: '15'
+      active: '10'
+      recovery: '5'
+      damage: '40'
+      stun: '3'
+      stunReduction: '1'
+      meterGain:
+        whiff: '0'
+        guard: '1'
+        hit: '2'
+        bl: '4'
+      frameAdvantage:
+        guard: "-5～+7"
+        standingHit: 0～+8
+        crouchingHit: "+1～+9"
+      stats:
+        C/SC: "×"
+      noteGroups:
+      - id: item_cf8aa5b927
+        displayTitle: 補足
+        entries:
+        - |-
+          ・コマンド完成後、5フレーム目から空中判定に移行
+          ・技の下りを当てることで、SAや発生の速い通常技に繋ぐことが可能
+      media:
+        kind: motion_player
+        displayLabel: モーション
+        skillName: Universal Overhead
+        characterCode: '07'
+        skillCode: '035'
+  - id: item_7ae3c90cde
+    displayName: パーソナルアクション
+    detail:
+      displayName: 馬跳び
+      command: 大P+大K
+      guard: 両方
+      blocking: 両方
+      startup: '14'
+      active: '9'
+      recovery: '8'
+      damage: '5'
+      stun: '7'
+      stunReduction: "―"
+      stats:
+        C/SC: "×"
+        ゲージ増加: 4(6)
+      noteGroups:
+      - id: item_f11e32f4cf
+        displayTitle: 効果
+        entries:
+        - 直後に出した全ての攻撃の攻撃力アップ(ただしPAがヒットした時に限る)
+      - id: item_cf8aa5b927
+        displayTitle: 補足
+        entries:
+        - |-
+          ・打撃投げ。ただしBLもGDも可能
+          ・ヒット後でも反撃を受ける
+      media:
+        kind: motion_player
+        displayLabel: モーション
+        skillName: Universal Overhead
+        characterCode: '07'
+        skillCode: '036'
+- id: target_combos
+  displayTitle: "【ターゲットコンボ】"
+  entries:
+  - id: jkj6k
+    displayName: J小K→J6中K
+    detail:
+      displayName: J小K→J6中K
+      superCancel: "×/×"
+      guard: 立
+      blocking: "→"
+      damage: 40/40
+      stun: 5/5
+      stunReduction: 3/1
+      frameAdvantage:
+        guard: "―"
+        standingHit: "―"
+        crouchingHit: "―"
+      stats:
+        入力: J小K→J6中K
+        C: "×/×"
+      noteGroups:
+      - id: item_cf8aa5b927
+        displayTitle: 補足
+        entries:
+        - |-
+          ・小K、中Kともにめくり性能を備えているので、2段ともめくり、2段目のみめくり、といった使い方も可能
+          ・2段目が中Kなので出す高度に注意
+  - id: jpj6p
+    displayName: J小P→J6大P
+    detail:
+      displayName: J小P→J6大P
+      superCancel: "×/×"
+      guard: 立
+      blocking: "→"
+      damage: 60/60
+      stun: 5/6
+      stunReduction: 3/1
+      frameAdvantage:
+        guard: "―"
+        standingHit: "―"
+        crouchingHit: "―"
+      stats:
+        入力: J小P→J6大P
+        C: "×/×"
+      noteGroups:
+      - id: item_cf8aa5b927
+        displayTitle: 補足
+        entries:
+        - "・1段目のJ小Pが位置的に当て易いため、主に正面からの飛び込みに使用\n・空対空にも強い\n・TCを出すタイミングを変えれるので、飛び込み時のBL対策に早出ししたり、引きつけたりして使い分ける \n・ヒット時は振り向きのけぞりになるため、鎧通しが連続技になる(ただしキャラによっては不安定)\n・EX風切りヒット後、「ヒューゴー、Q、ユリアン、レミー、アレックス、ダッドリー」にはTCを繋ぐ事が可能。なおTCにディレイを掛けて出すと、更に地上で追撃可能"
+  - id: jpj6k
+    displayName: J大P→J6中K
+    detail:
+      displayName: J大P→J6中K
+      superCancel: "×/×"
+      guard: 立
+      blocking: "→"
+      damage: 120/40
+      stun: 13/5
+      stunReduction: 3/1
+      frameAdvantage:
+        guard: "―"
+        standingHit: "―"
+        crouchingHit: "―"
+      stats:
+        入力: J大P→J6中K
+        C: "×/×"
+      noteGroups:
+      - id: item_cf8aa5b927
+        displayTitle: 補足
+        entries:
+        - |-
+          ・唯一、垂直ジャンプからも出すことが可能
+          ・起き攻めや、近立大Kヒット時の追撃に使用
+          ・TCが地上の相手にヒットした時は、「中K→旋」のコンボに繋ぐのが安定
+  - id: 4k6k
+    displayName: 4中K→6中K
+    detail:
+      displayName: 4中K→6中K
+      superCancel: "×/×"
+      guard: 両/立
+      blocking: "→/→"
+      damage: 70/70
+      stun: 5/13
+      stunReduction: 1/1
+      frameAdvantage:
+        guard: "+9"
+        standingHit: "+10"
+        crouchingHit: "+11"
+      stats:
+        入力: 4中K→6中K
+        C: "×/×"
+      noteGroups:
+      - id: item_cf8aa5b927
+        displayTitle: 補足
+        entries:
+        - TCではあるが連係のため、繋がらない
+  - id: ppp
+    displayName: 近立小P→立中P→立大P
+    detail:
+      displayName: 近立小P→立中P→立大P
+      superCancel: "○/○/○"
+      guard: 両方・両方・両方
+      blocking: 両方/→/両方
+      damage: 30/30/50
+      stun: 5/5/7
+      stunReduction: 1/1/1
+      stats:
+        入力: 近立小P→立中P→立大P
+        C: "○/○/○"
+        ヒット&ガード硬直時間差(中P) ガード: "-2"
+        ヒット&ガード硬直時間差(中P) 立ヒット: "-1"
+        ヒット&ガード硬直時間差(中P) 屈ヒット: '0'
+        ヒット&ガード硬直時間差(大P) ガード: "+3"
+        ヒット&ガード硬直時間差(大P) 立ヒット: "+5"
+        ヒット&ガード硬直時間差(大P) 屈ヒット: "+7"
+      noteGroups:
+      - id: item_cf8aa5b927
+        displayTitle: 補足
+        entries:
+        - "・4中Pからでも始動可能 \n・間合いが離れないので攻勢を維持し易いが、3段目が一部キャラのしゃがみに当たらないので注意\n・しゃがみヒット時は目押しで立中Kに繋げる事が可能"
+  - id: pp6k
+    displayName: 遠立小P→立中P→6小K
+    detail:
+      displayName: 遠立小P→立中P→6小K
+      superCancel: "×/×/×"
+      guard: 両方・両方・両方
+      blocking: 両方/→/両方
+      damage: 25/40/20
+      stun: 5/6/3
+      stunReduction: 1/1/1
+      stats:
+        入力: 遠立小P→立中P→6小K
+        C: "×/×/×"
+        ヒット&ガード硬直時間差(中P) ガード: "+6"
+        ヒット&ガード硬直時間差(中P) 立ヒット: "+7"
+        ヒット&ガード硬直時間差(中P) 屈ヒット: "+8"
+        ヒット&ガード硬直時間差(6小K) ガード: "+2"
+        ヒット&ガード硬直時間差(6小K) 立ヒット: "+3"
+        ヒット&ガード硬直時間差(6小K) 屈ヒット: "+4"
+      noteGroups:
+      - id: item_cf8aa5b927
+        displayTitle: 補足
+        entries:
+        - |-
+          ・中Pからでも始動可能
+          ・小Pで暴れて相手を押し返すときに使用
+  - id: kkk
+    displayName: 立小K→立中K→立大K
+    detail:
+      displayName: 立小K→立中K→立大K
+      superCancel: "○/○/×"
+      guard: 両方・両方・両方
+      blocking: 両方/→/→
+      damage: 20/50/50
+      stun: 3/5/5
+      stunReduction: 1/1/3
+      stats:
+        入力: 立小K→立中K→立大K
+        C: "○/○/×"
+        ヒット&ガード硬直時間差(中K) ガード: "+4"
+        ヒット&ガード硬直時間差(中K) 立ヒット: "+5"
+        ヒット&ガード硬直時間差(中K) 屈ヒット: "+6"
+        ヒット&ガード硬直時間差(大K) ガード: "-2"
+        ヒット&ガード硬直時間差(大K) 立ヒット: '0'
+        ヒット&ガード硬直時間差(大K) 屈ヒット: "+2"
+      noteGroups:
+      - id: item_cf8aa5b927
+        displayTitle: 補足
+        entries:
+        - "・中Kからでも始動可能 \n・最後の立大KはCHJ可能\n・2段目の中KからNCで闇時雨に繋ぐ事が可能 \n・通常は中Kまででヒット確認をして、キャンセル必殺技などに繋ぐ"
+  - id: pkk
+    displayName: 近立大P→屈大K→立大K
+    detail:
+      displayName: 近立大P→屈大K→立大K
+      superCancel: "○・×/×/×"
+      guard: 両方・両方/屈/両方
+      blocking: 両方・両方/↓/→
+      damage: 130(60+70)/50/40
+      stun: 15/3/4
+      stunReduction: 1・1/1/3
+      stats:
+        入力: 近立大P→屈大K→立大K
+        C: "○・×/×/×"
+        ヒット&ガード硬直時間差(屈大K) ガード: "-8"
+        ヒット&ガード硬直時間差(屈大K) 立ヒット: ダウン
+        ヒット&ガード硬直時間差(屈大K) 屈ヒット: ダウン
+        ヒット&ガード硬直時間差(立大K) ガード: "-2"
+        ヒット&ガード硬直時間差(立大K) 立ヒット: "-1"
+        ヒット&ガード硬直時間差(立大K) 屈ヒット: "+1"
+      noteGroups:
+      - id: item_cf8aa5b927
+        displayTitle: 補足
+        entries:
+        - "・屈大Kからでも始動可能\n・最後の立大KはCHJ可能 \n・対ユリアン戦でヘッド対策として起き攻めに使用"
+  - id: ppkk
+    displayName: 近立小P→立中P→屈大K→立大K
+    detail:
+      displayName: 近立小P→立中P→屈大K→立大K
+      superCancel: "○/○/×/×"
+      guard: 両方/両方/屈/両方
+      blocking: 両方/→/↓/→
+      damage: 30/40/40/30
+      stun: 5/6/3/3
+      stunReduction: 1/1/1/1・3
+      stats:
+        入力: 近立小P→立中P→屈大K→立大K
+        C: "○/○/×/×"
+        ヒット&ガード硬直時間差(中P) ガード: "-2"
+        ヒット&ガード硬直時間差(中P) 立ヒット: "-1"
+        ヒット&ガード硬直時間差(中P) 屈ヒット: '0'
+        ヒット&ガード硬直時間差(屈大K) ガード: "-8"
+        ヒット&ガード硬直時間差(屈大K) 立ヒット: ダウン
+        ヒット&ガード硬直時間差(屈大K) 屈ヒット: ダウン
+        ヒット&ガード硬直時間差(立大K) ガード: "-2"
+        ヒット&ガード硬直時間差(立大K) 立ヒット: "-1"
+        ヒット&ガード硬直時間差(立大K) 屈ヒット: "+1"
+      noteGroups:
+      - id: item_cf8aa5b927
+        displayTitle: 補足
+        entries:
+        - "・中Pからでも始動可能 \n・最後の立大Kはヒット時のみCHJ可能 \n・CHJで追いかけた後、もう1セットこのTCを入れると、大抵相手はスタンする\n・3段目がしゃがみ状態の小型キャラおよびアレックスに、最後の遠立大Kがしゃがみ状態のヤン、トゥエルヴに当たらない"

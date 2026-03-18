@@ -48,7 +48,7 @@ moveGroups:
   - id: lever_input_moves
     displayTitle: "【レバー入れ技】"
     entries: []
-  - id: command_normals
+  - id: common_moves
     displayTitle: "【特殊入力技】"
     entries: []
   - id: special_moves
@@ -69,7 +69,7 @@ moveGroups:
 | `ground_normals` | `【地上通常技】` |
 | `normal_throws` | `【通常投げ】` |
 | `lever_input_moves` | `【レバー入れ技】` |
-| `command_normals` | `【特殊入力技】` |
+| `common_moves` | `【特殊入力技】` |
 | `special_moves` | `【必殺技】` |
 | `super_arts` | `【スーパーアーツ】` |
 

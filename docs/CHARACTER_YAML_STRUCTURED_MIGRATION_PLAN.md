@@ -51,7 +51,7 @@ moveGroups:
 
 - `air_normals`
 - `ground_normals`
-- `command_normals`
+- `common_moves`
 - `special_moves`
 - `super_arts`
 
@@ -181,7 +181,7 @@ detail:
 - 第 1 段 `SectionTitle` 和故事文本映射到 `introduction`
 - `【空中通常技】` -> `air_normals`
 - `【地上通常技】` -> `ground_normals`
-- `【特殊入力技】` -> `command_normals`
+- `【特殊入力技】` -> `common_moves`
 - `【必殺技】` -> `special_moves`
 - `【スーパーアーツ】` -> `super_arts`
 

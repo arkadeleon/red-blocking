@@ -8,275 +8,6 @@ introduction:
     銀髪に隠された瞳が一瞬の狂気に煌くとき、青年の心は闇に染まる。
     復讐の宴…。もう後には引けないのだ。
 moveGroups:
-- id: air_normals
-  displayTitle: "【空中通常技】"
-  entries:
-  - id: item_0213bd1615
-    displayName: ジャンプ小パンチ
-    variants:
-    - id: item_e0c2f756f3
-      displayName: 垂直
-      detail:
-        displayName: 癒されぬヴァン
-        startup: '4'
-        active: '20'
-        damage: '40'
-        stun: '7'
-        stunReduction: '3'
-        meterGain:
-          whiff: '0'
-          guard: '1'
-          hit: '2'
-          bl: '4'
-    - id: item_25ab24896c
-      displayName: 斜め
-      detail:
-        displayName: 癒されぬヴァン
-        startup: '4'
-        active: '20'
-        damage: '40'
-        stun: '7'
-        stunReduction: '3'
-        meterGain:
-          whiff: '0'
-          guard: '1'
-          hit: '2'
-          bl: '4'
-        media:
-          kind: motion_player
-          displayLabel: モーション
-          skillName: Jumping Jab
-          characterCode: '20'
-          skillCode: '010'
-  - id: item_a18c41f1f2
-    displayName: ジャンプ中パンチ
-    variants:
-    - id: item_f37ec8ba39
-      displayName: 垂直
-      detail:
-        displayName: 癒されぬヴァン
-        startup: '5'
-        active: '14'
-        damage: '70'
-        stun: '11'
-        stunReduction: '3'
-        meterGain:
-          whiff: '2'
-          guard: '4'
-          hit: '8'
-          bl: '4'
-    - id: item_a7ee982c0e
-      displayName: 斜め
-      detail:
-        displayName: 癒されぬヴァン
-        startup: '5'
-        active: '14'
-        damage: '70'
-        stun: '11'
-        stunReduction: '3'
-        meterGain:
-          whiff: '2'
-          guard: '4'
-          hit: '8'
-          bl: '4'
-        noteGroups:
-        - id: item_cf8aa5b927
-          displayTitle: 補足
-          entries:
-          - 空対空でヒットした場合、相手よりも先に着地できるためダッシュで裏回りが可能
-        media:
-          kind: motion_player
-          displayLabel: モーション
-          skillName: Jumping Strong
-          characterCode: '20'
-          skillCode: '011'
-  - id: item_18529f13be
-    displayName: ジャンプ大パンチ
-    variants:
-    - id: item_ca5fa63a59
-      displayName: 垂直
-      detail:
-        displayName: 真紅のアルカンシェル
-        startup: '9'
-        active: '5'
-        damage: '125'
-        stun: '15'
-        stunReduction: '3'
-        meterGain:
-          whiff: '3'
-          guard: '6'
-          hit: '14'
-          bl: '4'
-        noteGroups:
-        - id: item_cf8aa5b927
-          displayTitle: 補足
-          entries:
-          - 空対空でヒットした場合、追撃可能
-    - id: item_c36fb09951
-      displayName: 斜め
-      detail:
-        displayName: 真紅のアルカンシェル
-        startup: '9'
-        active: '5'
-        damage: '125'
-        stun: '15'
-        stunReduction: '3'
-        meterGain:
-          whiff: '3'
-          guard: '6'
-          hit: '14'
-          bl: '4'
-        noteGroups:
-        - id: item_cf8aa5b927
-          displayTitle: 補足
-          entries:
-          - 空対空でヒットした場合、追撃可能
-        media:
-          kind: motion_player
-          displayLabel: モーション
-          skillName: Jumping Fierce
-          characterCode: '20'
-          skillCode: '012'
-  - id: item_a83e3f7cff
-    displayName: ジャンプ小キック
-    variants:
-    - id: item_f48ae8dc16
-      displayName: 垂直
-      detail:
-        displayName: 誘惑(いざな)いのヴァーグ
-        startup: '4'
-        active: '14'
-        damage: '50'
-        stun: '5'
-        stunReduction: '3'
-        meterGain:
-          whiff: '0'
-          guard: '1'
-          hit: '2'
-          bl: '4'
-    - id: item_adfe5e6bc9
-      displayName: 斜め
-      detail:
-        displayName: 誘惑(いざな)いのヴァーグ
-        startup: '4'
-        active: '14'
-        damage: '50'
-        stun: '5'
-        stunReduction: '3'
-        meterGain:
-          whiff: '0'
-          guard: '1'
-          hit: '2'
-          bl: '4'
-        noteGroups:
-        - id: item_cf8aa5b927
-          displayTitle: 補足
-          entries:
-          - めくり性能あり。画面端なら比較的楽にめくれる
-        media:
-          kind: motion_player
-          displayLabel: モーション
-          skillName: Jumping Short
-          characterCode: '20'
-          skillCode: '022'
-  - id: item_c3103eb1f9
-    displayName: ジャンプ中キック
-    variants:
-    - id: item_5280b1f280
-      displayName: 垂直
-      detail:
-        displayName: 凍てつく心のラルム
-        startup: '6'
-        active: '4'
-        damage: '90'
-        stun: '9'
-        stunReduction: '3'
-        meterGain:
-          whiff: '2'
-          guard: '4'
-          hit: '8'
-          bl: '4'
-        noteGroups:
-        - id: item_cf8aa5b927
-          displayTitle: 補足
-          entries:
-          - 横方向にリーチが長いため、空対空で使用する
-    - id: item_83fba48c4f
-      displayName: 斜め
-      detail:
-        displayName: 凍てつく心のラルム
-        startup: '6'
-        active: '4'
-        damage: '90'
-        stun: '9'
-        stunReduction: '3'
-        meterGain:
-          whiff: '2'
-          guard: '4'
-          hit: '8'
-          bl: '4'
-        noteGroups:
-        - id: item_cf8aa5b927
-          displayTitle: 補足
-          entries:
-          - 横方向にリーチが長いため、空対空で使用する
-        media:
-          kind: motion_player
-          displayLabel: モーション
-          skillName: Jumping Forward
-          characterCode: '20'
-          skillCode: '023'
-  - id: item_86e58a160f
-    displayName: ジャンプ大キック
-    variants:
-    - id: item_3b01b3c990
-      displayName: 垂直
-      detail:
-        displayName: 墓守の名はクーラン・マラン
-        startup: '10'
-        active: '4'
-        damage: '120'
-        stun: '13'
-        stunReduction: '3'
-        meterGain:
-          whiff: '2'
-          guard: '7'
-          hit: '15'
-          bl: '4'
-        noteGroups:
-        - id: item_cf8aa5b927
-          displayTitle: 補足
-          entries:
-          - |-
-            ・下方向に判定が強いため、飛び込みに使用する
-            ・高い打点でヒットしても、SA2に繋ぐことが可能
-    - id: item_3e728dc7eb
-      displayName: 斜め
-      detail:
-        displayName: 墓守の名はクーラン・マラン
-        startup: '10'
-        active: '4'
-        damage: '120'
-        stun: '13'
-        stunReduction: '3'
-        meterGain:
-          whiff: '3'
-          guard: '6'
-          hit: '14'
-          bl: '4'
-        noteGroups:
-        - id: item_cf8aa5b927
-          displayTitle: 補足
-          entries:
-          - |-
-            ・下方向に判定が強いため、飛び込みに使用する
-            ・高い打点でヒットしても、SA2に繋ぐことが可能
-        media:
-          kind: motion_player
-          displayLabel: モーション
-          skillName: Jumping Roundhouse
-          characterCode: '20'
-          skillCode: '024'
 - id: ground_normals
   displayTitle: "【地上通常技】"
   entries:
@@ -902,205 +633,275 @@ moveGroups:
           skillName: Crouching Roundhouse
           characterCode: '20'
           skillCode: '021'
-- id: normal_throws
-  displayTitle: "【通常投げ】"
+- id: air_normals
+  displayTitle: "【空中通常技】"
   entries:
-  - id: item_26bab7090c
-    displayName: ヴァルスのように狂おしく
-    detail:
-      displayName: ヴァルスのように狂おしく
-      command: 小P+小K
-      startup: '2'
-      active: '1'
-      recovery: '21'
-      damage: '120'
-      stun: '15'
-      meterGain:
-        onWhiff: '0'
-        throwSuccess: '7'
-      stats:
-        投げ間合い: '24'
-      noteGroups:
-      - id: item_cf8aa5b927
-        displayTitle: 補足
-        entries:
-        - |-
-          ・硬直は投げ失敗時のフレーム
-          ・相手が画面端の状態で決めた場合、大マシェリ(下記のキャラ以外)やSA1か2で追撃可能
-          ・ユン、ヤン、オロ、いぶき、ダッドリーは移動中マシェリ(遠立中Pスライド入力)を使用
-      media:
-        kind: motion_player
-        displayLabel: モーション
-        skillName: Neutral Throw
-        characterCode: '20'
-        skillCode: '026'
-  - id: item_e304fc4497
-    displayName: 眠りを乱すコントゥール
-    detail:
-      displayName: 眠りを乱すコントゥール
-      command: |-
-        →+小P+小K
-        ←+小P+小K
-      startup: '2'
-      active: '1'
-      recovery: '21'
-      damage: '130'
-      stun: '5'
-      meterGain:
-        onWhiff: '0'
-        throwSuccess: '7'
-      stats:
-        投げ間合い: '24'
-      noteGroups:
-      - id: item_cf8aa5b927
-        displayTitle: 補足
-        entries:
-        - |-
-          ・硬直は投げ失敗時のフレーム
-          ・左右に投げ分けが可能
-      media:
-        kind: motion_player
-        displayLabel: モーション
-        skillName: Throw
-        characterCode: '20'
-        skillCode: '027'
-- id: lever_input_moves
-  displayTitle: "【レバー入れ技】"
-  entries:
-  - id: item_dec10da8a1
-    displayName: あまりに無垢なエギーユ
-    detail:
-      displayName: あまりに無垢なエギーユ
-      command: 6+中K
-      guard: 立
-      blocking: "→"
-      startup: '18'
-      active: '3'
-      recovery: '20'
-      damage: '80'
-      stun: '3'
-      stunReduction: '15'
-      meterGain:
-        whiff: '2'
-        guard: '4'
-        hit: '8'
-        bl: '4'
-      frameAdvantage:
-        guard: "-7"
-        standingHit: "-6"
-        crouchingHit: "-5"
-      stats:
-        C/SC: "×"
-      noteGroups:
-      - id: item_cf8aa5b927
-        displayTitle: 補足
-        entries:
-        - ヒット、ガード問わず隙が大きいので反撃可能なSAを持っているキャラ相手には多用は禁物
-      media:
-        kind: motion_player
-        displayLabel: モーション
-        skillName: Towards + Forward
-        characterCode: '20'
-        skillCode: '025'
-- id: target_combos
-  displayTitle: "【ターゲットコンボ】"
-  entries:
-  - id: kk
-    displayName: 近立中K→立大K
-    detail:
-      displayName: 近立中K→立大K
-      superCancel: "○/×"
-      guard: 両方/両方
-      blocking: "→/→"
-      damage: 90/60
-      stun: 9/5
-      stunReduction: 15/15
-      frameAdvantage:
-        guard: "-9"
-        standingHit: "-7"
-        crouchingHit: "-5"
-      stats:
-        入力: 近立中K→立大K
-        C: "○/×"
-      noteGroups:
-      - id: item_cf8aa5b927
-        displayTitle: 補足
-        entries:
-        - 大型キャラ以外のしゃがんでいる相手に、二発目の大Kの部分が当たらないので特に使う必要なし
-
-- id: command_normals
-  displayTitle: "【特殊入力技】"
-  entries:
-  - id: item_ac52a72820
-    displayName: リープアタック
-    detail:
-      displayName: 誘惑(いざな)いのヴァーグ
-      command: 中P+中K
-      guard: 立
-      blocking: "→"
-      startup: '15'
-      active: '10'
-      recovery: '5'
-      damage: '40'
-      stun: '3'
-      stunReduction: '1'
-      meterGain:
-        whiff: '0'
-        guard: '1'
-        hit: '2'
-        bl: '4'
-      frameAdvantage:
-        guard: "-5～+7"
-        standingHit: 0～+8
-        crouchingHit: "+1～+9"
-      stats:
-        C/SC: "×"
-      noteGroups:
-      - id: item_cf8aa5b927
-        displayTitle: 補足
-        entries:
-        - |-
-          ・コマンド完成後、5フレーム目から空中判定に移行
-          ・技の下りを当てることで、SAや発生の速い通常技に繋ぐことが可能
-      media:
-        kind: motion_player
-        displayLabel: モーション
-        skillName: Universal Overhead
-        characterCode: '20'
-        skillCode: '028'
-  - id: item_7ae3c90cde
-    displayName: パーソナルアクション
-    detail:
-      displayName: 腕を組む
-      command: 大P+大K
-      guard: "―"
-      blocking: "―"
-      startup: "―"
-      active: '131'
-      recovery: "―"
-      damage: "―"
-      stun: "―"
-      stunReduction: "―"
-      stats:
-        C/SC: "×"
-        ゲージ増加: 4(6)
-      noteGroups:
-      - id: item_f11e32f4cf
-        displayTitle: 効果
-        entries:
-        - 直後に出した全ての攻撃のスタン値アップ
-      - id: item_cf8aa5b927
-        displayTitle: 補足
-        entries:
-        - |-
-          ・4段階までアップする事が可能
-          ・ゲージ増加のカッコ内の数値は1本制のもの
-      media:
-        kind: motion_player
-        displayLabel: モーション
-        skillName: Taunt
-        characterCode: '20'
-        skillCode: '029'
+  - id: item_0213bd1615
+    displayName: ジャンプ小パンチ
+    variants:
+    - id: item_e0c2f756f3
+      displayName: 垂直
+      detail:
+        displayName: 癒されぬヴァン
+        startup: '4'
+        active: '20'
+        damage: '40'
+        stun: '7'
+        stunReduction: '3'
+        meterGain:
+          whiff: '0'
+          guard: '1'
+          hit: '2'
+          bl: '4'
+    - id: item_25ab24896c
+      displayName: 斜め
+      detail:
+        displayName: 癒されぬヴァン
+        startup: '4'
+        active: '20'
+        damage: '40'
+        stun: '7'
+        stunReduction: '3'
+        meterGain:
+          whiff: '0'
+          guard: '1'
+          hit: '2'
+          bl: '4'
+        media:
+          kind: motion_player
+          displayLabel: モーション
+          skillName: Jumping Jab
+          characterCode: '20'
+          skillCode: '010'
+  - id: item_a18c41f1f2
+    displayName: ジャンプ中パンチ
+    variants:
+    - id: item_f37ec8ba39
+      displayName: 垂直
+      detail:
+        displayName: 癒されぬヴァン
+        startup: '5'
+        active: '14'
+        damage: '70'
+        stun: '11'
+        stunReduction: '3'
+        meterGain:
+          whiff: '2'
+          guard: '4'
+          hit: '8'
+          bl: '4'
+    - id: item_a7ee982c0e
+      displayName: 斜め
+      detail:
+        displayName: 癒されぬヴァン
+        startup: '5'
+        active: '14'
+        damage: '70'
+        stun: '11'
+        stunReduction: '3'
+        meterGain:
+          whiff: '2'
+          guard: '4'
+          hit: '8'
+          bl: '4'
+        noteGroups:
+        - id: item_cf8aa5b927
+          displayTitle: 補足
+          entries:
+          - 空対空でヒットした場合、相手よりも先に着地できるためダッシュで裏回りが可能
+        media:
+          kind: motion_player
+          displayLabel: モーション
+          skillName: Jumping Strong
+          characterCode: '20'
+          skillCode: '011'
+  - id: item_18529f13be
+    displayName: ジャンプ大パンチ
+    variants:
+    - id: item_ca5fa63a59
+      displayName: 垂直
+      detail:
+        displayName: 真紅のアルカンシェル
+        startup: '9'
+        active: '5'
+        damage: '125'
+        stun: '15'
+        stunReduction: '3'
+        meterGain:
+          whiff: '3'
+          guard: '6'
+          hit: '14'
+          bl: '4'
+        noteGroups:
+        - id: item_cf8aa5b927
+          displayTitle: 補足
+          entries:
+          - 空対空でヒットした場合、追撃可能
+    - id: item_c36fb09951
+      displayName: 斜め
+      detail:
+        displayName: 真紅のアルカンシェル
+        startup: '9'
+        active: '5'
+        damage: '125'
+        stun: '15'
+        stunReduction: '3'
+        meterGain:
+          whiff: '3'
+          guard: '6'
+          hit: '14'
+          bl: '4'
+        noteGroups:
+        - id: item_cf8aa5b927
+          displayTitle: 補足
+          entries:
+          - 空対空でヒットした場合、追撃可能
+        media:
+          kind: motion_player
+          displayLabel: モーション
+          skillName: Jumping Fierce
+          characterCode: '20'
+          skillCode: '012'
+  - id: item_a83e3f7cff
+    displayName: ジャンプ小キック
+    variants:
+    - id: item_f48ae8dc16
+      displayName: 垂直
+      detail:
+        displayName: 誘惑(いざな)いのヴァーグ
+        startup: '4'
+        active: '14'
+        damage: '50'
+        stun: '5'
+        stunReduction: '3'
+        meterGain:
+          whiff: '0'
+          guard: '1'
+          hit: '2'
+          bl: '4'
+    - id: item_adfe5e6bc9
+      displayName: 斜め
+      detail:
+        displayName: 誘惑(いざな)いのヴァーグ
+        startup: '4'
+        active: '14'
+        damage: '50'
+        stun: '5'
+        stunReduction: '3'
+        meterGain:
+          whiff: '0'
+          guard: '1'
+          hit: '2'
+          bl: '4'
+        noteGroups:
+        - id: item_cf8aa5b927
+          displayTitle: 補足
+          entries:
+          - めくり性能あり。画面端なら比較的楽にめくれる
+        media:
+          kind: motion_player
+          displayLabel: モーション
+          skillName: Jumping Short
+          characterCode: '20'
+          skillCode: '022'
+  - id: item_c3103eb1f9
+    displayName: ジャンプ中キック
+    variants:
+    - id: item_5280b1f280
+      displayName: 垂直
+      detail:
+        displayName: 凍てつく心のラルム
+        startup: '6'
+        active: '4'
+        damage: '90'
+        stun: '9'
+        stunReduction: '3'
+        meterGain:
+          whiff: '2'
+          guard: '4'
+          hit: '8'
+          bl: '4'
+        noteGroups:
+        - id: item_cf8aa5b927
+          displayTitle: 補足
+          entries:
+          - 横方向にリーチが長いため、空対空で使用する
+    - id: item_83fba48c4f
+      displayName: 斜め
+      detail:
+        displayName: 凍てつく心のラルム
+        startup: '6'
+        active: '4'
+        damage: '90'
+        stun: '9'
+        stunReduction: '3'
+        meterGain:
+          whiff: '2'
+          guard: '4'
+          hit: '8'
+          bl: '4'
+        noteGroups:
+        - id: item_cf8aa5b927
+          displayTitle: 補足
+          entries:
+          - 横方向にリーチが長いため、空対空で使用する
+        media:
+          kind: motion_player
+          displayLabel: モーション
+          skillName: Jumping Forward
+          characterCode: '20'
+          skillCode: '023'
+  - id: item_86e58a160f
+    displayName: ジャンプ大キック
+    variants:
+    - id: item_3b01b3c990
+      displayName: 垂直
+      detail:
+        displayName: 墓守の名はクーラン・マラン
+        startup: '10'
+        active: '4'
+        damage: '120'
+        stun: '13'
+        stunReduction: '3'
+        meterGain:
+          whiff: '2'
+          guard: '7'
+          hit: '15'
+          bl: '4'
+        noteGroups:
+        - id: item_cf8aa5b927
+          displayTitle: 補足
+          entries:
+          - |-
+            ・下方向に判定が強いため、飛び込みに使用する
+            ・高い打点でヒットしても、SA2に繋ぐことが可能
+    - id: item_3e728dc7eb
+      displayName: 斜め
+      detail:
+        displayName: 墓守の名はクーラン・マラン
+        startup: '10'
+        active: '4'
+        damage: '120'
+        stun: '13'
+        stunReduction: '3'
+        meterGain:
+          whiff: '3'
+          guard: '6'
+          hit: '14'
+          bl: '4'
+        noteGroups:
+        - id: item_cf8aa5b927
+          displayTitle: 補足
+          entries:
+          - |-
+            ・下方向に判定が強いため、飛び込みに使用する
+            ・高い打点でヒットしても、SA2に繋ぐことが可能
+        media:
+          kind: motion_player
+          displayLabel: モーション
+          skillName: Jumping Roundhouse
+          characterCode: '20'
+          skillCode: '024'
 - id: special_moves
   displayTitle: "【必殺技】"
   entries:
@@ -1902,3 +1703,201 @@ moveGroups:
         skillName: Blue Nocturne
         characterCode: '20'
         skillCode: '050'
+- id: lever_input_moves
+  displayTitle: "【レバー入れ技】"
+  entries:
+  - id: item_dec10da8a1
+    displayName: あまりに無垢なエギーユ
+    detail:
+      displayName: あまりに無垢なエギーユ
+      command: 6+中K
+      guard: 立
+      blocking: "→"
+      startup: '18'
+      active: '3'
+      recovery: '20'
+      damage: '80'
+      stun: '3'
+      stunReduction: '15'
+      meterGain:
+        whiff: '2'
+        guard: '4'
+        hit: '8'
+        bl: '4'
+      frameAdvantage:
+        guard: "-7"
+        standingHit: "-6"
+        crouchingHit: "-5"
+      stats:
+        C/SC: "×"
+      noteGroups:
+      - id: item_cf8aa5b927
+        displayTitle: 補足
+        entries:
+        - ヒット、ガード問わず隙が大きいので反撃可能なSAを持っているキャラ相手には多用は禁物
+      media:
+        kind: motion_player
+        displayLabel: モーション
+        skillName: Towards + Forward
+        characterCode: '20'
+        skillCode: '025'
+- id: normal_throws
+  displayTitle: "【通常投げ】"
+  entries:
+  - id: item_26bab7090c
+    displayName: ヴァルスのように狂おしく
+    detail:
+      displayName: ヴァルスのように狂おしく
+      command: 小P+小K
+      startup: '2'
+      active: '1'
+      recovery: '21'
+      damage: '120'
+      stun: '15'
+      meterGain:
+        onWhiff: '0'
+        throwSuccess: '7'
+      stats:
+        投げ間合い: '24'
+      noteGroups:
+      - id: item_cf8aa5b927
+        displayTitle: 補足
+        entries:
+        - |-
+          ・硬直は投げ失敗時のフレーム
+          ・相手が画面端の状態で決めた場合、大マシェリ(下記のキャラ以外)やSA1か2で追撃可能
+          ・ユン、ヤン、オロ、いぶき、ダッドリーは移動中マシェリ(遠立中Pスライド入力)を使用
+      media:
+        kind: motion_player
+        displayLabel: モーション
+        skillName: Neutral Throw
+        characterCode: '20'
+        skillCode: '026'
+  - id: item_e304fc4497
+    displayName: 眠りを乱すコントゥール
+    detail:
+      displayName: 眠りを乱すコントゥール
+      command: |-
+        →+小P+小K
+        ←+小P+小K
+      startup: '2'
+      active: '1'
+      recovery: '21'
+      damage: '130'
+      stun: '5'
+      meterGain:
+        onWhiff: '0'
+        throwSuccess: '7'
+      stats:
+        投げ間合い: '24'
+      noteGroups:
+      - id: item_cf8aa5b927
+        displayTitle: 補足
+        entries:
+        - |-
+          ・硬直は投げ失敗時のフレーム
+          ・左右に投げ分けが可能
+      media:
+        kind: motion_player
+        displayLabel: モーション
+        skillName: Throw
+        characterCode: '20'
+        skillCode: '027'
+- id: common_moves
+  displayTitle: "【特殊入力技】"
+  entries:
+  - id: item_ac52a72820
+    displayName: リープアタック
+    detail:
+      displayName: 誘惑(いざな)いのヴァーグ
+      command: 中P+中K
+      guard: 立
+      blocking: "→"
+      startup: '15'
+      active: '10'
+      recovery: '5'
+      damage: '40'
+      stun: '3'
+      stunReduction: '1'
+      meterGain:
+        whiff: '0'
+        guard: '1'
+        hit: '2'
+        bl: '4'
+      frameAdvantage:
+        guard: "-5～+7"
+        standingHit: 0～+8
+        crouchingHit: "+1～+9"
+      stats:
+        C/SC: "×"
+      noteGroups:
+      - id: item_cf8aa5b927
+        displayTitle: 補足
+        entries:
+        - |-
+          ・コマンド完成後、5フレーム目から空中判定に移行
+          ・技の下りを当てることで、SAや発生の速い通常技に繋ぐことが可能
+      media:
+        kind: motion_player
+        displayLabel: モーション
+        skillName: Universal Overhead
+        characterCode: '20'
+        skillCode: '028'
+  - id: item_7ae3c90cde
+    displayName: パーソナルアクション
+    detail:
+      displayName: 腕を組む
+      command: 大P+大K
+      guard: "―"
+      blocking: "―"
+      startup: "―"
+      active: '131'
+      recovery: "―"
+      damage: "―"
+      stun: "―"
+      stunReduction: "―"
+      stats:
+        C/SC: "×"
+        ゲージ増加: 4(6)
+      noteGroups:
+      - id: item_f11e32f4cf
+        displayTitle: 効果
+        entries:
+        - 直後に出した全ての攻撃のスタン値アップ
+      - id: item_cf8aa5b927
+        displayTitle: 補足
+        entries:
+        - |-
+          ・4段階までアップする事が可能
+          ・ゲージ増加のカッコ内の数値は1本制のもの
+      media:
+        kind: motion_player
+        displayLabel: モーション
+        skillName: Taunt
+        characterCode: '20'
+        skillCode: '029'
+- id: target_combos
+  displayTitle: "【ターゲットコンボ】"
+  entries:
+  - id: kk
+    displayName: 近立中K→立大K
+    detail:
+      displayName: 近立中K→立大K
+      superCancel: "○/×"
+      guard: 両方/両方
+      blocking: "→/→"
+      damage: 90/60
+      stun: 9/5
+      stunReduction: 15/15
+      frameAdvantage:
+        guard: "-9"
+        standingHit: "-7"
+        crouchingHit: "-5"
+      stats:
+        入力: 近立中K→立大K
+        C: "○/×"
+      noteGroups:
+      - id: item_cf8aa5b927
+        displayTitle: 補足
+        entries:
+        - 大型キャラ以外のしゃがんでいる相手に、二発目の大Kの部分が当たらないので特に使う必要なし

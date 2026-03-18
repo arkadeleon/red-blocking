@@ -8,278 +8,6 @@ introduction:
     闇に乗じて疾走(はし)っても、僻地に身をくらませても、黒い影は彼らの前に現れ、かすかな希望をむしり取ってゆく。
     しかしネクロは信じていた。いつか必ず「本当の自由」が手に入る日を。
 moveGroups:
-- id: air_normals
-  displayTitle: "【空中通常技】"
-  entries:
-  - id: item_0213bd1615
-    displayName: ジャンプ小パンチ
-    variants:
-    - id: item_e0c2f756f3
-      displayName: 垂直
-      detail:
-        displayName: ネイルスティック
-        startup: '5'
-        active: '5'
-        damage: '30'
-        stun: '7'
-        stunReduction: '3'
-        meterGain:
-          whiff: '0'
-          guard: '1'
-          hit: '2'
-          bl: '4'
-        media:
-          kind: motion_player
-          displayLabel: モーション
-          skillName: Neutral Jumping Jab
-          characterCode: '05'
-          skillCode: '010'
-    - id: item_25ab24896c
-      displayName: 斜め
-      detail:
-        displayName: フィンガーアタック
-        startup: '4'
-        active: '14'
-        damage: '40'
-        stun: '7'
-        stunReduction: '3'
-        meterGain:
-          whiff: '0'
-          guard: '1'
-          hit: '2'
-          bl: '4'
-        media:
-          kind: motion_player
-          displayLabel: モーション
-          skillName: Jumping Jab
-          characterCode: '05'
-          skillCode: '012'
-  - id: item_a18c41f1f2
-    displayName: ジャンプ中パンチ
-    variants:
-    - id: item_f37ec8ba39
-      displayName: 垂直
-      detail:
-        displayName: ネイルスピア
-        startup: '8'
-        active: '1'
-        damage: '70'
-        stun: '11'
-        stunReduction: '3'
-        meterGain:
-          whiff: '2'
-          guard: '4'
-          hit: '8'
-          bl: '4'
-        media:
-          kind: motion_player
-          displayLabel: モーション
-          skillName: Neutral Jumping Strong
-          characterCode: '05'
-          skillCode: '011'
-    - id: item_a7ee982c0e
-      displayName: 斜め
-      detail:
-        displayName: フィンガージャベリン
-        startup: '9'
-        active: '1'
-        damage: '80'
-        stun: '11'
-        stunReduction: '3'
-        meterGain:
-          whiff: '2'
-          guard: '4'
-          hit: '8'
-          bl: '4'
-        noteGroups:
-        - id: item_cf8aa5b927
-          displayTitle: 補足
-          entries:
-          - |-
-            ・バックジャンプから出すと強い牽制で、飛び道具への差込などにも使用する
-            ・Q、ヒューゴー、ダッドリーに対して昇りで出すと中段になる
-        media:
-          kind: motion_player
-          displayLabel: モーション
-          skillName: Jumping Strong
-          characterCode: '05'
-          skillCode: '013'
-  - id: item_18529f13be
-    displayName: ジャンプ大パンチ
-    variants:
-    - id: item_ca5fa63a59
-      displayName: 垂直
-      detail:
-        displayName: フライングクロスチョップ
-        startup: '13'
-        active: '2'
-        damage: '100'
-        stun: '15'
-        stunReduction: '3'
-        meterGain:
-          whiff: '3'
-          guard: '6'
-          hit: '14'
-          bl: '4'
-        media:
-          kind: motion_player
-          displayLabel: モーション
-          skillName: Neutral Jumping Fierce
-          characterCode: '05'
-          skillCode: '012'
-    - id: item_c36fb09951
-      displayName: 斜め
-      detail:
-        displayName: フライングクロスチョップ
-        startup: '13'
-        active: '2'
-        damage: '100'
-        stun: '15'
-        stunReduction: '3'
-        meterGain:
-          whiff: '3'
-          guard: '6'
-          hit: '14'
-          bl: '4'
-        noteGroups:
-        - id: item_cf8aa5b927
-          displayTitle: 補足
-          entries:
-          - 判定が真横に長く、空対空、特にバックジャンプから使用すると強力
-        media:
-          kind: motion_player
-          displayLabel: モーション
-          skillName: Jumping Fierce
-          characterCode: '05'
-          skillCode: '014'
-  - id: item_a83e3f7cff
-    displayName: ジャンプ小キック
-    variants:
-    - id: item_f48ae8dc16
-      displayName: 垂直
-      detail:
-        displayName: フライングニー
-        startup: '2'
-        active: '15'
-        damage: '30'
-        stun: '5'
-        stunReduction: '3'
-        meterGain:
-          whiff: '0'
-          guard: '1'
-          hit: '2'
-          bl: '4'
-    - id: item_adfe5e6bc9
-      displayName: 斜め
-      detail:
-        displayName: フライングニー
-        startup: '2'
-        active: '15'
-        damage: '30'
-        stun: '5'
-        stunReduction: '3'
-        meterGain:
-          whiff: '0'
-          guard: '1'
-          hit: '2'
-          bl: '4'
-        noteGroups:
-        - id: item_cf8aa5b927
-          displayTitle: 補足
-          entries:
-          - |-
-            ・発生も早く、横に少し判定があるため主に空対空に使用
-            ・一応めくり性能もあるが、全然めくれない
-        media:
-          kind: motion_player
-          displayLabel: モーション
-          skillName: Jumping Short
-          characterCode: '05'
-          skillCode: '024'
-  - id: item_c3103eb1f9
-    displayName: ジャンプ中キック
-    variants:
-    - id: item_5280b1f280
-      displayName: 垂直
-      detail:
-        displayName: ネクロハイキック
-        startup: '10'
-        active: '4'
-        damage: '70'
-        stun: '9'
-        stunReduction: '3'
-        meterGain:
-          whiff: '2'
-          guard: '4'
-          hit: '8'
-          bl: '4'
-    - id: item_83fba48c4f
-      displayName: 斜め
-      detail:
-        displayName: ネクロハイキック
-        startup: '10'
-        active: '4'
-        damage: '70'
-        stun: '9'
-        stunReduction: '3'
-        meterGain:
-          whiff: '2'
-          guard: '4'
-          hit: '8'
-          bl: '4'
-        media:
-          kind: motion_player
-          displayLabel: モーション
-          skillName: Jumping Forward
-          characterCode: '05'
-          skillCode: '025'
-  - id: item_86e58a160f
-    displayName: ジャンプ大キック
-    variants:
-    - id: item_3b01b3c990
-      displayName: 垂直
-      detail:
-        displayName: ラウンドキック
-        startup: '15'
-        active: '4'
-        damage: '120'
-        stun: '13'
-        stunReduction: '3'
-        meterGain:
-          whiff: '3'
-          guard: '6'
-          hit: '14'
-          bl: '4'
-        noteGroups:
-        - id: item_cf8aa5b927
-          displayTitle: 補足
-          entries:
-          - 当たった距離によるが、ヒット確認してSA3に繋ぐ事が可能
-    - id: item_3e728dc7eb
-      displayName: 斜め
-      detail:
-        displayName: ラウンドキック
-        startup: '15'
-        active: '4'
-        damage: '120'
-        stun: '13'
-        stunReduction: '3'
-        meterGain:
-          whiff: '3'
-          guard: '6'
-          hit: '14'
-          bl: '4'
-        noteGroups:
-        - id: item_cf8aa5b927
-          displayTitle: 補足
-          entries:
-          - 当たった距離によるが、ヒット確認してSA3に繋ぐ事が可能
-        media:
-          kind: motion_player
-          displayLabel: モーション
-          skillName: Jumping Roundhouse
-          characterCode: '05'
-          skillCode: '026'
 - id: ground_normals
   displayTitle: "【地上通常技】"
   entries:
@@ -930,345 +658,278 @@ moveGroups:
           skillName: Crouching Roundhouse
           characterCode: '05'
           skillCode: '023'
-- id: normal_throws
-  displayTitle: "【通常投げ】"
+- id: air_normals
+  displayTitle: "【空中通常技】"
   entries:
-  - id: item_f5c48db64b
-    displayName: ショルダーアタック
-    detail:
-      displayName: ショルダーアタック
-      command: |-
-        小P+小K
-        →+小P+小K
-      startup: '2'
-      active: '1'
-      recovery: '21'
-      damage: '120'
-      stun: '13'
-      meterGain:
-        onWhiff: '0'
-        throwSuccess: '7'
-      stats:
-        投げ間合い: '26'
-      noteGroups:
-      - id: item_cf8aa5b927
-        displayTitle: 補足
-        entries:
-        - |-
-          ・硬直は投げ失敗時のフレーム
-          ・画面端に運ぶ時に便利
-          ・画面端で決めると追撃可能。
-      media:
-        kind: motion_player
-        displayLabel: モーション
-        skillName: Throw
-        characterCode: '05'
-        skillCode: '031'
-  - id: item_72783fa2e8
-    displayName: フランケンシュタイナー
-    detail:
-      displayName: フランケンシュタイナー
-      command: "←+小P+小K"
-      startup: '2'
-      active: '1'
-      recovery: '21'
-      damage: '100'
-      stun: '19'
-      meterGain:
-        onWhiff: '0'
-        throwSuccess: '7'
-      stats:
-        投げ間合い: '26'
-      noteGroups:
-      - id: item_cf8aa5b927
-        displayTitle: 補足
-        entries:
-        - |-
-          ・硬直は投げ失敗時のフレーム
-          ・他の投げよりスタン値が高い
-      media:
-        kind: motion_player
-        displayLabel: モーション
-        skillName: Back + Throw
-        characterCode: '05'
-        skillCode: '032'
-  - id: item_f8682e1a5c
-    displayName: ジャーマンスープレックス
-    detail:
-      displayName: ジャーマンスープレックス
-      command: 相手の背後から小P+小K
-      startup: '2'
-      active: '1'
-      recovery: '21'
-      damage: '200'
-      stun: '11'
-      meterGain:
-        onWhiff: '0'
-        throwSuccess: '7'
-      stats:
-        投げ間合い: '26'
-      noteGroups:
-      - id: item_cf8aa5b927
-        displayTitle: 補足
-        entries:
-        - |-
-          ・硬直は投げ失敗時のフレーム
-          ・投げ成功時、QS不可なので起き攻めしやすい
-      media:
-        kind: motion_player
-        displayLabel: モーション
-        skillName: Reverse Throw
-        characterCode: '05'
-        skillCode: '033'
-- id: lever_input_moves
-  displayTitle: "【レバー入れ技】"
-  entries:
-  - id: item_bf7bad6f6c
-    displayName: ドリルキック
-    children:
-    - id: '30'
-      displayName: ドリルキック小(30度)
+  - id: item_0213bd1615
+    displayName: ジャンプ小パンチ
+    variants:
+    - id: item_e0c2f756f3
+      displayName: 垂直
       detail:
-        displayName: ドリルキック小(30度)
-        command: ジャンプ中、2小K
-        guard: 両方・両方
-        blocking: 両方・両方
-        startup: 9・6
-        active: 着地まで
-        recovery: "―"
-        damage: 65(50+15)
-        stun: 6(3+3)
-        stunReduction: 3・3
+        displayName: ネイルスティック
+        startup: '5'
+        active: '5'
+        damage: '30'
+        stun: '7'
+        stunReduction: '3'
+        meterGain:
+          whiff: '0'
+          guard: '1'
+          hit: '2'
+          bl: '4'
+        media:
+          kind: motion_player
+          displayLabel: モーション
+          skillName: Neutral Jumping Jab
+          characterCode: '05'
+          skillCode: '010'
+    - id: item_25ab24896c
+      displayName: 斜め
+      detail:
+        displayName: フィンガーアタック
+        startup: '4'
+        active: '14'
+        damage: '40'
+        stun: '7'
+        stunReduction: '3'
+        meterGain:
+          whiff: '0'
+          guard: '1'
+          hit: '2'
+          bl: '4'
+        media:
+          kind: motion_player
+          displayLabel: モーション
+          skillName: Jumping Jab
+          characterCode: '05'
+          skillCode: '012'
+  - id: item_a18c41f1f2
+    displayName: ジャンプ中パンチ
+    variants:
+    - id: item_f37ec8ba39
+      displayName: 垂直
+      detail:
+        displayName: ネイルスピア
+        startup: '8'
+        active: '1'
+        damage: '70'
+        stun: '11'
+        stunReduction: '3'
         meterGain:
           whiff: '2'
-          guard: 3(2+1)
-          hit: 9(7+2)
-          bl: 8(4+4)
-        frameAdvantage:
-          guard: "―"
-          standingHit: "―"
-          crouchingHit: "―"
-        stats:
-          C/SC: "×・×"
+          guard: '4'
+          hit: '8'
+          bl: '4'
         media:
           kind: motion_player
           displayLabel: モーション
-          skillName: Drill Short
+          skillName: Neutral Jumping Strong
           characterCode: '05'
-          skillCode: '028'
-    - id: '45'
-      displayName: ドリルキック中(45度)
+          skillCode: '011'
+    - id: item_a7ee982c0e
+      displayName: 斜め
       detail:
-        displayName: ドリルキック中(45度)
-        command: ジャンプ中、2中K
-        guard: 両方・両方
-        blocking: 両方・両方
-        startup: 9・6
-        active: 着地まで
-        recovery: "―"
-        damage: 80(60+20)
-        stun: 6(3+3)
-        stunReduction: 3・3
+        displayName: フィンガージャベリン
+        startup: '9'
+        active: '1'
+        damage: '80'
+        stun: '11'
+        stunReduction: '3'
         meterGain:
           whiff: '2'
-          guard: 3(2+1)
-          hit: 9(7+2)
-          bl: 8(4+4)
-        frameAdvantage:
-          guard: "―"
-          standingHit: "―"
-          crouchingHit: "―"
-        stats:
-          C/SC: "×・×"
-        media:
-          kind: motion_player
-          displayLabel: モーション
-          skillName: Drill Forward
-          characterCode: '05'
-          skillCode: '029'
-    - id: '80'
-      displayName: ドリルキック大(80度)
-      detail:
-        displayName: ドリルキック大(80度)
-        command: ジャンプ中、2大K
-        guard: 両方・両方
-        blocking: 両方・両方
-        startup: 9・6
-        active: 着地まで
-        recovery: "―"
-        damage: 100(80+20)
-        stun: 10(5+5)
-        stunReduction: 3・3
-        meterGain:
-          whiff: '3'
-          guard: 5(4+1)
-          hit: 14(12+2)
-          bl: 8(4+4)
-        frameAdvantage:
-          guard: "―"
-          standingHit: "―"
-          crouchingHit: "―"
-        stats:
-          C/SC: "×・×"
-        media:
-          kind: motion_player
-          displayLabel: モーション
-          skillName: Drill RH
-          characterCode: '05'
-          skillCode: '030'
-    - id: item_cf8aa5b927
-      displayName: 補足
-      detail:
-        displayName: 補足
+          guard: '4'
+          hit: '8'
+          bl: '4'
         noteGroups:
         - id: item_cf8aa5b927
           displayTitle: 補足
           entries:
           - |-
-            ・硬直は当てる高さによって変化
-            ・当て方によっては連続ヒットしない
-            ・空中ヒットした場合、SA1で拾う事が可能
-            ・大ドリルは状況限定で相手をめくる事ができる
-  - id: item_b7f2bb505b
-    displayName: エルボーキャノン
-    detail:
-      displayName: エルボーキャノン
-      command: 1大P
-      guard: 両方
-      blocking: 両方
-      startup: '9'
-      active: '1'
-      recovery: '14'
-      damage: '140'
-      stun: '11'
-      stunReduction: '1'
-      meterGain:
-        whiff: '3'
-        guard: '6'
-        hit: '14'
-        bl: '4'
-      frameAdvantage:
-        guard: "+2"
-        standingHit: ダウン
-        crouchingHit: ダウン
-      stats:
-        C/SC: "×"
-      noteGroups:
-      - id: item_cf8aa5b927
-        displayTitle: 補足
-        entries:
-        - |-
-          ・判定が強く、ヒット時にダウンも取れる差し合いの主要技
-          ・画面端、アレックス、ユリアン、ヒューゴー限定で旧基板なら6発、新基板なら3発連続で入れることが可能
-      media:
-        kind: motion_player
-        displayLabel: モーション
-        skillName: Down Back + Fierce
-        characterCode: '05'
-        skillCode: '027'
-- id: target_combos
-  displayTitle: "【ターゲットコンボ】"
-  entries:
-  - id: 4kp
-    displayName: 4小K→立中P
-    detail:
-      displayName: 4小K→立中P
-      superCancel: "○/○"
-      guard: 両方/両方
-      blocking: 両方/→
-      damage: 45/50
-      stun: 7/11
-      stunReduction: 1/1
-      frameAdvantage:
-        guard: "-3"
-        standingHit: "-2"
-        crouchingHit: "-1"
-      stats:
-        入力: 4小K→立中P
-        C: "☆/×"
-      noteGroups:
-      - id: item_cf8aa5b927
-        displayTitle: 補足
-        entries:
-        - |-
-          ・中Pはレバーをニュートラル状態にしておかないと出ないので注意
-          ・リーチは短いが、発生が3Fと最速のため、起き上がりに出してそのままヒット確認SAなどで切り替えしできる
-          ・しゃがみ状態の「春麗、エレナ、いぶき、まこと、ネクロ、オロ、レミー、トゥエルブ、ヤン、ユン」には中Pが当たらない
-          ・キャンセル猶予時間は26フレーム
-
-- id: command_normals
-  displayTitle: "【特殊入力技】"
-  entries:
-  - id: item_ac52a72820
-    displayName: リープアタック
-    detail:
-      displayName: フィンガーアタック
-      command: 中P+中K
-      guard: 立
-      blocking: "→"
-      startup: '15'
-      active: '10'
-      recovery: '5'
-      damage: '40'
-      stun: '3'
-      stunReduction: '1'
-      meterGain:
-        whiff: '0'
-        guard: '1'
-        hit: '2'
-        bl: '4'
-      frameAdvantage:
-        guard: "-5～+7"
-        standingHit: 0～+8
-        crouchingHit: "+1～+9"
-      stats:
-        C/SC: "×"
-      noteGroups:
-      - id: item_cf8aa5b927
-        displayTitle: 補足
-        entries:
-        - |-
-          ・コマンド完成後、5フレーム目から空中判定に移行
-          ・技の下りを当てることで、SAや発生の速い通常技に繋ぐことが可能
-      media:
-        kind: motion_player
-        displayLabel: モーション
-        skillName: Universal Overhead
-        characterCode: '05'
-        skillCode: '034'
-  - id: item_7ae3c90cde
-    displayName: パーソナルアクション
-    detail:
-      displayName: 舌を出す
-      command: 大P+大K
-      guard: 両方
-      blocking: 両方
-      startup: '21'
-      active: 4・2～
-      recovery: '23'
-      damage: 10(5+5)×α
-      stun: '0'
-      stunReduction: 1×α
-      stats:
-        C/SC: "×"
-        ゲージ増加: 4(6)
-      noteGroups:
-      - id: item_f11e32f4cf
-        displayTitle: 効果
-        entries:
-        - 直後に出した投げ以外の攻撃の攻撃力アップ
-      - id: item_cf8aa5b927
-        displayTitle: 補足
-        entries:
-        - |-
-          ・押しっぱなし可能
-          ・伸ばした舌に攻撃判定あり
-      media:
-        kind: motion_player
-        displayLabel: モーション
-        skillName: Taunt
-        characterCode: '05'
-        skillCode: '035'
+            ・バックジャンプから出すと強い牽制で、飛び道具への差込などにも使用する
+            ・Q、ヒューゴー、ダッドリーに対して昇りで出すと中段になる
+        media:
+          kind: motion_player
+          displayLabel: モーション
+          skillName: Jumping Strong
+          characterCode: '05'
+          skillCode: '013'
+  - id: item_18529f13be
+    displayName: ジャンプ大パンチ
+    variants:
+    - id: item_ca5fa63a59
+      displayName: 垂直
+      detail:
+        displayName: フライングクロスチョップ
+        startup: '13'
+        active: '2'
+        damage: '100'
+        stun: '15'
+        stunReduction: '3'
+        meterGain:
+          whiff: '3'
+          guard: '6'
+          hit: '14'
+          bl: '4'
+        media:
+          kind: motion_player
+          displayLabel: モーション
+          skillName: Neutral Jumping Fierce
+          characterCode: '05'
+          skillCode: '012'
+    - id: item_c36fb09951
+      displayName: 斜め
+      detail:
+        displayName: フライングクロスチョップ
+        startup: '13'
+        active: '2'
+        damage: '100'
+        stun: '15'
+        stunReduction: '3'
+        meterGain:
+          whiff: '3'
+          guard: '6'
+          hit: '14'
+          bl: '4'
+        noteGroups:
+        - id: item_cf8aa5b927
+          displayTitle: 補足
+          entries:
+          - 判定が真横に長く、空対空、特にバックジャンプから使用すると強力
+        media:
+          kind: motion_player
+          displayLabel: モーション
+          skillName: Jumping Fierce
+          characterCode: '05'
+          skillCode: '014'
+  - id: item_a83e3f7cff
+    displayName: ジャンプ小キック
+    variants:
+    - id: item_f48ae8dc16
+      displayName: 垂直
+      detail:
+        displayName: フライングニー
+        startup: '2'
+        active: '15'
+        damage: '30'
+        stun: '5'
+        stunReduction: '3'
+        meterGain:
+          whiff: '0'
+          guard: '1'
+          hit: '2'
+          bl: '4'
+    - id: item_adfe5e6bc9
+      displayName: 斜め
+      detail:
+        displayName: フライングニー
+        startup: '2'
+        active: '15'
+        damage: '30'
+        stun: '5'
+        stunReduction: '3'
+        meterGain:
+          whiff: '0'
+          guard: '1'
+          hit: '2'
+          bl: '4'
+        noteGroups:
+        - id: item_cf8aa5b927
+          displayTitle: 補足
+          entries:
+          - |-
+            ・発生も早く、横に少し判定があるため主に空対空に使用
+            ・一応めくり性能もあるが、全然めくれない
+        media:
+          kind: motion_player
+          displayLabel: モーション
+          skillName: Jumping Short
+          characterCode: '05'
+          skillCode: '024'
+  - id: item_c3103eb1f9
+    displayName: ジャンプ中キック
+    variants:
+    - id: item_5280b1f280
+      displayName: 垂直
+      detail:
+        displayName: ネクロハイキック
+        startup: '10'
+        active: '4'
+        damage: '70'
+        stun: '9'
+        stunReduction: '3'
+        meterGain:
+          whiff: '2'
+          guard: '4'
+          hit: '8'
+          bl: '4'
+    - id: item_83fba48c4f
+      displayName: 斜め
+      detail:
+        displayName: ネクロハイキック
+        startup: '10'
+        active: '4'
+        damage: '70'
+        stun: '9'
+        stunReduction: '3'
+        meterGain:
+          whiff: '2'
+          guard: '4'
+          hit: '8'
+          bl: '4'
+        media:
+          kind: motion_player
+          displayLabel: モーション
+          skillName: Jumping Forward
+          characterCode: '05'
+          skillCode: '025'
+  - id: item_86e58a160f
+    displayName: ジャンプ大キック
+    variants:
+    - id: item_3b01b3c990
+      displayName: 垂直
+      detail:
+        displayName: ラウンドキック
+        startup: '15'
+        active: '4'
+        damage: '120'
+        stun: '13'
+        stunReduction: '3'
+        meterGain:
+          whiff: '3'
+          guard: '6'
+          hit: '14'
+          bl: '4'
+        noteGroups:
+        - id: item_cf8aa5b927
+          displayTitle: 補足
+          entries:
+          - 当たった距離によるが、ヒット確認してSA3に繋ぐ事が可能
+    - id: item_3e728dc7eb
+      displayName: 斜め
+      detail:
+        displayName: ラウンドキック
+        startup: '15'
+        active: '4'
+        damage: '120'
+        stun: '13'
+        stunReduction: '3'
+        meterGain:
+          whiff: '3'
+          guard: '6'
+          hit: '14'
+          bl: '4'
+        noteGroups:
+        - id: item_cf8aa5b927
+          displayTitle: 補足
+          entries:
+          - 当たった距離によるが、ヒット確認してSA3に繋ぐ事が可能
+        media:
+          kind: motion_player
+          displayLabel: モーション
+          skillName: Jumping Roundhouse
+          characterCode: '05'
+          skillCode: '026'
 - id: special_moves
   displayTitle: "【必殺技】"
   entries:
@@ -2118,3 +1779,341 @@ moveGroups:
         skillName: Electric Snake
         characterCode: '05'
         skillCode: '056'
+- id: lever_input_moves
+  displayTitle: "【レバー入れ技】"
+  entries:
+  - id: item_bf7bad6f6c
+    displayName: ドリルキック
+    children:
+    - id: '30'
+      displayName: ドリルキック小(30度)
+      detail:
+        displayName: ドリルキック小(30度)
+        command: ジャンプ中、2小K
+        guard: 両方・両方
+        blocking: 両方・両方
+        startup: 9・6
+        active: 着地まで
+        recovery: "―"
+        damage: 65(50+15)
+        stun: 6(3+3)
+        stunReduction: 3・3
+        meterGain:
+          whiff: '2'
+          guard: 3(2+1)
+          hit: 9(7+2)
+          bl: 8(4+4)
+        frameAdvantage:
+          guard: "―"
+          standingHit: "―"
+          crouchingHit: "―"
+        stats:
+          C/SC: "×・×"
+        media:
+          kind: motion_player
+          displayLabel: モーション
+          skillName: Drill Short
+          characterCode: '05'
+          skillCode: '028'
+    - id: '45'
+      displayName: ドリルキック中(45度)
+      detail:
+        displayName: ドリルキック中(45度)
+        command: ジャンプ中、2中K
+        guard: 両方・両方
+        blocking: 両方・両方
+        startup: 9・6
+        active: 着地まで
+        recovery: "―"
+        damage: 80(60+20)
+        stun: 6(3+3)
+        stunReduction: 3・3
+        meterGain:
+          whiff: '2'
+          guard: 3(2+1)
+          hit: 9(7+2)
+          bl: 8(4+4)
+        frameAdvantage:
+          guard: "―"
+          standingHit: "―"
+          crouchingHit: "―"
+        stats:
+          C/SC: "×・×"
+        media:
+          kind: motion_player
+          displayLabel: モーション
+          skillName: Drill Forward
+          characterCode: '05'
+          skillCode: '029'
+    - id: '80'
+      displayName: ドリルキック大(80度)
+      detail:
+        displayName: ドリルキック大(80度)
+        command: ジャンプ中、2大K
+        guard: 両方・両方
+        blocking: 両方・両方
+        startup: 9・6
+        active: 着地まで
+        recovery: "―"
+        damage: 100(80+20)
+        stun: 10(5+5)
+        stunReduction: 3・3
+        meterGain:
+          whiff: '3'
+          guard: 5(4+1)
+          hit: 14(12+2)
+          bl: 8(4+4)
+        frameAdvantage:
+          guard: "―"
+          standingHit: "―"
+          crouchingHit: "―"
+        stats:
+          C/SC: "×・×"
+        media:
+          kind: motion_player
+          displayLabel: モーション
+          skillName: Drill RH
+          characterCode: '05'
+          skillCode: '030'
+    - id: item_cf8aa5b927
+      displayName: 補足
+      detail:
+        displayName: 補足
+        noteGroups:
+        - id: item_cf8aa5b927
+          displayTitle: 補足
+          entries:
+          - |-
+            ・硬直は当てる高さによって変化
+            ・当て方によっては連続ヒットしない
+            ・空中ヒットした場合、SA1で拾う事が可能
+            ・大ドリルは状況限定で相手をめくる事ができる
+  - id: item_b7f2bb505b
+    displayName: エルボーキャノン
+    detail:
+      displayName: エルボーキャノン
+      command: 1大P
+      guard: 両方
+      blocking: 両方
+      startup: '9'
+      active: '1'
+      recovery: '14'
+      damage: '140'
+      stun: '11'
+      stunReduction: '1'
+      meterGain:
+        whiff: '3'
+        guard: '6'
+        hit: '14'
+        bl: '4'
+      frameAdvantage:
+        guard: "+2"
+        standingHit: ダウン
+        crouchingHit: ダウン
+      stats:
+        C/SC: "×"
+      noteGroups:
+      - id: item_cf8aa5b927
+        displayTitle: 補足
+        entries:
+        - |-
+          ・判定が強く、ヒット時にダウンも取れる差し合いの主要技
+          ・画面端、アレックス、ユリアン、ヒューゴー限定で旧基板なら6発、新基板なら3発連続で入れることが可能
+      media:
+        kind: motion_player
+        displayLabel: モーション
+        skillName: Down Back + Fierce
+        characterCode: '05'
+        skillCode: '027'
+- id: normal_throws
+  displayTitle: "【通常投げ】"
+  entries:
+  - id: item_f5c48db64b
+    displayName: ショルダーアタック
+    detail:
+      displayName: ショルダーアタック
+      command: |-
+        小P+小K
+        →+小P+小K
+      startup: '2'
+      active: '1'
+      recovery: '21'
+      damage: '120'
+      stun: '13'
+      meterGain:
+        onWhiff: '0'
+        throwSuccess: '7'
+      stats:
+        投げ間合い: '26'
+      noteGroups:
+      - id: item_cf8aa5b927
+        displayTitle: 補足
+        entries:
+        - |-
+          ・硬直は投げ失敗時のフレーム
+          ・画面端に運ぶ時に便利
+          ・画面端で決めると追撃可能。
+      media:
+        kind: motion_player
+        displayLabel: モーション
+        skillName: Throw
+        characterCode: '05'
+        skillCode: '031'
+  - id: item_72783fa2e8
+    displayName: フランケンシュタイナー
+    detail:
+      displayName: フランケンシュタイナー
+      command: "←+小P+小K"
+      startup: '2'
+      active: '1'
+      recovery: '21'
+      damage: '100'
+      stun: '19'
+      meterGain:
+        onWhiff: '0'
+        throwSuccess: '7'
+      stats:
+        投げ間合い: '26'
+      noteGroups:
+      - id: item_cf8aa5b927
+        displayTitle: 補足
+        entries:
+        - |-
+          ・硬直は投げ失敗時のフレーム
+          ・他の投げよりスタン値が高い
+      media:
+        kind: motion_player
+        displayLabel: モーション
+        skillName: Back + Throw
+        characterCode: '05'
+        skillCode: '032'
+  - id: item_f8682e1a5c
+    displayName: ジャーマンスープレックス
+    detail:
+      displayName: ジャーマンスープレックス
+      command: 相手の背後から小P+小K
+      startup: '2'
+      active: '1'
+      recovery: '21'
+      damage: '200'
+      stun: '11'
+      meterGain:
+        onWhiff: '0'
+        throwSuccess: '7'
+      stats:
+        投げ間合い: '26'
+      noteGroups:
+      - id: item_cf8aa5b927
+        displayTitle: 補足
+        entries:
+        - |-
+          ・硬直は投げ失敗時のフレーム
+          ・投げ成功時、QS不可なので起き攻めしやすい
+      media:
+        kind: motion_player
+        displayLabel: モーション
+        skillName: Reverse Throw
+        characterCode: '05'
+        skillCode: '033'
+- id: common_moves
+  displayTitle: "【特殊入力技】"
+  entries:
+  - id: item_ac52a72820
+    displayName: リープアタック
+    detail:
+      displayName: フィンガーアタック
+      command: 中P+中K
+      guard: 立
+      blocking: "→"
+      startup: '15'
+      active: '10'
+      recovery: '5'
+      damage: '40'
+      stun: '3'
+      stunReduction: '1'
+      meterGain:
+        whiff: '0'
+        guard: '1'
+        hit: '2'
+        bl: '4'
+      frameAdvantage:
+        guard: "-5～+7"
+        standingHit: 0～+8
+        crouchingHit: "+1～+9"
+      stats:
+        C/SC: "×"
+      noteGroups:
+      - id: item_cf8aa5b927
+        displayTitle: 補足
+        entries:
+        - |-
+          ・コマンド完成後、5フレーム目から空中判定に移行
+          ・技の下りを当てることで、SAや発生の速い通常技に繋ぐことが可能
+      media:
+        kind: motion_player
+        displayLabel: モーション
+        skillName: Universal Overhead
+        characterCode: '05'
+        skillCode: '034'
+  - id: item_7ae3c90cde
+    displayName: パーソナルアクション
+    detail:
+      displayName: 舌を出す
+      command: 大P+大K
+      guard: 両方
+      blocking: 両方
+      startup: '21'
+      active: 4・2～
+      recovery: '23'
+      damage: 10(5+5)×α
+      stun: '0'
+      stunReduction: 1×α
+      stats:
+        C/SC: "×"
+        ゲージ増加: 4(6)
+      noteGroups:
+      - id: item_f11e32f4cf
+        displayTitle: 効果
+        entries:
+        - 直後に出した投げ以外の攻撃の攻撃力アップ
+      - id: item_cf8aa5b927
+        displayTitle: 補足
+        entries:
+        - |-
+          ・押しっぱなし可能
+          ・伸ばした舌に攻撃判定あり
+      media:
+        kind: motion_player
+        displayLabel: モーション
+        skillName: Taunt
+        characterCode: '05'
+        skillCode: '035'
+- id: target_combos
+  displayTitle: "【ターゲットコンボ】"
+  entries:
+  - id: 4kp
+    displayName: 4小K→立中P
+    detail:
+      displayName: 4小K→立中P
+      superCancel: "○/○"
+      guard: 両方/両方
+      blocking: 両方/→
+      damage: 45/50
+      stun: 7/11
+      stunReduction: 1/1
+      frameAdvantage:
+        guard: "-3"
+        standingHit: "-2"
+        crouchingHit: "-1"
+      stats:
+        入力: 4小K→立中P
+        C: "☆/×"
+      noteGroups:
+      - id: item_cf8aa5b927
+        displayTitle: 補足
+        entries:
+        - |-
+          ・中Pはレバーをニュートラル状態にしておかないと出ないので注意
+          ・リーチは短いが、発生が3Fと最速のため、起き上がりに出してそのままヒット確認SAなどで切り替えしできる
+          ・しゃがみ状態の「春麗、エレナ、いぶき、まこと、ネクロ、オロ、レミー、トゥエルブ、ヤン、ユン」には中Pが当たらない
+          ・キャンセル猶予時間は26フレーム

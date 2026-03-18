@@ -8,291 +8,6 @@ introduction:
     一人娘のまことは、父親譲りの胴着に誓う。
     「もう一度…うちがメジャーにしてみせるちゃ!」
 moveGroups:
-- id: air_normals
-  displayTitle: "【空中通常技】"
-  entries:
-  - id: item_0213bd1615
-    displayName: ジャンプ小パンチ
-    variants:
-    - id: item_e0c2f756f3
-      displayName: 垂直
-      detail:
-        displayName: 跳び貫手 「茜」(あかね)
-        startup: '9'
-        active: '17'
-        damage: '50'
-        stun: '7'
-        stunReduction: '3'
-        meterGain:
-          whiff: '0'
-          guard: '1'
-          hit: '2'
-          bl: '4'
-        media:
-          kind: motion_player
-          displayLabel: モーション
-          skillName: Neutral Jumping Jab
-          characterCode: '17'
-          skillCode: '011'
-    - id: item_25ab24896c
-      displayName: 斜め
-      detail:
-        displayName: 跳び拳 「千草」(ちぐさ)
-        startup: '4'
-        active: '21'
-        damage: '50'
-        stun: '7'
-        stunReduction: '3'
-        meterGain:
-          whiff: '0'
-          guard: '1'
-          hit: '2'
-          bl: '4'
-        media:
-          kind: motion_player
-          displayLabel: モーション
-          skillName: Jumping Jab
-          characterCode: '17'
-          skillCode: '014'
-  - id: item_a18c41f1f2
-    displayName: ジャンプ中パンチ
-    variants:
-    - id: item_f37ec8ba39
-      displayName: 垂直
-      detail:
-        displayName: 跳び貫手 「茜」(あかね)
-        startup: '11'
-        active: '10'
-        damage: '80'
-        stun: '11'
-        stunReduction: '3'
-        meterGain:
-          whiff: '2'
-          guard: '4'
-          hit: '8'
-          bl: '4'
-        media:
-          kind: motion_player
-          displayLabel: モーション
-          skillName: Neutral Jumping Strong
-          characterCode: '17'
-          skillCode: '012'
-    - id: item_a7ee982c0e
-      displayName: 斜め
-      detail:
-        displayName: 跳び拳 「千草」(ちぐさ)
-        startup: '11'
-        active: '24'
-        damage: '70'
-        stun: '11'
-        stunReduction: '3'
-        meterGain:
-          whiff: '2'
-          guard: '4'
-          hit: '8'
-          bl: '4'
-        media:
-          kind: motion_player
-          displayLabel: モーション
-          skillName: Jumping Strong
-          characterCode: '17'
-          skillCode: '015'
-  - id: item_18529f13be
-    displayName: ジャンプ大パンチ
-    variants:
-    - id: item_ca5fa63a59
-      displayName: 垂直
-      detail:
-        displayName: 跳び手刀「竜胆」(りんどう)
-        startup: '13'
-        active: '12'
-        damage: '130'
-        stun: '15'
-        stunReduction: '3'
-        meterGain:
-          whiff: '3'
-          guard: '6'
-          hit: '14'
-          bl: '4'
-        noteGroups:
-        - id: item_cf8aa5b927
-          displayTitle: 補足
-          entries:
-          - この技から土佐波コンボに繋げた場合、全キャラをスタンさせる事が可能
-        media:
-          kind: motion_player
-          displayLabel: モーション
-          skillName: Neutral Jumping Fierce
-          characterCode: '17'
-          skillCode: '013'
-    - id: item_c36fb09951
-      displayName: 斜め
-      detail:
-        displayName: 跳び巴手刀「杜若」(かきつばた)
-        startup: '10'
-        active: '2'
-        damage: 130(150)
-        stun: '15'
-        stunReduction: '3'
-        meterGain:
-          whiff: '3'
-          guard: '6'
-          hit: '14'
-          bl: '4'
-        noteGroups:
-        - id: item_cf8aa5b927
-          displayTitle: 補足
-          entries:
-          - "・攻撃力欄のカッコ内の数値は技の後半部分のもの\n・持続は短いが、後半部分の判定が下に強いので、飛び込みには相手の暴れを潰す感じで出していく \n・この技から土佐波コンボに繋げた場合、全キャラをスタンさせる事が可能"
-        media:
-          kind: motion_player
-          displayLabel: モーション
-          skillName: Jumping Fierce
-          characterCode: '17'
-          skillCode: '016'
-  - id: item_a83e3f7cff
-    displayName: ジャンプ小キック
-    variants:
-    - id: item_f48ae8dc16
-      displayName: 垂直
-      detail:
-        displayName: 跳び膝蹴り 「鏑」(かぶら)
-        startup: '2'
-        active: '14'
-        damage: '60'
-        stun: '7'
-        stunReduction: '3'
-        meterGain:
-          whiff: '0'
-          guard: '1'
-          hit: '2'
-          bl: '4'
-    - id: item_adfe5e6bc9
-      displayName: 斜め
-      detail:
-        displayName: 跳び膝蹴り 「鏑」(かぶら)
-        startup: '2'
-        active: '14'
-        damage: '60'
-        stun: '7'
-        stunReduction: '3'
-        meterGain:
-          whiff: '0'
-          guard: '1'
-          hit: '2'
-          bl: '4'
-        noteGroups:
-        - id: item_cf8aa5b927
-          displayTitle: 補足
-          entries:
-          - |-
-            ・発生が速いため、主に相手のジャンプ攻撃を空中BLした後に使用
-            ・ヒット時、相手より先に着地できる事が多いので着地攻めに移行可能
-        media:
-          kind: motion_player
-          displayLabel: モーション
-          skillName: Jumping Short
-          characterCode: '17'
-          skillCode: '026'
-  - id: item_c3103eb1f9
-    displayName: ジャンプ中キック
-    variants:
-    - id: item_5280b1f280
-      displayName: 垂直
-      detail:
-        displayName: 跳び足刀 「太刀」(たち)
-        startup: '7'
-        active: '13'
-        damage: '90'
-        stun: '9'
-        stunReduction: '3'
-        meterGain:
-          whiff: '2'
-          guard: '4'
-          hit: '8'
-          bl: '4'
-        noteGroups:
-        - id: item_cf8aa5b927
-          displayTitle: 補足
-          entries:
-          - |-
-            ・リーチ、持続、判定の強さなどあらゆる面で優れているジャンプ攻撃の主力
-            ・判定が下方向に強く、持続が長いので、ジャンプ頂点付近から出して暴れを潰したり、タイミングをずらしたりして使用する
-            ・ヒット時にSA1に繋げられるキャラも多い
-    - id: item_83fba48c4f
-      displayName: 斜め
-      detail:
-        displayName: 跳び足刀 「太刀」(たち)
-        startup: '7'
-        active: '13'
-        damage: '90'
-        stun: '9'
-        stunReduction: '3'
-        meterGain:
-          whiff: '2'
-          guard: '4'
-          hit: '8'
-          bl: '4'
-        noteGroups:
-        - id: item_cf8aa5b927
-          displayTitle: 補足
-          entries:
-          - |-
-            ・リーチ、持続、判定の強さ、めくり性能などあらゆる面で優れているジャンプ攻撃の主力
-            ・ヒット時にSA1に繋げられるキャラも多い
-        media:
-          kind: motion_player
-          displayLabel: モーション
-          skillName: Jumping Forward
-          characterCode: '17'
-          skillCode: '027'
-  - id: item_86e58a160f
-    displayName: ジャンプ大キック
-    variants:
-    - id: item_3b01b3c990
-      displayName: 垂直
-      detail:
-        displayName: 跳び一文字蹴り 「長柄」(ながえ)
-        startup: '6'
-        active: '6'
-        damage: '130'
-        stun: '11'
-        stunReduction: '3'
-        meterGain:
-          whiff: '3'
-          guard: '6'
-          hit: '14'
-          bl: '4'
-        noteGroups:
-        - id: item_cf8aa5b927
-          displayTitle: 補足
-          entries:
-          - 垂直ジャンプからの連係、コンボの始動技として使用
-    - id: item_3e728dc7eb
-      displayName: 斜め
-      detail:
-        displayName: 跳び一文字蹴り「長柄」(ながえ)
-        startup: '6'
-        active: '6'
-        damage: '130'
-        stun: '11'
-        stunReduction: '3'
-        meterGain:
-          whiff: '3'
-          guard: '6'
-          hit: '14'
-          bl: '4'
-        noteGroups:
-        - id: item_cf8aa5b927
-          displayTitle: 補足
-          entries:
-          - 出が速く、リーチがあって判定が強いため、昇りジャンプで出して空対空にすると強い
-        media:
-          kind: motion_player
-          displayLabel: モーション
-          skillName: Jumping Roundhouse
-          characterCode: '17'
-          skillCode: '028'
 - id: ground_normals
   displayTitle: "【地上通常技】"
   entries:
@@ -967,289 +682,291 @@ moveGroups:
           skillName: Crouching Roundhouse
           characterCode: '17'
           skillCode: '025'
-- id: normal_throws
-  displayTitle: "【通常投げ】"
+- id: air_normals
+  displayTitle: "【空中通常技】"
   entries:
-  - id: item_ff65dd67e1
-    displayName: 引き寄せ頭突き 「塔頭」(たっちゅう)
-    detail:
-      displayName: 引き寄せ頭突き 「塔頭」(たっちゅう)
-      command: 小P+小K
-      startup: '2'
-      active: '1'
-      recovery: '21'
-      damage: '90'
-      stun: '17'
-      meterGain:
-        onWhiff: '0'
-        throwSuccess: '7'
-      stats:
-        投げ間合い: '20'
-      noteGroups:
-      - id: item_cf8aa5b927
-        displayTitle: 補足
-        entries:
-        - |-
-          ・硬直は投げ失敗時のフレーム
-          ・投げ成功後、レバー・ボタンに触らない状態にすることで32フレーム完全無敵がつく。レバー・ボタンに触ると解除される
-      media:
-        kind: motion_player
-        displayLabel: モーション
-        skillName: Neutral Throw
-        characterCode: '17'
-        skillCode: '029'
-  - id: item_53b3f247e7
-    displayName: 肘落とし三連突き 「荒磯」(あらいそ)
-    detail:
-      displayName: 肘落とし三連突き 「荒磯」(あらいそ)
-      command: |-
-        →+小P+小K
-        ←+小P+小K
-      startup: '2'
-      active: '1'
-      recovery: '21'
-      damage: '150'
-      stun: '13'
-      meterGain:
-        onWhiff: '0'
-        throwSuccess: '7'
-      stats:
-        投げ間合い: '20'
-      noteGroups:
-      - id: item_cf8aa5b927
-        displayTitle: 補足
-        entries:
-        - |-
-          ・硬直は投げ失敗時のフレーム
-          ・左右に投げ分ける事が可能
-          ・投げた後にQSしにくいため、起き攻めしやすい
-      media:
-        kind: motion_player
-        displayLabel: モーション
-        skillName: Back & Towards Throw
-        characterCode: '17'
-        skillCode: '030'
-- id: lever_input_moves
-  displayTitle: "【レバー入れ技】"
-  entries:
-  - id: item_4b5e021881
-    displayName: 踏み込み正拳三連突き 「山背」(やませ)
-    detail:
-      displayName: 踏み込み正拳三連突き 「山背」(やませ)
-      command: 6大P中に大P
-      guard: 両方・両方・両方
-      blocking: "→・→・→"
-      startup: '16'
-      active: 4・15
-      recovery: '13'
-      damage: 190(150+20+20)
-      stun: 19(13+3+3)
-      stunReduction: 15・15・15
-      meterGain:
-        whiff: '3'
-        guard: 10(6+2+2)
-        hit: 26(14+6+6)
-        bl: 12(4×3)
-      frameAdvantage:
-        guard: "-4"
-        standingHit: "-3"
-        crouchingHit: "-2"
-      stats:
-        C/SC: "×・×・×"
-      noteGroups:
-      - id: item_cf8aa5b927
-        displayTitle: 補足
-        entries:
-        - |-
-          ・ダメージ、スタン値が高く、当たればリターンは大きい
-          ・ガード後は間合いが離れず不利な状況になるので乱用禁物。ケンの迅雷脚や春麗の鳳翼扇が反確となる
-      media:
-        kind: motion_player
-        displayLabel: モーション
-        skillName: Towards Fierce (complete)
-        characterCode: '17'
-        skillCode: '007'
-- id: target_combos
-  displayTitle: "【ターゲットコンボ】"
-  entries:
-  - id: kk
-    displayName: 立小K→立中K
-    detail:
-      displayName: 立小K→立中K
-      superCancel: "○/×"
-      guard: 両方/両方
-      blocking: 両方/→
-      damage: 40/70
-      stun: 3/7
-      stunReduction: 15/15
-      frameAdvantage:
-        guard: "-3"
-        standingHit: "-2"
-        crouchingHit: "-1"
-      stats:
-        入力: 立小K→立中K
-        C: "○/×"
-      noteGroups:
-      - id: item_cf8aa5b927
-        displayTitle: 補足
-        entries:
-        - |-
-          ・1段目空振りでも2段目を出す事が可能
-          ・大半のキャラのしゃがみ状態に2段目が当たらないので注意
-  - id: 6kk
-    displayName: 6中K→立大K
-    detail:
-      displayName: 6中K→立大K
-      superCancel: "×/×"
-      guard: 両方/両方
-      blocking: 両方/→
-      damage: 100/80
-      stun: 9/7
-      stunReduction: 15/15
-      frameAdvantage:
-        guard: "-3"
-        standingHit: "-1"
-        crouchingHit: "+1"
-      stats:
-        入力: 6中K→立大K
-        C: "×/×"
-      noteGroups:
-      - id: item_cf8aa5b927
-        displayTitle: 補足
-        entries:
-        - "・TCではあるが連係のため、繋がらない \n・特に使う必要なし"
-
-- id: command_normals
-  displayTitle: "【特殊入力技】"
-  entries:
-  - id: item_ac52a72820
-    displayName: リープアタック
-    detail:
-      displayName: 飛び拳 「千草」(ちぐさ)
-      command: 中P+中K
-      guard: 立
-      blocking: "→"
-      startup: '15'
-      active: '10'
-      recovery: '5'
-      damage: '40'
-      stun: '3'
-      stunReduction: '1'
-      meterGain:
-        whiff: '0'
-        guard: '1'
-        hit: '2'
-        bl: '4'
-      frameAdvantage:
-        guard: "-5～+7"
-        standingHit: 0～+8
-        crouchingHit: "+1～+9"
-      stats:
-        C/SC: "×"
-      noteGroups:
-      - id: item_cf8aa5b927
-        displayTitle: 補足
-        entries:
-        - |-
-          ・コマンド完成から5フレーム目で空中判定に移行
-          ・技の下りを当てることで、SAや発生の速い通常技に繋ぐことが可能
-      media:
-        kind: motion_player
-        displayLabel: モーション
-        skillName: Universal Overhead
-        characterCode: '17'
-        skillCode: '031'
-  - id: item_7ae3c90cde
-    displayName: パーソナルアクション
-    children:
-    - id: item_e8cda9315e
-      displayName: 気合をいれる
+  - id: item_0213bd1615
+    displayName: ジャンプ小パンチ
+    variants:
+    - id: item_e0c2f756f3
+      displayName: 垂直
       detail:
-        displayName: 気合をいれる
-        command: 大P+大K
-        guard: 両方
-        blocking: 両方
-        startup: '79'
-        active: '3'
-        recovery: "―"
-        damage: '10'
-        stun: '3'
-        stunReduction: '1'
-        stats:
-          C/SC: "○"
-          ゲージ増加: 5(7)
-        noteGroups:
-        - id: item_f11e32f4cf
-          displayTitle: 効果
-          entries:
-          - 直後に出した投げ以外の攻撃の攻撃力アップ(1段階目)
-        - id: item_cf8aa5b927
-          displayTitle: 補足
-          entries:
-          - ゲージ増加のカッコ内の数値は1本制のもの
-    - id: '2'
-      displayName: 気合をいれる(2回目)
-      detail:
-        displayName: 気合をいれる(2回目)
-        command: 大P+大K押しっぱなし
-        guard: 両方
-        blocking: 両方
-        startup: 79～
-        active: '3'
-        recovery: "―"
-        damage: '10'
-        stun: '3'
-        stunReduction: '1'
-        stats:
-          C/SC: "○"
-          ゲージ増加: 5(7)
-        noteGroups:
-        - id: item_f11e32f4cf
-          displayTitle: 効果
-          entries:
-          - 直後に出した投げ以外の攻撃の攻撃力アップ(2段階目)
-        - id: item_cf8aa5b927
-          displayTitle: 補足
-          entries:
-          - |-
-            ・突き出した手に攻撃判定あり
-            ・ゲージ増加のカッコ内の数値は1本制のもの
-    - id: '3'
-      displayName: 気合をいれる(3回目)
-      detail:
-        displayName: 気合をいれる(3回目)
-        command: 大P+大Kさらに押しっぱなし
-        guard: 両方
-        blocking: 両方
-        startup: 79～
-        active: '3'
-        recovery: "―"
-        damage: '10'
-        stun: '3'
-        stunReduction: '1'
-        stats:
-          C/SC: "○"
-          ゲージ増加: 5(7)
-        noteGroups:
-        - id: item_f11e32f4cf
-          displayTitle: 効果
-          entries:
-          - |-
-            ・直後に出した投げ以外の攻撃の攻撃力アップ(2段階目)
-            ・スタンゲージ回復速度のアップ
-        - id: item_cf8aa5b927
-          displayTitle: 補足
-          entries:
-          - |-
-            ・初段の突き出した手に攻撃判定あり
-            ・スタンゲージの回復速度は3段階までアップ可能
-            ・ゲージ増加のカッコ内の数値は1本制のもの
+        displayName: 跳び貫手 「茜」(あかね)
+        startup: '9'
+        active: '17'
+        damage: '50'
+        stun: '7'
+        stunReduction: '3'
+        meterGain:
+          whiff: '0'
+          guard: '1'
+          hit: '2'
+          bl: '4'
         media:
           kind: motion_player
           displayLabel: モーション
-          skillName: Taunt
+          skillName: Neutral Jumping Jab
           characterCode: '17'
-          skillCode: '032'
+          skillCode: '011'
+    - id: item_25ab24896c
+      displayName: 斜め
+      detail:
+        displayName: 跳び拳 「千草」(ちぐさ)
+        startup: '4'
+        active: '21'
+        damage: '50'
+        stun: '7'
+        stunReduction: '3'
+        meterGain:
+          whiff: '0'
+          guard: '1'
+          hit: '2'
+          bl: '4'
+        media:
+          kind: motion_player
+          displayLabel: モーション
+          skillName: Jumping Jab
+          characterCode: '17'
+          skillCode: '014'
+  - id: item_a18c41f1f2
+    displayName: ジャンプ中パンチ
+    variants:
+    - id: item_f37ec8ba39
+      displayName: 垂直
+      detail:
+        displayName: 跳び貫手 「茜」(あかね)
+        startup: '11'
+        active: '10'
+        damage: '80'
+        stun: '11'
+        stunReduction: '3'
+        meterGain:
+          whiff: '2'
+          guard: '4'
+          hit: '8'
+          bl: '4'
+        media:
+          kind: motion_player
+          displayLabel: モーション
+          skillName: Neutral Jumping Strong
+          characterCode: '17'
+          skillCode: '012'
+    - id: item_a7ee982c0e
+      displayName: 斜め
+      detail:
+        displayName: 跳び拳 「千草」(ちぐさ)
+        startup: '11'
+        active: '24'
+        damage: '70'
+        stun: '11'
+        stunReduction: '3'
+        meterGain:
+          whiff: '2'
+          guard: '4'
+          hit: '8'
+          bl: '4'
+        media:
+          kind: motion_player
+          displayLabel: モーション
+          skillName: Jumping Strong
+          characterCode: '17'
+          skillCode: '015'
+  - id: item_18529f13be
+    displayName: ジャンプ大パンチ
+    variants:
+    - id: item_ca5fa63a59
+      displayName: 垂直
+      detail:
+        displayName: 跳び手刀「竜胆」(りんどう)
+        startup: '13'
+        active: '12'
+        damage: '130'
+        stun: '15'
+        stunReduction: '3'
+        meterGain:
+          whiff: '3'
+          guard: '6'
+          hit: '14'
+          bl: '4'
+        noteGroups:
+        - id: item_cf8aa5b927
+          displayTitle: 補足
+          entries:
+          - この技から土佐波コンボに繋げた場合、全キャラをスタンさせる事が可能
+        media:
+          kind: motion_player
+          displayLabel: モーション
+          skillName: Neutral Jumping Fierce
+          characterCode: '17'
+          skillCode: '013'
+    - id: item_c36fb09951
+      displayName: 斜め
+      detail:
+        displayName: 跳び巴手刀「杜若」(かきつばた)
+        startup: '10'
+        active: '2'
+        damage: 130(150)
+        stun: '15'
+        stunReduction: '3'
+        meterGain:
+          whiff: '3'
+          guard: '6'
+          hit: '14'
+          bl: '4'
+        noteGroups:
+        - id: item_cf8aa5b927
+          displayTitle: 補足
+          entries:
+          - "・攻撃力欄のカッコ内の数値は技の後半部分のもの\n・持続は短いが、後半部分の判定が下に強いので、飛び込みには相手の暴れを潰す感じで出していく \n・この技から土佐波コンボに繋げた場合、全キャラをスタンさせる事が可能"
+        media:
+          kind: motion_player
+          displayLabel: モーション
+          skillName: Jumping Fierce
+          characterCode: '17'
+          skillCode: '016'
+  - id: item_a83e3f7cff
+    displayName: ジャンプ小キック
+    variants:
+    - id: item_f48ae8dc16
+      displayName: 垂直
+      detail:
+        displayName: 跳び膝蹴り 「鏑」(かぶら)
+        startup: '2'
+        active: '14'
+        damage: '60'
+        stun: '7'
+        stunReduction: '3'
+        meterGain:
+          whiff: '0'
+          guard: '1'
+          hit: '2'
+          bl: '4'
+    - id: item_adfe5e6bc9
+      displayName: 斜め
+      detail:
+        displayName: 跳び膝蹴り 「鏑」(かぶら)
+        startup: '2'
+        active: '14'
+        damage: '60'
+        stun: '7'
+        stunReduction: '3'
+        meterGain:
+          whiff: '0'
+          guard: '1'
+          hit: '2'
+          bl: '4'
+        noteGroups:
+        - id: item_cf8aa5b927
+          displayTitle: 補足
+          entries:
+          - |-
+            ・発生が速いため、主に相手のジャンプ攻撃を空中BLした後に使用
+            ・ヒット時、相手より先に着地できる事が多いので着地攻めに移行可能
+        media:
+          kind: motion_player
+          displayLabel: モーション
+          skillName: Jumping Short
+          characterCode: '17'
+          skillCode: '026'
+  - id: item_c3103eb1f9
+    displayName: ジャンプ中キック
+    variants:
+    - id: item_5280b1f280
+      displayName: 垂直
+      detail:
+        displayName: 跳び足刀 「太刀」(たち)
+        startup: '7'
+        active: '13'
+        damage: '90'
+        stun: '9'
+        stunReduction: '3'
+        meterGain:
+          whiff: '2'
+          guard: '4'
+          hit: '8'
+          bl: '4'
+        noteGroups:
+        - id: item_cf8aa5b927
+          displayTitle: 補足
+          entries:
+          - |-
+            ・リーチ、持続、判定の強さなどあらゆる面で優れているジャンプ攻撃の主力
+            ・判定が下方向に強く、持続が長いので、ジャンプ頂点付近から出して暴れを潰したり、タイミングをずらしたりして使用する
+            ・ヒット時にSA1に繋げられるキャラも多い
+    - id: item_83fba48c4f
+      displayName: 斜め
+      detail:
+        displayName: 跳び足刀 「太刀」(たち)
+        startup: '7'
+        active: '13'
+        damage: '90'
+        stun: '9'
+        stunReduction: '3'
+        meterGain:
+          whiff: '2'
+          guard: '4'
+          hit: '8'
+          bl: '4'
+        noteGroups:
+        - id: item_cf8aa5b927
+          displayTitle: 補足
+          entries:
+          - |-
+            ・リーチ、持続、判定の強さ、めくり性能などあらゆる面で優れているジャンプ攻撃の主力
+            ・ヒット時にSA1に繋げられるキャラも多い
+        media:
+          kind: motion_player
+          displayLabel: モーション
+          skillName: Jumping Forward
+          characterCode: '17'
+          skillCode: '027'
+  - id: item_86e58a160f
+    displayName: ジャンプ大キック
+    variants:
+    - id: item_3b01b3c990
+      displayName: 垂直
+      detail:
+        displayName: 跳び一文字蹴り 「長柄」(ながえ)
+        startup: '6'
+        active: '6'
+        damage: '130'
+        stun: '11'
+        stunReduction: '3'
+        meterGain:
+          whiff: '3'
+          guard: '6'
+          hit: '14'
+          bl: '4'
+        noteGroups:
+        - id: item_cf8aa5b927
+          displayTitle: 補足
+          entries:
+          - 垂直ジャンプからの連係、コンボの始動技として使用
+    - id: item_3e728dc7eb
+      displayName: 斜め
+      detail:
+        displayName: 跳び一文字蹴り「長柄」(ながえ)
+        startup: '6'
+        active: '6'
+        damage: '130'
+        stun: '11'
+        stunReduction: '3'
+        meterGain:
+          whiff: '3'
+          guard: '6'
+          hit: '14'
+          bl: '4'
+        noteGroups:
+        - id: item_cf8aa5b927
+          displayTitle: 補足
+          entries:
+          - 出が速く、リーチがあって判定が強いため、昇りジャンプで出して空対空にすると強い
+        media:
+          kind: motion_player
+          displayLabel: モーション
+          skillName: Jumping Roundhouse
+          characterCode: '17'
+          skillCode: '028'
 - id: special_moves
   displayTitle: "【必殺技】"
   entries:
@@ -2215,3 +1932,285 @@ moveGroups:
         skillName: Tanden Renki
         characterCode: '17'
         skillCode: '055'
+- id: lever_input_moves
+  displayTitle: "【レバー入れ技】"
+  entries:
+  - id: item_4b5e021881
+    displayName: 踏み込み正拳三連突き 「山背」(やませ)
+    detail:
+      displayName: 踏み込み正拳三連突き 「山背」(やませ)
+      command: 6大P中に大P
+      guard: 両方・両方・両方
+      blocking: "→・→・→"
+      startup: '16'
+      active: 4・15
+      recovery: '13'
+      damage: 190(150+20+20)
+      stun: 19(13+3+3)
+      stunReduction: 15・15・15
+      meterGain:
+        whiff: '3'
+        guard: 10(6+2+2)
+        hit: 26(14+6+6)
+        bl: 12(4×3)
+      frameAdvantage:
+        guard: "-4"
+        standingHit: "-3"
+        crouchingHit: "-2"
+      stats:
+        C/SC: "×・×・×"
+      noteGroups:
+      - id: item_cf8aa5b927
+        displayTitle: 補足
+        entries:
+        - |-
+          ・ダメージ、スタン値が高く、当たればリターンは大きい
+          ・ガード後は間合いが離れず不利な状況になるので乱用禁物。ケンの迅雷脚や春麗の鳳翼扇が反確となる
+      media:
+        kind: motion_player
+        displayLabel: モーション
+        skillName: Towards Fierce (complete)
+        characterCode: '17'
+        skillCode: '007'
+- id: normal_throws
+  displayTitle: "【通常投げ】"
+  entries:
+  - id: item_ff65dd67e1
+    displayName: 引き寄せ頭突き 「塔頭」(たっちゅう)
+    detail:
+      displayName: 引き寄せ頭突き 「塔頭」(たっちゅう)
+      command: 小P+小K
+      startup: '2'
+      active: '1'
+      recovery: '21'
+      damage: '90'
+      stun: '17'
+      meterGain:
+        onWhiff: '0'
+        throwSuccess: '7'
+      stats:
+        投げ間合い: '20'
+      noteGroups:
+      - id: item_cf8aa5b927
+        displayTitle: 補足
+        entries:
+        - |-
+          ・硬直は投げ失敗時のフレーム
+          ・投げ成功後、レバー・ボタンに触らない状態にすることで32フレーム完全無敵がつく。レバー・ボタンに触ると解除される
+      media:
+        kind: motion_player
+        displayLabel: モーション
+        skillName: Neutral Throw
+        characterCode: '17'
+        skillCode: '029'
+  - id: item_53b3f247e7
+    displayName: 肘落とし三連突き 「荒磯」(あらいそ)
+    detail:
+      displayName: 肘落とし三連突き 「荒磯」(あらいそ)
+      command: |-
+        →+小P+小K
+        ←+小P+小K
+      startup: '2'
+      active: '1'
+      recovery: '21'
+      damage: '150'
+      stun: '13'
+      meterGain:
+        onWhiff: '0'
+        throwSuccess: '7'
+      stats:
+        投げ間合い: '20'
+      noteGroups:
+      - id: item_cf8aa5b927
+        displayTitle: 補足
+        entries:
+        - |-
+          ・硬直は投げ失敗時のフレーム
+          ・左右に投げ分ける事が可能
+          ・投げた後にQSしにくいため、起き攻めしやすい
+      media:
+        kind: motion_player
+        displayLabel: モーション
+        skillName: Back & Towards Throw
+        characterCode: '17'
+        skillCode: '030'
+- id: common_moves
+  displayTitle: "【特殊入力技】"
+  entries:
+  - id: item_ac52a72820
+    displayName: リープアタック
+    detail:
+      displayName: 飛び拳 「千草」(ちぐさ)
+      command: 中P+中K
+      guard: 立
+      blocking: "→"
+      startup: '15'
+      active: '10'
+      recovery: '5'
+      damage: '40'
+      stun: '3'
+      stunReduction: '1'
+      meterGain:
+        whiff: '0'
+        guard: '1'
+        hit: '2'
+        bl: '4'
+      frameAdvantage:
+        guard: "-5～+7"
+        standingHit: 0～+8
+        crouchingHit: "+1～+9"
+      stats:
+        C/SC: "×"
+      noteGroups:
+      - id: item_cf8aa5b927
+        displayTitle: 補足
+        entries:
+        - |-
+          ・コマンド完成から5フレーム目で空中判定に移行
+          ・技の下りを当てることで、SAや発生の速い通常技に繋ぐことが可能
+      media:
+        kind: motion_player
+        displayLabel: モーション
+        skillName: Universal Overhead
+        characterCode: '17'
+        skillCode: '031'
+  - id: item_7ae3c90cde
+    displayName: パーソナルアクション
+    children:
+    - id: item_e8cda9315e
+      displayName: 気合をいれる
+      detail:
+        displayName: 気合をいれる
+        command: 大P+大K
+        guard: 両方
+        blocking: 両方
+        startup: '79'
+        active: '3'
+        recovery: "―"
+        damage: '10'
+        stun: '3'
+        stunReduction: '1'
+        stats:
+          C/SC: "○"
+          ゲージ増加: 5(7)
+        noteGroups:
+        - id: item_f11e32f4cf
+          displayTitle: 効果
+          entries:
+          - 直後に出した投げ以外の攻撃の攻撃力アップ(1段階目)
+        - id: item_cf8aa5b927
+          displayTitle: 補足
+          entries:
+          - ゲージ増加のカッコ内の数値は1本制のもの
+    - id: '2'
+      displayName: 気合をいれる(2回目)
+      detail:
+        displayName: 気合をいれる(2回目)
+        command: 大P+大K押しっぱなし
+        guard: 両方
+        blocking: 両方
+        startup: 79～
+        active: '3'
+        recovery: "―"
+        damage: '10'
+        stun: '3'
+        stunReduction: '1'
+        stats:
+          C/SC: "○"
+          ゲージ増加: 5(7)
+        noteGroups:
+        - id: item_f11e32f4cf
+          displayTitle: 効果
+          entries:
+          - 直後に出した投げ以外の攻撃の攻撃力アップ(2段階目)
+        - id: item_cf8aa5b927
+          displayTitle: 補足
+          entries:
+          - |-
+            ・突き出した手に攻撃判定あり
+            ・ゲージ増加のカッコ内の数値は1本制のもの
+    - id: '3'
+      displayName: 気合をいれる(3回目)
+      detail:
+        displayName: 気合をいれる(3回目)
+        command: 大P+大Kさらに押しっぱなし
+        guard: 両方
+        blocking: 両方
+        startup: 79～
+        active: '3'
+        recovery: "―"
+        damage: '10'
+        stun: '3'
+        stunReduction: '1'
+        stats:
+          C/SC: "○"
+          ゲージ増加: 5(7)
+        noteGroups:
+        - id: item_f11e32f4cf
+          displayTitle: 効果
+          entries:
+          - |-
+            ・直後に出した投げ以外の攻撃の攻撃力アップ(2段階目)
+            ・スタンゲージ回復速度のアップ
+        - id: item_cf8aa5b927
+          displayTitle: 補足
+          entries:
+          - |-
+            ・初段の突き出した手に攻撃判定あり
+            ・スタンゲージの回復速度は3段階までアップ可能
+            ・ゲージ増加のカッコ内の数値は1本制のもの
+        media:
+          kind: motion_player
+          displayLabel: モーション
+          skillName: Taunt
+          characterCode: '17'
+          skillCode: '032'
+- id: target_combos
+  displayTitle: "【ターゲットコンボ】"
+  entries:
+  - id: kk
+    displayName: 立小K→立中K
+    detail:
+      displayName: 立小K→立中K
+      superCancel: "○/×"
+      guard: 両方/両方
+      blocking: 両方/→
+      damage: 40/70
+      stun: 3/7
+      stunReduction: 15/15
+      frameAdvantage:
+        guard: "-3"
+        standingHit: "-2"
+        crouchingHit: "-1"
+      stats:
+        入力: 立小K→立中K
+        C: "○/×"
+      noteGroups:
+      - id: item_cf8aa5b927
+        displayTitle: 補足
+        entries:
+        - |-
+          ・1段目空振りでも2段目を出す事が可能
+          ・大半のキャラのしゃがみ状態に2段目が当たらないので注意
+  - id: 6kk
+    displayName: 6中K→立大K
+    detail:
+      displayName: 6中K→立大K
+      superCancel: "×/×"
+      guard: 両方/両方
+      blocking: 両方/→
+      damage: 100/80
+      stun: 9/7
+      stunReduction: 15/15
+      frameAdvantage:
+        guard: "-3"
+        standingHit: "-1"
+        crouchingHit: "+1"
+      stats:
+        入力: 6中K→立大K
+        C: "×/×"
+      noteGroups:
+      - id: item_cf8aa5b927
+        displayTitle: 補足
+        entries:
+        - "・TCではあるが連係のため、繋がらない \n・特に使う必要なし"

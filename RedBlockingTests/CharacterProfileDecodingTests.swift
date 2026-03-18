@@ -33,8 +33,8 @@ struct CharacterProfileDecodingTests {
     func profileHasMoveGroupsInSchemaOrder(characterName: String) throws {
         let profile = try makeRepository().loadProfile(resourceName: "\(characterName).yml")
         let ids = profile.moveGroups.map(\.id)
-        let withTC: [MoveGroupID] = [.airNormals, .groundNormals, .normalThrows, .leverInputMoves, .targetCombos, .commandNormals, .specialMoves, .superArts]
-        let withoutTC: [MoveGroupID] = [.airNormals, .groundNormals, .normalThrows, .leverInputMoves, .commandNormals, .specialMoves, .superArts]
+        let withTC: [MoveGroupID] = [.groundNormals, .airNormals, .specialMoves, .superArts, .leverInputMoves, .normalThrows, .commonMoves, .targetCombos]
+        let withoutTC: [MoveGroupID] = [.groundNormals, .airNormals, .specialMoves, .superArts, .leverInputMoves, .normalThrows, .commonMoves]
         #expect(
             ids == withTC || ids == withoutTC,
             "\(characterName): moveGroup IDs are not in schema order"

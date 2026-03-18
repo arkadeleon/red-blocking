@@ -9,301 +9,6 @@ introduction:
     クンフー教室の教え子が突然姿を消してしまったのだ。
     行方を追うため闘いの舞台に戻る事を決意する。
 moveGroups:
-- id: air_normals
-  displayTitle: "【空中通常技】"
-  entries:
-  - id: item_0213bd1615
-    displayName: ジャンプ小パンチ
-    variants:
-    - id: item_e0c2f756f3
-      displayName: 垂直
-      detail:
-        displayName: 落掌打(らくしょうだ)
-        startup: '4'
-        active: 着地まで
-        damage: '40'
-        stun: '7'
-        stunReduction: '3'
-        meterGain:
-          whiff: '0'
-          guard: '1'
-          hit: '2'
-          bl: '4'
-        media:
-          kind: motion_player
-          displayLabel: モーション
-          skillName: Neutral Jumping Jab
-          characterCode: '16'
-          skillCode: '008'
-    - id: item_25ab24896c
-      displayName: 斜め
-      detail:
-        displayName: 鶴嘴拳(かくしけん)
-        startup: '2'
-        active: 着地まで
-        damage: '40'
-        stun: '7'
-        stunReduction: '3'
-        meterGain:
-          whiff: '0'
-          guard: '1'
-          hit: '2'
-          bl: '4'
-        media:
-          kind: motion_player
-          displayLabel: モーション
-          skillName: Jumping Jab
-          characterCode: '16'
-          skillCode: '011'
-  - id: item_a18c41f1f2
-    displayName: ジャンプ中パンチ
-    variants:
-    - id: item_f37ec8ba39
-      displayName: 垂直
-      detail:
-        displayName: 落掌打(らくしょうだ)
-        startup: '6'
-        active: 着地まで
-        damage: '80'
-        stun: '11'
-        stunReduction: '3'
-        meterGain:
-          whiff: '2'
-          guard: '3'
-          hit: '7'
-          bl: '4'
-        media:
-          kind: motion_player
-          displayLabel: モーション
-          skillName: Neutral Jumping Strong
-          characterCode: '16'
-          skillCode: '009'
-    - id: item_a7ee982c0e
-      displayName: 斜め
-      detail:
-        displayName: 鶴嘴拳(かくしけん)
-        startup: '4'
-        active: 着地まで
-        damage: '60'
-        stun: '9'
-        stunReduction: '3'
-        meterGain:
-          whiff: '2'
-          guard: '3'
-          hit: '7'
-          bl: '4'
-        media:
-          kind: motion_player
-          displayLabel: モーション
-          skillName: Jumping Strong
-          characterCode: '16'
-          skillCode: '012'
-  - id: item_18529f13be
-    displayName: ジャンプ大パンチ
-    variants:
-    - id: item_ca5fa63a59
-      displayName: 垂直
-      detail:
-        displayName: 垂突打(すいとつだ)
-        startup: '10'
-        active: '3'
-        damage: '130'
-        stun: '15'
-        stunReduction: '3'
-        meterGain:
-          whiff: '3'
-          guard: '5'
-          hit: '13'
-          bl: '4'
-        noteGroups:
-        - id: item_cf8aa5b927
-          displayTitle: 補足
-          entries:
-          - 空対空ヒット時、叩きつけダウンになる
-        media:
-          kind: motion_player
-          displayLabel: モーション
-          skillName: Neutral Jumping Fierce
-          characterCode: '16'
-          skillCode: '010'
-    - id: item_c36fb09951
-      displayName: 斜め
-      detail:
-        displayName: 鷹嘴拳(ようしけん)
-        startup: '9'
-        active: '6'
-        damage: '80'
-        stun: '9'
-        stunReduction: '3'
-        meterGain:
-          whiff: '3'
-          guard: '5'
-          hit: '13'
-          bl: '4'
-        noteGroups:
-        - id: item_cf8aa5b927
-          displayTitle: 補足
-          entries:
-          - TCでもう1度J大Pを出すことが可能
-        media:
-          kind: motion_player
-          displayLabel: モーション
-          skillName: Jumping Fierce
-          characterCode: '16'
-          skillCode: '013'
-  - id: item_a83e3f7cff
-    displayName: ジャンプ小キック
-    variants:
-    - id: item_f48ae8dc16
-      displayName: 垂直
-      detail:
-        displayName: 鶴脚打(かくきゃくだ)
-        startup: '5'
-        active: '22'
-        damage: '40'
-        stun: '7'
-        stunReduction: '3'
-        meterGain:
-          whiff: '0'
-          guard: '1'
-          hit: '2'
-          bl: '4'
-        media:
-          kind: motion_player
-          displayLabel: モーション
-          skillName: Neutral Jumping Short
-          characterCode: '16'
-          skillCode: '022'
-    - id: item_adfe5e6bc9
-      displayName: 斜め
-      detail:
-        displayName: 飛翔脚(ひしょうきゃく)
-        startup: '5'
-        active: 着地まで
-        damage: '50'
-        stun: '5'
-        stunReduction: '3'
-        meterGain:
-          whiff: '0'
-          guard: '1'
-          hit: '2'
-          bl: '4'
-        noteGroups:
-        - id: item_cf8aa5b927
-          displayTitle: 補足
-          entries:
-          - |-
-            ・空対空に強い
-            ・SA2ヒット時、追撃でこの技を当て着地後に歩いて裏回りなどに使用
-        media:
-          kind: motion_player
-          displayLabel: モーション
-          skillName: Jumping Short
-          characterCode: '16'
-          skillCode: '025'
-  - id: item_c3103eb1f9
-    displayName: ジャンプ中キック
-    variants:
-    - id: item_5280b1f280
-      displayName: 垂直
-      detail:
-        displayName: 鶴脚打(かくきゃくだ)
-        startup: '6'
-        active: '2'
-        damage: '80'
-        stun: '9'
-        stunReduction: '3'
-        meterGain:
-          whiff: '2'
-          guard: '3'
-          hit: '7'
-          bl: '4'
-        media:
-          kind: motion_player
-          displayLabel: モーション
-          skillName: Neutral Jumping Forward
-          characterCode: '16'
-          skillCode: '023'
-    - id: item_83fba48c4f
-      displayName: 斜め
-      detail:
-        displayName: 飛翔脚(ひしょうきゃく)
-        startup: '6'
-        active: '13'
-        damage: '90'
-        stun: '9'
-        stunReduction: '3'
-        meterGain:
-          whiff: '2'
-          guard: '3'
-          hit: '7'
-          bl: '4'
-        noteGroups:
-        - id: item_cf8aa5b927
-          displayTitle: 補足
-          entries:
-          - 空対空に強い
-        media:
-          kind: motion_player
-          displayLabel: モーション
-          skillName: Jumping Forward
-          characterCode: '16'
-          skillCode: '026'
-  - id: item_86e58a160f
-    displayName: ジャンプ大キック
-    variants:
-    - id: item_3b01b3c990
-      displayName: 垂直
-      detail:
-        displayName: 鶴翼蹴(かくよくしゅう)
-        startup: '8'
-        active: '5'
-        damage: '130'
-        stun: '13'
-        stunReduction: '3'
-        meterGain:
-          whiff: '3'
-          guard: '5'
-          hit: '13'
-          bl: '4'
-        noteGroups:
-        - id: item_cf8aa5b927
-          displayTitle: 補足
-          entries:
-          - |-
-            ・リーチ、判定に優れているため牽制に使用
-            ・ヒット時、SA1&2に繋ぐことが可能
-        media:
-          kind: motion_player
-          displayLabel: モーション
-          skillName: Neutral Jumping Roundhouse
-          characterCode: '16'
-          skillCode: '024'
-    - id: item_3e728dc7eb
-      displayName: 斜め
-      detail:
-        displayName: 鷹翔脚(ようしょうきゃく)
-        startup: '10'
-        active: '3'
-        damage: '110'
-        stun: '13'
-        stunReduction: '3'
-        meterGain:
-          whiff: '3'
-          guard: '5'
-          hit: '13'
-          bl: '4'
-        noteGroups:
-        - id: item_cf8aa5b927
-          displayTitle: 補足
-          entries:
-          - 判定が下方向に強いため、飛び込みに向いている
-        media:
-          kind: motion_player
-          displayLabel: モーション
-          skillName: Jumping Roundhouse
-          characterCode: '16'
-          skillCode: '027'
 - id: ground_normals
   displayTitle: "【地上通常技】"
   entries:
@@ -831,557 +536,301 @@ moveGroups:
           skillName: Crouching Roundhouse
           characterCode: '16'
           skillCode: '021'
-- id: normal_throws
-  displayTitle: "【通常投げ】"
+- id: air_normals
+  displayTitle: "【空中通常技】"
   entries:
-  - id: item_dafc04689c
-    displayName: 虎襲倒(こしゅうとう)
-    detail:
-      displayName: 虎襲倒(こしゅうとう)
-      command: |-
-        小P+小K
-        →+小P+小K
-        ←+小P+小K
-      startup: '2'
-      active: '1'
-      recovery: '21'
-      damage: '120'
-      stun: '9'
-      meterGain:
-        onWhiff: '0'
-        throwSuccess: '7'
-      stats:
-        投げ間合い: '26'
-      noteGroups:
-      - id: item_cf8aa5b927
-        displayTitle: 補足
-        entries:
-        - |-
-          ・硬直は投げ失敗時のフレーム
-          ・左右に投げ分けが可能
-      media:
-        kind: motion_player
-        displayLabel: モーション
-        skillName: Throw
-        characterCode: '16'
-        skillCode: '034'
-  - id: item_01e99b01bd
-    displayName: 龍星落(りゅうせいらく)
-    detail:
-      displayName: 龍星落(りゅうせいらく)
-      command: 空中で小P+小K
-      startup: '5'
-      active: '1'
-      recovery: "―"
-      damage: '80'
-      stun: '9'
-      meterGain:
-        onWhiff: '0'
-        throwSuccess: '7'
-      stats:
-        投げ間合い 前方: '14'
-        投げ間合い 上下: 53～89
-      media:
-        kind: motion_player
-        displayLabel: モーション
-        skillName: Air Throw
-        characterCode: '16'
-        skillCode: '035'
-- id: lever_input_moves
-  displayTitle: "【レバー入れ技】"
-  entries:
-  - id: item_e5cf22aa9e
-    displayName: 鷹爪脚(ようそうきゃく)
-    detail:
-      displayName: 鷹爪脚(ようそうきゃく)
-      command: ジャンプ中2+中K
-      guard: 立
-      blocking: "→"
-      startup: '9'
-      active: 着地まで
-      recovery: "―"
-      damage: '50'
-      stun: '5'
-      stunReduction: '3'
-      meterGain:
-        whiff: '0'
-        guard: '1'
-        hit: '2'
-        bl: '4'
-      frameAdvantage:
-        guard: "―"
-        standingHit: "―"
-        crouchingHit: "―"
-      stats:
-        C/SC: "×"
-      noteGroups:
-      - id: item_cf8aa5b927
-        displayTitle: 補足
-        entries:
-        - |-
-          ・ヒット後、4フレームの隙あり。それ以後は斜めジャンプ攻撃やBL可能
-          ・当て方によりヒット後、相手が上に浮くため春麗が先に着地でき、そこから着地後に追撃が可能
-      media:
-        kind: motion_player
-        displayLabel: モーション
-        skillName: "(Air) Down + Forward"
-        characterCode: '16'
-        skillCode: '032'
-  - id: item_5dac4136e7
-    displayName: 垂突打(すいとつだ)
-    detail:
-      displayName: 垂突打(すいとつだ)
-      command: 斜めジャンプ中下要素+大P
-      guard: 立
-      blocking: "→"
-      startup: '10'
-      active: '3'
-      recovery: "―"
-      damage: '110'
-      stun: '15'
-      stunReduction: '3'
-      meterGain:
-        whiff: '2'
-        guard: '3'
-        hit: '7'
-        bl: '4'
-      frameAdvantage:
-        guard: "―"
-        standingHit: "―"
-        crouchingHit: "―"
-      stats:
-        C/SC: "×"
-      noteGroups:
-      - id: item_cf8aa5b927
-        displayTitle: 補足
-        entries:
-        - |-
-          ・垂直J大Pと同じもの
-          ・空対空ヒット時、叩きつけダウンになる
-  - id: item_9e6f0bc1d0
-    displayName: 双連掌(そうれんしょう)
-    detail:
-      displayName: 双連掌(そうれんしょう)
-      command: 4+中P
-      guard: 両方
-      blocking: "→"
-      startup: '5'
-      active: 2・1
-      recovery: '18'
-      damage: 110(60+50)
-      stun: 16(7+9)
-      stunReduction: 3・15
-      meterGain:
-        whiff: 2(2+0)
-        guard: 4(3+1)
-        hit: 9(7+2)
-        bl: 8(4+4)
-      frameAdvantage:
-        guard: "-2"
-        standingHit: '0'
-        crouchingHit: '0'
-      stats:
-        C/SC: "○"
-      noteGroups:
-      - id: item_cf8aa5b927
-        displayTitle: 補足
-        entries:
-        - |-
-          ・2段目までのキャンセル猶予時間は30フレーム
-          ・必殺技(主に百裂脚)でキャンセルする事によって、BL仕込み飛込みに対する対空技として優秀
-      media:
-        kind: motion_player
-        displayLabel: モーション
-        skillName: Back + Strong
-        characterCode: '16'
-        skillCode: '028'
-  - id: item_f89e4fcee7
-    displayName: 鶴首落脚(かくしゅらくきゃく)
-    detail:
-      displayName: 鶴首落脚(かくしゅらくきゃく)
-      command: 近中K押しっぱなし
-      guard: 両方
-      blocking: "→"
-      startup: 6・7・3
-      active: 6・1・1
-      recovery: '15'
-      damage: 120(80+20+20)
-      stun: 19(5+7+7)
-      stunReduction: 15・15・15
-      meterGain:
-        whiff: 2(2+0+0)
-        guard: 3(3+0+0)
-        hit: 11(7+2+2)
-        bl: 12(4+4+4)
-      frameAdvantage:
-        guard: "-1"
-        standingHit: "+3"
-        crouchingHit: "+3"
-      stats:
-        C/SC: "×"
-      noteGroups:
-      - id: item_cf8aa5b927
-        displayTitle: 補足
-        entries:
-        - ヒット時、目押しでSA1に繋ぐことが可能
-  - id: item_062d42bb08
-    displayName: 尖杖蹴(せんじょうしゅう)
-    detail:
-      displayName: 尖杖蹴(せんじょうしゅう)
-      command: 6+中K
-      guard: 両方
-      blocking: "→"
-      startup: '11'
-      active: '7'
-      recovery: '11'
-      damage: '80'
-      stun: '5'
-      stunReduction: '10'
-      meterGain:
-        whiff: '2'
-        guard: '3'
-        hit: '7'
-        bl: '4'
-      frameAdvantage:
-        guard: '0'
-        standingHit: "+1"
-        crouchingHit: "+2"
-      stats:
-        C/SC: "×"
-      noteGroups:
-      - id: item_cf8aa5b927
-        displayTitle: 補足
-        entries:
-        - 出は遅いが、ガード・ヒット後に隙が少なく間合いが離れないため攻めの継続が可能
-      media:
-        kind: motion_player
-        displayLabel: モーション
-        skillName: Towards + Forward
-        characterCode: '16'
-        skillCode: '030'
-  - id: item_f532b73f04
-    displayName: 発勁(はっけい)
-    detail:
-      displayName: 発勁(はっけい)
-      command: 4+大P
-      guard: 両方
-      blocking: "→"
-      startup: '7'
-      active: '9'
-      recovery: '10'
-      damage: '130'
-      stun: '15'
-      stunReduction: '15'
-      meterGain:
-        whiff: '3'
-        guard: '5'
-        hit: '13'
-        bl: '4'
-      frameAdvantage:
-        guard: "-1"
-        standingHit: "+1"
-        crouchingHit: "+3"
-      stats:
-        C/SC: "○"
-      noteGroups:
-      - id: item_cf8aa5b927
-        displayTitle: 補足
-        entries:
-        - |-
-          ・持続時間が長く、判定にも優れているため、相手の牽制を潰すのに使用
-          ・キャンセル猶予時間は16フレーム
-          ・まことのみヒット時にノーキャンセルでもSA１か2に繋ぐことが可能。その場合のキャンセル猶予時間は29フレーム
-      media:
-        kind: motion_player
-        displayLabel: モーション
-        skillName: Back + Fierce
-        characterCode: '16'
-        skillCode: '029'
-  - id: item_cac1015bd0
-    displayName: 転身鷲脚(てんしんしゅうきゃく)
-    detail:
-      displayName: 転身鷲脚(てんしんしゅうきゃく)
-      command: 3+大K
-      guard: 立
-      blocking: "→"
-      startup: '37'
-      active: '5'
-      recovery: '2'
-      damage: '110'
-      stun: '13'
-      stunReduction: '1'
-      meterGain:
-        whiff: '3'
-        guard: '5'
-        hit: '13'
-        bl: '4'
-      frameAdvantage:
-        guard: "+9"
-        standingHit: "+11"
-        crouchingHit: "+15"
-      stats:
-        C/SC: "×"
-      noteGroups:
-      - id: item_cf8aa5b927
-        displayTitle: 補足
-        entries:
-        - |-
-          ・コマンド完成後、6フレーム目から空中判定に移行
-          ・ヒット時、各SAに繋ぐことが可能
-      media:
-        kind: motion_player
-        displayLabel: モーション
-        skillName: Down-Towards Roundhouse
-        characterCode: '16'
-        skillCode: '031'
-  - id: item_19a060be28
-    displayName: 翼旋脚(よくせんきゃく)
-    detail:
-      displayName: 翼旋脚(よくせんきゃく)
-      command: 6+大K
-      guard: 両方
-      blocking: "→"
-      startup: '12'
-      active: '1'
-      recovery: '15'
-      damage: '120'
-      stun: '13'
-      stunReduction: '15'
-      meterGain:
-        whiff: '3'
-        guard: '5'
-        hit: '13'
-        bl: '4'
-      frameAdvantage:
-        guard: '0'
-        standingHit: "+2"
-        crouchingHit: "+4"
-      stats:
-        C/SC: "×"
-      noteGroups:
-      - id: item_cf8aa5b927
-        displayTitle: 補足
-        entries:
-        - |-
-          ・着地後の隙は硬直の後半9フレーム
-          ・コマンド入力後、1フレームで空中判定になり投げをかわすことが可能
-          ・ただし、しゃがみの姿勢が低いキャラには当たらないため注意
-          ・しゃがみヒット時、ノーキャンセルでSA１か2に繋ぐことが可能。その場合のキャンセル猶予時間は28フレーム
-  - id: item_89e3b31149
-    displayName: 三角跳び
-    detail:
-      displayName: 三角跳び
-      command: 壁際で、壁と逆方向にレバー入力
-      guard: "―"
-      blocking: "―"
-      startup: "―"
-      active: "―"
-      recovery: "―"
-      damage: "―"
-      stun: "―"
-      stunReduction: "―"
-      meterGain:
-        whiff: "―"
-        guard: "―"
-        hit: "―"
-        bl: "―"
-      frameAdvantage:
-        guard: "―"
-        standingHit: "―"
-        crouchingHit: "―"
-      stats:
-        C/SC: "―"
-- id: target_combos
-  displayTitle: "【ターゲットコンボ】"
-  entries:
-  - id: jp2
-    displayName: 前ジャンプ中、J大P×2
-    detail:
-      displayName: 前ジャンプ中、J大P×2
-      superCancel: "×/×"
-      guard: 立/立
-      blocking: "→/→"
-      damage: 80/60
-      stun: 9/5
-      stunReduction: 3/3
-      frameAdvantage:
-        guard: "―"
-        standingHit: "―"
-        crouchingHit: "―"
-      stats:
-        入力: 前ジャンプ中、J大P×2
-        C: "×/×"
-      noteGroups:
-      - id: item_cf8aa5b927
-        displayTitle: 補足
-        entries:
-        - |-
-          ・1発目が当たらなくても2発目が出せる
-          ・鳳翼扇ヒット後の追撃に使用
-
-- id: command_normals
-  displayTitle: "【特殊入力技】"
-  entries:
-  - id: item_ac52a72820
-    displayName: リープアタック
-    detail:
-      displayName: 鶴嘴拳(かくしけん)
-      command: 中P+中K
-      guard: 立
-      blocking: "→"
-      startup: '15'
-      active: '10'
-      recovery: '5'
-      damage: '40'
-      stun: '3'
-      stunReduction: '1'
-      meterGain:
-        whiff: '0'
-        guard: '1'
-        hit: '2'
-        bl: '4'
-      frameAdvantage:
-        guard: "-5～+7"
-        standingHit: 0～+8
-        crouchingHit: "+1～+9"
-      stats:
-        C/SC: "×"
-      noteGroups:
-      - id: item_cf8aa5b927
-        displayTitle: 補足
-        entries:
-        - |-
-          ・コマンド完成後、5フレーム目から空中判定に移行
-          ・技の下りを当てることで、SAや発生の速い通常技に繋ぐことが可能
-      media:
-        kind: motion_player
-        displayLabel: モーション
-        skillName: Universal Overhead
-        characterCode: '16'
-        skillCode: '033'
-  - id: item_7ae3c90cde
-    displayName: パーソナルアクション
-    children:
-    - id: item_11af127ef0
-      displayName: あくび
+  - id: item_0213bd1615
+    displayName: ジャンプ小パンチ
+    variants:
+    - id: item_e0c2f756f3
+      displayName: 垂直
       detail:
-        displayName: 腕を回す
-        command: 大P+大K
-        guard: "―"
-        blocking: "―"
-        startup: '59'
-        active: "―"
-        recovery: "―"
-        damage: "―"
-        stun: "―"
-        stunReduction: "―"
-        stats:
-          C/SC: "×"
-          ゲージ増加: 4(6)
+        displayName: 落掌打(らくしょうだ)
+        startup: '4'
+        active: 着地まで
+        damage: '40'
+        stun: '7'
+        stunReduction: '3'
+        meterGain:
+          whiff: '0'
+          guard: '1'
+          hit: '2'
+          bl: '4'
+        media:
+          kind: motion_player
+          displayLabel: モーション
+          skillName: Neutral Jumping Jab
+          characterCode: '16'
+          skillCode: '008'
+    - id: item_25ab24896c
+      displayName: 斜め
+      detail:
+        displayName: 鶴嘴拳(かくしけん)
+        startup: '2'
+        active: 着地まで
+        damage: '40'
+        stun: '7'
+        stunReduction: '3'
+        meterGain:
+          whiff: '0'
+          guard: '1'
+          hit: '2'
+          bl: '4'
+        media:
+          kind: motion_player
+          displayLabel: モーション
+          skillName: Jumping Jab
+          characterCode: '16'
+          skillCode: '011'
+  - id: item_a18c41f1f2
+    displayName: ジャンプ中パンチ
+    variants:
+    - id: item_f37ec8ba39
+      displayName: 垂直
+      detail:
+        displayName: 落掌打(らくしょうだ)
+        startup: '6'
+        active: 着地まで
+        damage: '80'
+        stun: '11'
+        stunReduction: '3'
+        meterGain:
+          whiff: '2'
+          guard: '3'
+          hit: '7'
+          bl: '4'
+        media:
+          kind: motion_player
+          displayLabel: モーション
+          skillName: Neutral Jumping Strong
+          characterCode: '16'
+          skillCode: '009'
+    - id: item_a7ee982c0e
+      displayName: 斜め
+      detail:
+        displayName: 鶴嘴拳(かくしけん)
+        startup: '4'
+        active: 着地まで
+        damage: '60'
+        stun: '9'
+        stunReduction: '3'
+        meterGain:
+          whiff: '2'
+          guard: '3'
+          hit: '7'
+          bl: '4'
+        media:
+          kind: motion_player
+          displayLabel: モーション
+          skillName: Jumping Strong
+          characterCode: '16'
+          skillCode: '012'
+  - id: item_18529f13be
+    displayName: ジャンプ大パンチ
+    variants:
+    - id: item_ca5fa63a59
+      displayName: 垂直
+      detail:
+        displayName: 垂突打(すいとつだ)
+        startup: '10'
+        active: '3'
+        damage: '130'
+        stun: '15'
+        stunReduction: '3'
+        meterGain:
+          whiff: '3'
+          guard: '5'
+          hit: '13'
+          bl: '4'
         noteGroups:
-        - id: item_f11e32f4cf
-          displayTitle: 効果
+        - id: item_cf8aa5b927
+          displayTitle: 補足
           entries:
-          - スタンゲージ回復速度のアップ
+          - 空対空ヒット時、叩きつけダウンになる
+        media:
+          kind: motion_player
+          displayLabel: モーション
+          skillName: Neutral Jumping Fierce
+          characterCode: '16'
+          skillCode: '010'
+    - id: item_c36fb09951
+      displayName: 斜め
+      detail:
+        displayName: 鷹嘴拳(ようしけん)
+        startup: '9'
+        active: '6'
+        damage: '80'
+        stun: '9'
+        stunReduction: '3'
+        meterGain:
+          whiff: '3'
+          guard: '5'
+          hit: '13'
+          bl: '4'
+        noteGroups:
+        - id: item_cf8aa5b927
+          displayTitle: 補足
+          entries:
+          - TCでもう1度J大Pを出すことが可能
+        media:
+          kind: motion_player
+          displayLabel: モーション
+          skillName: Jumping Fierce
+          characterCode: '16'
+          skillCode: '013'
+  - id: item_a83e3f7cff
+    displayName: ジャンプ小キック
+    variants:
+    - id: item_f48ae8dc16
+      displayName: 垂直
+      detail:
+        displayName: 鶴脚打(かくきゃくだ)
+        startup: '5'
+        active: '22'
+        damage: '40'
+        stun: '7'
+        stunReduction: '3'
+        meterGain:
+          whiff: '0'
+          guard: '1'
+          hit: '2'
+          bl: '4'
+        media:
+          kind: motion_player
+          displayLabel: モーション
+          skillName: Neutral Jumping Short
+          characterCode: '16'
+          skillCode: '022'
+    - id: item_adfe5e6bc9
+      displayName: 斜め
+      detail:
+        displayName: 飛翔脚(ひしょうきゃく)
+        startup: '5'
+        active: 着地まで
+        damage: '50'
+        stun: '5'
+        stunReduction: '3'
+        meterGain:
+          whiff: '0'
+          guard: '1'
+          hit: '2'
+          bl: '4'
+        noteGroups:
         - id: item_cf8aa5b927
           displayTitle: 補足
           entries:
           - |-
-            ・60フレーム以降、アクションが以下のPAにランダムで分岐(あくびのみの場合もあり)
-            ・1回目で10%、2回目で21%、3回目(MAX)で33%まで回復速度アップ
-            ・PAを使用したラウンド中、効果持続
-            ・ゲージ増加のカッコ内の数値は1本制のもの
-    - id: item_237ad44a37
-      displayName: あくび→首コキコキ
+            ・空対空に強い
+            ・SA2ヒット時、追撃でこの技を当て着地後に歩いて裏回りなどに使用
+        media:
+          kind: motion_player
+          displayLabel: モーション
+          skillName: Jumping Short
+          characterCode: '16'
+          skillCode: '025'
+  - id: item_c3103eb1f9
+    displayName: ジャンプ中キック
+    variants:
+    - id: item_5280b1f280
+      displayName: 垂直
       detail:
-        displayName: あくび→首コキコキ
-        command: 大P+大K
-        guard: "―"
-        blocking: "―"
-        startup: 60～
-        active: "―"
-        recovery: "―"
-        damage: "―"
-        stun: "―"
-        stunReduction: "―"
-        stats:
-          C/SC: "×"
-          ゲージ増加: 8(4+4)
+        displayName: 鶴脚打(かくきゃくだ)
+        startup: '6'
+        active: '2'
+        damage: '80'
+        stun: '9'
+        stunReduction: '3'
+        meterGain:
+          whiff: '2'
+          guard: '3'
+          hit: '7'
+          bl: '4'
+        media:
+          kind: motion_player
+          displayLabel: モーション
+          skillName: Neutral Jumping Forward
+          characterCode: '16'
+          skillCode: '023'
+    - id: item_83fba48c4f
+      displayName: 斜め
+      detail:
+        displayName: 飛翔脚(ひしょうきゃく)
+        startup: '6'
+        active: '13'
+        damage: '90'
+        stun: '9'
+        stunReduction: '3'
+        meterGain:
+          whiff: '2'
+          guard: '3'
+          hit: '7'
+          bl: '4'
         noteGroups:
-        - id: item_f11e32f4cf
-          displayTitle: 効果
+        - id: item_cf8aa5b927
+          displayTitle: 補足
           entries:
-          - |-
-            ・スタンゲージ回復速度のアップ
-            ・直後に出した投げ以外の攻撃の攻撃力アップ
+          - 空対空に強い
+        media:
+          kind: motion_player
+          displayLabel: モーション
+          skillName: Jumping Forward
+          characterCode: '16'
+          skillCode: '026'
+  - id: item_86e58a160f
+    displayName: ジャンプ大キック
+    variants:
+    - id: item_3b01b3c990
+      displayName: 垂直
+      detail:
+        displayName: 鶴翼蹴(かくよくしゅう)
+        startup: '8'
+        active: '5'
+        damage: '130'
+        stun: '13'
+        stunReduction: '3'
+        meterGain:
+          whiff: '3'
+          guard: '5'
+          hit: '13'
+          bl: '4'
+        noteGroups:
         - id: item_cf8aa5b927
           displayTitle: 補足
           entries:
           - |-
-            ・1回目で10%、2回目で21%、3回目(MAX)で33%まで回復速度アップ
-            ・スタンゲージ回復速度はPAを使用したラウンド中、効果持続
-            ・1本制の時のゲージ増加量は「6+6」
-    - id: item_42a39993a4
-      displayName: あくび→肩叩き
+            ・リーチ、判定に優れているため牽制に使用
+            ・ヒット時、SA1&2に繋ぐことが可能
+        media:
+          kind: motion_player
+          displayLabel: モーション
+          skillName: Neutral Jumping Roundhouse
+          characterCode: '16'
+          skillCode: '024'
+    - id: item_3e728dc7eb
+      displayName: 斜め
       detail:
-        displayName: あくび→肩叩き
-        command: 大P+大K
-        guard: "―"
-        blocking: "―"
-        startup: 60～
-        active: "―"
-        recovery: "―"
-        damage: "―"
-        stun: "―"
-        stunReduction: "―"
-        stats:
-          C/SC: "×"
-          ゲージ増加: 8(4+4)
+        displayName: 鷹翔脚(ようしょうきゃく)
+        startup: '10'
+        active: '3'
+        damage: '110'
+        stun: '13'
+        stunReduction: '3'
+        meterGain:
+          whiff: '3'
+          guard: '5'
+          hit: '13'
+          bl: '4'
         noteGroups:
-        - id: item_f11e32f4cf
-          displayTitle: 効果
-          entries:
-          - |-
-            ・スタンゲージ回復速度のアップ
-            ・防御力アップ
         - id: item_cf8aa5b927
           displayTitle: 補足
           entries:
-          - |-
-            ・1回目で10%、2回目で21%、3回目(MAX)で33%まで回復速度アップ
-            ・PAを使用したラウンド中、効果持続
-            ・1本制の時のゲージ増加量は「6+6」
-    - id: item_8393c7c6a6
-      displayName: あくび→腰グキッ
-      detail:
-        displayName: あくび→腰グキッ
-        command: 大P+大K
-        guard: "―"
-        blocking: "―"
-        startup: 60～
-        active: "―"
-        recovery: "―"
-        damage: "―"
-        stun: "―"
-        stunReduction: "―"
-        stats:
-          C/SC: "×"
-          ゲージ増加: 32(4+28)
-        noteGroups:
-        - id: item_f11e32f4cf
-          displayTitle: 効果
-          entries:
-          - |-
-            ・スタンゲージ回復速度のアップ
-            ・防御力アップ
-            ・直後に出した投げ以外の攻撃の攻撃力アップ
-        - id: item_cf8aa5b927
-          displayTitle: 補足
-          entries:
-          - |-
-            ・1回目で10%、2回目で21%、3回目(MAX)で33%まで回復速度アップ
-            ・スタンゲージの回復速度、防御力アップはPAを使用したラウンド中、効果持続
-            ・1本制の時のゲージ増加量は「6+42」
+          - 判定が下方向に強いため、飛び込みに向いている
+        media:
+          kind: motion_player
+          displayLabel: モーション
+          skillName: Jumping Roundhouse
+          characterCode: '16'
+          skillCode: '027'
 - id: special_moves
   displayTitle: "【必殺技】"
   entries:
@@ -2122,3 +1571,553 @@ moveGroups:
         skillName: Tensei Ranka
         characterCode: '16'
         skillCode: '054'
+- id: lever_input_moves
+  displayTitle: "【レバー入れ技】"
+  entries:
+  - id: item_e5cf22aa9e
+    displayName: 鷹爪脚(ようそうきゃく)
+    detail:
+      displayName: 鷹爪脚(ようそうきゃく)
+      command: ジャンプ中2+中K
+      guard: 立
+      blocking: "→"
+      startup: '9'
+      active: 着地まで
+      recovery: "―"
+      damage: '50'
+      stun: '5'
+      stunReduction: '3'
+      meterGain:
+        whiff: '0'
+        guard: '1'
+        hit: '2'
+        bl: '4'
+      frameAdvantage:
+        guard: "―"
+        standingHit: "―"
+        crouchingHit: "―"
+      stats:
+        C/SC: "×"
+      noteGroups:
+      - id: item_cf8aa5b927
+        displayTitle: 補足
+        entries:
+        - |-
+          ・ヒット後、4フレームの隙あり。それ以後は斜めジャンプ攻撃やBL可能
+          ・当て方によりヒット後、相手が上に浮くため春麗が先に着地でき、そこから着地後に追撃が可能
+      media:
+        kind: motion_player
+        displayLabel: モーション
+        skillName: "(Air) Down + Forward"
+        characterCode: '16'
+        skillCode: '032'
+  - id: item_5dac4136e7
+    displayName: 垂突打(すいとつだ)
+    detail:
+      displayName: 垂突打(すいとつだ)
+      command: 斜めジャンプ中下要素+大P
+      guard: 立
+      blocking: "→"
+      startup: '10'
+      active: '3'
+      recovery: "―"
+      damage: '110'
+      stun: '15'
+      stunReduction: '3'
+      meterGain:
+        whiff: '2'
+        guard: '3'
+        hit: '7'
+        bl: '4'
+      frameAdvantage:
+        guard: "―"
+        standingHit: "―"
+        crouchingHit: "―"
+      stats:
+        C/SC: "×"
+      noteGroups:
+      - id: item_cf8aa5b927
+        displayTitle: 補足
+        entries:
+        - |-
+          ・垂直J大Pと同じもの
+          ・空対空ヒット時、叩きつけダウンになる
+  - id: item_9e6f0bc1d0
+    displayName: 双連掌(そうれんしょう)
+    detail:
+      displayName: 双連掌(そうれんしょう)
+      command: 4+中P
+      guard: 両方
+      blocking: "→"
+      startup: '5'
+      active: 2・1
+      recovery: '18'
+      damage: 110(60+50)
+      stun: 16(7+9)
+      stunReduction: 3・15
+      meterGain:
+        whiff: 2(2+0)
+        guard: 4(3+1)
+        hit: 9(7+2)
+        bl: 8(4+4)
+      frameAdvantage:
+        guard: "-2"
+        standingHit: '0'
+        crouchingHit: '0'
+      stats:
+        C/SC: "○"
+      noteGroups:
+      - id: item_cf8aa5b927
+        displayTitle: 補足
+        entries:
+        - |-
+          ・2段目までのキャンセル猶予時間は30フレーム
+          ・必殺技(主に百裂脚)でキャンセルする事によって、BL仕込み飛込みに対する対空技として優秀
+      media:
+        kind: motion_player
+        displayLabel: モーション
+        skillName: Back + Strong
+        characterCode: '16'
+        skillCode: '028'
+  - id: item_f89e4fcee7
+    displayName: 鶴首落脚(かくしゅらくきゃく)
+    detail:
+      displayName: 鶴首落脚(かくしゅらくきゃく)
+      command: 近中K押しっぱなし
+      guard: 両方
+      blocking: "→"
+      startup: 6・7・3
+      active: 6・1・1
+      recovery: '15'
+      damage: 120(80+20+20)
+      stun: 19(5+7+7)
+      stunReduction: 15・15・15
+      meterGain:
+        whiff: 2(2+0+0)
+        guard: 3(3+0+0)
+        hit: 11(7+2+2)
+        bl: 12(4+4+4)
+      frameAdvantage:
+        guard: "-1"
+        standingHit: "+3"
+        crouchingHit: "+3"
+      stats:
+        C/SC: "×"
+      noteGroups:
+      - id: item_cf8aa5b927
+        displayTitle: 補足
+        entries:
+        - ヒット時、目押しでSA1に繋ぐことが可能
+  - id: item_062d42bb08
+    displayName: 尖杖蹴(せんじょうしゅう)
+    detail:
+      displayName: 尖杖蹴(せんじょうしゅう)
+      command: 6+中K
+      guard: 両方
+      blocking: "→"
+      startup: '11'
+      active: '7'
+      recovery: '11'
+      damage: '80'
+      stun: '5'
+      stunReduction: '10'
+      meterGain:
+        whiff: '2'
+        guard: '3'
+        hit: '7'
+        bl: '4'
+      frameAdvantage:
+        guard: '0'
+        standingHit: "+1"
+        crouchingHit: "+2"
+      stats:
+        C/SC: "×"
+      noteGroups:
+      - id: item_cf8aa5b927
+        displayTitle: 補足
+        entries:
+        - 出は遅いが、ガード・ヒット後に隙が少なく間合いが離れないため攻めの継続が可能
+      media:
+        kind: motion_player
+        displayLabel: モーション
+        skillName: Towards + Forward
+        characterCode: '16'
+        skillCode: '030'
+  - id: item_f532b73f04
+    displayName: 発勁(はっけい)
+    detail:
+      displayName: 発勁(はっけい)
+      command: 4+大P
+      guard: 両方
+      blocking: "→"
+      startup: '7'
+      active: '9'
+      recovery: '10'
+      damage: '130'
+      stun: '15'
+      stunReduction: '15'
+      meterGain:
+        whiff: '3'
+        guard: '5'
+        hit: '13'
+        bl: '4'
+      frameAdvantage:
+        guard: "-1"
+        standingHit: "+1"
+        crouchingHit: "+3"
+      stats:
+        C/SC: "○"
+      noteGroups:
+      - id: item_cf8aa5b927
+        displayTitle: 補足
+        entries:
+        - |-
+          ・持続時間が長く、判定にも優れているため、相手の牽制を潰すのに使用
+          ・キャンセル猶予時間は16フレーム
+          ・まことのみヒット時にノーキャンセルでもSA１か2に繋ぐことが可能。その場合のキャンセル猶予時間は29フレーム
+      media:
+        kind: motion_player
+        displayLabel: モーション
+        skillName: Back + Fierce
+        characterCode: '16'
+        skillCode: '029'
+  - id: item_cac1015bd0
+    displayName: 転身鷲脚(てんしんしゅうきゃく)
+    detail:
+      displayName: 転身鷲脚(てんしんしゅうきゃく)
+      command: 3+大K
+      guard: 立
+      blocking: "→"
+      startup: '37'
+      active: '5'
+      recovery: '2'
+      damage: '110'
+      stun: '13'
+      stunReduction: '1'
+      meterGain:
+        whiff: '3'
+        guard: '5'
+        hit: '13'
+        bl: '4'
+      frameAdvantage:
+        guard: "+9"
+        standingHit: "+11"
+        crouchingHit: "+15"
+      stats:
+        C/SC: "×"
+      noteGroups:
+      - id: item_cf8aa5b927
+        displayTitle: 補足
+        entries:
+        - |-
+          ・コマンド完成後、6フレーム目から空中判定に移行
+          ・ヒット時、各SAに繋ぐことが可能
+      media:
+        kind: motion_player
+        displayLabel: モーション
+        skillName: Down-Towards Roundhouse
+        characterCode: '16'
+        skillCode: '031'
+  - id: item_19a060be28
+    displayName: 翼旋脚(よくせんきゃく)
+    detail:
+      displayName: 翼旋脚(よくせんきゃく)
+      command: 6+大K
+      guard: 両方
+      blocking: "→"
+      startup: '12'
+      active: '1'
+      recovery: '15'
+      damage: '120'
+      stun: '13'
+      stunReduction: '15'
+      meterGain:
+        whiff: '3'
+        guard: '5'
+        hit: '13'
+        bl: '4'
+      frameAdvantage:
+        guard: '0'
+        standingHit: "+2"
+        crouchingHit: "+4"
+      stats:
+        C/SC: "×"
+      noteGroups:
+      - id: item_cf8aa5b927
+        displayTitle: 補足
+        entries:
+        - |-
+          ・着地後の隙は硬直の後半9フレーム
+          ・コマンド入力後、1フレームで空中判定になり投げをかわすことが可能
+          ・ただし、しゃがみの姿勢が低いキャラには当たらないため注意
+          ・しゃがみヒット時、ノーキャンセルでSA１か2に繋ぐことが可能。その場合のキャンセル猶予時間は28フレーム
+  - id: item_89e3b31149
+    displayName: 三角跳び
+    detail:
+      displayName: 三角跳び
+      command: 壁際で、壁と逆方向にレバー入力
+      guard: "―"
+      blocking: "―"
+      startup: "―"
+      active: "―"
+      recovery: "―"
+      damage: "―"
+      stun: "―"
+      stunReduction: "―"
+      meterGain:
+        whiff: "―"
+        guard: "―"
+        hit: "―"
+        bl: "―"
+      frameAdvantage:
+        guard: "―"
+        standingHit: "―"
+        crouchingHit: "―"
+      stats:
+        C/SC: "―"
+- id: normal_throws
+  displayTitle: "【通常投げ】"
+  entries:
+  - id: item_dafc04689c
+    displayName: 虎襲倒(こしゅうとう)
+    detail:
+      displayName: 虎襲倒(こしゅうとう)
+      command: |-
+        小P+小K
+        →+小P+小K
+        ←+小P+小K
+      startup: '2'
+      active: '1'
+      recovery: '21'
+      damage: '120'
+      stun: '9'
+      meterGain:
+        onWhiff: '0'
+        throwSuccess: '7'
+      stats:
+        投げ間合い: '26'
+      noteGroups:
+      - id: item_cf8aa5b927
+        displayTitle: 補足
+        entries:
+        - |-
+          ・硬直は投げ失敗時のフレーム
+          ・左右に投げ分けが可能
+      media:
+        kind: motion_player
+        displayLabel: モーション
+        skillName: Throw
+        characterCode: '16'
+        skillCode: '034'
+  - id: item_01e99b01bd
+    displayName: 龍星落(りゅうせいらく)
+    detail:
+      displayName: 龍星落(りゅうせいらく)
+      command: 空中で小P+小K
+      startup: '5'
+      active: '1'
+      recovery: "―"
+      damage: '80'
+      stun: '9'
+      meterGain:
+        onWhiff: '0'
+        throwSuccess: '7'
+      stats:
+        投げ間合い 前方: '14'
+        投げ間合い 上下: 53～89
+      media:
+        kind: motion_player
+        displayLabel: モーション
+        skillName: Air Throw
+        characterCode: '16'
+        skillCode: '035'
+- id: common_moves
+  displayTitle: "【特殊入力技】"
+  entries:
+  - id: item_ac52a72820
+    displayName: リープアタック
+    detail:
+      displayName: 鶴嘴拳(かくしけん)
+      command: 中P+中K
+      guard: 立
+      blocking: "→"
+      startup: '15'
+      active: '10'
+      recovery: '5'
+      damage: '40'
+      stun: '3'
+      stunReduction: '1'
+      meterGain:
+        whiff: '0'
+        guard: '1'
+        hit: '2'
+        bl: '4'
+      frameAdvantage:
+        guard: "-5～+7"
+        standingHit: 0～+8
+        crouchingHit: "+1～+9"
+      stats:
+        C/SC: "×"
+      noteGroups:
+      - id: item_cf8aa5b927
+        displayTitle: 補足
+        entries:
+        - |-
+          ・コマンド完成後、5フレーム目から空中判定に移行
+          ・技の下りを当てることで、SAや発生の速い通常技に繋ぐことが可能
+      media:
+        kind: motion_player
+        displayLabel: モーション
+        skillName: Universal Overhead
+        characterCode: '16'
+        skillCode: '033'
+  - id: item_7ae3c90cde
+    displayName: パーソナルアクション
+    children:
+    - id: item_11af127ef0
+      displayName: あくび
+      detail:
+        displayName: 腕を回す
+        command: 大P+大K
+        guard: "―"
+        blocking: "―"
+        startup: '59'
+        active: "―"
+        recovery: "―"
+        damage: "―"
+        stun: "―"
+        stunReduction: "―"
+        stats:
+          C/SC: "×"
+          ゲージ増加: 4(6)
+        noteGroups:
+        - id: item_f11e32f4cf
+          displayTitle: 効果
+          entries:
+          - スタンゲージ回復速度のアップ
+        - id: item_cf8aa5b927
+          displayTitle: 補足
+          entries:
+          - |-
+            ・60フレーム以降、アクションが以下のPAにランダムで分岐(あくびのみの場合もあり)
+            ・1回目で10%、2回目で21%、3回目(MAX)で33%まで回復速度アップ
+            ・PAを使用したラウンド中、効果持続
+            ・ゲージ増加のカッコ内の数値は1本制のもの
+    - id: item_237ad44a37
+      displayName: あくび→首コキコキ
+      detail:
+        displayName: あくび→首コキコキ
+        command: 大P+大K
+        guard: "―"
+        blocking: "―"
+        startup: 60～
+        active: "―"
+        recovery: "―"
+        damage: "―"
+        stun: "―"
+        stunReduction: "―"
+        stats:
+          C/SC: "×"
+          ゲージ増加: 8(4+4)
+        noteGroups:
+        - id: item_f11e32f4cf
+          displayTitle: 効果
+          entries:
+          - |-
+            ・スタンゲージ回復速度のアップ
+            ・直後に出した投げ以外の攻撃の攻撃力アップ
+        - id: item_cf8aa5b927
+          displayTitle: 補足
+          entries:
+          - |-
+            ・1回目で10%、2回目で21%、3回目(MAX)で33%まで回復速度アップ
+            ・スタンゲージ回復速度はPAを使用したラウンド中、効果持続
+            ・1本制の時のゲージ増加量は「6+6」
+    - id: item_42a39993a4
+      displayName: あくび→肩叩き
+      detail:
+        displayName: あくび→肩叩き
+        command: 大P+大K
+        guard: "―"
+        blocking: "―"
+        startup: 60～
+        active: "―"
+        recovery: "―"
+        damage: "―"
+        stun: "―"
+        stunReduction: "―"
+        stats:
+          C/SC: "×"
+          ゲージ増加: 8(4+4)
+        noteGroups:
+        - id: item_f11e32f4cf
+          displayTitle: 効果
+          entries:
+          - |-
+            ・スタンゲージ回復速度のアップ
+            ・防御力アップ
+        - id: item_cf8aa5b927
+          displayTitle: 補足
+          entries:
+          - |-
+            ・1回目で10%、2回目で21%、3回目(MAX)で33%まで回復速度アップ
+            ・PAを使用したラウンド中、効果持続
+            ・1本制の時のゲージ増加量は「6+6」
+    - id: item_8393c7c6a6
+      displayName: あくび→腰グキッ
+      detail:
+        displayName: あくび→腰グキッ
+        command: 大P+大K
+        guard: "―"
+        blocking: "―"
+        startup: 60～
+        active: "―"
+        recovery: "―"
+        damage: "―"
+        stun: "―"
+        stunReduction: "―"
+        stats:
+          C/SC: "×"
+          ゲージ増加: 32(4+28)
+        noteGroups:
+        - id: item_f11e32f4cf
+          displayTitle: 効果
+          entries:
+          - |-
+            ・スタンゲージ回復速度のアップ
+            ・防御力アップ
+            ・直後に出した投げ以外の攻撃の攻撃力アップ
+        - id: item_cf8aa5b927
+          displayTitle: 補足
+          entries:
+          - |-
+            ・1回目で10%、2回目で21%、3回目(MAX)で33%まで回復速度アップ
+            ・スタンゲージの回復速度、防御力アップはPAを使用したラウンド中、効果持続
+            ・1本制の時のゲージ増加量は「6+42」
+- id: target_combos
+  displayTitle: "【ターゲットコンボ】"
+  entries:
+  - id: jp2
+    displayName: 前ジャンプ中、J大P×2
+    detail:
+      displayName: 前ジャンプ中、J大P×2
+      superCancel: "×/×"
+      guard: 立/立
+      blocking: "→/→"
+      damage: 80/60
+      stun: 9/5
+      stunReduction: 3/3
+      frameAdvantage:
+        guard: "―"
+        standingHit: "―"
+        crouchingHit: "―"
+      stats:
+        入力: 前ジャンプ中、J大P×2
+        C: "×/×"
+      noteGroups:
+      - id: item_cf8aa5b927
+        displayTitle: 補足
+        entries:
+        - |-
+          ・1発目が当たらなくても2発目が出せる
+          ・鳳翼扇ヒット後の追撃に使用

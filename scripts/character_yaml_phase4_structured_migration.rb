@@ -15,7 +15,7 @@ class CharacterYAMLStructuredMigrator
   GROUP_DEFINITIONS = [
     ["air_normals", "【空中通常技】"],
     ["ground_normals", "【地上通常技】"],
-    ["command_normals", "【特殊入力技】"],
+    ["common_moves", "【特殊入力技】"],
     ["special_moves", "【必殺技】"],
     ["super_arts", "【スーパーアーツ】"]
   ].freeze

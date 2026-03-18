@@ -83,14 +83,14 @@ struct MoveGroup: Decodable, Equatable, Hashable {
 }
 
 enum MoveGroupID: String, CaseIterable, Decodable, Equatable, Hashable {
-    case airNormals = "air_normals"
     case groundNormals = "ground_normals"
-    case normalThrows = "normal_throws"
-    case leverInputMoves = "lever_input_moves"
-    case targetCombos = "target_combos"
-    case commandNormals = "command_normals"
+    case airNormals = "air_normals"
     case specialMoves = "special_moves"
     case superArts = "super_arts"
+    case leverInputMoves = "lever_input_moves"
+    case normalThrows = "normal_throws"
+    case commonMoves = "common_moves"
+    case targetCombos = "target_combos"
 }
 
 struct MoveEntry: Decodable, Equatable, Hashable {

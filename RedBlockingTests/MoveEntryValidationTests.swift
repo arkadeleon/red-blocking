@@ -210,7 +210,7 @@ private enum InvalidYAML {
       - id: lever_input_moves
         displayTitle: "【レバー入れ技】"
         entries: []
-      - id: command_normals
+      - id: common_moves
         displayTitle: "Command"
         entries: []
       - id: special_moves
@@ -256,7 +256,7 @@ private enum InvalidYAML {
       - id: lever_input_moves
         displayTitle: "【レバー入れ技】"
         entries: []
-      - id: command_normals
+      - id: common_moves
         displayTitle: "Command"
         entries: []
       - id: special_moves
@@ -292,7 +292,7 @@ private enum InvalidYAML {
           - id: lever_input_moves
             displayTitle: "【レバー入れ技】"
             entries: []
-          - id: command_normals
+          - id: common_moves
             displayTitle: "Command"
             entries: []
           - id: special_moves

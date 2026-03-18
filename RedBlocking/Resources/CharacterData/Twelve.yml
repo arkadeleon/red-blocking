@@ -8,316 +8,6 @@ introduction:
     変幻自在の生体ボディは、プロトタイプのネクロを強化改良した完成形。
     絶対の絶望がターゲットを追いつめる!!
 moveGroups:
-- id: air_normals
-  displayTitle: "【空中通常技】"
-  entries:
-  - id: item_0213bd1615
-    displayName: ジャンプ小パンチ
-    variants:
-    - id: item_e0c2f756f3
-      displayName: 垂直
-      detail:
-        displayName: V.S.P.
-        startup: '3'
-        active: '13'
-        damage: '30'
-        stun: '7'
-        stunReduction: '3'
-        meterGain:
-          whiff: '0'
-          guard: '1'
-          hit: '2'
-          bl: '4'
-        noteGroups:
-        - id: item_cf8aa5b927
-          displayTitle: 補足
-          entries:
-          - 発生が早く持続も長めで、食らい判定よりも攻撃判定が下に出る
-        media:
-          kind: motion_player
-          displayLabel: モーション
-          skillName: Neutral Jumping Jab
-          characterCode: '19'
-          skillCode: '008'
-    - id: item_25ab24896c
-      displayName: 斜め
-      detail:
-        displayName: J.S.P.
-        startup: '4'
-        active: '14'
-        damage: '40'
-        stun: '7'
-        stunReduction: '3'
-        meterGain:
-          whiff: '0'
-          guard: '1'
-          hit: '2'
-          bl: '4'
-        noteGroups:
-        - id: item_cf8aa5b927
-          displayTitle: 補足
-          entries:
-          - "・発生が早く、食らい判定よりも攻撃判定が下にでる\n・滑空移動距離が通常技では最も短い\n・超低空で先を当てるようにすればBLされてもリスクが少ない \n・低空滑空から出して、当て投げやGDを誘っての屈小K→AXE→SA1などに使用する"
-        media:
-          kind: motion_player
-          displayLabel: モーション
-          skillName: Jumping Jab
-          characterCode: '19'
-          skillCode: '009'
-  - id: item_a18c41f1f2
-    displayName: ジャンプ中パンチ
-    variants:
-    - id: item_f37ec8ba39
-      displayName: 垂直
-      detail:
-        displayName: V.M.P.
-        startup: '5'
-        active: '2'
-        damage: '70'
-        stun: '11'
-        stunReduction: '3'
-        meterGain:
-          whiff: '2'
-          guard: '4'
-          hit: '8'
-          bl: '4'
-        noteGroups:
-        - id: item_cf8aa5b927
-          displayTitle: 補足
-          entries:
-          - 横方向に判定が強く、空対空BL後の反撃としても有効に使える
-    - id: item_a7ee982c0e
-      displayName: 斜め
-      detail:
-        displayName: J.M.P.
-        startup: '5'
-        active: '11'
-        damage: '70'
-        stun: '11'
-        stunReduction: '3'
-        meterGain:
-          whiff: '2'
-          guard: '4'
-          hit: '8'
-          bl: '4'
-        noteGroups:
-        - id: item_cf8aa5b927
-          displayTitle: 補足
-          entries:
-          - |-
-            ・横方向に判定が強く、中攻撃のわりに持続が長いため、相手に当てやすい
-            ・滑空中に出すことで横への移動距離が伸びるため、緩急をつけたり、相手の動きを抑止する使い方が可能
-            ・空対空BL後の反撃としても有効に使える
-            ・超低空で先を当てるようにすればBLされてもリスクが少ない
-        media:
-          kind: motion_player
-          displayLabel: モーション
-          skillName: Jumping Strong
-          characterCode: '19'
-          skillCode: '010'
-  - id: item_18529f13be
-    displayName: ジャンプ大パンチ
-    variants:
-    - id: item_ca5fa63a59
-      displayName: 垂直
-      detail:
-        displayName: V.L.P
-        startup: '12'
-        active: '2'
-        damage: '100'
-        stun: '15'
-        stunReduction: '3'
-        meterGain:
-          whiff: '3'
-          guard: '6'
-          hit: '14'
-          bl: '4'
-        noteGroups:
-        - id: item_cf8aa5b927
-          displayTitle: 補足
-          entries:
-          - |-
-            ・出は遅いが抜群のリーチを誇る。ただし判定はやや弱いため出来るだけ先端を当てるように出すと有効
-            ・先端をBLされても反撃をほぼ受けない
-    - id: item_c36fb09951
-      displayName: 斜め
-      detail:
-        displayName: J.L.P.
-        startup: '12'
-        active: '2'
-        damage: '120'
-        stun: '15'
-        stunReduction: '3'
-        meterGain:
-          whiff: '3'
-          guard: '6'
-          hit: '14'
-          bl: '4'
-        noteGroups:
-        - id: item_cf8aa5b927
-          displayTitle: 補足
-          entries:
-          - |-
-            ・出は遅いが抜群のリーチを誇る。ただし判定はやや弱いため出来るだけ先端を当てるように出すと有効
-            ・先端をBLされても反撃をほぼ受けない
-            ・低空滑空最下部で出すと、即着地できる
-        media:
-          kind: motion_player
-          displayLabel: モーション
-          skillName: Jumping Fierce
-          characterCode: '19'
-          skillCode: '011'
-  - id: item_a83e3f7cff
-    displayName: ジャンプ小キック
-    variants:
-    - id: item_f48ae8dc16
-      displayName: 垂直
-      detail:
-        displayName: V.S.K.
-        startup: '2'
-        active: '20'
-        damage: '40'
-        stun: '5'
-        stunReduction: '3'
-        meterGain:
-          whiff: '0'
-          guard: '1'
-          hit: '2'
-          bl: '4'
-        noteGroups:
-        - id: item_cf8aa5b927
-          displayTitle: 補足
-          entries:
-          - J攻撃時の発生が最も早いため、空対空で役に立つ
-    - id: item_adfe5e6bc9
-      displayName: 斜め
-      detail:
-        displayName: J.S.K.
-        startup: '2'
-        active: '20'
-        damage: '40'
-        stun: '5'
-        stunReduction: '3'
-        meterGain:
-          whiff: '0'
-          guard: '1'
-          hit: '2'
-          bl: '4'
-        noteGroups:
-        - id: item_cf8aa5b927
-          displayTitle: 補足
-          entries:
-          - |-
-            ・J攻撃時の発生が最も早いため、空対空で役に立つ
-            ・滑空移動距離が通常技では最も長い
-        media:
-          kind: motion_player
-          displayLabel: モーション
-          skillName: Jumping Short
-          characterCode: '19'
-          skillCode: '018'
-  - id: item_c3103eb1f9
-    displayName: ジャンプ中キック
-    variants:
-    - id: item_5280b1f280
-      displayName: 垂直
-      detail:
-        displayName: V.M.K.
-        startup: '9'
-        active: '4'
-        damage: '80'
-        stun: '9'
-        stunReduction: '3'
-        meterGain:
-          whiff: '2'
-          guard: '4'
-          hit: '8'
-          bl: '4'
-        noteGroups:
-        - id: item_cf8aa5b927
-          displayTitle: 補足
-          entries:
-          - 真横の空対空では使いづらいが、ジャンプが早めで高度のあるキャラへジャンプ直後使用で迎撃が可能
-    - id: item_83fba48c4f
-      displayName: 斜め
-      detail:
-        displayName: J.M.K.
-        startup: '9'
-        active: '4'
-        damage: '70'
-        stun: '9'
-        stunReduction: '3'
-        meterGain:
-          whiff: '2'
-          guard: '4'
-          hit: '8'
-          bl: '4'
-        noteGroups:
-        - id: item_cf8aa5b927
-          displayTitle: 補足
-          entries:
-          - |-
-            ・J中Pよりも攻撃判定の出が遅いため、滑空時の攻撃タイミングをずらすことができる
-            ・真横の空対空では使いづらいが、ジャンプが早めで高度のあるキャラへジャンプ直後使用で迎撃が可能
-        media:
-          kind: motion_player
-          displayLabel: モーション
-          skillName: Jumping Forward
-          characterCode: '19'
-          skillCode: '019'
-  - id: item_86e58a160f
-    displayName: ジャンプ大キック
-    variants:
-    - id: item_3b01b3c990
-      displayName: 垂直
-      detail:
-        displayName: V.L.K.
-        startup: '14'
-        active: '7'
-        damage: '100'
-        stun: '13'
-        stunReduction: '3'
-        meterGain:
-          whiff: '3'
-          guard: '6'
-          hit: '14'
-          bl: '4'
-        noteGroups:
-        - id: item_cf8aa5b927
-          displayTitle: 補足
-          entries:
-          - |-
-            ・めくり性能が高く、下方向への判定が強い
-            ・空中ヒットした場合、強制ダウン技となる
-    - id: item_3e728dc7eb
-      displayName: 斜め
-      detail:
-        displayName: J.L.K.
-        startup: '14'
-        active: '6'
-        damage: '120'
-        stun: '13'
-        stunReduction: '3'
-        meterGain:
-          whiff: '3'
-          guard: '6'
-          hit: '14'
-          bl: '4'
-        noteGroups:
-        - id: item_cf8aa5b927
-          displayTitle: 補足
-          entries:
-          - |-
-            ・斜めJ大Kは滑空から出した場合、発生が「12」になる
-            ・めくり性能が高く、下方向への判定が強い
-            ・空中ヒットした場合、強制ダウン技となる
-            ・低空滑空最下部で出すと、即着地できる
-        media:
-          kind: motion_player
-          displayLabel: モーション
-          skillName: Jumping Roundhouse
-          characterCode: '19'
-          skillCode: '020'
 - id: ground_normals
   displayTitle: "【地上通常技】"
   entries:
@@ -806,262 +496,316 @@ moveGroups:
           skillName: Crouching Roundhouse
           characterCode: '19'
           skillCode: '017'
-- id: normal_throws
-  displayTitle: "【通常投げ】"
+- id: air_normals
+  displayTitle: "【空中通常技】"
   entries:
-  - id: h_u_g
-    displayName: H.U.G.
-    detail:
-      displayName: H.U.G.
-      command: 小P+小K
-      startup: '2'
-      active: '1'
-      recovery: '21'
-      damage: |-
-        100(6ヒット時)
-        (25×6)
-      stun: |-
-        18(ヒット時)
-        (5×6)
-      meterGain:
-        onWhiff: '0'
-        throwSuccess: 12(2×6)
-      stats:
-        投げ間合い: '22'
-      noteGroups:
-      - id: item_cf8aa5b927
-        displayTitle: 補足
-        entries:
-        - "・硬直は投げ失敗時のフレーム\n・ボタン連打でヒット数が増加。 最大ヒット数は「6」 \n・相手がダウン後は距離がそれほど離れないので、リープの先端当てを狙い易い"
-      media:
-        kind: motion_player
-        displayLabel: モーション
-        skillName: Neutral Throw
-        characterCode: '19'
-        skillCode: '022'
-  - id: f_l_g
-    displayName: F.L.G.
-    detail:
-      displayName: F.L.G.
-      command: "→+小P+小K"
-      startup: '2'
-      active: '1'
-      recovery: '21'
-      damage: '120'
-      stun: '11'
-      meterGain:
-        onWhiff: '0'
-        throwSuccess: '7'
-      stats:
-        投げ間合い: '22'
-      noteGroups:
-      - id: item_cf8aa5b927
-        displayTitle: 補足
-        entries:
-        - "・硬直は投げ失敗時のフレーム \n・投げた後に距離が離れるため起き攻めが難しい"
-      media:
-        kind: motion_player
-        displayLabel: モーション
-        skillName: Throw
-        characterCode: '19'
-        skillCode: '023'
-  - id: t_r_w
-    displayName: T.R.W.
-    detail:
-      displayName: T.R.W.
-      command: "←+小P+小K"
-      startup: '2'
-      active: '1'
-      recovery: '21'
-      damage: '120'
-      stun: '11'
-      meterGain:
-        onWhiff: '0'
-        throwSuccess: '7'
-      stats:
-        投げ間合い: '22'
-      noteGroups:
-      - id: item_cf8aa5b927
-        displayTitle: 補足
-        entries:
-        - "・硬直は投げ失敗時のフレーム \n・投げた後、トゥエルブ側がかなり優位になる"
-      media:
-        kind: motion_player
-        displayLabel: モーション
-        skillName: Throw
-        characterCode: '19'
-        skillCode: '023'
-- id: lever_input_moves
-  displayTitle: "【レバー入れ技】"
-  entries:
-  - id: item_acfecf833b
-    displayName: 滑空
-    detail:
-      displayName: 滑空
-      command: 空中で66 or 44
-      guard: "―"
-      blocking: "―"
-      startup: "―"
-      active: "―"
-      recovery: "―"
-      damage: "―"
-      stun: "―"
-      stunReduction: "―"
-      meterGain:
-        whiff: "―"
-        guard: "―"
-        hit: "―"
-        bl: "―"
-      frameAdvantage:
-        guard: "―"
-        standingHit: "―"
-        crouchingHit: "―"
-      stats:
-        C/SC: "○/×"
-      noteGroups:
-      - id: item_cf8aa5b927
-        displayTitle: 補足
-        entries:
-        - |-
-          ・地上で「9N6 or 7N4」で低空滑空が可能
-          ・相手の真上を飛ぶ時はレバー入力方向が途中で変わるため、46や64と逆に入れないと滑空しない場合がある。
-          　確実に滑空したいのならレバーを3回(444又は666)入力すると良い。
-          ・ジャンプ扱いだがEX技とSAは出せず、空中BLもできない
-          ・ジャンプ攻撃がBLされた場合、通常技だけでなく滑空も出せる
-
-          【折り返し】
-          ・滑空中に画面端へ到達した際、レバーが壁方向に入っていれば逆方向に滑空を折り返す
-          ・一定以上の高さがないと実行できない(おおよそ画面半分よりやや上程度)
-  - id: item_bc9fd6b94f
-    displayName: 壁張り付き
-    detail:
-      displayName: 壁張り付き
-      command: 滑空中、画面端でレバーを画面端方向に入れっぱなし
-      guard: "―"
-      blocking: "―"
-      startup: "―"
-      active: "―"
-      recovery: "―"
-      damage: "―"
-      stun: "―"
-      stunReduction: "―"
-      meterGain:
-        whiff: "―"
-        guard: "―"
-        hit: "―"
-        bl: "―"
-      frameAdvantage:
-        guard: "―"
-        standingHit: "―"
-        crouchingHit: "―"
-      stats:
-        C/SC: "○/×"
-  - id: b_m_k
-    displayName: B.M.K.
-    detail:
-      displayName: B.M.K.
-      command: 4+中K
-      guard: 両方
-      blocking: 両方
-      startup: '7'
-      active: '3'
-      recovery: '14'
-      damage: '80'
-      stun: '11'
-      stunReduction: '3'
-      meterGain:
-        whiff: '2'
-        guard: '4'
-        hit: '8'
-        bl: '4'
-      frameAdvantage:
-        guard: "-2"
-        standingHit: "-1"
-        crouchingHit: '0'
-      stats:
-        C/SC: "○"
-      noteGroups:
-      - id: item_cf8aa5b927
-        displayTitle: 補足
-        entries:
-        - |-
-          ・判定が出てしまえばそこそこ強くキャンセルもできるため、対空技として使用可能
-          ・地上での蹴り部分だけでなく、最後の蹴り上げ部分にも攻撃判定あり
-      media:
-        kind: motion_player
-        displayLabel: モーション
-        skillName: Back + Forward
-        characterCode: '19'
-        skillCode: '021'
-- id: command_normals
-  displayTitle: "【特殊入力技】"
-  entries:
-  - id: item_ac52a72820
-    displayName: リープアタック
-    detail:
-      displayName: S.J.A.
-      command: 中P+中K
-      guard: 立
-      blocking: "→"
-      startup: '15'
-      active: '10'
-      recovery: '5'
-      damage: '40'
-      stun: '3'
-      stunReduction: '1'
-      meterGain:
-        whiff: '0'
-        guard: '1'
-        hit: '2'
-        bl: '4'
-      frameAdvantage:
-        guard: "-5～+7"
-        standingHit: 0～+8
-        crouchingHit: "+1～+9"
-      stats:
-        C/SC: "×"
-      noteGroups:
-      - id: item_cf8aa5b927
-        displayTitle: 補足
-        entries:
-        - |-
-          ・コマンド完成から5フレーム目で空中判定に移行
-          ・技の下りを当てることで、SAや発生の速い通常技に繋ぐことが可能
-      media:
-        kind: motion_player
-        displayLabel: モーション
-        skillName: Universal Overhead
-        characterCode: '19'
-        skillCode: '024'
-  - id: item_7ae3c90cde
-    displayName: パーソナルアクション
-    detail:
-      displayName: 透明化
-      command: 大P+大K
-      guard: "―"
-      blocking: "―"
-      startup: '79'
-      active: '180'
-      recovery: '71'
-      damage: "―"
-      stun: "―"
-      stunReduction: "―"
-      stats:
-        C/SC: "×"
-        ゲージ増加: 2(3)
-      noteGroups:
-      - id: item_f11e32f4cf
-        displayTitle: 効果
-        entries:
-        - 一定時間、姿を消す事ができる
-      - id: item_cf8aa5b927
-        displayTitle: 補足
-        entries:
-        - |-
-          ・消えている間も攻撃・ガード・BL可能。 硬直は解除時の隙
-          ・消えている時間は3秒程度。 またもう一度「大P+大K」を押すことで出現する事が可能
-          ・相手の攻撃をガードやBLしたり、SAや投げを仕掛けたら時間に関係なく出現する
-          ・ゲージ増加のカッコ内の数値は1本制のもの
+  - id: item_0213bd1615
+    displayName: ジャンプ小パンチ
+    variants:
+    - id: item_e0c2f756f3
+      displayName: 垂直
+      detail:
+        displayName: V.S.P.
+        startup: '3'
+        active: '13'
+        damage: '30'
+        stun: '7'
+        stunReduction: '3'
+        meterGain:
+          whiff: '0'
+          guard: '1'
+          hit: '2'
+          bl: '4'
+        noteGroups:
+        - id: item_cf8aa5b927
+          displayTitle: 補足
+          entries:
+          - 発生が早く持続も長めで、食らい判定よりも攻撃判定が下に出る
+        media:
+          kind: motion_player
+          displayLabel: モーション
+          skillName: Neutral Jumping Jab
+          characterCode: '19'
+          skillCode: '008'
+    - id: item_25ab24896c
+      displayName: 斜め
+      detail:
+        displayName: J.S.P.
+        startup: '4'
+        active: '14'
+        damage: '40'
+        stun: '7'
+        stunReduction: '3'
+        meterGain:
+          whiff: '0'
+          guard: '1'
+          hit: '2'
+          bl: '4'
+        noteGroups:
+        - id: item_cf8aa5b927
+          displayTitle: 補足
+          entries:
+          - "・発生が早く、食らい判定よりも攻撃判定が下にでる\n・滑空移動距離が通常技では最も短い\n・超低空で先を当てるようにすればBLされてもリスクが少ない \n・低空滑空から出して、当て投げやGDを誘っての屈小K→AXE→SA1などに使用する"
+        media:
+          kind: motion_player
+          displayLabel: モーション
+          skillName: Jumping Jab
+          characterCode: '19'
+          skillCode: '009'
+  - id: item_a18c41f1f2
+    displayName: ジャンプ中パンチ
+    variants:
+    - id: item_f37ec8ba39
+      displayName: 垂直
+      detail:
+        displayName: V.M.P.
+        startup: '5'
+        active: '2'
+        damage: '70'
+        stun: '11'
+        stunReduction: '3'
+        meterGain:
+          whiff: '2'
+          guard: '4'
+          hit: '8'
+          bl: '4'
+        noteGroups:
+        - id: item_cf8aa5b927
+          displayTitle: 補足
+          entries:
+          - 横方向に判定が強く、空対空BL後の反撃としても有効に使える
+    - id: item_a7ee982c0e
+      displayName: 斜め
+      detail:
+        displayName: J.M.P.
+        startup: '5'
+        active: '11'
+        damage: '70'
+        stun: '11'
+        stunReduction: '3'
+        meterGain:
+          whiff: '2'
+          guard: '4'
+          hit: '8'
+          bl: '4'
+        noteGroups:
+        - id: item_cf8aa5b927
+          displayTitle: 補足
+          entries:
+          - |-
+            ・横方向に判定が強く、中攻撃のわりに持続が長いため、相手に当てやすい
+            ・滑空中に出すことで横への移動距離が伸びるため、緩急をつけたり、相手の動きを抑止する使い方が可能
+            ・空対空BL後の反撃としても有効に使える
+            ・超低空で先を当てるようにすればBLされてもリスクが少ない
+        media:
+          kind: motion_player
+          displayLabel: モーション
+          skillName: Jumping Strong
+          characterCode: '19'
+          skillCode: '010'
+  - id: item_18529f13be
+    displayName: ジャンプ大パンチ
+    variants:
+    - id: item_ca5fa63a59
+      displayName: 垂直
+      detail:
+        displayName: V.L.P
+        startup: '12'
+        active: '2'
+        damage: '100'
+        stun: '15'
+        stunReduction: '3'
+        meterGain:
+          whiff: '3'
+          guard: '6'
+          hit: '14'
+          bl: '4'
+        noteGroups:
+        - id: item_cf8aa5b927
+          displayTitle: 補足
+          entries:
+          - |-
+            ・出は遅いが抜群のリーチを誇る。ただし判定はやや弱いため出来るだけ先端を当てるように出すと有効
+            ・先端をBLされても反撃をほぼ受けない
+    - id: item_c36fb09951
+      displayName: 斜め
+      detail:
+        displayName: J.L.P.
+        startup: '12'
+        active: '2'
+        damage: '120'
+        stun: '15'
+        stunReduction: '3'
+        meterGain:
+          whiff: '3'
+          guard: '6'
+          hit: '14'
+          bl: '4'
+        noteGroups:
+        - id: item_cf8aa5b927
+          displayTitle: 補足
+          entries:
+          - |-
+            ・出は遅いが抜群のリーチを誇る。ただし判定はやや弱いため出来るだけ先端を当てるように出すと有効
+            ・先端をBLされても反撃をほぼ受けない
+            ・低空滑空最下部で出すと、即着地できる
+        media:
+          kind: motion_player
+          displayLabel: モーション
+          skillName: Jumping Fierce
+          characterCode: '19'
+          skillCode: '011'
+  - id: item_a83e3f7cff
+    displayName: ジャンプ小キック
+    variants:
+    - id: item_f48ae8dc16
+      displayName: 垂直
+      detail:
+        displayName: V.S.K.
+        startup: '2'
+        active: '20'
+        damage: '40'
+        stun: '5'
+        stunReduction: '3'
+        meterGain:
+          whiff: '0'
+          guard: '1'
+          hit: '2'
+          bl: '4'
+        noteGroups:
+        - id: item_cf8aa5b927
+          displayTitle: 補足
+          entries:
+          - J攻撃時の発生が最も早いため、空対空で役に立つ
+    - id: item_adfe5e6bc9
+      displayName: 斜め
+      detail:
+        displayName: J.S.K.
+        startup: '2'
+        active: '20'
+        damage: '40'
+        stun: '5'
+        stunReduction: '3'
+        meterGain:
+          whiff: '0'
+          guard: '1'
+          hit: '2'
+          bl: '4'
+        noteGroups:
+        - id: item_cf8aa5b927
+          displayTitle: 補足
+          entries:
+          - |-
+            ・J攻撃時の発生が最も早いため、空対空で役に立つ
+            ・滑空移動距離が通常技では最も長い
+        media:
+          kind: motion_player
+          displayLabel: モーション
+          skillName: Jumping Short
+          characterCode: '19'
+          skillCode: '018'
+  - id: item_c3103eb1f9
+    displayName: ジャンプ中キック
+    variants:
+    - id: item_5280b1f280
+      displayName: 垂直
+      detail:
+        displayName: V.M.K.
+        startup: '9'
+        active: '4'
+        damage: '80'
+        stun: '9'
+        stunReduction: '3'
+        meterGain:
+          whiff: '2'
+          guard: '4'
+          hit: '8'
+          bl: '4'
+        noteGroups:
+        - id: item_cf8aa5b927
+          displayTitle: 補足
+          entries:
+          - 真横の空対空では使いづらいが、ジャンプが早めで高度のあるキャラへジャンプ直後使用で迎撃が可能
+    - id: item_83fba48c4f
+      displayName: 斜め
+      detail:
+        displayName: J.M.K.
+        startup: '9'
+        active: '4'
+        damage: '70'
+        stun: '9'
+        stunReduction: '3'
+        meterGain:
+          whiff: '2'
+          guard: '4'
+          hit: '8'
+          bl: '4'
+        noteGroups:
+        - id: item_cf8aa5b927
+          displayTitle: 補足
+          entries:
+          - |-
+            ・J中Pよりも攻撃判定の出が遅いため、滑空時の攻撃タイミングをずらすことができる
+            ・真横の空対空では使いづらいが、ジャンプが早めで高度のあるキャラへジャンプ直後使用で迎撃が可能
+        media:
+          kind: motion_player
+          displayLabel: モーション
+          skillName: Jumping Forward
+          characterCode: '19'
+          skillCode: '019'
+  - id: item_86e58a160f
+    displayName: ジャンプ大キック
+    variants:
+    - id: item_3b01b3c990
+      displayName: 垂直
+      detail:
+        displayName: V.L.K.
+        startup: '14'
+        active: '7'
+        damage: '100'
+        stun: '13'
+        stunReduction: '3'
+        meterGain:
+          whiff: '3'
+          guard: '6'
+          hit: '14'
+          bl: '4'
+        noteGroups:
+        - id: item_cf8aa5b927
+          displayTitle: 補足
+          entries:
+          - |-
+            ・めくり性能が高く、下方向への判定が強い
+            ・空中ヒットした場合、強制ダウン技となる
+    - id: item_3e728dc7eb
+      displayName: 斜め
+      detail:
+        displayName: J.L.K.
+        startup: '14'
+        active: '6'
+        damage: '120'
+        stun: '13'
+        stunReduction: '3'
+        meterGain:
+          whiff: '3'
+          guard: '6'
+          hit: '14'
+          bl: '4'
+        noteGroups:
+        - id: item_cf8aa5b927
+          displayTitle: 補足
+          entries:
+          - |-
+            ・斜めJ大Kは滑空から出した場合、発生が「12」になる
+            ・めくり性能が高く、下方向への判定が強い
+            ・空中ヒットした場合、強制ダウン技となる
+            ・低空滑空最下部で出すと、即着地できる
+        media:
+          kind: motion_player
+          displayLabel: モーション
+          skillName: Jumping Roundhouse
+          characterCode: '19'
+          skillCode: '020'
 - id: special_moves
   displayTitle: "【必殺技】"
   entries:
@@ -1946,3 +1690,259 @@ moveGroups:
           skillName: X.C.O.P.Y.
           characterCode: '19'
           skillCode: '045'
+- id: lever_input_moves
+  displayTitle: "【レバー入れ技】"
+  entries:
+  - id: item_acfecf833b
+    displayName: 滑空
+    detail:
+      displayName: 滑空
+      command: 空中で66 or 44
+      guard: "―"
+      blocking: "―"
+      startup: "―"
+      active: "―"
+      recovery: "―"
+      damage: "―"
+      stun: "―"
+      stunReduction: "―"
+      meterGain:
+        whiff: "―"
+        guard: "―"
+        hit: "―"
+        bl: "―"
+      frameAdvantage:
+        guard: "―"
+        standingHit: "―"
+        crouchingHit: "―"
+      stats:
+        C/SC: "○/×"
+      noteGroups:
+      - id: item_cf8aa5b927
+        displayTitle: 補足
+        entries:
+        - |-
+          ・地上で「9N6 or 7N4」で低空滑空が可能
+          ・相手の真上を飛ぶ時はレバー入力方向が途中で変わるため、46や64と逆に入れないと滑空しない場合がある。
+          　確実に滑空したいのならレバーを3回(444又は666)入力すると良い。
+          ・ジャンプ扱いだがEX技とSAは出せず、空中BLもできない
+          ・ジャンプ攻撃がBLされた場合、通常技だけでなく滑空も出せる
+
+          【折り返し】
+          ・滑空中に画面端へ到達した際、レバーが壁方向に入っていれば逆方向に滑空を折り返す
+          ・一定以上の高さがないと実行できない(おおよそ画面半分よりやや上程度)
+  - id: item_bc9fd6b94f
+    displayName: 壁張り付き
+    detail:
+      displayName: 壁張り付き
+      command: 滑空中、画面端でレバーを画面端方向に入れっぱなし
+      guard: "―"
+      blocking: "―"
+      startup: "―"
+      active: "―"
+      recovery: "―"
+      damage: "―"
+      stun: "―"
+      stunReduction: "―"
+      meterGain:
+        whiff: "―"
+        guard: "―"
+        hit: "―"
+        bl: "―"
+      frameAdvantage:
+        guard: "―"
+        standingHit: "―"
+        crouchingHit: "―"
+      stats:
+        C/SC: "○/×"
+  - id: b_m_k
+    displayName: B.M.K.
+    detail:
+      displayName: B.M.K.
+      command: 4+中K
+      guard: 両方
+      blocking: 両方
+      startup: '7'
+      active: '3'
+      recovery: '14'
+      damage: '80'
+      stun: '11'
+      stunReduction: '3'
+      meterGain:
+        whiff: '2'
+        guard: '4'
+        hit: '8'
+        bl: '4'
+      frameAdvantage:
+        guard: "-2"
+        standingHit: "-1"
+        crouchingHit: '0'
+      stats:
+        C/SC: "○"
+      noteGroups:
+      - id: item_cf8aa5b927
+        displayTitle: 補足
+        entries:
+        - |-
+          ・判定が出てしまえばそこそこ強くキャンセルもできるため、対空技として使用可能
+          ・地上での蹴り部分だけでなく、最後の蹴り上げ部分にも攻撃判定あり
+      media:
+        kind: motion_player
+        displayLabel: モーション
+        skillName: Back + Forward
+        characterCode: '19'
+        skillCode: '021'
+- id: normal_throws
+  displayTitle: "【通常投げ】"
+  entries:
+  - id: h_u_g
+    displayName: H.U.G.
+    detail:
+      displayName: H.U.G.
+      command: 小P+小K
+      startup: '2'
+      active: '1'
+      recovery: '21'
+      damage: |-
+        100(6ヒット時)
+        (25×6)
+      stun: |-
+        18(ヒット時)
+        (5×6)
+      meterGain:
+        onWhiff: '0'
+        throwSuccess: 12(2×6)
+      stats:
+        投げ間合い: '22'
+      noteGroups:
+      - id: item_cf8aa5b927
+        displayTitle: 補足
+        entries:
+        - "・硬直は投げ失敗時のフレーム\n・ボタン連打でヒット数が増加。 最大ヒット数は「6」 \n・相手がダウン後は距離がそれほど離れないので、リープの先端当てを狙い易い"
+      media:
+        kind: motion_player
+        displayLabel: モーション
+        skillName: Neutral Throw
+        characterCode: '19'
+        skillCode: '022'
+  - id: f_l_g
+    displayName: F.L.G.
+    detail:
+      displayName: F.L.G.
+      command: "→+小P+小K"
+      startup: '2'
+      active: '1'
+      recovery: '21'
+      damage: '120'
+      stun: '11'
+      meterGain:
+        onWhiff: '0'
+        throwSuccess: '7'
+      stats:
+        投げ間合い: '22'
+      noteGroups:
+      - id: item_cf8aa5b927
+        displayTitle: 補足
+        entries:
+        - "・硬直は投げ失敗時のフレーム \n・投げた後に距離が離れるため起き攻めが難しい"
+      media:
+        kind: motion_player
+        displayLabel: モーション
+        skillName: Throw
+        characterCode: '19'
+        skillCode: '023'
+  - id: t_r_w
+    displayName: T.R.W.
+    detail:
+      displayName: T.R.W.
+      command: "←+小P+小K"
+      startup: '2'
+      active: '1'
+      recovery: '21'
+      damage: '120'
+      stun: '11'
+      meterGain:
+        onWhiff: '0'
+        throwSuccess: '7'
+      stats:
+        投げ間合い: '22'
+      noteGroups:
+      - id: item_cf8aa5b927
+        displayTitle: 補足
+        entries:
+        - "・硬直は投げ失敗時のフレーム \n・投げた後、トゥエルブ側がかなり優位になる"
+      media:
+        kind: motion_player
+        displayLabel: モーション
+        skillName: Throw
+        characterCode: '19'
+        skillCode: '023'
+- id: common_moves
+  displayTitle: "【特殊入力技】"
+  entries:
+  - id: item_ac52a72820
+    displayName: リープアタック
+    detail:
+      displayName: S.J.A.
+      command: 中P+中K
+      guard: 立
+      blocking: "→"
+      startup: '15'
+      active: '10'
+      recovery: '5'
+      damage: '40'
+      stun: '3'
+      stunReduction: '1'
+      meterGain:
+        whiff: '0'
+        guard: '1'
+        hit: '2'
+        bl: '4'
+      frameAdvantage:
+        guard: "-5～+7"
+        standingHit: 0～+8
+        crouchingHit: "+1～+9"
+      stats:
+        C/SC: "×"
+      noteGroups:
+      - id: item_cf8aa5b927
+        displayTitle: 補足
+        entries:
+        - |-
+          ・コマンド完成から5フレーム目で空中判定に移行
+          ・技の下りを当てることで、SAや発生の速い通常技に繋ぐことが可能
+      media:
+        kind: motion_player
+        displayLabel: モーション
+        skillName: Universal Overhead
+        characterCode: '19'
+        skillCode: '024'
+  - id: item_7ae3c90cde
+    displayName: パーソナルアクション
+    detail:
+      displayName: 透明化
+      command: 大P+大K
+      guard: "―"
+      blocking: "―"
+      startup: '79'
+      active: '180'
+      recovery: '71'
+      damage: "―"
+      stun: "―"
+      stunReduction: "―"
+      stats:
+        C/SC: "×"
+        ゲージ増加: 2(3)
+      noteGroups:
+      - id: item_f11e32f4cf
+        displayTitle: 効果
+        entries:
+        - 一定時間、姿を消す事ができる
+      - id: item_cf8aa5b927
+        displayTitle: 補足
+        entries:
+        - |-
+          ・消えている間も攻撃・ガード・BL可能。 硬直は解除時の隙
+          ・消えている時間は3秒程度。 またもう一度「大P+大K」を押すことで出現する事が可能
+          ・相手の攻撃をガードやBLしたり、SAや投げを仕掛けたら時間に関係なく出現する
+          ・ゲージ増加のカッコ内の数値は1本制のもの

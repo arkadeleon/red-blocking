@@ -205,7 +205,7 @@ private enum Fixtures {
       - id: lever_input_moves
         displayTitle: "【レバー入れ技】"
         entries: []
-      - id: command_normals
+      - id: common_moves
         displayTitle: "【コマンド通常技】"
         entries: []
       - id: special_moves
@@ -244,7 +244,7 @@ private enum Fixtures {
       - id: lever_input_moves
         displayTitle: "【レバー入れ技】"
         entries: []
-      - id: command_normals
+      - id: common_moves
         displayTitle: "Command"
         entries: []
       - id: special_moves
@@ -282,7 +282,7 @@ private enum Fixtures {
       - id: lever_input_moves
         displayTitle: "【レバー入れ技】"
         entries: []
-      - id: command_normals
+      - id: common_moves
         displayTitle: "Command"
         entries: []
       - id: special_moves
@@ -314,7 +314,7 @@ private enum Fixtures {
       - id: lever_input_moves
         displayTitle: "【レバー入れ技】"
         entries: []
-      - id: command_normals
+      - id: common_moves
         displayTitle: "Command"
         entries: []
       - id: special_moves
@@ -356,7 +356,7 @@ private enum Fixtures {
       - id: lever_input_moves
         displayTitle: "【レバー入れ技】"
         entries: []
-      - id: command_normals
+      - id: common_moves
         displayTitle: "Command"
         entries: []
       - id: special_moves
@@ -397,7 +397,7 @@ private enum Fixtures {
       - id: lever_input_moves
         displayTitle: "【レバー入れ技】"
         entries: []
-      - id: command_normals
+      - id: common_moves
         displayTitle: "Command"
         entries: []
       - id: special_moves
@@ -453,7 +453,7 @@ private enum Fixtures {
       - id: lever_input_moves
         displayTitle: "【レバー入れ技】"
         entries: []
-      - id: command_normals
+      - id: common_moves
         displayTitle: "Command"
         entries: []
       - id: special_moves
@@ -485,7 +485,7 @@ private enum Fixtures {
       - id: lever_input_moves
         displayTitle: "【レバー入れ技】"
         entries: []
-      - id: command_normals
+      - id: common_moves
         displayTitle: "Command"
         entries: []
       - id: special_moves
@@ -523,7 +523,7 @@ private enum Fixtures {
       - id: lever_input_moves
         displayTitle: "【レバー入れ技】"
         entries: []
-      - id: command_normals
+      - id: common_moves
         displayTitle: "Command"
         entries: []
       - id: special_moves

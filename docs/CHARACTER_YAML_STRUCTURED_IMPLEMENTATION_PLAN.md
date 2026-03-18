@@ -104,7 +104,7 @@
 - 固定 5 个 group id：
   - `air_normals`
   - `ground_normals`
-  - `command_normals`
+  - `common_moves`
   - `special_moves`
   - `super_arts`
 - 明确标准字段、弹性字段、说明字段和媒体字段的边界。

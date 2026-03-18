@@ -9,300 +9,6 @@ introduction:
     「より完璧かつドラマティックな試合をせねば…」
     まだ日はある。世界をまわり、さらなるレベルアップを図るに十分な時間が。
 moveGroups:
-- id: air_normals
-  displayTitle: "【空中通常技】"
-  entries:
-  - id: item_0213bd1615
-    displayName: ジャンプ小パンチ
-    variants:
-    - id: item_e0c2f756f3
-      displayName: 垂直
-      detail:
-        displayName: フック
-        startup: '3'
-        active: '4'
-        damage: '40'
-        stun: '9'
-        stunReduction: '3'
-        meterGain:
-          whiff: '0'
-          guard: '1'
-          hit: '2'
-          bl: '4'
-    - id: item_25ab24896c
-      displayName: 斜め
-      detail:
-        displayName: フック
-        startup: '3'
-        active: '4'
-        damage: '40'
-        stun: '9'
-        stunReduction: '3'
-        meterGain:
-          whiff: '0'
-          guard: '1'
-          hit: '2'
-          bl: '4'
-        noteGroups:
-        - id: item_cf8aa5b927
-          displayTitle: 補足
-          entries:
-          - 空対空で当てた場合、こちらが先に着地するのでダッキング裏回りSAを狙う事が可能。 空対空BL後などが狙い目
-        media:
-          kind: motion_player
-          displayLabel: モーション
-          skillName: Jumping Jab
-          characterCode: '04'
-          skillCode: '007'
-  - id: item_a18c41f1f2
-    displayName: ジャンプ中パンチ
-    variants:
-    - id: item_f37ec8ba39
-      displayName: 垂直
-      detail:
-        displayName: フック
-        startup: '4'
-        active: '5'
-        damage: '70'
-        stun: '13'
-        stunReduction: '3'
-        meterGain:
-          whiff: '2'
-          guard: '4'
-          hit: '8'
-          bl: '4'
-    - id: item_a7ee982c0e
-      displayName: 斜め
-      detail:
-        displayName: フック
-        startup: '4'
-        active: '4'
-        damage: '70'
-        stun: '13'
-        stunReduction: '3'
-        meterGain:
-          whiff: '2'
-          guard: '4'
-          hit: '8'
-          bl: '4'
-        noteGroups:
-        - id: item_cf8aa5b927
-          displayTitle: 補足
-          entries:
-          - 空対空で当てた後、ダッキングSAを狙う事が可能だが裏回りは厳しい
-        media:
-          kind: motion_player
-          displayLabel: モーション
-          skillName: Jumping Strong
-          characterCode: '04'
-          skillCode: '008'
-  - id: item_18529f13be
-    displayName: ジャンプ大パンチ
-    variants:
-    - id: item_ca5fa63a59
-      displayName: 垂直
-      detail:
-        displayName: ストレート
-        startup: '7'
-        active: '3'
-        damage: '120'
-        stun: '15'
-        stunReduction: '3'
-        meterGain:
-          whiff: '3'
-          guard: '6'
-          hit: '14'
-          bl: '4'
-        noteGroups:
-        - id: item_cf8aa5b927
-          displayTitle: 補足
-          entries:
-          - 出が意外に速く判定は横&下方向に強い
-    - id: item_c36fb09951
-      displayName: 斜め
-      detail:
-        displayName: ストレート
-        startup: '7'
-        active: '3'
-        damage: '120'
-        stun: '15'
-        stunReduction: '3'
-        meterGain:
-          whiff: '3'
-          guard: '6'
-          hit: '14'
-          bl: '4'
-        noteGroups:
-        - id: item_cf8aa5b927
-          displayTitle: 補足
-          entries:
-          - |-
-            ・出が意外に速く判定は横&下方向に強い
-            ・空対空やコンボの追撃、遠めからの飛び込みに使用
-        media:
-          kind: motion_player
-          displayLabel: モーション
-          skillName: Jumping Fierce
-          characterCode: '04'
-          skillCode: '009'
-  - id: item_a83e3f7cff
-    displayName: ジャンプ小キック
-    variants:
-    - id: item_f48ae8dc16
-      displayName: 垂直
-      detail:
-        displayName: ジャンピングエルボー
-        startup: '3'
-        active: '17'
-        damage: '40'
-        stun: '5'
-        stunReduction: '3'
-        meterGain:
-          whiff: '0'
-          guard: '1'
-          hit: '2'
-          bl: '4'
-        noteGroups:
-        - id: item_cf8aa5b927
-          displayTitle: 補足
-          entries:
-          - |-
-            ・攻撃判定が出ている時間が長め
-            ・飛び込みからガードさせ、投げを誘ってのSSブローなどが面白い
-    - id: item_adfe5e6bc9
-      displayName: 斜め
-      detail:
-        displayName: ジャンピングエルボー
-        startup: '3'
-        active: '17'
-        damage: '40'
-        stun: '5'
-        stunReduction: '3'
-        meterGain:
-          whiff: '0'
-          guard: '1'
-          hit: '2'
-          bl: '4'
-        noteGroups:
-        - id: item_cf8aa5b927
-          displayTitle: 補足
-          entries:
-          - |-
-            ・攻撃判定が出ている時間が長め
-            ・飛び込みからガードさせ、投げを誘ってのSSブローなどが面白い
-        media:
-          kind: motion_player
-          displayLabel: モーション
-          skillName: Jumping Short
-          characterCode: '04'
-          skillCode: '016'
-  - id: item_c3103eb1f9
-    displayName: ジャンプ中キック
-    variants:
-    - id: item_5280b1f280
-      displayName: 垂直
-      detail:
-        displayName: ジャンピングエルボー
-        startup: '4'
-        active: '13'
-        damage: '60'
-        stun: '7'
-        stunReduction: '3'
-        meterGain:
-          whiff: '2'
-          guard: '4'
-          hit: '8'
-          bl: '4'
-        noteGroups:
-        - id: item_cf8aa5b927
-          displayTitle: 補足
-          entries:
-          - |-
-            ・判定がそこそこ強く、対地、空対空両面で使える技
-            ・飛び込みヒット時、大攻撃に比べガード硬直やのけぞりが短いので、ラッシュや連続技を狙うときは注意
-    - id: item_83fba48c4f
-      displayName: 斜め
-      detail:
-        displayName: ジャンピングエルボー
-        startup: '4'
-        active: '13'
-        damage: '60'
-        stun: '7'
-        stunReduction: '3'
-        meterGain:
-          whiff: '2'
-          guard: '4'
-          hit: '8'
-          bl: '4'
-        noteGroups:
-        - id: item_cf8aa5b927
-          displayTitle: 補足
-          entries:
-          - |-
-            ・判定がそこそこ強く、対地、空対空両面で使える技
-            ・飛び込みヒット時、大攻撃に比べガード硬直やのけぞりが短いので、ラッシュや連続技を狙うときは注意
-            ・相手の対空技をBL→J中K→着地(ダッキング)SAといった使い方も可能
-        media:
-          kind: motion_player
-          displayLabel: モーション
-          skillName: Jumping Forward
-          characterCode: '04'
-          skillCode: '017'
-  - id: item_86e58a160f
-    displayName: ジャンプ大キック
-    variants:
-    - id: item_3b01b3c990
-      displayName: 垂直
-      detail:
-        displayName: ラウンドエルボー
-        startup: '10'
-        active: '4'
-        damage: '90'
-        stun: '9'
-        stunReduction: '3'
-        meterGain:
-          whiff: '3'
-          guard: '6'
-          hit: '14'
-          bl: '4'
-        noteGroups:
-        - id: item_cf8aa5b927
-          displayTitle: 補足
-          entries:
-          - |-
-            ・下方向に判定が強く、ヒット時にのけぞりが長いため飛び込みの主力となる
-            ・高い打点でヒットしたら直接SAに、低い打点なら立大Kからの連続技に繋ぐ事が可能
-            ・打点をずらして相手のBLと対空に揺さぶりをかけることができる。またガードされた場合でも、そこから択を迫ることが出来るため強力
-            ・空中ヒットの場合、相手は叩きつけダウンになる
-    - id: item_3e728dc7eb
-      displayName: 斜め
-      detail:
-        displayName: ラウンドエルボー
-        startup: '11'
-        active: '4'
-        damage: '90'
-        stun: '9'
-        stunReduction: '3'
-        meterGain:
-          whiff: '3'
-          guard: '6'
-          hit: '14'
-          bl: '4'
-        noteGroups:
-        - id: item_cf8aa5b927
-          displayTitle: 補足
-          entries:
-          - |-
-            ・下方向に判定が強く、ヒット時にのけぞりが長いため飛び込みの主力となる
-            ・高い打点でヒットしたら直接SAに、低い打点なら立大Kからの連続技に繋ぐ事が可能
-            ・打点をずらして相手のBLと対空に揺さぶりをかけることができる。またガードされた場合でも、そこから択を迫ることが出来るため強力
-            ・空中ヒットの場合、相手は叩きつけダウンになる
-        media:
-          kind: motion_player
-          displayLabel: モーション
-          skillName: Jumping Roundhouse
-          characterCode: '04'
-          skillCode: '018'
 - id: ground_normals
   displayTitle: "【地上通常技】"
   entries:
@@ -755,527 +461,300 @@ moveGroups:
           skillName: Crouching Roundhouse
           characterCode: '04'
           skillCode: '015'
-- id: normal_throws
-  displayTitle: "【通常投げ】"
+- id: air_normals
+  displayTitle: "【空中通常技】"
   entries:
-  - id: item_df9695d827
-    displayName: レバークラッシャー
-    detail:
-      displayName: レバークラッシャー
-      command: 小P+小K
-      startup: '2'
-      active: '1'
-      recovery: '21'
-      damage: |-
-        120(6ヒット時)
-        (30×6)
-      stun: |-
-        18(6ヒット時)
-        (5×6)
-      meterGain:
-        onWhiff: '0'
-        throwSuccess: |-
-          12(6ヒット時)
-          (2×6)
-      stats:
-        投げ間合い: '20'
-      noteGroups:
-      - id: item_cf8aa5b927
-        displayTitle: 補足
-        entries:
-        - |-
-          ・硬直は投げ失敗時のフレーム
-          ・ボタン連打でヒット数が増加。 最大ヒット数は「6」
-      media:
-        kind: motion_player
-        displayLabel: モーション
-        skillName: Neutral Throw
-        characterCode: '04'
-        skillCode: '024'
-  - id: item_c35f83e607
-    displayName: ダイナマイトスルー
-    detail:
-      displayName: ダイナマイトスルー
-      command: |-
-        →+小P+小K
-        ←+小P+小K
-      startup: '2'
-      active: '1'
-      recovery: '21'
-      damage: '120'
-      stun: '13'
-      meterGain:
-        onWhiff: '0'
-        throwSuccess: '7'
-      stats:
-        投げ間合い: '20'
-      noteGroups:
-      - id: item_cf8aa5b927
-        displayTitle: 補足
-        entries:
-        - |-
-          ・硬直は投げ失敗時のフレーム
-          ・左右に投げ分ける事が可能
-      media:
-        kind: motion_player
-        displayLabel: モーション
-        skillName: Throw
-        characterCode: '04'
-        skillCode: '025'
-- id: lever_input_moves
-  displayTitle: "【レバー入れ技】"
-  entries:
-  - id: item_f69a9f4176
-    displayName: スリッピングジャブ
-    detail:
-      displayName: スリッピングジャブ
-      command: 6+小P
-      guard: 両方
-      blocking: 両方
-      startup: '4'
-      active: '2'
-      recovery: '8'
-      damage: '25'
-      stun: '3'
-      stunReduction: '15'
-      meterGain:
-        whiff: '0'
-        guard: '1'
-        hit: '2'
-        bl: '4'
-      frameAdvantage:
-        guard: "+1"
-        standingHit: "+1"
-        crouchingHit: "+1"
-      stats:
-        C/SC: "☆/○"
-      noteGroups:
-      - id: item_cf8aa5b927
-        displayTitle: 補足
-        entries:
-        - "・TCで中Pに繋ぐことが可能 \n・スタンガンヘッドバットを落とすときに便利"
-      media:
-        kind: motion_player
-        displayLabel: モーション
-        skillName: Towards + Jab
-        characterCode: '04'
-        skillCode: '023'
-  - id: item_0cfd6c2a45
-    displayName: ストマックブロー
-    detail:
-      displayName: ストマックブロー
-      command: 6+中P
-      guard: 両方
-      blocking: "→"
-      startup: '8'
-      active: '5'
-      recovery: '10'
-      damage: '80'
-      stun: '5'
-      stunReduction: '3'
-      meterGain:
-        whiff: '2'
-        guard: '4'
-        hit: '8'
-        bl: '4'
-      frameAdvantage:
-        guard: "-1"
-        standingHit: '0'
-        crouchingHit: "+1"
-      stats:
-        C/SC: "×"
-      noteGroups:
-      - id: item_cf8aa5b927
-        displayTitle: 補足
-        entries:
-        - |-
-          ・発生がやや遅いが判定はなかなか強い
-          ・牽制しつつ前進することができるため、連係の繋ぎなどに使用
-      media:
-        kind: motion_player
-        displayLabel: モーション
-        skillName: Towards + Strong
-        characterCode: '04'
-        skillCode: '019'
-  - id: item_ecce61f170
-    displayName: レバーブロー
-    detail:
-      displayName: レバーブロー
-      command: 6+中K
-      guard: 両方
-      blocking: "→"
-      startup: '5'
-      active: '2'
-      recovery: '9'
-      damage: '100'
-      stun: '9'
-      stunReduction: '3'
-      meterGain:
-        whiff: '2'
-        guard: '4'
-        hit: '8'
-        bl: '4'
-      frameAdvantage:
-        guard: "+2"
-        standingHit: "+3"
-        crouchingHit: "+3"
-      stats:
-        C/SC: "○"
-      noteGroups:
-      - id: item_cf8aa5b927
-        displayTitle: 補足
-        entries:
-        - "・TCで中Kに繋ぐことが可能 \n・ガードされてもダッドリー有利で距離も離れないため、攻めの継続が可能\n・空中コンボでも使用頻度が高い\n・ヒット時、ノーキャンセルでSA1か3に繋ぐことが可能。キャンセル猶予時間はSA1が20フレーム、SA3が20～21フレーム"
-      media:
-        kind: motion_player
-        displayLabel: モーション
-        skillName: Towards + Forward
-        characterCode: '04'
-        skillCode: '021'
-  - id: item_3d23cd265f
-    displayName: ステップストレート
-    detail:
-      displayName: ステップストレート
-      command: 6+大P
-      guard: 両方
-      blocking: "→"
-      startup: '15'
-      active: '5'
-      recovery: '16'
-      damage: '140'
-      stun: '13'
-      stunReduction: '7'
-      meterGain:
-        whiff: '3'
-        guard: '6'
-        hit: '14'
-        bl: '4'
-      frameAdvantage:
-        guard: "-3"
-        standingHit: "-1"
-        crouchingHit: "+1"
-      stats:
-        C/SC: "×/○"
-      noteGroups:
-      - id: item_cf8aa5b927
-        displayTitle: 補足
-        entries:
-        - |-
-          ・遠距離戦での牽制に使用
-          ・立大Pと違ってしゃがんでいる相手にも当たりやすい
-          ・キャンセル猶予時間は12フレーム
-      media:
-        kind: motion_player
-        displayLabel: モーション
-        skillName: Towards + Fierce
-        characterCode: '04'
-        skillCode: '022'
-  - id: item_14fbe000be
-    displayName: ダートショット
-    detail:
-      displayName: ダートショット
-      command: 6+大K
-      guard: 立
-      blocking: "→"
-      startup: '12'
-      active: '4'
-      recovery: '16'
-      damage: '110'
-      stun: '7'
-      stunReduction: '3'
-      meterGain:
-        whiff: '3'
-        guard: '6'
-        hit: '14'
-        bl: '4'
-      frameAdvantage:
-        guard: "-2"
-        standingHit: '0'
-        crouchingHit: "+2"
-      stats:
-        C/SC: "×"
-      noteGroups:
-      - id: item_cf8aa5b927
-        displayTitle: 補足
-        entries:
-        - "・TCで立中Kに繋ぐことが可能 \n・遠距離からの足払い潰しなどにも使用\n・TCまで撃ち切ればダートをBLされても、相手の反撃が遅れた場合、潰してくれる\n・しゃがみヒット時、ノーキャンセルでSA1か3に繋ぐことが可能。その場合のキャンセル猶予時間は27フレーム"
-      media:
-        kind: motion_player
-        displayLabel: モーション
-        skillName: Towards + Roundhouse
-        characterCode: '04'
-        skillCode: '020'
-- id: target_combos
-  displayTitle: "【ターゲットコンボ】"
-  entries:
-  - id: 6pp
-    displayName: 6小P→中P
-    detail:
-      displayName: 6小P→中P
-      superCancel: "○/○"
-      guard: 両方/両方
-      blocking: 両方/→
-      damage: 25/30
-      stun: 3/3
-      stunReduction: 15/3
-      frameAdvantage:
-        guard: '0'
-        standingHit: "+1"
-        crouchingHit: "+2"
-      stats:
-        入力: 6小P→中P
-        C: "☆/○"
-  - id: ppk
-    displayName: 立小P→中P→中K
-    detail:
-      displayName: 立小P→中P→中K
-      superCancel: "○/×/○"
-      guard: 両方/両方/両方
-      blocking: 両方/→ /→
-      damage: 25/30/30
-      stun: 3/3/3
-      stunReduction: 15/1/1
-      stats:
-        入力: 立小P→中P→中K
-        C: "☆/×/○"
-        ヒット&ガード硬直時間差(中P) ガード: "+2"
-        ヒット&ガード硬直時間差(中P) 立ヒット: "+3"
-        ヒット&ガード硬直時間差(中P) 屈ヒット: "+3"
-        ヒット&ガード硬直時間差(中K) ガード: "+1"
-        ヒット&ガード硬直時間差(中K) 立ヒット: "+3"
-        ヒット&ガード硬直時間差(中K) 屈ヒット: "+3"
-      noteGroups:
-      - id: item_cf8aa5b927
-        displayTitle: 補足
-        entries:
-        - |-
-          ・中PをノーキャンセルしてSAに繋ぐことが可能
-          ・最後の中Kにキャンセルがかかるため、ヒット確認に使用可能
-  - id: kk
-    displayName: 屈小K→中K
-    detail:
-      displayName: 屈小K→中K
-      superCancel: "○/×"
-      guard: 屈/両方
-      blocking: "↓/→"
-      damage: 30/40
-      stun: 3/4
-      stunReduction: 3/1
-      frameAdvantage:
-        guard: "-2"
-        standingHit: '0'
-        crouchingHit: "+2"
-      stats:
-        入力: 屈小K→中K
-        C: "☆/×"
-      noteGroups:
-      - id: item_cf8aa5b927
-        displayTitle: 補足
-        entries:
-        - |-
-          ・BLされても中KがBL有利時間を無視して発生するため、発生6フレーム以上の技を潰すことができる
-          ・下BLを狙う相手に有効
-  - id: kpp
-    displayName: 屈小K→屈中P→屈大P
-    detail:
-      displayName: 屈小K→屈中P→屈大P
-      superCancel: "○/×/×"
-      guard: 屈/両方/両方
-      blocking: "↓/両方/両方"
-      damage: 30/35/40
-      stun: 3/3/4
-      stunReduction: 3/3/3
-      stats:
-        入力: 屈小K→屈中P→屈大P
-        C: "☆/×/×"
-        ヒット&ガード硬直時間差(屈中P) ガード: "-1"
-        ヒット&ガード硬直時間差(屈中P) 立ヒット: '0'
-        ヒット&ガード硬直時間差(屈中P) 屈ヒット: '0'
-        ヒット&ガード硬直時間差(屈大P) ガード: "-2"
-        ヒット&ガード硬直時間差(屈大P) 立ヒット: '0'
-        ヒット&ガード硬直時間差(屈大P) 屈ヒット: '0'
-      noteGroups:
-      - id: item_cf8aa5b927
-        displayTitle: 補足
-        entries:
-        - 初段の屈小Kを2回にする事も可能
-  - id: kkpp
-    displayName: 立小K→中K→中P→大P
-    detail:
-      displayName: 立小K→中K→中P→大P
-      superCancel: "○/×/×/×"
-      guard: 両方/両方/両方/両方・両方
-      blocking: 両方/→ /→/→・→
-      damage: 40/40/30/20+20
-      stun: 3/4/3/3+3
-      stunReduction: 3/1/1/1・1
-      stats:
-        入力: 立小K→中K→中P→大P
-        C: "○/×/×/×"
-        ヒット&ガード硬直時間差(中K) ガード: "+1"
-        ヒット&ガード硬直時間差(中K) 立ヒット: "+3"
-        ヒット&ガード硬直時間差(中K) 屈ヒット: "+3"
-        ヒット&ガード硬直時間差(中P) ガード: "+2"
-        ヒット&ガード硬直時間差(中P) 立ヒット: "+3"
-        ヒット&ガード硬直時間差(中P) 屈ヒット: "+3"
-        ヒット&ガード硬直時間差(大P) ガード: '0'
-        ヒット&ガード硬直時間差(大P) 立ヒット: "+2"
-        ヒット&ガード硬直時間差(大P) 屈ヒット: "+2"
-  - id: pkp
-    displayName: 立中P→中K→大P
-    detail:
-      displayName: 立中P→中K→大P
-      superCancel: "○/×/×"
-      guard: 両方/両方/両方
-      blocking: "→/→ /→"
-      damage: 60/40/50
-      stun: 9/4/3
-      stunReduction: 3/1/1
-      stats:
-        入力: 立中P→中K→大P
-        C: "○/×/×"
-        ヒット&ガード硬直時間差(中K) ガード: "+1"
-        ヒット&ガード硬直時間差(中K) 立ヒット: "+3"
-        ヒット&ガード硬直時間差(中K) 屈ヒット: "+5"
-        ヒット&ガード硬直時間差(大P) ガード: "-4"
-        ヒット&ガード硬直時間差(大P) 立ヒット: "-2"
-        ヒット&ガード硬直時間差(大P) 屈ヒット: '0'
-  - id: 6kkp
-    displayName: 6中K→中K→大P
-    detail:
-      displayName: 6中K→中K→大P
-      superCancel: "○/×/×"
-      guard: 両方/両方/両方
-      blocking: "→/→ /→"
-      damage: 100/40/50
-      stun: 9/4/3
-      stunReduction: 3/1/1
-      stats:
-        入力: 6中K→中K→大P
-        C: "○/×/×"
-        ヒット&ガード硬直時間差(中K) ガード: "+1"
-        ヒット&ガード硬直時間差(中K) 立ヒット: "+3"
-        ヒット&ガード硬直時間差(中K) 屈ヒット: "+5"
-        ヒット&ガード硬直時間差(大P) ガード: "-4"
-        ヒット&ガード硬直時間差(大P) 立ヒット: "-2"
-        ヒット&ガード硬直時間差(大P) 屈ヒット: '0'
-  - id: kkp
-    displayName: 立中K→大K→大P
-    detail:
-      displayName: 立中K→大K→大P
-      superCancel: "×/×/×・×"
-      guard: 両方/両方/両方・両方
-      blocking: "→/→ /→・→"
-      damage: 80/60/20+20
-      stun: 11/6/3+3
-      stunReduction: 3/1/1・1
-      stats:
-        入力: 立中K→大K→大P
-        C: "×/×/×・×"
-        ヒット&ガード硬直時間差(大K) ガード: "-1"
-        ヒット&ガード硬直時間差(大K) 立ヒット: "+1"
-        ヒット&ガード硬直時間差(大K) 屈ヒット: "+1"
-        ヒット&ガード硬直時間差(大P) ガード: '0'
-        ヒット&ガード硬直時間差(大P) 立ヒット: "+2"
-        ヒット&ガード硬直時間差(大P) 屈ヒット: "+2"
-      noteGroups:
-      - id: item_cf8aa5b927
-        displayTitle: 補足
-        entries:
-        - 簡易対空として優秀
-  - id: 6kk
-    displayName: 6大K→中K
-    detail:
-      displayName: 6大K→中K
-      superCancel: "×/×"
-      guard: 立/両方
-      blocking: "→/→"
-      damage: 110/40
-      stun: 7/4
-      stunReduction: 3/1
-      frameAdvantage:
-        guard: "-2"
-        standingHit: '0'
-        crouchingHit: "+2"
-      stats:
-        入力: 6大K→中K
-        C: "×/×"
-
-- id: command_normals
-  displayTitle: "【特殊入力技】"
-  entries:
-  - id: item_ac52a72820
-    displayName: リープアタック
-    detail:
-      displayName: ジャンピングエルボー
-      command: 中P+中K
-      guard: 立
-      blocking: "→"
-      startup: '15'
-      active: '10'
-      recovery: '5'
-      damage: '40'
-      stun: '3'
-      stunReduction: '1'
-      meterGain:
-        whiff: '0'
-        guard: '1'
-        hit: '2'
-        bl: '4'
-      frameAdvantage:
-        guard: "-5～+7"
-        standingHit: 0～+8
-        crouchingHit: "+1～+9"
-      stats:
-        C/SC: "×"
-      noteGroups:
-      - id: item_cf8aa5b927
-        displayTitle: 補足
-        entries:
-        - |-
-          コマンド完成後、5フレーム目から空中判定に移行
-          ・技の下りを当てることで、SAや発生の速い通常技に繋ぐことが可能
-      media:
-        kind: motion_player
-        displayLabel: モーション
-        skillName: Universal Overhead
-        characterCode: '04'
-        skillCode: '026'
-  - id: item_7ae3c90cde
-    displayName: パーソナルアクション
-    detail:
-      displayName: バラを投げる
-      command: 大P+大K
-      guard: 両方
-      blocking: 両方
-      startup: '19'
-      active: '1'
-      recovery: '33'
-      damage: '5'
-      stun: '0'
-      stunReduction: '1'
-      stats:
-        C/SC: "×"
-        ゲージ増加: 4(6)
-      noteGroups:
-      - id: item_f11e32f4cf
-        displayTitle: 効果
-        entries:
-        - |-
-          ・直後に出した投げ以外の攻撃の攻撃力アップ
-          ・ただしバラを投げた時に限り有効
-      - id: item_cf8aa5b927
-        displayTitle: 補足
-        entries:
-        - |-
-          ・バラは飛び道具扱いで攻撃判定とケズリ能力あり。ケズリ値は「1」
-          ・ゲージ増加のカッコ内の数値は1本制のもの
-      media:
-        kind: motion_player
-        displayLabel: モーション
-        skillName: Taunt
-        characterCode: '04'
-        skillCode: '027'
+  - id: item_0213bd1615
+    displayName: ジャンプ小パンチ
+    variants:
+    - id: item_e0c2f756f3
+      displayName: 垂直
+      detail:
+        displayName: フック
+        startup: '3'
+        active: '4'
+        damage: '40'
+        stun: '9'
+        stunReduction: '3'
+        meterGain:
+          whiff: '0'
+          guard: '1'
+          hit: '2'
+          bl: '4'
+    - id: item_25ab24896c
+      displayName: 斜め
+      detail:
+        displayName: フック
+        startup: '3'
+        active: '4'
+        damage: '40'
+        stun: '9'
+        stunReduction: '3'
+        meterGain:
+          whiff: '0'
+          guard: '1'
+          hit: '2'
+          bl: '4'
+        noteGroups:
+        - id: item_cf8aa5b927
+          displayTitle: 補足
+          entries:
+          - 空対空で当てた場合、こちらが先に着地するのでダッキング裏回りSAを狙う事が可能。 空対空BL後などが狙い目
+        media:
+          kind: motion_player
+          displayLabel: モーション
+          skillName: Jumping Jab
+          characterCode: '04'
+          skillCode: '007'
+  - id: item_a18c41f1f2
+    displayName: ジャンプ中パンチ
+    variants:
+    - id: item_f37ec8ba39
+      displayName: 垂直
+      detail:
+        displayName: フック
+        startup: '4'
+        active: '5'
+        damage: '70'
+        stun: '13'
+        stunReduction: '3'
+        meterGain:
+          whiff: '2'
+          guard: '4'
+          hit: '8'
+          bl: '4'
+    - id: item_a7ee982c0e
+      displayName: 斜め
+      detail:
+        displayName: フック
+        startup: '4'
+        active: '4'
+        damage: '70'
+        stun: '13'
+        stunReduction: '3'
+        meterGain:
+          whiff: '2'
+          guard: '4'
+          hit: '8'
+          bl: '4'
+        noteGroups:
+        - id: item_cf8aa5b927
+          displayTitle: 補足
+          entries:
+          - 空対空で当てた後、ダッキングSAを狙う事が可能だが裏回りは厳しい
+        media:
+          kind: motion_player
+          displayLabel: モーション
+          skillName: Jumping Strong
+          characterCode: '04'
+          skillCode: '008'
+  - id: item_18529f13be
+    displayName: ジャンプ大パンチ
+    variants:
+    - id: item_ca5fa63a59
+      displayName: 垂直
+      detail:
+        displayName: ストレート
+        startup: '7'
+        active: '3'
+        damage: '120'
+        stun: '15'
+        stunReduction: '3'
+        meterGain:
+          whiff: '3'
+          guard: '6'
+          hit: '14'
+          bl: '4'
+        noteGroups:
+        - id: item_cf8aa5b927
+          displayTitle: 補足
+          entries:
+          - 出が意外に速く判定は横&下方向に強い
+    - id: item_c36fb09951
+      displayName: 斜め
+      detail:
+        displayName: ストレート
+        startup: '7'
+        active: '3'
+        damage: '120'
+        stun: '15'
+        stunReduction: '3'
+        meterGain:
+          whiff: '3'
+          guard: '6'
+          hit: '14'
+          bl: '4'
+        noteGroups:
+        - id: item_cf8aa5b927
+          displayTitle: 補足
+          entries:
+          - |-
+            ・出が意外に速く判定は横&下方向に強い
+            ・空対空やコンボの追撃、遠めからの飛び込みに使用
+        media:
+          kind: motion_player
+          displayLabel: モーション
+          skillName: Jumping Fierce
+          characterCode: '04'
+          skillCode: '009'
+  - id: item_a83e3f7cff
+    displayName: ジャンプ小キック
+    variants:
+    - id: item_f48ae8dc16
+      displayName: 垂直
+      detail:
+        displayName: ジャンピングエルボー
+        startup: '3'
+        active: '17'
+        damage: '40'
+        stun: '5'
+        stunReduction: '3'
+        meterGain:
+          whiff: '0'
+          guard: '1'
+          hit: '2'
+          bl: '4'
+        noteGroups:
+        - id: item_cf8aa5b927
+          displayTitle: 補足
+          entries:
+          - |-
+            ・攻撃判定が出ている時間が長め
+            ・飛び込みからガードさせ、投げを誘ってのSSブローなどが面白い
+    - id: item_adfe5e6bc9
+      displayName: 斜め
+      detail:
+        displayName: ジャンピングエルボー
+        startup: '3'
+        active: '17'
+        damage: '40'
+        stun: '5'
+        stunReduction: '3'
+        meterGain:
+          whiff: '0'
+          guard: '1'
+          hit: '2'
+          bl: '4'
+        noteGroups:
+        - id: item_cf8aa5b927
+          displayTitle: 補足
+          entries:
+          - |-
+            ・攻撃判定が出ている時間が長め
+            ・飛び込みからガードさせ、投げを誘ってのSSブローなどが面白い
+        media:
+          kind: motion_player
+          displayLabel: モーション
+          skillName: Jumping Short
+          characterCode: '04'
+          skillCode: '016'
+  - id: item_c3103eb1f9
+    displayName: ジャンプ中キック
+    variants:
+    - id: item_5280b1f280
+      displayName: 垂直
+      detail:
+        displayName: ジャンピングエルボー
+        startup: '4'
+        active: '13'
+        damage: '60'
+        stun: '7'
+        stunReduction: '3'
+        meterGain:
+          whiff: '2'
+          guard: '4'
+          hit: '8'
+          bl: '4'
+        noteGroups:
+        - id: item_cf8aa5b927
+          displayTitle: 補足
+          entries:
+          - |-
+            ・判定がそこそこ強く、対地、空対空両面で使える技
+            ・飛び込みヒット時、大攻撃に比べガード硬直やのけぞりが短いので、ラッシュや連続技を狙うときは注意
+    - id: item_83fba48c4f
+      displayName: 斜め
+      detail:
+        displayName: ジャンピングエルボー
+        startup: '4'
+        active: '13'
+        damage: '60'
+        stun: '7'
+        stunReduction: '3'
+        meterGain:
+          whiff: '2'
+          guard: '4'
+          hit: '8'
+          bl: '4'
+        noteGroups:
+        - id: item_cf8aa5b927
+          displayTitle: 補足
+          entries:
+          - |-
+            ・判定がそこそこ強く、対地、空対空両面で使える技
+            ・飛び込みヒット時、大攻撃に比べガード硬直やのけぞりが短いので、ラッシュや連続技を狙うときは注意
+            ・相手の対空技をBL→J中K→着地(ダッキング)SAといった使い方も可能
+        media:
+          kind: motion_player
+          displayLabel: モーション
+          skillName: Jumping Forward
+          characterCode: '04'
+          skillCode: '017'
+  - id: item_86e58a160f
+    displayName: ジャンプ大キック
+    variants:
+    - id: item_3b01b3c990
+      displayName: 垂直
+      detail:
+        displayName: ラウンドエルボー
+        startup: '10'
+        active: '4'
+        damage: '90'
+        stun: '9'
+        stunReduction: '3'
+        meterGain:
+          whiff: '3'
+          guard: '6'
+          hit: '14'
+          bl: '4'
+        noteGroups:
+        - id: item_cf8aa5b927
+          displayTitle: 補足
+          entries:
+          - |-
+            ・下方向に判定が強く、ヒット時にのけぞりが長いため飛び込みの主力となる
+            ・高い打点でヒットしたら直接SAに、低い打点なら立大Kからの連続技に繋ぐ事が可能
+            ・打点をずらして相手のBLと対空に揺さぶりをかけることができる。またガードされた場合でも、そこから択を迫ることが出来るため強力
+            ・空中ヒットの場合、相手は叩きつけダウンになる
+    - id: item_3e728dc7eb
+      displayName: 斜め
+      detail:
+        displayName: ラウンドエルボー
+        startup: '11'
+        active: '4'
+        damage: '90'
+        stun: '9'
+        stunReduction: '3'
+        meterGain:
+          whiff: '3'
+          guard: '6'
+          hit: '14'
+          bl: '4'
+        noteGroups:
+        - id: item_cf8aa5b927
+          displayTitle: 補足
+          entries:
+          - |-
+            ・下方向に判定が強く、ヒット時にのけぞりが長いため飛び込みの主力となる
+            ・高い打点でヒットしたら直接SAに、低い打点なら立大Kからの連続技に繋ぐ事が可能
+            ・打点をずらして相手のBLと対空に揺さぶりをかけることができる。またガードされた場合でも、そこから択を迫ることが出来るため強力
+            ・空中ヒットの場合、相手は叩きつけダウンになる
+        media:
+          kind: motion_player
+          displayLabel: モーション
+          skillName: Jumping Roundhouse
+          characterCode: '04'
+          skillCode: '018'
 - id: special_moves
   displayTitle: "【必殺技】"
   entries:
@@ -2516,3 +1995,523 @@ moveGroups:
         skillName: Corkscrew Blow
         characterCode: '04'
         skillCode: '049'
+- id: lever_input_moves
+  displayTitle: "【レバー入れ技】"
+  entries:
+  - id: item_f69a9f4176
+    displayName: スリッピングジャブ
+    detail:
+      displayName: スリッピングジャブ
+      command: 6+小P
+      guard: 両方
+      blocking: 両方
+      startup: '4'
+      active: '2'
+      recovery: '8'
+      damage: '25'
+      stun: '3'
+      stunReduction: '15'
+      meterGain:
+        whiff: '0'
+        guard: '1'
+        hit: '2'
+        bl: '4'
+      frameAdvantage:
+        guard: "+1"
+        standingHit: "+1"
+        crouchingHit: "+1"
+      stats:
+        C/SC: "☆/○"
+      noteGroups:
+      - id: item_cf8aa5b927
+        displayTitle: 補足
+        entries:
+        - "・TCで中Pに繋ぐことが可能 \n・スタンガンヘッドバットを落とすときに便利"
+      media:
+        kind: motion_player
+        displayLabel: モーション
+        skillName: Towards + Jab
+        characterCode: '04'
+        skillCode: '023'
+  - id: item_0cfd6c2a45
+    displayName: ストマックブロー
+    detail:
+      displayName: ストマックブロー
+      command: 6+中P
+      guard: 両方
+      blocking: "→"
+      startup: '8'
+      active: '5'
+      recovery: '10'
+      damage: '80'
+      stun: '5'
+      stunReduction: '3'
+      meterGain:
+        whiff: '2'
+        guard: '4'
+        hit: '8'
+        bl: '4'
+      frameAdvantage:
+        guard: "-1"
+        standingHit: '0'
+        crouchingHit: "+1"
+      stats:
+        C/SC: "×"
+      noteGroups:
+      - id: item_cf8aa5b927
+        displayTitle: 補足
+        entries:
+        - |-
+          ・発生がやや遅いが判定はなかなか強い
+          ・牽制しつつ前進することができるため、連係の繋ぎなどに使用
+      media:
+        kind: motion_player
+        displayLabel: モーション
+        skillName: Towards + Strong
+        characterCode: '04'
+        skillCode: '019'
+  - id: item_ecce61f170
+    displayName: レバーブロー
+    detail:
+      displayName: レバーブロー
+      command: 6+中K
+      guard: 両方
+      blocking: "→"
+      startup: '5'
+      active: '2'
+      recovery: '9'
+      damage: '100'
+      stun: '9'
+      stunReduction: '3'
+      meterGain:
+        whiff: '2'
+        guard: '4'
+        hit: '8'
+        bl: '4'
+      frameAdvantage:
+        guard: "+2"
+        standingHit: "+3"
+        crouchingHit: "+3"
+      stats:
+        C/SC: "○"
+      noteGroups:
+      - id: item_cf8aa5b927
+        displayTitle: 補足
+        entries:
+        - "・TCで中Kに繋ぐことが可能 \n・ガードされてもダッドリー有利で距離も離れないため、攻めの継続が可能\n・空中コンボでも使用頻度が高い\n・ヒット時、ノーキャンセルでSA1か3に繋ぐことが可能。キャンセル猶予時間はSA1が20フレーム、SA3が20～21フレーム"
+      media:
+        kind: motion_player
+        displayLabel: モーション
+        skillName: Towards + Forward
+        characterCode: '04'
+        skillCode: '021'
+  - id: item_3d23cd265f
+    displayName: ステップストレート
+    detail:
+      displayName: ステップストレート
+      command: 6+大P
+      guard: 両方
+      blocking: "→"
+      startup: '15'
+      active: '5'
+      recovery: '16'
+      damage: '140'
+      stun: '13'
+      stunReduction: '7'
+      meterGain:
+        whiff: '3'
+        guard: '6'
+        hit: '14'
+        bl: '4'
+      frameAdvantage:
+        guard: "-3"
+        standingHit: "-1"
+        crouchingHit: "+1"
+      stats:
+        C/SC: "×/○"
+      noteGroups:
+      - id: item_cf8aa5b927
+        displayTitle: 補足
+        entries:
+        - |-
+          ・遠距離戦での牽制に使用
+          ・立大Pと違ってしゃがんでいる相手にも当たりやすい
+          ・キャンセル猶予時間は12フレーム
+      media:
+        kind: motion_player
+        displayLabel: モーション
+        skillName: Towards + Fierce
+        characterCode: '04'
+        skillCode: '022'
+  - id: item_14fbe000be
+    displayName: ダートショット
+    detail:
+      displayName: ダートショット
+      command: 6+大K
+      guard: 立
+      blocking: "→"
+      startup: '12'
+      active: '4'
+      recovery: '16'
+      damage: '110'
+      stun: '7'
+      stunReduction: '3'
+      meterGain:
+        whiff: '3'
+        guard: '6'
+        hit: '14'
+        bl: '4'
+      frameAdvantage:
+        guard: "-2"
+        standingHit: '0'
+        crouchingHit: "+2"
+      stats:
+        C/SC: "×"
+      noteGroups:
+      - id: item_cf8aa5b927
+        displayTitle: 補足
+        entries:
+        - "・TCで立中Kに繋ぐことが可能 \n・遠距離からの足払い潰しなどにも使用\n・TCまで撃ち切ればダートをBLされても、相手の反撃が遅れた場合、潰してくれる\n・しゃがみヒット時、ノーキャンセルでSA1か3に繋ぐことが可能。その場合のキャンセル猶予時間は27フレーム"
+      media:
+        kind: motion_player
+        displayLabel: モーション
+        skillName: Towards + Roundhouse
+        characterCode: '04'
+        skillCode: '020'
+- id: normal_throws
+  displayTitle: "【通常投げ】"
+  entries:
+  - id: item_df9695d827
+    displayName: レバークラッシャー
+    detail:
+      displayName: レバークラッシャー
+      command: 小P+小K
+      startup: '2'
+      active: '1'
+      recovery: '21'
+      damage: |-
+        120(6ヒット時)
+        (30×6)
+      stun: |-
+        18(6ヒット時)
+        (5×6)
+      meterGain:
+        onWhiff: '0'
+        throwSuccess: |-
+          12(6ヒット時)
+          (2×6)
+      stats:
+        投げ間合い: '20'
+      noteGroups:
+      - id: item_cf8aa5b927
+        displayTitle: 補足
+        entries:
+        - |-
+          ・硬直は投げ失敗時のフレーム
+          ・ボタン連打でヒット数が増加。 最大ヒット数は「6」
+      media:
+        kind: motion_player
+        displayLabel: モーション
+        skillName: Neutral Throw
+        characterCode: '04'
+        skillCode: '024'
+  - id: item_c35f83e607
+    displayName: ダイナマイトスルー
+    detail:
+      displayName: ダイナマイトスルー
+      command: |-
+        →+小P+小K
+        ←+小P+小K
+      startup: '2'
+      active: '1'
+      recovery: '21'
+      damage: '120'
+      stun: '13'
+      meterGain:
+        onWhiff: '0'
+        throwSuccess: '7'
+      stats:
+        投げ間合い: '20'
+      noteGroups:
+      - id: item_cf8aa5b927
+        displayTitle: 補足
+        entries:
+        - |-
+          ・硬直は投げ失敗時のフレーム
+          ・左右に投げ分ける事が可能
+      media:
+        kind: motion_player
+        displayLabel: モーション
+        skillName: Throw
+        characterCode: '04'
+        skillCode: '025'
+- id: common_moves
+  displayTitle: "【特殊入力技】"
+  entries:
+  - id: item_ac52a72820
+    displayName: リープアタック
+    detail:
+      displayName: ジャンピングエルボー
+      command: 中P+中K
+      guard: 立
+      blocking: "→"
+      startup: '15'
+      active: '10'
+      recovery: '5'
+      damage: '40'
+      stun: '3'
+      stunReduction: '1'
+      meterGain:
+        whiff: '0'
+        guard: '1'
+        hit: '2'
+        bl: '4'
+      frameAdvantage:
+        guard: "-5～+7"
+        standingHit: 0～+8
+        crouchingHit: "+1～+9"
+      stats:
+        C/SC: "×"
+      noteGroups:
+      - id: item_cf8aa5b927
+        displayTitle: 補足
+        entries:
+        - |-
+          コマンド完成後、5フレーム目から空中判定に移行
+          ・技の下りを当てることで、SAや発生の速い通常技に繋ぐことが可能
+      media:
+        kind: motion_player
+        displayLabel: モーション
+        skillName: Universal Overhead
+        characterCode: '04'
+        skillCode: '026'
+  - id: item_7ae3c90cde
+    displayName: パーソナルアクション
+    detail:
+      displayName: バラを投げる
+      command: 大P+大K
+      guard: 両方
+      blocking: 両方
+      startup: '19'
+      active: '1'
+      recovery: '33'
+      damage: '5'
+      stun: '0'
+      stunReduction: '1'
+      stats:
+        C/SC: "×"
+        ゲージ増加: 4(6)
+      noteGroups:
+      - id: item_f11e32f4cf
+        displayTitle: 効果
+        entries:
+        - |-
+          ・直後に出した投げ以外の攻撃の攻撃力アップ
+          ・ただしバラを投げた時に限り有効
+      - id: item_cf8aa5b927
+        displayTitle: 補足
+        entries:
+        - |-
+          ・バラは飛び道具扱いで攻撃判定とケズリ能力あり。ケズリ値は「1」
+          ・ゲージ増加のカッコ内の数値は1本制のもの
+      media:
+        kind: motion_player
+        displayLabel: モーション
+        skillName: Taunt
+        characterCode: '04'
+        skillCode: '027'
+- id: target_combos
+  displayTitle: "【ターゲットコンボ】"
+  entries:
+  - id: 6pp
+    displayName: 6小P→中P
+    detail:
+      displayName: 6小P→中P
+      superCancel: "○/○"
+      guard: 両方/両方
+      blocking: 両方/→
+      damage: 25/30
+      stun: 3/3
+      stunReduction: 15/3
+      frameAdvantage:
+        guard: '0'
+        standingHit: "+1"
+        crouchingHit: "+2"
+      stats:
+        入力: 6小P→中P
+        C: "☆/○"
+  - id: ppk
+    displayName: 立小P→中P→中K
+    detail:
+      displayName: 立小P→中P→中K
+      superCancel: "○/×/○"
+      guard: 両方/両方/両方
+      blocking: 両方/→ /→
+      damage: 25/30/30
+      stun: 3/3/3
+      stunReduction: 15/1/1
+      stats:
+        入力: 立小P→中P→中K
+        C: "☆/×/○"
+        ヒット&ガード硬直時間差(中P) ガード: "+2"
+        ヒット&ガード硬直時間差(中P) 立ヒット: "+3"
+        ヒット&ガード硬直時間差(中P) 屈ヒット: "+3"
+        ヒット&ガード硬直時間差(中K) ガード: "+1"
+        ヒット&ガード硬直時間差(中K) 立ヒット: "+3"
+        ヒット&ガード硬直時間差(中K) 屈ヒット: "+3"
+      noteGroups:
+      - id: item_cf8aa5b927
+        displayTitle: 補足
+        entries:
+        - |-
+          ・中PをノーキャンセルしてSAに繋ぐことが可能
+          ・最後の中Kにキャンセルがかかるため、ヒット確認に使用可能
+  - id: kk
+    displayName: 屈小K→中K
+    detail:
+      displayName: 屈小K→中K
+      superCancel: "○/×"
+      guard: 屈/両方
+      blocking: "↓/→"
+      damage: 30/40
+      stun: 3/4
+      stunReduction: 3/1
+      frameAdvantage:
+        guard: "-2"
+        standingHit: '0'
+        crouchingHit: "+2"
+      stats:
+        入力: 屈小K→中K
+        C: "☆/×"
+      noteGroups:
+      - id: item_cf8aa5b927
+        displayTitle: 補足
+        entries:
+        - |-
+          ・BLされても中KがBL有利時間を無視して発生するため、発生6フレーム以上の技を潰すことができる
+          ・下BLを狙う相手に有効
+  - id: kpp
+    displayName: 屈小K→屈中P→屈大P
+    detail:
+      displayName: 屈小K→屈中P→屈大P
+      superCancel: "○/×/×"
+      guard: 屈/両方/両方
+      blocking: "↓/両方/両方"
+      damage: 30/35/40
+      stun: 3/3/4
+      stunReduction: 3/3/3
+      stats:
+        入力: 屈小K→屈中P→屈大P
+        C: "☆/×/×"
+        ヒット&ガード硬直時間差(屈中P) ガード: "-1"
+        ヒット&ガード硬直時間差(屈中P) 立ヒット: '0'
+        ヒット&ガード硬直時間差(屈中P) 屈ヒット: '0'
+        ヒット&ガード硬直時間差(屈大P) ガード: "-2"
+        ヒット&ガード硬直時間差(屈大P) 立ヒット: '0'
+        ヒット&ガード硬直時間差(屈大P) 屈ヒット: '0'
+      noteGroups:
+      - id: item_cf8aa5b927
+        displayTitle: 補足
+        entries:
+        - 初段の屈小Kを2回にする事も可能
+  - id: kkpp
+    displayName: 立小K→中K→中P→大P
+    detail:
+      displayName: 立小K→中K→中P→大P
+      superCancel: "○/×/×/×"
+      guard: 両方/両方/両方/両方・両方
+      blocking: 両方/→ /→/→・→
+      damage: 40/40/30/20+20
+      stun: 3/4/3/3+3
+      stunReduction: 3/1/1/1・1
+      stats:
+        入力: 立小K→中K→中P→大P
+        C: "○/×/×/×"
+        ヒット&ガード硬直時間差(中K) ガード: "+1"
+        ヒット&ガード硬直時間差(中K) 立ヒット: "+3"
+        ヒット&ガード硬直時間差(中K) 屈ヒット: "+3"
+        ヒット&ガード硬直時間差(中P) ガード: "+2"
+        ヒット&ガード硬直時間差(中P) 立ヒット: "+3"
+        ヒット&ガード硬直時間差(中P) 屈ヒット: "+3"
+        ヒット&ガード硬直時間差(大P) ガード: '0'
+        ヒット&ガード硬直時間差(大P) 立ヒット: "+2"
+        ヒット&ガード硬直時間差(大P) 屈ヒット: "+2"
+  - id: pkp
+    displayName: 立中P→中K→大P
+    detail:
+      displayName: 立中P→中K→大P
+      superCancel: "○/×/×"
+      guard: 両方/両方/両方
+      blocking: "→/→ /→"
+      damage: 60/40/50
+      stun: 9/4/3
+      stunReduction: 3/1/1
+      stats:
+        入力: 立中P→中K→大P
+        C: "○/×/×"
+        ヒット&ガード硬直時間差(中K) ガード: "+1"
+        ヒット&ガード硬直時間差(中K) 立ヒット: "+3"
+        ヒット&ガード硬直時間差(中K) 屈ヒット: "+5"
+        ヒット&ガード硬直時間差(大P) ガード: "-4"
+        ヒット&ガード硬直時間差(大P) 立ヒット: "-2"
+        ヒット&ガード硬直時間差(大P) 屈ヒット: '0'
+  - id: 6kkp
+    displayName: 6中K→中K→大P
+    detail:
+      displayName: 6中K→中K→大P
+      superCancel: "○/×/×"
+      guard: 両方/両方/両方
+      blocking: "→/→ /→"
+      damage: 100/40/50
+      stun: 9/4/3
+      stunReduction: 3/1/1
+      stats:
+        入力: 6中K→中K→大P
+        C: "○/×/×"
+        ヒット&ガード硬直時間差(中K) ガード: "+1"
+        ヒット&ガード硬直時間差(中K) 立ヒット: "+3"
+        ヒット&ガード硬直時間差(中K) 屈ヒット: "+5"
+        ヒット&ガード硬直時間差(大P) ガード: "-4"
+        ヒット&ガード硬直時間差(大P) 立ヒット: "-2"
+        ヒット&ガード硬直時間差(大P) 屈ヒット: '0'
+  - id: kkp
+    displayName: 立中K→大K→大P
+    detail:
+      displayName: 立中K→大K→大P
+      superCancel: "×/×/×・×"
+      guard: 両方/両方/両方・両方
+      blocking: "→/→ /→・→"
+      damage: 80/60/20+20
+      stun: 11/6/3+3
+      stunReduction: 3/1/1・1
+      stats:
+        入力: 立中K→大K→大P
+        C: "×/×/×・×"
+        ヒット&ガード硬直時間差(大K) ガード: "-1"
+        ヒット&ガード硬直時間差(大K) 立ヒット: "+1"
+        ヒット&ガード硬直時間差(大K) 屈ヒット: "+1"
+        ヒット&ガード硬直時間差(大P) ガード: '0'
+        ヒット&ガード硬直時間差(大P) 立ヒット: "+2"
+        ヒット&ガード硬直時間差(大P) 屈ヒット: "+2"
+      noteGroups:
+      - id: item_cf8aa5b927
+        displayTitle: 補足
+        entries:
+        - 簡易対空として優秀
+  - id: 6kk
+    displayName: 6大K→中K
+    detail:
+      displayName: 6大K→中K
+      superCancel: "×/×"
+      guard: 立/両方
+      blocking: "→/→"
+      damage: 110/40
+      stun: 7/4
+      stunReduction: 3/1
+      frameAdvantage:
+        guard: "-2"
+        standingHit: '0'
+        crouchingHit: "+2"
+      stats:
+        入力: 6大K→中K
+        C: "×/×"

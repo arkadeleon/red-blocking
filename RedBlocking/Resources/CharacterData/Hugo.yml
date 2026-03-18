@@ -9,241 +9,6 @@ introduction:
     もう弱腰どもに愛想は尽きた。強者よ集え、弱虫は去れ。
     彼らの新たなチャレンジが始まった。
 moveGroups:
-- id: air_normals
-  displayTitle: "【空中通常技】"
-  entries:
-  - id: item_0213bd1615
-    displayName: ジャンプ小パンチ
-    variants:
-    - id: item_e0c2f756f3
-      displayName: 垂直
-      detail:
-        displayName: フライングチョップ
-        startup: '3'
-        active: '11'
-        damage: '40'
-        stun: '9'
-        stunReduction: '3'
-        meterGain:
-          whiff: '0'
-          guard: '2'
-          hit: '3'
-          bl: '4'
-    - id: item_25ab24896c
-      displayName: 斜め
-      detail:
-        displayName: フライングチョップ
-        startup: '3'
-        active: '11'
-        damage: '40'
-        stun: '9'
-        stunReduction: '3'
-        meterGain:
-          whiff: '0'
-          guard: '2'
-          hit: '3'
-          bl: '4'
-        media:
-          kind: motion_player
-          displayLabel: モーション
-          skillName: Jumping Jab
-          characterCode: '06'
-          skillCode: '007'
-  - id: item_a18c41f1f2
-    displayName: ジャンプ中パンチ
-    variants:
-    - id: item_f37ec8ba39
-      displayName: 垂直
-      detail:
-        displayName: フライングチョップ
-        startup: '6'
-        active: '8'
-        damage: '100'
-        stun: '13'
-        stunReduction: '3'
-        meterGain:
-          whiff: '2'
-          guard: '5'
-          hit: '9'
-          bl: '4'
-    - id: item_a7ee982c0e
-      displayName: 斜め
-      detail:
-        displayName: フライングチョップ
-        startup: '6'
-        active: '8'
-        damage: '100'
-        stun: '13'
-        stunReduction: '3'
-        meterGain:
-          whiff: '2'
-          guard: '5'
-          hit: '9'
-          bl: '4'
-        media:
-          kind: motion_player
-          displayLabel: モーション
-          skillName: Jumping Strong
-          characterCode: '06'
-          skillCode: '008'
-  - id: item_18529f13be
-    displayName: ジャンプ大パンチ
-    variants:
-    - id: item_ca5fa63a59
-      displayName: 垂直
-      detail:
-        displayName: フライングハンマー
-        startup: '11'
-        active: '5'
-        damage: '150'
-        stun: '17'
-        stunReduction: '3'
-        meterGain:
-          whiff: '3'
-          guard: '7'
-          hit: '15'
-          bl: '4'
-    - id: item_c36fb09951
-      displayName: 斜め
-      detail:
-        displayName: フライングハンマー
-        startup: '11'
-        active: '5'
-        damage: '150'
-        stun: '17'
-        stunReduction: '3'
-        meterGain:
-          whiff: '3'
-          guard: '7'
-          hit: '15'
-          bl: '4'
-        media:
-          kind: motion_player
-          displayLabel: モーション
-          skillName: Jumping Fierce
-          characterCode: '06'
-          skillCode: '009'
-  - id: item_a83e3f7cff
-    displayName: ジャンプ小キック
-    variants:
-    - id: item_f48ae8dc16
-      displayName: 垂直
-      detail:
-        displayName: ニーアタック
-        startup: '3'
-        active: '16'
-        damage: '60'
-        stun: '7'
-        stunReduction: '3'
-        meterGain:
-          whiff: '0'
-          guard: '2'
-          hit: '3'
-          bl: '4'
-    - id: item_adfe5e6bc9
-      displayName: 斜め
-      detail:
-        displayName: ニーアタック
-        startup: '3'
-        active: '16'
-        damage: '60'
-        stun: '7'
-        stunReduction: '3'
-        meterGain:
-          whiff: '0'
-          guard: '2'
-          hit: '3'
-          bl: '4'
-        media:
-          kind: motion_player
-          displayLabel: モーション
-          skillName: Jumping Short
-          characterCode: '06'
-          skillCode: '016'
-  - id: item_c3103eb1f9
-    displayName: ジャンプ中キック
-    variants:
-    - id: item_5280b1f280
-      displayName: 垂直
-      detail:
-        displayName: ニーアタック
-        startup: '5'
-        active: '7'
-        damage: '100'
-        stun: '11'
-        stunReduction: '3'
-        meterGain:
-          whiff: '2'
-          guard: '5'
-          hit: '9'
-          bl: '4'
-    - id: item_83fba48c4f
-      displayName: 斜め
-      detail:
-        displayName: ニーアタック
-        startup: '5'
-        active: '7'
-        damage: '100'
-        stun: '11'
-        stunReduction: '3'
-        meterGain:
-          whiff: '2'
-          guard: '5'
-          hit: '9'
-          bl: '4'
-        media:
-          kind: motion_player
-          displayLabel: モーション
-          skillName: Jumping Forward
-          characterCode: '06'
-          skillCode: '017'
-  - id: item_86e58a160f
-    displayName: ジャンプ大キック
-    variants:
-    - id: item_3b01b3c990
-      displayName: 垂直
-      detail:
-        displayName: ドロップキック
-        startup: '11'
-        active: '7'
-        damage: '130'
-        stun: '15'
-        stunReduction: '3'
-        meterGain:
-          whiff: '3'
-          guard: '7'
-          hit: '15'
-          bl: '4'
-        noteGroups:
-        - id: item_cf8aa5b927
-          displayTitle: 補足
-          entries:
-          - 横方向に判定が強い
-    - id: item_3e728dc7eb
-      displayName: 斜め
-      detail:
-        displayName: ドロップキック
-        startup: '11'
-        active: '7'
-        damage: '130'
-        stun: '15'
-        stunReduction: '3'
-        meterGain:
-          whiff: '3'
-          guard: '7'
-          hit: '15'
-          bl: '4'
-        noteGroups:
-        - id: item_cf8aa5b927
-          displayTitle: 補足
-          entries:
-          - 横方向に判定が強いので、飛び込みや空中での牽制に有効
-        media:
-          kind: motion_player
-          displayLabel: モーション
-          skillName: Jumping Roundhouse
-          characterCode: '06'
-          skillCode: '018'
 - id: ground_normals
   displayTitle: "【地上通常技】"
   entries:
@@ -678,273 +443,241 @@ moveGroups:
           skillName: Crouching Roundhouse
           characterCode: '06'
           skillCode: '015'
-- id: normal_throws
-  displayTitle: "【通常投げ】"
+- id: air_normals
+  displayTitle: "【空中通常技】"
   entries:
-  - id: item_3d367bce06
-    displayName: ネックハンギングツリー
-    detail:
-      displayName: ネックハンギングツリー
-      command: 小P+小K
-      startup: '2'
-      active: '1'
-      recovery: '21'
-      damage: 130(30×8)
-      stun: 24(5×8)
-      meterGain:
-        onWhiff: '0'
-        throwSuccess: 24(×8)
-      stats:
-        投げ間合い: '32'
-      noteGroups:
-      - id: item_cf8aa5b927
-        displayTitle: 補足
-        entries:
-        - |-
-          ・硬直は投げ失敗時のフレーム
-          ・連打投げ。最大ヒット数は「8」
-          ・画面端なら通常技やメガトンプレス等で追撃可能
-      media:
-        kind: motion_player
-        displayLabel: モーション
-        skillName: Neutral Throw
-        characterCode: '06'
-        skillCode: '021'
-  - id: item_b94e8154ab
-    displayName: ボディースラム
-    detail:
-      displayName: ボディースラム
-      command: |-
-        →+小P+小K
-        ←+小P+小K
-      startup: '2'
-      active: '1'
-      recovery: '21'
-      damage: '160'
-      stun: '13'
-      meterGain:
-        onWhiff: '0'
-        throwSuccess: '7'
-      stats:
-        投げ間合い: '32'
-      noteGroups:
-      - id: item_cf8aa5b927
-        displayTitle: 補足
-        entries:
-        - |-
-          ・硬直は投げ失敗時のフレーム
-          ・左右に投げ分ける事が可能
-      media:
-        kind: motion_player
-        displayLabel: モーション
-        skillName: Throw
-        characterCode: '06'
-        skillCode: '022'
-- id: lever_input_moves
-  displayTitle: "【レバー入れ技】"
-  entries:
-  - id: item_e08aeeb8f5
-    displayName: ボディプレス
-    detail:
-      displayName: ボディプレス
-      command: ジャンプ中に1or2or3+大P
-      guard: 立
-      blocking: "→"
-      startup: '9'
-      active: 着地まで
-      recovery: "―"
-      damage: '100'
-      stun: '17'
-      stunReduction: '3'
-      meterGain:
-        whiff: '3'
-        guard: '7'
-        hit: '15'
-        bl: '4'
-      frameAdvantage:
-        guard: "―"
-        standingHit: "―"
-        crouchingHit: "―"
-      stats:
-        C/SC: "×"
-      noteGroups:
-      - id: item_cf8aa5b927
-        displayTitle: 補足
-        entries:
-        - |-
-          ・持続はボタンを押すタイミングで変化
-          ・めくりヒットさせることが可能
-      media:
-        kind: motion_player
-        displayLabel: モーション
-        skillName: Down + Fierce (Air)
-        characterCode: '06'
-        skillCode: '020'
-  - id: item_d0981b66c3
-    displayName: ハンマーフック
-    detail:
-      displayName: ハンマーフック
-      command: 6+大P
-      guard: 両方
-      blocking: "→"
-      startup: '14'
-      active: '4'
-      recovery: 33(31)
-      damage: '160'
-      stun: '21'
-      stunReduction: '1'
-      meterGain:
-        whiff: '3'
-        guard: '7'
-        hit: '15'
-        bl: '4'
-      frameAdvantage:
-        guard: "-14"
-        standingHit: "+4"
-        crouchingHit: "+4"
-      stats:
-        C/SC: "×"
-      noteGroups:
-      - id: item_cf8aa5b927
-        displayTitle: 補足
-        entries:
-        - 硬直欄のカッコ内の数値はヒット時のもの
-      media:
-        kind: motion_player
-        displayLabel: モーション
-        skillName: Towards + Fierce
-        characterCode: '06'
-        skillCode: '019'
-  - id: item_6d1ad660f8
-    displayName: ドロップキック
-    detail:
-      displayName: ドロップキック
-      command: 1 or 3+大K
-      guard: 立
-      blocking: "→"
-      startup: '21'
-      active: '8'
-      recovery: '27'
-      damage: '150'
-      stun: '19'
-      stunReduction: '1'
-      meterGain:
-        whiff: '3'
-        guard: '7'
-        hit: '15'
-        bl: '4'
-      frameAdvantage:
-        guard: "-12"
-        standingHit: "+4"
-        crouchingHit: "+4"
-      stats:
-        C/SC: "×"
-      noteGroups:
-      - id: item_cf8aa5b927
-        displayTitle: 補足
-        entries:
-        - |-
-          ・硬直中に相手が背後に回った場合は、硬直が「25」になる
-          ・基本的に立大Kと同じだが、前後の移動距離が変わる
-- id: command_normals
-  displayTitle: "【特殊入力技】"
-  entries:
-  - id: item_ac52a72820
-    displayName: リープアタック
-    detail:
-      displayName: ニーアタック
-      command: 中P+中K
-      guard: 立
-      blocking: "→"
-      startup: '15'
-      active: '10'
-      recovery: '5'
-      damage: '40'
-      stun: '3'
-      stunReduction: '1'
-      meterGain:
-        whiff: '0'
-        guard: '1'
-        hit: '2'
-        bl: '4'
-      frameAdvantage:
-        guard: "-5～+7"
-        standingHit: 0～+8
-        crouchingHit: "+1～+9"
-      stats:
-        C/SC: "×"
-      noteGroups:
-      - id: item_cf8aa5b927
-        displayTitle: 補足
-        entries:
-        - |-
-          ・コマンド完成後、5フレーム目から空中判定に移行
-          ・技の下りを当てることで、SAや発生の速い通常技に繋ぐことが可能
-      media:
-        kind: motion_player
-        displayLabel: モーション
-        skillName: Universal Overhead
-        characterCode: '06'
-        skillCode: '023'
-  - id: item_7ae3c90cde
-    displayName: パーソナルアクション
-    children:
-    - id: item_f94c7805ea
-      displayName: 威嚇(いかく)
+  - id: item_0213bd1615
+    displayName: ジャンプ小パンチ
+    variants:
+    - id: item_e0c2f756f3
+      displayName: 垂直
       detail:
-        displayName: 威嚇(いかく)
-        command: 大P+大K
-        guard: "―"
-        blocking: "―"
-        startup: "―"
-        active: 67(97)
-        recovery: "―"
-        damage: "―"
-        stun: "―"
-        stunReduction: "―"
-        stats:
-          C/SC: "×"
-          ゲージ増加: 5(7)
+        displayName: フライングチョップ
+        startup: '3'
+        active: '11'
+        damage: '40'
+        stun: '9'
+        stunReduction: '3'
+        meterGain:
+          whiff: '0'
+          guard: '2'
+          hit: '3'
+          bl: '4'
+    - id: item_25ab24896c
+      displayName: 斜め
+      detail:
+        displayName: フライングチョップ
+        startup: '3'
+        active: '11'
+        damage: '40'
+        stun: '9'
+        stunReduction: '3'
+        meterGain:
+          whiff: '0'
+          guard: '2'
+          hit: '3'
+          bl: '4'
+        media:
+          kind: motion_player
+          displayLabel: モーション
+          skillName: Jumping Jab
+          characterCode: '06'
+          skillCode: '007'
+  - id: item_a18c41f1f2
+    displayName: ジャンプ中パンチ
+    variants:
+    - id: item_f37ec8ba39
+      displayName: 垂直
+      detail:
+        displayName: フライングチョップ
+        startup: '6'
+        active: '8'
+        damage: '100'
+        stun: '13'
+        stunReduction: '3'
+        meterGain:
+          whiff: '2'
+          guard: '5'
+          hit: '9'
+          bl: '4'
+    - id: item_a7ee982c0e
+      displayName: 斜め
+      detail:
+        displayName: フライングチョップ
+        startup: '6'
+        active: '8'
+        damage: '100'
+        stun: '13'
+        stunReduction: '3'
+        meterGain:
+          whiff: '2'
+          guard: '5'
+          hit: '9'
+          bl: '4'
+        media:
+          kind: motion_player
+          displayLabel: モーション
+          skillName: Jumping Strong
+          characterCode: '06'
+          skillCode: '008'
+  - id: item_18529f13be
+    displayName: ジャンプ大パンチ
+    variants:
+    - id: item_ca5fa63a59
+      displayName: 垂直
+      detail:
+        displayName: フライングハンマー
+        startup: '11'
+        active: '5'
+        damage: '150'
+        stun: '17'
+        stunReduction: '3'
+        meterGain:
+          whiff: '3'
+          guard: '7'
+          hit: '15'
+          bl: '4'
+    - id: item_c36fb09951
+      displayName: 斜め
+      detail:
+        displayName: フライングハンマー
+        startup: '11'
+        active: '5'
+        damage: '150'
+        stun: '17'
+        stunReduction: '3'
+        meterGain:
+          whiff: '3'
+          guard: '7'
+          hit: '15'
+          bl: '4'
+        media:
+          kind: motion_player
+          displayLabel: モーション
+          skillName: Jumping Fierce
+          characterCode: '06'
+          skillCode: '009'
+  - id: item_a83e3f7cff
+    displayName: ジャンプ小キック
+    variants:
+    - id: item_f48ae8dc16
+      displayName: 垂直
+      detail:
+        displayName: ニーアタック
+        startup: '3'
+        active: '16'
+        damage: '60'
+        stun: '7'
+        stunReduction: '3'
+        meterGain:
+          whiff: '0'
+          guard: '2'
+          hit: '3'
+          bl: '4'
+    - id: item_adfe5e6bc9
+      displayName: 斜め
+      detail:
+        displayName: ニーアタック
+        startup: '3'
+        active: '16'
+        damage: '60'
+        stun: '7'
+        stunReduction: '3'
+        meterGain:
+          whiff: '0'
+          guard: '2'
+          hit: '3'
+          bl: '4'
+        media:
+          kind: motion_player
+          displayLabel: モーション
+          skillName: Jumping Short
+          characterCode: '06'
+          skillCode: '016'
+  - id: item_c3103eb1f9
+    displayName: ジャンプ中キック
+    variants:
+    - id: item_5280b1f280
+      displayName: 垂直
+      detail:
+        displayName: ニーアタック
+        startup: '5'
+        active: '7'
+        damage: '100'
+        stun: '11'
+        stunReduction: '3'
+        meterGain:
+          whiff: '2'
+          guard: '5'
+          hit: '9'
+          bl: '4'
+    - id: item_83fba48c4f
+      displayName: 斜め
+      detail:
+        displayName: ニーアタック
+        startup: '5'
+        active: '7'
+        damage: '100'
+        stun: '11'
+        stunReduction: '3'
+        meterGain:
+          whiff: '2'
+          guard: '5'
+          hit: '9'
+          bl: '4'
+        media:
+          kind: motion_player
+          displayLabel: モーション
+          skillName: Jumping Forward
+          characterCode: '06'
+          skillCode: '017'
+  - id: item_86e58a160f
+    displayName: ジャンプ大キック
+    variants:
+    - id: item_3b01b3c990
+      displayName: 垂直
+      detail:
+        displayName: ドロップキック
+        startup: '11'
+        active: '7'
+        damage: '130'
+        stun: '15'
+        stunReduction: '3'
+        meterGain:
+          whiff: '3'
+          guard: '7'
+          hit: '15'
+          bl: '4'
         noteGroups:
-        - id: item_f11e32f4cf
-          displayTitle: 効果
-          entries:
-          - |-
-            ・直後に出した投げ以外の攻撃の攻撃力アップ
-            ・押し続ける事で投げダメージアップ
-            ・4段階まで防御力アップ
         - id: item_cf8aa5b927
           displayTitle: 補足
           entries:
-          - "・押しっぱなし可。押し続ける事で効果アップ\n・防御力アップはそのラウンド中、有効\n・4段階まであげれば、QのPA2回以上の防御力になる \n・オロやヒューゴーなどは、ダウンさせられてQSを取っても反撃できないのでかなり有効\n・持続のカッコ内の数値は押しっぱなしのもの\n・ゲージ増加のカッコ内の数値は1本制のもの"
-    - id: item_0a0b143ec0
-      displayName: 威嚇+ポイズン挑発
+          - 横方向に判定が強い
+    - id: item_3e728dc7eb
+      displayName: 斜め
       detail:
-        displayName: 威嚇+ポイズン挑発
-        command: スタートボタン+大P+大K(家庭用は上と同時押し)
-        guard: "―"
-        blocking: "―"
-        startup: "―"
-        active: '67'
-        recovery: "―"
-        damage: "―"
-        stun: "―"
-        stunReduction: "―"
-        stats:
-          C/SC: "×"
-          ゲージ増加: 5(7)
+        displayName: ドロップキック
+        startup: '11'
+        active: '7'
+        damage: '130'
+        stun: '15'
+        stunReduction: '3'
+        meterGain:
+          whiff: '3'
+          guard: '7'
+          hit: '15'
+          bl: '4'
         noteGroups:
-        - id: item_f11e32f4cf
-          displayTitle: 効果
-          entries:
-          - |-
-            ・直後に出した投げ以外の攻撃の攻撃力アップ
-            ・押し続ける事で投げダメージアップ
-            ・4段階まで防御力アップ
         - id: item_cf8aa5b927
           displayTitle: 補足
           entries:
-          - "・押しっぱなし可。押し続ける事で効果アップ\n・防御力アップはそのラウンド中、有効\n・4段階まであげれば、QのPA2回以上の防御力になる \n・オロやヒューゴーなどは、ダウンさせられてQSを取っても反撃できないのでかなり有効\n・持続のカッコ内の数値は押しっぱなしのもの\n・ゲージ増加のカッコ内の数値は1本制のもの"
+          - 横方向に判定が強いので、飛び込みや空中での牽制に有効
+        media:
+          kind: motion_player
+          displayLabel: モーション
+          skillName: Jumping Roundhouse
+          characterCode: '06'
+          skillCode: '018'
 - id: special_moves
   displayTitle: "【必殺技】"
   entries:
@@ -1850,3 +1583,270 @@ moveGroups:
         skillName: Hammer Frenzy
         characterCode: '06'
         skillCode: '048'
+- id: lever_input_moves
+  displayTitle: "【レバー入れ技】"
+  entries:
+  - id: item_e08aeeb8f5
+    displayName: ボディプレス
+    detail:
+      displayName: ボディプレス
+      command: ジャンプ中に1or2or3+大P
+      guard: 立
+      blocking: "→"
+      startup: '9'
+      active: 着地まで
+      recovery: "―"
+      damage: '100'
+      stun: '17'
+      stunReduction: '3'
+      meterGain:
+        whiff: '3'
+        guard: '7'
+        hit: '15'
+        bl: '4'
+      frameAdvantage:
+        guard: "―"
+        standingHit: "―"
+        crouchingHit: "―"
+      stats:
+        C/SC: "×"
+      noteGroups:
+      - id: item_cf8aa5b927
+        displayTitle: 補足
+        entries:
+        - |-
+          ・持続はボタンを押すタイミングで変化
+          ・めくりヒットさせることが可能
+      media:
+        kind: motion_player
+        displayLabel: モーション
+        skillName: Down + Fierce (Air)
+        characterCode: '06'
+        skillCode: '020'
+  - id: item_d0981b66c3
+    displayName: ハンマーフック
+    detail:
+      displayName: ハンマーフック
+      command: 6+大P
+      guard: 両方
+      blocking: "→"
+      startup: '14'
+      active: '4'
+      recovery: 33(31)
+      damage: '160'
+      stun: '21'
+      stunReduction: '1'
+      meterGain:
+        whiff: '3'
+        guard: '7'
+        hit: '15'
+        bl: '4'
+      frameAdvantage:
+        guard: "-14"
+        standingHit: "+4"
+        crouchingHit: "+4"
+      stats:
+        C/SC: "×"
+      noteGroups:
+      - id: item_cf8aa5b927
+        displayTitle: 補足
+        entries:
+        - 硬直欄のカッコ内の数値はヒット時のもの
+      media:
+        kind: motion_player
+        displayLabel: モーション
+        skillName: Towards + Fierce
+        characterCode: '06'
+        skillCode: '019'
+  - id: item_6d1ad660f8
+    displayName: ドロップキック
+    detail:
+      displayName: ドロップキック
+      command: 1 or 3+大K
+      guard: 立
+      blocking: "→"
+      startup: '21'
+      active: '8'
+      recovery: '27'
+      damage: '150'
+      stun: '19'
+      stunReduction: '1'
+      meterGain:
+        whiff: '3'
+        guard: '7'
+        hit: '15'
+        bl: '4'
+      frameAdvantage:
+        guard: "-12"
+        standingHit: "+4"
+        crouchingHit: "+4"
+      stats:
+        C/SC: "×"
+      noteGroups:
+      - id: item_cf8aa5b927
+        displayTitle: 補足
+        entries:
+        - |-
+          ・硬直中に相手が背後に回った場合は、硬直が「25」になる
+          ・基本的に立大Kと同じだが、前後の移動距離が変わる
+- id: normal_throws
+  displayTitle: "【通常投げ】"
+  entries:
+  - id: item_3d367bce06
+    displayName: ネックハンギングツリー
+    detail:
+      displayName: ネックハンギングツリー
+      command: 小P+小K
+      startup: '2'
+      active: '1'
+      recovery: '21'
+      damage: 130(30×8)
+      stun: 24(5×8)
+      meterGain:
+        onWhiff: '0'
+        throwSuccess: 24(×8)
+      stats:
+        投げ間合い: '32'
+      noteGroups:
+      - id: item_cf8aa5b927
+        displayTitle: 補足
+        entries:
+        - |-
+          ・硬直は投げ失敗時のフレーム
+          ・連打投げ。最大ヒット数は「8」
+          ・画面端なら通常技やメガトンプレス等で追撃可能
+      media:
+        kind: motion_player
+        displayLabel: モーション
+        skillName: Neutral Throw
+        characterCode: '06'
+        skillCode: '021'
+  - id: item_b94e8154ab
+    displayName: ボディースラム
+    detail:
+      displayName: ボディースラム
+      command: |-
+        →+小P+小K
+        ←+小P+小K
+      startup: '2'
+      active: '1'
+      recovery: '21'
+      damage: '160'
+      stun: '13'
+      meterGain:
+        onWhiff: '0'
+        throwSuccess: '7'
+      stats:
+        投げ間合い: '32'
+      noteGroups:
+      - id: item_cf8aa5b927
+        displayTitle: 補足
+        entries:
+        - |-
+          ・硬直は投げ失敗時のフレーム
+          ・左右に投げ分ける事が可能
+      media:
+        kind: motion_player
+        displayLabel: モーション
+        skillName: Throw
+        characterCode: '06'
+        skillCode: '022'
+- id: common_moves
+  displayTitle: "【特殊入力技】"
+  entries:
+  - id: item_ac52a72820
+    displayName: リープアタック
+    detail:
+      displayName: ニーアタック
+      command: 中P+中K
+      guard: 立
+      blocking: "→"
+      startup: '15'
+      active: '10'
+      recovery: '5'
+      damage: '40'
+      stun: '3'
+      stunReduction: '1'
+      meterGain:
+        whiff: '0'
+        guard: '1'
+        hit: '2'
+        bl: '4'
+      frameAdvantage:
+        guard: "-5～+7"
+        standingHit: 0～+8
+        crouchingHit: "+1～+9"
+      stats:
+        C/SC: "×"
+      noteGroups:
+      - id: item_cf8aa5b927
+        displayTitle: 補足
+        entries:
+        - |-
+          ・コマンド完成後、5フレーム目から空中判定に移行
+          ・技の下りを当てることで、SAや発生の速い通常技に繋ぐことが可能
+      media:
+        kind: motion_player
+        displayLabel: モーション
+        skillName: Universal Overhead
+        characterCode: '06'
+        skillCode: '023'
+  - id: item_7ae3c90cde
+    displayName: パーソナルアクション
+    children:
+    - id: item_f94c7805ea
+      displayName: 威嚇(いかく)
+      detail:
+        displayName: 威嚇(いかく)
+        command: 大P+大K
+        guard: "―"
+        blocking: "―"
+        startup: "―"
+        active: 67(97)
+        recovery: "―"
+        damage: "―"
+        stun: "―"
+        stunReduction: "―"
+        stats:
+          C/SC: "×"
+          ゲージ増加: 5(7)
+        noteGroups:
+        - id: item_f11e32f4cf
+          displayTitle: 効果
+          entries:
+          - |-
+            ・直後に出した投げ以外の攻撃の攻撃力アップ
+            ・押し続ける事で投げダメージアップ
+            ・4段階まで防御力アップ
+        - id: item_cf8aa5b927
+          displayTitle: 補足
+          entries:
+          - "・押しっぱなし可。押し続ける事で効果アップ\n・防御力アップはそのラウンド中、有効\n・4段階まであげれば、QのPA2回以上の防御力になる \n・オロやヒューゴーなどは、ダウンさせられてQSを取っても反撃できないのでかなり有効\n・持続のカッコ内の数値は押しっぱなしのもの\n・ゲージ増加のカッコ内の数値は1本制のもの"
+    - id: item_0a0b143ec0
+      displayName: 威嚇+ポイズン挑発
+      detail:
+        displayName: 威嚇+ポイズン挑発
+        command: スタートボタン+大P+大K(家庭用は上と同時押し)
+        guard: "―"
+        blocking: "―"
+        startup: "―"
+        active: '67'
+        recovery: "―"
+        damage: "―"
+        stun: "―"
+        stunReduction: "―"
+        stats:
+          C/SC: "×"
+          ゲージ増加: 5(7)
+        noteGroups:
+        - id: item_f11e32f4cf
+          displayTitle: 効果
+          entries:
+          - |-
+            ・直後に出した投げ以外の攻撃の攻撃力アップ
+            ・押し続ける事で投げダメージアップ
+            ・4段階まで防御力アップ
+        - id: item_cf8aa5b927
+          displayTitle: 補足
+          entries:
+          - "・押しっぱなし可。押し続ける事で効果アップ\n・防御力アップはそのラウンド中、有効\n・4段階まであげれば、QのPA2回以上の防御力になる \n・オロやヒューゴーなどは、ダウンさせられてQSを取っても反撃できないのでかなり有効\n・持続のカッコ内の数値は押しっぱなしのもの\n・ゲージ増加のカッコ内の数値は1本制のもの"
