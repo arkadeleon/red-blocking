@@ -135,6 +135,22 @@ struct MoveBrowserProjectorTests {
         #expect(noteSection.title == "EX版")
     }
 
+    // MARK: - Entry with variants
+
+    @Test("Entry with variants projects to page with variantNames and variantSections")
+    func entryWithVariantsProjectsToVariantPage() throws {
+        let rootPage = try loadPage(yaml: Fixtures.profileWithVariantEntry)
+        let variantPage = try navigate(from: rootPage, through: ["ジャンプ小パンチ"])
+        #expect(variantPage.navigationTitle == "ジャンプ小パンチ")
+        #expect(variantPage.sections.isEmpty)
+        #expect(variantPage.variantNames == ["垂直", "斜め"])
+        #expect(variantPage.variantSections.count == 2)
+        let firstSections = variantPage.variantSections[0]
+        let primarySection = try #require(firstSections.first)
+        let techNameRow = try #require(primarySection.rows.first(where: { $0.title == "技名" }))
+        #expect(techNameRow.kind == .detail)
+    }
+
     // MARK: - Stats label splitting
 
     @Test("Stats label with space is split into section title and row title")
@@ -363,6 +379,47 @@ private enum Fixtures {
                   displayTitle: "EX版"
                   entries:
                     - "Note text"
+    """
+
+    // A profile where the air entry has two variants (垂直 / 斜め).
+    static let profileWithVariantEntry = """
+    character:
+      id: test
+      displayName: Test
+    introduction:
+      displayTitle: "Title"
+      body: "Body"
+    moveGroups:
+      - id: air_normals
+        displayTitle: "Air"
+        entries:
+          - id: entry_001
+            displayName: "ジャンプ小パンチ"
+            variants:
+              - id: var_001
+                displayName: "垂直"
+                detail:
+                  displayName: "肘落とし"
+                  startup: "4"
+                  damage: "60"
+              - id: var_002
+                displayName: "斜め"
+                detail:
+                  displayName: "肘落とし"
+                  startup: "4"
+                  damage: "50"
+      - id: ground_normals
+        displayTitle: "Ground"
+        entries: []
+      - id: command_normals
+        displayTitle: "Command"
+        entries: []
+      - id: special_moves
+        displayTitle: "Special"
+        entries: []
+      - id: super_arts
+        displayTitle: "Super"
+        entries: []
     """
 
     // Stats entry with a space-separated label "通常 ヒット".

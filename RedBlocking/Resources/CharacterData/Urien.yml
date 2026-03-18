@@ -14,9 +14,9 @@ moveGroups:
   entries:
   - id: item_0213bd1615
     displayName: ジャンプ小パンチ
-    children:
+    variants:
     - id: item_e0c2f756f3
-      displayName: 垂直ジャンプ小パンチ
+      displayName: 垂直
       detail:
         displayName: エルボー
         startup: '4'
@@ -30,7 +30,7 @@ moveGroups:
           hit: '2'
           bl: '4'
     - id: item_25ab24896c
-      displayName: 斜めジャンプ小パンチ
+      displayName: 斜め
       detail:
         displayName: エルボー
         startup: '4'
@@ -59,9 +59,9 @@ moveGroups:
           skillCode: '007'
   - id: item_a18c41f1f2
     displayName: ジャンプ中パンチ
-    children:
+    variants:
     - id: item_f37ec8ba39
-      displayName: 垂直ジャンプ中パンチ
+      displayName: 垂直
       detail:
         displayName: エリアルパンチ
         startup: '6'
@@ -80,7 +80,7 @@ moveGroups:
           entries:
           - ユリアンの空中技の中で一番リーチがある
     - id: item_a7ee982c0e
-      displayName: 斜めジャンプ中パンチ
+      displayName: 斜め
       detail:
         displayName: エリアルパンチ
         startup: '6'
@@ -108,9 +108,9 @@ moveGroups:
           skillCode: '008'
   - id: item_18529f13be
     displayName: ジャンプ大パンチ
-    children:
+    variants:
     - id: item_ca5fa63a59
-      displayName: 垂直ジャンプ大パンチ
+      displayName: 垂直
       detail:
         displayName: エリアルチョップ
         startup: '7'
@@ -131,7 +131,7 @@ moveGroups:
             ・出が意外に速く判定は下方向に強い
             ・空対空や飛び込みに使用する
     - id: item_c36fb09951
-      displayName: 斜めジャンプ大パンチ
+      displayName: 斜め
       detail:
         displayName: エリアルチョップ
         startup: '7'
@@ -159,9 +159,9 @@ moveGroups:
           skillCode: '009'
   - id: item_a83e3f7cff
     displayName: ジャンプ小キック
-    children:
+    variants:
     - id: item_f48ae8dc16
-      displayName: 垂直ジャンプ小キック
+      displayName: 垂直
       detail:
         displayName: フライングニー
         startup: '4'
@@ -180,7 +180,7 @@ moveGroups:
           entries:
           - 空対空で出して相手にBLされた場合、相手の反撃が少し遅れたらユリアン側がBLを仕返す事ができる
     - id: item_adfe5e6bc9
-      displayName: 斜めジャンプ小キック
+      displayName: 斜め
       detail:
         displayName: フライングニー
         startup: '4'
@@ -206,9 +206,9 @@ moveGroups:
           skillCode: '016'
   - id: item_c3103eb1f9
     displayName: ジャンプ中キック
-    children:
+    variants:
     - id: item_5280b1f280
-      displayName: 垂直ジャンプ中キック
+      displayName: 垂直
       detail:
         displayName: ジャンプキック
         startup: '6'
@@ -227,7 +227,7 @@ moveGroups:
           entries:
           - 横に対する判定が強いが、あまり使用しない
     - id: item_83fba48c4f
-      displayName: 斜めジャンプ中キック
+      displayName: 斜め
       detail:
         displayName: ジャンプキック
         startup: '6'
@@ -253,9 +253,9 @@ moveGroups:
           skillCode: '017'
   - id: item_86e58a160f
     displayName: ジャンプ大キック
-    children:
+    variants:
     - id: item_3b01b3c990
-      displayName: 垂直ジャンプ大キック
+      displayName: 垂直
       detail:
         displayName: ラウンドキック
         startup: '10'
@@ -276,7 +276,7 @@ moveGroups:
             ・下&横方向に判定が強いので、飛び込みや牽制の主戦力として使用する
             ・垂直ジャンプしてからのJ大Kは牽制として非常に優秀
     - id: item_3e728dc7eb
-      displayName: 斜めジャンプ大キック
+      displayName: 斜め
       detail:
         displayName: ラウンドキック
         startup: '10'
@@ -307,9 +307,9 @@ moveGroups:
   entries:
   - id: item_3ea1d5a710
     displayName: 小パンチ
-    children:
+    variants:
     - id: item_b3c755935b
-      displayName: 立ち小パンチ
+      displayName: 立ち
       detail:
         displayName: ジャブ
         guard: 両方
@@ -343,7 +343,7 @@ moveGroups:
           characterCode: '13'
           skillCode: '001'
     - id: item_405c8e8de7
-      displayName: しゃがみ小パンチ
+      displayName: しゃがみ
       detail:
         displayName: クラウチングスナップ
         guard: 両方
@@ -381,9 +381,9 @@ moveGroups:
           skillCode: '004'
   - id: item_e4873eadbb
     displayName: 中パンチ
-    children:
+    variants:
     - id: item_031d163aa0
-      displayName: 立ち中パンチ
+      displayName: 立ち
       detail:
         displayName: ストレート
         guard: 両方
@@ -421,7 +421,7 @@ moveGroups:
           characterCode: '13'
           skillCode: '002'
     - id: item_1a60e91335
-      displayName: しゃがみ中パンチ
+      displayName: しゃがみ
       detail:
         displayName: トーピ-ドエルボー
         guard: 両方
@@ -458,9 +458,9 @@ moveGroups:
           skillCode: '005'
   - id: item_9cd6396df9
     displayName: 大パンチ
-    children:
+    variants:
     - id: item_a210c0e105
-      displayName: 立ち大パンチ
+      displayName: 立ち
       detail:
         displayName: チョップ
         guard: 両方
@@ -497,7 +497,7 @@ moveGroups:
           characterCode: '13'
           skillCode: '003'
     - id: item_5fa451ab6c
-      displayName: しゃがみ大パンチ
+      displayName: しゃがみ
       detail:
         displayName: エルボーアッパー
         guard: 両方・両方
@@ -536,9 +536,9 @@ moveGroups:
           skillCode: '006'
   - id: item_d9b7c6ef7c
     displayName: 小キック
-    children:
+    variants:
     - id: item_c1732c476a
-      displayName: 立ち小キック
+      displayName: 立ち
       detail:
         displayName: ローキック
         guard: 両方
@@ -572,7 +572,7 @@ moveGroups:
           characterCode: '13'
           skillCode: '010'
     - id: item_f39ad9b46e
-      displayName: しゃがみ小キック
+      displayName: しゃがみ
       detail:
         displayName: クラウチングキック
         guard: 屈
@@ -607,9 +607,9 @@ moveGroups:
           skillCode: '013'
   - id: item_f57c120b54
     displayName: 中キック
-    children:
+    variants:
     - id: item_f26b91a736
-      displayName: 立ち中キック
+      displayName: 立ち
       detail:
         displayName: ミドルキック
         guard: 両方
@@ -645,7 +645,7 @@ moveGroups:
           characterCode: '13'
           skillCode: '011'
     - id: item_472cfdbed3
-      displayName: しゃがみ中キック
+      displayName: しゃがみ
       detail:
         displayName: アンクルブレイク
         guard: 屈
@@ -680,9 +680,9 @@ moveGroups:
           skillCode: '014'
   - id: item_e36c152d49
     displayName: 大キック
-    children:
+    variants:
     - id: item_dd8d899c80
-      displayName: 立ち大キック
+      displayName: 立ち
       detail:
         displayName: サイズキック
         guard: 立・立
@@ -718,7 +718,7 @@ moveGroups:
           characterCode: '13'
           skillCode: '012'
     - id: item_d653890f75
-      displayName: しゃがみ大キック
+      displayName: しゃがみ
       detail:
         displayName: グラウンドスイープ
         guard: 屈

@@ -13,9 +13,9 @@ moveGroups:
   entries:
   - id: item_0213bd1615
     displayName: ジャンプ小パンチ
-    children:
+    variants:
     - id: item_e0c2f756f3
-      displayName: 垂直ジャンプ小パンチ
+      displayName: 垂直
       detail:
         displayName: 跳び貫手 「茜」(あかね)
         startup: '9'
@@ -35,7 +35,7 @@ moveGroups:
           characterCode: '17'
           skillCode: '011'
     - id: item_25ab24896c
-      displayName: 斜めジャンプ小パンチ
+      displayName: 斜め
       detail:
         displayName: 跳び拳 「千草」(ちぐさ)
         startup: '4'
@@ -56,9 +56,9 @@ moveGroups:
           skillCode: '014'
   - id: item_a18c41f1f2
     displayName: ジャンプ中パンチ
-    children:
+    variants:
     - id: item_f37ec8ba39
-      displayName: 垂直ジャンプ中パンチ
+      displayName: 垂直
       detail:
         displayName: 跳び貫手 「茜」(あかね)
         startup: '11'
@@ -78,7 +78,7 @@ moveGroups:
           characterCode: '17'
           skillCode: '012'
     - id: item_a7ee982c0e
-      displayName: 斜めジャンプ中パンチ
+      displayName: 斜め
       detail:
         displayName: 跳び拳 「千草」(ちぐさ)
         startup: '11'
@@ -99,9 +99,9 @@ moveGroups:
           skillCode: '015'
   - id: item_18529f13be
     displayName: ジャンプ大パンチ
-    children:
+    variants:
     - id: item_ca5fa63a59
-      displayName: 垂直ジャンプ大パンチ
+      displayName: 垂直
       detail:
         displayName: 跳び手刀「竜胆」(りんどう)
         startup: '13'
@@ -126,7 +126,7 @@ moveGroups:
           characterCode: '17'
           skillCode: '013'
     - id: item_c36fb09951
-      displayName: 斜めジャンプ大パンチ
+      displayName: 斜め
       detail:
         displayName: 跳び巴手刀「杜若」(かきつばた)
         startup: '10'
@@ -152,9 +152,9 @@ moveGroups:
           skillCode: '016'
   - id: item_a83e3f7cff
     displayName: ジャンプ小キック
-    children:
+    variants:
     - id: item_f48ae8dc16
-      displayName: 垂直ジャンプ小キック
+      displayName: 垂直
       detail:
         displayName: 跳び膝蹴り 「鏑」(かぶら)
         startup: '2'
@@ -168,7 +168,7 @@ moveGroups:
           hit: '2'
           bl: '4'
     - id: item_adfe5e6bc9
-      displayName: 斜めジャンプ小キック
+      displayName: 斜め
       detail:
         displayName: 跳び膝蹴り 「鏑」(かぶら)
         startup: '2'
@@ -196,9 +196,9 @@ moveGroups:
           skillCode: '026'
   - id: item_c3103eb1f9
     displayName: ジャンプ中キック
-    children:
+    variants:
     - id: item_5280b1f280
-      displayName: 垂直ジャンプ中キック
+      displayName: 垂直
       detail:
         displayName: 跳び足刀 「太刀」(たち)
         startup: '7'
@@ -220,7 +220,7 @@ moveGroups:
             ・判定が下方向に強く、持続が長いので、ジャンプ頂点付近から出して暴れを潰したり、タイミングをずらしたりして使用する
             ・ヒット時にSA1に繋げられるキャラも多い
     - id: item_83fba48c4f
-      displayName: 斜めジャンプ中キック
+      displayName: 斜め
       detail:
         displayName: 跳び足刀 「太刀」(たち)
         startup: '7'
@@ -248,9 +248,9 @@ moveGroups:
           skillCode: '027'
   - id: item_86e58a160f
     displayName: ジャンプ大キック
-    children:
+    variants:
     - id: item_3b01b3c990
-      displayName: 垂直ジャンプ大キック
+      displayName: 垂直
       detail:
         displayName: 跳び一文字蹴り 「長柄」(ながえ)
         startup: '6'
@@ -269,7 +269,7 @@ moveGroups:
           entries:
           - 垂直ジャンプからの連係、コンボの始動技として使用
     - id: item_3e728dc7eb
-      displayName: 斜めジャンプ大キック
+      displayName: 斜め
       detail:
         displayName: 跳び一文字蹴り「長柄」(ながえ)
         startup: '6'
@@ -298,9 +298,9 @@ moveGroups:
   entries:
   - id: item_3ea1d5a710
     displayName: 小パンチ
-    children:
+    variants:
     - id: item_b3c755935b
-      displayName: 立ち小パンチ
+      displayName: 立ち
       detail:
         displayName: 小手払い 「瞬」(しばたき)
         guard: 両方
@@ -336,7 +336,7 @@ moveGroups:
           characterCode: '17'
           skillCode: '001'
     - id: item_1271af6462
-      displayName: "→入れ立ち小パンチ"
+      displayName: →入れ立ち
       detail:
         displayName: 小手突き 「風見」(かざみ)
         guard: 両方
@@ -372,7 +372,7 @@ moveGroups:
           characterCode: '17'
           skillCode: '004'
     - id: item_405c8e8de7
-      displayName: しゃがみ小パンチ
+      displayName: しゃがみ
       detail:
         displayName: 屈み突き 「追風」(おいて)
         guard: 両方
@@ -407,9 +407,9 @@ moveGroups:
           skillCode: '008'
   - id: item_e4873eadbb
     displayName: 中パンチ
-    children:
+    variants:
     - id: item_031d163aa0
-      displayName: 立ち中パンチ
+      displayName: 立ち
       detail:
         displayName: 両手突き 「碇」(いかり)
         guard: 両方
@@ -448,7 +448,7 @@ moveGroups:
           characterCode: '17'
           skillCode: '002'
     - id: item_1941aeccff
-      displayName: "→入れ立ち中パンチ"
+      displayName: →入れ立ち
       detail:
         displayName: 下突き 「薫菜」(かおるな)
         guard: 両方
@@ -484,7 +484,7 @@ moveGroups:
           characterCode: '17'
           skillCode: '005'
     - id: item_1a60e91335
-      displayName: しゃがみ中パンチ
+      displayName: しゃがみ
       detail:
         displayName: 屈み貫手 「野分」(のわき)
         guard: 両方
@@ -522,9 +522,9 @@ moveGroups:
           skillCode: '009'
   - id: item_9cd6396df9
     displayName: 大パンチ
-    children:
+    variants:
     - id: item_a210c0e105
-      displayName: 立ち大パンチ
+      displayName: 立ち
       detail:
         displayName: 撥ね手刀 「青嵐」(あおあらし)
         guard: 両方
@@ -561,7 +561,7 @@ moveGroups:
           characterCode: '17'
           skillCode: '003'
     - id: item_62aab48e84
-      displayName: "→入れ立ち大パンチ"
+      displayName: →入れ立ち
       detail:
         displayName: 踏み込み正拳突き 「風巻」(しまき)
         guard: 両方
@@ -597,7 +597,7 @@ moveGroups:
           characterCode: '17'
           skillCode: '006'
     - id: item_5fa451ab6c
-      displayName: しゃがみ大パンチ
+      displayName: しゃがみ
       detail:
         displayName: 足刈り手刀 「神渡」(かみわたし)
         guard: 屈
@@ -632,9 +632,9 @@ moveGroups:
           skillCode: '010'
   - id: item_d9b7c6ef7c
     displayName: 小キック
-    children:
+    variants:
     - id: item_c1732c476a
-      displayName: 立ち小キック
+      displayName: 立ち
       detail:
         displayName: 膝蹴り 「露止」(つゆどめ)
         guard: 両方
@@ -671,7 +671,7 @@ moveGroups:
           characterCode: '17'
           skillCode: '017'
     - id: item_9a1f421d0d
-      displayName: "→入れ立ち小キック"
+      displayName: →入れ立ち
       detail:
         displayName: 前蹴り 「飛沫」(しぶき)
         guard: 両方
@@ -707,7 +707,7 @@ moveGroups:
           characterCode: '17'
           skillCode: '020'
     - id: item_f39ad9b46e
-      displayName: しゃがみ小キック
+      displayName: しゃがみ
       detail:
         displayName: 屈み足刀 「瀬踏」(せぶみ)
         guard: 屈
@@ -744,9 +744,9 @@ moveGroups:
           skillCode: '023'
   - id: item_f57c120b54
     displayName: 中キック
-    children:
+    variants:
     - id: item_f26b91a736
-      displayName: 立ち中キック
+      displayName: 立ち
       detail:
         displayName: 上段蹴り 「立浪」(たつなみ)
         guard: 両方
@@ -782,7 +782,7 @@ moveGroups:
           characterCode: '17'
           skillCode: '018'
     - id: item_01172ca12b
-      displayName: "→入れ立ち中キック"
+      displayName: →入れ立ち
       detail:
         displayName: 踏み込み上段回し蹴り 「鳴門」(なると)
         guard: 両方
@@ -818,7 +818,7 @@ moveGroups:
           characterCode: '17'
           skillCode: '021'
     - id: item_472cfdbed3
-      displayName: しゃがみ中キック
+      displayName: しゃがみ
       detail:
         displayName: 屈み蹴り 「水切」(みずきり)
         guard: 両方
@@ -856,9 +856,9 @@ moveGroups:
           skillCode: '024'
   - id: item_e36c152d49
     displayName: 大キック
-    children:
+    variants:
     - id: item_dd8d899c80
-      displayName: 立ち大キック
+      displayName: 立ち
       detail:
         displayName: 突き出し前蹴り 「怒涛」(どとう)
         guard: 両方
@@ -894,7 +894,7 @@ moveGroups:
           characterCode: '17'
           skillCode: '019'
     - id: item_66c46b80c4
-      displayName: "→入れ立ち大キック"
+      displayName: →入れ立ち
       detail:
         displayName: 踏み込み足払い 「黒潮」(くろしお)
         guard: 屈
@@ -930,7 +930,7 @@ moveGroups:
           characterCode: '17'
           skillCode: '022'
     - id: item_d653890f75
-      displayName: しゃがみ大キック
+      displayName: しゃがみ
       detail:
         displayName: 屈み上段回し蹴り 「浪頭」(なみがしら)
         guard: 両方

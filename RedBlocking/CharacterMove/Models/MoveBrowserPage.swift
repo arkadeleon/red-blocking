@@ -10,4 +10,20 @@ struct MoveBrowserPage: Hashable, Identifiable {
     let id: String
     let navigationTitle: String
     let sections: [MoveBrowserSection]
+    let variantNames: [String]
+    let variantSections: [[MoveBrowserSection]]
+
+    init(
+        id: String,
+        navigationTitle: String,
+        sections: [MoveBrowserSection],
+        variantNames: [String] = [],
+        variantSections: [[MoveBrowserSection]] = []
+    ) {
+        self.id = id
+        self.navigationTitle = navigationTitle
+        self.sections = sections
+        self.variantNames = variantNames
+        self.variantSections = variantSections
+    }
 }

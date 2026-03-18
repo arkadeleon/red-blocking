@@ -13,9 +13,9 @@ moveGroups:
   entries:
   - id: item_0213bd1615
     displayName: ジャンプ小パンチ
-    children:
+    variants:
     - id: item_e0c2f756f3
-      displayName: 垂直ジャンプ小パンチ
+      displayName: 垂直
       detail:
         displayName: 癒されぬヴァン
         startup: '4'
@@ -29,7 +29,7 @@ moveGroups:
           hit: '2'
           bl: '4'
     - id: item_25ab24896c
-      displayName: 斜めジャンプ小パンチ
+      displayName: 斜め
       detail:
         displayName: 癒されぬヴァン
         startup: '4'
@@ -50,9 +50,9 @@ moveGroups:
           skillCode: '010'
   - id: item_a18c41f1f2
     displayName: ジャンプ中パンチ
-    children:
+    variants:
     - id: item_f37ec8ba39
-      displayName: 垂直ジャンプ中パンチ
+      displayName: 垂直
       detail:
         displayName: 癒されぬヴァン
         startup: '5'
@@ -66,7 +66,7 @@ moveGroups:
           hit: '8'
           bl: '4'
     - id: item_a7ee982c0e
-      displayName: 斜めジャンプ中パンチ
+      displayName: 斜め
       detail:
         displayName: 癒されぬヴァン
         startup: '5'
@@ -92,9 +92,9 @@ moveGroups:
           skillCode: '011'
   - id: item_18529f13be
     displayName: ジャンプ大パンチ
-    children:
+    variants:
     - id: item_ca5fa63a59
-      displayName: 垂直ジャンプ大パンチ
+      displayName: 垂直
       detail:
         displayName: 真紅のアルカンシェル
         startup: '9'
@@ -113,7 +113,7 @@ moveGroups:
           entries:
           - 空対空でヒットした場合、追撃可能
     - id: item_c36fb09951
-      displayName: 斜めジャンプ大パンチ
+      displayName: 斜め
       detail:
         displayName: 真紅のアルカンシェル
         startup: '9'
@@ -139,9 +139,9 @@ moveGroups:
           skillCode: '012'
   - id: item_a83e3f7cff
     displayName: ジャンプ小キック
-    children:
+    variants:
     - id: item_f48ae8dc16
-      displayName: 垂直ジャンプ小キック
+      displayName: 垂直
       detail:
         displayName: 誘惑(いざな)いのヴァーグ
         startup: '4'
@@ -155,7 +155,7 @@ moveGroups:
           hit: '2'
           bl: '4'
     - id: item_adfe5e6bc9
-      displayName: 斜めジャンプ小キック
+      displayName: 斜め
       detail:
         displayName: 誘惑(いざな)いのヴァーグ
         startup: '4'
@@ -181,9 +181,9 @@ moveGroups:
           skillCode: '022'
   - id: item_c3103eb1f9
     displayName: ジャンプ中キック
-    children:
+    variants:
     - id: item_5280b1f280
-      displayName: 垂直ジャンプ中キック
+      displayName: 垂直
       detail:
         displayName: 凍てつく心のラルム
         startup: '6'
@@ -202,7 +202,7 @@ moveGroups:
           entries:
           - 横方向にリーチが長いため、空対空で使用する
     - id: item_83fba48c4f
-      displayName: 斜めジャンプ中キック
+      displayName: 斜め
       detail:
         displayName: 凍てつく心のラルム
         startup: '6'
@@ -228,9 +228,9 @@ moveGroups:
           skillCode: '023'
   - id: item_86e58a160f
     displayName: ジャンプ大キック
-    children:
+    variants:
     - id: item_3b01b3c990
-      displayName: 垂直ジャンプ大キック
+      displayName: 垂直
       detail:
         displayName: 墓守の名はクーラン・マラン
         startup: '10'
@@ -251,7 +251,7 @@ moveGroups:
             ・下方向に判定が強いため、飛び込みに使用する
             ・高い打点でヒットしても、SA2に繋ぐことが可能
     - id: item_3e728dc7eb
-      displayName: 斜めジャンプ大キック
+      displayName: 斜め
       detail:
         displayName: 墓守の名はクーラン・マラン
         startup: '10'
@@ -282,9 +282,9 @@ moveGroups:
   entries:
   - id: item_3ea1d5a710
     displayName: 小パンチ
-    children:
+    variants:
     - id: item_dff28b8913
-      displayName: 近距離立ち小パンチ
+      displayName: 近距離立ち
       detail:
         displayName: エーヌの吐息
         guard: 両方
@@ -318,7 +318,7 @@ moveGroups:
           characterCode: '20'
           skillCode: '001'
     - id: item_30f10178f1
-      displayName: 遠距離立ち小パンチ
+      displayName: 遠距離立ち
       detail:
         displayName: 一握りのフィエルテ
         guard: 両方
@@ -347,7 +347,7 @@ moveGroups:
           characterCode: '20'
           skillCode: '004'
     - id: item_405c8e8de7
-      displayName: しゃがみ小パンチ
+      displayName: しゃがみ
       detail:
         displayName: 怯える肌に触れるペシェ
         guard: 両方
@@ -385,9 +385,9 @@ moveGroups:
           skillCode: '007'
   - id: item_e4873eadbb
     displayName: 中パンチ
-    children:
+    variants:
     - id: item_1a4ee0847e
-      displayName: 近距離立ち中パンチ
+      displayName: 近距離立ち
       detail:
         displayName: ビティエすら届かずに
         guard: 両方
@@ -421,7 +421,7 @@ moveGroups:
           characterCode: '20'
           skillCode: '002'
     - id: item_e006f22d12
-      displayName: 遠距離立ち中パンチ
+      displayName: 遠距離立ち
       detail:
         displayName: 残酷なキュリオジテ
         guard: 両方
@@ -457,7 +457,7 @@ moveGroups:
           characterCode: '20'
           skillCode: '005'
     - id: item_1a60e91335
-      displayName: しゃがみ中パンチ
+      displayName: しゃがみ
       detail:
         displayName: アンテルメッゾは語らない
         guard: 両方
@@ -492,9 +492,9 @@ moveGroups:
           skillCode: '008'
   - id: item_9cd6396df9
     displayName: 大パンチ
-    children:
+    variants:
     - id: item_01bc811525
-      displayName: 近距離立ち大パンチ
+      displayName: 近距離立ち
       detail:
         displayName: 砕け、偽りのパラディを
         guard: 両方
@@ -531,7 +531,7 @@ moveGroups:
           characterCode: '20'
           skillCode: '003'
     - id: item_0321a8772f
-      displayName: 遠距離立ち大パンチ
+      displayName: 遠距離立ち
       detail:
         displayName: 謳(うた)え、消えゆくリベルテに
         guard: 両方
@@ -560,7 +560,7 @@ moveGroups:
           characterCode: '20'
           skillCode: '006'
     - id: item_5fa451ab6c
-      displayName: しゃがみ大パンチ
+      displayName: しゃがみ
       detail:
         displayName: 抗え、昏(くら)きファタリテに
         guard: 両方
@@ -597,9 +597,9 @@ moveGroups:
           skillCode: '009'
   - id: item_d9b7c6ef7c
     displayName: 小キック
-    children:
+    variants:
     - id: item_a3b2243baa
-      displayName: 近距離立ち小キック
+      displayName: 近距離立ち
       detail:
         displayName: 夢魔のエジタシオン
         guard: 両方
@@ -633,7 +633,7 @@ moveGroups:
           characterCode: '20'
           skillCode: '013'
     - id: item_8958632712
-      displayName: 遠距離立ち小キック
+      displayName: 遠距離立ち
       detail:
         displayName: 夜明けのブリュイ・ド・パ
         guard: 両方
@@ -667,7 +667,7 @@ moveGroups:
           characterCode: '20'
           skillCode: '016'
     - id: item_f39ad9b46e
-      displayName: しゃがみ小キック
+      displayName: しゃがみ
       detail:
         displayName: 氷点下に響くヴォワ
         guard: 屈
@@ -704,9 +704,9 @@ moveGroups:
           skillCode: '019'
   - id: item_f57c120b54
     displayName: 中キック
-    children:
+    variants:
     - id: item_d81740da87
-      displayName: 近距離立ち中キック
+      displayName: 近距離立ち
       detail:
         displayName: 夢魔のエジタシオン
         guard: 両方
@@ -740,7 +740,7 @@ moveGroups:
           characterCode: '20'
           skillCode: '014'
     - id: item_c60a89db57
-      displayName: 遠距離立ち中キック
+      displayName: 遠距離立ち
       detail:
         displayName: 遠すぎるオリゾン
         guard: 両方
@@ -774,7 +774,7 @@ moveGroups:
           characterCode: '20'
           skillCode: '017'
     - id: item_472cfdbed3
-      displayName: しゃがみ中キック
+      displayName: しゃがみ
       detail:
         displayName: 踏みしだかれたレーヴ
         guard: 屈
@@ -809,9 +809,9 @@ moveGroups:
           skillCode: '020'
   - id: item_e36c152d49
     displayName: 大キック
-    children:
+    variants:
     - id: item_208b61d79d
-      displayName: 近距離立ち大キック
+      displayName: 近距離立ち
       detail:
         displayName: ミザン・セーヌは冷ややかに
         guard: 両方・両方
@@ -840,7 +840,7 @@ moveGroups:
           characterCode: '20'
           skillCode: '015'
     - id: item_0525b221e2
-      displayName: 遠距離立ち大キック
+      displayName: 遠距離立ち
       detail:
         displayName: 23:00のアルモニー
         guard: 両方
@@ -869,7 +869,7 @@ moveGroups:
           characterCode: '20'
           skillCode: '018'
     - id: item_d653890f75
-      displayName: しゃがみ大キック
+      displayName: しゃがみ
       detail:
         displayName: ターブル・ロンドに描く愛
         guard: 屈・屈

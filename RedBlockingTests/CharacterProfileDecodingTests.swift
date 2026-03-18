@@ -39,8 +39,8 @@ struct CharacterProfileDecodingTests {
         )
     }
 
-    @Test("All move entries have exclusively children or detail", arguments: allCharacterNames)
-    func allEntriesHaveExclusiveChildrenOrDetail(characterName: String) throws {
+    @Test("All move entries have exactly one of children, variants, or detail", arguments: allCharacterNames)
+    func allEntriesHaveExclusiveChildrenVariantsOrDetail(characterName: String) throws {
         let profile = try makeRepository().loadProfile(resourceName: "\(characterName).yml")
         for group in profile.moveGroups {
             verifyExclusivity(in: group.entries, context: "\(characterName)/\(group.id.rawValue)")
@@ -55,9 +55,11 @@ struct CharacterProfileDecodingTests {
         sourceLocation: SourceLocation = #_sourceLocation
     ) {
         for entry in entries {
+            let presentCount = [entry.children != nil, entry.variants != nil, entry.detail != nil]
+                .filter { $0 }.count
             #expect(
-                (entry.children != nil) != (entry.detail != nil),
-                "Entry '\(entry.id)' in \(context) must have exactly one of children or detail",
+                presentCount == 1,
+                "Entry '\(entry.id)' in \(context) must have exactly one of children, variants, or detail",
                 sourceLocation: sourceLocation
             )
             if let children = entry.children {

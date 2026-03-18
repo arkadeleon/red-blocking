@@ -29,6 +29,35 @@ struct MoveEntryValidationTests {
         try assertDecodingFails(yaml: InvalidYAML.entryWithEmptyChildren)
     }
 
+    @Test("MoveEntry with both variants and detail fails decoding")
+    func entryWithBothVariantsAndDetailFails() throws {
+        try assertDecodingFails(yaml: InvalidYAML.entryWithBothVariantsAndDetail)
+    }
+
+    @Test("MoveEntry with both variants and children fails decoding")
+    func entryWithBothVariantsAndChildrenFails() throws {
+        try assertDecodingFails(yaml: InvalidYAML.entryWithBothVariantsAndChildren)
+    }
+
+    @Test("MoveEntry with empty variants array fails decoding")
+    func entryWithEmptyVariantsFails() throws {
+        try assertDecodingFails(yaml: InvalidYAML.entryWithEmptyVariants)
+    }
+
+    @Test("MoveEntry with variants decodes correctly")
+    func entryWithVariantsDecodesCorrectly() throws {
+        let root = try TempResourceRoot()
+        defer { root.cleanup() }
+        try root.write(yaml: ValidYAML.entryWithVariants, named: "valid.yml")
+        let profile = try root.makeRepository().loadProfile(resourceName: "valid.yml")
+        // validProfile puts entries in super_arts (the last group)
+        let entry = try #require(profile.moveGroups.last?.entries.first)
+        let variants = try #require(entry.variants)
+        #expect(variants.count == 2)
+        #expect(variants[0].displayName == "垂直")
+        #expect(variants[1].displayName == "斜め")
+    }
+
     // MARK: - MoveDetail constraints
 
     @Test("MoveDetail with empty displayName fails decoding")
@@ -93,6 +122,42 @@ private enum InvalidYAML {
                   displayName: "Child"
             detail:
               displayName: "Conflict"
+    """)
+
+    // Entry declares both `variants` and `detail` — MoveEntry.init rejects this.
+    static let entryWithBothVariantsAndDetail = validProfile(withSuperArtsEntries: """
+          - id: item_bad
+            displayName: "Conflict"
+            variants:
+              - id: var_001
+                displayName: "Var"
+                detail:
+                  displayName: "Var"
+            detail:
+              displayName: "Conflict"
+    """)
+
+    // Entry declares both `variants` and `children` — MoveEntry.init rejects this.
+    static let entryWithBothVariantsAndChildren = validProfile(withSuperArtsEntries: """
+          - id: item_bad
+            displayName: "Conflict"
+            variants:
+              - id: var_001
+                displayName: "Var"
+                detail:
+                  displayName: "Var"
+            children:
+              - id: child_001
+                displayName: "Child"
+                detail:
+                  displayName: "Child"
+    """)
+
+    // Entry declares `variants: []` — MoveEntry.init rejects an empty variants array.
+    static let entryWithEmptyVariants = validProfile(withSuperArtsEntries: """
+          - id: item_bad
+            displayName: "Empty variants"
+            variants: []
     """)
 
     // Entry declares neither `children` nor `detail` — MoveEntry.init rejects this.
@@ -194,7 +259,7 @@ private enum InvalidYAML {
 
     /// Returns a complete valid profile YAML with the given entries block inserted into super_arts.
     /// `entries` must be a pre-indented YAML fragment (6 spaces for the list items).
-    private static func validProfile(withSuperArtsEntries entries: String) -> String {
+    static func validProfile(withSuperArtsEntries entries: String) -> String {
         """
         character:
           id: test
@@ -221,4 +286,24 @@ private enum InvalidYAML {
         \(entries)
         """
     }
+}
+
+// MARK: - Valid YAML fixtures
+
+private enum ValidYAML {
+
+    // Entry with two variants — should decode successfully.
+    static let entryWithVariants = InvalidYAML.validProfile(withSuperArtsEntries: """
+          - id: item_ok
+            displayName: "ジャンプ小パンチ"
+            variants:
+              - id: var_001
+                displayName: "垂直"
+                detail:
+                  displayName: "肘落とし"
+              - id: var_002
+                displayName: "斜め"
+                detail:
+                  displayName: "肘落とし"
+    """)
 }

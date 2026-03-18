@@ -14,9 +14,9 @@ moveGroups:
   entries:
   - id: item_0213bd1615
     displayName: ジャンプ小パンチ
-    children:
+    variants:
     - id: item_e0c2f756f3
-      displayName: 垂直ジャンプ小パンチ
+      displayName: 垂直
       detail:
         displayName: フック
         startup: '3'
@@ -30,7 +30,7 @@ moveGroups:
           hit: '2'
           bl: '4'
     - id: item_25ab24896c
-      displayName: 斜めジャンプ小パンチ
+      displayName: 斜め
       detail:
         displayName: フック
         startup: '3'
@@ -56,9 +56,9 @@ moveGroups:
           skillCode: '007'
   - id: item_a18c41f1f2
     displayName: ジャンプ中パンチ
-    children:
+    variants:
     - id: item_f37ec8ba39
-      displayName: 垂直ジャンプ中パンチ
+      displayName: 垂直
       detail:
         displayName: フック
         startup: '4'
@@ -72,7 +72,7 @@ moveGroups:
           hit: '8'
           bl: '4'
     - id: item_a7ee982c0e
-      displayName: 斜めジャンプ中パンチ
+      displayName: 斜め
       detail:
         displayName: フック
         startup: '4'
@@ -98,9 +98,9 @@ moveGroups:
           skillCode: '008'
   - id: item_18529f13be
     displayName: ジャンプ大パンチ
-    children:
+    variants:
     - id: item_ca5fa63a59
-      displayName: 垂直ジャンプ大パンチ
+      displayName: 垂直
       detail:
         displayName: ストレート
         startup: '7'
@@ -119,7 +119,7 @@ moveGroups:
           entries:
           - 出が意外に速く判定は横&下方向に強い
     - id: item_c36fb09951
-      displayName: 斜めジャンプ大パンチ
+      displayName: 斜め
       detail:
         displayName: ストレート
         startup: '7'
@@ -147,9 +147,9 @@ moveGroups:
           skillCode: '009'
   - id: item_a83e3f7cff
     displayName: ジャンプ小キック
-    children:
+    variants:
     - id: item_f48ae8dc16
-      displayName: 垂直ジャンプ小キック
+      displayName: 垂直
       detail:
         displayName: ジャンピングエルボー
         startup: '3'
@@ -170,7 +170,7 @@ moveGroups:
             ・攻撃判定が出ている時間が長め
             ・飛び込みからガードさせ、投げを誘ってのSSブローなどが面白い
     - id: item_adfe5e6bc9
-      displayName: 斜めジャンプ小キック
+      displayName: 斜め
       detail:
         displayName: ジャンピングエルボー
         startup: '3'
@@ -198,9 +198,9 @@ moveGroups:
           skillCode: '016'
   - id: item_c3103eb1f9
     displayName: ジャンプ中キック
-    children:
+    variants:
     - id: item_5280b1f280
-      displayName: 垂直ジャンプ中キック
+      displayName: 垂直
       detail:
         displayName: ジャンピングエルボー
         startup: '4'
@@ -221,7 +221,7 @@ moveGroups:
             ・判定がそこそこ強く、対地、空対空両面で使える技
             ・飛び込みヒット時、大攻撃に比べガード硬直やのけぞりが短いので、ラッシュや連続技を狙うときは注意
     - id: item_83fba48c4f
-      displayName: 斜めジャンプ中キック
+      displayName: 斜め
       detail:
         displayName: ジャンピングエルボー
         startup: '4'
@@ -250,9 +250,9 @@ moveGroups:
           skillCode: '017'
   - id: item_86e58a160f
     displayName: ジャンプ大キック
-    children:
+    variants:
     - id: item_3b01b3c990
-      displayName: 垂直ジャンプ大キック
+      displayName: 垂直
       detail:
         displayName: ラウンドエルボー
         startup: '10'
@@ -275,7 +275,7 @@ moveGroups:
             ・打点をずらして相手のBLと対空に揺さぶりをかけることができる。またガードされた場合でも、そこから択を迫ることが出来るため強力
             ・空中ヒットの場合、相手は叩きつけダウンになる
     - id: item_3e728dc7eb
-      displayName: 斜めジャンプ大キック
+      displayName: 斜め
       detail:
         displayName: ラウンドエルボー
         startup: '11'
@@ -308,9 +308,9 @@ moveGroups:
   entries:
   - id: item_3ea1d5a710
     displayName: 小パンチ
-    children:
+    variants:
     - id: item_b3c755935b
-      displayName: 立ち小パンチ
+      displayName: 立ち
       detail:
         displayName: ジャブ
         guard: 両方
@@ -344,7 +344,7 @@ moveGroups:
           characterCode: '04'
           skillCode: '001'
     - id: item_405c8e8de7
-      displayName: しゃがみ小パンチ
+      displayName: しゃがみ
       detail:
         displayName: ジャブ
         guard: 両方
@@ -379,9 +379,9 @@ moveGroups:
           skillCode: '004'
   - id: item_e4873eadbb
     displayName: 中パンチ
-    children:
+    variants:
     - id: item_031d163aa0
-      displayName: 立ち中パンチ
+      displayName: 立ち
       detail:
         displayName: ライトストレート
         guard: 両方
@@ -418,7 +418,7 @@ moveGroups:
           characterCode: '04'
           skillCode: '002'
     - id: item_1a60e91335
-      displayName: しゃがみ中パンチ
+      displayName: しゃがみ
       detail:
         displayName: しゃがみストレート
         guard: 両方
@@ -455,9 +455,9 @@ moveGroups:
           skillCode: '005'
   - id: item_9cd6396df9
     displayName: 大パンチ
-    children:
+    variants:
     - id: item_a210c0e105
-      displayName: 立ち大パンチ
+      displayName: 立ち
       detail:
         displayName: 踏み込みストレート
         guard: 両方
@@ -491,7 +491,7 @@ moveGroups:
           characterCode: '04'
           skillCode: '003'
     - id: item_5fa451ab6c
-      displayName: しゃがみ大パンチ
+      displayName: しゃがみ
       detail:
         displayName: アッパーカット
         guard: 両方
@@ -529,9 +529,9 @@ moveGroups:
           skillCode: '006'
   - id: item_d9b7c6ef7c
     displayName: 小キック
-    children:
+    variants:
     - id: item_c1732c476a
-      displayName: 立ち小キック
+      displayName: 立ち
       detail:
         displayName: ライトフック
         guard: 両方
@@ -567,7 +567,7 @@ moveGroups:
           characterCode: '04'
           skillCode: '010'
     - id: item_f39ad9b46e
-      displayName: しゃがみ小キック
+      displayName: しゃがみ
       detail:
         displayName: アンダージャブ
         guard: 屈
@@ -604,9 +604,9 @@ moveGroups:
           skillCode: '013'
   - id: item_f57c120b54
     displayName: 中キック
-    children:
+    variants:
     - id: item_f26b91a736
-      displayName: 立ち中キック
+      displayName: 立ち
       detail:
         displayName: レフトアッパー
         guard: 両方
@@ -643,7 +643,7 @@ moveGroups:
           characterCode: '04'
           skillCode: '011'
     - id: item_472cfdbed3
-      displayName: しゃがみ中キック
+      displayName: しゃがみ
       detail:
         displayName: トリックパンチ
         guard: 屈
@@ -678,9 +678,9 @@ moveGroups:
           skillCode: '014'
   - id: item_e36c152d49
     displayName: 大キック
-    children:
+    variants:
     - id: item_dd8d899c80
-      displayName: 立ち大キック
+      displayName: 立ち
       detail:
         displayName: ライトボディーアッパー
         guard: 両方
@@ -720,7 +720,7 @@ moveGroups:
           characterCode: '04'
           skillCode: '012'
     - id: item_d653890f75
-      displayName: しゃがみ大キック
+      displayName: しゃがみ
       detail:
         displayName: ボクサースロー
         guard: 屈

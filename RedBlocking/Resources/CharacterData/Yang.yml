@@ -15,9 +15,9 @@ moveGroups:
   entries:
   - id: item_0213bd1615
     displayName: ジャンプ小パンチ
-    children:
+    variants:
     - id: item_e0c2f756f3
-      displayName: 垂直ジャンプ小パンチ
+      displayName: 垂直
       detail:
         displayName: 頂(ちょう)
         startup: '2'
@@ -36,7 +36,7 @@ moveGroups:
           entries:
           - ヤンのジャンプ技の中で発生は最速だが、BLされると着地まで行動不可のため注意
     - id: item_25ab24896c
-      displayName: 斜めジャンプ小パンチ
+      displayName: 斜め
       detail:
         displayName: 頂(ちょう)
         startup: '2'
@@ -62,9 +62,9 @@ moveGroups:
           skillCode: '011'
   - id: item_a18c41f1f2
     displayName: ジャンプ中パンチ
-    children:
+    variants:
     - id: item_f37ec8ba39
-      displayName: 垂直ジャンプ中パンチ
+      displayName: 垂直
       detail:
         displayName: 謄空勾手(とうくうこうしゅ)
         startup: '3'
@@ -84,7 +84,7 @@ moveGroups:
           characterCode: '10'
           skillCode: '009'
     - id: item_a7ee982c0e
-      displayName: 斜めジャンプ中パンチ
+      displayName: 斜め
       detail:
         displayName: 謄空勾手(とうくうこうしゅ)
         startup: '3'
@@ -105,9 +105,9 @@ moveGroups:
           skillCode: '012'
   - id: item_18529f13be
     displayName: ジャンプ大パンチ
-    children:
+    variants:
     - id: item_ca5fa63a59
-      displayName: 垂直ジャンプ大パンチ
+      displayName: 垂直
       detail:
         displayName: 雲手(うんしゅ)
         startup: '8'
@@ -127,7 +127,7 @@ moveGroups:
           characterCode: '10'
           skillCode: '010'
     - id: item_c36fb09951
-      displayName: 斜めジャンプ大パンチ
+      displayName: 斜め
       detail:
         displayName: 謄空勾手(とうくうこうしゅ)
         startup: '5'
@@ -153,9 +153,9 @@ moveGroups:
           skillCode: '013'
   - id: item_a83e3f7cff
     displayName: ジャンプ小キック
-    children:
+    variants:
     - id: item_f48ae8dc16
-      displayName: 垂直ジャンプ小キック
+      displayName: 垂直
       detail:
         displayName: 刺腿(したい)
         startup: '3'
@@ -174,7 +174,7 @@ moveGroups:
           entries:
           - 横に判定が長いので、空対空に使用
     - id: item_adfe5e6bc9
-      displayName: 斜めジャンプ小キック
+      displayName: 斜め
       detail:
         displayName: 刺腿(したい)
         startup: '4'
@@ -200,9 +200,9 @@ moveGroups:
           skillCode: '022'
   - id: item_c3103eb1f9
     displayName: ジャンプ中キック
-    children:
+    variants:
     - id: item_5280b1f280
-      displayName: 垂直ジャンプ中キック
+      displayName: 垂直
       detail:
         displayName: 飛蹴腿(ひしゅうたい)
         startup: '6'
@@ -227,7 +227,7 @@ moveGroups:
           characterCode: '10'
           skillCode: '021'
     - id: item_83fba48c4f
-      displayName: 斜めジャンプ中キック
+      displayName: 斜め
       detail:
         displayName: 飛蹴腿(ひしゅうたい)
         startup: '6'
@@ -253,9 +253,9 @@ moveGroups:
           skillCode: '023'
   - id: item_86e58a160f
     displayName: ジャンプ大キック
-    children:
+    variants:
     - id: item_3b01b3c990
-      displayName: 垂直ジャンプ大キック
+      displayName: 垂直
       detail:
         displayName: ニ起脚(にききゃく)
         startup: '5'
@@ -274,7 +274,7 @@ moveGroups:
           entries:
           - 追撃や空対空などに使用
     - id: item_3e728dc7eb
-      displayName: 斜めジャンプ大キック
+      displayName: 斜め
       detail:
         displayName: ニ起脚(にききゃく)
         startup: '5'
@@ -303,9 +303,9 @@ moveGroups:
   entries:
   - id: item_3ea1d5a710
     displayName: 小パンチ
-    children:
+    variants:
     - id: item_b3c755935b
-      displayName: 立ち小パンチ
+      displayName: 立ち
       detail:
         displayName: 統捶(とうすい)
         guard: 両方
@@ -339,7 +339,7 @@ moveGroups:
           characterCode: '10'
           skillCode: '001'
     - id: item_405c8e8de7
-      displayName: しゃがみ小パンチ
+      displayName: しゃがみ
       detail:
         displayName: 下統捶(かとうすい)
         guard: 両方
@@ -376,9 +376,9 @@ moveGroups:
           skillCode: '006'
   - id: item_e4873eadbb
     displayName: 中パンチ
-    children:
+    variants:
     - id: item_1a4ee0847e
-      displayName: 近距離立ち中パンチ
+      displayName: 近距離立ち
       detail:
         displayName: 裡門頂肘(りもんちょうちゅう)
         guard: 両方
@@ -415,7 +415,7 @@ moveGroups:
           characterCode: '10'
           skillCode: '002'
     - id: item_e006f22d12
-      displayName: 遠距離立ち中パンチ
+      displayName: 遠距離立ち
       detail:
         displayName: 外門頂肘(がいもんちょうちゅう)
         guard: 両方
@@ -449,7 +449,7 @@ moveGroups:
           characterCode: '10'
           skillCode: '004'
     - id: item_1a60e91335
-      displayName: しゃがみ中パンチ
+      displayName: しゃがみ
       detail:
         displayName: 掃勾手(そうこうしゅ)
         guard: 屈
@@ -486,9 +486,9 @@ moveGroups:
           skillCode: '007'
   - id: item_9cd6396df9
     displayName: 大パンチ
-    children:
+    variants:
     - id: item_01bc811525
-      displayName: 近距離立ち大パンチ
+      displayName: 近距離立ち
       detail:
         displayName: 挑領(ちょうりょう)
         guard: 両方
@@ -524,7 +524,7 @@ moveGroups:
           characterCode: '10'
           skillCode: '003'
     - id: item_0321a8772f
-      displayName: 遠距離立ち大パンチ
+      displayName: 遠距離立ち
       detail:
         displayName: 勾手(こうしゅ)
         guard: 両方
@@ -560,7 +560,7 @@ moveGroups:
           characterCode: '10'
           skillCode: '005'
     - id: item_5fa451ab6c
-      displayName: しゃがみ大パンチ
+      displayName: しゃがみ
       detail:
         displayName: 下連勾手(かれんこうしゅ)
         guard: 両方
@@ -597,9 +597,9 @@ moveGroups:
           skillCode: '008'
   - id: item_d9b7c6ef7c
     displayName: 小キック
-    children:
+    variants:
     - id: item_c1732c476a
-      displayName: 立ち小キック
+      displayName: 立ち
       detail:
         displayName: 旋脚(せんきゃく)
         guard: 両方
@@ -635,7 +635,7 @@ moveGroups:
           characterCode: '10'
           skillCode: '014'
     - id: item_f39ad9b46e
-      displayName: しゃがみ小キック
+      displayName: しゃがみ
       detail:
         displayName: 底蹴腿(ていしゅうたい)
         guard: 屈
@@ -670,9 +670,9 @@ moveGroups:
           skillCode: '018'
   - id: item_f57c120b54
     displayName: 中キック
-    children:
+    variants:
     - id: item_d81740da87
-      displayName: 近距離立ち中キック
+      displayName: 近距離立ち
       detail:
         displayName: 鴛鴦脚(えんおうきゃく)
         guard: 両方
@@ -711,7 +711,7 @@ moveGroups:
           characterCode: '10'
           skillCode: '015'
     - id: item_f26b91a736
-      displayName: 立ち中キック
+      displayName: 立ち
       detail:
         displayName: 昇腿(しょうたい)
         guard: 両方
@@ -745,7 +745,7 @@ moveGroups:
           characterCode: '10'
           skillCode: '016'
     - id: item_472cfdbed3
-      displayName: しゃがみ中キック
+      displayName: しゃがみ
       detail:
         displayName: 前蹴腿(ぜんしゅうたい)
         guard: 屈
@@ -783,9 +783,9 @@ moveGroups:
           skillCode: '019'
   - id: item_e36c152d49
     displayName: 大キック
-    children:
+    variants:
     - id: item_dd8d899c80
-      displayName: 立ち大キック
+      displayName: 立ち
       detail:
         displayName: 裏旋脚(りせんきゃく)
         guard: 両方
@@ -819,7 +819,7 @@ moveGroups:
           characterCode: '10'
           skillCode: '017'
     - id: item_d653890f75
-      displayName: しゃがみ大キック
+      displayName: しゃがみ
       detail:
         displayName: 前掃腿(ぜんそうたい)
         guard: 屈

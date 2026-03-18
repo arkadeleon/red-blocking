@@ -90,23 +90,27 @@ struct MoveEntry: Decodable, Equatable, Hashable {
     let id: String
     let displayName: String
     let children: [MoveEntry]?
+    let variants: [MoveVariant]?
     let detail: MoveDetail?
 
     init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
         let hasChildrenKey = container.contains(.children)
+        let hasVariantsKey = container.contains(.variants)
         let hasDetailKey = container.contains(.detail)
 
         id = try container.decode(String.self, forKey: .id)
         displayName = try container.decode(String.self, forKey: .displayName)
         children = try container.decodeIfPresent([MoveEntry].self, forKey: .children)
+        variants = try container.decodeIfPresent([MoveVariant].self, forKey: .variants)
         detail = try container.decodeIfPresent(MoveDetail.self, forKey: .detail)
 
-        guard hasChildrenKey != hasDetailKey else {
+        let presentCount = [hasChildrenKey, hasVariantsKey, hasDetailKey].filter { $0 }.count
+        guard presentCount == 1 else {
             throw DecodingError.dataCorruptedError(
                 forKey: .detail,
                 in: container,
-                debugDescription: "MoveEntry must contain exactly one of children or detail."
+                debugDescription: "MoveEntry must contain exactly one of children, variants, or detail."
             )
         }
 
@@ -117,6 +121,14 @@ struct MoveEntry: Decodable, Equatable, Hashable {
                 debugDescription: "MoveEntry.children must not be empty."
             )
         }
+
+        if let variants, variants.isEmpty {
+            throw DecodingError.dataCorruptedError(
+                forKey: .variants,
+                in: container,
+                debugDescription: "MoveEntry.variants must not be empty."
+            )
+        }
     }
 }
 
@@ -125,8 +137,15 @@ extension MoveEntry {
         case id
         case displayName
         case children
+        case variants
         case detail
     }
+}
+
+struct MoveVariant: Decodable, Equatable, Hashable {
+    let id: String
+    let displayName: String
+    let detail: MoveDetail
 }
 
 struct MoveDetail: Decodable, Equatable, Hashable {

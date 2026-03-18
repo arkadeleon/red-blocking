@@ -76,8 +76,24 @@ struct MoveBrowserProjector {
             )
         }
 
+        if let variants = entry.variants {
+            return MoveBrowserPage(
+                id: pageID,
+                navigationTitle: entry.displayName,
+                sections: [],
+                variantNames: variants.map(\.displayName),
+                variantSections: variants.map { variant in
+                    projectSections(
+                        for: variant.detail,
+                        pageID: "\(pageID):variant:\(variant.id)",
+                        navigationTitle: entry.displayName
+                    )
+                }
+            )
+        }
+
         guard let detail = entry.detail else {
-            preconditionFailure("MoveEntry \(entry.id) must contain either children or detail.")
+            preconditionFailure("MoveEntry \(entry.id) must contain either children, variants, or detail.")
         }
 
         return MoveBrowserPage(

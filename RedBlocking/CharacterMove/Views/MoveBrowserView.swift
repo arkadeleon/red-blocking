@@ -10,8 +10,19 @@ import SwiftUI
 
 struct MoveBrowserView: View {
     @Environment(\.horizontalSizeClass) private var horizontalSizeClass
+    @State private var selectedVariant = 0
 
     let model: MoveBrowserModel
+
+    private var activeSections: [MoveBrowserSection] {
+        if model.page.variantNames.isEmpty {
+            return model.page.sections
+        }
+        guard model.page.variantSections.indices.contains(selectedVariant) else {
+            return []
+        }
+        return model.page.variantSections[selectedVariant]
+    }
 
     var body: some View {
         let rowBackground = Color.rbPanel.opacity(rowBackgroundOpacity)
@@ -22,6 +33,8 @@ struct MoveBrowserView: View {
             .contentMargins(.top, 16, for: .scrollContent)
             .contentMargins(.horizontal, horizontalContentMargin, for: .scrollContent)
             .navigationTitle(model.page.navigationTitle)
+            .modifier(VariantPickerBar(variantNames: model.page.variantNames, selection: $selectedVariant))
+            .onChange(of: model.page.id) { selectedVariant = 0 }
     }
 
     private func listContent(rowBackground: Color) -> some View {
@@ -35,7 +48,7 @@ struct MoveBrowserView: View {
                     )
                     .listRowBackground(rowBackground)
                 }
-            } else if model.page.sections.isEmpty {
+            } else if activeSections.isEmpty {
                 Section {
                     ContentUnavailableView(
                         "No Moves Here",
@@ -45,7 +58,7 @@ struct MoveBrowserView: View {
                     .listRowBackground(rowBackground)
                 }
             } else {
-                ForEach(model.page.sections) { section in
+                ForEach(activeSections) { section in
                     Section {
                         ForEach(section.rows) { row in
                             switch row.kind {
@@ -97,5 +110,36 @@ struct MoveBrowserView: View {
 
     private var horizontalContentMargin: CGFloat {
         horizontalSizeClass == .regular ? 24 : 0
+    }
+}
+
+private struct VariantPickerBar: ViewModifier {
+    let variantNames: [String]
+    @Binding var selection: Int
+
+    func body(content: Content) -> some View {
+        if variantNames.isEmpty {
+            content
+        } else if #available(iOS 26, *) {
+            content.safeAreaBar(edge: .top) {
+                pickerView
+            }
+        } else {
+            content.safeAreaInset(edge: .top) {
+                pickerView
+                    .padding(.horizontal)
+                    .padding(.vertical, 8)
+                    .background(.bar)
+            }
+        }
+    }
+
+    private var pickerView: some View {
+        Picker("", selection: $selection) {
+            ForEach(variantNames.indices, id: \.self) { index in
+                Text(variantNames[index]).tag(index)
+            }
+        }
+        .pickerStyle(.segmented)
     }
 }
