@@ -983,6 +983,54 @@ moveGroups:
         skillName: Towards + Roundhouse
         characterCode: '12'
         skillCode: '029'
+- id: target_combos
+  displayTitle: "【ターゲットコンボ】"
+  entries:
+  - id: pk
+    displayName: 近立中P→立大K
+    detail:
+      displayName: 近立中P→立大K
+      superCancel: "○/×"
+      guard: 両方/両方
+      blocking: "→/→"
+      damage: 90/50
+      stun: 9/3
+      stunReduction: 3/1
+      frameAdvantage:
+        guard: "-2"
+        standingHit: '0'
+        crouchingHit: "+2"
+      stats:
+        入力: 近立中P→立大K
+        C: "○/×"
+      noteGroups:
+      - id: item_cf8aa5b927
+        displayTitle: 補足
+        entries:
+        - "・2段目はしゃがんだユン、ヤンに当たらない。また大Kをディレイで出すといぶき、まことも当たらくなるので要注意 \n・空中ヒット時、一部のキャラにSA1で追撃可能。また画面端ならダッシュからのSA2で追撃も可能。ただしどちらも空中BL可能"
+  - id: p6_p
+    displayName: 近立大P→6+大P
+    detail:
+      displayName: 近立大P→6+大P
+      superCancel: "○/×"
+      guard: 両方/立・立
+      blocking: "→/→・→"
+      damage: 120/50+60
+      stun: 13/5+3
+      stunReduction: 15/3・3
+      frameAdvantage:
+        guard: "-6"
+        standingHit: "-4"
+        crouchingHit: "-2"
+      stats:
+        入力: 近立大P→6+大P
+        C: "○/×"
+      noteGroups:
+      - id: item_cf8aa5b927
+        displayTitle: 補足
+        entries:
+        - TCではあるが連係のため、繋がらない
+
 - id: command_normals
   displayTitle: "【特殊入力技】"
   entries:
@@ -1060,53 +1108,6 @@ moveGroups:
         skillName: Taunt
         characterCode: '12'
         skillCode: '033'
-  - id: item_b46a9fbcad
-    displayName: ターゲットコンボ
-    children:
-    - id: pk
-      displayName: 近立中P→立大K
-      detail:
-        displayName: 近立中P→立大K
-        superCancel: "○/×"
-        guard: 両方/両方
-        blocking: "→/→"
-        damage: 90/50
-        stun: 9/3
-        stunReduction: 3/1
-        frameAdvantage:
-          guard: "-2"
-          standingHit: '0'
-          crouchingHit: "+2"
-        stats:
-          入力: 近立中P→立大K
-          C: "○/×"
-        noteGroups:
-        - id: item_cf8aa5b927
-          displayTitle: 補足
-          entries:
-          - "・2段目はしゃがんだユン、ヤンに当たらない。また大Kをディレイで出すといぶき、まことも当たらくなるので要注意 \n・空中ヒット時、一部のキャラにSA1で追撃可能。また画面端ならダッシュからのSA2で追撃も可能。ただしどちらも空中BL可能"
-    - id: p6_p
-      displayName: 近立大P→6+大P
-      detail:
-        displayName: 近立大P→6+大P
-        superCancel: "○/×"
-        guard: 両方/立・立
-        blocking: "→/→・→"
-        damage: 120/50+60
-        stun: 13/5+3
-        stunReduction: 15/3・3
-        frameAdvantage:
-          guard: "-6"
-          standingHit: "-4"
-          crouchingHit: "-2"
-        stats:
-          入力: 近立大P→6+大P
-          C: "○/×"
-        noteGroups:
-        - id: item_cf8aa5b927
-          displayTitle: 補足
-          entries:
-          - TCではあるが連係のため、繋がらない
 - id: special_moves
   displayTitle: "【必殺技】"
   entries:

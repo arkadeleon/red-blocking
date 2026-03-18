@@ -1015,6 +1015,27 @@ moveGroups:
         skillName: Towards + Strong
         characterCode: '14'
         skillCode: '027'
+- id: target_combos
+  displayTitle: "【ターゲットコンボ】"
+  entries:
+  - id: pp
+    displayName: 近立中P→立大P
+    detail:
+      displayName: 近立中P→立大P
+      superCancel: "○/×"
+      guard: 両方/両方
+      blocking: "→/→"
+      damage: 115/80
+      stun: 7/3
+      stunReduction: 15/15
+      frameAdvantage:
+        guard: "-12"
+        standingHit: "-10"
+        crouchingHit: "-8"
+      stats:
+        入力: 近立中P→立大P
+        C: "○/×"
+
 - id: command_normals
   displayTitle: "【特殊入力技】"
   entries:
@@ -1088,26 +1109,6 @@ moveGroups:
         skillName: Taunt
         characterCode: '14'
         skillCode: '032'
-  - id: item_b46a9fbcad
-    displayName: ターゲットコンボ
-    children:
-    - id: pp
-      displayName: 近立中P→立大P
-      detail:
-        displayName: 近立中P→立大P
-        superCancel: "○/×"
-        guard: 両方/両方
-        blocking: "→/→"
-        damage: 115/80
-        stun: 7/3
-        stunReduction: 15/15
-        frameAdvantage:
-          guard: "-12"
-          standingHit: "-10"
-          crouchingHit: "-8"
-        stats:
-          入力: 近立中P→立大P
-          C: "○/×"
 - id: special_moves
   displayTitle: "【必殺技】"
   entries:

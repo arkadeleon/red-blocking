@@ -1082,6 +1082,54 @@ moveGroups:
         skillName: Towards + Fierce
         characterCode: '01'
         skillCode: '022'
+- id: target_combos
+  displayTitle: "【ターゲットコンボ】"
+  entries:
+  - id: kk
+    displayName: 屈小K→屈中K
+    detail:
+      displayName: 屈小K→屈中K
+      superCancel: "○/×"
+      guard: 屈/屈
+      blocking: "↓/↓"
+      damage: 30/50
+      stun: 3/3
+      stunReduction: 1/1
+      frameAdvantage:
+        guard: "-1"
+        standingHit: '0'
+        crouchingHit: "+1"
+      stats:
+        入力: 屈小K→屈中K
+        C: "○/×"
+      noteGroups:
+      - id: item_cf8aa5b927
+        displayTitle: 補足
+        entries:
+        - 連続ヒットするが、屈中Kにキャンセルがかからず、ダメージも低い
+  - id: kk_2
+    displayName: 屈小K→屈大K
+    detail:
+      displayName: 屈小K→屈大K
+      superCancel: "○/×"
+      guard: 屈/屈
+      blocking: "↓/↓"
+      damage: 30/130
+      stun: 3/3
+      stunReduction: 1/15
+      frameAdvantage:
+        guard: "-15"
+        standingHit: ダウン
+        crouchingHit: ダウン
+      stats:
+        入力: 屈小K→屈大K
+        C: "○/×"
+      noteGroups:
+      - id: item_cf8aa5b927
+        displayTitle: 補足
+        entries:
+        - TCではあるが連係のため、繋がらない
+
 - id: command_normals
   displayTitle: "【特殊入力技】"
   entries:
@@ -1154,53 +1202,6 @@ moveGroups:
           ・6段階までアップしてSA2を決めた場合、通常約3割のダメージが約4割のダメージになる
           ・8段階までアップしてSA1を決めた場合、通常約4割のダメージが約6割のダメージになる
           ・ゲージ増加のカッコ内の数値は1本制のもの
-  - id: item_b46a9fbcad
-    displayName: ターゲットコンボ
-    children:
-    - id: kk
-      displayName: 屈小K→屈中K
-      detail:
-        displayName: 屈小K→屈中K
-        superCancel: "○/×"
-        guard: 屈/屈
-        blocking: "↓/↓"
-        damage: 30/50
-        stun: 3/3
-        stunReduction: 1/1
-        frameAdvantage:
-          guard: "-1"
-          standingHit: '0'
-          crouchingHit: "+1"
-        stats:
-          入力: 屈小K→屈中K
-          C: "○/×"
-        noteGroups:
-        - id: item_cf8aa5b927
-          displayTitle: 補足
-          entries:
-          - 連続ヒットするが、屈中Kにキャンセルがかからず、ダメージも低い
-    - id: kk_2
-      displayName: 屈小K→屈大K
-      detail:
-        displayName: 屈小K→屈大K
-        superCancel: "○/×"
-        guard: 屈/屈
-        blocking: "↓/↓"
-        damage: 30/130
-        stun: 3/3
-        stunReduction: 1/15
-        frameAdvantage:
-          guard: "-15"
-          standingHit: ダウン
-          crouchingHit: ダウン
-        stats:
-          入力: 屈小K→屈大K
-          C: "○/×"
-        noteGroups:
-        - id: item_cf8aa5b927
-          displayTitle: 補足
-          entries:
-          - TCではあるが連係のため、繋がらない
 - id: special_moves
   displayTitle: "【必殺技】"
   entries:

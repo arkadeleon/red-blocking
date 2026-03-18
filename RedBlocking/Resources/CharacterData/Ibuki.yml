@@ -1224,6 +1224,228 @@ moveGroups:
         skillName: Towards + Roundhouse
         characterCode: '07'
         skillCode: '033'
+- id: target_combos
+  displayTitle: "【ターゲットコンボ】"
+  entries:
+  - id: jkj6k
+    displayName: J小K→J6中K
+    detail:
+      displayName: J小K→J6中K
+      superCancel: "×/×"
+      guard: 立
+      blocking: "→"
+      damage: 40/40
+      stun: 5/5
+      stunReduction: 3/1
+      frameAdvantage:
+        guard: "―"
+        standingHit: "―"
+        crouchingHit: "―"
+      stats:
+        入力: J小K→J6中K
+        C: "×/×"
+      noteGroups:
+      - id: item_cf8aa5b927
+        displayTitle: 補足
+        entries:
+        - |-
+          ・小K、中Kともにめくり性能を備えているので、2段ともめくり、2段目のみめくり、といった使い方も可能
+          ・2段目が中Kなので出す高度に注意
+  - id: jpj6p
+    displayName: J小P→J6大P
+    detail:
+      displayName: J小P→J6大P
+      superCancel: "×/×"
+      guard: 立
+      blocking: "→"
+      damage: 60/60
+      stun: 5/6
+      stunReduction: 3/1
+      frameAdvantage:
+        guard: "―"
+        standingHit: "―"
+        crouchingHit: "―"
+      stats:
+        入力: J小P→J6大P
+        C: "×/×"
+      noteGroups:
+      - id: item_cf8aa5b927
+        displayTitle: 補足
+        entries:
+        - "・1段目のJ小Pが位置的に当て易いため、主に正面からの飛び込みに使用\n・空対空にも強い\n・TCを出すタイミングを変えれるので、飛び込み時のBL対策に早出ししたり、引きつけたりして使い分ける \n・ヒット時は振り向きのけぞりになるため、鎧通しが連続技になる(ただしキャラによっては不安定)\n・EX風切りヒット後、「ヒューゴー、Q、ユリアン、レミー、アレックス、ダッドリー」にはTCを繋ぐ事が可能。なおTCにディレイを掛けて出すと、更に地上で追撃可能"
+  - id: jpj6k
+    displayName: J大P→J6中K
+    detail:
+      displayName: J大P→J6中K
+      superCancel: "×/×"
+      guard: 立
+      blocking: "→"
+      damage: 120/40
+      stun: 13/5
+      stunReduction: 3/1
+      frameAdvantage:
+        guard: "―"
+        standingHit: "―"
+        crouchingHit: "―"
+      stats:
+        入力: J大P→J6中K
+        C: "×/×"
+      noteGroups:
+      - id: item_cf8aa5b927
+        displayTitle: 補足
+        entries:
+        - |-
+          ・唯一、垂直ジャンプからも出すことが可能
+          ・起き攻めや、近立大Kヒット時の追撃に使用
+          ・TCが地上の相手にヒットした時は、「中K→旋」のコンボに繋ぐのが安定
+  - id: 4k6k
+    displayName: 4中K→6中K
+    detail:
+      displayName: 4中K→6中K
+      superCancel: "×/×"
+      guard: 両/立
+      blocking: "→/→"
+      damage: 70/70
+      stun: 5/13
+      stunReduction: 1/1
+      frameAdvantage:
+        guard: "+9"
+        standingHit: "+10"
+        crouchingHit: "+11"
+      stats:
+        入力: 4中K→6中K
+        C: "×/×"
+      noteGroups:
+      - id: item_cf8aa5b927
+        displayTitle: 補足
+        entries:
+        - TCではあるが連係のため、繋がらない
+  - id: ppp
+    displayName: 近立小P→立中P→立大P
+    detail:
+      displayName: 近立小P→立中P→立大P
+      superCancel: "○/○/○"
+      guard: 両方・両方・両方
+      blocking: 両方/→/両方
+      damage: 30/30/50
+      stun: 5/5/7
+      stunReduction: 1/1/1
+      stats:
+        入力: 近立小P→立中P→立大P
+        C: "○/○/○"
+        ヒット&ガード硬直時間差(中P) ガード: "-2"
+        ヒット&ガード硬直時間差(中P) 立ヒット: "-1"
+        ヒット&ガード硬直時間差(中P) 屈ヒット: '0'
+        ヒット&ガード硬直時間差(大P) ガード: "+3"
+        ヒット&ガード硬直時間差(大P) 立ヒット: "+5"
+        ヒット&ガード硬直時間差(大P) 屈ヒット: "+7"
+      noteGroups:
+      - id: item_cf8aa5b927
+        displayTitle: 補足
+        entries:
+        - "・4中Pからでも始動可能 \n・間合いが離れないので攻勢を維持し易いが、3段目が一部キャラのしゃがみに当たらないので注意\n・しゃがみヒット時は目押しで立中Kに繋げる事が可能"
+  - id: pp6k
+    displayName: 遠立小P→立中P→6小K
+    detail:
+      displayName: 遠立小P→立中P→6小K
+      superCancel: "×/×/×"
+      guard: 両方・両方・両方
+      blocking: 両方/→/両方
+      damage: 25/40/20
+      stun: 5/6/3
+      stunReduction: 1/1/1
+      stats:
+        入力: 遠立小P→立中P→6小K
+        C: "×/×/×"
+        ヒット&ガード硬直時間差(中P) ガード: "+6"
+        ヒット&ガード硬直時間差(中P) 立ヒット: "+7"
+        ヒット&ガード硬直時間差(中P) 屈ヒット: "+8"
+        ヒット&ガード硬直時間差(6小K) ガード: "+2"
+        ヒット&ガード硬直時間差(6小K) 立ヒット: "+3"
+        ヒット&ガード硬直時間差(6小K) 屈ヒット: "+4"
+      noteGroups:
+      - id: item_cf8aa5b927
+        displayTitle: 補足
+        entries:
+        - |-
+          ・中Pからでも始動可能
+          ・小Pで暴れて相手を押し返すときに使用
+  - id: kkk
+    displayName: 立小K→立中K→立大K
+    detail:
+      displayName: 立小K→立中K→立大K
+      superCancel: "○/○/×"
+      guard: 両方・両方・両方
+      blocking: 両方/→/→
+      damage: 20/50/50
+      stun: 3/5/5
+      stunReduction: 1/1/3
+      stats:
+        入力: 立小K→立中K→立大K
+        C: "○/○/×"
+        ヒット&ガード硬直時間差(中K) ガード: "+4"
+        ヒット&ガード硬直時間差(中K) 立ヒット: "+5"
+        ヒット&ガード硬直時間差(中K) 屈ヒット: "+6"
+        ヒット&ガード硬直時間差(大K) ガード: "-2"
+        ヒット&ガード硬直時間差(大K) 立ヒット: '0'
+        ヒット&ガード硬直時間差(大K) 屈ヒット: "+2"
+      noteGroups:
+      - id: item_cf8aa5b927
+        displayTitle: 補足
+        entries:
+        - "・中Kからでも始動可能 \n・最後の立大KはCHJ可能\n・2段目の中KからNCで闇時雨に繋ぐ事が可能 \n・通常は中Kまででヒット確認をして、キャンセル必殺技などに繋ぐ"
+  - id: pkk
+    displayName: 近立大P→屈大K→立大K
+    detail:
+      displayName: 近立大P→屈大K→立大K
+      superCancel: "○・×/×/×"
+      guard: 両方・両方/屈/両方
+      blocking: 両方・両方/↓/→
+      damage: 130(60+70)/50/40
+      stun: 15/3/4
+      stunReduction: 1・1/1/3
+      stats:
+        入力: 近立大P→屈大K→立大K
+        C: "○・×/×/×"
+        ヒット&ガード硬直時間差(屈大K) ガード: "-8"
+        ヒット&ガード硬直時間差(屈大K) 立ヒット: ダウン
+        ヒット&ガード硬直時間差(屈大K) 屈ヒット: ダウン
+        ヒット&ガード硬直時間差(立大K) ガード: "-2"
+        ヒット&ガード硬直時間差(立大K) 立ヒット: "-1"
+        ヒット&ガード硬直時間差(立大K) 屈ヒット: "+1"
+      noteGroups:
+      - id: item_cf8aa5b927
+        displayTitle: 補足
+        entries:
+        - "・屈大Kからでも始動可能\n・最後の立大KはCHJ可能 \n・対ユリアン戦でヘッド対策として起き攻めに使用"
+  - id: ppkk
+    displayName: 近立小P→立中P→屈大K→立大K
+    detail:
+      displayName: 近立小P→立中P→屈大K→立大K
+      superCancel: "○/○/×/×"
+      guard: 両方/両方/屈/両方
+      blocking: 両方/→/↓/→
+      damage: 30/40/40/30
+      stun: 5/6/3/3
+      stunReduction: 1/1/1/1・3
+      stats:
+        入力: 近立小P→立中P→屈大K→立大K
+        C: "○/○/×/×"
+        ヒット&ガード硬直時間差(中P) ガード: "-2"
+        ヒット&ガード硬直時間差(中P) 立ヒット: "-1"
+        ヒット&ガード硬直時間差(中P) 屈ヒット: '0'
+        ヒット&ガード硬直時間差(屈大K) ガード: "-8"
+        ヒット&ガード硬直時間差(屈大K) 立ヒット: ダウン
+        ヒット&ガード硬直時間差(屈大K) 屈ヒット: ダウン
+        ヒット&ガード硬直時間差(立大K) ガード: "-2"
+        ヒット&ガード硬直時間差(立大K) 立ヒット: "-1"
+        ヒット&ガード硬直時間差(立大K) 屈ヒット: "+1"
+      noteGroups:
+      - id: item_cf8aa5b927
+        displayTitle: 補足
+        entries:
+        - "・中Pからでも始動可能 \n・最後の立大Kはヒット時のみCHJ可能 \n・CHJで追いかけた後、もう1セットこのTCを入れると、大抵相手はスタンする\n・3段目がしゃがみ状態の小型キャラおよびアレックスに、最後の遠立大Kがしゃがみ状態のヤン、トゥエルヴに当たらない"
+
 - id: command_normals
   displayTitle: "【特殊入力技】"
   entries:
@@ -1297,227 +1519,6 @@ moveGroups:
         skillName: Universal Overhead
         characterCode: '07'
         skillCode: '036'
-  - id: item_b46a9fbcad
-    displayName: ターゲットコンボ
-    children:
-    - id: jkj6k
-      displayName: J小K→J6中K
-      detail:
-        displayName: J小K→J6中K
-        superCancel: "×/×"
-        guard: 立
-        blocking: "→"
-        damage: 40/40
-        stun: 5/5
-        stunReduction: 3/1
-        frameAdvantage:
-          guard: "―"
-          standingHit: "―"
-          crouchingHit: "―"
-        stats:
-          入力: J小K→J6中K
-          C: "×/×"
-        noteGroups:
-        - id: item_cf8aa5b927
-          displayTitle: 補足
-          entries:
-          - |-
-            ・小K、中Kともにめくり性能を備えているので、2段ともめくり、2段目のみめくり、といった使い方も可能
-            ・2段目が中Kなので出す高度に注意
-    - id: jpj6p
-      displayName: J小P→J6大P
-      detail:
-        displayName: J小P→J6大P
-        superCancel: "×/×"
-        guard: 立
-        blocking: "→"
-        damage: 60/60
-        stun: 5/6
-        stunReduction: 3/1
-        frameAdvantage:
-          guard: "―"
-          standingHit: "―"
-          crouchingHit: "―"
-        stats:
-          入力: J小P→J6大P
-          C: "×/×"
-        noteGroups:
-        - id: item_cf8aa5b927
-          displayTitle: 補足
-          entries:
-          - "・1段目のJ小Pが位置的に当て易いため、主に正面からの飛び込みに使用\n・空対空にも強い\n・TCを出すタイミングを変えれるので、飛び込み時のBL対策に早出ししたり、引きつけたりして使い分ける \n・ヒット時は振り向きのけぞりになるため、鎧通しが連続技になる(ただしキャラによっては不安定)\n・EX風切りヒット後、「ヒューゴー、Q、ユリアン、レミー、アレックス、ダッドリー」にはTCを繋ぐ事が可能。なおTCにディレイを掛けて出すと、更に地上で追撃可能"
-    - id: jpj6k
-      displayName: J大P→J6中K
-      detail:
-        displayName: J大P→J6中K
-        superCancel: "×/×"
-        guard: 立
-        blocking: "→"
-        damage: 120/40
-        stun: 13/5
-        stunReduction: 3/1
-        frameAdvantage:
-          guard: "―"
-          standingHit: "―"
-          crouchingHit: "―"
-        stats:
-          入力: J大P→J6中K
-          C: "×/×"
-        noteGroups:
-        - id: item_cf8aa5b927
-          displayTitle: 補足
-          entries:
-          - |-
-            ・唯一、垂直ジャンプからも出すことが可能
-            ・起き攻めや、近立大Kヒット時の追撃に使用
-            ・TCが地上の相手にヒットした時は、「中K→旋」のコンボに繋ぐのが安定
-    - id: 4k6k
-      displayName: 4中K→6中K
-      detail:
-        displayName: 4中K→6中K
-        superCancel: "×/×"
-        guard: 両/立
-        blocking: "→/→"
-        damage: 70/70
-        stun: 5/13
-        stunReduction: 1/1
-        frameAdvantage:
-          guard: "+9"
-          standingHit: "+10"
-          crouchingHit: "+11"
-        stats:
-          入力: 4中K→6中K
-          C: "×/×"
-        noteGroups:
-        - id: item_cf8aa5b927
-          displayTitle: 補足
-          entries:
-          - TCではあるが連係のため、繋がらない
-    - id: ppp
-      displayName: 近立小P→立中P→立大P
-      detail:
-        displayName: 近立小P→立中P→立大P
-        superCancel: "○/○/○"
-        guard: 両方・両方・両方
-        blocking: 両方/→/両方
-        damage: 30/30/50
-        stun: 5/5/7
-        stunReduction: 1/1/1
-        stats:
-          入力: 近立小P→立中P→立大P
-          C: "○/○/○"
-          ヒット&ガード硬直時間差(中P) ガード: "-2"
-          ヒット&ガード硬直時間差(中P) 立ヒット: "-1"
-          ヒット&ガード硬直時間差(中P) 屈ヒット: '0'
-          ヒット&ガード硬直時間差(大P) ガード: "+3"
-          ヒット&ガード硬直時間差(大P) 立ヒット: "+5"
-          ヒット&ガード硬直時間差(大P) 屈ヒット: "+7"
-        noteGroups:
-        - id: item_cf8aa5b927
-          displayTitle: 補足
-          entries:
-          - "・4中Pからでも始動可能 \n・間合いが離れないので攻勢を維持し易いが、3段目が一部キャラのしゃがみに当たらないので注意\n・しゃがみヒット時は目押しで立中Kに繋げる事が可能"
-    - id: pp6k
-      displayName: 遠立小P→立中P→6小K
-      detail:
-        displayName: 遠立小P→立中P→6小K
-        superCancel: "×/×/×"
-        guard: 両方・両方・両方
-        blocking: 両方/→/両方
-        damage: 25/40/20
-        stun: 5/6/3
-        stunReduction: 1/1/1
-        stats:
-          入力: 遠立小P→立中P→6小K
-          C: "×/×/×"
-          ヒット&ガード硬直時間差(中P) ガード: "+6"
-          ヒット&ガード硬直時間差(中P) 立ヒット: "+7"
-          ヒット&ガード硬直時間差(中P) 屈ヒット: "+8"
-          ヒット&ガード硬直時間差(6小K) ガード: "+2"
-          ヒット&ガード硬直時間差(6小K) 立ヒット: "+3"
-          ヒット&ガード硬直時間差(6小K) 屈ヒット: "+4"
-        noteGroups:
-        - id: item_cf8aa5b927
-          displayTitle: 補足
-          entries:
-          - |-
-            ・中Pからでも始動可能
-            ・小Pで暴れて相手を押し返すときに使用
-    - id: kkk
-      displayName: 立小K→立中K→立大K
-      detail:
-        displayName: 立小K→立中K→立大K
-        superCancel: "○/○/×"
-        guard: 両方・両方・両方
-        blocking: 両方/→/→
-        damage: 20/50/50
-        stun: 3/5/5
-        stunReduction: 1/1/3
-        stats:
-          入力: 立小K→立中K→立大K
-          C: "○/○/×"
-          ヒット&ガード硬直時間差(中K) ガード: "+4"
-          ヒット&ガード硬直時間差(中K) 立ヒット: "+5"
-          ヒット&ガード硬直時間差(中K) 屈ヒット: "+6"
-          ヒット&ガード硬直時間差(大K) ガード: "-2"
-          ヒット&ガード硬直時間差(大K) 立ヒット: '0'
-          ヒット&ガード硬直時間差(大K) 屈ヒット: "+2"
-        noteGroups:
-        - id: item_cf8aa5b927
-          displayTitle: 補足
-          entries:
-          - "・中Kからでも始動可能 \n・最後の立大KはCHJ可能\n・2段目の中KからNCで闇時雨に繋ぐ事が可能 \n・通常は中Kまででヒット確認をして、キャンセル必殺技などに繋ぐ"
-    - id: pkk
-      displayName: 近立大P→屈大K→立大K
-      detail:
-        displayName: 近立大P→屈大K→立大K
-        superCancel: "○・×/×/×"
-        guard: 両方・両方/屈/両方
-        blocking: 両方・両方/↓/→
-        damage: 130(60+70)/50/40
-        stun: 15/3/4
-        stunReduction: 1・1/1/3
-        stats:
-          入力: 近立大P→屈大K→立大K
-          C: "○・×/×/×"
-          ヒット&ガード硬直時間差(屈大K) ガード: "-8"
-          ヒット&ガード硬直時間差(屈大K) 立ヒット: ダウン
-          ヒット&ガード硬直時間差(屈大K) 屈ヒット: ダウン
-          ヒット&ガード硬直時間差(立大K) ガード: "-2"
-          ヒット&ガード硬直時間差(立大K) 立ヒット: "-1"
-          ヒット&ガード硬直時間差(立大K) 屈ヒット: "+1"
-        noteGroups:
-        - id: item_cf8aa5b927
-          displayTitle: 補足
-          entries:
-          - "・屈大Kからでも始動可能\n・最後の立大KはCHJ可能 \n・対ユリアン戦でヘッド対策として起き攻めに使用"
-    - id: ppkk
-      displayName: 近立小P→立中P→屈大K→立大K
-      detail:
-        displayName: 近立小P→立中P→屈大K→立大K
-        superCancel: "○/○/×/×"
-        guard: 両方/両方/屈/両方
-        blocking: 両方/→/↓/→
-        damage: 30/40/40/30
-        stun: 5/6/3/3
-        stunReduction: 1/1/1/1・3
-        stats:
-          入力: 近立小P→立中P→屈大K→立大K
-          C: "○/○/×/×"
-          ヒット&ガード硬直時間差(中P) ガード: "-2"
-          ヒット&ガード硬直時間差(中P) 立ヒット: "-1"
-          ヒット&ガード硬直時間差(中P) 屈ヒット: '0'
-          ヒット&ガード硬直時間差(屈大K) ガード: "-8"
-          ヒット&ガード硬直時間差(屈大K) 立ヒット: ダウン
-          ヒット&ガード硬直時間差(屈大K) 屈ヒット: ダウン
-          ヒット&ガード硬直時間差(立大K) ガード: "-2"
-          ヒット&ガード硬直時間差(立大K) 立ヒット: "-1"
-          ヒット&ガード硬直時間差(立大K) 屈ヒット: "+1"
-        noteGroups:
-        - id: item_cf8aa5b927
-          displayTitle: 補足
-          entries:
-          - "・中Pからでも始動可能 \n・最後の立大Kはヒット時のみCHJ可能 \n・CHJで追いかけた後、もう1セットこのTCを入れると、大抵相手はスタンする\n・3段目がしゃがみ状態の小型キャラおよびアレックスに、最後の遠立大Kがしゃがみ状態のヤン、トゥエルヴに当たらない"
 - id: special_moves
   displayTitle: "【必殺技】"
   entries:

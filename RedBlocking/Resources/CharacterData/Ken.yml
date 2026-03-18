@@ -1147,6 +1147,35 @@ moveGroups:
         crouchingHit: "―"
       stats:
         C/SC: "×"
+- id: target_combos
+  displayTitle: "【ターゲットコンボ】"
+  entries:
+  - id: pp
+    displayName: 近立中P→立大P
+    detail:
+      displayName: 近立中P→立大P
+      superCancel: "○/○"
+      guard: 両方/両方
+      blocking: "→/→"
+      damage: 100/60
+      stun: 7/5
+      stunReduction: 15/15
+      frameAdvantage:
+        guard: "-2"
+        standingHit: '0'
+        crouchingHit: "+2"
+      stats:
+        入力: 近中P→近大P
+        C: "○/○"
+      noteGroups:
+      - id: item_cf8aa5b927
+        displayTitle: 補足
+        entries:
+        - |-
+          ・TC後の波動拳は青BL可能のため、決め打ちしない方が良い
+          ・キャンセル猶予時間は25フレーム
+          ・TC→波動拳[SC]→SA3の場合のキャンセル猶予時間は40フレーム
+
 - id: command_normals
   displayTitle: "【特殊入力技】"
   entries:
@@ -1221,34 +1250,6 @@ moveGroups:
         skillName: Taunt
         characterCode: '11'
         skillCode: '036'
-  - id: item_b46a9fbcad
-    displayName: ターゲットコンボ
-    children:
-    - id: pp
-      displayName: 近立中P→立大P
-      detail:
-        displayName: 近立中P→立大P
-        superCancel: "○/○"
-        guard: 両方/両方
-        blocking: "→/→"
-        damage: 100/60
-        stun: 7/5
-        stunReduction: 15/15
-        frameAdvantage:
-          guard: "-2"
-          standingHit: '0'
-          crouchingHit: "+2"
-        stats:
-          入力: 近中P→近大P
-          C: "○/○"
-        noteGroups:
-        - id: item_cf8aa5b927
-          displayTitle: 補足
-          entries:
-          - |-
-            ・TC後の波動拳は青BL可能のため、決め打ちしない方が良い
-            ・キャンセル猶予時間は25フレーム
-            ・TC→波動拳[SC]→SA3の場合のキャンセル猶予時間は40フレーム
 - id: special_moves
   displayTitle: "【必殺技】"
   entries:

@@ -29,11 +29,15 @@ struct CharacterProfile: Decodable, Equatable, Hashable {
         introduction = try container.decode(CharacterIntroduction.self, forKey: .introduction)
         moveGroups = try container.decode([MoveGroup].self, forKey: .moveGroups)
 
-        guard moveGroups.map(\.id) == MoveGroupID.allCases else {
+        let ids = moveGroups.map(\.id)
+        let allCases = MoveGroupID.allCases
+        let requiredCases = allCases.filter { $0 != .targetCombos }
+        let isValid = ids == allCases || ids == requiredCases
+        guard isValid else {
             throw DecodingError.dataCorruptedError(
                 forKey: .moveGroups,
                 in: container,
-                debugDescription: "moveGroups must contain the 7 fixed group ids in schema order."
+                debugDescription: "moveGroups must follow schema order; target_combos is optional."
             )
         }
     }
@@ -83,6 +87,7 @@ enum MoveGroupID: String, CaseIterable, Decodable, Equatable, Hashable {
     case groundNormals = "ground_normals"
     case normalThrows = "normal_throws"
     case leverInputMoves = "lever_input_moves"
+    case targetCombos = "target_combos"
     case commandNormals = "command_normals"
     case specialMoves = "special_moves"
     case superArts = "super_arts"

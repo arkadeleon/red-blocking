@@ -1005,6 +1005,202 @@ moveGroups:
         skillName: Towards + Roundhouse
         characterCode: '04'
         skillCode: '020'
+- id: target_combos
+  displayTitle: "【ターゲットコンボ】"
+  entries:
+  - id: 6pp
+    displayName: 6小P→中P
+    detail:
+      displayName: 6小P→中P
+      superCancel: "○/○"
+      guard: 両方/両方
+      blocking: 両方/→
+      damage: 25/30
+      stun: 3/3
+      stunReduction: 15/3
+      frameAdvantage:
+        guard: '0'
+        standingHit: "+1"
+        crouchingHit: "+2"
+      stats:
+        入力: 6小P→中P
+        C: "☆/○"
+  - id: ppk
+    displayName: 立小P→中P→中K
+    detail:
+      displayName: 立小P→中P→中K
+      superCancel: "○/×/○"
+      guard: 両方/両方/両方
+      blocking: 両方/→ /→
+      damage: 25/30/30
+      stun: 3/3/3
+      stunReduction: 15/1/1
+      stats:
+        入力: 立小P→中P→中K
+        C: "☆/×/○"
+        ヒット&ガード硬直時間差(中P) ガード: "+2"
+        ヒット&ガード硬直時間差(中P) 立ヒット: "+3"
+        ヒット&ガード硬直時間差(中P) 屈ヒット: "+3"
+        ヒット&ガード硬直時間差(中K) ガード: "+1"
+        ヒット&ガード硬直時間差(中K) 立ヒット: "+3"
+        ヒット&ガード硬直時間差(中K) 屈ヒット: "+3"
+      noteGroups:
+      - id: item_cf8aa5b927
+        displayTitle: 補足
+        entries:
+        - |-
+          ・中PをノーキャンセルしてSAに繋ぐことが可能
+          ・最後の中Kにキャンセルがかかるため、ヒット確認に使用可能
+  - id: kk
+    displayName: 屈小K→中K
+    detail:
+      displayName: 屈小K→中K
+      superCancel: "○/×"
+      guard: 屈/両方
+      blocking: "↓/→"
+      damage: 30/40
+      stun: 3/4
+      stunReduction: 3/1
+      frameAdvantage:
+        guard: "-2"
+        standingHit: '0'
+        crouchingHit: "+2"
+      stats:
+        入力: 屈小K→中K
+        C: "☆/×"
+      noteGroups:
+      - id: item_cf8aa5b927
+        displayTitle: 補足
+        entries:
+        - |-
+          ・BLされても中KがBL有利時間を無視して発生するため、発生6フレーム以上の技を潰すことができる
+          ・下BLを狙う相手に有効
+  - id: kpp
+    displayName: 屈小K→屈中P→屈大P
+    detail:
+      displayName: 屈小K→屈中P→屈大P
+      superCancel: "○/×/×"
+      guard: 屈/両方/両方
+      blocking: "↓/両方/両方"
+      damage: 30/35/40
+      stun: 3/3/4
+      stunReduction: 3/3/3
+      stats:
+        入力: 屈小K→屈中P→屈大P
+        C: "☆/×/×"
+        ヒット&ガード硬直時間差(屈中P) ガード: "-1"
+        ヒット&ガード硬直時間差(屈中P) 立ヒット: '0'
+        ヒット&ガード硬直時間差(屈中P) 屈ヒット: '0'
+        ヒット&ガード硬直時間差(屈大P) ガード: "-2"
+        ヒット&ガード硬直時間差(屈大P) 立ヒット: '0'
+        ヒット&ガード硬直時間差(屈大P) 屈ヒット: '0'
+      noteGroups:
+      - id: item_cf8aa5b927
+        displayTitle: 補足
+        entries:
+        - 初段の屈小Kを2回にする事も可能
+  - id: kkpp
+    displayName: 立小K→中K→中P→大P
+    detail:
+      displayName: 立小K→中K→中P→大P
+      superCancel: "○/×/×/×"
+      guard: 両方/両方/両方/両方・両方
+      blocking: 両方/→ /→/→・→
+      damage: 40/40/30/20+20
+      stun: 3/4/3/3+3
+      stunReduction: 3/1/1/1・1
+      stats:
+        入力: 立小K→中K→中P→大P
+        C: "○/×/×/×"
+        ヒット&ガード硬直時間差(中K) ガード: "+1"
+        ヒット&ガード硬直時間差(中K) 立ヒット: "+3"
+        ヒット&ガード硬直時間差(中K) 屈ヒット: "+3"
+        ヒット&ガード硬直時間差(中P) ガード: "+2"
+        ヒット&ガード硬直時間差(中P) 立ヒット: "+3"
+        ヒット&ガード硬直時間差(中P) 屈ヒット: "+3"
+        ヒット&ガード硬直時間差(大P) ガード: '0'
+        ヒット&ガード硬直時間差(大P) 立ヒット: "+2"
+        ヒット&ガード硬直時間差(大P) 屈ヒット: "+2"
+  - id: pkp
+    displayName: 立中P→中K→大P
+    detail:
+      displayName: 立中P→中K→大P
+      superCancel: "○/×/×"
+      guard: 両方/両方/両方
+      blocking: "→/→ /→"
+      damage: 60/40/50
+      stun: 9/4/3
+      stunReduction: 3/1/1
+      stats:
+        入力: 立中P→中K→大P
+        C: "○/×/×"
+        ヒット&ガード硬直時間差(中K) ガード: "+1"
+        ヒット&ガード硬直時間差(中K) 立ヒット: "+3"
+        ヒット&ガード硬直時間差(中K) 屈ヒット: "+5"
+        ヒット&ガード硬直時間差(大P) ガード: "-4"
+        ヒット&ガード硬直時間差(大P) 立ヒット: "-2"
+        ヒット&ガード硬直時間差(大P) 屈ヒット: '0'
+  - id: 6kkp
+    displayName: 6中K→中K→大P
+    detail:
+      displayName: 6中K→中K→大P
+      superCancel: "○/×/×"
+      guard: 両方/両方/両方
+      blocking: "→/→ /→"
+      damage: 100/40/50
+      stun: 9/4/3
+      stunReduction: 3/1/1
+      stats:
+        入力: 6中K→中K→大P
+        C: "○/×/×"
+        ヒット&ガード硬直時間差(中K) ガード: "+1"
+        ヒット&ガード硬直時間差(中K) 立ヒット: "+3"
+        ヒット&ガード硬直時間差(中K) 屈ヒット: "+5"
+        ヒット&ガード硬直時間差(大P) ガード: "-4"
+        ヒット&ガード硬直時間差(大P) 立ヒット: "-2"
+        ヒット&ガード硬直時間差(大P) 屈ヒット: '0'
+  - id: kkp
+    displayName: 立中K→大K→大P
+    detail:
+      displayName: 立中K→大K→大P
+      superCancel: "×/×/×・×"
+      guard: 両方/両方/両方・両方
+      blocking: "→/→ /→・→"
+      damage: 80/60/20+20
+      stun: 11/6/3+3
+      stunReduction: 3/1/1・1
+      stats:
+        入力: 立中K→大K→大P
+        C: "×/×/×・×"
+        ヒット&ガード硬直時間差(大K) ガード: "-1"
+        ヒット&ガード硬直時間差(大K) 立ヒット: "+1"
+        ヒット&ガード硬直時間差(大K) 屈ヒット: "+1"
+        ヒット&ガード硬直時間差(大P) ガード: '0'
+        ヒット&ガード硬直時間差(大P) 立ヒット: "+2"
+        ヒット&ガード硬直時間差(大P) 屈ヒット: "+2"
+      noteGroups:
+      - id: item_cf8aa5b927
+        displayTitle: 補足
+        entries:
+        - 簡易対空として優秀
+  - id: 6kk
+    displayName: 6大K→中K
+    detail:
+      displayName: 6大K→中K
+      superCancel: "×/×"
+      guard: 立/両方
+      blocking: "→/→"
+      damage: 110/40
+      stun: 7/4
+      stunReduction: 3/1
+      frameAdvantage:
+        guard: "-2"
+        standingHit: '0'
+        crouchingHit: "+2"
+      stats:
+        入力: 6大K→中K
+        C: "×/×"
+
 - id: command_normals
   displayTitle: "【特殊入力技】"
   entries:
@@ -1080,201 +1276,6 @@ moveGroups:
         skillName: Taunt
         characterCode: '04'
         skillCode: '027'
-  - id: item_b46a9fbcad
-    displayName: ターゲットコンボ
-    children:
-    - id: 6pp
-      displayName: 6小P→中P
-      detail:
-        displayName: 6小P→中P
-        superCancel: "○/○"
-        guard: 両方/両方
-        blocking: 両方/→
-        damage: 25/30
-        stun: 3/3
-        stunReduction: 15/3
-        frameAdvantage:
-          guard: '0'
-          standingHit: "+1"
-          crouchingHit: "+2"
-        stats:
-          入力: 6小P→中P
-          C: "☆/○"
-    - id: ppk
-      displayName: 立小P→中P→中K
-      detail:
-        displayName: 立小P→中P→中K
-        superCancel: "○/×/○"
-        guard: 両方/両方/両方
-        blocking: 両方/→ /→
-        damage: 25/30/30
-        stun: 3/3/3
-        stunReduction: 15/1/1
-        stats:
-          入力: 立小P→中P→中K
-          C: "☆/×/○"
-          ヒット&ガード硬直時間差(中P) ガード: "+2"
-          ヒット&ガード硬直時間差(中P) 立ヒット: "+3"
-          ヒット&ガード硬直時間差(中P) 屈ヒット: "+3"
-          ヒット&ガード硬直時間差(中K) ガード: "+1"
-          ヒット&ガード硬直時間差(中K) 立ヒット: "+3"
-          ヒット&ガード硬直時間差(中K) 屈ヒット: "+3"
-        noteGroups:
-        - id: item_cf8aa5b927
-          displayTitle: 補足
-          entries:
-          - |-
-            ・中PをノーキャンセルしてSAに繋ぐことが可能
-            ・最後の中Kにキャンセルがかかるため、ヒット確認に使用可能
-    - id: kk
-      displayName: 屈小K→中K
-      detail:
-        displayName: 屈小K→中K
-        superCancel: "○/×"
-        guard: 屈/両方
-        blocking: "↓/→"
-        damage: 30/40
-        stun: 3/4
-        stunReduction: 3/1
-        frameAdvantage:
-          guard: "-2"
-          standingHit: '0'
-          crouchingHit: "+2"
-        stats:
-          入力: 屈小K→中K
-          C: "☆/×"
-        noteGroups:
-        - id: item_cf8aa5b927
-          displayTitle: 補足
-          entries:
-          - |-
-            ・BLされても中KがBL有利時間を無視して発生するため、発生6フレーム以上の技を潰すことができる
-            ・下BLを狙う相手に有効
-    - id: kpp
-      displayName: 屈小K→屈中P→屈大P
-      detail:
-        displayName: 屈小K→屈中P→屈大P
-        superCancel: "○/×/×"
-        guard: 屈/両方/両方
-        blocking: "↓/両方/両方"
-        damage: 30/35/40
-        stun: 3/3/4
-        stunReduction: 3/3/3
-        stats:
-          入力: 屈小K→屈中P→屈大P
-          C: "☆/×/×"
-          ヒット&ガード硬直時間差(屈中P) ガード: "-1"
-          ヒット&ガード硬直時間差(屈中P) 立ヒット: '0'
-          ヒット&ガード硬直時間差(屈中P) 屈ヒット: '0'
-          ヒット&ガード硬直時間差(屈大P) ガード: "-2"
-          ヒット&ガード硬直時間差(屈大P) 立ヒット: '0'
-          ヒット&ガード硬直時間差(屈大P) 屈ヒット: '0'
-        noteGroups:
-        - id: item_cf8aa5b927
-          displayTitle: 補足
-          entries:
-          - 初段の屈小Kを2回にする事も可能
-    - id: kkpp
-      displayName: 立小K→中K→中P→大P
-      detail:
-        displayName: 立小K→中K→中P→大P
-        superCancel: "○/×/×/×"
-        guard: 両方/両方/両方/両方・両方
-        blocking: 両方/→ /→/→・→
-        damage: 40/40/30/20+20
-        stun: 3/4/3/3+3
-        stunReduction: 3/1/1/1・1
-        stats:
-          入力: 立小K→中K→中P→大P
-          C: "○/×/×/×"
-          ヒット&ガード硬直時間差(中K) ガード: "+1"
-          ヒット&ガード硬直時間差(中K) 立ヒット: "+3"
-          ヒット&ガード硬直時間差(中K) 屈ヒット: "+3"
-          ヒット&ガード硬直時間差(中P) ガード: "+2"
-          ヒット&ガード硬直時間差(中P) 立ヒット: "+3"
-          ヒット&ガード硬直時間差(中P) 屈ヒット: "+3"
-          ヒット&ガード硬直時間差(大P) ガード: '0'
-          ヒット&ガード硬直時間差(大P) 立ヒット: "+2"
-          ヒット&ガード硬直時間差(大P) 屈ヒット: "+2"
-    - id: pkp
-      displayName: 立中P→中K→大P
-      detail:
-        displayName: 立中P→中K→大P
-        superCancel: "○/×/×"
-        guard: 両方/両方/両方
-        blocking: "→/→ /→"
-        damage: 60/40/50
-        stun: 9/4/3
-        stunReduction: 3/1/1
-        stats:
-          入力: 立中P→中K→大P
-          C: "○/×/×"
-          ヒット&ガード硬直時間差(中K) ガード: "+1"
-          ヒット&ガード硬直時間差(中K) 立ヒット: "+3"
-          ヒット&ガード硬直時間差(中K) 屈ヒット: "+5"
-          ヒット&ガード硬直時間差(大P) ガード: "-4"
-          ヒット&ガード硬直時間差(大P) 立ヒット: "-2"
-          ヒット&ガード硬直時間差(大P) 屈ヒット: '0'
-    - id: 6kkp
-      displayName: 6中K→中K→大P
-      detail:
-        displayName: 6中K→中K→大P
-        superCancel: "○/×/×"
-        guard: 両方/両方/両方
-        blocking: "→/→ /→"
-        damage: 100/40/50
-        stun: 9/4/3
-        stunReduction: 3/1/1
-        stats:
-          入力: 6中K→中K→大P
-          C: "○/×/×"
-          ヒット&ガード硬直時間差(中K) ガード: "+1"
-          ヒット&ガード硬直時間差(中K) 立ヒット: "+3"
-          ヒット&ガード硬直時間差(中K) 屈ヒット: "+5"
-          ヒット&ガード硬直時間差(大P) ガード: "-4"
-          ヒット&ガード硬直時間差(大P) 立ヒット: "-2"
-          ヒット&ガード硬直時間差(大P) 屈ヒット: '0'
-    - id: kkp
-      displayName: 立中K→大K→大P
-      detail:
-        displayName: 立中K→大K→大P
-        superCancel: "×/×/×・×"
-        guard: 両方/両方/両方・両方
-        blocking: "→/→ /→・→"
-        damage: 80/60/20+20
-        stun: 11/6/3+3
-        stunReduction: 3/1/1・1
-        stats:
-          入力: 立中K→大K→大P
-          C: "×/×/×・×"
-          ヒット&ガード硬直時間差(大K) ガード: "-1"
-          ヒット&ガード硬直時間差(大K) 立ヒット: "+1"
-          ヒット&ガード硬直時間差(大K) 屈ヒット: "+1"
-          ヒット&ガード硬直時間差(大P) ガード: '0'
-          ヒット&ガード硬直時間差(大P) 立ヒット: "+2"
-          ヒット&ガード硬直時間差(大P) 屈ヒット: "+2"
-        noteGroups:
-        - id: item_cf8aa5b927
-          displayTitle: 補足
-          entries:
-          - 簡易対空として優秀
-    - id: 6kk
-      displayName: 6大K→中K
-      detail:
-        displayName: 6大K→中K
-        superCancel: "×/×"
-        guard: 立/両方
-        blocking: "→/→"
-        damage: 110/40
-        stun: 7/4
-        stunReduction: 3/1
-        frameAdvantage:
-          guard: "-2"
-          standingHit: '0'
-          crouchingHit: "+2"
-        stats:
-          入力: 6大K→中K
-          C: "×/×"
 - id: special_moves
   displayTitle: "【必殺技】"
   entries:

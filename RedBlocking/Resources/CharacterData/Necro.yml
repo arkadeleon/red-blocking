@@ -1166,6 +1166,36 @@ moveGroups:
         skillName: Down Back + Fierce
         characterCode: '05'
         skillCode: '027'
+- id: target_combos
+  displayTitle: "【ターゲットコンボ】"
+  entries:
+  - id: 4kp
+    displayName: 4小K→立中P
+    detail:
+      displayName: 4小K→立中P
+      superCancel: "○/○"
+      guard: 両方/両方
+      blocking: 両方/→
+      damage: 45/50
+      stun: 7/11
+      stunReduction: 1/1
+      frameAdvantage:
+        guard: "-3"
+        standingHit: "-2"
+        crouchingHit: "-1"
+      stats:
+        入力: 4小K→立中P
+        C: "☆/×"
+      noteGroups:
+      - id: item_cf8aa5b927
+        displayTitle: 補足
+        entries:
+        - |-
+          ・中Pはレバーをニュートラル状態にしておかないと出ないので注意
+          ・リーチは短いが、発生が3Fと最速のため、起き上がりに出してそのままヒット確認SAなどで切り替えしできる
+          ・しゃがみ状態の「春麗、エレナ、いぶき、まこと、ネクロ、オロ、レミー、トゥエルブ、ヤン、ユン」には中Pが当たらない
+          ・キャンセル猶予時間は26フレーム
+
 - id: command_normals
   displayTitle: "【特殊入力技】"
   entries:
@@ -1239,35 +1269,6 @@ moveGroups:
         skillName: Taunt
         characterCode: '05'
         skillCode: '035'
-  - id: item_b46a9fbcad
-    displayName: ターゲットコンボ
-    children:
-    - id: 4kp
-      displayName: 4小K→立中P
-      detail:
-        displayName: 4小K→立中P
-        superCancel: "○/○"
-        guard: 両方/両方
-        blocking: 両方/→
-        damage: 45/50
-        stun: 7/11
-        stunReduction: 1/1
-        frameAdvantage:
-          guard: "-3"
-          standingHit: "-2"
-          crouchingHit: "-1"
-        stats:
-          入力: 4小K→立中P
-          C: "☆/×"
-        noteGroups:
-        - id: item_cf8aa5b927
-          displayTitle: 補足
-          entries:
-          - |-
-            ・中Pはレバーをニュートラル状態にしておかないと出ないので注意
-            ・リーチは短いが、発生が3Fと最速のため、起き上がりに出してそのままヒット確認SAなどで切り替えしできる
-            ・しゃがみ状態の「春麗、エレナ、いぶき、まこと、ネクロ、オロ、レミー、トゥエルブ、ヤン、ユン」には中Pが当たらない
-            ・キャンセル猶予時間は26フレーム
 - id: special_moves
   displayTitle: "【必殺技】"
   entries:

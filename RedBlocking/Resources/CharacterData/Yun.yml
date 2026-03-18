@@ -1144,6 +1144,152 @@ moveGroups:
         skillName: Towards + Fierce
         characterCode: '03'
         skillCode: '025'
+- id: target_combos
+  displayTitle: "【ターゲットコンボ】"
+  entries:
+  - id: jpj6_p
+    displayName: J小P→J6+大P
+    detail:
+      displayName: J小P→J6+大P
+      superCancel: "×/×"
+      guard: 立/立
+      blocking: "→/→"
+      damage: 40/90
+      stun: 7/7
+      stunReduction: 3/3
+      frameAdvantage:
+        guard: "―"
+        standingHit: "―"
+        crouchingHit: "―"
+      stats:
+        入力: J小P→J6+大P
+        C: "×/×"
+      noteGroups:
+      - id: item_cf8aa5b927
+        displayTitle: 補足
+        entries:
+        - |-
+          ・空対空で使用すると強い
+          ・近立中Kからの追撃に安定して決まる
+  - id: pp
+    displayName: 屈中P→屈大P
+    detail:
+      displayName: 屈中P→屈大P
+      superCancel: "○/×・×"
+      guard: 両方/両方・両方
+      blocking: 両方/両方・両方
+      damage: 70/20+70
+      stun: 5/3+3
+      stunReduction: 1/15・15
+      frameAdvantage:
+        guard: '0'
+        standingHit: "+2"
+        crouchingHit: "+4"
+      stats:
+        入力: 屈中P→屈大P
+        C: "○/×・×"
+  - id: kk
+    displayName: 屈大K→立大K
+    detail:
+      displayName: 屈大K→立大K
+      superCancel: "×/×"
+      guard: 屈/両方
+      blocking: "↓/→"
+      damage: 90/60
+      stun: 3/9
+      stunReduction: 1/1
+      frameAdvantage:
+        guard: "-11"
+        standingHit: ダウン
+        crouchingHit: ダウン
+      stats:
+        入力: 屈大K→立大K
+        C: "×/×"
+      noteGroups:
+      - id: item_cf8aa5b927
+        displayTitle: 補足
+        entries:
+        - 下段のアクセントとしてたまに使う程度
+  - id: pkp
+    displayName: 近立小P→立小K→立中P
+    detail:
+      displayName: 近立小P→立小K→立中P
+      superCancel: "○/○/○"
+      guard: 両方/両方/両方
+      blocking: 両方/両方/→
+      damage: 20/20/50
+      stun: 3/3/5
+      stunReduction: 15/15/15
+      stats:
+        入力: 近立小P→立小K→立中P
+        C: "☆/○/○"
+        ヒット&ガード硬直時間差(立小K) ガード: "+3"
+        ヒット&ガード硬直時間差(立小K) 立ヒット: "+3"
+        ヒット&ガード硬直時間差(立小K) 屈ヒット: "+3"
+        ヒット&ガード硬直時間差(立中P) ガード: "-5"
+        ヒット&ガード硬直時間差(立中P) 立ヒット: "-3"
+        ヒット&ガード硬直時間差(立中P) 屈ヒット: "-1"
+      noteGroups:
+      - id: item_cf8aa5b927
+        displayTitle: 補足
+        entries:
+        - |-
+          ・発生が速いので攻めの起点として使用
+          ・幻影陣に繋ぐスタート技としても優秀
+  - id: pp4_p
+    displayName: 近中P→立大P→4+大P
+    detail:
+      displayName: 近中P→立大P→4+大P
+      superCancel: "○/×/○"
+      guard: 両方/両方/両方
+      blocking: "→/→/→"
+      damage: 60/50/60
+      stun: 5/5/7
+      stunReduction: 15/1/1
+      stats:
+        入力: 近中P→立大P→4+大P
+        C: "○/×/×"
+        ヒット&ガード硬直時間差(立大P) ガード: "+2"
+        ヒット&ガード硬直時間差(立大P) 立ヒット: "+4"
+        ヒット&ガード硬直時間差(立大P) 屈ヒット: "+6"
+        ヒット&ガード硬直時間差(4+大P) ガード: "-4"
+        ヒット&ガード硬直時間差(4+大P) 立ヒット: ダウン
+        ヒット&ガード硬直時間差(4+大P) 屈ヒット: ダウン
+      noteGroups:
+      - id: item_cf8aa5b927
+        displayTitle: 補足
+        entries:
+        - |-
+          ・幻影陣に繋げられるが、補正が大きいので大ダメージは狙いにくい
+          ・2段目はしゃがみ状態の春麗、いぶき、エレナ、オロには当たらない
+  - id: pp4_p_2
+    displayName: 遠中P→立大P→4+大P
+    detail:
+      displayName: 遠中P→立大P→4+大P
+      superCancel: "×/×/○"
+      guard: 両方/両方/両方
+      blocking: "→/→/→"
+      damage: 50/50/60
+      stun: 5/5/7
+      stunReduction: 15/1/1
+      stats:
+        入力: 遠中P→立大P→4+大P
+        C: "×/×/×"
+        ヒット&ガード硬直時間差(立大P) ガード: "+2"
+        ヒット&ガード硬直時間差(立大P) 立ヒット: "+4"
+        ヒット&ガード硬直時間差(立大P) 屈ヒット: "+6"
+        ヒット&ガード硬直時間差(4+大P) ガード: "-4"
+        ヒット&ガード硬直時間差(4+大P) 立ヒット: ダウン
+        ヒット&ガード硬直時間差(4+大P) 屈ヒット: ダウン
+      noteGroups:
+      - id: item_cf8aa5b927
+        displayTitle: 補足
+        entries:
+        - |-
+          ・幻影陣に繋げられるが、補正が大きいので大ダメージは狙いにくい
+          ・2段目はしゃがみ状態の春麗、いぶき、エレナ、オロには当たらない
+          ・遠すぎると最後の虎撲子がヒットしなくなるので注意
+
 - id: command_normals
   displayTitle: "【特殊入力技】"
   entries:
@@ -1221,151 +1367,6 @@ moveGroups:
         skillName: Taunt
         characterCode: '03'
         skillCode: '030'
-  - id: item_b46a9fbcad
-    displayName: ターゲットコンボ
-    children:
-    - id: jpj6_p
-      displayName: J小P→J6+大P
-      detail:
-        displayName: J小P→J6+大P
-        superCancel: "×/×"
-        guard: 立/立
-        blocking: "→/→"
-        damage: 40/90
-        stun: 7/7
-        stunReduction: 3/3
-        frameAdvantage:
-          guard: "―"
-          standingHit: "―"
-          crouchingHit: "―"
-        stats:
-          入力: J小P→J6+大P
-          C: "×/×"
-        noteGroups:
-        - id: item_cf8aa5b927
-          displayTitle: 補足
-          entries:
-          - |-
-            ・空対空で使用すると強い
-            ・近立中Kからの追撃に安定して決まる
-    - id: pp
-      displayName: 屈中P→屈大P
-      detail:
-        displayName: 屈中P→屈大P
-        superCancel: "○/×・×"
-        guard: 両方/両方・両方
-        blocking: 両方/両方・両方
-        damage: 70/20+70
-        stun: 5/3+3
-        stunReduction: 1/15・15
-        frameAdvantage:
-          guard: '0'
-          standingHit: "+2"
-          crouchingHit: "+4"
-        stats:
-          入力: 屈中P→屈大P
-          C: "○/×・×"
-    - id: kk
-      displayName: 屈大K→立大K
-      detail:
-        displayName: 屈大K→立大K
-        superCancel: "×/×"
-        guard: 屈/両方
-        blocking: "↓/→"
-        damage: 90/60
-        stun: 3/9
-        stunReduction: 1/1
-        frameAdvantage:
-          guard: "-11"
-          standingHit: ダウン
-          crouchingHit: ダウン
-        stats:
-          入力: 屈大K→立大K
-          C: "×/×"
-        noteGroups:
-        - id: item_cf8aa5b927
-          displayTitle: 補足
-          entries:
-          - 下段のアクセントとしてたまに使う程度
-    - id: pkp
-      displayName: 近立小P→立小K→立中P
-      detail:
-        displayName: 近立小P→立小K→立中P
-        superCancel: "○/○/○"
-        guard: 両方/両方/両方
-        blocking: 両方/両方/→
-        damage: 20/20/50
-        stun: 3/3/5
-        stunReduction: 15/15/15
-        stats:
-          入力: 近立小P→立小K→立中P
-          C: "☆/○/○"
-          ヒット&ガード硬直時間差(立小K) ガード: "+3"
-          ヒット&ガード硬直時間差(立小K) 立ヒット: "+3"
-          ヒット&ガード硬直時間差(立小K) 屈ヒット: "+3"
-          ヒット&ガード硬直時間差(立中P) ガード: "-5"
-          ヒット&ガード硬直時間差(立中P) 立ヒット: "-3"
-          ヒット&ガード硬直時間差(立中P) 屈ヒット: "-1"
-        noteGroups:
-        - id: item_cf8aa5b927
-          displayTitle: 補足
-          entries:
-          - |-
-            ・発生が速いので攻めの起点として使用
-            ・幻影陣に繋ぐスタート技としても優秀
-    - id: pp4_p
-      displayName: 近中P→立大P→4+大P
-      detail:
-        displayName: 近中P→立大P→4+大P
-        superCancel: "○/×/○"
-        guard: 両方/両方/両方
-        blocking: "→/→/→"
-        damage: 60/50/60
-        stun: 5/5/7
-        stunReduction: 15/1/1
-        stats:
-          入力: 近中P→立大P→4+大P
-          C: "○/×/×"
-          ヒット&ガード硬直時間差(立大P) ガード: "+2"
-          ヒット&ガード硬直時間差(立大P) 立ヒット: "+4"
-          ヒット&ガード硬直時間差(立大P) 屈ヒット: "+6"
-          ヒット&ガード硬直時間差(4+大P) ガード: "-4"
-          ヒット&ガード硬直時間差(4+大P) 立ヒット: ダウン
-          ヒット&ガード硬直時間差(4+大P) 屈ヒット: ダウン
-        noteGroups:
-        - id: item_cf8aa5b927
-          displayTitle: 補足
-          entries:
-          - |-
-            ・幻影陣に繋げられるが、補正が大きいので大ダメージは狙いにくい
-            ・2段目はしゃがみ状態の春麗、いぶき、エレナ、オロには当たらない
-    - id: pp4_p_2
-      displayName: 遠中P→立大P→4+大P
-      detail:
-        displayName: 遠中P→立大P→4+大P
-        superCancel: "×/×/○"
-        guard: 両方/両方/両方
-        blocking: "→/→/→"
-        damage: 50/50/60
-        stun: 5/5/7
-        stunReduction: 15/1/1
-        stats:
-          入力: 遠中P→立大P→4+大P
-          C: "×/×/×"
-          ヒット&ガード硬直時間差(立大P) ガード: "+2"
-          ヒット&ガード硬直時間差(立大P) 立ヒット: "+4"
-          ヒット&ガード硬直時間差(立大P) 屈ヒット: "+6"
-          ヒット&ガード硬直時間差(4+大P) ガード: "-4"
-          ヒット&ガード硬直時間差(4+大P) 立ヒット: ダウン
-          ヒット&ガード硬直時間差(4+大P) 屈ヒット: ダウン
-        noteGroups:
-        - id: item_cf8aa5b927
-          displayTitle: 補足
-          entries:
-          - |-
-            ・幻影陣に繋げられるが、補正が大きいので大ダメージは狙いにくい
-            ・2段目はしゃがみ状態の春麗、いぶき、エレナ、オロには当たらない
-            ・遠すぎると最後の虎撲子がヒットしなくなるので注意
 - id: special_moves
   displayTitle: "【必殺技】"
   entries:

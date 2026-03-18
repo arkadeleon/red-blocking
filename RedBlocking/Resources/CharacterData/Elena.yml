@@ -917,6 +917,95 @@ moveGroups:
         skillName: Back + Roundhouse
         characterCode: '08'
         skillCode: '022'
+- id: target_combos
+  displayTitle: "【ターゲットコンボ】"
+  entries:
+  - id: jpjk
+    displayName: J小P→J中K
+    detail:
+      displayName: J小P→J中K
+      superCancel: "×/×"
+      guard: 立/立
+      blocking: "→/→"
+      damage: 50/50
+      stun: 7/3
+      stunReduction: 3/3
+      frameAdvantage:
+        guard: "―"
+        standingHit: "―"
+        crouchingHit: "―"
+      stats:
+        入力: J小P→J中K
+        C: "×/×"
+      noteGroups:
+      - id: item_cf8aa5b927
+        displayTitle: 補足
+        entries:
+        - 当てる高さによってヒット&ガード硬直時間差が変化
+  - id: jpjp
+    displayName: J中P→J大P
+    detail:
+      displayName: J中P→J大P
+      superCancel: "×/×"
+      guard: 立/立
+      blocking: "→/→"
+      damage: 100/60
+      stun: 13/3
+      stunReduction: 3/3
+      frameAdvantage:
+        guard: "―"
+        standingHit: "―"
+        crouchingHit: "―"
+      stats:
+        入力: J中P→J大P
+        C: "×/×"
+      noteGroups:
+      - id: item_cf8aa5b927
+        displayTitle: 補足
+        entries:
+        - |-
+          ・当てる高さによってヒット&ガード硬直時間差が変化
+          ・早出し空対空としても便利。ヒットした場合、先に着地するのでダッシュで裏回りできる
+  - id: kp
+    displayName: 立中K→屈大P
+    detail:
+      displayName: 立中K→屈大P
+      superCancel: "×/×"
+      guard: 両方/両方
+      blocking: 両方/→
+      damage: 90/40
+      stun: 7/5
+      stunReduction: 3/7
+      frameAdvantage:
+        guard: "-11"
+        standingHit: ダウン
+        crouchingHit: ダウン
+      stats:
+        入力: 立中K→屈大P
+        C: "×/×"
+  - id: pk
+    displayName: 立大P→立大K
+    detail:
+      displayName: 立大P→立大K
+      superCancel: "×/×"
+      guard: 両方/両方
+      blocking: "→/→"
+      damage: 140/60
+      stun: 17/5
+      stunReduction: 3/3
+      frameAdvantage:
+        guard: "+1"
+        standingHit: "+3"
+        crouchingHit: "+5"
+      stats:
+        入力: 立大P→立大K
+        C: "×/×"
+      noteGroups:
+      - id: item_cf8aa5b927
+        displayTitle: 補足
+        entries:
+        - ヒット時、ノーキャンセルでSA1に繋ぐ事が可能
+
 - id: command_normals
   displayTitle: "【特殊入力技】"
   entries:
@@ -990,94 +1079,6 @@ moveGroups:
         skillName: Taunt
         characterCode: '08'
         skillCode: '025'
-  - id: item_b46a9fbcad
-    displayName: ターゲットコンボ
-    children:
-    - id: jpjk
-      displayName: J小P→J中K
-      detail:
-        displayName: J小P→J中K
-        superCancel: "×/×"
-        guard: 立/立
-        blocking: "→/→"
-        damage: 50/50
-        stun: 7/3
-        stunReduction: 3/3
-        frameAdvantage:
-          guard: "―"
-          standingHit: "―"
-          crouchingHit: "―"
-        stats:
-          入力: J小P→J中K
-          C: "×/×"
-        noteGroups:
-        - id: item_cf8aa5b927
-          displayTitle: 補足
-          entries:
-          - 当てる高さによってヒット&ガード硬直時間差が変化
-    - id: jpjp
-      displayName: J中P→J大P
-      detail:
-        displayName: J中P→J大P
-        superCancel: "×/×"
-        guard: 立/立
-        blocking: "→/→"
-        damage: 100/60
-        stun: 13/3
-        stunReduction: 3/3
-        frameAdvantage:
-          guard: "―"
-          standingHit: "―"
-          crouchingHit: "―"
-        stats:
-          入力: J中P→J大P
-          C: "×/×"
-        noteGroups:
-        - id: item_cf8aa5b927
-          displayTitle: 補足
-          entries:
-          - |-
-            ・当てる高さによってヒット&ガード硬直時間差が変化
-            ・早出し空対空としても便利。ヒットした場合、先に着地するのでダッシュで裏回りできる
-    - id: kp
-      displayName: 立中K→屈大P
-      detail:
-        displayName: 立中K→屈大P
-        superCancel: "×/×"
-        guard: 両方/両方
-        blocking: 両方/→
-        damage: 90/40
-        stun: 7/5
-        stunReduction: 3/7
-        frameAdvantage:
-          guard: "-11"
-          standingHit: ダウン
-          crouchingHit: ダウン
-        stats:
-          入力: 立中K→屈大P
-          C: "×/×"
-    - id: pk
-      displayName: 立大P→立大K
-      detail:
-        displayName: 立大P→立大K
-        superCancel: "×/×"
-        guard: 両方/両方
-        blocking: "→/→"
-        damage: 140/60
-        stun: 17/5
-        stunReduction: 3/3
-        frameAdvantage:
-          guard: "+1"
-          standingHit: "+3"
-          crouchingHit: "+5"
-        stats:
-          入力: 立大P→立大K
-          C: "×/×"
-        noteGroups:
-        - id: item_cf8aa5b927
-          displayTitle: 補足
-          entries:
-          - ヒット時、ノーキャンセルでSA1に繋ぐ事が可能
 - id: special_moves
   displayTitle: "【必殺技】"
   entries:

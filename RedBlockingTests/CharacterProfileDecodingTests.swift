@@ -29,12 +29,14 @@ struct CharacterProfileDecodingTests {
         #expect(profile.displayName.isEmpty == false, "displayName must not be empty for \(characterName)")
     }
 
-    @Test("Profile has exactly 7 move groups in schema order", arguments: allCharacterNames)
-    func profileHasSevenMoveGroupsInSchemaOrder(characterName: String) throws {
+    @Test("Profile has move groups in schema order", arguments: allCharacterNames)
+    func profileHasMoveGroupsInSchemaOrder(characterName: String) throws {
         let profile = try makeRepository().loadProfile(resourceName: "\(characterName).yml")
-        let expected: [MoveGroupID] = [.airNormals, .groundNormals, .normalThrows, .leverInputMoves, .commandNormals, .specialMoves, .superArts]
+        let ids = profile.moveGroups.map(\.id)
+        let withTC: [MoveGroupID] = [.airNormals, .groundNormals, .normalThrows, .leverInputMoves, .targetCombos, .commandNormals, .specialMoves, .superArts]
+        let withoutTC: [MoveGroupID] = [.airNormals, .groundNormals, .normalThrows, .leverInputMoves, .commandNormals, .specialMoves, .superArts]
         #expect(
-            profile.moveGroups.map(\.id) == expected,
+            ids == withTC || ids == withoutTC,
             "\(characterName): moveGroup IDs are not in schema order"
         )
     }

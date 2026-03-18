@@ -1033,6 +1033,32 @@ moveGroups:
         skillName: Towards + Fierce
         characterCode: '02'
         skillCode: '029'
+- id: target_combos
+  displayTitle: "【ターゲットコンボ】"
+  entries:
+  - id: pk
+    displayName: 遠大P→遠大K
+    detail:
+      displayName: 遠大P→遠大K
+      superCancel: "×/×"
+      guard: 両方/両方
+      blocking: "→/→"
+      damage: 130/60
+      stun: 13/3
+      stunReduction: 15/15
+      frameAdvantage:
+        guard: "-9"
+        standingHit: "-7"
+        crouchingHit: "-5"
+      stats:
+        入力: 遠大P→遠大K
+        C: "×/×"
+      noteGroups:
+      - id: item_cf8aa5b927
+        displayTitle: 補足
+        entries:
+        - 遠めの対空に使用するが、基本的にあまり使わない
+
 - id: command_normals
   displayTitle: "【特殊入力技】"
   entries:
@@ -1101,31 +1127,6 @@ moveGroups:
           ・1回目で10%、2回目で21%、3回目(MAX)で33%まで回復速度アップ
           ・PAを使用したラウンド中、効果持続
           ・ゲージ増加のカッコ内の数値は1本制のもの
-  - id: item_b46a9fbcad
-    displayName: ターゲットコンボ
-    children:
-    - id: pk
-      displayName: 遠大P→遠大K
-      detail:
-        displayName: 遠大P→遠大K
-        superCancel: "×/×"
-        guard: 両方/両方
-        blocking: "→/→"
-        damage: 130/60
-        stun: 13/3
-        stunReduction: 15/15
-        frameAdvantage:
-          guard: "-9"
-          standingHit: "-7"
-          crouchingHit: "-5"
-        stats:
-          入力: 遠大P→遠大K
-          C: "×/×"
-        noteGroups:
-        - id: item_cf8aa5b927
-          displayTitle: 補足
-          entries:
-          - 遠めの対空に使用するが、基本的にあまり使わない
 - id: special_moves
   displayTitle: "【必殺技】"
   entries:

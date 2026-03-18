@@ -929,6 +929,56 @@ moveGroups:
         skillName: Towards + Fierce
         characterCode: '13'
         skillCode: '020'
+- id: target_combos
+  displayTitle: "【ターゲットコンボ】"
+  entries:
+  - id: pp
+    displayName: 小P→中P
+    detail:
+      displayName: 小P→中P
+      superCancel: "○/○"
+      guard: 両方/両方
+      blocking: 両方/→
+      damage: 20/40
+      stun: 3/5
+      stunReduction: 1/1
+      frameAdvantage:
+        guard: '0'
+        standingHit: "+1"
+        crouchingHit: "+2"
+      stats:
+        入力: 小P→中P
+        C: "☆/○"
+      noteGroups:
+      - id: item_cf8aa5b927
+        displayTitle: 補足
+        entries:
+        - |-
+          ・簡易対空や、ヒット確認などに使用
+          ・溜め分割を仕込みやすい
+  - id: 6_pp
+    displayName: 6+中P→大P
+    detail:
+      displayName: 6+中P→大P
+      superCancel: "×/×"
+      guard: 両方/立
+      blocking: "→/→"
+      damage: 80/60
+      stun: 9/3
+      stunReduction: 1/1
+      frameAdvantage:
+        guard: "-6"
+        standingHit: "-4"
+        crouchingHit: "-2"
+      stats:
+        入力: 6+中P→大P
+        C: "×/×"
+      noteGroups:
+      - id: item_cf8aa5b927
+        displayTitle: 補足
+        entries:
+        - "・2段目が中段のTCだが、相手にしゃがまれた場合は2段目がヒューゴー位にしか当たらないので注意\n・ただし、相手の起き上がり中に6中Pを重ねることにより全キャラに当てることが可能 \n・画面端の連係として浮かせた相手に早めに6中Pを当て、そのまま6大P部分をスカして投げを誘い、タメ分割ヘッドなどで攻めを続行できる"
+
 - id: command_normals
   displayTitle: "【特殊入力技】"
   entries:
@@ -1003,55 +1053,6 @@ moveGroups:
         skillName: Taunt
         characterCode: '13'
         skillCode: '025'
-  - id: item_b46a9fbcad
-    displayName: ターゲットコンボ
-    children:
-    - id: pp
-      displayName: 小P→中P
-      detail:
-        displayName: 小P→中P
-        superCancel: "○/○"
-        guard: 両方/両方
-        blocking: 両方/→
-        damage: 20/40
-        stun: 3/5
-        stunReduction: 1/1
-        frameAdvantage:
-          guard: '0'
-          standingHit: "+1"
-          crouchingHit: "+2"
-        stats:
-          入力: 小P→中P
-          C: "☆/○"
-        noteGroups:
-        - id: item_cf8aa5b927
-          displayTitle: 補足
-          entries:
-          - |-
-            ・簡易対空や、ヒット確認などに使用
-            ・溜め分割を仕込みやすい
-    - id: 6_pp
-      displayName: 6+中P→大P
-      detail:
-        displayName: 6+中P→大P
-        superCancel: "×/×"
-        guard: 両方/立
-        blocking: "→/→"
-        damage: 80/60
-        stun: 9/3
-        stunReduction: 1/1
-        frameAdvantage:
-          guard: "-6"
-          standingHit: "-4"
-          crouchingHit: "-2"
-        stats:
-          入力: 6+中P→大P
-          C: "×/×"
-        noteGroups:
-        - id: item_cf8aa5b927
-          displayTitle: 補足
-          entries:
-          - "・2段目が中段のTCだが、相手にしゃがまれた場合は2段目がヒューゴー位にしか当たらないので注意\n・ただし、相手の起き上がり中に6中Pを重ねることにより全キャラに当てることが可能 \n・画面端の連係として浮かせた相手に早めに6中Pを当て、そのまま6大P部分をスカして投げを誘い、タメ分割ヘッドなどで攻めを続行できる"
 - id: special_moves
   displayTitle: "【必殺技】"
   entries:

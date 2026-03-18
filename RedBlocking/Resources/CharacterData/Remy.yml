@@ -1002,6 +1002,32 @@ moveGroups:
         skillName: Towards + Forward
         characterCode: '20'
         skillCode: '025'
+- id: target_combos
+  displayTitle: "【ターゲットコンボ】"
+  entries:
+  - id: kk
+    displayName: 近立中K→立大K
+    detail:
+      displayName: 近立中K→立大K
+      superCancel: "○/×"
+      guard: 両方/両方
+      blocking: "→/→"
+      damage: 90/60
+      stun: 9/5
+      stunReduction: 15/15
+      frameAdvantage:
+        guard: "-9"
+        standingHit: "-7"
+        crouchingHit: "-5"
+      stats:
+        入力: 近立中K→立大K
+        C: "○/×"
+      noteGroups:
+      - id: item_cf8aa5b927
+        displayTitle: 補足
+        entries:
+        - 大型キャラ以外のしゃがんでいる相手に、二発目の大Kの部分が当たらないので特に使う必要なし
+
 - id: command_normals
   displayTitle: "【特殊入力技】"
   entries:
@@ -1075,31 +1101,6 @@ moveGroups:
         skillName: Taunt
         characterCode: '20'
         skillCode: '029'
-  - id: item_b46a9fbcad
-    displayName: ターゲットコンボ
-    children:
-    - id: kk
-      displayName: 近立中K→立大K
-      detail:
-        displayName: 近立中K→立大K
-        superCancel: "○/×"
-        guard: 両方/両方
-        blocking: "→/→"
-        damage: 90/60
-        stun: 9/5
-        stunReduction: 15/15
-        frameAdvantage:
-          guard: "-9"
-          standingHit: "-7"
-          crouchingHit: "-5"
-        stats:
-          入力: 近立中K→立大K
-          C: "○/×"
-        noteGroups:
-        - id: item_cf8aa5b927
-          displayTitle: 補足
-          entries:
-          - 大型キャラ以外のしゃがんでいる相手に、二発目の大Kの部分が当たらないので特に使う必要なし
 - id: special_moves
   displayTitle: "【必殺技】"
   entries:

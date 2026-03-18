@@ -1191,6 +1191,34 @@ moveGroups:
         crouchingHit: "―"
       stats:
         C/SC: "―"
+- id: target_combos
+  displayTitle: "【ターゲットコンボ】"
+  entries:
+  - id: jp2
+    displayName: 前ジャンプ中、J大P×2
+    detail:
+      displayName: 前ジャンプ中、J大P×2
+      superCancel: "×/×"
+      guard: 立/立
+      blocking: "→/→"
+      damage: 80/60
+      stun: 9/5
+      stunReduction: 3/3
+      frameAdvantage:
+        guard: "―"
+        standingHit: "―"
+        crouchingHit: "―"
+      stats:
+        入力: 前ジャンプ中、J大P×2
+        C: "×/×"
+      noteGroups:
+      - id: item_cf8aa5b927
+        displayTitle: 補足
+        entries:
+        - |-
+          ・1発目が当たらなくても2発目が出せる
+          ・鳳翼扇ヒット後の追撃に使用
+
 - id: command_normals
   displayTitle: "【特殊入力技】"
   entries:
@@ -1354,33 +1382,6 @@ moveGroups:
             ・1回目で10%、2回目で21%、3回目(MAX)で33%まで回復速度アップ
             ・スタンゲージの回復速度、防御力アップはPAを使用したラウンド中、効果持続
             ・1本制の時のゲージ増加量は「6+42」
-  - id: item_b46a9fbcad
-    displayName: ターゲットコンボ
-    children:
-    - id: jp2
-      displayName: 前ジャンプ中、J大P×2
-      detail:
-        displayName: 前ジャンプ中、J大P×2
-        superCancel: "×/×"
-        guard: 立/立
-        blocking: "→/→"
-        damage: 80/60
-        stun: 9/5
-        stunReduction: 3/3
-        frameAdvantage:
-          guard: "―"
-          standingHit: "―"
-          crouchingHit: "―"
-        stats:
-          入力: 前ジャンプ中、J大P×2
-          C: "×/×"
-        noteGroups:
-        - id: item_cf8aa5b927
-          displayTitle: 補足
-          entries:
-          - |-
-            ・1発目が当たらなくても2発目が出せる
-            ・鳳翼扇ヒット後の追撃に使用
 - id: special_moves
   displayTitle: "【必殺技】"
   entries:

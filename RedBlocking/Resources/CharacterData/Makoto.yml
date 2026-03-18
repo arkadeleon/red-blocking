@@ -1069,6 +1069,56 @@ moveGroups:
         skillName: Towards Fierce (complete)
         characterCode: '17'
         skillCode: '007'
+- id: target_combos
+  displayTitle: "【ターゲットコンボ】"
+  entries:
+  - id: kk
+    displayName: 立小K→立中K
+    detail:
+      displayName: 立小K→立中K
+      superCancel: "○/×"
+      guard: 両方/両方
+      blocking: 両方/→
+      damage: 40/70
+      stun: 3/7
+      stunReduction: 15/15
+      frameAdvantage:
+        guard: "-3"
+        standingHit: "-2"
+        crouchingHit: "-1"
+      stats:
+        入力: 立小K→立中K
+        C: "○/×"
+      noteGroups:
+      - id: item_cf8aa5b927
+        displayTitle: 補足
+        entries:
+        - |-
+          ・1段目空振りでも2段目を出す事が可能
+          ・大半のキャラのしゃがみ状態に2段目が当たらないので注意
+  - id: 6kk
+    displayName: 6中K→立大K
+    detail:
+      displayName: 6中K→立大K
+      superCancel: "×/×"
+      guard: 両方/両方
+      blocking: 両方/→
+      damage: 100/80
+      stun: 9/7
+      stunReduction: 15/15
+      frameAdvantage:
+        guard: "-3"
+        standingHit: "-1"
+        crouchingHit: "+1"
+      stats:
+        入力: 6中K→立大K
+        C: "×/×"
+      noteGroups:
+      - id: item_cf8aa5b927
+        displayTitle: 補足
+        entries:
+        - "・TCではあるが連係のため、繋がらない \n・特に使う必要なし"
+
 - id: command_normals
   displayTitle: "【特殊入力技】"
   entries:
@@ -1200,55 +1250,6 @@ moveGroups:
           skillName: Taunt
           characterCode: '17'
           skillCode: '032'
-  - id: item_b46a9fbcad
-    displayName: ターゲットコンボ
-    children:
-    - id: kk
-      displayName: 立小K→立中K
-      detail:
-        displayName: 立小K→立中K
-        superCancel: "○/×"
-        guard: 両方/両方
-        blocking: 両方/→
-        damage: 40/70
-        stun: 3/7
-        stunReduction: 15/15
-        frameAdvantage:
-          guard: "-3"
-          standingHit: "-2"
-          crouchingHit: "-1"
-        stats:
-          入力: 立小K→立中K
-          C: "○/×"
-        noteGroups:
-        - id: item_cf8aa5b927
-          displayTitle: 補足
-          entries:
-          - |-
-            ・1段目空振りでも2段目を出す事が可能
-            ・大半のキャラのしゃがみ状態に2段目が当たらないので注意
-    - id: 6kk
-      displayName: 6中K→立大K
-      detail:
-        displayName: 6中K→立大K
-        superCancel: "×/×"
-        guard: 両方/両方
-        blocking: 両方/→
-        damage: 100/80
-        stun: 9/7
-        stunReduction: 15/15
-        frameAdvantage:
-          guard: "-3"
-          standingHit: "-1"
-          crouchingHit: "+1"
-        stats:
-          入力: 6中K→立大K
-          C: "×/×"
-        noteGroups:
-        - id: item_cf8aa5b927
-          displayTitle: 補足
-          entries:
-          - "・TCではあるが連係のため、繋がらない \n・特に使う必要なし"
 - id: special_moves
   displayTitle: "【必殺技】"
   entries:

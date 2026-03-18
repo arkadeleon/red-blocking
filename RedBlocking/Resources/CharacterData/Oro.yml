@@ -1028,6 +1028,34 @@ moveGroups:
         - |-
           ・ジャンプ中、技を出してない状態の時のみ可能
           ・画面はオロ中心でスクロールする為、相手を翻弄するのに有効。ただし自身も相手の位置がわからなくなるのが難点
+- id: target_combos
+  displayTitle: "【ターゲットコンボ】"
+  entries:
+  - id: kk
+    displayName: 近立小K→立中K
+    detail:
+      displayName: 近立小K→立中K
+      superCancel: "○/×"
+      guard: 両方/両方
+      blocking: 両方/→
+      damage: 40/50
+      stun: 3/5
+      stunReduction: 1/3
+      frameAdvantage:
+        guard: "-5"
+        standingHit: "-4"
+        crouchingHit: "-3"
+      stats:
+        入力: 近中P→近大P
+        C: "○/×"
+      noteGroups:
+      - id: item_cf8aa5b927
+        displayTitle: 補足
+        entries:
+        - |-
+          ・2段目の近立中Kは必殺技でキャンセルできないため、通常では特に使う必要はない
+          ・天狗乱石発動中なら、TCヒット確認から仁王力に繋いだりとそれなりに使える
+
 - id: command_normals
   displayTitle: "【特殊入力技】"
   entries:
@@ -1097,33 +1125,6 @@ moveGroups:
         - |-
           ・押しっぱなし可
           ・オロのみ例外的にそのラウンドPA効果の持続なし
-  - id: item_b46a9fbcad
-    displayName: ターゲットコンボ
-    children:
-    - id: kk
-      displayName: 近立小K→立中K
-      detail:
-        displayName: 近立小K→立中K
-        superCancel: "○/×"
-        guard: 両方/両方
-        blocking: 両方/→
-        damage: 40/50
-        stun: 3/5
-        stunReduction: 1/3
-        frameAdvantage:
-          guard: "-5"
-          standingHit: "-4"
-          crouchingHit: "-3"
-        stats:
-          入力: 近中P→近大P
-          C: "○/×"
-        noteGroups:
-        - id: item_cf8aa5b927
-          displayTitle: 補足
-          entries:
-          - |-
-            ・2段目の近立中Kは必殺技でキャンセルできないため、通常では特に使う必要はない
-            ・天狗乱石発動中なら、TCヒット確認から仁王力に繋いだりとそれなりに使える
 - id: special_moves
   displayTitle: "【必殺技】"
   entries:
