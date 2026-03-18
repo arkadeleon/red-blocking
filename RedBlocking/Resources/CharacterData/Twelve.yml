@@ -891,6 +891,108 @@ moveGroups:
         skillName: Throw
         characterCode: '19'
         skillCode: '023'
+- id: lever_input_moves
+  displayTitle: "【レバー入れ技】"
+  entries:
+  - id: item_acfecf833b
+    displayName: 滑空
+    detail:
+      displayName: 滑空
+      command: 空中で66 or 44
+      guard: "―"
+      blocking: "―"
+      startup: "―"
+      active: "―"
+      recovery: "―"
+      damage: "―"
+      stun: "―"
+      stunReduction: "―"
+      meterGain:
+        whiff: "―"
+        guard: "―"
+        hit: "―"
+        bl: "―"
+      frameAdvantage:
+        guard: "―"
+        standingHit: "―"
+        crouchingHit: "―"
+      stats:
+        C/SC: "○/×"
+      noteGroups:
+      - id: item_cf8aa5b927
+        displayTitle: 補足
+        entries:
+        - |-
+          ・地上で「9N6 or 7N4」で低空滑空が可能
+          ・相手の真上を飛ぶ時はレバー入力方向が途中で変わるため、46や64と逆に入れないと滑空しない場合がある。
+          　確実に滑空したいのならレバーを3回(444又は666)入力すると良い。
+          ・ジャンプ扱いだがEX技とSAは出せず、空中BLもできない
+          ・ジャンプ攻撃がBLされた場合、通常技だけでなく滑空も出せる
+
+          【折り返し】
+          ・滑空中に画面端へ到達した際、レバーが壁方向に入っていれば逆方向に滑空を折り返す
+          ・一定以上の高さがないと実行できない(おおよそ画面半分よりやや上程度)
+  - id: item_bc9fd6b94f
+    displayName: 壁張り付き
+    detail:
+      displayName: 壁張り付き
+      command: 滑空中、画面端でレバーを画面端方向に入れっぱなし
+      guard: "―"
+      blocking: "―"
+      startup: "―"
+      active: "―"
+      recovery: "―"
+      damage: "―"
+      stun: "―"
+      stunReduction: "―"
+      meterGain:
+        whiff: "―"
+        guard: "―"
+        hit: "―"
+        bl: "―"
+      frameAdvantage:
+        guard: "―"
+        standingHit: "―"
+        crouchingHit: "―"
+      stats:
+        C/SC: "○/×"
+  - id: b_m_k
+    displayName: B.M.K.
+    detail:
+      displayName: B.M.K.
+      command: 4+中K
+      guard: 両方
+      blocking: 両方
+      startup: '7'
+      active: '3'
+      recovery: '14'
+      damage: '80'
+      stun: '11'
+      stunReduction: '3'
+      meterGain:
+        whiff: '2'
+        guard: '4'
+        hit: '8'
+        bl: '4'
+      frameAdvantage:
+        guard: "-2"
+        standingHit: "-1"
+        crouchingHit: '0'
+      stats:
+        C/SC: "○"
+      noteGroups:
+      - id: item_cf8aa5b927
+        displayTitle: 補足
+        entries:
+        - |-
+          ・判定が出てしまえばそこそこ強くキャンセルもできるため、対空技として使用可能
+          ・地上での蹴り部分だけでなく、最後の蹴り上げ部分にも攻撃判定あり
+      media:
+        kind: motion_player
+        displayLabel: モーション
+        skillName: Back + Forward
+        characterCode: '19'
+        skillCode: '021'
 - id: command_normals
   displayTitle: "【特殊入力技】"
   entries:
@@ -960,108 +1062,6 @@ moveGroups:
           ・消えている時間は3秒程度。 またもう一度「大P+大K」を押すことで出現する事が可能
           ・相手の攻撃をガードやBLしたり、SAや投げを仕掛けたら時間に関係なく出現する
           ・ゲージ増加のカッコ内の数値は1本制のもの
-  - id: item_02dcefb22e
-    displayName: レバー入れ技
-    children:
-    - id: item_acfecf833b
-      displayName: 滑空
-      detail:
-        displayName: 滑空
-        command: 空中で66 or 44
-        guard: "―"
-        blocking: "―"
-        startup: "―"
-        active: "―"
-        recovery: "―"
-        damage: "―"
-        stun: "―"
-        stunReduction: "―"
-        meterGain:
-          whiff: "―"
-          guard: "―"
-          hit: "―"
-          bl: "―"
-        frameAdvantage:
-          guard: "―"
-          standingHit: "―"
-          crouchingHit: "―"
-        stats:
-          C/SC: "○/×"
-        noteGroups:
-        - id: item_cf8aa5b927
-          displayTitle: 補足
-          entries:
-          - |-
-            ・地上で「9N6 or 7N4」で低空滑空が可能
-            ・相手の真上を飛ぶ時はレバー入力方向が途中で変わるため、46や64と逆に入れないと滑空しない場合がある。
-            　確実に滑空したいのならレバーを3回(444又は666)入力すると良い。
-            ・ジャンプ扱いだがEX技とSAは出せず、空中BLもできない
-            ・ジャンプ攻撃がBLされた場合、通常技だけでなく滑空も出せる
-
-            【折り返し】
-            ・滑空中に画面端へ到達した際、レバーが壁方向に入っていれば逆方向に滑空を折り返す
-            ・一定以上の高さがないと実行できない(おおよそ画面半分よりやや上程度)
-    - id: item_bc9fd6b94f
-      displayName: 壁張り付き
-      detail:
-        displayName: 壁張り付き
-        command: 滑空中、画面端でレバーを画面端方向に入れっぱなし
-        guard: "―"
-        blocking: "―"
-        startup: "―"
-        active: "―"
-        recovery: "―"
-        damage: "―"
-        stun: "―"
-        stunReduction: "―"
-        meterGain:
-          whiff: "―"
-          guard: "―"
-          hit: "―"
-          bl: "―"
-        frameAdvantage:
-          guard: "―"
-          standingHit: "―"
-          crouchingHit: "―"
-        stats:
-          C/SC: "○/×"
-    - id: b_m_k
-      displayName: B.M.K.
-      detail:
-        displayName: B.M.K.
-        command: 4+中K
-        guard: 両方
-        blocking: 両方
-        startup: '7'
-        active: '3'
-        recovery: '14'
-        damage: '80'
-        stun: '11'
-        stunReduction: '3'
-        meterGain:
-          whiff: '2'
-          guard: '4'
-          hit: '8'
-          bl: '4'
-        frameAdvantage:
-          guard: "-2"
-          standingHit: "-1"
-          crouchingHit: '0'
-        stats:
-          C/SC: "○"
-        noteGroups:
-        - id: item_cf8aa5b927
-          displayTitle: 補足
-          entries:
-          - |-
-            ・判定が出てしまえばそこそこ強くキャンセルもできるため、対空技として使用可能
-            ・地上での蹴り部分だけでなく、最後の蹴り上げ部分にも攻撃判定あり
-        media:
-          kind: motion_player
-          displayLabel: モーション
-          skillName: Back + Forward
-          characterCode: '19'
-          skillCode: '021'
 - id: special_moves
   displayTitle: "【必殺技】"
   entries:

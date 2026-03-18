@@ -887,6 +887,310 @@ moveGroups:
         skillName: Air Throw
         characterCode: '16'
         skillCode: '035'
+- id: lever_input_moves
+  displayTitle: "【レバー入れ技】"
+  entries:
+  - id: item_e5cf22aa9e
+    displayName: 鷹爪脚(ようそうきゃく)
+    detail:
+      displayName: 鷹爪脚(ようそうきゃく)
+      command: ジャンプ中2+中K
+      guard: 立
+      blocking: "→"
+      startup: '9'
+      active: 着地まで
+      recovery: "―"
+      damage: '50'
+      stun: '5'
+      stunReduction: '3'
+      meterGain:
+        whiff: '0'
+        guard: '1'
+        hit: '2'
+        bl: '4'
+      frameAdvantage:
+        guard: "―"
+        standingHit: "―"
+        crouchingHit: "―"
+      stats:
+        C/SC: "×"
+      noteGroups:
+      - id: item_cf8aa5b927
+        displayTitle: 補足
+        entries:
+        - |-
+          ・ヒット後、4フレームの隙あり。それ以後は斜めジャンプ攻撃やBL可能
+          ・当て方によりヒット後、相手が上に浮くため春麗が先に着地でき、そこから着地後に追撃が可能
+      media:
+        kind: motion_player
+        displayLabel: モーション
+        skillName: "(Air) Down + Forward"
+        characterCode: '16'
+        skillCode: '032'
+  - id: item_5dac4136e7
+    displayName: 垂突打(すいとつだ)
+    detail:
+      displayName: 垂突打(すいとつだ)
+      command: 斜めジャンプ中下要素+大P
+      guard: 立
+      blocking: "→"
+      startup: '10'
+      active: '3'
+      recovery: "―"
+      damage: '110'
+      stun: '15'
+      stunReduction: '3'
+      meterGain:
+        whiff: '2'
+        guard: '3'
+        hit: '7'
+        bl: '4'
+      frameAdvantage:
+        guard: "―"
+        standingHit: "―"
+        crouchingHit: "―"
+      stats:
+        C/SC: "×"
+      noteGroups:
+      - id: item_cf8aa5b927
+        displayTitle: 補足
+        entries:
+        - |-
+          ・垂直J大Pと同じもの
+          ・空対空ヒット時、叩きつけダウンになる
+  - id: item_9e6f0bc1d0
+    displayName: 双連掌(そうれんしょう)
+    detail:
+      displayName: 双連掌(そうれんしょう)
+      command: 4+中P
+      guard: 両方
+      blocking: "→"
+      startup: '5'
+      active: 2・1
+      recovery: '18'
+      damage: 110(60+50)
+      stun: 16(7+9)
+      stunReduction: 3・15
+      meterGain:
+        whiff: 2(2+0)
+        guard: 4(3+1)
+        hit: 9(7+2)
+        bl: 8(4+4)
+      frameAdvantage:
+        guard: "-2"
+        standingHit: '0'
+        crouchingHit: '0'
+      stats:
+        C/SC: "○"
+      noteGroups:
+      - id: item_cf8aa5b927
+        displayTitle: 補足
+        entries:
+        - |-
+          ・2段目までのキャンセル猶予時間は30フレーム
+          ・必殺技(主に百裂脚)でキャンセルする事によって、BL仕込み飛込みに対する対空技として優秀
+      media:
+        kind: motion_player
+        displayLabel: モーション
+        skillName: Back + Strong
+        characterCode: '16'
+        skillCode: '028'
+  - id: item_f89e4fcee7
+    displayName: 鶴首落脚(かくしゅらくきゃく)
+    detail:
+      displayName: 鶴首落脚(かくしゅらくきゃく)
+      command: 近中K押しっぱなし
+      guard: 両方
+      blocking: "→"
+      startup: 6・7・3
+      active: 6・1・1
+      recovery: '15'
+      damage: 120(80+20+20)
+      stun: 19(5+7+7)
+      stunReduction: 15・15・15
+      meterGain:
+        whiff: 2(2+0+0)
+        guard: 3(3+0+0)
+        hit: 11(7+2+2)
+        bl: 12(4+4+4)
+      frameAdvantage:
+        guard: "-1"
+        standingHit: "+3"
+        crouchingHit: "+3"
+      stats:
+        C/SC: "×"
+      noteGroups:
+      - id: item_cf8aa5b927
+        displayTitle: 補足
+        entries:
+        - ヒット時、目押しでSA1に繋ぐことが可能
+  - id: item_062d42bb08
+    displayName: 尖杖蹴(せんじょうしゅう)
+    detail:
+      displayName: 尖杖蹴(せんじょうしゅう)
+      command: 6+中K
+      guard: 両方
+      blocking: "→"
+      startup: '11'
+      active: '7'
+      recovery: '11'
+      damage: '80'
+      stun: '5'
+      stunReduction: '10'
+      meterGain:
+        whiff: '2'
+        guard: '3'
+        hit: '7'
+        bl: '4'
+      frameAdvantage:
+        guard: '0'
+        standingHit: "+1"
+        crouchingHit: "+2"
+      stats:
+        C/SC: "×"
+      noteGroups:
+      - id: item_cf8aa5b927
+        displayTitle: 補足
+        entries:
+        - 出は遅いが、ガード・ヒット後に隙が少なく間合いが離れないため攻めの継続が可能
+      media:
+        kind: motion_player
+        displayLabel: モーション
+        skillName: Towards + Forward
+        characterCode: '16'
+        skillCode: '030'
+  - id: item_f532b73f04
+    displayName: 発勁(はっけい)
+    detail:
+      displayName: 発勁(はっけい)
+      command: 4+大P
+      guard: 両方
+      blocking: "→"
+      startup: '7'
+      active: '9'
+      recovery: '10'
+      damage: '130'
+      stun: '15'
+      stunReduction: '15'
+      meterGain:
+        whiff: '3'
+        guard: '5'
+        hit: '13'
+        bl: '4'
+      frameAdvantage:
+        guard: "-1"
+        standingHit: "+1"
+        crouchingHit: "+3"
+      stats:
+        C/SC: "○"
+      noteGroups:
+      - id: item_cf8aa5b927
+        displayTitle: 補足
+        entries:
+        - |-
+          ・持続時間が長く、判定にも優れているため、相手の牽制を潰すのに使用
+          ・キャンセル猶予時間は16フレーム
+          ・まことのみヒット時にノーキャンセルでもSA１か2に繋ぐことが可能。その場合のキャンセル猶予時間は29フレーム
+      media:
+        kind: motion_player
+        displayLabel: モーション
+        skillName: Back + Fierce
+        characterCode: '16'
+        skillCode: '029'
+  - id: item_cac1015bd0
+    displayName: 転身鷲脚(てんしんしゅうきゃく)
+    detail:
+      displayName: 転身鷲脚(てんしんしゅうきゃく)
+      command: 3+大K
+      guard: 立
+      blocking: "→"
+      startup: '37'
+      active: '5'
+      recovery: '2'
+      damage: '110'
+      stun: '13'
+      stunReduction: '1'
+      meterGain:
+        whiff: '3'
+        guard: '5'
+        hit: '13'
+        bl: '4'
+      frameAdvantage:
+        guard: "+9"
+        standingHit: "+11"
+        crouchingHit: "+15"
+      stats:
+        C/SC: "×"
+      noteGroups:
+      - id: item_cf8aa5b927
+        displayTitle: 補足
+        entries:
+        - |-
+          ・コマンド完成後、6フレーム目から空中判定に移行
+          ・ヒット時、各SAに繋ぐことが可能
+      media:
+        kind: motion_player
+        displayLabel: モーション
+        skillName: Down-Towards Roundhouse
+        characterCode: '16'
+        skillCode: '031'
+  - id: item_19a060be28
+    displayName: 翼旋脚(よくせんきゃく)
+    detail:
+      displayName: 翼旋脚(よくせんきゃく)
+      command: 6+大K
+      guard: 両方
+      blocking: "→"
+      startup: '12'
+      active: '1'
+      recovery: '15'
+      damage: '120'
+      stun: '13'
+      stunReduction: '15'
+      meterGain:
+        whiff: '3'
+        guard: '5'
+        hit: '13'
+        bl: '4'
+      frameAdvantage:
+        guard: '0'
+        standingHit: "+2"
+        crouchingHit: "+4"
+      stats:
+        C/SC: "×"
+      noteGroups:
+      - id: item_cf8aa5b927
+        displayTitle: 補足
+        entries:
+        - |-
+          ・着地後の隙は硬直の後半9フレーム
+          ・コマンド入力後、1フレームで空中判定になり投げをかわすことが可能
+          ・ただし、しゃがみの姿勢が低いキャラには当たらないため注意
+          ・しゃがみヒット時、ノーキャンセルでSA１か2に繋ぐことが可能。その場合のキャンセル猶予時間は28フレーム
+  - id: item_89e3b31149
+    displayName: 三角跳び
+    detail:
+      displayName: 三角跳び
+      command: 壁際で、壁と逆方向にレバー入力
+      guard: "―"
+      blocking: "―"
+      startup: "―"
+      active: "―"
+      recovery: "―"
+      damage: "―"
+      stun: "―"
+      stunReduction: "―"
+      meterGain:
+        whiff: "―"
+        guard: "―"
+        hit: "―"
+        bl: "―"
+      frameAdvantage:
+        guard: "―"
+        standingHit: "―"
+        crouchingHit: "―"
+      stats:
+        C/SC: "―"
 - id: command_normals
   displayTitle: "【特殊入力技】"
   entries:
@@ -1050,310 +1354,6 @@ moveGroups:
             ・1回目で10%、2回目で21%、3回目(MAX)で33%まで回復速度アップ
             ・スタンゲージの回復速度、防御力アップはPAを使用したラウンド中、効果持続
             ・1本制の時のゲージ増加量は「6+42」
-  - id: item_02dcefb22e
-    displayName: レバー入れ技
-    children:
-    - id: item_e5cf22aa9e
-      displayName: 鷹爪脚(ようそうきゃく)
-      detail:
-        displayName: 鷹爪脚(ようそうきゃく)
-        command: ジャンプ中2+中K
-        guard: 立
-        blocking: "→"
-        startup: '9'
-        active: 着地まで
-        recovery: "―"
-        damage: '50'
-        stun: '5'
-        stunReduction: '3'
-        meterGain:
-          whiff: '0'
-          guard: '1'
-          hit: '2'
-          bl: '4'
-        frameAdvantage:
-          guard: "―"
-          standingHit: "―"
-          crouchingHit: "―"
-        stats:
-          C/SC: "×"
-        noteGroups:
-        - id: item_cf8aa5b927
-          displayTitle: 補足
-          entries:
-          - |-
-            ・ヒット後、4フレームの隙あり。それ以後は斜めジャンプ攻撃やBL可能
-            ・当て方によりヒット後、相手が上に浮くため春麗が先に着地でき、そこから着地後に追撃が可能
-        media:
-          kind: motion_player
-          displayLabel: モーション
-          skillName: "(Air) Down + Forward"
-          characterCode: '16'
-          skillCode: '032'
-    - id: item_5dac4136e7
-      displayName: 垂突打(すいとつだ)
-      detail:
-        displayName: 垂突打(すいとつだ)
-        command: 斜めジャンプ中下要素+大P
-        guard: 立
-        blocking: "→"
-        startup: '10'
-        active: '3'
-        recovery: "―"
-        damage: '110'
-        stun: '15'
-        stunReduction: '3'
-        meterGain:
-          whiff: '2'
-          guard: '3'
-          hit: '7'
-          bl: '4'
-        frameAdvantage:
-          guard: "―"
-          standingHit: "―"
-          crouchingHit: "―"
-        stats:
-          C/SC: "×"
-        noteGroups:
-        - id: item_cf8aa5b927
-          displayTitle: 補足
-          entries:
-          - |-
-            ・垂直J大Pと同じもの
-            ・空対空ヒット時、叩きつけダウンになる
-    - id: item_9e6f0bc1d0
-      displayName: 双連掌(そうれんしょう)
-      detail:
-        displayName: 双連掌(そうれんしょう)
-        command: 4+中P
-        guard: 両方
-        blocking: "→"
-        startup: '5'
-        active: 2・1
-        recovery: '18'
-        damage: 110(60+50)
-        stun: 16(7+9)
-        stunReduction: 3・15
-        meterGain:
-          whiff: 2(2+0)
-          guard: 4(3+1)
-          hit: 9(7+2)
-          bl: 8(4+4)
-        frameAdvantage:
-          guard: "-2"
-          standingHit: '0'
-          crouchingHit: '0'
-        stats:
-          C/SC: "○"
-        noteGroups:
-        - id: item_cf8aa5b927
-          displayTitle: 補足
-          entries:
-          - |-
-            ・2段目までのキャンセル猶予時間は30フレーム
-            ・必殺技(主に百裂脚)でキャンセルする事によって、BL仕込み飛込みに対する対空技として優秀
-        media:
-          kind: motion_player
-          displayLabel: モーション
-          skillName: Back + Strong
-          characterCode: '16'
-          skillCode: '028'
-    - id: item_f89e4fcee7
-      displayName: 鶴首落脚(かくしゅらくきゃく)
-      detail:
-        displayName: 鶴首落脚(かくしゅらくきゃく)
-        command: 近中K押しっぱなし
-        guard: 両方
-        blocking: "→"
-        startup: 6・7・3
-        active: 6・1・1
-        recovery: '15'
-        damage: 120(80+20+20)
-        stun: 19(5+7+7)
-        stunReduction: 15・15・15
-        meterGain:
-          whiff: 2(2+0+0)
-          guard: 3(3+0+0)
-          hit: 11(7+2+2)
-          bl: 12(4+4+4)
-        frameAdvantage:
-          guard: "-1"
-          standingHit: "+3"
-          crouchingHit: "+3"
-        stats:
-          C/SC: "×"
-        noteGroups:
-        - id: item_cf8aa5b927
-          displayTitle: 補足
-          entries:
-          - ヒット時、目押しでSA1に繋ぐことが可能
-    - id: item_062d42bb08
-      displayName: 尖杖蹴(せんじょうしゅう)
-      detail:
-        displayName: 尖杖蹴(せんじょうしゅう)
-        command: 6+中K
-        guard: 両方
-        blocking: "→"
-        startup: '11'
-        active: '7'
-        recovery: '11'
-        damage: '80'
-        stun: '5'
-        stunReduction: '10'
-        meterGain:
-          whiff: '2'
-          guard: '3'
-          hit: '7'
-          bl: '4'
-        frameAdvantage:
-          guard: '0'
-          standingHit: "+1"
-          crouchingHit: "+2"
-        stats:
-          C/SC: "×"
-        noteGroups:
-        - id: item_cf8aa5b927
-          displayTitle: 補足
-          entries:
-          - 出は遅いが、ガード・ヒット後に隙が少なく間合いが離れないため攻めの継続が可能
-        media:
-          kind: motion_player
-          displayLabel: モーション
-          skillName: Towards + Forward
-          characterCode: '16'
-          skillCode: '030'
-    - id: item_f532b73f04
-      displayName: 発勁(はっけい)
-      detail:
-        displayName: 発勁(はっけい)
-        command: 4+大P
-        guard: 両方
-        blocking: "→"
-        startup: '7'
-        active: '9'
-        recovery: '10'
-        damage: '130'
-        stun: '15'
-        stunReduction: '15'
-        meterGain:
-          whiff: '3'
-          guard: '5'
-          hit: '13'
-          bl: '4'
-        frameAdvantage:
-          guard: "-1"
-          standingHit: "+1"
-          crouchingHit: "+3"
-        stats:
-          C/SC: "○"
-        noteGroups:
-        - id: item_cf8aa5b927
-          displayTitle: 補足
-          entries:
-          - |-
-            ・持続時間が長く、判定にも優れているため、相手の牽制を潰すのに使用
-            ・キャンセル猶予時間は16フレーム
-            ・まことのみヒット時にノーキャンセルでもSA１か2に繋ぐことが可能。その場合のキャンセル猶予時間は29フレーム
-        media:
-          kind: motion_player
-          displayLabel: モーション
-          skillName: Back + Fierce
-          characterCode: '16'
-          skillCode: '029'
-    - id: item_cac1015bd0
-      displayName: 転身鷲脚(てんしんしゅうきゃく)
-      detail:
-        displayName: 転身鷲脚(てんしんしゅうきゃく)
-        command: 3+大K
-        guard: 立
-        blocking: "→"
-        startup: '37'
-        active: '5'
-        recovery: '2'
-        damage: '110'
-        stun: '13'
-        stunReduction: '1'
-        meterGain:
-          whiff: '3'
-          guard: '5'
-          hit: '13'
-          bl: '4'
-        frameAdvantage:
-          guard: "+9"
-          standingHit: "+11"
-          crouchingHit: "+15"
-        stats:
-          C/SC: "×"
-        noteGroups:
-        - id: item_cf8aa5b927
-          displayTitle: 補足
-          entries:
-          - |-
-            ・コマンド完成後、6フレーム目から空中判定に移行
-            ・ヒット時、各SAに繋ぐことが可能
-        media:
-          kind: motion_player
-          displayLabel: モーション
-          skillName: Down-Towards Roundhouse
-          characterCode: '16'
-          skillCode: '031'
-    - id: item_19a060be28
-      displayName: 翼旋脚(よくせんきゃく)
-      detail:
-        displayName: 翼旋脚(よくせんきゃく)
-        command: 6+大K
-        guard: 両方
-        blocking: "→"
-        startup: '12'
-        active: '1'
-        recovery: '15'
-        damage: '120'
-        stun: '13'
-        stunReduction: '15'
-        meterGain:
-          whiff: '3'
-          guard: '5'
-          hit: '13'
-          bl: '4'
-        frameAdvantage:
-          guard: '0'
-          standingHit: "+2"
-          crouchingHit: "+4"
-        stats:
-          C/SC: "×"
-        noteGroups:
-        - id: item_cf8aa5b927
-          displayTitle: 補足
-          entries:
-          - |-
-            ・着地後の隙は硬直の後半9フレーム
-            ・コマンド入力後、1フレームで空中判定になり投げをかわすことが可能
-            ・ただし、しゃがみの姿勢が低いキャラには当たらないため注意
-            ・しゃがみヒット時、ノーキャンセルでSA１か2に繋ぐことが可能。その場合のキャンセル猶予時間は28フレーム
-    - id: item_89e3b31149
-      displayName: 三角跳び
-      detail:
-        displayName: 三角跳び
-        command: 壁際で、壁と逆方向にレバー入力
-        guard: "―"
-        blocking: "―"
-        startup: "―"
-        active: "―"
-        recovery: "―"
-        damage: "―"
-        stun: "―"
-        stunReduction: "―"
-        meterGain:
-          whiff: "―"
-          guard: "―"
-          hit: "―"
-          bl: "―"
-        frameAdvantage:
-          guard: "―"
-          standingHit: "―"
-          crouchingHit: "―"
-        stats:
-          C/SC: "―"
   - id: item_b46a9fbcad
     displayName: ターゲットコンボ
     children:

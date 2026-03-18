@@ -1020,6 +1020,152 @@ moveGroups:
         skillName: Reverse Throw
         characterCode: '05'
         skillCode: '033'
+- id: lever_input_moves
+  displayTitle: "【レバー入れ技】"
+  entries:
+  - id: item_bf7bad6f6c
+    displayName: ドリルキック
+    children:
+    - id: '30'
+      displayName: ドリルキック小(30度)
+      detail:
+        displayName: ドリルキック小(30度)
+        command: ジャンプ中、2小K
+        guard: 両方・両方
+        blocking: 両方・両方
+        startup: 9・6
+        active: 着地まで
+        recovery: "―"
+        damage: 65(50+15)
+        stun: 6(3+3)
+        stunReduction: 3・3
+        meterGain:
+          whiff: '2'
+          guard: 3(2+1)
+          hit: 9(7+2)
+          bl: 8(4+4)
+        frameAdvantage:
+          guard: "―"
+          standingHit: "―"
+          crouchingHit: "―"
+        stats:
+          C/SC: "×・×"
+        media:
+          kind: motion_player
+          displayLabel: モーション
+          skillName: Drill Short
+          characterCode: '05'
+          skillCode: '028'
+    - id: '45'
+      displayName: ドリルキック中(45度)
+      detail:
+        displayName: ドリルキック中(45度)
+        command: ジャンプ中、2中K
+        guard: 両方・両方
+        blocking: 両方・両方
+        startup: 9・6
+        active: 着地まで
+        recovery: "―"
+        damage: 80(60+20)
+        stun: 6(3+3)
+        stunReduction: 3・3
+        meterGain:
+          whiff: '2'
+          guard: 3(2+1)
+          hit: 9(7+2)
+          bl: 8(4+4)
+        frameAdvantage:
+          guard: "―"
+          standingHit: "―"
+          crouchingHit: "―"
+        stats:
+          C/SC: "×・×"
+        media:
+          kind: motion_player
+          displayLabel: モーション
+          skillName: Drill Forward
+          characterCode: '05'
+          skillCode: '029'
+    - id: '80'
+      displayName: ドリルキック大(80度)
+      detail:
+        displayName: ドリルキック大(80度)
+        command: ジャンプ中、2大K
+        guard: 両方・両方
+        blocking: 両方・両方
+        startup: 9・6
+        active: 着地まで
+        recovery: "―"
+        damage: 100(80+20)
+        stun: 10(5+5)
+        stunReduction: 3・3
+        meterGain:
+          whiff: '3'
+          guard: 5(4+1)
+          hit: 14(12+2)
+          bl: 8(4+4)
+        frameAdvantage:
+          guard: "―"
+          standingHit: "―"
+          crouchingHit: "―"
+        stats:
+          C/SC: "×・×"
+        media:
+          kind: motion_player
+          displayLabel: モーション
+          skillName: Drill RH
+          characterCode: '05'
+          skillCode: '030'
+    - id: item_cf8aa5b927
+      displayName: 補足
+      detail:
+        displayName: 補足
+        noteGroups:
+        - id: item_cf8aa5b927
+          displayTitle: 補足
+          entries:
+          - |-
+            ・硬直は当てる高さによって変化
+            ・当て方によっては連続ヒットしない
+            ・空中ヒットした場合、SA1で拾う事が可能
+            ・大ドリルは状況限定で相手をめくる事ができる
+  - id: item_b7f2bb505b
+    displayName: エルボーキャノン
+    detail:
+      displayName: エルボーキャノン
+      command: 1大P
+      guard: 両方
+      blocking: 両方
+      startup: '9'
+      active: '1'
+      recovery: '14'
+      damage: '140'
+      stun: '11'
+      stunReduction: '1'
+      meterGain:
+        whiff: '3'
+        guard: '6'
+        hit: '14'
+        bl: '4'
+      frameAdvantage:
+        guard: "+2"
+        standingHit: ダウン
+        crouchingHit: ダウン
+      stats:
+        C/SC: "×"
+      noteGroups:
+      - id: item_cf8aa5b927
+        displayTitle: 補足
+        entries:
+        - |-
+          ・判定が強く、ヒット時にダウンも取れる差し合いの主要技
+          ・画面端、アレックス、ユリアン、ヒューゴー限定で旧基板なら6発、新基板なら3発連続で入れることが可能
+      media:
+        kind: motion_player
+        displayLabel: モーション
+        skillName: Down Back + Fierce
+        characterCode: '05'
+        skillCode: '027'
 - id: command_normals
   displayTitle: "【特殊入力技】"
   entries:
@@ -1093,152 +1239,6 @@ moveGroups:
         skillName: Taunt
         characterCode: '05'
         skillCode: '035'
-  - id: item_02dcefb22e
-    displayName: レバー入れ技
-    children:
-    - id: item_bf7bad6f6c
-      displayName: ドリルキック
-      children:
-      - id: '30'
-        displayName: ドリルキック小(30度)
-        detail:
-          displayName: ドリルキック小(30度)
-          command: ジャンプ中、2小K
-          guard: 両方・両方
-          blocking: 両方・両方
-          startup: 9・6
-          active: 着地まで
-          recovery: "―"
-          damage: 65(50+15)
-          stun: 6(3+3)
-          stunReduction: 3・3
-          meterGain:
-            whiff: '2'
-            guard: 3(2+1)
-            hit: 9(7+2)
-            bl: 8(4+4)
-          frameAdvantage:
-            guard: "―"
-            standingHit: "―"
-            crouchingHit: "―"
-          stats:
-            C/SC: "×・×"
-          media:
-            kind: motion_player
-            displayLabel: モーション
-            skillName: Drill Short
-            characterCode: '05'
-            skillCode: '028'
-      - id: '45'
-        displayName: ドリルキック中(45度)
-        detail:
-          displayName: ドリルキック中(45度)
-          command: ジャンプ中、2中K
-          guard: 両方・両方
-          blocking: 両方・両方
-          startup: 9・6
-          active: 着地まで
-          recovery: "―"
-          damage: 80(60+20)
-          stun: 6(3+3)
-          stunReduction: 3・3
-          meterGain:
-            whiff: '2'
-            guard: 3(2+1)
-            hit: 9(7+2)
-            bl: 8(4+4)
-          frameAdvantage:
-            guard: "―"
-            standingHit: "―"
-            crouchingHit: "―"
-          stats:
-            C/SC: "×・×"
-          media:
-            kind: motion_player
-            displayLabel: モーション
-            skillName: Drill Forward
-            characterCode: '05'
-            skillCode: '029'
-      - id: '80'
-        displayName: ドリルキック大(80度)
-        detail:
-          displayName: ドリルキック大(80度)
-          command: ジャンプ中、2大K
-          guard: 両方・両方
-          blocking: 両方・両方
-          startup: 9・6
-          active: 着地まで
-          recovery: "―"
-          damage: 100(80+20)
-          stun: 10(5+5)
-          stunReduction: 3・3
-          meterGain:
-            whiff: '3'
-            guard: 5(4+1)
-            hit: 14(12+2)
-            bl: 8(4+4)
-          frameAdvantage:
-            guard: "―"
-            standingHit: "―"
-            crouchingHit: "―"
-          stats:
-            C/SC: "×・×"
-          media:
-            kind: motion_player
-            displayLabel: モーション
-            skillName: Drill RH
-            characterCode: '05'
-            skillCode: '030'
-      - id: item_cf8aa5b927
-        displayName: 補足
-        detail:
-          displayName: 補足
-          noteGroups:
-          - id: item_cf8aa5b927
-            displayTitle: 補足
-            entries:
-            - |-
-              ・硬直は当てる高さによって変化
-              ・当て方によっては連続ヒットしない
-              ・空中ヒットした場合、SA1で拾う事が可能
-              ・大ドリルは状況限定で相手をめくる事ができる
-    - id: item_b7f2bb505b
-      displayName: エルボーキャノン
-      detail:
-        displayName: エルボーキャノン
-        command: 1大P
-        guard: 両方
-        blocking: 両方
-        startup: '9'
-        active: '1'
-        recovery: '14'
-        damage: '140'
-        stun: '11'
-        stunReduction: '1'
-        meterGain:
-          whiff: '3'
-          guard: '6'
-          hit: '14'
-          bl: '4'
-        frameAdvantage:
-          guard: "+2"
-          standingHit: ダウン
-          crouchingHit: ダウン
-        stats:
-          C/SC: "×"
-        noteGroups:
-        - id: item_cf8aa5b927
-          displayTitle: 補足
-          entries:
-          - |-
-            ・判定が強く、ヒット時にダウンも取れる差し合いの主要技
-            ・画面端、アレックス、ユリアン、ヒューゴー限定で旧基板なら6発、新基板なら3発連続で入れることが可能
-        media:
-          kind: motion_player
-          displayLabel: モーション
-          skillName: Down Back + Fierce
-          characterCode: '05'
-          skillCode: '027'
   - id: item_b46a9fbcad
     displayName: ターゲットコンボ
     children:

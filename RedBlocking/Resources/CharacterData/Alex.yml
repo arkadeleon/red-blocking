@@ -864,6 +864,224 @@ moveGroups:
         skillName: Throw
         characterCode: '01'
         skillCode: '024'
+- id: lever_input_moves
+  displayTitle: "【レバー入れ技】"
+  entries:
+  - id: item_6bb50e08e5
+    displayName: フライングクロスチョップ
+    detail:
+      displayName: フライングクロスチョップ
+      command: 垂直or前方ジャンプ中1or2or3+大P
+      guard: 立
+      blocking: "→"
+      startup: '10'
+      active: '11'
+      recovery: '24'
+      damage: '120'
+      stun: '11'
+      stunReduction: '3'
+      meterGain:
+        whiff: '3'
+        guard: '3'
+        hit: '10'
+        bl: '4'
+      frameAdvantage:
+        guard: "-10"
+        standingHit: "-1"
+        crouchingHit: "+1"
+      stats:
+        C/SC: "×"
+      noteGroups:
+      - id: item_cf8aa5b927
+        displayTitle: 補足
+        entries:
+        - |-
+          ・ヒット時、硬直が13に減少
+          ・画面端付近で空中ヒットした場合、追撃可能
+          ・相手の空中攻撃を空中BLした後に出していくと良い
+      media:
+        kind: motion_player
+        displayLabel: モーション
+        skillName: "(Air) Down + Fierce"
+        characterCode: '01'
+        skillCode: '026'
+  - id: item_ca846228d7
+    displayName: チョップ
+    detail:
+      displayName: チョップ
+      command: 6+中P
+      guard: 両方
+      blocking: "→"
+      startup: '7'
+      active: '5'
+      recovery: '10'
+      damage: '110'
+      stun: '9'
+      stunReduction: '1'
+      meterGain:
+        whiff: '2'
+        guard: '3'
+        hit: '7'
+        bl: '4'
+      frameAdvantage:
+        guard: "-2"
+        standingHit: "-1"
+        crouchingHit: '0'
+      stats:
+        C/SC: "×"
+      noteGroups:
+      - id: item_cf8aa5b927
+        displayTitle: 補足
+        entries:
+        - |-
+          ・比較的判定が強く、簡易対空や相手の牽制技潰しに使える
+          ・画面端に追い込んだ相手へのジャンプ防止の一手としても有効
+      media:
+        kind: motion_player
+        displayLabel: モーション
+        skillName: Towards + Strong
+        characterCode: '01'
+        skillCode: '021'
+  - id: item_e3d0b05e0c
+    displayName: ヘッドバット(ヒット時)
+    detail:
+      displayName: ヘッドバット(ヒット時)
+      command: 4+大P
+      guard: 両方
+      blocking: "×"
+      startup: '8'
+      active: '4'
+      recovery: '23'
+      damage: '180'
+      stun: '24'
+      stunReduction: "―"
+      meterGain:
+        whiff: '0'
+        guard: '0'
+        hit: '7'
+        bl: "―"
+      frameAdvantage:
+        guard: "-11"
+        standingHit: "+1"
+        crouchingHit: "―"
+      stats:
+        C/SC: "×"
+      noteGroups:
+      - id: item_cf8aa5b927
+        displayTitle: 補足
+        entries:
+        - |-
+          ・BL不能の打撃投げ
+          ・投げ間合いは「91」
+          ・しゃがみ状態の相手をつかむことはできない。 ただしオロとダッドリーに限り、しゃがみのけぞり状態にもヒットさせることができる
+  - id: item_b163c17b04
+    displayName: ヘッドバット(ガード時)
+    detail:
+      displayName: ヘッドバット(ガード時)
+      command: 4+大P
+      guard: 両方
+      blocking: "×"
+      startup: '8'
+      active: '4'
+      recovery: '23'
+      damage: "―"
+      stun: "―"
+      stunReduction: "―"
+      meterGain:
+        whiff: '0'
+        guard: '0'
+        hit: "―"
+        bl: "―"
+      frameAdvantage:
+        guard: "-11"
+        standingHit: "―"
+        crouchingHit: "―"
+      stats:
+        C/SC: "×"
+      noteGroups:
+      - id: item_cf8aa5b927
+        displayTitle: 補足
+        entries:
+        - |-
+          ・BL不能の打撃投げ
+          ・投げ間合いは「91」
+      media:
+        kind: motion_player
+        displayLabel: モーション
+        skillName: Back + Fierce
+        characterCode: '01'
+        skillCode: '023'
+  - id: item_6284813cae
+    displayName: スリーパーホールド
+    detail:
+      displayName: スリーパーホールド
+      command: 相手の背後から4+大P
+      guard: 両方
+      blocking: "×"
+      startup: '8'
+      active: '4'
+      recovery: '23'
+      damage: 240(8ヒット)(50×8)
+      stun: 24(8ヒット)(5×8)
+      stunReduction: "―"
+      meterGain:
+        whiff: '0'
+        guard: '0'
+        hit: 16(2×8)
+        bl: "―"
+      frameAdvantage:
+        guard: "-11"
+        standingHit: "+4"
+        crouchingHit: "―"
+      stats:
+        C/SC: "×"
+      noteGroups:
+      - id: item_cf8aa5b927
+        displayTitle: 補足
+        entries:
+        - |-
+          ・BL不能の打撃投げ
+          ・投げ間合いは「91」
+          ・ボタン連打でヒット数が増加。 最大ヒット数は「8」
+          ・しゃがみ状態の相手をつかむことはできない。 ただしオロとダッドリーに限り、しゃがみのけぞり状態にもヒットさせることができる
+  - id: item_5b3a551061
+    displayName: ラリアット
+    detail:
+      displayName: ラリアット
+      command: 6+大P
+      guard: 両方
+      blocking: "→"
+      startup: '9'
+      active: '4'
+      recovery: '17'
+      damage: '135'
+      stun: '15'
+      stunReduction: '7'
+      meterGain:
+        whiff: '3'
+        guard: '5'
+        hit: '12'
+        bl: '4'
+      frameAdvantage:
+        guard: "-1"
+        standingHit: "+1"
+        crouchingHit: "+3"
+      stats:
+        C/SC: "×"
+      noteGroups:
+      - id: item_cf8aa5b927
+        displayTitle: 補足
+        entries:
+        - |-
+          ・移動投げや、攻撃判定の高さを活かして相手のジャンプ防止などに使用
+          ・空振り時の隙もそれ程大きくないため、わざと空振りして終了時にBLを狙うのも悪くない
+          ・しゃがみヒットした場合、SA2に繋ぐことが可能。その場合のキャンセル猶予時間は33～34フレーム
+      media:
+        kind: motion_player
+        displayLabel: モーション
+        skillName: Towards + Fierce
+        characterCode: '01'
+        skillCode: '022'
 - id: command_normals
   displayTitle: "【特殊入力技】"
   entries:
@@ -936,224 +1154,6 @@ moveGroups:
           ・6段階までアップしてSA2を決めた場合、通常約3割のダメージが約4割のダメージになる
           ・8段階までアップしてSA1を決めた場合、通常約4割のダメージが約6割のダメージになる
           ・ゲージ増加のカッコ内の数値は1本制のもの
-  - id: item_02dcefb22e
-    displayName: レバー入れ技
-    children:
-    - id: item_6bb50e08e5
-      displayName: フライングクロスチョップ
-      detail:
-        displayName: フライングクロスチョップ
-        command: 垂直or前方ジャンプ中1or2or3+大P
-        guard: 立
-        blocking: "→"
-        startup: '10'
-        active: '11'
-        recovery: '24'
-        damage: '120'
-        stun: '11'
-        stunReduction: '3'
-        meterGain:
-          whiff: '3'
-          guard: '3'
-          hit: '10'
-          bl: '4'
-        frameAdvantage:
-          guard: "-10"
-          standingHit: "-1"
-          crouchingHit: "+1"
-        stats:
-          C/SC: "×"
-        noteGroups:
-        - id: item_cf8aa5b927
-          displayTitle: 補足
-          entries:
-          - |-
-            ・ヒット時、硬直が13に減少
-            ・画面端付近で空中ヒットした場合、追撃可能
-            ・相手の空中攻撃を空中BLした後に出していくと良い
-        media:
-          kind: motion_player
-          displayLabel: モーション
-          skillName: "(Air) Down + Fierce"
-          characterCode: '01'
-          skillCode: '026'
-    - id: item_ca846228d7
-      displayName: チョップ
-      detail:
-        displayName: チョップ
-        command: 6+中P
-        guard: 両方
-        blocking: "→"
-        startup: '7'
-        active: '5'
-        recovery: '10'
-        damage: '110'
-        stun: '9'
-        stunReduction: '1'
-        meterGain:
-          whiff: '2'
-          guard: '3'
-          hit: '7'
-          bl: '4'
-        frameAdvantage:
-          guard: "-2"
-          standingHit: "-1"
-          crouchingHit: '0'
-        stats:
-          C/SC: "×"
-        noteGroups:
-        - id: item_cf8aa5b927
-          displayTitle: 補足
-          entries:
-          - |-
-            ・比較的判定が強く、簡易対空や相手の牽制技潰しに使える
-            ・画面端に追い込んだ相手へのジャンプ防止の一手としても有効
-        media:
-          kind: motion_player
-          displayLabel: モーション
-          skillName: Towards + Strong
-          characterCode: '01'
-          skillCode: '021'
-    - id: item_e3d0b05e0c
-      displayName: ヘッドバット(ヒット時)
-      detail:
-        displayName: ヘッドバット(ヒット時)
-        command: 4+大P
-        guard: 両方
-        blocking: "×"
-        startup: '8'
-        active: '4'
-        recovery: '23'
-        damage: '180'
-        stun: '24'
-        stunReduction: "―"
-        meterGain:
-          whiff: '0'
-          guard: '0'
-          hit: '7'
-          bl: "―"
-        frameAdvantage:
-          guard: "-11"
-          standingHit: "+1"
-          crouchingHit: "―"
-        stats:
-          C/SC: "×"
-        noteGroups:
-        - id: item_cf8aa5b927
-          displayTitle: 補足
-          entries:
-          - |-
-            ・BL不能の打撃投げ
-            ・投げ間合いは「91」
-            ・しゃがみ状態の相手をつかむことはできない。 ただしオロとダッドリーに限り、しゃがみのけぞり状態にもヒットさせることができる
-    - id: item_b163c17b04
-      displayName: ヘッドバット(ガード時)
-      detail:
-        displayName: ヘッドバット(ガード時)
-        command: 4+大P
-        guard: 両方
-        blocking: "×"
-        startup: '8'
-        active: '4'
-        recovery: '23'
-        damage: "―"
-        stun: "―"
-        stunReduction: "―"
-        meterGain:
-          whiff: '0'
-          guard: '0'
-          hit: "―"
-          bl: "―"
-        frameAdvantage:
-          guard: "-11"
-          standingHit: "―"
-          crouchingHit: "―"
-        stats:
-          C/SC: "×"
-        noteGroups:
-        - id: item_cf8aa5b927
-          displayTitle: 補足
-          entries:
-          - |-
-            ・BL不能の打撃投げ
-            ・投げ間合いは「91」
-        media:
-          kind: motion_player
-          displayLabel: モーション
-          skillName: Back + Fierce
-          characterCode: '01'
-          skillCode: '023'
-    - id: item_6284813cae
-      displayName: スリーパーホールド
-      detail:
-        displayName: スリーパーホールド
-        command: 相手の背後から4+大P
-        guard: 両方
-        blocking: "×"
-        startup: '8'
-        active: '4'
-        recovery: '23'
-        damage: 240(8ヒット)(50×8)
-        stun: 24(8ヒット)(5×8)
-        stunReduction: "―"
-        meterGain:
-          whiff: '0'
-          guard: '0'
-          hit: 16(2×8)
-          bl: "―"
-        frameAdvantage:
-          guard: "-11"
-          standingHit: "+4"
-          crouchingHit: "―"
-        stats:
-          C/SC: "×"
-        noteGroups:
-        - id: item_cf8aa5b927
-          displayTitle: 補足
-          entries:
-          - |-
-            ・BL不能の打撃投げ
-            ・投げ間合いは「91」
-            ・ボタン連打でヒット数が増加。 最大ヒット数は「8」
-            ・しゃがみ状態の相手をつかむことはできない。 ただしオロとダッドリーに限り、しゃがみのけぞり状態にもヒットさせることができる
-    - id: item_5b3a551061
-      displayName: ラリアット
-      detail:
-        displayName: ラリアット
-        command: 6+大P
-        guard: 両方
-        blocking: "→"
-        startup: '9'
-        active: '4'
-        recovery: '17'
-        damage: '135'
-        stun: '15'
-        stunReduction: '7'
-        meterGain:
-          whiff: '3'
-          guard: '5'
-          hit: '12'
-          bl: '4'
-        frameAdvantage:
-          guard: "-1"
-          standingHit: "+1"
-          crouchingHit: "+3"
-        stats:
-          C/SC: "×"
-        noteGroups:
-        - id: item_cf8aa5b927
-          displayTitle: 補足
-          entries:
-          - |-
-            ・移動投げや、攻撃判定の高さを活かして相手のジャンプ防止などに使用
-            ・空振り時の隙もそれ程大きくないため、わざと空振りして終了時にBLを狙うのも悪くない
-            ・しゃがみヒットした場合、SA2に繋ぐことが可能。その場合のキャンセル猶予時間は33～34フレーム
-        media:
-          kind: motion_player
-          displayLabel: モーション
-          skillName: Towards + Fierce
-          characterCode: '01'
-          skillCode: '022'
   - id: item_b46a9fbcad
     displayName: ターゲットコンボ
     children:

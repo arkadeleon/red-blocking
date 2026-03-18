@@ -869,6 +869,150 @@ moveGroups:
         skillName: Throw
         characterCode: '18'
         skillCode: '026'
+- id: lever_input_moves
+  displayTitle: "【レバー入れ技】"
+  entries:
+  - id: item_ac690d8447
+    displayName: 腕部による上方攻撃(仮)
+    detail:
+      displayName: 腕部による上方攻撃(仮)
+      command: 4+中P
+      guard: 両方
+      blocking: "→"
+      startup: '8'
+      active: '4'
+      recovery: '18'
+      damage: '100'
+      stun: '13'
+      stunReduction: '1'
+      meterGain:
+        whiff: '3'
+        guard: '3'
+        hit: '7'
+        bl: '4'
+      frameAdvantage:
+        guard: "-2"
+        standingHit: '0'
+        crouchingHit: '0'
+      stats:
+        C/SC: "×"
+      noteGroups:
+      - id: item_cf8aa5b927
+        displayTitle: 補足
+        entries:
+        - |-
+          ・対空に使用可能。ただし判定が弱く、技を出されるとあっさり潰されるので注意。
+          ・移動投げに使用
+      media:
+        kind: motion_player
+        displayLabel: モーション
+        skillName: Back + Strong
+        characterCode: '18'
+        skillCode: '022'
+  - id: item_6de7e2e161
+    displayName: 両腕による前進痛撃(仮)
+    detail:
+      displayName: 両腕による前進痛撃(仮)
+      command: 4+大P
+      guard: 両方
+      blocking: "→"
+      startup: '13'
+      active: '11'
+      recovery: '15'
+      damage: 120(110)
+      stun: 15(13)
+      stunReduction: '15'
+      meterGain:
+        whiff: '3'
+        guard: '5'
+        hit: '13'
+        bl: '4'
+      frameAdvantage:
+        guard: "-1"
+        standingHit: "+1"
+        crouchingHit: "+3"
+      stats:
+        C/SC: "×"
+      noteGroups:
+      - id: item_cf8aa5b927
+        displayTitle: 補足
+        entries:
+        - |-
+          ・立大Pとモーションは同じだが、出が速くなり隙も小さい。ただしリーチは短くなり、ヒットしてもダウンしない
+          ・攻撃力とスタン値欄のカッコ内の数値は先端がヒットした時のもの
+      media:
+        kind: motion_player
+        displayLabel: モーション
+        skillName: Back + Fierce
+        characterCode: '18'
+        skillCode: '023'
+  - id: item_c7476e782c
+    displayName: 転倒からの頭部痛撃(仮)
+    detail:
+      displayName: 転倒からの頭部痛撃(仮)
+      command: 4+大K
+      guard: 両方
+      blocking: 両方(→)
+      startup: '11'
+      active: '7'
+      recovery: '35'
+      damage: 140(130)
+      stun: 3(15)
+      stunReduction: '15'
+      meterGain:
+        whiff: '3'
+        guard: '5'
+        hit: '13'
+        bl: '4'
+      frameAdvantage:
+        guard: "-26"
+        standingHit: ダウン
+        crouchingHit: ダウン
+      stats:
+        C/SC: "○(×)"
+      noteGroups:
+      - id: item_cf8aa5b927
+        displayTitle: 補足
+        entries:
+        - |-
+          ・技の後半は「→」のみBL可能
+          ・キャンセル、攻撃力、スタン値欄のカッコ内の数値は先端がヒット時のもの
+          ・キャンセル猶予時間は14フレーム
+      media:
+        kind: motion_player
+        displayLabel: モーション
+        skillName: Back + Roundhouse
+        characterCode: '18'
+        skillCode: '024'
+  - id: item_d3205fd528
+    displayName: 屈伸投げ抜け(仮)
+    detail:
+      displayName: 屈伸投げ抜け(仮)
+      command: しゃがみ状態からレバーニュートラル
+      guard: "―"
+      blocking: "―"
+      startup: '7'
+      active: '8'
+      recovery: "―"
+      damage: "―"
+      stun: "―"
+      stunReduction: "―"
+      meterGain:
+        whiff: "―"
+        guard: "―"
+        hit: "―"
+        bl: "―"
+      frameAdvantage:
+        guard: "―"
+        standingHit: "―"
+        crouchingHit: "―"
+      stats:
+        C/SC: "―"
+      noteGroups:
+      - id: item_cf8aa5b927
+        displayTitle: 補足
+        entries:
+        - "・投げ無敵になるのは、レバーをニュートラルにして8フレーム目から。ただし、投げ無敵はニュートラル状態でないと発動しない\n・投げ無敵状態は8フレーム間持続\n・攻撃、移動など、少しでも他の行動をすると無敵状態は解除される\n・投げ無敵中は見た目は立ちモーションだが、しゃがみ食らい扱いなので注意 \n・しゃがみ状態を経由したニュートラル立ちモーション自体に投げ無敵があるため、ダウンからの起き上がりの場合は投げ無敵はつかない\n・ガード状態からでも、下BL後からでも投げ無敵を狙える。特に下BL後は自動的にニュートラルでの受付時間延長状態になり、投げと下段に対して勝てる状況になる\n・この現象はQの投げられ判定がバグにより8フレーム間、空中判定になるために起こる。よって屈伸投げ抜け中はメガトンプレス、鬼神力の空中投げ、通常空中投げ、で投げることが可能（以下の動画を参照）\n・モーション表の青色の部分は食らい判定を、オレンジ色の部分は投げられ判定を表示"
 - id: command_normals
   displayTitle: "【特殊入力技】"
   entries:
@@ -940,150 +1084,6 @@ moveGroups:
           ・スタンゲージの回復速度は10%アップ(1回でMAX)
           ・PAを使用したラウンド中、効果持続
           ・ゲージ増加のカッコ内の数値は1本制のもの
-  - id: item_02dcefb22e
-    displayName: レバー入れ技
-    children:
-    - id: item_ac690d8447
-      displayName: 腕部による上方攻撃(仮)
-      detail:
-        displayName: 腕部による上方攻撃(仮)
-        command: 4+中P
-        guard: 両方
-        blocking: "→"
-        startup: '8'
-        active: '4'
-        recovery: '18'
-        damage: '100'
-        stun: '13'
-        stunReduction: '1'
-        meterGain:
-          whiff: '3'
-          guard: '3'
-          hit: '7'
-          bl: '4'
-        frameAdvantage:
-          guard: "-2"
-          standingHit: '0'
-          crouchingHit: '0'
-        stats:
-          C/SC: "×"
-        noteGroups:
-        - id: item_cf8aa5b927
-          displayTitle: 補足
-          entries:
-          - |-
-            ・対空に使用可能。ただし判定が弱く、技を出されるとあっさり潰されるので注意。
-            ・移動投げに使用
-        media:
-          kind: motion_player
-          displayLabel: モーション
-          skillName: Back + Strong
-          characterCode: '18'
-          skillCode: '022'
-    - id: item_6de7e2e161
-      displayName: 両腕による前進痛撃(仮)
-      detail:
-        displayName: 両腕による前進痛撃(仮)
-        command: 4+大P
-        guard: 両方
-        blocking: "→"
-        startup: '13'
-        active: '11'
-        recovery: '15'
-        damage: 120(110)
-        stun: 15(13)
-        stunReduction: '15'
-        meterGain:
-          whiff: '3'
-          guard: '5'
-          hit: '13'
-          bl: '4'
-        frameAdvantage:
-          guard: "-1"
-          standingHit: "+1"
-          crouchingHit: "+3"
-        stats:
-          C/SC: "×"
-        noteGroups:
-        - id: item_cf8aa5b927
-          displayTitle: 補足
-          entries:
-          - |-
-            ・立大Pとモーションは同じだが、出が速くなり隙も小さい。ただしリーチは短くなり、ヒットしてもダウンしない
-            ・攻撃力とスタン値欄のカッコ内の数値は先端がヒットした時のもの
-        media:
-          kind: motion_player
-          displayLabel: モーション
-          skillName: Back + Fierce
-          characterCode: '18'
-          skillCode: '023'
-    - id: item_c7476e782c
-      displayName: 転倒からの頭部痛撃(仮)
-      detail:
-        displayName: 転倒からの頭部痛撃(仮)
-        command: 4+大K
-        guard: 両方
-        blocking: 両方(→)
-        startup: '11'
-        active: '7'
-        recovery: '35'
-        damage: 140(130)
-        stun: 3(15)
-        stunReduction: '15'
-        meterGain:
-          whiff: '3'
-          guard: '5'
-          hit: '13'
-          bl: '4'
-        frameAdvantage:
-          guard: "-26"
-          standingHit: ダウン
-          crouchingHit: ダウン
-        stats:
-          C/SC: "○(×)"
-        noteGroups:
-        - id: item_cf8aa5b927
-          displayTitle: 補足
-          entries:
-          - |-
-            ・技の後半は「→」のみBL可能
-            ・キャンセル、攻撃力、スタン値欄のカッコ内の数値は先端がヒット時のもの
-            ・キャンセル猶予時間は14フレーム
-        media:
-          kind: motion_player
-          displayLabel: モーション
-          skillName: Back + Roundhouse
-          characterCode: '18'
-          skillCode: '024'
-    - id: item_d3205fd528
-      displayName: 屈伸投げ抜け(仮)
-      detail:
-        displayName: 屈伸投げ抜け(仮)
-        command: しゃがみ状態からレバーニュートラル
-        guard: "―"
-        blocking: "―"
-        startup: '7'
-        active: '8'
-        recovery: "―"
-        damage: "―"
-        stun: "―"
-        stunReduction: "―"
-        meterGain:
-          whiff: "―"
-          guard: "―"
-          hit: "―"
-          bl: "―"
-        frameAdvantage:
-          guard: "―"
-          standingHit: "―"
-          crouchingHit: "―"
-        stats:
-          C/SC: "―"
-        noteGroups:
-        - id: item_cf8aa5b927
-          displayTitle: 補足
-          entries:
-          - "・投げ無敵になるのは、レバーをニュートラルにして8フレーム目から。ただし、投げ無敵はニュートラル状態でないと発動しない\n・投げ無敵状態は8フレーム間持続\n・攻撃、移動など、少しでも他の行動をすると無敵状態は解除される\n・投げ無敵中は見た目は立ちモーションだが、しゃがみ食らい扱いなので注意 \n・しゃがみ状態を経由したニュートラル立ちモーション自体に投げ無敵があるため、ダウンからの起き上がりの場合は投げ無敵はつかない\n・ガード状態からでも、下BL後からでも投げ無敵を狙える。特に下BL後は自動的にニュートラルでの受付時間延長状態になり、投げと下段に対して勝てる状況になる\n・この現象はQの投げられ判定がバグにより8フレーム間、空中判定になるために起こる。よって屈伸投げ抜け中はメガトンプレス、鬼神力の空中投げ、通常空中投げ、で投げることが可能（以下の動画を参照）\n・モーション表の青色の部分は食らい判定を、オレンジ色の部分は投げられ判定を表示"
 - id: special_moves
   displayTitle: "【必殺技】"
   entries:

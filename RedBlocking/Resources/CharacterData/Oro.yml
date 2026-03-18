@@ -957,6 +957,77 @@ moveGroups:
         skillName: Air Throw
         characterCode: '09'
         skillCode: '032'
+- id: lever_input_moves
+  displayTitle: "【レバー入れ技】"
+  entries:
+  - id: item_09843097a0
+    displayName: まわし肘
+    detail:
+      displayName: まわし肘
+      command: 6+中P
+      guard: 両方
+      blocking: "→"
+      startup: '8'
+      active: '2'
+      recovery: '18'
+      damage: '90'
+      stun: '13'
+      stunReduction: '15'
+      meterGain:
+        whiff: '1'
+        guard: '5'
+        hit: '9'
+        bl: '4'
+      frameAdvantage:
+        guard: "-5"
+        standingHit: "-4"
+        crouchingHit: "-3"
+      stats:
+        C/SC: "×"
+      noteGroups:
+      - id: item_cf8aa5b927
+        displayTitle: 補足
+        entries:
+        - |-
+          ・背の高いキャラ相手の牽制で使用
+          ・牽制の差し返しなどに有効(ダッドリーの立大Kなど)
+      media:
+        kind: motion_player
+        displayLabel: モーション
+        skillName: Towards + Strong
+        characterCode: '09'
+        skillCode: '029'
+  - id: '2'
+    displayName: 2段ジャンプ
+    detail:
+      displayName: 2段ジャンプ
+      command: ジャンプ中にレバー上方向
+      guard: "―"
+      blocking: "―"
+      startup: "―"
+      active: "―"
+      recovery: "―"
+      damage: "―"
+      stun: "―"
+      stunReduction: "―"
+      meterGain:
+        whiff: "―"
+        guard: "―"
+        hit: "―"
+        bl: "―"
+      frameAdvantage:
+        guard: "―"
+        standingHit: "―"
+        crouchingHit: "―"
+      stats:
+        C/SC: "―"
+      noteGroups:
+      - id: item_cf8aa5b927
+        displayTitle: 補足
+        entries:
+        - |-
+          ・ジャンプ中、技を出してない状態の時のみ可能
+          ・画面はオロ中心でスクロールする為、相手を翻弄するのに有効。ただし自身も相手の位置がわからなくなるのが難点
 - id: command_normals
   displayTitle: "【特殊入力技】"
   entries:
@@ -1026,77 +1097,6 @@ moveGroups:
         - |-
           ・押しっぱなし可
           ・オロのみ例外的にそのラウンドPA効果の持続なし
-  - id: item_02dcefb22e
-    displayName: レバー入れ技
-    children:
-    - id: item_09843097a0
-      displayName: まわし肘
-      detail:
-        displayName: まわし肘
-        command: 6+中P
-        guard: 両方
-        blocking: "→"
-        startup: '8'
-        active: '2'
-        recovery: '18'
-        damage: '90'
-        stun: '13'
-        stunReduction: '15'
-        meterGain:
-          whiff: '1'
-          guard: '5'
-          hit: '9'
-          bl: '4'
-        frameAdvantage:
-          guard: "-5"
-          standingHit: "-4"
-          crouchingHit: "-3"
-        stats:
-          C/SC: "×"
-        noteGroups:
-        - id: item_cf8aa5b927
-          displayTitle: 補足
-          entries:
-          - |-
-            ・背の高いキャラ相手の牽制で使用
-            ・牽制の差し返しなどに有効(ダッドリーの立大Kなど)
-        media:
-          kind: motion_player
-          displayLabel: モーション
-          skillName: Towards + Strong
-          characterCode: '09'
-          skillCode: '029'
-    - id: '2'
-      displayName: 2段ジャンプ
-      detail:
-        displayName: 2段ジャンプ
-        command: ジャンプ中にレバー上方向
-        guard: "―"
-        blocking: "―"
-        startup: "―"
-        active: "―"
-        recovery: "―"
-        damage: "―"
-        stun: "―"
-        stunReduction: "―"
-        meterGain:
-          whiff: "―"
-          guard: "―"
-          hit: "―"
-          bl: "―"
-        frameAdvantage:
-          guard: "―"
-          standingHit: "―"
-          crouchingHit: "―"
-        stats:
-          C/SC: "―"
-        noteGroups:
-        - id: item_cf8aa5b927
-          displayTitle: 補足
-          entries:
-          - |-
-            ・ジャンプ中、技を出してない状態の時のみ可能
-            ・画面はオロ中心でスクロールする為、相手を翻弄するのに有効。ただし自身も相手の位置がわからなくなるのが難点
   - id: item_b46a9fbcad
     displayName: ターゲットコンボ
     children:

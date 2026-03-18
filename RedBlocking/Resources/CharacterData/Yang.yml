@@ -947,6 +947,119 @@ moveGroups:
         skillName: Back Throw
         characterCode: '10'
         skillCode: '028'
+- id: lever_input_moves
+  displayTitle: "【レバー入れ技】"
+  entries:
+  - id: item_3ccc2bc446
+    displayName: 雷撃蹴(らいげきしゅう)
+    detail:
+      displayName: 雷撃蹴(らいげきしゅう)
+      command: 垂直 or 前方(ハイ)ジャンプ中、頂点付近で3+K
+      guard: 立
+      blocking: "→"
+      startup: |-
+        6(小、大)
+        8(中)
+      active: 着地まで
+      recovery: "―"
+      damage: '70'
+      stun: '7'
+      stunReduction: '15'
+      meterGain:
+        whiff: '2'
+        guard: '3'
+        hit: '7'
+        bl: '4'
+      frameAdvantage:
+        guard: "―"
+        standingHit: "―"
+        crouchingHit: "―"
+      stats:
+        C/SC: "×"
+      noteGroups:
+      - id: item_cf8aa5b927
+        displayTitle: 補足
+        entries:
+        - |-
+          ・押すボタンにより落下角度が変化
+          ・ヒット&ガード硬直時間差は当てる高さによって変化
+          ・足元にヒットさせない限り地上技に繋ぐのは難しいが、攻めの継続は出来る
+      media:
+        kind: motion_player
+        displayLabel: モーション
+        skillName: Dive Kicks
+        characterCode: '10'
+        skillCode: '026'
+  - id: item_846dc1061f
+    displayName: 旋風脚(せんぷうきゃく)
+    detail:
+      displayName: 旋風脚(せんぷうきゃく)
+      command: 6+中K
+      guard: 立
+      blocking: "→"
+      startup: '19'
+      active: '6'
+      recovery: 8(9)
+      damage: '80'
+      stun: '11'
+      stunReduction: '15'
+      meterGain:
+        whiff: '2'
+        guard: '3'
+        hit: '7'
+        bl: '4'
+      frameAdvantage:
+        guard: "-1"
+        standingHit: '0'
+        crouchingHit: "+1"
+      stats:
+        C/SC: "×"
+      noteGroups:
+      - id: item_cf8aa5b927
+        displayTitle: 補足
+        entries:
+        - |-
+          ・硬直欄のカッコ内の数値はしゃがみ状態で着地した時のもの
+          ・コマンド完成後、8フレーム目から空中判定に移行
+          ・攻めの継続や相手の足払いに対してあわせるように使うと効果的
+      media:
+        kind: motion_player
+        displayLabel: モーション
+        skillName: Towards + Forward
+        characterCode: '10'
+        skillCode: '025'
+  - id: item_aec1a5edf1
+    displayName: 勾手(こうしゅ)
+    detail:
+      displayName: 勾手(こうしゅ)
+      command: 6+大P
+      guard: 両方
+      blocking: "→"
+      startup: '9'
+      active: '6'
+      recovery: '12'
+      damage: '120'
+      stun: '15'
+      stunReduction: '15'
+      meterGain:
+        whiff: '3'
+        guard: '5'
+        hit: '13'
+        bl: '4'
+      frameAdvantage:
+        guard: "-5"
+        standingHit: "-3"
+        crouchingHit: "-1"
+      stats:
+        C/SC: "×"
+      noteGroups:
+      - id: item_cf8aa5b927
+        displayTitle: 補足
+        entries:
+        - |-
+          ・遠立大Pと同じ技
+          ・判定は強いが、足払いに弱いため注意
+          ・画面端付近で白虎ヒット時の追撃に使用
 - id: command_normals
   displayTitle: "【特殊入力技】"
   entries:
@@ -1020,119 +1133,6 @@ moveGroups:
         skillName: Taunt
         characterCode: '10'
         skillCode: '031'
-  - id: item_02dcefb22e
-    displayName: レバー入れ技
-    children:
-    - id: item_3ccc2bc446
-      displayName: 雷撃蹴(らいげきしゅう)
-      detail:
-        displayName: 雷撃蹴(らいげきしゅう)
-        command: 垂直 or 前方(ハイ)ジャンプ中、頂点付近で3+K
-        guard: 立
-        blocking: "→"
-        startup: |-
-          6(小、大)
-          8(中)
-        active: 着地まで
-        recovery: "―"
-        damage: '70'
-        stun: '7'
-        stunReduction: '15'
-        meterGain:
-          whiff: '2'
-          guard: '3'
-          hit: '7'
-          bl: '4'
-        frameAdvantage:
-          guard: "―"
-          standingHit: "―"
-          crouchingHit: "―"
-        stats:
-          C/SC: "×"
-        noteGroups:
-        - id: item_cf8aa5b927
-          displayTitle: 補足
-          entries:
-          - |-
-            ・押すボタンにより落下角度が変化
-            ・ヒット&ガード硬直時間差は当てる高さによって変化
-            ・足元にヒットさせない限り地上技に繋ぐのは難しいが、攻めの継続は出来る
-        media:
-          kind: motion_player
-          displayLabel: モーション
-          skillName: Dive Kicks
-          characterCode: '10'
-          skillCode: '026'
-    - id: item_846dc1061f
-      displayName: 旋風脚(せんぷうきゃく)
-      detail:
-        displayName: 旋風脚(せんぷうきゃく)
-        command: 6+中K
-        guard: 立
-        blocking: "→"
-        startup: '19'
-        active: '6'
-        recovery: 8(9)
-        damage: '80'
-        stun: '11'
-        stunReduction: '15'
-        meterGain:
-          whiff: '2'
-          guard: '3'
-          hit: '7'
-          bl: '4'
-        frameAdvantage:
-          guard: "-1"
-          standingHit: '0'
-          crouchingHit: "+1"
-        stats:
-          C/SC: "×"
-        noteGroups:
-        - id: item_cf8aa5b927
-          displayTitle: 補足
-          entries:
-          - |-
-            ・硬直欄のカッコ内の数値はしゃがみ状態で着地した時のもの
-            ・コマンド完成後、8フレーム目から空中判定に移行
-            ・攻めの継続や相手の足払いに対してあわせるように使うと効果的
-        media:
-          kind: motion_player
-          displayLabel: モーション
-          skillName: Towards + Forward
-          characterCode: '10'
-          skillCode: '025'
-    - id: item_aec1a5edf1
-      displayName: 勾手(こうしゅ)
-      detail:
-        displayName: 勾手(こうしゅ)
-        command: 6+大P
-        guard: 両方
-        blocking: "→"
-        startup: '9'
-        active: '6'
-        recovery: '12'
-        damage: '120'
-        stun: '15'
-        stunReduction: '15'
-        meterGain:
-          whiff: '3'
-          guard: '5'
-          hit: '13'
-          bl: '4'
-        frameAdvantage:
-          guard: "-5"
-          standingHit: "-3"
-          crouchingHit: "-1"
-        stats:
-          C/SC: "×"
-        noteGroups:
-        - id: item_cf8aa5b927
-          displayTitle: 補足
-          entries:
-          - |-
-            ・遠立大Pと同じ技
-            ・判定は強いが、足払いに弱いため注意
-            ・画面端付近で白虎ヒット時の追撃に使用
   - id: item_b46a9fbcad
     displayName: ターゲットコンボ
     children:

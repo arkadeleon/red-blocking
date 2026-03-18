@@ -964,6 +964,44 @@ moveGroups:
         skillName: Throw
         characterCode: '20'
         skillCode: '027'
+- id: lever_input_moves
+  displayTitle: "【レバー入れ技】"
+  entries:
+  - id: item_dec10da8a1
+    displayName: あまりに無垢なエギーユ
+    detail:
+      displayName: あまりに無垢なエギーユ
+      command: 6+中K
+      guard: 立
+      blocking: "→"
+      startup: '18'
+      active: '3'
+      recovery: '20'
+      damage: '80'
+      stun: '3'
+      stunReduction: '15'
+      meterGain:
+        whiff: '2'
+        guard: '4'
+        hit: '8'
+        bl: '4'
+      frameAdvantage:
+        guard: "-7"
+        standingHit: "-6"
+        crouchingHit: "-5"
+      stats:
+        C/SC: "×"
+      noteGroups:
+      - id: item_cf8aa5b927
+        displayTitle: 補足
+        entries:
+        - ヒット、ガード問わず隙が大きいので反撃可能なSAを持っているキャラ相手には多用は禁物
+      media:
+        kind: motion_player
+        displayLabel: モーション
+        skillName: Towards + Forward
+        characterCode: '20'
+        skillCode: '025'
 - id: command_normals
   displayTitle: "【特殊入力技】"
   entries:
@@ -1037,44 +1075,6 @@ moveGroups:
         skillName: Taunt
         characterCode: '20'
         skillCode: '029'
-  - id: item_02dcefb22e
-    displayName: レバー入れ技
-    children:
-    - id: item_dec10da8a1
-      displayName: あまりに無垢なエギーユ
-      detail:
-        displayName: あまりに無垢なエギーユ
-        command: 6+中K
-        guard: 立
-        blocking: "→"
-        startup: '18'
-        active: '3'
-        recovery: '20'
-        damage: '80'
-        stun: '3'
-        stunReduction: '15'
-        meterGain:
-          whiff: '2'
-          guard: '4'
-          hit: '8'
-          bl: '4'
-        frameAdvantage:
-          guard: "-7"
-          standingHit: "-6"
-          crouchingHit: "-5"
-        stats:
-          C/SC: "×"
-        noteGroups:
-        - id: item_cf8aa5b927
-          displayTitle: 補足
-          entries:
-          - ヒット、ガード問わず隙が大きいので反撃可能なSAを持っているキャラ相手には多用は禁物
-        media:
-          kind: motion_player
-          displayLabel: モーション
-          skillName: Towards + Forward
-          characterCode: '20'
-          skillCode: '025'
   - id: item_b46a9fbcad
     displayName: ターゲットコンボ
     children:

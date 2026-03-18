@@ -955,6 +955,84 @@ moveGroups:
         skillName: Back + Throw
         characterCode: '02'
         skillCode: '031'
+- id: lever_input_moves
+  displayTitle: "【レバー入れ技】"
+  entries:
+  - id: item_dedee1039c
+    displayName: 鎖骨割り(さこつわり)
+    detail:
+      displayName: 鎖骨割り(さこつわり)
+      command: 6+中P
+      guard: 立・立
+      blocking: "→・→"
+      startup: '14'
+      active: 1・11
+      recovery: '9'
+      damage: 100(40+60)
+      stun: 16(9+7)
+      stunReduction: 1・1
+      meterGain:
+        whiff: '2'
+        guard: 3(2+1)
+        hit: 9(7+2)
+        bl: 8(4+4)
+      frameAdvantage:
+        guard: "-1"
+        standingHit: "+1"
+        crouchingHit: "+3"
+      stats:
+        C/SC: "×・×"
+      noteGroups:
+      - id: item_cf8aa5b927
+        displayTitle: 補足
+        entries:
+        - |-
+          ・2段目を持続重ねでしゃがみヒットさせると、屈中Kや真空波動拳(一部キャラのみ真昇龍拳)に繋ぐことが可能
+          ・移動投げに使用
+      media:
+        kind: motion_player
+        displayLabel: モーション
+        skillName: Towards + Strong
+        characterCode: '02'
+        skillCode: '028'
+  - id: item_2c66c56aaf
+    displayName: 鳩尾砕き(みぞおちくだき)
+    detail:
+      displayName: 鳩尾砕き(みぞおちくだき)
+      command: 6+大P
+      guard: 両方・両方
+      blocking: "→・→"
+      startup: '18'
+      active: 2・4
+      recovery: '13'
+      damage: 150(70+80)
+      stun: 14(7+7)
+      stunReduction: 15・15
+      meterGain:
+        whiff: 4(2+2)
+        guard: 8(4+4)
+        hit: 16(8+8)
+        bl: 8(4+4)
+      frameAdvantage:
+        guard: "+2"
+        standingHit: "+4"
+        crouchingHit: "+6"
+      stats:
+        C/SC: "×・×"
+      noteGroups:
+      - id: item_cf8aa5b927
+        displayTitle: 補足
+        entries:
+        - |-
+          ・ヒット時に立ヒットならEX昇龍拳に、しゃがみヒットなら各昇龍拳や真空波動拳に繋ぐ事が可能
+          ・立、しゃがみヒットどちらの状態でも真昇龍拳に繋ぐ事が可能
+          ・ノーキャンセルの猶予時間はEX昇龍拳が25フレーム、真昇龍拳が25～27フレーム
+      media:
+        kind: motion_player
+        displayLabel: モーション
+        skillName: Towards + Fierce
+        characterCode: '02'
+        skillCode: '029'
 - id: command_normals
   displayTitle: "【特殊入力技】"
   entries:
@@ -1023,84 +1101,6 @@ moveGroups:
           ・1回目で10%、2回目で21%、3回目(MAX)で33%まで回復速度アップ
           ・PAを使用したラウンド中、効果持続
           ・ゲージ増加のカッコ内の数値は1本制のもの
-  - id: item_02dcefb22e
-    displayName: レバー入れ技
-    children:
-    - id: item_dedee1039c
-      displayName: 鎖骨割り(さこつわり)
-      detail:
-        displayName: 鎖骨割り(さこつわり)
-        command: 6+中P
-        guard: 立・立
-        blocking: "→・→"
-        startup: '14'
-        active: 1・11
-        recovery: '9'
-        damage: 100(40+60)
-        stun: 16(9+7)
-        stunReduction: 1・1
-        meterGain:
-          whiff: '2'
-          guard: 3(2+1)
-          hit: 9(7+2)
-          bl: 8(4+4)
-        frameAdvantage:
-          guard: "-1"
-          standingHit: "+1"
-          crouchingHit: "+3"
-        stats:
-          C/SC: "×・×"
-        noteGroups:
-        - id: item_cf8aa5b927
-          displayTitle: 補足
-          entries:
-          - |-
-            ・2段目を持続重ねでしゃがみヒットさせると、屈中Kや真空波動拳(一部キャラのみ真昇龍拳)に繋ぐことが可能
-            ・移動投げに使用
-        media:
-          kind: motion_player
-          displayLabel: モーション
-          skillName: Towards + Strong
-          characterCode: '02'
-          skillCode: '028'
-    - id: item_2c66c56aaf
-      displayName: 鳩尾砕き(みぞおちくだき)
-      detail:
-        displayName: 鳩尾砕き(みぞおちくだき)
-        command: 6+大P
-        guard: 両方・両方
-        blocking: "→・→"
-        startup: '18'
-        active: 2・4
-        recovery: '13'
-        damage: 150(70+80)
-        stun: 14(7+7)
-        stunReduction: 15・15
-        meterGain:
-          whiff: 4(2+2)
-          guard: 8(4+4)
-          hit: 16(8+8)
-          bl: 8(4+4)
-        frameAdvantage:
-          guard: "+2"
-          standingHit: "+4"
-          crouchingHit: "+6"
-        stats:
-          C/SC: "×・×"
-        noteGroups:
-        - id: item_cf8aa5b927
-          displayTitle: 補足
-          entries:
-          - |-
-            ・ヒット時に立ヒットならEX昇龍拳に、しゃがみヒットなら各昇龍拳や真空波動拳に繋ぐ事が可能
-            ・立、しゃがみヒットどちらの状態でも真昇龍拳に繋ぐ事が可能
-            ・ノーキャンセルの猶予時間はEX昇龍拳が25フレーム、真昇龍拳が25～27フレーム
-        media:
-          kind: motion_player
-          displayLabel: モーション
-          skillName: Towards + Fierce
-          characterCode: '02'
-          skillCode: '029'
   - id: item_b46a9fbcad
     displayName: ターゲットコンボ
     children:

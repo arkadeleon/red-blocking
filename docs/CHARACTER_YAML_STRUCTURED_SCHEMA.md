@@ -42,6 +42,12 @@ moveGroups:
   - id: ground_normals
     displayTitle: "【地上通常技】"
     entries: []
+  - id: normal_throws
+    displayTitle: "【通常投げ】"
+    entries: []
+  - id: lever_input_moves
+    displayTitle: "【レバー入れ技】"
+    entries: []
   - id: command_normals
     displayTitle: "【特殊入力技】"
     entries: []
@@ -55,12 +61,14 @@ moveGroups:
 
 ## Fixed Group IDs
 
-`moveGroups` 的数量固定为 5，顺序也固定为下表：
+`moveGroups` 的数量固定为 7，顺序也固定为下表：
 
 | id | displayTitle |
 | --- | --- |
 | `air_normals` | `【空中通常技】` |
 | `ground_normals` | `【地上通常技】` |
+| `normal_throws` | `【通常投げ】` |
+| `lever_input_moves` | `【レバー入れ技】` |
 | `command_normals` | `【特殊入力技】` |
 | `special_moves` | `【必殺技】` |
 | `super_arts` | `【スーパーアーツ】` |
@@ -68,7 +76,7 @@ moveGroups:
 约束：
 
 - `introduction` 不进入 `moveGroups`
-- 根层只能出现这 5 个 group id
+- 根层只能出现这 7 个 group id
 - 更深层如果再次出现 `【空中通常技】` 这类标题，不提升为 `MoveGroup`，而是普通 `MoveEntry`
 
 ## Canonical Runtime Targets

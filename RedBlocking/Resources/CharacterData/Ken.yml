@@ -975,6 +975,178 @@ moveGroups:
         skillName: Back + Throw
         characterCode: '11'
         skillCode: '033'
+- id: lever_input_moves
+  displayTitle: "【レバー入れ技】"
+  entries:
+  - id: item_39ff022603
+    displayName: 踏み込み前蹴り
+    detail:
+      displayName: 踏み込み前蹴り
+      command: 6+中K
+      guard: 両方
+      blocking: "→"
+      startup: '16'
+      active: '4'
+      recovery: '15'
+      damage: '80'
+      stun: '7'
+      stunReduction: '3'
+      meterGain:
+        whiff: '3'
+        guard: '6'
+        hit: '14'
+        bl: '4'
+      frameAdvantage:
+        guard: "-4"
+        standingHit: "-1"
+        crouchingHit: '0'
+      stats:
+        C/SC: "×"
+      noteGroups:
+      - id: item_cf8aa5b927
+        displayTitle: 補足
+        entries:
+        - 前進しながら攻撃するためリーチは長いが、発生が遅く、判定もそこまで強くない
+      media:
+        kind: motion_player
+        displayLabel: モーション
+        skillName: Towards + Forward
+        characterCode: '11'
+        skillCode: '029'
+  - id: item_8da50e460b
+    displayName: 稲妻かかと割り
+    detail:
+      displayName: 稲妻かかと割り
+      command: 4+中K
+      guard: 立・立/立・立
+      blocking: "→・→/→・→"
+      startup: '18'
+      active: 2・2
+      recovery: '10'
+      damage: 140(60+80)
+      stun: 14(7+7)
+      stunReduction: 2・1
+      meterGain:
+        whiff: '2'
+        guard: 3(2+1)
+        hit: 9(7+2)
+        bl: 8(4+4)
+      frameAdvantage:
+        guard: "+1"
+        standingHit: "+2"
+        crouchingHit: "+3"
+      stats:
+        C/SC: "×・×/×・×"
+      noteGroups:
+      - id: item_cf8aa5b927
+        displayTitle: 補足
+        entries:
+        - |-
+          ・一部のキャラのしゃがみには1ヒットしかしない
+          ・しゃがみヒット時、ノーキャンセルでSA3に繋ぐ事が可能。その場合、キャンセル猶予時間は１段目が21フレーム、段目が30フレーム
+      media:
+        kind: motion_player
+        displayLabel: モーション
+        skillName: Back + Forward
+        characterCode: '11'
+        skillCode: '030'
+  - id: item_8da50e460b_2
+    displayName: 稲妻かかと割り
+    detail:
+      displayName: 稲妻かかと割り
+      command: 中K押しっぱなし
+      guard: 立・立
+      blocking: "→・→"
+      startup: '25'
+      active: 2・2
+      recovery: '10'
+      damage: 140(60+80)
+      stun: 14(7+7)
+      stunReduction: 2・1
+      meterGain:
+        whiff: '2'
+        guard: 3(2+1)
+        hit: 9(7+2)
+        bl: 8(4+4)
+      frameAdvantage:
+        guard: "+1"
+        standingHit: "+2"
+        crouchingHit: "+3"
+      stats:
+        C/SC: "×・×/×・×"
+      noteGroups:
+      - id: item_cf8aa5b927
+        displayTitle: 補足
+        entries:
+        - "・一部のキャラのしゃがみには1ヒットしかしない \n・しゃがみヒット時、ノーキャンセルでSA3に繋ぐ事が可能。その場合、キャンセル猶予時間は１段目が21フレーム、段目が30フレーム"
+      media:
+        kind: motion_player
+        displayLabel: モーション
+        skillName: Hold Forward
+        characterCode: '11'
+        skillCode: '018'
+  - id: item_f18fe65aa8
+    displayName: 紫電かかと落とし
+    detail:
+      displayName: 紫電かかと落とし
+      command: 6+大K
+      guard: 立
+      blocking: "→"
+      startup: '30'
+      active: '5'
+      recovery: '14'
+      damage: 120(80)
+      stun: 11(9)
+      stunReduction: '2'
+      meterGain:
+        whiff: 3(0)
+        guard: 6(1)
+        hit: 14(2)
+        bl: '4'
+      frameAdvantage:
+        guard: "-1"
+        standingHit: "+1"
+        crouchingHit: "+3"
+      stats:
+        C/SC: "×"
+      noteGroups:
+      - id: item_cf8aa5b927
+        displayTitle: 補足
+        entries:
+        - |-
+          ・カッコ内の数値は技の後半部分がヒットした時のもの
+          ・14フレーム目までボタン押しっぱなしで、下のフェイントに移行
+          ・しゃがみヒット時、ノーキャンセルでSA3に繋ぐ事が可能。その場合、キャンセル猶予時間は28フレーム
+      media:
+        kind: motion_player
+        displayLabel: モーション
+        skillName: Towards + Roundhouse
+        characterCode: '11'
+        skillCode: '031'
+  - id: item_dec47b0317
+    displayName: 紫電かかと落としフェイント
+    detail:
+      displayName: 紫電かかと落としフェイント
+      command: 6+大K(大K押しっぱなし)
+      guard: "―"
+      blocking: "―"
+      startup: '30'
+      active: '5'
+      recovery: '18'
+      damage: "―"
+      stun: "―"
+      stunReduction: "―"
+      meterGain:
+        whiff: "―"
+        guard: "―"
+        hit: "―"
+        bl: "―"
+      frameAdvantage:
+        guard: "―"
+        standingHit: "―"
+        crouchingHit: "―"
+      stats:
+        C/SC: "×"
 - id: command_normals
   displayTitle: "【特殊入力技】"
   entries:
@@ -1049,178 +1221,6 @@ moveGroups:
         skillName: Taunt
         characterCode: '11'
         skillCode: '036'
-  - id: item_02dcefb22e
-    displayName: レバー入れ技
-    children:
-    - id: item_39ff022603
-      displayName: 踏み込み前蹴り
-      detail:
-        displayName: 踏み込み前蹴り
-        command: 6+中K
-        guard: 両方
-        blocking: "→"
-        startup: '16'
-        active: '4'
-        recovery: '15'
-        damage: '80'
-        stun: '7'
-        stunReduction: '3'
-        meterGain:
-          whiff: '3'
-          guard: '6'
-          hit: '14'
-          bl: '4'
-        frameAdvantage:
-          guard: "-4"
-          standingHit: "-1"
-          crouchingHit: '0'
-        stats:
-          C/SC: "×"
-        noteGroups:
-        - id: item_cf8aa5b927
-          displayTitle: 補足
-          entries:
-          - 前進しながら攻撃するためリーチは長いが、発生が遅く、判定もそこまで強くない
-        media:
-          kind: motion_player
-          displayLabel: モーション
-          skillName: Towards + Forward
-          characterCode: '11'
-          skillCode: '029'
-    - id: item_8da50e460b
-      displayName: 稲妻かかと割り
-      detail:
-        displayName: 稲妻かかと割り
-        command: 4+中K
-        guard: 立・立/立・立
-        blocking: "→・→/→・→"
-        startup: '18'
-        active: 2・2
-        recovery: '10'
-        damage: 140(60+80)
-        stun: 14(7+7)
-        stunReduction: 2・1
-        meterGain:
-          whiff: '2'
-          guard: 3(2+1)
-          hit: 9(7+2)
-          bl: 8(4+4)
-        frameAdvantage:
-          guard: "+1"
-          standingHit: "+2"
-          crouchingHit: "+3"
-        stats:
-          C/SC: "×・×/×・×"
-        noteGroups:
-        - id: item_cf8aa5b927
-          displayTitle: 補足
-          entries:
-          - |-
-            ・一部のキャラのしゃがみには1ヒットしかしない
-            ・しゃがみヒット時、ノーキャンセルでSA3に繋ぐ事が可能。その場合、キャンセル猶予時間は１段目が21フレーム、段目が30フレーム
-        media:
-          kind: motion_player
-          displayLabel: モーション
-          skillName: Back + Forward
-          characterCode: '11'
-          skillCode: '030'
-    - id: item_8da50e460b_2
-      displayName: 稲妻かかと割り
-      detail:
-        displayName: 稲妻かかと割り
-        command: 中K押しっぱなし
-        guard: 立・立
-        blocking: "→・→"
-        startup: '25'
-        active: 2・2
-        recovery: '10'
-        damage: 140(60+80)
-        stun: 14(7+7)
-        stunReduction: 2・1
-        meterGain:
-          whiff: '2'
-          guard: 3(2+1)
-          hit: 9(7+2)
-          bl: 8(4+4)
-        frameAdvantage:
-          guard: "+1"
-          standingHit: "+2"
-          crouchingHit: "+3"
-        stats:
-          C/SC: "×・×/×・×"
-        noteGroups:
-        - id: item_cf8aa5b927
-          displayTitle: 補足
-          entries:
-          - "・一部のキャラのしゃがみには1ヒットしかしない \n・しゃがみヒット時、ノーキャンセルでSA3に繋ぐ事が可能。その場合、キャンセル猶予時間は１段目が21フレーム、段目が30フレーム"
-        media:
-          kind: motion_player
-          displayLabel: モーション
-          skillName: Hold Forward
-          characterCode: '11'
-          skillCode: '018'
-    - id: item_f18fe65aa8
-      displayName: 紫電かかと落とし
-      detail:
-        displayName: 紫電かかと落とし
-        command: 6+大K
-        guard: 立
-        blocking: "→"
-        startup: '30'
-        active: '5'
-        recovery: '14'
-        damage: 120(80)
-        stun: 11(9)
-        stunReduction: '2'
-        meterGain:
-          whiff: 3(0)
-          guard: 6(1)
-          hit: 14(2)
-          bl: '4'
-        frameAdvantage:
-          guard: "-1"
-          standingHit: "+1"
-          crouchingHit: "+3"
-        stats:
-          C/SC: "×"
-        noteGroups:
-        - id: item_cf8aa5b927
-          displayTitle: 補足
-          entries:
-          - |-
-            ・カッコ内の数値は技の後半部分がヒットした時のもの
-            ・14フレーム目までボタン押しっぱなしで、下のフェイントに移行
-            ・しゃがみヒット時、ノーキャンセルでSA3に繋ぐ事が可能。その場合、キャンセル猶予時間は28フレーム
-        media:
-          kind: motion_player
-          displayLabel: モーション
-          skillName: Towards + Roundhouse
-          characterCode: '11'
-          skillCode: '031'
-    - id: item_dec47b0317
-      displayName: 紫電かかと落としフェイント
-      detail:
-        displayName: 紫電かかと落としフェイント
-        command: 6+大K(大K押しっぱなし)
-        guard: "―"
-        blocking: "―"
-        startup: '30'
-        active: '5'
-        recovery: '18'
-        damage: "―"
-        stun: "―"
-        stunReduction: "―"
-        meterGain:
-          whiff: "―"
-          guard: "―"
-          hit: "―"
-          bl: "―"
-        frameAdvantage:
-          guard: "―"
-          standingHit: "―"
-          crouchingHit: "―"
-        stats:
-          C/SC: "×"
   - id: item_b46a9fbcad
     displayName: ターゲットコンボ
     children:

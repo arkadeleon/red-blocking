@@ -769,6 +769,154 @@ moveGroups:
         skillName: Throw
         characterCode: '08'
         skillCode: '023'
+- id: lever_input_moves
+  displayTitle: "【レバー入れ技】"
+  entries:
+  - id: item_65901fe62e
+    displayName: ハンドスタンドキック
+    detail:
+      displayName: ハンドスタンドキック
+      command: 6+中P
+      guard: 立
+      blocking: "→"
+      startup: '15'
+      active: '4'
+      recovery: '18'
+      damage: '100'
+      stun: '13'
+      stunReduction: '3'
+      meterGain:
+        whiff: '2'
+        guard: '4'
+        hit: '8'
+        bl: '4'
+      frameAdvantage:
+        guard: "-2"
+        standingHit: '0'
+        crouchingHit: "+2"
+      stats:
+        C/SC: "×"
+      noteGroups:
+      - id: item_cf8aa5b927
+        displayTitle: 補足
+        entries:
+        - 6中Kより発生が遅いが、不利フレームが短い
+      media:
+        kind: motion_player
+        displayLabel: モーション
+        skillName: Towards + Strong
+        characterCode: '08'
+        skillCode: '019'
+  - id: item_402ec143ca
+    displayName: ハンドスタンドウィップ
+    detail:
+      displayName: ハンドスタンドウィップ
+      command: 6+中K
+      guard: 立
+      blocking: "→"
+      startup: '11'
+      active: '8'
+      recovery: '16'
+      damage: '80'
+      stun: '7'
+      stunReduction: '1'
+      meterGain:
+        whiff: '2'
+        guard: '4'
+        hit: '8'
+        bl: '4'
+      frameAdvantage:
+        guard: "-6"
+        standingHit: "-4"
+        crouchingHit: "-2"
+      stats:
+        C/SC: "×"
+      noteGroups:
+      - id: item_cf8aa5b927
+        displayTitle: 補足
+        entries:
+        - |-
+          ・6中Pより発生が早く、不利フレーム長い
+          ・移動投げに使用
+      media:
+        kind: motion_player
+        displayLabel: モーション
+        skillName: Towards + Forward
+        characterCode: '08'
+        skillCode: '021'
+  - id: item_0778763289
+    displayName: スライディング
+    detail:
+      displayName: スライディング
+      command: 3+大K
+      guard: 屈
+      blocking: "↓"
+      startup: '12'
+      active: '6'
+      recovery: '24'
+      damage: '100'
+      stun: '3'
+      stunReduction: '3'
+      meterGain:
+        whiff: '3'
+        guard: '6'
+        hit: '14'
+        bl: '4'
+      frameAdvantage:
+        guard: "-14"
+        standingHit: ダウン
+        crouchingHit: ダウン
+      stats:
+        C/SC: "×"
+      noteGroups:
+      - id: item_cf8aa5b927
+        displayTitle: 補足
+        entries:
+        - 終わり際をガードさせた場合のH&G硬直は「-9/ダウン/ダウン」
+      media:
+        kind: motion_player
+        displayLabel: モーション
+        skillName: Down-Towards + Roundhouse
+        characterCode: '08'
+        skillCode: '020'
+  - id: item_e79478f999
+    displayName: ラウンドアーチ
+    detail:
+      displayName: ラウンドアーチ
+      command: 4+大K
+      guard: 両方
+      blocking: "→"
+      startup: '12'
+      active: '6'
+      recovery: '12'
+      damage: '140'
+      stun: '17'
+      stunReduction: '3'
+      meterGain:
+        whiff: '3'
+        guard: '6'
+        hit: '14'
+        bl: '4'
+      frameAdvantage:
+        guard: "+4"
+        standingHit: "+6"
+        crouchingHit: "+8"
+      stats:
+        C/SC: "×"
+      noteGroups:
+      - id: item_cf8aa5b927
+        displayTitle: 補足
+        entries:
+        - |-
+          ・コマンド完成後、4フレーム目から投げられ判定が空中に移行。ただし打撃に対しては地上食らいになる
+          ・コマンド完成後、6～24フレーム目まで下段無敵
+          ・足払い、投げをスカしながら攻撃可能
+      media:
+        kind: motion_player
+        displayLabel: モーション
+        skillName: Back + Roundhouse
+        characterCode: '08'
+        skillCode: '022'
 - id: command_normals
   displayTitle: "【特殊入力技】"
   entries:
@@ -842,154 +990,6 @@ moveGroups:
         skillName: Taunt
         characterCode: '08'
         skillCode: '025'
-  - id: item_02dcefb22e
-    displayName: レバー入れ技
-    children:
-    - id: item_65901fe62e
-      displayName: ハンドスタンドキック
-      detail:
-        displayName: ハンドスタンドキック
-        command: 6+中P
-        guard: 立
-        blocking: "→"
-        startup: '15'
-        active: '4'
-        recovery: '18'
-        damage: '100'
-        stun: '13'
-        stunReduction: '3'
-        meterGain:
-          whiff: '2'
-          guard: '4'
-          hit: '8'
-          bl: '4'
-        frameAdvantage:
-          guard: "-2"
-          standingHit: '0'
-          crouchingHit: "+2"
-        stats:
-          C/SC: "×"
-        noteGroups:
-        - id: item_cf8aa5b927
-          displayTitle: 補足
-          entries:
-          - 6中Kより発生が遅いが、不利フレームが短い
-        media:
-          kind: motion_player
-          displayLabel: モーション
-          skillName: Towards + Strong
-          characterCode: '08'
-          skillCode: '019'
-    - id: item_402ec143ca
-      displayName: ハンドスタンドウィップ
-      detail:
-        displayName: ハンドスタンドウィップ
-        command: 6+中K
-        guard: 立
-        blocking: "→"
-        startup: '11'
-        active: '8'
-        recovery: '16'
-        damage: '80'
-        stun: '7'
-        stunReduction: '1'
-        meterGain:
-          whiff: '2'
-          guard: '4'
-          hit: '8'
-          bl: '4'
-        frameAdvantage:
-          guard: "-6"
-          standingHit: "-4"
-          crouchingHit: "-2"
-        stats:
-          C/SC: "×"
-        noteGroups:
-        - id: item_cf8aa5b927
-          displayTitle: 補足
-          entries:
-          - |-
-            ・6中Pより発生が早く、不利フレーム長い
-            ・移動投げに使用
-        media:
-          kind: motion_player
-          displayLabel: モーション
-          skillName: Towards + Forward
-          characterCode: '08'
-          skillCode: '021'
-    - id: item_0778763289
-      displayName: スライディング
-      detail:
-        displayName: スライディング
-        command: 3+大K
-        guard: 屈
-        blocking: "↓"
-        startup: '12'
-        active: '6'
-        recovery: '24'
-        damage: '100'
-        stun: '3'
-        stunReduction: '3'
-        meterGain:
-          whiff: '3'
-          guard: '6'
-          hit: '14'
-          bl: '4'
-        frameAdvantage:
-          guard: "-14"
-          standingHit: ダウン
-          crouchingHit: ダウン
-        stats:
-          C/SC: "×"
-        noteGroups:
-        - id: item_cf8aa5b927
-          displayTitle: 補足
-          entries:
-          - 終わり際をガードさせた場合のH&G硬直は「-9/ダウン/ダウン」
-        media:
-          kind: motion_player
-          displayLabel: モーション
-          skillName: Down-Towards + Roundhouse
-          characterCode: '08'
-          skillCode: '020'
-    - id: item_e79478f999
-      displayName: ラウンドアーチ
-      detail:
-        displayName: ラウンドアーチ
-        command: 4+大K
-        guard: 両方
-        blocking: "→"
-        startup: '12'
-        active: '6'
-        recovery: '12'
-        damage: '140'
-        stun: '17'
-        stunReduction: '3'
-        meterGain:
-          whiff: '3'
-          guard: '6'
-          hit: '14'
-          bl: '4'
-        frameAdvantage:
-          guard: "+4"
-          standingHit: "+6"
-          crouchingHit: "+8"
-        stats:
-          C/SC: "×"
-        noteGroups:
-        - id: item_cf8aa5b927
-          displayTitle: 補足
-          entries:
-          - |-
-            ・コマンド完成後、4フレーム目から投げられ判定が空中に移行。ただし打撃に対しては地上食らいになる
-            ・コマンド完成後、6～24フレーム目まで下段無敵
-            ・足払い、投げをスカしながら攻撃可能
-        media:
-          kind: motion_player
-          displayLabel: モーション
-          skillName: Back + Roundhouse
-          characterCode: '08'
-          skillCode: '022'
   - id: item_b46a9fbcad
     displayName: ターゲットコンボ
     children:

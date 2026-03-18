@@ -1029,6 +1029,46 @@ moveGroups:
         skillName: Back & Towards Throw
         characterCode: '17'
         skillCode: '030'
+- id: lever_input_moves
+  displayTitle: "【レバー入れ技】"
+  entries:
+  - id: item_4b5e021881
+    displayName: 踏み込み正拳三連突き 「山背」(やませ)
+    detail:
+      displayName: 踏み込み正拳三連突き 「山背」(やませ)
+      command: 6大P中に大P
+      guard: 両方・両方・両方
+      blocking: "→・→・→"
+      startup: '16'
+      active: 4・15
+      recovery: '13'
+      damage: 190(150+20+20)
+      stun: 19(13+3+3)
+      stunReduction: 15・15・15
+      meterGain:
+        whiff: '3'
+        guard: 10(6+2+2)
+        hit: 26(14+6+6)
+        bl: 12(4×3)
+      frameAdvantage:
+        guard: "-4"
+        standingHit: "-3"
+        crouchingHit: "-2"
+      stats:
+        C/SC: "×・×・×"
+      noteGroups:
+      - id: item_cf8aa5b927
+        displayTitle: 補足
+        entries:
+        - |-
+          ・ダメージ、スタン値が高く、当たればリターンは大きい
+          ・ガード後は間合いが離れず不利な状況になるので乱用禁物。ケンの迅雷脚や春麗の鳳翼扇が反確となる
+      media:
+        kind: motion_player
+        displayLabel: モーション
+        skillName: Towards Fierce (complete)
+        characterCode: '17'
+        skillCode: '007'
 - id: command_normals
   displayTitle: "【特殊入力技】"
   entries:
@@ -1160,46 +1200,6 @@ moveGroups:
           skillName: Taunt
           characterCode: '17'
           skillCode: '032'
-  - id: item_02dcefb22e
-    displayName: レバー入れ技
-    children:
-    - id: item_4b5e021881
-      displayName: 踏み込み正拳三連突き 「山背」(やませ)
-      detail:
-        displayName: 踏み込み正拳三連突き 「山背」(やませ)
-        command: 6大P中に大P
-        guard: 両方・両方・両方
-        blocking: "→・→・→"
-        startup: '16'
-        active: 4・15
-        recovery: '13'
-        damage: 190(150+20+20)
-        stun: 19(13+3+3)
-        stunReduction: 15・15・15
-        meterGain:
-          whiff: '3'
-          guard: 10(6+2+2)
-          hit: 26(14+6+6)
-          bl: 12(4×3)
-        frameAdvantage:
-          guard: "-4"
-          standingHit: "-3"
-          crouchingHit: "-2"
-        stats:
-          C/SC: "×・×・×"
-        noteGroups:
-        - id: item_cf8aa5b927
-          displayTitle: 補足
-          entries:
-          - |-
-            ・ダメージ、スタン値が高く、当たればリターンは大きい
-            ・ガード後は間合いが離れず不利な状況になるので乱用禁物。ケンの迅雷脚や春麗の鳳翼扇が反確となる
-        media:
-          kind: motion_player
-          displayLabel: モーション
-          skillName: Towards Fierce (complete)
-          characterCode: '17'
-          skillCode: '007'
   - id: item_b46a9fbcad
     displayName: ターゲットコンボ
     children:

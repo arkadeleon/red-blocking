@@ -58,7 +58,7 @@ struct MoveBrowserProjectorTests {
     func moveGroupsFollowIntroductionAsSections() throws {
         let page = try loadPage(yaml: Fixtures.profileWithOneAirEntry)
         // sections[0] = introduction, sections[1] = air_normals, sections[2..6] = remaining groups
-        #expect(page.sections.count == 7) // 1 intro + 6 groups
+        #expect(page.sections.count == 8) // 1 intro + 7 groups
         let airSection = page.sections[1]
         #expect(airSection.title == "【空中通常技】")
         #expect(airSection.rows.count == 1)
@@ -202,6 +202,9 @@ private enum Fixtures {
       - id: normal_throws
         displayTitle: "【通常投げ】"
         entries: []
+      - id: lever_input_moves
+        displayTitle: "【レバー入れ技】"
+        entries: []
       - id: command_normals
         displayTitle: "【コマンド通常技】"
         entries: []
@@ -238,6 +241,9 @@ private enum Fixtures {
       - id: normal_throws
         displayTitle: "Throws"
         entries: []
+      - id: lever_input_moves
+        displayTitle: "【レバー入れ技】"
+        entries: []
       - id: command_normals
         displayTitle: "Command"
         entries: []
@@ -273,6 +279,9 @@ private enum Fixtures {
       - id: normal_throws
         displayTitle: "Throws"
         entries: []
+      - id: lever_input_moves
+        displayTitle: "【レバー入れ技】"
+        entries: []
       - id: command_normals
         displayTitle: "Command"
         entries: []
@@ -301,6 +310,9 @@ private enum Fixtures {
         entries: []
       - id: normal_throws
         displayTitle: "Throws"
+        entries: []
+      - id: lever_input_moves
+        displayTitle: "【レバー入れ技】"
         entries: []
       - id: command_normals
         displayTitle: "Command"
@@ -341,6 +353,9 @@ private enum Fixtures {
       - id: normal_throws
         displayTitle: "Throws"
         entries: []
+      - id: lever_input_moves
+        displayTitle: "【レバー入れ技】"
+        entries: []
       - id: command_normals
         displayTitle: "Command"
         entries: []
@@ -378,6 +393,9 @@ private enum Fixtures {
         entries: []
       - id: normal_throws
         displayTitle: "Throws"
+        entries: []
+      - id: lever_input_moves
+        displayTitle: "【レバー入れ技】"
         entries: []
       - id: command_normals
         displayTitle: "Command"
@@ -432,6 +450,9 @@ private enum Fixtures {
       - id: normal_throws
         displayTitle: "Throws"
         entries: []
+      - id: lever_input_moves
+        displayTitle: "【レバー入れ技】"
+        entries: []
       - id: command_normals
         displayTitle: "Command"
         entries: []
@@ -460,6 +481,9 @@ private enum Fixtures {
         entries: []
       - id: normal_throws
         displayTitle: "Throws"
+        entries: []
+      - id: lever_input_moves
+        displayTitle: "【レバー入れ技】"
         entries: []
       - id: command_normals
         displayTitle: "Command"
@@ -495,6 +519,9 @@ private enum Fixtures {
         entries: []
       - id: normal_throws
         displayTitle: "Throws"
+        entries: []
+      - id: lever_input_moves
+        displayTitle: "【レバー入れ技】"
         entries: []
       - id: command_normals
         displayTitle: "Command"

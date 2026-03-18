@@ -822,6 +822,189 @@ moveGroups:
         skillName: Throw
         characterCode: '04'
         skillCode: '025'
+- id: lever_input_moves
+  displayTitle: "【レバー入れ技】"
+  entries:
+  - id: item_f69a9f4176
+    displayName: スリッピングジャブ
+    detail:
+      displayName: スリッピングジャブ
+      command: 6+小P
+      guard: 両方
+      blocking: 両方
+      startup: '4'
+      active: '2'
+      recovery: '8'
+      damage: '25'
+      stun: '3'
+      stunReduction: '15'
+      meterGain:
+        whiff: '0'
+        guard: '1'
+        hit: '2'
+        bl: '4'
+      frameAdvantage:
+        guard: "+1"
+        standingHit: "+1"
+        crouchingHit: "+1"
+      stats:
+        C/SC: "☆/○"
+      noteGroups:
+      - id: item_cf8aa5b927
+        displayTitle: 補足
+        entries:
+        - "・TCで中Pに繋ぐことが可能 \n・スタンガンヘッドバットを落とすときに便利"
+      media:
+        kind: motion_player
+        displayLabel: モーション
+        skillName: Towards + Jab
+        characterCode: '04'
+        skillCode: '023'
+  - id: item_0cfd6c2a45
+    displayName: ストマックブロー
+    detail:
+      displayName: ストマックブロー
+      command: 6+中P
+      guard: 両方
+      blocking: "→"
+      startup: '8'
+      active: '5'
+      recovery: '10'
+      damage: '80'
+      stun: '5'
+      stunReduction: '3'
+      meterGain:
+        whiff: '2'
+        guard: '4'
+        hit: '8'
+        bl: '4'
+      frameAdvantage:
+        guard: "-1"
+        standingHit: '0'
+        crouchingHit: "+1"
+      stats:
+        C/SC: "×"
+      noteGroups:
+      - id: item_cf8aa5b927
+        displayTitle: 補足
+        entries:
+        - |-
+          ・発生がやや遅いが判定はなかなか強い
+          ・牽制しつつ前進することができるため、連係の繋ぎなどに使用
+      media:
+        kind: motion_player
+        displayLabel: モーション
+        skillName: Towards + Strong
+        characterCode: '04'
+        skillCode: '019'
+  - id: item_ecce61f170
+    displayName: レバーブロー
+    detail:
+      displayName: レバーブロー
+      command: 6+中K
+      guard: 両方
+      blocking: "→"
+      startup: '5'
+      active: '2'
+      recovery: '9'
+      damage: '100'
+      stun: '9'
+      stunReduction: '3'
+      meterGain:
+        whiff: '2'
+        guard: '4'
+        hit: '8'
+        bl: '4'
+      frameAdvantage:
+        guard: "+2"
+        standingHit: "+3"
+        crouchingHit: "+3"
+      stats:
+        C/SC: "○"
+      noteGroups:
+      - id: item_cf8aa5b927
+        displayTitle: 補足
+        entries:
+        - "・TCで中Kに繋ぐことが可能 \n・ガードされてもダッドリー有利で距離も離れないため、攻めの継続が可能\n・空中コンボでも使用頻度が高い\n・ヒット時、ノーキャンセルでSA1か3に繋ぐことが可能。キャンセル猶予時間はSA1が20フレーム、SA3が20～21フレーム"
+      media:
+        kind: motion_player
+        displayLabel: モーション
+        skillName: Towards + Forward
+        characterCode: '04'
+        skillCode: '021'
+  - id: item_3d23cd265f
+    displayName: ステップストレート
+    detail:
+      displayName: ステップストレート
+      command: 6+大P
+      guard: 両方
+      blocking: "→"
+      startup: '15'
+      active: '5'
+      recovery: '16'
+      damage: '140'
+      stun: '13'
+      stunReduction: '7'
+      meterGain:
+        whiff: '3'
+        guard: '6'
+        hit: '14'
+        bl: '4'
+      frameAdvantage:
+        guard: "-3"
+        standingHit: "-1"
+        crouchingHit: "+1"
+      stats:
+        C/SC: "×/○"
+      noteGroups:
+      - id: item_cf8aa5b927
+        displayTitle: 補足
+        entries:
+        - |-
+          ・遠距離戦での牽制に使用
+          ・立大Pと違ってしゃがんでいる相手にも当たりやすい
+          ・キャンセル猶予時間は12フレーム
+      media:
+        kind: motion_player
+        displayLabel: モーション
+        skillName: Towards + Fierce
+        characterCode: '04'
+        skillCode: '022'
+  - id: item_14fbe000be
+    displayName: ダートショット
+    detail:
+      displayName: ダートショット
+      command: 6+大K
+      guard: 立
+      blocking: "→"
+      startup: '12'
+      active: '4'
+      recovery: '16'
+      damage: '110'
+      stun: '7'
+      stunReduction: '3'
+      meterGain:
+        whiff: '3'
+        guard: '6'
+        hit: '14'
+        bl: '4'
+      frameAdvantage:
+        guard: "-2"
+        standingHit: '0'
+        crouchingHit: "+2"
+      stats:
+        C/SC: "×"
+      noteGroups:
+      - id: item_cf8aa5b927
+        displayTitle: 補足
+        entries:
+        - "・TCで立中Kに繋ぐことが可能 \n・遠距離からの足払い潰しなどにも使用\n・TCまで撃ち切ればダートをBLされても、相手の反撃が遅れた場合、潰してくれる\n・しゃがみヒット時、ノーキャンセルでSA1か3に繋ぐことが可能。その場合のキャンセル猶予時間は27フレーム"
+      media:
+        kind: motion_player
+        displayLabel: モーション
+        skillName: Towards + Roundhouse
+        characterCode: '04'
+        skillCode: '020'
 - id: command_normals
   displayTitle: "【特殊入力技】"
   entries:
@@ -897,189 +1080,6 @@ moveGroups:
         skillName: Taunt
         characterCode: '04'
         skillCode: '027'
-  - id: item_02dcefb22e
-    displayName: レバー入れ技
-    children:
-    - id: item_f69a9f4176
-      displayName: スリッピングジャブ
-      detail:
-        displayName: スリッピングジャブ
-        command: 6+小P
-        guard: 両方
-        blocking: 両方
-        startup: '4'
-        active: '2'
-        recovery: '8'
-        damage: '25'
-        stun: '3'
-        stunReduction: '15'
-        meterGain:
-          whiff: '0'
-          guard: '1'
-          hit: '2'
-          bl: '4'
-        frameAdvantage:
-          guard: "+1"
-          standingHit: "+1"
-          crouchingHit: "+1"
-        stats:
-          C/SC: "☆/○"
-        noteGroups:
-        - id: item_cf8aa5b927
-          displayTitle: 補足
-          entries:
-          - "・TCで中Pに繋ぐことが可能 \n・スタンガンヘッドバットを落とすときに便利"
-        media:
-          kind: motion_player
-          displayLabel: モーション
-          skillName: Towards + Jab
-          characterCode: '04'
-          skillCode: '023'
-    - id: item_0cfd6c2a45
-      displayName: ストマックブロー
-      detail:
-        displayName: ストマックブロー
-        command: 6+中P
-        guard: 両方
-        blocking: "→"
-        startup: '8'
-        active: '5'
-        recovery: '10'
-        damage: '80'
-        stun: '5'
-        stunReduction: '3'
-        meterGain:
-          whiff: '2'
-          guard: '4'
-          hit: '8'
-          bl: '4'
-        frameAdvantage:
-          guard: "-1"
-          standingHit: '0'
-          crouchingHit: "+1"
-        stats:
-          C/SC: "×"
-        noteGroups:
-        - id: item_cf8aa5b927
-          displayTitle: 補足
-          entries:
-          - |-
-            ・発生がやや遅いが判定はなかなか強い
-            ・牽制しつつ前進することができるため、連係の繋ぎなどに使用
-        media:
-          kind: motion_player
-          displayLabel: モーション
-          skillName: Towards + Strong
-          characterCode: '04'
-          skillCode: '019'
-    - id: item_ecce61f170
-      displayName: レバーブロー
-      detail:
-        displayName: レバーブロー
-        command: 6+中K
-        guard: 両方
-        blocking: "→"
-        startup: '5'
-        active: '2'
-        recovery: '9'
-        damage: '100'
-        stun: '9'
-        stunReduction: '3'
-        meterGain:
-          whiff: '2'
-          guard: '4'
-          hit: '8'
-          bl: '4'
-        frameAdvantage:
-          guard: "+2"
-          standingHit: "+3"
-          crouchingHit: "+3"
-        stats:
-          C/SC: "○"
-        noteGroups:
-        - id: item_cf8aa5b927
-          displayTitle: 補足
-          entries:
-          - "・TCで中Kに繋ぐことが可能 \n・ガードされてもダッドリー有利で距離も離れないため、攻めの継続が可能\n・空中コンボでも使用頻度が高い\n・ヒット時、ノーキャンセルでSA1か3に繋ぐことが可能。キャンセル猶予時間はSA1が20フレーム、SA3が20～21フレーム"
-        media:
-          kind: motion_player
-          displayLabel: モーション
-          skillName: Towards + Forward
-          characterCode: '04'
-          skillCode: '021'
-    - id: item_3d23cd265f
-      displayName: ステップストレート
-      detail:
-        displayName: ステップストレート
-        command: 6+大P
-        guard: 両方
-        blocking: "→"
-        startup: '15'
-        active: '5'
-        recovery: '16'
-        damage: '140'
-        stun: '13'
-        stunReduction: '7'
-        meterGain:
-          whiff: '3'
-          guard: '6'
-          hit: '14'
-          bl: '4'
-        frameAdvantage:
-          guard: "-3"
-          standingHit: "-1"
-          crouchingHit: "+1"
-        stats:
-          C/SC: "×/○"
-        noteGroups:
-        - id: item_cf8aa5b927
-          displayTitle: 補足
-          entries:
-          - |-
-            ・遠距離戦での牽制に使用
-            ・立大Pと違ってしゃがんでいる相手にも当たりやすい
-            ・キャンセル猶予時間は12フレーム
-        media:
-          kind: motion_player
-          displayLabel: モーション
-          skillName: Towards + Fierce
-          characterCode: '04'
-          skillCode: '022'
-    - id: item_14fbe000be
-      displayName: ダートショット
-      detail:
-        displayName: ダートショット
-        command: 6+大K
-        guard: 立
-        blocking: "→"
-        startup: '12'
-        active: '4'
-        recovery: '16'
-        damage: '110'
-        stun: '7'
-        stunReduction: '3'
-        meterGain:
-          whiff: '3'
-          guard: '6'
-          hit: '14'
-          bl: '4'
-        frameAdvantage:
-          guard: "-2"
-          standingHit: '0'
-          crouchingHit: "+2"
-        stats:
-          C/SC: "×"
-        noteGroups:
-        - id: item_cf8aa5b927
-          displayTitle: 補足
-          entries:
-          - "・TCで立中Kに繋ぐことが可能 \n・遠距離からの足払い潰しなどにも使用\n・TCまで撃ち切ればダートをBLされても、相手の反撃が遅れた場合、潰してくれる\n・しゃがみヒット時、ノーキャンセルでSA1か3に繋ぐことが可能。その場合のキャンセル猶予時間は27フレーム"
-        media:
-          kind: motion_player
-          displayLabel: モーション
-          skillName: Towards + Roundhouse
-          characterCode: '04'
-          skillCode: '020'
   - id: item_b46a9fbcad
     displayName: ターゲットコンボ
     children:

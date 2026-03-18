@@ -903,6 +903,86 @@ moveGroups:
         skillName: Back + Throw
         characterCode: '12'
         skillCode: '031'
+- id: lever_input_moves
+  displayTitle: "【レバー入れ技】"
+  entries:
+  - id: item_9a84efa8cb
+    displayName: ショーンパチキ
+    detail:
+      displayName: ショーンパチキ
+      command: 6+大P
+      guard: 立・立
+      blocking: "→・→"
+      startup: '21'
+      active: 2・5
+      recovery: 22(25)
+      damage: 140(60+80)
+      stun: 14(7+7)
+      stunReduction: 3・3
+      meterGain:
+        whiff: '3'
+        guard: 5(4+1)
+        hit: 14(12+2)
+        bl: 8(4+4)
+      frameAdvantage:
+        guard: "-6"
+        standingHit: "-4"
+        crouchingHit: "-2"
+      stats:
+        C/SC: "×"
+      noteGroups:
+      - id: item_cf8aa5b927
+        displayTitle: 補足
+        entries:
+        - |-
+          ・硬直欄のカッコ内の数値は空振り時のもの
+          ・移動投げに使用
+      media:
+        kind: motion_player
+        displayLabel: モーション
+        skillName: Towards + Fierce
+        characterCode: '12'
+        skillCode: '028'
+  - id: item_0d206854dd
+    displayName: ローリングソバット
+    detail:
+      displayName: ローリングソバット
+      command: 6+大K
+      guard: 両方
+      blocking: "→"
+      startup: '15'
+      active: '5'
+      recovery: '18'
+      damage: 90(70)
+      stun: '9'
+      stunReduction: '3'
+      meterGain:
+        whiff: '2'
+        guard: '4'
+        hit: '8'
+        bl: '4'
+      frameAdvantage:
+        guard: "-5"
+        standingHit: ダウン
+        crouchingHit: ダウン
+      stats:
+        C/SC: "×"
+      noteGroups:
+      - id: item_cf8aa5b927
+        displayTitle: 補足
+        entries:
+        - |-
+          ・攻撃力欄のカッコ内の数値は技の後半部分のもの
+          ・コマンド完成後、6フレーム目から空中判定に移行
+          ・下段技を避ける事が可能。ただし、しゃがんだ相手(ヒューゴー以外)に当たらないため使いにくい
+          ・ヒット時、ダウン属性だが相手が空中で復帰する特殊な技
+          ・画面中央でヒット時、一部のキャラにSA1で追撃可能。また画面端ならSA2で追撃も可能。ただしどちらも空中BL可能
+      media:
+        kind: motion_player
+        displayLabel: モーション
+        skillName: Towards + Roundhouse
+        characterCode: '12'
+        skillCode: '029'
 - id: command_normals
   displayTitle: "【特殊入力技】"
   entries:
@@ -980,86 +1060,6 @@ moveGroups:
         skillName: Taunt
         characterCode: '12'
         skillCode: '033'
-  - id: item_02dcefb22e
-    displayName: レバー入れ技
-    children:
-    - id: item_9a84efa8cb
-      displayName: ショーンパチキ
-      detail:
-        displayName: ショーンパチキ
-        command: 6+大P
-        guard: 立・立
-        blocking: "→・→"
-        startup: '21'
-        active: 2・5
-        recovery: 22(25)
-        damage: 140(60+80)
-        stun: 14(7+7)
-        stunReduction: 3・3
-        meterGain:
-          whiff: '3'
-          guard: 5(4+1)
-          hit: 14(12+2)
-          bl: 8(4+4)
-        frameAdvantage:
-          guard: "-6"
-          standingHit: "-4"
-          crouchingHit: "-2"
-        stats:
-          C/SC: "×"
-        noteGroups:
-        - id: item_cf8aa5b927
-          displayTitle: 補足
-          entries:
-          - |-
-            ・硬直欄のカッコ内の数値は空振り時のもの
-            ・移動投げに使用
-        media:
-          kind: motion_player
-          displayLabel: モーション
-          skillName: Towards + Fierce
-          characterCode: '12'
-          skillCode: '028'
-    - id: item_0d206854dd
-      displayName: ローリングソバット
-      detail:
-        displayName: ローリングソバット
-        command: 6+大K
-        guard: 両方
-        blocking: "→"
-        startup: '15'
-        active: '5'
-        recovery: '18'
-        damage: 90(70)
-        stun: '9'
-        stunReduction: '3'
-        meterGain:
-          whiff: '2'
-          guard: '4'
-          hit: '8'
-          bl: '4'
-        frameAdvantage:
-          guard: "-5"
-          standingHit: ダウン
-          crouchingHit: ダウン
-        stats:
-          C/SC: "×"
-        noteGroups:
-        - id: item_cf8aa5b927
-          displayTitle: 補足
-          entries:
-          - |-
-            ・攻撃力欄のカッコ内の数値は技の後半部分のもの
-            ・コマンド完成後、6フレーム目から空中判定に移行
-            ・下段技を避ける事が可能。ただし、しゃがんだ相手(ヒューゴー以外)に当たらないため使いにくい
-            ・ヒット時、ダウン属性だが相手が空中で復帰する特殊な技
-            ・画面中央でヒット時、一部のキャラにSA1で追撃可能。また画面端ならSA2で追撃も可能。ただしどちらも空中BL可能
-        media:
-          kind: motion_player
-          displayLabel: モーション
-          skillName: Towards + Roundhouse
-          characterCode: '12'
-          skillCode: '029'
   - id: item_b46a9fbcad
     displayName: ターゲットコンボ
     children:

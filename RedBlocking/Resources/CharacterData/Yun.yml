@@ -1010,6 +1010,140 @@ moveGroups:
         skillName: Throw
         characterCode: '03'
         skillCode: '028'
+- id: lever_input_moves
+  displayTitle: "【レバー入れ技】"
+  entries:
+  - id: item_3ccc2bc446
+    displayName: 雷撃蹴(らいげきしゅう)
+    detail:
+      displayName: 雷撃蹴(らいげきしゅう)
+      command: 垂直 or 前方(ハイ)ジャンプ中、頂点付近で3+K
+      guard: 立
+      blocking: "→"
+      startup: |-
+        6(小、大)
+        8(中)
+      active: 着地まで
+      recovery: "―"
+      damage: '70'
+      stun: '7'
+      stunReduction: '15'
+      meterGain:
+        whiff: '2'
+        guard: '3'
+        hit: '7'
+        bl: '4'
+      frameAdvantage:
+        guard: "―"
+        standingHit: "―"
+        crouchingHit: "―"
+      stats:
+        C/SC: "×"
+      noteGroups:
+      - id: item_cf8aa5b927
+        displayTitle: 補足
+        entries:
+        - |-
+          ・押すボタンにより落下角度が変化
+          ・ヒット&ガード硬直時間差は当てる高さによって変化
+          ・基本的に「めくり」、「手前落ち」、「空かし」で使う。あまり深く当てると投げられてしまうので注意
+      - id: item_0ef41e28c0
+        displayTitle: 幻影陣中の性能
+        entries:
+        - 幻影中にも使えるがJ攻撃は飛び道具判定になるので過信はできない
+      media:
+        kind: motion_player
+        displayLabel: モーション
+        skillName: Dive Kicks
+        characterCode: '03'
+        skillCode: '026'
+  - id: item_846dc1061f
+    displayName: 旋風脚(せんぷうきゃく)
+    detail:
+      displayName: 旋風脚(せんぷうきゃく)
+      command: 6+中K
+      guard: 立
+      blocking: "→"
+      startup: '19'
+      active: '6'
+      recovery: 8(9)
+      damage: '80'
+      stun: '11'
+      stunReduction: '15'
+      meterGain:
+        whiff: '2'
+        guard: '3'
+        hit: '7'
+        bl: '4'
+      frameAdvantage:
+        guard: "-1"
+        standingHit: '0'
+        crouchingHit: "+1"
+      stats:
+        C/SC: "×"
+      noteGroups:
+      - id: item_cf8aa5b927
+        displayTitle: 補足
+        entries:
+        - |-
+          ・硬直欄のカッコ内の数値はしゃがみ状態で着地した時のもの
+          ・コマンド完成後、8フレーム目から空中判定に移行
+          ・攻めの継続や相手の足払いに対してあわせるように使うと効果的
+      - id: item_0ef41e28c0
+        displayTitle: 幻影陣中の性能
+        entries:
+        - |-
+          ・浮かせた後のコンボや上下の揺さぶりを掛けるときに使用
+          ・発生が早くなり持続は伸びるが、ガードされると4フレーム不利になるため、いろいろなSAで反撃される点に注意
+      media:
+        kind: motion_player
+        displayLabel: モーション
+        skillName: Towards + Forward
+        characterCode: '03'
+        skillCode: '024'
+  - id: item_753bc32daf
+    displayName: 打開(だかい)
+    detail:
+      displayName: 打開(だかい)
+      command: 6+大P
+      guard: 両方
+      blocking: "→"
+      startup: '17'
+      active: '5'
+      recovery: '19'
+      damage: '140'
+      stun: '17'
+      stunReduction: '1'
+      meterGain:
+        whiff: '3'
+        guard: '5'
+        hit: '13'
+        bl: '4'
+      frameAdvantage:
+        guard: "-7"
+        standingHit: ダウン
+        crouchingHit: ダウン
+      stats:
+        C/SC: "×"
+      noteGroups:
+      - id: item_cf8aa5b927
+        displayTitle: 補足
+        entries:
+        - |-
+          ・後ろ方向の手にも攻撃判定あり。相手のジャンプに対し、くぐるように出すとめくりBLになるため強い
+          ・ヒット時、相手は横に吹っ飛ぶので間合いを確保できる
+      - id: item_0ef41e28c0
+        displayTitle: 幻影陣中の性能
+        entries:
+        - |-
+          ・ヒット時に画面端に吹き飛ばすので、運びなどに使用
+          ・浮かせた相手に打開と旋風脚を交互に繋ぐだけでも、そこそこダメージを取る事ができる
+      media:
+        kind: motion_player
+        displayLabel: モーション
+        skillName: Towards + Fierce
+        characterCode: '03'
+        skillCode: '025'
 - id: command_normals
   displayTitle: "【特殊入力技】"
   entries:
@@ -1087,140 +1221,6 @@ moveGroups:
         skillName: Taunt
         characterCode: '03'
         skillCode: '030'
-  - id: item_02dcefb22e
-    displayName: レバー入れ技
-    children:
-    - id: item_3ccc2bc446
-      displayName: 雷撃蹴(らいげきしゅう)
-      detail:
-        displayName: 雷撃蹴(らいげきしゅう)
-        command: 垂直 or 前方(ハイ)ジャンプ中、頂点付近で3+K
-        guard: 立
-        blocking: "→"
-        startup: |-
-          6(小、大)
-          8(中)
-        active: 着地まで
-        recovery: "―"
-        damage: '70'
-        stun: '7'
-        stunReduction: '15'
-        meterGain:
-          whiff: '2'
-          guard: '3'
-          hit: '7'
-          bl: '4'
-        frameAdvantage:
-          guard: "―"
-          standingHit: "―"
-          crouchingHit: "―"
-        stats:
-          C/SC: "×"
-        noteGroups:
-        - id: item_cf8aa5b927
-          displayTitle: 補足
-          entries:
-          - |-
-            ・押すボタンにより落下角度が変化
-            ・ヒット&ガード硬直時間差は当てる高さによって変化
-            ・基本的に「めくり」、「手前落ち」、「空かし」で使う。あまり深く当てると投げられてしまうので注意
-        - id: item_0ef41e28c0
-          displayTitle: 幻影陣中の性能
-          entries:
-          - 幻影中にも使えるがJ攻撃は飛び道具判定になるので過信はできない
-        media:
-          kind: motion_player
-          displayLabel: モーション
-          skillName: Dive Kicks
-          characterCode: '03'
-          skillCode: '026'
-    - id: item_846dc1061f
-      displayName: 旋風脚(せんぷうきゃく)
-      detail:
-        displayName: 旋風脚(せんぷうきゃく)
-        command: 6+中K
-        guard: 立
-        blocking: "→"
-        startup: '19'
-        active: '6'
-        recovery: 8(9)
-        damage: '80'
-        stun: '11'
-        stunReduction: '15'
-        meterGain:
-          whiff: '2'
-          guard: '3'
-          hit: '7'
-          bl: '4'
-        frameAdvantage:
-          guard: "-1"
-          standingHit: '0'
-          crouchingHit: "+1"
-        stats:
-          C/SC: "×"
-        noteGroups:
-        - id: item_cf8aa5b927
-          displayTitle: 補足
-          entries:
-          - |-
-            ・硬直欄のカッコ内の数値はしゃがみ状態で着地した時のもの
-            ・コマンド完成後、8フレーム目から空中判定に移行
-            ・攻めの継続や相手の足払いに対してあわせるように使うと効果的
-        - id: item_0ef41e28c0
-          displayTitle: 幻影陣中の性能
-          entries:
-          - |-
-            ・浮かせた後のコンボや上下の揺さぶりを掛けるときに使用
-            ・発生が早くなり持続は伸びるが、ガードされると4フレーム不利になるため、いろいろなSAで反撃される点に注意
-        media:
-          kind: motion_player
-          displayLabel: モーション
-          skillName: Towards + Forward
-          characterCode: '03'
-          skillCode: '024'
-    - id: item_753bc32daf
-      displayName: 打開(だかい)
-      detail:
-        displayName: 打開(だかい)
-        command: 6+大P
-        guard: 両方
-        blocking: "→"
-        startup: '17'
-        active: '5'
-        recovery: '19'
-        damage: '140'
-        stun: '17'
-        stunReduction: '1'
-        meterGain:
-          whiff: '3'
-          guard: '5'
-          hit: '13'
-          bl: '4'
-        frameAdvantage:
-          guard: "-7"
-          standingHit: ダウン
-          crouchingHit: ダウン
-        stats:
-          C/SC: "×"
-        noteGroups:
-        - id: item_cf8aa5b927
-          displayTitle: 補足
-          entries:
-          - |-
-            ・後ろ方向の手にも攻撃判定あり。相手のジャンプに対し、くぐるように出すとめくりBLになるため強い
-            ・ヒット時、相手は横に吹っ飛ぶので間合いを確保できる
-        - id: item_0ef41e28c0
-          displayTitle: 幻影陣中の性能
-          entries:
-          - |-
-            ・ヒット時に画面端に吹き飛ばすので、運びなどに使用
-            ・浮かせた相手に打開と旋風脚を交互に繋ぐだけでも、そこそこダメージを取る事ができる
-        media:
-          kind: motion_player
-          displayLabel: モーション
-          skillName: Towards + Fierce
-          characterCode: '03'
-          skillCode: '025'
   - id: item_b46a9fbcad
     displayName: ターゲットコンボ
     children:

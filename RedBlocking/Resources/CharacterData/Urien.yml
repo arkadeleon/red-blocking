@@ -817,6 +817,118 @@ moveGroups:
         skillName: Throw
         characterCode: '13'
         skillCode: '023'
+- id: lever_input_moves
+  displayTitle: "【レバー入れ技】"
+  entries:
+  - id: item_cef6fbf148
+    displayName: クォーラルアッパー
+    detail:
+      displayName: クォーラルアッパー
+      command: 6+中P
+      guard: 両方
+      blocking: "→"
+      startup: '9'
+      active: '2'
+      recovery: '14'
+      damage: '80'
+      stun: '9'
+      stunReduction: '1'
+      meterGain:
+        whiff: '2'
+        guard: '4'
+        hit: '8'
+        bl: '4'
+      frameAdvantage:
+        guard: "-3"
+        standingHit: "-2"
+        crouchingHit: "-1"
+      stats:
+        C/SC: "×"
+      noteGroups:
+      - id: item_cf8aa5b927
+        displayTitle: 補足
+        entries:
+        - |-
+          ・TCで大Pに繋ぐことが可能
+          ・やや先読み気味に出して対空に使用できる
+      media:
+        kind: motion_player
+        displayLabel: モーション
+        skillName: Towards + Strong
+        characterCode: '13'
+        skillCode: '019'
+  - id: item_083b77171e
+    displayName: クォーラルキック
+    detail:
+      displayName: クォーラルキック
+      command: 6+中K
+      guard: 両方
+      blocking: "→"
+      startup: '16'
+      active: '3'
+      recovery: '12'
+      damage: '90'
+      stun: '9'
+      stunReduction: '1'
+      meterGain:
+        whiff: '2'
+        guard: '4'
+        hit: '8'
+        bl: '4'
+      frameAdvantage:
+        guard: "-2"
+        standingHit: "-1"
+        crouchingHit: '0'
+      stats:
+        C/SC: "×"
+      noteGroups:
+      - id: item_cf8aa5b927
+        displayTitle: 補足
+        entries:
+        - 発生がやや遅いが、ヒットガード問わず隙が少ないので、ガードさせておいてタメ分割ヘッド、投げ、BLなどで攻めを継続できる
+      media:
+        kind: motion_player
+        displayLabel: モーション
+        skillName: Towards + Forward
+        characterCode: '13'
+        skillCode: '021'
+  - id: item_2f8c4abc75
+    displayName: テリブルスマッシュ
+    detail:
+      displayName: テリブルスマッシュ
+      command: 6+大P
+      guard: 立
+      blocking: "→"
+      startup: '14'
+      active: '1'
+      recovery: '21'
+      damage: '120'
+      stun: '3'
+      stunReduction: '1'
+      meterGain:
+        whiff: '3'
+        guard: '6'
+        hit: '14'
+        bl: '4'
+      frameAdvantage:
+        guard: "-6"
+        standingHit: "-4"
+        crouchingHit: "-2"
+      stats:
+        C/SC: "×"
+      noteGroups:
+      - id: item_cf8aa5b927
+        displayTitle: 補足
+        entries:
+        - |-
+          ・威力の高い中段技で、2択を仕掛ける時によく使用する
+          ・ガード及び立ヒットした場合、3フレーム以内に発生するSAで反撃確定するので注意
+      media:
+        kind: motion_player
+        displayLabel: モーション
+        skillName: Towards + Fierce
+        characterCode: '13'
+        skillCode: '020'
 - id: command_normals
   displayTitle: "【特殊入力技】"
   entries:
@@ -891,118 +1003,6 @@ moveGroups:
         skillName: Taunt
         characterCode: '13'
         skillCode: '025'
-  - id: item_02dcefb22e
-    displayName: レバー入れ技
-    children:
-    - id: item_cef6fbf148
-      displayName: クォーラルアッパー
-      detail:
-        displayName: クォーラルアッパー
-        command: 6+中P
-        guard: 両方
-        blocking: "→"
-        startup: '9'
-        active: '2'
-        recovery: '14'
-        damage: '80'
-        stun: '9'
-        stunReduction: '1'
-        meterGain:
-          whiff: '2'
-          guard: '4'
-          hit: '8'
-          bl: '4'
-        frameAdvantage:
-          guard: "-3"
-          standingHit: "-2"
-          crouchingHit: "-1"
-        stats:
-          C/SC: "×"
-        noteGroups:
-        - id: item_cf8aa5b927
-          displayTitle: 補足
-          entries:
-          - |-
-            ・TCで大Pに繋ぐことが可能
-            ・やや先読み気味に出して対空に使用できる
-        media:
-          kind: motion_player
-          displayLabel: モーション
-          skillName: Towards + Strong
-          characterCode: '13'
-          skillCode: '019'
-    - id: item_083b77171e
-      displayName: クォーラルキック
-      detail:
-        displayName: クォーラルキック
-        command: 6+中K
-        guard: 両方
-        blocking: "→"
-        startup: '16'
-        active: '3'
-        recovery: '12'
-        damage: '90'
-        stun: '9'
-        stunReduction: '1'
-        meterGain:
-          whiff: '2'
-          guard: '4'
-          hit: '8'
-          bl: '4'
-        frameAdvantage:
-          guard: "-2"
-          standingHit: "-1"
-          crouchingHit: '0'
-        stats:
-          C/SC: "×"
-        noteGroups:
-        - id: item_cf8aa5b927
-          displayTitle: 補足
-          entries:
-          - 発生がやや遅いが、ヒットガード問わず隙が少ないので、ガードさせておいてタメ分割ヘッド、投げ、BLなどで攻めを継続できる
-        media:
-          kind: motion_player
-          displayLabel: モーション
-          skillName: Towards + Forward
-          characterCode: '13'
-          skillCode: '021'
-    - id: item_2f8c4abc75
-      displayName: テリブルスマッシュ
-      detail:
-        displayName: テリブルスマッシュ
-        command: 6+大P
-        guard: 立
-        blocking: "→"
-        startup: '14'
-        active: '1'
-        recovery: '21'
-        damage: '120'
-        stun: '3'
-        stunReduction: '1'
-        meterGain:
-          whiff: '3'
-          guard: '6'
-          hit: '14'
-          bl: '4'
-        frameAdvantage:
-          guard: "-6"
-          standingHit: "-4"
-          crouchingHit: "-2"
-        stats:
-          C/SC: "×"
-        noteGroups:
-        - id: item_cf8aa5b927
-          displayTitle: 補足
-          entries:
-          - |-
-            ・威力の高い中段技で、2択を仕掛ける時によく使用する
-            ・ガード及び立ヒットした場合、3フレーム以内に発生するSAで反撃確定するので注意
-        media:
-          kind: motion_player
-          displayLabel: モーション
-          skillName: Towards + Fierce
-          characterCode: '13'
-          skillCode: '020'
   - id: item_b46a9fbcad
     displayName: ターゲットコンボ
     children:

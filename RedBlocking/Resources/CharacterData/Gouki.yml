@@ -940,6 +940,81 @@ moveGroups:
         skillName: Back + Throw
         characterCode: '14'
         skillCode: '030'
+- id: lever_input_moves
+  displayTitle: "【レバー入れ技】"
+  entries:
+  - id: item_e70de11c1f
+    displayName: 天魔空刃脚
+    detail:
+      displayName: 天魔空刃脚
+      command: 前ジャンプ中、頂点付近で2+中K
+      guard: 立
+      blocking: "→"
+      startup: '8'
+      active: 着地まで
+      recovery: '3'
+      damage: '90'
+      stun: '11'
+      stunReduction: '15'
+      meterGain:
+        whiff: '2'
+        guard: '4'
+        hit: '8'
+        bl: '4'
+      frameAdvantage:
+        guard: "―"
+        standingHit: "―"
+        crouchingHit: "―"
+      stats:
+        C/SC: "×"
+      noteGroups:
+      - id: item_cf8aa5b927
+        displayTitle: 補足
+        entries:
+        - "・硬直は着地時のもの\n・ヒット&ガード硬直時間差は当てる位置によって変化 \n・飛び込み技として非常に優秀"
+      media:
+        kind: motion_player
+        displayLabel: モーション
+        skillName: Dive Kick
+        characterCode: '14'
+        skillCode: '028'
+  - id: item_e0ea84e4f5
+    displayName: 頭蓋破殺
+    detail:
+      displayName: 頭蓋破殺
+      command: 6+中P
+      guard: 立・立
+      blocking: "→・→"
+      startup: '14'
+      active: '1'
+      recovery: '22'
+      damage: 90(40+50)
+      stun: 16(9+7)
+      stunReduction: 1・1
+      meterGain:
+        whiff: 2(2+0)
+        guard: 3(2+1)
+        hit: 9(7+2)
+        bl: 8(4+4)
+      frameAdvantage:
+        guard: "-1"
+        standingHit: "+1"
+        crouchingHit: "+3"
+      stats:
+        C/SC: "×・×"
+      noteGroups:
+      - id: item_cf8aa5b927
+        displayTitle: 補足
+        entries:
+        - |-
+          ・発生後、4～29フレームの間、投げ無敵あり
+          ・移動投げに使用
+      media:
+        kind: motion_player
+        displayLabel: モーション
+        skillName: Towards + Strong
+        characterCode: '14'
+        skillCode: '027'
 - id: command_normals
   displayTitle: "【特殊入力技】"
   entries:
@@ -1013,81 +1088,6 @@ moveGroups:
         skillName: Taunt
         characterCode: '14'
         skillCode: '032'
-  - id: item_02dcefb22e
-    displayName: レバー入れ技
-    children:
-    - id: item_e70de11c1f
-      displayName: 天魔空刃脚
-      detail:
-        displayName: 天魔空刃脚
-        command: 前ジャンプ中、頂点付近で2+中K
-        guard: 立
-        blocking: "→"
-        startup: '8'
-        active: 着地まで
-        recovery: '3'
-        damage: '90'
-        stun: '11'
-        stunReduction: '15'
-        meterGain:
-          whiff: '2'
-          guard: '4'
-          hit: '8'
-          bl: '4'
-        frameAdvantage:
-          guard: "―"
-          standingHit: "―"
-          crouchingHit: "―"
-        stats:
-          C/SC: "×"
-        noteGroups:
-        - id: item_cf8aa5b927
-          displayTitle: 補足
-          entries:
-          - "・硬直は着地時のもの\n・ヒット&ガード硬直時間差は当てる位置によって変化 \n・飛び込み技として非常に優秀"
-        media:
-          kind: motion_player
-          displayLabel: モーション
-          skillName: Dive Kick
-          characterCode: '14'
-          skillCode: '028'
-    - id: item_e0ea84e4f5
-      displayName: 頭蓋破殺
-      detail:
-        displayName: 頭蓋破殺
-        command: 6+中P
-        guard: 立・立
-        blocking: "→・→"
-        startup: '14'
-        active: '1'
-        recovery: '22'
-        damage: 90(40+50)
-        stun: 16(9+7)
-        stunReduction: 1・1
-        meterGain:
-          whiff: 2(2+0)
-          guard: 3(2+1)
-          hit: 9(7+2)
-          bl: 8(4+4)
-        frameAdvantage:
-          guard: "-1"
-          standingHit: "+1"
-          crouchingHit: "+3"
-        stats:
-          C/SC: "×・×"
-        noteGroups:
-        - id: item_cf8aa5b927
-          displayTitle: 補足
-          entries:
-          - |-
-            ・発生後、4～29フレームの間、投げ無敵あり
-            ・移動投げに使用
-        media:
-          kind: motion_player
-          displayLabel: モーション
-          skillName: Towards + Strong
-          characterCode: '14'
-          skillCode: '027'
   - id: item_b46a9fbcad
     displayName: ターゲットコンボ
     children:

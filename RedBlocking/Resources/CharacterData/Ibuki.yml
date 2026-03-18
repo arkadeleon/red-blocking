@@ -971,6 +971,259 @@ moveGroups:
         displayTitle: 補足
         entries:
         - 空中投げ
+- id: lever_input_moves
+  displayTitle: "【レバー入れ技】"
+  entries:
+  - id: item_ddb9dd8f71
+    displayName: 巻き蹴り
+    detail:
+      displayName: 巻き蹴り
+      command: 6+小K
+      guard: 両方
+      blocking: 両方
+      startup: '5'
+      active: '4'
+      recovery: '8'
+      damage: '20'
+      stun: '3'
+      stunReduction: '1'
+      meterGain:
+        whiff: '0'
+        guard: '1'
+        hit: '2'
+        bl: '4'
+      frameAdvantage:
+        guard: "-1"
+        standingHit: "-1"
+        crouchingHit: "-1"
+      stats:
+        C/SC: "☆/×"
+      noteGroups:
+      - id: item_cf8aa5b927
+        displayTitle: 補足
+        entries:
+        - ユリアンのタックルに反撃できる
+      media:
+        kind: motion_player
+        displayLabel: モーション
+        skillName: Towards + Short
+        characterCode: '07'
+        skillCode: '029'
+  - id: item_b35114bb44
+    displayName: 揚面(あげめん)
+    detail:
+      displayName: 揚面(あげめん)
+      command: 4+中P
+      guard: 両方・両方
+      blocking: "→・→"
+      startup: '6'
+      active: 1・6
+      recovery: '10'
+      damage: 80(30+60(50))
+      stun: 12(5+9(7))
+      stunReduction: 1・1
+      meterGain:
+        whiff: '2'
+        guard: 5(4+1)
+        hit: 10(8+2)
+        bl: 8(4+4)
+      frameAdvantage:
+        guard: "-2"
+        standingHit: "-1"
+        crouchingHit: '0'
+      stats:
+        C/SC: "○・×"
+      noteGroups:
+      - id: item_cf8aa5b927
+        displayTitle: 補足
+        entries:
+        - |-
+          ・攻撃力とスタン値欄のカッコ内の数値は技の後半部分のもの
+          ・TCで大P、屈大Kに繋ぐことが可能
+          ・1段目はそこまで判定が強くないが、多段対空に使える
+      media:
+        kind: motion_player
+        displayLabel: モーション
+        skillName: Back + Strong
+        characterCode: '07'
+        skillCode: '028'
+  - id: item_713b0898a0
+    displayName: 裏巻き蹴り
+    detail:
+      displayName: 裏巻き蹴り
+      command: 4+中K
+      guard: 両方
+      blocking: "→"
+      startup: '13'
+      active: '2'
+      recovery: '13'
+      damage: '70'
+      stun: '5'
+      stunReduction: '1'
+      meterGain:
+        whiff: '2'
+        guard: '4'
+        hit: '8'
+        bl: '4'
+      frameAdvantage:
+        guard: "-2"
+        standingHit: "-1"
+        crouchingHit: '0'
+      stats:
+        C/SC: "×"
+      noteGroups:
+      - id: item_cf8aa5b927
+        displayTitle: 補足
+        entries:
+        - |-
+          ・TCで6中Kに繋ぐことが可能
+          ・いぶきの技の中で最長クラスのリーチを持つ
+      media:
+        kind: motion_player
+        displayLabel: モーション
+        skillName: Back + Forward
+        characterCode: '07'
+        skillCode: '031'
+  - id: item_3963b60fb2
+    displayName: 頭砕き
+    detail:
+      displayName: 頭砕き
+      command: 6+中K
+      guard: 立
+      blocking: "→"
+      startup: '27'
+      active: '3'
+      recovery: 3(4)
+      damage: 80(70)
+      stun: '13'
+      stunReduction: '1'
+      meterGain:
+        whiff: '2'
+        guard: '4'
+        hit: '8'
+        bl: '4'
+      frameAdvantage:
+        guard: "+9"
+        standingHit: "+10"
+        crouchingHit: "+11"
+      stats:
+        C/SC: "×"
+      noteGroups:
+      - id: item_cf8aa5b927
+        displayTitle: 補足
+        entries:
+        - "・硬直欄のカッコ内の数値はしゃがみ状態で着地した時のもの\n・攻撃力欄のカッコ内の数値は技の後半部分のもの\n・コマンド完成後、8フレーム目から空中判定に移行。ただし12フレーム目までは地上に投げられ判定が残っている \n・BLされても発生3フレームまでの攻撃しか確定しない\n・ガードされても攻めを継続できる\n・ヒット時、ノーキャンセルで小P発動のSA3に繋ぐことが可能。その場合、キャンセル猶予時間は13～19フレーム"
+      media:
+        kind: motion_player
+        displayLabel: モーション
+        skillName: Towards + Forward
+        characterCode: '07'
+        skillCode: '030'
+  - id: item_1dc18def5e
+    displayName: 砂斬
+    detail:
+      displayName: 砂斬
+      command: 3+中K
+      guard: 屈
+      blocking: "↓"
+      startup: '6'
+      active: '11'
+      recovery: '9'
+      damage: '70'
+      stun: '3'
+      stunReduction: '1'
+      meterGain:
+        whiff: '3'
+        guard: '4'
+        hit: '12'
+        bl: '4'
+      frameAdvantage:
+        guard: "-16(-6)"
+        standingHit: "-6(+4)"
+        crouchingHit: "-5(+5)"
+      stats:
+        C/SC: "×"
+      noteGroups:
+      - id: item_cf8aa5b927
+        displayTitle: 補足
+        entries:
+        - |-
+          ・ヒット&ガード硬直時間差欄のカッコの数値は先端をガードさせた場合のもの
+          ・コマンド完成後、1フレーム目から姿勢が低くなり、17フレーム目まで上段攻撃と、一部の飛び道具を抜ける事が可能
+          ・牽制の要。相手の牽制技を避けつつ攻撃したり、姿勢の低さを生かして対空に使用可能
+          ・地面に接する飛び道具以外を潜れる。また多段飛び道具は初段をBLして残りを潜って避けることが出来る
+          ・リュウの電刃波動拳を抜けるのにも使える
+      media:
+        kind: motion_player
+        displayLabel: モーション
+        skillName: Down-Towards + Forward
+        characterCode: '07'
+        skillCode: '032'
+  - id: item_213bee827f
+    displayName: 追裏拳
+    detail:
+      displayName: 追裏拳
+      command: 遠大P中に大P
+      guard: 両方
+      blocking: "→"
+      startup: '2'
+      active: '3'
+      recovery: '31'
+      damage: '80'
+      stun: '17'
+      stunReduction: '1'
+      meterGain:
+        whiff: '3'
+        guard: '4'
+        hit: '12'
+        bl: '4'
+      frameAdvantage:
+        guard: "-1"
+        standingHit: "+1"
+        crouchingHit: "+3"
+      stats:
+        C/SC: "×"
+  - id: item_8b333152e1
+    displayName: 梵鐘蹴り
+    detail:
+      displayName: 梵鐘蹴り
+      command: 6+大K
+      guard: 両方
+      blocking: "→"
+      startup: '12'
+      active: '1'
+      recovery: 20(21)
+      damage: '130'
+      stun: '17'
+      stunReduction: '1'
+      meterGain:
+        whiff: '3'
+        guard: '6'
+        hit: '14'
+        bl: '4'
+      frameAdvantage:
+        guard: "-1"
+        standingHit: "+1"
+        crouchingHit: "+3"
+      stats:
+        C/SC: "×"
+      noteGroups:
+      - id: item_cf8aa5b927
+        displayTitle: 補足
+        entries:
+        - |-
+          ・硬直欄のカッコ内の数値はしゃがみ状態で着地した時のもの
+          ・コマンド完成後、8フレーム目から空中判定に移行
+          ・牽制の要。判定が強いが、打点が高いので小型キャラのしゃがみ状態には当たらないので注意
+          ・大きめのキャラ(しゃがんでも当たるキャラ)に対しては、牽制合戦で絶大な効果あり
+          ・跳び上がるため足払い系に対して強く、打点が高いため飛ぼうとした相手に当てることが可能
+          ・しゃがみヒット時、ノーキャンセルで小P発動のSA3に繋ぐことが可能。その場合、キャンセル猶予時間は30フレーム
+      media:
+        kind: motion_player
+        displayLabel: モーション
+        skillName: Towards + Roundhouse
+        characterCode: '07'
+        skillCode: '033'
 - id: command_normals
   displayTitle: "【特殊入力技】"
   entries:
@@ -1044,259 +1297,6 @@ moveGroups:
         skillName: Universal Overhead
         characterCode: '07'
         skillCode: '036'
-  - id: item_02dcefb22e
-    displayName: レバー入れ技
-    children:
-    - id: item_ddb9dd8f71
-      displayName: 巻き蹴り
-      detail:
-        displayName: 巻き蹴り
-        command: 6+小K
-        guard: 両方
-        blocking: 両方
-        startup: '5'
-        active: '4'
-        recovery: '8'
-        damage: '20'
-        stun: '3'
-        stunReduction: '1'
-        meterGain:
-          whiff: '0'
-          guard: '1'
-          hit: '2'
-          bl: '4'
-        frameAdvantage:
-          guard: "-1"
-          standingHit: "-1"
-          crouchingHit: "-1"
-        stats:
-          C/SC: "☆/×"
-        noteGroups:
-        - id: item_cf8aa5b927
-          displayTitle: 補足
-          entries:
-          - ユリアンのタックルに反撃できる
-        media:
-          kind: motion_player
-          displayLabel: モーション
-          skillName: Towards + Short
-          characterCode: '07'
-          skillCode: '029'
-    - id: item_b35114bb44
-      displayName: 揚面(あげめん)
-      detail:
-        displayName: 揚面(あげめん)
-        command: 4+中P
-        guard: 両方・両方
-        blocking: "→・→"
-        startup: '6'
-        active: 1・6
-        recovery: '10'
-        damage: 80(30+60(50))
-        stun: 12(5+9(7))
-        stunReduction: 1・1
-        meterGain:
-          whiff: '2'
-          guard: 5(4+1)
-          hit: 10(8+2)
-          bl: 8(4+4)
-        frameAdvantage:
-          guard: "-2"
-          standingHit: "-1"
-          crouchingHit: '0'
-        stats:
-          C/SC: "○・×"
-        noteGroups:
-        - id: item_cf8aa5b927
-          displayTitle: 補足
-          entries:
-          - |-
-            ・攻撃力とスタン値欄のカッコ内の数値は技の後半部分のもの
-            ・TCで大P、屈大Kに繋ぐことが可能
-            ・1段目はそこまで判定が強くないが、多段対空に使える
-        media:
-          kind: motion_player
-          displayLabel: モーション
-          skillName: Back + Strong
-          characterCode: '07'
-          skillCode: '028'
-    - id: item_713b0898a0
-      displayName: 裏巻き蹴り
-      detail:
-        displayName: 裏巻き蹴り
-        command: 4+中K
-        guard: 両方
-        blocking: "→"
-        startup: '13'
-        active: '2'
-        recovery: '13'
-        damage: '70'
-        stun: '5'
-        stunReduction: '1'
-        meterGain:
-          whiff: '2'
-          guard: '4'
-          hit: '8'
-          bl: '4'
-        frameAdvantage:
-          guard: "-2"
-          standingHit: "-1"
-          crouchingHit: '0'
-        stats:
-          C/SC: "×"
-        noteGroups:
-        - id: item_cf8aa5b927
-          displayTitle: 補足
-          entries:
-          - |-
-            ・TCで6中Kに繋ぐことが可能
-            ・いぶきの技の中で最長クラスのリーチを持つ
-        media:
-          kind: motion_player
-          displayLabel: モーション
-          skillName: Back + Forward
-          characterCode: '07'
-          skillCode: '031'
-    - id: item_3963b60fb2
-      displayName: 頭砕き
-      detail:
-        displayName: 頭砕き
-        command: 6+中K
-        guard: 立
-        blocking: "→"
-        startup: '27'
-        active: '3'
-        recovery: 3(4)
-        damage: 80(70)
-        stun: '13'
-        stunReduction: '1'
-        meterGain:
-          whiff: '2'
-          guard: '4'
-          hit: '8'
-          bl: '4'
-        frameAdvantage:
-          guard: "+9"
-          standingHit: "+10"
-          crouchingHit: "+11"
-        stats:
-          C/SC: "×"
-        noteGroups:
-        - id: item_cf8aa5b927
-          displayTitle: 補足
-          entries:
-          - "・硬直欄のカッコ内の数値はしゃがみ状態で着地した時のもの\n・攻撃力欄のカッコ内の数値は技の後半部分のもの\n・コマンド完成後、8フレーム目から空中判定に移行。ただし12フレーム目までは地上に投げられ判定が残っている \n・BLされても発生3フレームまでの攻撃しか確定しない\n・ガードされても攻めを継続できる\n・ヒット時、ノーキャンセルで小P発動のSA3に繋ぐことが可能。その場合、キャンセル猶予時間は13～19フレーム"
-        media:
-          kind: motion_player
-          displayLabel: モーション
-          skillName: Towards + Forward
-          characterCode: '07'
-          skillCode: '030'
-    - id: item_1dc18def5e
-      displayName: 砂斬
-      detail:
-        displayName: 砂斬
-        command: 3+中K
-        guard: 屈
-        blocking: "↓"
-        startup: '6'
-        active: '11'
-        recovery: '9'
-        damage: '70'
-        stun: '3'
-        stunReduction: '1'
-        meterGain:
-          whiff: '3'
-          guard: '4'
-          hit: '12'
-          bl: '4'
-        frameAdvantage:
-          guard: "-16(-6)"
-          standingHit: "-6(+4)"
-          crouchingHit: "-5(+5)"
-        stats:
-          C/SC: "×"
-        noteGroups:
-        - id: item_cf8aa5b927
-          displayTitle: 補足
-          entries:
-          - |-
-            ・ヒット&ガード硬直時間差欄のカッコの数値は先端をガードさせた場合のもの
-            ・コマンド完成後、1フレーム目から姿勢が低くなり、17フレーム目まで上段攻撃と、一部の飛び道具を抜ける事が可能
-            ・牽制の要。相手の牽制技を避けつつ攻撃したり、姿勢の低さを生かして対空に使用可能
-            ・地面に接する飛び道具以外を潜れる。また多段飛び道具は初段をBLして残りを潜って避けることが出来る
-            ・リュウの電刃波動拳を抜けるのにも使える
-        media:
-          kind: motion_player
-          displayLabel: モーション
-          skillName: Down-Towards + Forward
-          characterCode: '07'
-          skillCode: '032'
-    - id: item_213bee827f
-      displayName: 追裏拳
-      detail:
-        displayName: 追裏拳
-        command: 遠大P中に大P
-        guard: 両方
-        blocking: "→"
-        startup: '2'
-        active: '3'
-        recovery: '31'
-        damage: '80'
-        stun: '17'
-        stunReduction: '1'
-        meterGain:
-          whiff: '3'
-          guard: '4'
-          hit: '12'
-          bl: '4'
-        frameAdvantage:
-          guard: "-1"
-          standingHit: "+1"
-          crouchingHit: "+3"
-        stats:
-          C/SC: "×"
-    - id: item_8b333152e1
-      displayName: 梵鐘蹴り
-      detail:
-        displayName: 梵鐘蹴り
-        command: 6+大K
-        guard: 両方
-        blocking: "→"
-        startup: '12'
-        active: '1'
-        recovery: 20(21)
-        damage: '130'
-        stun: '17'
-        stunReduction: '1'
-        meterGain:
-          whiff: '3'
-          guard: '6'
-          hit: '14'
-          bl: '4'
-        frameAdvantage:
-          guard: "-1"
-          standingHit: "+1"
-          crouchingHit: "+3"
-        stats:
-          C/SC: "×"
-        noteGroups:
-        - id: item_cf8aa5b927
-          displayTitle: 補足
-          entries:
-          - |-
-            ・硬直欄のカッコ内の数値はしゃがみ状態で着地した時のもの
-            ・コマンド完成後、8フレーム目から空中判定に移行
-            ・牽制の要。判定が強いが、打点が高いので小型キャラのしゃがみ状態には当たらないので注意
-            ・大きめのキャラ(しゃがんでも当たるキャラ)に対しては、牽制合戦で絶大な効果あり
-            ・跳び上がるため足払い系に対して強く、打点が高いため飛ぼうとした相手に当てることが可能
-            ・しゃがみヒット時、ノーキャンセルで小P発動のSA3に繋ぐことが可能。その場合、キャンセル猶予時間は30フレーム
-        media:
-          kind: motion_player
-          displayLabel: モーション
-          skillName: Towards + Roundhouse
-          characterCode: '07'
-          skillCode: '033'
   - id: item_b46a9fbcad
     displayName: ターゲットコンボ
     children:
