@@ -852,104 +852,104 @@ moveGroups:
           skillName: Crouching Roundhouse
           characterCode: '10'
           skillCode: '020'
+- id: normal_throws
+  displayTitle: "【通常投げ】"
+  entries:
+  - id: item_f6dbeea267
+    displayName: 膝蹴り
+    detail:
+      displayName: 膝蹴り
+      command: 小P+小K
+      startup: '2'
+      active: '1'
+      recovery: '21'
+      damage: |-
+        160(6ヒット時)
+        (40×6)
+      stun: |-
+        18(6ヒット時)
+        (5×6)
+      meterGain:
+        onWhiff: '0'
+        throwSuccess: |-
+          12(6ヒット時)
+          (2×6)
+      stats:
+        投げ間合い: '18'
+      noteGroups:
+      - id: item_cf8aa5b927
+        displayTitle: 補足
+        entries:
+        - |-
+          ・硬直は投げ失敗時のフレーム
+          ・連打投げ、最大ヒット数は「6」
+          ・その場でダウンを奪うので攻めを継続できる
+      media:
+        kind: motion_player
+        displayLabel: モーション
+        skillName: Neutral Throw
+        characterCode: '10'
+        skillCode: '027'
+  - id: item_12d9c5d78b
+    displayName: 鷹翻飛雲(ようほんしうん)
+    detail:
+      displayName: 鷹翻飛雲(ようほんしうん)
+      command: "→+小P+小K"
+      startup: '2'
+      active: '1'
+      recovery: 21(20)
+      damage: '120'
+      stun: '11'
+      meterGain:
+        onWhiff: '0'
+        throwSuccess: '7'
+      stats:
+        投げ間合い: '18'
+      noteGroups:
+      - id: item_cf8aa5b927
+        displayTitle: 補足
+        entries:
+        - |-
+          ・硬直は投げ失敗時のフレーム。カッコ内の数値はしゃがみ状態で着地した時のもの
+          ・投げた後の間合いが離れてしまうため攻めの継続が難しい
+          ・間合いを離したい時以外は使用する頻度は低い
+      media:
+        kind: motion_player
+        displayLabel: モーション
+        skillName: Towards Throw
+        characterCode: '10'
+        skillCode: '029'
+  - id: item_45245a6367
+    displayName: モンキーフリップ
+    detail:
+      displayName: モンキーフリップ
+      command: "←+小P+小K"
+      startup: '2'
+      active: '1'
+      recovery: '21'
+      damage: '120'
+      stun: '11'
+      meterGain:
+        onWhiff: '0'
+        throwSuccess: '7'
+      stats:
+        投げ間合い: '18'
+      noteGroups:
+      - id: item_cf8aa5b927
+        displayTitle: 補足
+        entries:
+        - |-
+          ・硬直は投げ失敗時のフレーム
+          ・自キャラが画面端に追い詰められている時に位置を入れ替えるために使用
+      media:
+        kind: motion_player
+        displayLabel: モーション
+        skillName: Back Throw
+        characterCode: '10'
+        skillCode: '028'
 - id: command_normals
   displayTitle: "【特殊入力技】"
   entries:
-  - id: item_d42a0b9ca9
-    displayName: 通常投げ
-    children:
-    - id: item_f6dbeea267
-      displayName: 膝蹴り
-      detail:
-        displayName: 膝蹴り
-        command: 小P+小K
-        startup: '2'
-        active: '1'
-        recovery: '21'
-        damage: |-
-          160(6ヒット時)
-          (40×6)
-        stun: |-
-          18(6ヒット時)
-          (5×6)
-        meterGain:
-          onWhiff: '0'
-          throwSuccess: |-
-            12(6ヒット時)
-            (2×6)
-        stats:
-          投げ間合い: '18'
-        noteGroups:
-        - id: item_cf8aa5b927
-          displayTitle: 補足
-          entries:
-          - |-
-            ・硬直は投げ失敗時のフレーム
-            ・連打投げ、最大ヒット数は「6」
-            ・その場でダウンを奪うので攻めを継続できる
-        media:
-          kind: motion_player
-          displayLabel: モーション
-          skillName: Neutral Throw
-          characterCode: '10'
-          skillCode: '027'
-    - id: item_12d9c5d78b
-      displayName: 鷹翻飛雲(ようほんしうん)
-      detail:
-        displayName: 鷹翻飛雲(ようほんしうん)
-        command: "→+小P+小K"
-        startup: '2'
-        active: '1'
-        recovery: 21(20)
-        damage: '120'
-        stun: '11'
-        meterGain:
-          onWhiff: '0'
-          throwSuccess: '7'
-        stats:
-          投げ間合い: '18'
-        noteGroups:
-        - id: item_cf8aa5b927
-          displayTitle: 補足
-          entries:
-          - |-
-            ・硬直は投げ失敗時のフレーム。カッコ内の数値はしゃがみ状態で着地した時のもの
-            ・投げた後の間合いが離れてしまうため攻めの継続が難しい
-            ・間合いを離したい時以外は使用する頻度は低い
-        media:
-          kind: motion_player
-          displayLabel: モーション
-          skillName: Towards Throw
-          characterCode: '10'
-          skillCode: '029'
-    - id: item_45245a6367
-      displayName: モンキーフリップ
-      detail:
-        displayName: モンキーフリップ
-        command: "←+小P+小K"
-        startup: '2'
-        active: '1'
-        recovery: '21'
-        damage: '120'
-        stun: '11'
-        meterGain:
-          onWhiff: '0'
-          throwSuccess: '7'
-        stats:
-          投げ間合い: '18'
-        noteGroups:
-        - id: item_cf8aa5b927
-          displayTitle: 補足
-          entries:
-          - |-
-            ・硬直は投げ失敗時のフレーム
-            ・自キャラが画面端に追い詰められている時に位置を入れ替えるために使用
-        media:
-          kind: motion_player
-          displayLabel: モーション
-          skillName: Back Throw
-          characterCode: '10'
-          skillCode: '028'
   - id: item_ac52a72820
     displayName: リープアタック
     detail:

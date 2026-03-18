@@ -57,8 +57,8 @@ struct MoveBrowserProjectorTests {
     @Test("Move groups are projected as sections following the introduction")
     func moveGroupsFollowIntroductionAsSections() throws {
         let page = try loadPage(yaml: Fixtures.profileWithOneAirEntry)
-        // sections[0] = introduction, sections[1] = air_normals, sections[2..5] = remaining groups
-        #expect(page.sections.count == 6) // 1 intro + 5 groups
+        // sections[0] = introduction, sections[1] = air_normals, sections[2..6] = remaining groups
+        #expect(page.sections.count == 7) // 1 intro + 6 groups
         let airSection = page.sections[1]
         #expect(airSection.title == "【空中通常技】")
         #expect(airSection.rows.count == 1)
@@ -199,6 +199,9 @@ private enum Fixtures {
       - id: ground_normals
         displayTitle: "【地上通常技】"
         entries: []
+      - id: normal_throws
+        displayTitle: "【通常投げ】"
+        entries: []
       - id: command_normals
         displayTitle: "【コマンド通常技】"
         entries: []
@@ -232,6 +235,9 @@ private enum Fixtures {
       - id: ground_normals
         displayTitle: "Ground"
         entries: []
+      - id: normal_throws
+        displayTitle: "Throws"
+        entries: []
       - id: command_normals
         displayTitle: "Command"
         entries: []
@@ -264,6 +270,9 @@ private enum Fixtures {
       - id: ground_normals
         displayTitle: "Ground"
         entries: []
+      - id: normal_throws
+        displayTitle: "Throws"
+        entries: []
       - id: command_normals
         displayTitle: "Command"
         entries: []
@@ -289,6 +298,9 @@ private enum Fixtures {
         entries: []
       - id: ground_normals
         displayTitle: "Ground"
+        entries: []
+      - id: normal_throws
+        displayTitle: "Throws"
         entries: []
       - id: command_normals
         displayTitle: "Command"
@@ -326,6 +338,9 @@ private enum Fixtures {
       - id: ground_normals
         displayTitle: "Ground"
         entries: []
+      - id: normal_throws
+        displayTitle: "Throws"
+        entries: []
       - id: command_normals
         displayTitle: "Command"
         entries: []
@@ -360,6 +375,9 @@ private enum Fixtures {
         entries: []
       - id: ground_normals
         displayTitle: "Ground"
+        entries: []
+      - id: normal_throws
+        displayTitle: "Throws"
         entries: []
       - id: command_normals
         displayTitle: "Command"
@@ -411,6 +429,9 @@ private enum Fixtures {
       - id: ground_normals
         displayTitle: "Ground"
         entries: []
+      - id: normal_throws
+        displayTitle: "Throws"
+        entries: []
       - id: command_normals
         displayTitle: "Command"
         entries: []
@@ -436,6 +457,9 @@ private enum Fixtures {
         entries: []
       - id: ground_normals
         displayTitle: "Ground"
+        entries: []
+      - id: normal_throws
+        displayTitle: "Throws"
         entries: []
       - id: command_normals
         displayTitle: "Command"
@@ -468,6 +492,9 @@ private enum Fixtures {
         entries: []
       - id: ground_normals
         displayTitle: "Ground"
+        entries: []
+      - id: normal_throws
+        displayTitle: "Throws"
         entries: []
       - id: command_normals
         displayTitle: "Command"

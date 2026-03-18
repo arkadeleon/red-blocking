@@ -930,99 +930,99 @@ moveGroups:
           skillName: Crouching Roundhouse
           characterCode: '05'
           skillCode: '023'
+- id: normal_throws
+  displayTitle: "【通常投げ】"
+  entries:
+  - id: item_f5c48db64b
+    displayName: ショルダーアタック
+    detail:
+      displayName: ショルダーアタック
+      command: |-
+        小P+小K
+        →+小P+小K
+      startup: '2'
+      active: '1'
+      recovery: '21'
+      damage: '120'
+      stun: '13'
+      meterGain:
+        onWhiff: '0'
+        throwSuccess: '7'
+      stats:
+        投げ間合い: '26'
+      noteGroups:
+      - id: item_cf8aa5b927
+        displayTitle: 補足
+        entries:
+        - |-
+          ・硬直は投げ失敗時のフレーム
+          ・画面端に運ぶ時に便利
+          ・画面端で決めると追撃可能。
+      media:
+        kind: motion_player
+        displayLabel: モーション
+        skillName: Throw
+        characterCode: '05'
+        skillCode: '031'
+  - id: item_72783fa2e8
+    displayName: フランケンシュタイナー
+    detail:
+      displayName: フランケンシュタイナー
+      command: "←+小P+小K"
+      startup: '2'
+      active: '1'
+      recovery: '21'
+      damage: '100'
+      stun: '19'
+      meterGain:
+        onWhiff: '0'
+        throwSuccess: '7'
+      stats:
+        投げ間合い: '26'
+      noteGroups:
+      - id: item_cf8aa5b927
+        displayTitle: 補足
+        entries:
+        - |-
+          ・硬直は投げ失敗時のフレーム
+          ・他の投げよりスタン値が高い
+      media:
+        kind: motion_player
+        displayLabel: モーション
+        skillName: Back + Throw
+        characterCode: '05'
+        skillCode: '032'
+  - id: item_f8682e1a5c
+    displayName: ジャーマンスープレックス
+    detail:
+      displayName: ジャーマンスープレックス
+      command: 相手の背後から小P+小K
+      startup: '2'
+      active: '1'
+      recovery: '21'
+      damage: '200'
+      stun: '11'
+      meterGain:
+        onWhiff: '0'
+        throwSuccess: '7'
+      stats:
+        投げ間合い: '26'
+      noteGroups:
+      - id: item_cf8aa5b927
+        displayTitle: 補足
+        entries:
+        - |-
+          ・硬直は投げ失敗時のフレーム
+          ・投げ成功時、QS不可なので起き攻めしやすい
+      media:
+        kind: motion_player
+        displayLabel: モーション
+        skillName: Reverse Throw
+        characterCode: '05'
+        skillCode: '033'
 - id: command_normals
   displayTitle: "【特殊入力技】"
   entries:
-  - id: item_d42a0b9ca9
-    displayName: 通常投げ
-    children:
-    - id: item_f5c48db64b
-      displayName: ショルダーアタック
-      detail:
-        displayName: ショルダーアタック
-        command: |-
-          小P+小K
-          →+小P+小K
-        startup: '2'
-        active: '1'
-        recovery: '21'
-        damage: '120'
-        stun: '13'
-        meterGain:
-          onWhiff: '0'
-          throwSuccess: '7'
-        stats:
-          投げ間合い: '26'
-        noteGroups:
-        - id: item_cf8aa5b927
-          displayTitle: 補足
-          entries:
-          - |-
-            ・硬直は投げ失敗時のフレーム
-            ・画面端に運ぶ時に便利
-            ・画面端で決めると追撃可能。
-        media:
-          kind: motion_player
-          displayLabel: モーション
-          skillName: Throw
-          characterCode: '05'
-          skillCode: '031'
-    - id: item_72783fa2e8
-      displayName: フランケンシュタイナー
-      detail:
-        displayName: フランケンシュタイナー
-        command: "←+小P+小K"
-        startup: '2'
-        active: '1'
-        recovery: '21'
-        damage: '100'
-        stun: '19'
-        meterGain:
-          onWhiff: '0'
-          throwSuccess: '7'
-        stats:
-          投げ間合い: '26'
-        noteGroups:
-        - id: item_cf8aa5b927
-          displayTitle: 補足
-          entries:
-          - |-
-            ・硬直は投げ失敗時のフレーム
-            ・他の投げよりスタン値が高い
-        media:
-          kind: motion_player
-          displayLabel: モーション
-          skillName: Back + Throw
-          characterCode: '05'
-          skillCode: '032'
-    - id: item_f8682e1a5c
-      displayName: ジャーマンスープレックス
-      detail:
-        displayName: ジャーマンスープレックス
-        command: 相手の背後から小P+小K
-        startup: '2'
-        active: '1'
-        recovery: '21'
-        damage: '200'
-        stun: '11'
-        meterGain:
-          onWhiff: '0'
-          throwSuccess: '7'
-        stats:
-          投げ間合い: '26'
-        noteGroups:
-        - id: item_cf8aa5b927
-          displayTitle: 補足
-          entries:
-          - |-
-            ・硬直は投げ失敗時のフレーム
-            ・投げ成功時、QS不可なので起き攻めしやすい
-        media:
-          kind: motion_player
-          displayLabel: モーション
-          skillName: Reverse Throw
-          characterCode: '05'
-          skillCode: '033'
   - id: item_ac52a72820
     displayName: リープアタック
     detail:

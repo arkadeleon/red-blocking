@@ -967,71 +967,71 @@ moveGroups:
           skillName: Crouching Roundhouse
           characterCode: '17'
           skillCode: '025'
+- id: normal_throws
+  displayTitle: "【通常投げ】"
+  entries:
+  - id: item_ff65dd67e1
+    displayName: 引き寄せ頭突き 「塔頭」(たっちゅう)
+    detail:
+      displayName: 引き寄せ頭突き 「塔頭」(たっちゅう)
+      command: 小P+小K
+      startup: '2'
+      active: '1'
+      recovery: '21'
+      damage: '90'
+      stun: '17'
+      meterGain:
+        onWhiff: '0'
+        throwSuccess: '7'
+      stats:
+        投げ間合い: '20'
+      noteGroups:
+      - id: item_cf8aa5b927
+        displayTitle: 補足
+        entries:
+        - |-
+          ・硬直は投げ失敗時のフレーム
+          ・投げ成功後、レバー・ボタンに触らない状態にすることで32フレーム完全無敵がつく。レバー・ボタンに触ると解除される
+      media:
+        kind: motion_player
+        displayLabel: モーション
+        skillName: Neutral Throw
+        characterCode: '17'
+        skillCode: '029'
+  - id: item_53b3f247e7
+    displayName: 肘落とし三連突き 「荒磯」(あらいそ)
+    detail:
+      displayName: 肘落とし三連突き 「荒磯」(あらいそ)
+      command: |-
+        →+小P+小K
+        ←+小P+小K
+      startup: '2'
+      active: '1'
+      recovery: '21'
+      damage: '150'
+      stun: '13'
+      meterGain:
+        onWhiff: '0'
+        throwSuccess: '7'
+      stats:
+        投げ間合い: '20'
+      noteGroups:
+      - id: item_cf8aa5b927
+        displayTitle: 補足
+        entries:
+        - |-
+          ・硬直は投げ失敗時のフレーム
+          ・左右に投げ分ける事が可能
+          ・投げた後にQSしにくいため、起き攻めしやすい
+      media:
+        kind: motion_player
+        displayLabel: モーション
+        skillName: Back & Towards Throw
+        characterCode: '17'
+        skillCode: '030'
 - id: command_normals
   displayTitle: "【特殊入力技】"
   entries:
-  - id: item_d42a0b9ca9
-    displayName: 通常投げ
-    children:
-    - id: item_ff65dd67e1
-      displayName: 引き寄せ頭突き 「塔頭」(たっちゅう)
-      detail:
-        displayName: 引き寄せ頭突き 「塔頭」(たっちゅう)
-        command: 小P+小K
-        startup: '2'
-        active: '1'
-        recovery: '21'
-        damage: '90'
-        stun: '17'
-        meterGain:
-          onWhiff: '0'
-          throwSuccess: '7'
-        stats:
-          投げ間合い: '20'
-        noteGroups:
-        - id: item_cf8aa5b927
-          displayTitle: 補足
-          entries:
-          - |-
-            ・硬直は投げ失敗時のフレーム
-            ・投げ成功後、レバー・ボタンに触らない状態にすることで32フレーム完全無敵がつく。レバー・ボタンに触ると解除される
-        media:
-          kind: motion_player
-          displayLabel: モーション
-          skillName: Neutral Throw
-          characterCode: '17'
-          skillCode: '029'
-    - id: item_53b3f247e7
-      displayName: 肘落とし三連突き 「荒磯」(あらいそ)
-      detail:
-        displayName: 肘落とし三連突き 「荒磯」(あらいそ)
-        command: |-
-          →+小P+小K
-          ←+小P+小K
-        startup: '2'
-        active: '1'
-        recovery: '21'
-        damage: '150'
-        stun: '13'
-        meterGain:
-          onWhiff: '0'
-          throwSuccess: '7'
-        stats:
-          投げ間合い: '20'
-        noteGroups:
-        - id: item_cf8aa5b927
-          displayTitle: 補足
-          entries:
-          - |-
-            ・硬直は投げ失敗時のフレーム
-            ・左右に投げ分ける事が可能
-            ・投げた後にQSしにくいため、起き攻めしやすい
-        media:
-          kind: motion_player
-          displayLabel: モーション
-          skillName: Back & Towards Throw
-          characterCode: '17'
-          skillCode: '030'
   - id: item_ac52a72820
     displayName: リープアタック
     detail:

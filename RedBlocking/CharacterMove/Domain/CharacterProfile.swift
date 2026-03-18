@@ -33,7 +33,7 @@ struct CharacterProfile: Decodable, Equatable, Hashable {
             throw DecodingError.dataCorruptedError(
                 forKey: .moveGroups,
                 in: container,
-                debugDescription: "moveGroups must contain the 5 fixed group ids in schema order."
+                debugDescription: "moveGroups must contain the 6 fixed group ids in schema order."
             )
         }
     }
@@ -81,6 +81,7 @@ struct MoveGroup: Decodable, Equatable, Hashable {
 enum MoveGroupID: String, CaseIterable, Decodable, Equatable, Hashable {
     case airNormals = "air_normals"
     case groundNormals = "ground_normals"
+    case normalThrows = "normal_throws"
     case commandNormals = "command_normals"
     case specialMoves = "special_moves"
     case superArts = "super_arts"

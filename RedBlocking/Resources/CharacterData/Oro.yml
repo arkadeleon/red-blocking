@@ -862,104 +862,104 @@ moveGroups:
           skillName: Crouching Roundhouse
           characterCode: '09'
           skillCode: '022'
+- id: normal_throws
+  displayTitle: "【通常投げ】"
+  entries:
+  - id: item_9419bb7a45
+    displayName: 首締め肩車
+    detail:
+      displayName: 首締め肩車
+      command: |-
+        小P+小K
+        →+小P+小K
+      startup: '2'
+      active: '1'
+      recovery: '21'
+      damage: 115(6ヒット)
+      stun: 20(6ヒット)
+      meterGain:
+        onWhiff: '0'
+        throwSuccess: |-
+          12(6ヒット時)
+          (2×6)
+      stats:
+        投げ間合い: '25'
+      noteGroups:
+      - id: item_cf8aa5b927
+        displayTitle: 補足
+        entries:
+        - |-
+          ・硬直は投げ失敗時のフレーム
+          ・ボタン連打でヒット数が増加。 最大ヒット数は「6」
+          ・相手がその場でダウンするため起き攻めに移行しやすい
+          ・投げた後、一部のキャラに対しダッシュで裏回りが可能
+          ・オロのN投げに対して、相手キャラが少し遅めにGDした場合、位置が入れ替わる現象がおきる
+      media:
+        kind: motion_player
+        displayLabel: モーション
+        skillName: Throw
+        characterCode: '09'
+        skillCode: '030'
+  - id: item_bdf168102b
+    displayName: 巴投げ
+    detail:
+      displayName: 巴投げ
+      command: "←+小P+小K"
+      startup: '2'
+      active: '1'
+      recovery: '21'
+      damage: '120'
+      stun: '15'
+      meterGain:
+        onWhiff: '0'
+        throwSuccess: '7'
+      stats:
+        投げ間合い: '25'
+      noteGroups:
+      - id: item_cf8aa5b927
+        displayTitle: 補足
+        entries:
+        - |-
+          ・硬直は投げ失敗時のフレーム
+          ・相手を後方に約1画面分投げる。画面端へ追い詰めたい時に使用
+      media:
+        kind: motion_player
+        displayLabel: モーション
+        skillName: Back + Throw
+        characterCode: '09'
+        skillCode: '031'
+  - id: item_f48250a668
+    displayName: 空中地獄車
+    detail:
+      displayName: 空中地獄車
+      command: 空中で小P+小K
+      startup: '6'
+      active: '1'
+      recovery: "―"
+      damage: '180'
+      stun: '15'
+      meterGain:
+        onWhiff: '0'
+        throwSuccess: '7'
+      stats:
+        投げ間合い 前方: '19'
+        投げ間合い 上下: 62～91
+      noteGroups:
+      - id: item_cf8aa5b927
+        displayTitle: 補足
+        entries:
+        - |-
+          ・空中投げ
+          ・ダメージが高いため、空中BLを狙っている相手や空中技をBLした後などに狙っていく
+      media:
+        kind: motion_player
+        displayLabel: モーション
+        skillName: Air Throw
+        characterCode: '09'
+        skillCode: '032'
 - id: command_normals
   displayTitle: "【特殊入力技】"
   entries:
-  - id: item_d42a0b9ca9
-    displayName: 通常投げ
-    children:
-    - id: item_9419bb7a45
-      displayName: 首締め肩車
-      detail:
-        displayName: 首締め肩車
-        command: |-
-          小P+小K
-          →+小P+小K
-        startup: '2'
-        active: '1'
-        recovery: '21'
-        damage: 115(6ヒット)
-        stun: 20(6ヒット)
-        meterGain:
-          onWhiff: '0'
-          throwSuccess: |-
-            12(6ヒット時)
-            (2×6)
-        stats:
-          投げ間合い: '25'
-        noteGroups:
-        - id: item_cf8aa5b927
-          displayTitle: 補足
-          entries:
-          - |-
-            ・硬直は投げ失敗時のフレーム
-            ・ボタン連打でヒット数が増加。 最大ヒット数は「6」
-            ・相手がその場でダウンするため起き攻めに移行しやすい
-            ・投げた後、一部のキャラに対しダッシュで裏回りが可能
-            ・オロのN投げに対して、相手キャラが少し遅めにGDした場合、位置が入れ替わる現象がおきる
-        media:
-          kind: motion_player
-          displayLabel: モーション
-          skillName: Throw
-          characterCode: '09'
-          skillCode: '030'
-    - id: item_bdf168102b
-      displayName: 巴投げ
-      detail:
-        displayName: 巴投げ
-        command: "←+小P+小K"
-        startup: '2'
-        active: '1'
-        recovery: '21'
-        damage: '120'
-        stun: '15'
-        meterGain:
-          onWhiff: '0'
-          throwSuccess: '7'
-        stats:
-          投げ間合い: '25'
-        noteGroups:
-        - id: item_cf8aa5b927
-          displayTitle: 補足
-          entries:
-          - |-
-            ・硬直は投げ失敗時のフレーム
-            ・相手を後方に約1画面分投げる。画面端へ追い詰めたい時に使用
-        media:
-          kind: motion_player
-          displayLabel: モーション
-          skillName: Back + Throw
-          characterCode: '09'
-          skillCode: '031'
-    - id: item_f48250a668
-      displayName: 空中地獄車
-      detail:
-        displayName: 空中地獄車
-        command: 空中で小P+小K
-        startup: '6'
-        active: '1'
-        recovery: "―"
-        damage: '180'
-        stun: '15'
-        meterGain:
-          onWhiff: '0'
-          throwSuccess: '7'
-        stats:
-          投げ間合い 前方: '19'
-          投げ間合い 上下: 62～91
-        noteGroups:
-        - id: item_cf8aa5b927
-          displayTitle: 補足
-          entries:
-          - |-
-            ・空中投げ
-            ・ダメージが高いため、空中BLを狙っている相手や空中技をBLした後などに狙っていく
-        media:
-          kind: motion_player
-          displayLabel: モーション
-          skillName: Air Throw
-          characterCode: '09'
-          skillCode: '032'
   - id: item_ac52a72820
     displayName: リープアタック
     detail:

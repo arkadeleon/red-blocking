@@ -751,75 +751,75 @@ moveGroups:
           skillName: Crouching Roundhouse
           characterCode: '13'
           skillCode: '015'
+- id: normal_throws
+  displayTitle: "【通常投げ】"
+  entries:
+  - id: item_467362e0ce
+    displayName: デストロイクロー
+    detail:
+      displayName: デストロイクロー
+      command: 小P+小K
+      startup: '2'
+      active: '1'
+      recovery: '21'
+      damage: |-
+        100(6ヒット時)
+        (25×6)
+      stun: |-
+        18(6ヒット時)
+        (5×6)
+      meterGain:
+        onWhiff: '0'
+        throwSuccess: 12(6ヒット時)(2×6)
+      stats:
+        投げ間合い: '26'
+      noteGroups:
+      - id: item_cf8aa5b927
+        displayTitle: 補足
+        entries:
+        - |-
+          ・硬直は投げ失敗時のフレーム
+          ・ボタン連打でヒット数が増加。 最大ヒット数は「6」
+          ・ユン、ヤン、春麗に対して決めた時、最速上エイジスで拾い直してコンボに行くことが可能
+      media:
+        kind: motion_player
+        displayLabel: モーション
+        skillName: Neutral Throw
+        characterCode: '13'
+        skillCode: '022'
+  - id: item_d8b05d7dd0
+    displayName: スパルタンボム
+    detail:
+      displayName: スパルタンボム
+      command: |-
+        →+小P+小K
+        ←+小P+小K
+      startup: '2'
+      active: '1'
+      recovery: '21'
+      damage: '140'
+      stun: '9'
+      meterGain:
+        onWhiff: '0'
+        throwSuccess: '7'
+      stats:
+        投げ間合い: '26'
+      noteGroups:
+      - id: item_cf8aa5b927
+        displayTitle: 補足
+        entries:
+        - |-
+          ・硬直は投げ失敗時のフレーム
+          ・左右に投げ分ける事が可能。 端に追い込まれた時に位置を入れ替える時に有効
+      media:
+        kind: motion_player
+        displayLabel: モーション
+        skillName: Throw
+        characterCode: '13'
+        skillCode: '023'
 - id: command_normals
   displayTitle: "【特殊入力技】"
   entries:
-  - id: item_d42a0b9ca9
-    displayName: 通常投げ
-    children:
-    - id: item_467362e0ce
-      displayName: デストロイクロー
-      detail:
-        displayName: デストロイクロー
-        command: 小P+小K
-        startup: '2'
-        active: '1'
-        recovery: '21'
-        damage: |-
-          100(6ヒット時)
-          (25×6)
-        stun: |-
-          18(6ヒット時)
-          (5×6)
-        meterGain:
-          onWhiff: '0'
-          throwSuccess: 12(6ヒット時)(2×6)
-        stats:
-          投げ間合い: '26'
-        noteGroups:
-        - id: item_cf8aa5b927
-          displayTitle: 補足
-          entries:
-          - |-
-            ・硬直は投げ失敗時のフレーム
-            ・ボタン連打でヒット数が増加。 最大ヒット数は「6」
-            ・ユン、ヤン、春麗に対して決めた時、最速上エイジスで拾い直してコンボに行くことが可能
-        media:
-          kind: motion_player
-          displayLabel: モーション
-          skillName: Neutral Throw
-          characterCode: '13'
-          skillCode: '022'
-    - id: item_d8b05d7dd0
-      displayName: スパルタンボム
-      detail:
-        displayName: スパルタンボム
-        command: |-
-          →+小P+小K
-          ←+小P+小K
-        startup: '2'
-        active: '1'
-        recovery: '21'
-        damage: '140'
-        stun: '9'
-        meterGain:
-          onWhiff: '0'
-          throwSuccess: '7'
-        stats:
-          投げ間合い: '26'
-        noteGroups:
-        - id: item_cf8aa5b927
-          displayTitle: 補足
-          entries:
-          - |-
-            ・硬直は投げ失敗時のフレーム
-            ・左右に投げ分ける事が可能。 端に追い込まれた時に位置を入れ替える時に有効
-        media:
-          kind: motion_player
-          displayLabel: モーション
-          skillName: Throw
-          characterCode: '13'
-          skillCode: '023'
   - id: item_ac52a72820
     displayName: リープアタック
     detail:

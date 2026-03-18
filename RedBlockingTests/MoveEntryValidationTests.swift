@@ -204,6 +204,9 @@ private enum InvalidYAML {
       - id: air_normals
         displayTitle: "Air"
         entries: []
+      - id: normal_throws
+        displayTitle: "Throws"
+        entries: []
       - id: command_normals
         displayTitle: "Command"
         entries: []
@@ -244,6 +247,9 @@ private enum InvalidYAML {
       - id: ground_normals
         displayTitle: "Ground"
         entries: []
+      - id: normal_throws
+        displayTitle: "Throws"
+        entries: []
       - id: command_normals
         displayTitle: "Command"
         entries: []
@@ -273,6 +279,9 @@ private enum InvalidYAML {
             entries: []
           - id: ground_normals
             displayTitle: "Ground"
+            entries: []
+          - id: normal_throws
+            displayTitle: "Throws"
             entries: []
           - id: command_normals
             displayTitle: "Command"

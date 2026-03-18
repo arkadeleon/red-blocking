@@ -878,106 +878,106 @@ moveGroups:
           skillName: Crouching Roundhouse
           characterCode: '11'
           skillCode: '022'
+- id: normal_throws
+  displayTitle: "【通常投げ】"
+  entries:
+  - id: item_f6dbeea267
+    displayName: 膝蹴り
+    detail:
+      displayName: 膝蹴り
+      command: 小P+小K
+      startup: '2'
+      active: '1'
+      recovery: '21'
+      damage: |-
+        160(6ヒット時)
+        (40×6)
+      stun: |-
+        12(6ヒット時)
+        (3×6)
+      meterGain:
+        onWhiff: '0'
+        throwSuccess: |-
+          12(6ヒット時)
+          (2×6)
+      stats:
+        投げ間合い: '24'
+      noteGroups:
+      - id: item_cf8aa5b927
+        displayTitle: 補足
+        entries:
+        - |-
+          ・硬直は投げ失敗時のフレーム
+          ・ボタン連打でヒット数が増加。 最大ヒット数は「6」
+          ・投げた後ほぼ距離が離れないため起き攻めがしやすい
+          ・旧基板では対まこと戦においてN投げでKOするとバグってフリーズする。ちなみに新基板、家庭用では修正済み
+      media:
+        kind: motion_player
+        displayLabel: モーション
+        skillName: Neutral Throw
+        characterCode: '11'
+        skillCode: '032'
+  - id: item_abf23e752f
+    displayName: 背負い投げ
+    detail:
+      displayName: 背負い投げ
+      command: "→+小P+小K"
+      startup: '2'
+      active: '1'
+      recovery: '21'
+      damage: '120'
+      stun: '9'
+      meterGain:
+        onWhiff: '0'
+        throwSuccess: '7'
+      stats:
+        投げ間合い: '24'
+      noteGroups:
+      - id: item_cf8aa5b927
+        displayTitle: 補足
+        entries:
+        - |-
+          ・硬直は投げ失敗時のフレーム
+          ・相手をその場で地面に叩きつけるため、膝蹴りほどではないが起き攻めに移行しやすい
+          ・歩きながら使えるので、端攻めの際に強力
+      media:
+        kind: motion_player
+        displayLabel: モーション
+        skillName: Towards + Throw
+        characterCode: '11'
+        skillCode: '034'
+  - id: item_5c49c72701
+    displayName: 地獄車
+    detail:
+      displayName: 地獄車
+      command: "←+小P+小K"
+      startup: '2'
+      active: '1'
+      recovery: '21'
+      damage: '110'
+      stun: '15'
+      meterGain:
+        onWhiff: '0'
+        throwSuccess: '7'
+      stats:
+        投げ間合い: '24'
+      noteGroups:
+      - id: item_cf8aa5b927
+        displayTitle: 補足
+        entries:
+        - |-
+          ・硬直は投げ失敗時のフレーム
+          ・威力は低いが移動距離が長いため、画面端での起き攻めに移行しやすい
+          ・自キャラが画面端にいるときにこの投げを決めた場合、SA3で追撃可能(ただし1ヒット)
+      media:
+        kind: motion_player
+        displayLabel: モーション
+        skillName: Back + Throw
+        characterCode: '11'
+        skillCode: '033'
 - id: command_normals
   displayTitle: "【特殊入力技】"
   entries:
-  - id: item_d42a0b9ca9
-    displayName: 通常投げ
-    children:
-    - id: item_f6dbeea267
-      displayName: 膝蹴り
-      detail:
-        displayName: 膝蹴り
-        command: 小P+小K
-        startup: '2'
-        active: '1'
-        recovery: '21'
-        damage: |-
-          160(6ヒット時)
-          (40×6)
-        stun: |-
-          12(6ヒット時)
-          (3×6)
-        meterGain:
-          onWhiff: '0'
-          throwSuccess: |-
-            12(6ヒット時)
-            (2×6)
-        stats:
-          投げ間合い: '24'
-        noteGroups:
-        - id: item_cf8aa5b927
-          displayTitle: 補足
-          entries:
-          - |-
-            ・硬直は投げ失敗時のフレーム
-            ・ボタン連打でヒット数が増加。 最大ヒット数は「6」
-            ・投げた後ほぼ距離が離れないため起き攻めがしやすい
-            ・旧基板では対まこと戦においてN投げでKOするとバグってフリーズする。ちなみに新基板、家庭用では修正済み
-        media:
-          kind: motion_player
-          displayLabel: モーション
-          skillName: Neutral Throw
-          characterCode: '11'
-          skillCode: '032'
-    - id: item_abf23e752f
-      displayName: 背負い投げ
-      detail:
-        displayName: 背負い投げ
-        command: "→+小P+小K"
-        startup: '2'
-        active: '1'
-        recovery: '21'
-        damage: '120'
-        stun: '9'
-        meterGain:
-          onWhiff: '0'
-          throwSuccess: '7'
-        stats:
-          投げ間合い: '24'
-        noteGroups:
-        - id: item_cf8aa5b927
-          displayTitle: 補足
-          entries:
-          - |-
-            ・硬直は投げ失敗時のフレーム
-            ・相手をその場で地面に叩きつけるため、膝蹴りほどではないが起き攻めに移行しやすい
-            ・歩きながら使えるので、端攻めの際に強力
-        media:
-          kind: motion_player
-          displayLabel: モーション
-          skillName: Towards + Throw
-          characterCode: '11'
-          skillCode: '034'
-    - id: item_5c49c72701
-      displayName: 地獄車
-      detail:
-        displayName: 地獄車
-        command: "←+小P+小K"
-        startup: '2'
-        active: '1'
-        recovery: '21'
-        damage: '110'
-        stun: '15'
-        meterGain:
-          onWhiff: '0'
-          throwSuccess: '7'
-        stats:
-          投げ間合い: '24'
-        noteGroups:
-        - id: item_cf8aa5b927
-          displayTitle: 補足
-          entries:
-          - |-
-            ・硬直は投げ失敗時のフレーム
-            ・威力は低いが移動距離が長いため、画面端での起き攻めに移行しやすい
-            ・自キャラが画面端にいるときにこの投げを決めた場合、SA3で追撃可能(ただし1ヒット)
-        media:
-          kind: motion_player
-          displayLabel: モーション
-          skillName: Back + Throw
-          characterCode: '11'
-          skillCode: '033'
   - id: item_ac52a72820
     displayName: リープアタック
     detail:

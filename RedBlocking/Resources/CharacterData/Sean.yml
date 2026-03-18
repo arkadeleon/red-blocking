@@ -844,68 +844,68 @@ moveGroups:
           skillName: Crouching Roundhouse
           characterCode: '12'
           skillCode: '021'
+- id: normal_throws
+  displayTitle: "【通常投げ】"
+  entries:
+  - id: item_e68ccaca0b
+    displayName: セオイスルー
+    detail:
+      displayName: セオイスルー
+      command: |-
+        小P+小K
+        →+小P+小K
+      startup: '2'
+      active: '1'
+      recovery: '21'
+      damage: '120'
+      stun: '11'
+      meterGain:
+        onWhiff: '0'
+        throwSuccess: '7'
+      stats:
+        投げ間合い: '20'
+      noteGroups:
+      - id: item_cf8aa5b927
+        displayTitle: 補足
+        entries:
+        - |-
+          ・硬直は投げ失敗時のフレーム
+          ・投げた後、ほぼ距離が離れないため起き攻めがしやすい
+      media:
+        kind: motion_player
+        displayLabel: モーション
+        skillName: Throw
+        characterCode: '12'
+        skillCode: '030'
+  - id: item_918dc41165
+    displayName: トモエスルー
+    detail:
+      displayName: トモエスルー
+      command: "←+小P+小K"
+      startup: '2'
+      active: '1'
+      recovery: '21'
+      damage: '140'
+      stun: '5'
+      meterGain:
+        onWhiff: '0'
+        throwSuccess: '7'
+      stats:
+        投げ間合い: '20'
+      noteGroups:
+      - id: item_cf8aa5b927
+        displayTitle: 補足
+        entries:
+        - "・硬直は投げ失敗時のフレーム \n・相手と場所を入れ替える事が可能。また距離が離れるが、端に追い込みやすい"
+      media:
+        kind: motion_player
+        displayLabel: モーション
+        skillName: Back + Throw
+        characterCode: '12'
+        skillCode: '031'
 - id: command_normals
   displayTitle: "【特殊入力技】"
   entries:
-  - id: item_d42a0b9ca9
-    displayName: 通常投げ
-    children:
-    - id: item_e68ccaca0b
-      displayName: セオイスルー
-      detail:
-        displayName: セオイスルー
-        command: |-
-          小P+小K
-          →+小P+小K
-        startup: '2'
-        active: '1'
-        recovery: '21'
-        damage: '120'
-        stun: '11'
-        meterGain:
-          onWhiff: '0'
-          throwSuccess: '7'
-        stats:
-          投げ間合い: '20'
-        noteGroups:
-        - id: item_cf8aa5b927
-          displayTitle: 補足
-          entries:
-          - |-
-            ・硬直は投げ失敗時のフレーム
-            ・投げた後、ほぼ距離が離れないため起き攻めがしやすい
-        media:
-          kind: motion_player
-          displayLabel: モーション
-          skillName: Throw
-          characterCode: '12'
-          skillCode: '030'
-    - id: item_918dc41165
-      displayName: トモエスルー
-      detail:
-        displayName: トモエスルー
-        command: "←+小P+小K"
-        startup: '2'
-        active: '1'
-        recovery: '21'
-        damage: '140'
-        stun: '5'
-        meterGain:
-          onWhiff: '0'
-          throwSuccess: '7'
-        stats:
-          投げ間合い: '20'
-        noteGroups:
-        - id: item_cf8aa5b927
-          displayTitle: 補足
-          entries:
-          - "・硬直は投げ失敗時のフレーム \n・相手と場所を入れ替える事が可能。また距離が離れるが、端に追い込みやすい"
-        media:
-          kind: motion_player
-          displayLabel: モーション
-          skillName: Back + Throw
-          characterCode: '12'
-          skillCode: '031'
   - id: item_ac52a72820
     displayName: リープアタック
     detail:
