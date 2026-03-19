@@ -13,7 +13,6 @@ import SwiftUI
 @Observable
 final class CharacterListModel {
     private let rosterLayout = CharacterRosterLayout.streetFighterIIIThirdStrike
-    private let characterRepository: CharacterRepository
     private let navigation: AppNavigationModel
 
     private(set) var characters: [CharacterSelection] = []
@@ -28,31 +27,21 @@ final class CharacterListModel {
         }
     }
 
-    init(
-        characterRepository: CharacterRepository = CharacterRepository(),
-        navigation: AppNavigationModel
-    ) {
-        self.characterRepository = characterRepository
+    init(navigation: AppNavigationModel) {
         self.navigation = navigation
         loadCharacters()
     }
 
     func loadCharacters() {
-        do {
-            let loadedCharacters = try characterRepository.loadCharacters().map(CharacterSelection.init)
-            let previousSelectionID = selectedCharacter?.id
+        let loadedCharacters = Character.allCases.map(CharacterSelection.init)
+        let previousSelectionID = selectedCharacter?.id
 
-            characters = loadedCharacters
-            errorMessage = nil
+        characters = loadedCharacters
+        errorMessage = nil
 
-            if let previousSelectionID {
-                selectedCharacter = loadedCharacters.first { $0.id == previousSelectionID }
-            } else {
-                selectedCharacter = nil
-            }
-        } catch {
-            characters = []
-            errorMessage = "Couldn't load the character list."
+        if let previousSelectionID {
+            selectedCharacter = loadedCharacters.first { $0.id == previousSelectionID }
+        } else {
             selectedCharacter = nil
         }
     }

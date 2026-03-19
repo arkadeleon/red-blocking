@@ -13,30 +13,22 @@ struct CharacterRosterLayout: Hashable {
 
     static let streetFighterIIIThirdStrike = CharacterRosterLayout(
         rows: [
-            CharacterRosterRow(slots: [nil, .character("Yun"), nil]),
-            CharacterRosterRow(slots: [.character("Gouki"), .character("Remy"), .character("Ryu")]),
-            CharacterRosterRow(slots: [.character("Urien"), .character("Q"), .character("Oro")]),
-            CharacterRosterRow(slots: [.character("Necro"), .character("Chun-Li"), .character("Dudley")]),
-            CharacterRosterRow(slots: [.character("Ibuki"), .character("Makoto"), .character("Elena")]),
-            CharacterRosterRow(slots: [.character("Sean"), .character("Twelve"), .character("Hugo")]),
-            CharacterRosterRow(slots: [.character("Alex"), .character("Yang"), .character("Ken")]),
-            CharacterRosterRow(slots: [nil, .gillPlaceholder, nil]),
+            CharacterRosterRow(characters: [nil, .yun, nil]),
+            CharacterRosterRow(characters: [.gouki, .remy, .ryu]),
+            CharacterRosterRow(characters: [.urien, .q, .oro]),
+            CharacterRosterRow(characters: [.necro, .chunLi, .dudley]),
+            CharacterRosterRow(characters: [.ibuki, .makoto, .elena]),
+            CharacterRosterRow(characters: [.sean, .twelve, .hugo]),
+            CharacterRosterRow(characters: [.alex, .yang, .ken]),
+            CharacterRosterRow(characters: [nil, .gill, nil]),
         ]
     )
 
-    var defaultCharacterTitle: String? {
-        rows
-            .flatMap(\.slots)
-            .compactMap { $0 }
-            .compactMap(\.playableCharacterTitle)
-            .first
-    }
-
-    func defaultCharacter(from characters: [CharacterSelection]) -> CharacterSelection? {
-        guard let defaultCharacterTitle else {
+    func defaultCharacter(from selections: [CharacterSelection]) -> CharacterSelection? {
+        guard let character = rows.flatMap(\.characters).compactMap({ $0 }).first(where: { !$0.isLocked }) else {
             return nil
         }
 
-        return characters.first { $0.title == defaultCharacterTitle }
+        return selections.first { $0.title == character.name }
     }
 }

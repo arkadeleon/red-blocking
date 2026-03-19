@@ -13,6 +13,7 @@ struct CharacterSelection: Hashable, Identifiable {
     let moveResourceName: String
     let rowImageName: String
     let backgroundImageName: String
+    let isLocked: Bool
 
     var id: String {
         moveResourceName
@@ -27,9 +28,10 @@ struct CharacterSelection: Hashable, Identifiable {
     }
 
     init(character: Character) {
-        title = character.rowTitle
-        moveResourceName = character.next
-        rowImageName = character.rowImage
-        backgroundImageName = character.nextBackgroundImage
+        title = character.name
+        moveResourceName = character.moveResourceName
+        rowImageName = character.rowImageName
+        backgroundImageName = character.backgroundImageName
+        isLocked = character.isLocked
     }
 }

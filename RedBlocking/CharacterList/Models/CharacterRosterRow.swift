@@ -9,5 +9,5 @@
 import Foundation
 
 struct CharacterRosterRow: Hashable {
-    let slots: [CharacterRosterSlot?]
+    let characters: [Character?]
 }

@@ -12,7 +12,6 @@ import Observation
 @Observable
 final class AppModel {
     let settings: AppSettings
-    let characterRepository: CharacterRepository
     let moveRepository: MoveRepository
     let motionRepository: MotionRepository
     let navigation: AppNavigationModel
@@ -20,7 +19,6 @@ final class AppModel {
 
     init(
         settings: AppSettings? = nil,
-        characterRepository: CharacterRepository = CharacterRepository(),
         moveRepository: MoveRepository = MoveRepository(),
         motionRepository: MotionRepository = MotionRepository(),
         navigation: AppNavigationModel? = nil,
@@ -28,7 +26,6 @@ final class AppModel {
     ) {
         let resolvedSettings = settings ?? .standard
         self.settings = resolvedSettings
-        self.characterRepository = characterRepository
         self.moveRepository = moveRepository
         self.motionRepository = motionRepository
         let resolvedNavigation = navigation ?? AppNavigationModel(
@@ -36,7 +33,6 @@ final class AppModel {
         )
         self.navigation = resolvedNavigation
         self.characterList = characterList ?? CharacterListModel(
-            characterRepository: characterRepository,
             navigation: resolvedNavigation
         )
     }

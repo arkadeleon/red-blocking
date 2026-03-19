@@ -30,7 +30,7 @@ struct MoveRepository {
     }
 
     func loadProfile(for character: Character) throws -> CharacterProfile {
-        try loadProfile(resourceName: character.next)
+        try loadProfile(resourceName: character.moveResourceName)
     }
 
     func loadProfile(resourceName: String) throws -> CharacterProfile {
@@ -45,7 +45,7 @@ struct MoveRepository {
     }
 
     func loadBrowserPage(for character: Character) throws -> MoveBrowserPage {
-        try loadBrowserPage(resourceName: character.next)
+        try loadBrowserPage(resourceName: character.moveResourceName)
     }
 
     func loadBrowserPage(resourceName: String) throws -> MoveBrowserPage {
