@@ -1484,600 +1484,286 @@ moveGroups:
         skillCode: '046'
   - id: item_f327a51d0b
     displayName: 幻影陣(げんえいじん)
-    children:
-    - id: item_838e702fbc
-      displayName: 技名
-      detail:
-        displayName: 幻影陣(げんえいじん)
-    - id: item_49b7386bc1
-      displayName: コマンド
-      detail:
-        displayName: コマンド
-        command: 236236+P
-    - id: item_1143708263
-      displayName: ストック数
-      detail:
-        displayName: ストック数
-        stats:
-          ストック数: '1'
-    - id: item_0b597471fb
-      displayName: ゲージの長さ
-      detail:
-        displayName: ゲージの長さ
-        stats:
-          ゲージの長さ: 72ドット
-    - id: item_5d6ebc9016
-      displayName: ガード
-      detail:
-        displayName: ガード
+    detail:
+      displayName: 幻影陣(げんえいじん)
+      command: 236236+P
+      guard: "―"
+      blocking: "―"
+      startup: '10'
+      active: 270(4.5秒)
+      recovery: "―"
+      damage: "―"
+      chipDamage: "―"
+      stun: "―"
+      stunReduction: "―"
+      frameAdvantage:
         guard: "―"
-    - id: bl
-      displayName: BL
-      detail:
-        displayName: BL
-        blocking: "―"
-    - id: item_08b61ad07f
-      displayName: 発生
-      detail:
-        displayName: 発生
-        startup: '10'
-    - id: item_50f147eace
-      displayName: 持続
-      detail:
-        displayName: 持続
-        active: 270(4.5秒)
-    - id: item_d6852e217f
-      displayName: 硬直
-      detail:
-        displayName: 硬直
-        recovery: "―"
-    - id: item_60d9b0638d
-      displayName: 攻撃力
-      detail:
-        displayName: 攻撃力
-        damage: "―"
-    - id: item_2d84a7bb48
-      displayName: ケズリ
-      detail:
-        displayName: ケズリ
-        chipDamage: "―"
-    - id: item_b52816980f
-      displayName: スタン値
-      detail:
-        displayName: スタン値
-        stun: "―"
-    - id: item_f32d520a6f
-      displayName: 削減値
-      detail:
-        displayName: 削減値
-        stunReduction: "―"
-    - id: item_5d6ebc9016_2
-      displayName: ガード
-      detail:
-        displayName: ガード
-        frameAdvantage:
-          guard: "―"
-    - id: item_1272286f89
-      displayName: 立ヒット
-      detail:
-        displayName: 立ヒット
-        frameAdvantage:
-          standingHit: "―"
-    - id: item_a3b78ed257
-      displayName: 屈ヒット
-      detail:
-        displayName: 屈ヒット
-        frameAdvantage:
-          crouchingHit: "―"
-    - id: 50_64_67_7_sa_2_3_tckk_pp4p_0_k2_1_2146_2_k_3_p_k_4_21464_214_6k_6k_214kp_p7k_k2_p_p_p_1_p_2_214_3_p_k_4_p_k_5_p_1_7_21_4kp
-      displayName: "・コマンド完成後、暗転50フレーム、相手行動不能時間64フレーム。コマンド完成から67フレーム間無敵 \n・攻撃発生7フレーム前に無敵終了。食らい判定出現(技を重ねられていたら潰されるが、幻影陣は発動する) \n・攻撃力が低下し、攻撃動作がすべて高速化、全ての技にSA判定、キャンセル可能、空中コンボ判定&空中ヒット時にダウン属性、削減値リセットがつく\n・鉄山靠が2ヒット、絶招歩法が3ヒット技に変化\n・地上TCの屈大K→立大Kと、近(遠)立中P→立大P→4大Pが使用不可になる\n・技を途中で切ってもダメージ補正が「0」にならない\n\n【移動虎撲子】\n幻影ユンでの上級テクニックで、「立小Kを2フレーム以内に空キャンセルして虎撲子を出す事」で成立するテクニック。\n入力方法は\n　1.レバーを2146と入力\n　2.(幻影陣中の)立小Kを出す\n　3.スライド入力でPボタンを押し、立小Kを空キャンセルし、虎撲子を当てる\n　4.2146と入力するのは最後の4入力で後ろに下がってしまう可能性を防ぐため。もちろん214入力でも可能\nまた移動虎撲子はレバー部分の先行入力が出来るため、幻影コンボの最中に『6中K→（6中Kヒット中に）214とレバー入力→着地と同時に小KとPずらし押し』と入力する事でスムーズに移動虎撲子を出すことが可能。\n\n【超移動虎撲子】\n幻影ユンでの上級テクニックで、「遠立中Pを7フレーム以内にキャンセルして立小Kを出し、さらに立小Kを2フレーム以内に空キャンセルして虎撲子を出す事」で成立するテクニック。\nなお初段の遠立中Pは通常の空キャンセルではなく、レバー入力で遠立中Pをキャンセルしている点に注意。 \n幻影陣中の『虎撲子→虎撲子』、『遠立大P→虎撲子』、『打開→虎撲子』などの繋ぎが可能になる。\nまた、『虎撲子→虎撲子』部分はしっかりと間を空けないと、虎撲子のヒットバックと超移動部分がカチ合ってしまい、その場合にはノックバックを優先するため全く移動しなくなるので要注意。\n入力方法は\n　1.遠立中Pを空振りする\n　2.移動している間にレバーを214と入力\n　3.遠立中Pを空キャンセルして、(幻影陣中の)立小Kを出す\n　4.スライド入力でPボタンを押し、立小Kを空キャンセルし、移動虎撲子を当てる\n　5.まとめると、（幻影陣中に）遠立中P→（１～7以内に）レバーを2に入力→レバーを1、4と入力して小KとPをずらし押し、となる"
-      detail:
-        displayName: "・コマンド完成後、暗転50フレーム、相手行動不能時間64フレーム。コマンド完成から67フレーム間無敵 \n・攻撃発生7フレーム前に無敵終了。食らい判定出現(技を重ねられていたら潰されるが、幻影陣は発動する) \n・攻撃力が低下し、攻撃動作がすべて高速化、全ての技にSA判定、キャンセル可能、空中コンボ判定&空中ヒット時にダウン属性、削減値リセットがつく\n・鉄山靠が2ヒット、絶招歩法が3ヒット技に変化\n・地上TCの屈大K→立大Kと、近(遠)立中P→立大P→4大Pが使用不可になる\n・技を途中で切ってもダメージ補正が「0」にならない\n\n【移動虎撲子】\n幻影ユンでの上級テクニックで、「立小Kを2フレーム以内に空キャンセルして虎撲子を出す事」で成立するテクニック。\n入力方法は\n　1.レバーを2146と入力\n　2.(幻影陣中の)立小Kを出す\n　3.スライド入力でPボタンを押し、立小Kを空キャンセルし、虎撲子を当てる\n　4.2146と入力するのは最後の4入力で後ろに下がってしまう可能性を防ぐため。もちろん214入力でも可能\nまた移動虎撲子はレバー部分の先行入力が出来るため、幻影コンボの最中に『6中K→（6中Kヒット中に）214とレバー入力→着地と同時に小KとPずらし押し』と入力する事でスムーズに移動虎撲子を出すことが可能。\n\n【超移動虎撲子】\n幻影ユンでの上級テクニックで、「遠立中Pを7フレーム以内にキャンセルして立小Kを出し、さらに立小Kを2フレーム以内に空キャンセルして虎撲子を出す事」で成立するテクニック。\nなお初段の遠立中Pは通常の空キャンセルではなく、レバー入力で遠立中Pをキャンセルしている点に注意。 \n幻影陣中の『虎撲子→虎撲子』、『遠立大P→虎撲子』、『打開→虎撲子』などの繋ぎが可能になる。\nまた、『虎撲子→虎撲子』部分はしっかりと間を空けないと、虎撲子のヒットバックと超移動部分がカチ合ってしまい、その場合にはノックバックを優先するため全く移動しなくなるので要注意。\n入力方法は\n　1.遠立中Pを空振りする\n　2.移動している間にレバーを214と入力\n　3.遠立中Pを空キャンセルして、(幻影陣中の)立小Kを出す\n　4.スライド入力でPボタンを押し、立小Kを空キャンセルし、移動虎撲子を当てる\n　5.まとめると、（幻影陣中に）遠立中P→（１～7以内に）レバーを2に入力→レバーを1、4と入力して小KとPをずらし押し、となる"
-        noteGroups:
-        - id: item_cf8aa5b927
-          displayTitle: 補足
-          entries:
-          - "・コマンド完成後、暗転50フレーム、相手行動不能時間64フレーム。コマンド完成から67フレーム間無敵 \n・攻撃発生7フレーム前に無敵終了。食らい判定出現(技を重ねられていたら潰されるが、幻影陣は発動する) \n・攻撃力が低下し、攻撃動作がすべて高速化、全ての技にSA判定、キャンセル可能、空中コンボ判定&空中ヒット時にダウン属性、削減値リセットがつく\n・鉄山靠が2ヒット、絶招歩法が3ヒット技に変化\n・地上TCの屈大K→立大Kと、近(遠)立中P→立大P→4大Pが使用不可になる\n・技を途中で切ってもダメージ補正が「0」にならない\n\n【移動虎撲子】\n幻影ユンでの上級テクニックで、「立小Kを2フレーム以内に空キャンセルして虎撲子を出す事」で成立するテクニック。\n入力方法は\n　1.レバーを2146と入力\n　2.(幻影陣中の)立小Kを出す\n　3.スライド入力でPボタンを押し、立小Kを空キャンセルし、虎撲子を当てる\n　4.2146と入力するのは最後の4入力で後ろに下がってしまう可能性を防ぐため。もちろん214入力でも可能\nまた移動虎撲子はレバー部分の先行入力が出来るため、幻影コンボの最中に『6中K→（6中Kヒット中に）214とレバー入力→着地と同時に小KとPずらし押し』と入力する事でスムーズに移動虎撲子を出すことが可能。\n\n【超移動虎撲子】\n幻影ユンでの上級テクニックで、「遠立中Pを7フレーム以内にキャンセルして立小Kを出し、さらに立小Kを2フレーム以内に空キャンセルして虎撲子を出す事」で成立するテクニック。\nなお初段の遠立中Pは通常の空キャンセルではなく、レバー入力で遠立中Pをキャンセルしている点に注意。 \n幻影陣中の『虎撲子→虎撲子』、『遠立大P→虎撲子』、『打開→虎撲子』などの繋ぎが可能になる。\nまた、『虎撲子→虎撲子』部分はしっかりと間を空けないと、虎撲子のヒットバックと超移動部分がカチ合ってしまい、その場合にはノックバックを優先するため全く移動しなくなるので要注意。\n入力方法は\n　1.遠立中Pを空振りする\n　2.移動している間にレバーを214と入力\n　3.遠立中Pを空キャンセルして、(幻影陣中の)立小Kを出す\n　4.スライド入力でPボタンを押し、立小Kを空キャンセルし、移動虎撲子を当てる\n　5.まとめると、（幻影陣中に）遠立中P→（１～7以内に）レバーを2に入力→レバーを1、4と入力して小KとPをずらし押し、となる"
-    - id: item_52edcb822b
-      displayName: モーション
-      detail:
-        displayName: モーション
-        media:
-          kind: motion_player
-          displayLabel: モーション
-          skillName: Genei Jin
-          characterCode: '03'
-          skillCode: '047'
-    - id: item_0ee4ac362e
-      displayName: 幻影陣中の各技の数値
+        standingHit: "―"
+        crouchingHit: "―"
+      stats:
+        ストック数: '1'
+        ゲージの長さ: 72ドット
+      noteGroups:
+      - id: item_cf8aa5b927
+        displayTitle: 補足
+        entries:
+        - 幻影陣中の詳細な補足は「幻影陣中の各技の数値」を参照
+      media:
+        kind: motion_player
+        displayLabel: モーション
+        skillName: Genei Jin
+        characterCode: '03'
+        skillCode: '047'
+  - id: item_0ee4ac362e
+    displayName: 幻影陣中の各技の数値
+    children:
+    - id: item_0213bd1615
+      displayName: ジャンプ小パンチ
       children:
-      - id: item_0213bd1615
-        displayName: ジャンプ小パンチ
-        children:
-        - id: item_e0c2f756f3
-          displayName: 垂直ジャンプ小パンチ
-          detail:
-            displayName: 垂直ジャンプ小パンチ
-            startup: '2'
-            active: 着地まで
-            damage: '40'
-            stunReduction: '7'
-        - id: item_25ab24896c
-          displayName: 斜めジャンプ小パンチ
-          detail:
-            displayName: 斜めジャンプ小パンチ
-            startup: '2'
-            active: 着地まで
-            damage: '40'
-            stunReduction: '7'
-            media:
-              kind: motion_player
-              displayLabel: モーション
-              skillName: Jumping Jab
-              characterCode: '03'
-              skillCode: '058'
-      - id: item_a18c41f1f2
-        displayName: ジャンプ中パンチ
-        children:
-        - id: item_f37ec8ba39
-          displayName: 垂直ジャンプ中パンチ
-          detail:
-            displayName: 垂直ジャンプ中パンチ
-            startup: '3'
-            active: '7'
-            damage: '80'
-            stunReduction: '3'
-        - id: item_a7ee982c0e
-          displayName: 斜めジャンプ中パンチ
-          detail:
-            displayName: 斜めジャンプ中パンチ
-            startup: '3'
-            active: '6'
-            damage: '80'
-            stunReduction: '3'
-            media:
-              kind: motion_player
-              displayLabel: モーション
-              skillName: Jumping Strong
-              characterCode: '03'
-              skillCode: '059'
-      - id: item_18529f13be
-        displayName: ジャンプ大パンチ
-        children:
-        - id: item_ca5fa63a59
-          displayName: 垂直ジャンプ大パンチ
-          detail:
-            displayName: 垂直ジャンプ大パンチ
-            startup: '8'
-            active: '5'
-            damage: '120'
-            stunReduction: '3'
-            media:
-              kind: motion_player
-              displayLabel: モーション
-              skillName: Neutral Jumping Fierce
-              characterCode: '03'
-              skillCode: '057'
-        - id: item_c36fb09951
-          displayName: 斜めジャンプ大パンチ
-          detail:
-            displayName: 斜めジャンプ大パンチ
-            startup: '5'
-            active: '4'
-            damage: '100'
-            stunReduction: '3'
-            media:
-              kind: motion_player
-              displayLabel: モーション
-              skillName: Jumping Fierce
-              characterCode: '03'
-              skillCode: '060'
-      - id: item_a83e3f7cff
-        displayName: ジャンプ小キック
-        children:
-        - id: item_f48ae8dc16
-          displayName: 垂直ジャンプ小キック
-          detail:
-            displayName: 垂直ジャンプ小キック
-            startup: '3'
-            active: '12'
-            damage: '40'
-            stunReduction: '3'
-        - id: item_adfe5e6bc9
-          displayName: 斜めジャンプ小キック
-          detail:
-            displayName: 斜めジャンプ小キック
-            startup: '4'
-            active: '12'
-            damage: '40'
-            stunReduction: '3'
-            media:
-              kind: motion_player
-              displayLabel: モーション
-              skillName: Jumping Short
-              characterCode: '03'
-              skillCode: '068'
-      - id: item_c3103eb1f9
-        displayName: ジャンプ中キック
-        children:
-        - id: item_5280b1f280
-          displayName: 垂直ジャンプ中キック
-          detail:
-            displayName: 垂直ジャンプ中キック
-            startup: '6'
-            active: '7'
-            damage: '70'
-            stunReduction: '3'
-        - id: item_83fba48c4f
-          displayName: 斜めジャンプ中キック
-          detail:
-            displayName: 斜めジャンプ中キック
-            startup: '6'
-            active: '7'
-            damage: '70'
-            stunReduction: '3'
-            media:
-              kind: motion_player
-              displayLabel: モーション
-              skillName: Jumping Forward
-              characterCode: '03'
-              skillCode: '069'
-      - id: item_86e58a160f
-        displayName: ジャンプ大キック
-        children:
-        - id: item_3b01b3c990
-          displayName: 垂直ジャンプ大キック
-          detail:
-            displayName: 垂直ジャンプ大キック
-            startup: '5'
-            active: '5'
-            damage: '110'
-            stunReduction: '3'
-        - id: item_3e728dc7eb
-          displayName: 斜めジャンプ大キック
-          detail:
-            displayName: 斜めジャンプ大キック
-            startup: '5'
-            active: '5'
-            damage: '90'
-            stunReduction: '3'
-            media:
-              kind: motion_player
-              displayLabel: モーション
-              skillName: Jumping Roundhouse
-              characterCode: '03'
-              skillCode: '070'
-      - id: item_3ea1d5a710
-        displayName: 小パンチ
-        children:
-        - id: item_dff28b8913
-          displayName: 近距離立ち小パンチ
-          detail:
-            displayName: 近距離立ち小パンチ
-            guard: 両方
-            blocking: 両方
-            startup: '2'
-            active: '1'
-            recovery: '2'
-            damage: '20'
-            stunReduction: R
-            stats:
-              C: "○"
-            media:
-              kind: motion_player
-              displayLabel: モーション
-              skillName: Jab
-              characterCode: '03'
-              skillCode: '048'
-        - id: item_30f10178f1
-          displayName: 遠距離立ち小パンチ
-          detail:
-            displayName: 遠距離立ち小パンチ
-            guard: 両方
-            blocking: 両方
-            startup: '3'
-            active: '1'
-            recovery: '2'
-            damage: '20'
-            stunReduction: R
-            stats:
-              C: "○"
-            media:
-              kind: motion_player
-              displayLabel: モーション
-              skillName: Far Jab
-              characterCode: '03'
-              skillCode: '051'
-        - id: item_405c8e8de7
-          displayName: しゃがみ小パンチ
-          detail:
-            displayName: しゃがみ小パンチ
-            guard: 両方
-            blocking: 両方
-            startup: '2'
-            active: '2'
-            recovery: '1'
-            damage: '20'
-            stunReduction: R
-            stats:
-              C: "○"
-            media:
-              kind: motion_player
-              displayLabel: モーション
-              skillName: Crouching Jab
-              characterCode: '03'
-              skillCode: '054'
-      - id: item_e4873eadbb
-        displayName: 中パンチ
-        children:
-        - id: item_1a4ee0847e
-          displayName: 近距離立ち中パンチ
-          detail:
-            displayName: 近距離立ち中パンチ
-            guard: 両方
-            blocking: "→"
-            startup: '3'
-            active: '2'
-            recovery: '4'
-            damage: '40'
-            stunReduction: R
-            stats:
-              C: "○"
-            media:
-              kind: motion_player
-              displayLabel: モーション
-              skillName: Strong
-              characterCode: '03'
-              skillCode: '049'
-        - id: item_e006f22d12
-          displayName: 遠距離立ち中パンチ
-          detail:
-            displayName: 遠距離立ち中パンチ
-            guard: 両方
-            blocking: "→"
-            startup: '3'
-            active: '3'
-            recovery: '2'
-            damage: '40'
-            stunReduction: R
-            stats:
-              C: "×"
-            media:
-              kind: motion_player
-              displayLabel: モーション
-              skillName: Far Strong
-              characterCode: '03'
-              skillCode: '052'
-        - id: item_1a60e91335
-          displayName: しゃがみ中パンチ
-          detail:
-            displayName: しゃがみ中パンチ
-            guard: 両方
-            blocking: 両方
-            startup: '3'
-            active: '2'
-            recovery: '1'
-            damage: '40'
-            stunReduction: R
-            stats:
-              C: "○"
-            media:
-              kind: motion_player
-              displayLabel: モーション
-              skillName: Crouching Strong
-              characterCode: '03'
-              skillCode: '055'
-      - id: item_9cd6396df9
-        displayName: 大パンチ
-        children:
-        - id: item_01bc811525
-          displayName: 近距離立ち大パンチ
-          detail:
-            displayName: 近距離立ち大パンチ
-            guard: 両方
-            blocking: "→"
-            startup: '6'
-            active: '2'
-            recovery: '1'
-            damage: 80(40+40)
-            stunReduction: R・R
-            stats:
-              C: "○"
-            media:
-              kind: motion_player
-              displayLabel: モーション
-              skillName: Fierce
-              characterCode: '03'
-              skillCode: '050'
-        - id: item_0321a8772f
-          displayName: 遠距離立ち大パンチ
-          detail:
-            displayName: 遠距離立ち大パンチ
-            guard: 両方
-            blocking: "→"
-            startup: '6'
-            active: '2'
-            recovery: '4'
-            damage: '60'
-            stunReduction: R
-            stats:
-              C: "×"
-            media:
-              kind: motion_player
-              displayLabel: モーション
-              skillName: Far Fierce
-              characterCode: '03'
-              skillCode: '053'
-        - id: item_5fa451ab6c
-          displayName: しゃがみ大パンチ
-          detail:
-            displayName: しゃがみ大パンチ
-            guard: 両方
-            blocking: 両方
-            startup: '3'
-            active: '1'
-            recovery: '1'
-            damage: 90(50+40)
-            stunReduction: R・R
-            stats:
-              C: "×"
-            media:
-              kind: motion_player
-              displayLabel: モーション
-              skillName: Crouching Fierce
-              characterCode: '03'
-              skillCode: '056'
-      - id: item_d9b7c6ef7c
-        displayName: 小キック
-        children:
-        - id: item_c1732c476a
-          displayName: 立ち小キック
-          detail:
-            displayName: 立ち小キック
-            guard: 両方
-            blocking: 両方
-            startup: '3'
-            active: '2'
-            recovery: '1'
-            damage: '30'
-            stunReduction: R
-            stats:
-              C: "○"
-            media:
-              kind: motion_player
-              displayLabel: モーション
-              skillName: Short
-              characterCode: '03'
-              skillCode: '061'
-        - id: item_f39ad9b46e
-          displayName: しゃがみ小キック
-          detail:
-            displayName: しゃがみ小キック
-            guard: 屈
-            blocking: "↓"
-            startup: '2'
-            active: '2'
-            recovery: '1'
-            damage: '20'
-            stunReduction: R
-            stats:
-              C: "○"
-            media:
-              kind: motion_player
-              displayLabel: モーション
-              skillName: Crouching Short
-              characterCode: '03'
-              skillCode: '065'
-      - id: item_f57c120b54
-        displayName: 中キック
-        children:
-        - id: item_d81740da87
-          displayName: 近距離立ち中キック
-          detail:
-            displayName: 近距離立ち中キック
-            guard: 両方
-            blocking: "→"
-            startup: '5'
-            active: '9'
-            recovery: '1'
-            damage: '30'
-            stunReduction: R
-            stats:
-              C: "×"
-            media:
-              kind: motion_player
-              displayLabel: モーション
-              skillName: Forward
-              characterCode: '03'
-              skillCode: '062'
-        - id: item_c60a89db57
-          displayName: 遠距離立ち中キック
-          detail:
-            displayName: 遠距離立ち中キック
-            guard: 両方
-            blocking: "→"
-            startup: '6'
-            active: '2'
-            recovery: '7'
-            damage: '40'
-            stunReduction: R
-            stats:
-              C: "×"
-            media:
-              kind: motion_player
-              displayLabel: モーション
-              skillName: Far Forward
-              characterCode: '03'
-              skillCode: '063'
-        - id: item_472cfdbed3
-          displayName: しゃがみ中キック
-          detail:
-            displayName: しゃがみ中キック
-            guard: 屈
-            blocking: "↓"
-            startup: '3'
-            active: '2'
-            recovery: '4'
-            damage: '30'
-            stunReduction: R
-            stats:
-              C: "○"
-            media:
-              kind: motion_player
-              displayLabel: モーション
-              skillName: Crouching Forward
-              characterCode: '03'
-              skillCode: '066'
-      - id: item_e36c152d49
-        displayName: 大キック
-        children:
-        - id: item_dd8d899c80
-          displayName: 立ち大キック
-          detail:
-            displayName: 立ち大キック
-            guard: 両方
-            blocking: "→"
-            startup: '8'
-            active: '6'
-            recovery: '5'
-            damage: '50'
-            stunReduction: R
-            stats:
-              C: "×"
-            media:
-              kind: motion_player
-              displayLabel: モーション
-              skillName: Roundhouse
-              characterCode: '03'
-              skillCode: '064'
-        - id: item_d653890f75
-          displayName: しゃがみ大キック
-          detail:
-            displayName: しゃがみ大キック
-            guard: 屈
-            blocking: "↓"
-            startup: '8'
-            active: '2'
-            recovery: '9'
-            damage: '50'
-            stunReduction: R
-            stats:
-              C: "×"
-            media:
-              kind: motion_player
-              displayLabel: モーション
-              skillName: Crouching Roundhouse
-              characterCode: '03'
-              skillCode: '067'
-      - id: item_ac52a72820
-        displayName: リープアタック
+      - id: item_e0c2f756f3
+        displayName: 垂直ジャンプ小パンチ
         detail:
-          displayName: リープアタック
-          guard: 立
+          displayName: 垂直ジャンプ小パンチ
+          startup: '2'
+          active: 着地まで
+          damage: '40'
+          stunReduction: '7'
+      - id: item_25ab24896c
+        displayName: 斜めジャンプ小パンチ
+        detail:
+          displayName: 斜めジャンプ小パンチ
+          startup: '2'
+          active: 着地まで
+          damage: '40'
+          stunReduction: '7'
+          media:
+            kind: motion_player
+            displayLabel: モーション
+            skillName: Jumping Jab
+            characterCode: '03'
+            skillCode: '058'
+    - id: item_a18c41f1f2
+      displayName: ジャンプ中パンチ
+      children:
+      - id: item_f37ec8ba39
+        displayName: 垂直ジャンプ中パンチ
+        detail:
+          displayName: 垂直ジャンプ中パンチ
+          startup: '3'
+          active: '7'
+          damage: '80'
+          stunReduction: '3'
+      - id: item_a7ee982c0e
+        displayName: 斜めジャンプ中パンチ
+        detail:
+          displayName: 斜めジャンプ中パンチ
+          startup: '3'
+          active: '6'
+          damage: '80'
+          stunReduction: '3'
+          media:
+            kind: motion_player
+            displayLabel: モーション
+            skillName: Jumping Strong
+            characterCode: '03'
+            skillCode: '059'
+    - id: item_18529f13be
+      displayName: ジャンプ大パンチ
+      children:
+      - id: item_ca5fa63a59
+        displayName: 垂直ジャンプ大パンチ
+        detail:
+          displayName: 垂直ジャンプ大パンチ
+          startup: '8'
+          active: '5'
+          damage: '120'
+          stunReduction: '3'
+          media:
+            kind: motion_player
+            displayLabel: モーション
+            skillName: Neutral Jumping Fierce
+            characterCode: '03'
+            skillCode: '057'
+      - id: item_c36fb09951
+        displayName: 斜めジャンプ大パンチ
+        detail:
+          displayName: 斜めジャンプ大パンチ
+          startup: '5'
+          active: '4'
+          damage: '100'
+          stunReduction: '3'
+          media:
+            kind: motion_player
+            displayLabel: モーション
+            skillName: Jumping Fierce
+            characterCode: '03'
+            skillCode: '060'
+    - id: item_a83e3f7cff
+      displayName: ジャンプ小キック
+      children:
+      - id: item_f48ae8dc16
+        displayName: 垂直ジャンプ小キック
+        detail:
+          displayName: 垂直ジャンプ小キック
+          startup: '3'
+          active: '12'
+          damage: '40'
+          stunReduction: '3'
+      - id: item_adfe5e6bc9
+        displayName: 斜めジャンプ小キック
+        detail:
+          displayName: 斜めジャンプ小キック
+          startup: '4'
+          active: '12'
+          damage: '40'
+          stunReduction: '3'
+          media:
+            kind: motion_player
+            displayLabel: モーション
+            skillName: Jumping Short
+            characterCode: '03'
+            skillCode: '068'
+    - id: item_c3103eb1f9
+      displayName: ジャンプ中キック
+      children:
+      - id: item_5280b1f280
+        displayName: 垂直ジャンプ中キック
+        detail:
+          displayName: 垂直ジャンプ中キック
+          startup: '6'
+          active: '7'
+          damage: '70'
+          stunReduction: '3'
+      - id: item_83fba48c4f
+        displayName: 斜めジャンプ中キック
+        detail:
+          displayName: 斜めジャンプ中キック
+          startup: '6'
+          active: '7'
+          damage: '70'
+          stunReduction: '3'
+          media:
+            kind: motion_player
+            displayLabel: モーション
+            skillName: Jumping Forward
+            characterCode: '03'
+            skillCode: '069'
+    - id: item_86e58a160f
+      displayName: ジャンプ大キック
+      children:
+      - id: item_3b01b3c990
+        displayName: 垂直ジャンプ大キック
+        detail:
+          displayName: 垂直ジャンプ大キック
+          startup: '5'
+          active: '5'
+          damage: '110'
+          stunReduction: '3'
+      - id: item_3e728dc7eb
+        displayName: 斜めジャンプ大キック
+        detail:
+          displayName: 斜めジャンプ大キック
+          startup: '5'
+          active: '5'
+          damage: '90'
+          stunReduction: '3'
+          media:
+            kind: motion_player
+            displayLabel: モーション
+            skillName: Jumping Roundhouse
+            characterCode: '03'
+            skillCode: '070'
+    - id: item_3ea1d5a710
+      displayName: 小パンチ
+      children:
+      - id: item_dff28b8913
+        displayName: 近距離立ち小パンチ
+        detail:
+          displayName: 近距離立ち小パンチ
+          guard: 両方
+          blocking: 両方
+          startup: '2'
+          active: '1'
+          recovery: '2'
+          damage: '20'
+          stunReduction: R
+          stats:
+            C: "○"
+          media:
+            kind: motion_player
+            displayLabel: モーション
+            skillName: Jab
+            characterCode: '03'
+            skillCode: '048'
+      - id: item_30f10178f1
+        displayName: 遠距離立ち小パンチ
+        detail:
+          displayName: 遠距離立ち小パンチ
+          guard: 両方
+          blocking: 両方
+          startup: '3'
+          active: '1'
+          recovery: '2'
+          damage: '20'
+          stunReduction: R
+          stats:
+            C: "○"
+          media:
+            kind: motion_player
+            displayLabel: モーション
+            skillName: Far Jab
+            characterCode: '03'
+            skillCode: '051'
+      - id: item_405c8e8de7
+        displayName: しゃがみ小パンチ
+        detail:
+          displayName: しゃがみ小パンチ
+          guard: 両方
+          blocking: 両方
+          startup: '2'
+          active: '2'
+          recovery: '1'
+          damage: '20'
+          stunReduction: R
+          stats:
+            C: "○"
+          media:
+            kind: motion_player
+            displayLabel: モーション
+            skillName: Crouching Jab
+            characterCode: '03'
+            skillCode: '054'
+    - id: item_e4873eadbb
+      displayName: 中パンチ
+      children:
+      - id: item_1a4ee0847e
+        displayName: 近距離立ち中パンチ
+        detail:
+          displayName: 近距離立ち中パンチ
+          guard: 両方
           blocking: "→"
-          startup: '13'
-          active: '9'
-          recovery: '8'
+          startup: '3'
+          active: '2'
+          recovery: '4'
+          damage: '40'
+          stunReduction: R
+          stats:
+            C: "○"
+          media:
+            kind: motion_player
+            displayLabel: モーション
+            skillName: Strong
+            characterCode: '03'
+            skillCode: '049'
+      - id: item_e006f22d12
+        displayName: 遠距離立ち中パンチ
+        detail:
+          displayName: 遠距離立ち中パンチ
+          guard: 両方
+          blocking: "→"
+          startup: '3'
+          active: '3'
+          recovery: '2'
           damage: '40'
           stunReduction: R
           stats:
@@ -2085,280 +1771,520 @@ moveGroups:
           media:
             kind: motion_player
             displayLabel: モーション
-            skillName: Universal Overhead
+            skillName: Far Strong
             characterCode: '03'
-            skillCode: '076'
-      - id: item_02dcefb22e
-        displayName: レバー入れ技
-        children:
-        - id: item_61ab33f53c
-          displayName: 雷撃蹴
-          detail:
-            displayName: 雷撃蹴
-            guard: 立
-            blocking: "→"
-            startup: '6'
-            active: 着地まで
-            recovery: "―"
-            damage: '60'
-            stunReduction: '15'
-            stats:
-              C: "×"
-            media:
-              kind: motion_player
-              displayLabel: モーション
-              skillName: Dive Kicks
-              characterCode: '03'
-              skillCode: '073'
-        - id: item_4c5cf3978b
-          displayName: 旋風脚
-          detail:
-            displayName: 旋風脚
-            guard: 立
-            blocking: "→"
-            startup: '13'
-            active: '9'
-            recovery: '8'
-            damage: '80'
-            stunReduction: R
-            stats:
-              C: "×"
-            media:
-              kind: motion_player
-              displayLabel: モーション
-              skillName: Towards + Forward
-              characterCode: '03'
-              skillCode: '071'
-        - id: item_492596bc9e
-          displayName: 打開
-          detail:
-            displayName: 打開
-            guard: 両方
-            blocking: "→"
-            startup: '9'
-            active: '3'
-            recovery: '8'
-            damage: '60'
-            stunReduction: R
-            stats:
-              C: "×"
-            media:
-              kind: motion_player
-              displayLabel: モーション
-              skillName: Towards + Fierce
-              characterCode: '03'
-              skillCode: '072'
-      - id: item_b46a9fbcad
-        displayName: ターゲットコンボ
-        children:
-        - id: jpj6_p
-          displayName: J小P→J6+大P
-          detail:
-            displayName: J小P→J6+大P
-            guard: 立/立
-            blocking: "→"
-            startup: 2/2
-            active: 2/5
-            recovery: "―"
-            damage: 40/90
-            stunReduction: 7/3
-            stats:
-              C: "×/×"
-      - id: item_f69294370a
-        displayName: 絶招歩法
-        children:
-        - id: item_a86176a6c7
-          displayName: 絶招歩法【小】
-          detail:
-            displayName: 絶招歩法【小】
-            guard: 両方
-            blocking: "→"
-            startup: '7'
-            active: '6'
-            recovery: '7'
-            damage: 100(40+30+30)
-            chipDamage: 13(5+4+4)
-            stunReduction: R
-            media:
-              kind: motion_player
-              displayLabel: モーション
-              skillName: Zesshou Hohou
-              characterCode: '03'
-              skillCode: '081'
-        - id: item_05b7f74392
-          displayName: 絶招歩法【中】
-          detail:
-            displayName: 絶招歩法【中】
-            guard: 両方
-            blocking: "→"
-            startup: '7'
-            active: '6'
-            recovery: '7'
-            damage: 100(40+30+30)
-            chipDamage: 13(5+4+4)
-            stunReduction: R
-        - id: item_a1269a98ac
-          displayName: 絶招歩法【大】
-          detail:
-            displayName: 絶招歩法【大】
-            guard: 両方
-            blocking: "→"
-            startup: '7'
-            active: '3'
-            recovery: '7'
-            damage: 100(40+30+30)
-            chipDamage: 13(5+4+4)
-            stunReduction: R
-      - id: item_c643308888
-        displayName: 鉄山靠
-        children:
-        - id: item_5844625626
-          displayName: 鉄山靠【小】
-          detail:
-            displayName: 鉄山靠【小】
-            guard: 両方
-            blocking: 両方
-            startup: '7'
-            active: '4'
-            recovery: '8'
-            damage: 80(40+40)
-            chipDamage: 20(10+10)
-            stunReduction: R
-            media:
-              kind: motion_player
-              displayLabel: モーション
-              skillName: Tetsu Zankou (Jab)
-              characterCode: '03'
-              skillCode: '078'
-        - id: item_5d5d6460db
-          displayName: 鉄山靠【中】
-          detail:
-            displayName: 鉄山靠【中】
-            guard: 両方
-            blocking: 両方
-            startup: '8'
-            active: '5'
-            recovery: '10'
-            damage: 100(40+60)
-            chipDamage: 25(10+15)
-            stunReduction: R
-            media:
-              kind: motion_player
-              displayLabel: モーション
-              skillName: Tetsu Zankou (Strong)
-              characterCode: '03'
-              skillCode: '079'
-        - id: item_9de71e2e9f
-          displayName: 鉄山靠【大】
-          detail:
-            displayName: 鉄山靠【大】
-            guard: 両方
-            blocking: 両方
-            startup: '10'
-            active: '6'
-            recovery: '12'
-            damage: 100(40+60)
-            chipDamage: 25(10+15)
-            stunReduction: R
-            media:
-              kind: motion_player
-              displayLabel: モーション
-              skillName: Tetsu Zankou (Fierce)
-              characterCode: '03'
-              skillCode: '080'
-      - id: item_646f2502b8
-        displayName: ニ翔脚
-        children:
-        - id: item_819b17158c
-          displayName: ニ翔脚【小】
-          detail:
-            displayName: ニ翔脚【小】
-            guard: 両方
-            blocking: 両方
-            startup: '6'
-            active: '2'
-            recovery: '20'
-            damage: 80(40+40)
-            chipDamage: 20(10+10)
-            stunReduction: R
-            media:
-              kind: motion_player
-              displayLabel: モーション
-              skillName: Nishou Kyaku (Short)
-              characterCode: '03'
-              skillCode: '082'
-        - id: item_61ad938d43
-          displayName: ニ翔脚【中】
-          detail:
-            displayName: ニ翔脚【中】
-            guard: 両方
-            blocking: 両方
-            startup: '6'
-            active: '2'
-            recovery: '21'
-            damage: 80(40+40)
-            chipDamage: 20(10+10)
-            stunReduction: R
-            media:
-              kind: motion_player
-              displayLabel: モーション
-              skillName: Nishou Kyaku (Forward)
-              characterCode: '03'
-              skillCode: '083'
-        - id: item_61fddcc590
-          displayName: ニ翔脚【大】
-          detail:
-            displayName: ニ翔脚【大】
-            guard: 両方
-            blocking: 両方
-            startup: '6'
-            active: '2'
-            recovery: '22'
-            damage: 80(40+40)
-            chipDamage: 20(10+10)
-            stunReduction: R
-            media:
-              kind: motion_player
-              displayLabel: モーション
-              skillName: Nishou Kyaku (RH)
-              characterCode: '03'
-              skillCode: '084'
-      - id: item_f6aedf51a6
-        displayName: 虎撲子
+            skillCode: '052'
+      - id: item_1a60e91335
+        displayName: しゃがみ中パンチ
         detail:
-          displayName: 虎撲子
+          displayName: しゃがみ中パンチ
+          guard: 両方
+          blocking: 両方
+          startup: '3'
+          active: '2'
+          recovery: '1'
+          damage: '40'
+          stunReduction: R
+          stats:
+            C: "○"
+          media:
+            kind: motion_player
+            displayLabel: モーション
+            skillName: Crouching Strong
+            characterCode: '03'
+            skillCode: '055'
+    - id: item_9cd6396df9
+      displayName: 大パンチ
+      children:
+      - id: item_01bc811525
+        displayName: 近距離立ち大パンチ
+        detail:
+          displayName: 近距離立ち大パンチ
           guard: 両方
           blocking: "→"
+          startup: '6'
+          active: '2'
+          recovery: '1'
+          damage: 80(40+40)
+          stunReduction: R・R
+          stats:
+            C: "○"
+          media:
+            kind: motion_player
+            displayLabel: モーション
+            skillName: Fierce
+            characterCode: '03'
+            skillCode: '050'
+      - id: item_0321a8772f
+        displayName: 遠距離立ち大パンチ
+        detail:
+          displayName: 遠距離立ち大パンチ
+          guard: 両方
+          blocking: "→"
+          startup: '6'
+          active: '2'
+          recovery: '4'
+          damage: '60'
+          stunReduction: R
+          stats:
+            C: "×"
+          media:
+            kind: motion_player
+            displayLabel: モーション
+            skillName: Far Fierce
+            characterCode: '03'
+            skillCode: '053'
+      - id: item_5fa451ab6c
+        displayName: しゃがみ大パンチ
+        detail:
+          displayName: しゃがみ大パンチ
+          guard: 両方
+          blocking: 両方
+          startup: '3'
+          active: '1'
+          recovery: '1'
+          damage: 90(50+40)
+          stunReduction: R・R
+          stats:
+            C: "×"
+          media:
+            kind: motion_player
+            displayLabel: モーション
+            skillName: Crouching Fierce
+            characterCode: '03'
+            skillCode: '056'
+    - id: item_d9b7c6ef7c
+      displayName: 小キック
+      children:
+      - id: item_c1732c476a
+        displayName: 立ち小キック
+        detail:
+          displayName: 立ち小キック
+          guard: 両方
+          blocking: 両方
+          startup: '3'
+          active: '2'
+          recovery: '1'
+          damage: '30'
+          stunReduction: R
+          stats:
+            C: "○"
+          media:
+            kind: motion_player
+            displayLabel: モーション
+            skillName: Short
+            characterCode: '03'
+            skillCode: '061'
+      - id: item_f39ad9b46e
+        displayName: しゃがみ小キック
+        detail:
+          displayName: しゃがみ小キック
+          guard: 屈
+          blocking: "↓"
+          startup: '2'
+          active: '2'
+          recovery: '1'
+          damage: '20'
+          stunReduction: R
+          stats:
+            C: "○"
+          media:
+            kind: motion_player
+            displayLabel: モーション
+            skillName: Crouching Short
+            characterCode: '03'
+            skillCode: '065'
+    - id: item_f57c120b54
+      displayName: 中キック
+      children:
+      - id: item_d81740da87
+        displayName: 近距離立ち中キック
+        detail:
+          displayName: 近距離立ち中キック
+          guard: 両方
+          blocking: "→"
+          startup: '5'
+          active: '9'
+          recovery: '1'
+          damage: '30'
+          stunReduction: R
+          stats:
+            C: "×"
+          media:
+            kind: motion_player
+            displayLabel: モーション
+            skillName: Forward
+            characterCode: '03'
+            skillCode: '062'
+      - id: item_c60a89db57
+        displayName: 遠距離立ち中キック
+        detail:
+          displayName: 遠距離立ち中キック
+          guard: 両方
+          blocking: "→"
+          startup: '6'
+          active: '2'
+          recovery: '7'
+          damage: '40'
+          stunReduction: R
+          stats:
+            C: "×"
+          media:
+            kind: motion_player
+            displayLabel: モーション
+            skillName: Far Forward
+            characterCode: '03'
+            skillCode: '063'
+      - id: item_472cfdbed3
+        displayName: しゃがみ中キック
+        detail:
+          displayName: しゃがみ中キック
+          guard: 屈
+          blocking: "↓"
+          startup: '3'
+          active: '2'
+          recovery: '4'
+          damage: '30'
+          stunReduction: R
+          stats:
+            C: "○"
+          media:
+            kind: motion_player
+            displayLabel: モーション
+            skillName: Crouching Forward
+            characterCode: '03'
+            skillCode: '066'
+    - id: item_e36c152d49
+      displayName: 大キック
+      children:
+      - id: item_dd8d899c80
+        displayName: 立ち大キック
+        detail:
+          displayName: 立ち大キック
+          guard: 両方
+          blocking: "→"
+          startup: '8'
+          active: '6'
+          recovery: '5'
+          damage: '50'
+          stunReduction: R
+          stats:
+            C: "×"
+          media:
+            kind: motion_player
+            displayLabel: モーション
+            skillName: Roundhouse
+            characterCode: '03'
+            skillCode: '064'
+      - id: item_d653890f75
+        displayName: しゃがみ大キック
+        detail:
+          displayName: しゃがみ大キック
+          guard: 屈
+          blocking: "↓"
+          startup: '8'
+          active: '2'
+          recovery: '9'
+          damage: '50'
+          stunReduction: R
+          stats:
+            C: "×"
+          media:
+            kind: motion_player
+            displayLabel: モーション
+            skillName: Crouching Roundhouse
+            characterCode: '03'
+            skillCode: '067'
+    - id: item_ac52a72820
+      displayName: リープアタック
+      detail:
+        displayName: リープアタック
+        guard: 立
+        blocking: "→"
+        startup: '13'
+        active: '9'
+        recovery: '8'
+        damage: '40'
+        stunReduction: R
+        stats:
+          C: "×"
+        media:
+          kind: motion_player
+          displayLabel: モーション
+          skillName: Universal Overhead
+          characterCode: '03'
+          skillCode: '076'
+    - id: item_02dcefb22e
+      displayName: レバー入れ技
+      children:
+      - id: item_61ab33f53c
+        displayName: 雷撃蹴
+        detail:
+          displayName: 雷撃蹴
+          guard: 立
+          blocking: "→"
+          startup: '6'
+          active: 着地まで
+          recovery: "―"
+          damage: '60'
+          stunReduction: '15'
+          stats:
+            C: "×"
+          media:
+            kind: motion_player
+            displayLabel: モーション
+            skillName: Dive Kicks
+            characterCode: '03'
+            skillCode: '073'
+      - id: item_4c5cf3978b
+        displayName: 旋風脚
+        detail:
+          displayName: 旋風脚
+          guard: 立
+          blocking: "→"
+          startup: '13'
+          active: '9'
+          recovery: '8'
+          damage: '80'
+          stunReduction: R
+          stats:
+            C: "×"
+          media:
+            kind: motion_player
+            displayLabel: モーション
+            skillName: Towards + Forward
+            characterCode: '03'
+            skillCode: '071'
+      - id: item_492596bc9e
+        displayName: 打開
+        detail:
+          displayName: 打開
+          guard: 両方
+          blocking: "→"
+          startup: '9'
+          active: '3'
+          recovery: '8'
+          damage: '60'
+          stunReduction: R
+          stats:
+            C: "×"
+          media:
+            kind: motion_player
+            displayLabel: モーション
+            skillName: Towards + Fierce
+            characterCode: '03'
+            skillCode: '072'
+    - id: item_b46a9fbcad
+      displayName: ターゲットコンボ
+      children:
+      - id: jpj6_p
+        displayName: J小P→J6+大P
+        detail:
+          displayName: J小P→J6+大P
+          guard: 立/立
+          blocking: "→"
+          startup: 2/2
+          active: 2/5
+          recovery: "―"
+          damage: 40/90
+          stunReduction: 7/3
+          stats:
+            C: "×/×"
+    - id: item_f69294370a
+      displayName: 絶招歩法
+      children:
+      - id: item_a86176a6c7
+        displayName: 絶招歩法【小】
+        detail:
+          displayName: 絶招歩法【小】
+          guard: 両方
+          blocking: "→"
+          startup: '7'
+          active: '6'
+          recovery: '7'
+          damage: 100(40+30+30)
+          chipDamage: 13(5+4+4)
+          stunReduction: R
+          media:
+            kind: motion_player
+            displayLabel: モーション
+            skillName: Zesshou Hohou
+            characterCode: '03'
+            skillCode: '081'
+      - id: item_05b7f74392
+        displayName: 絶招歩法【中】
+        detail:
+          displayName: 絶招歩法【中】
+          guard: 両方
+          blocking: "→"
+          startup: '7'
+          active: '6'
+          recovery: '7'
+          damage: 100(40+30+30)
+          chipDamage: 13(5+4+4)
+          stunReduction: R
+      - id: item_a1269a98ac
+        displayName: 絶招歩法【大】
+        detail:
+          displayName: 絶招歩法【大】
+          guard: 両方
+          blocking: "→"
+          startup: '7'
+          active: '3'
+          recovery: '7'
+          damage: 100(40+30+30)
+          chipDamage: 13(5+4+4)
+          stunReduction: R
+    - id: item_c643308888
+      displayName: 鉄山靠
+      children:
+      - id: item_5844625626
+        displayName: 鉄山靠【小】
+        detail:
+          displayName: 鉄山靠【小】
+          guard: 両方
+          blocking: 両方
+          startup: '7'
+          active: '4'
+          recovery: '8'
+          damage: 80(40+40)
+          chipDamage: 20(10+10)
+          stunReduction: R
+          media:
+            kind: motion_player
+            displayLabel: モーション
+            skillName: Tetsu Zankou (Jab)
+            characterCode: '03'
+            skillCode: '078'
+      - id: item_5d5d6460db
+        displayName: 鉄山靠【中】
+        detail:
+          displayName: 鉄山靠【中】
+          guard: 両方
+          blocking: 両方
+          startup: '8'
+          active: '5'
+          recovery: '10'
+          damage: 100(40+60)
+          chipDamage: 25(10+15)
+          stunReduction: R
+          media:
+            kind: motion_player
+            displayLabel: モーション
+            skillName: Tetsu Zankou (Strong)
+            characterCode: '03'
+            skillCode: '079'
+      - id: item_9de71e2e9f
+        displayName: 鉄山靠【大】
+        detail:
+          displayName: 鉄山靠【大】
+          guard: 両方
+          blocking: 両方
           startup: '10'
           active: '6'
-          recovery: '1'
-          damage: '120'
-          chipDamage: '15'
-          stunReduction: '1'
+          recovery: '12'
+          damage: 100(40+60)
+          chipDamage: 25(10+15)
+          stunReduction: R
           media:
             kind: motion_player
             displayLabel: モーション
-            skillName: Kobokushi
+            skillName: Tetsu Zankou (Fierce)
             characterCode: '03'
-            skillCode: '085'
-      - id: item_47da8e23d1
-        displayName: 前方転身
+            skillCode: '080'
+    - id: item_646f2502b8
+      displayName: ニ翔脚
+      children:
+      - id: item_819b17158c
+        displayName: ニ翔脚【小】
         detail:
-          displayName: 前方転身
-          guard: "×"
-          blocking: "×"
-          startup: '5'
+          displayName: ニ翔脚【小】
+          guard: 両方
+          blocking: 両方
+          startup: '6'
           active: '2'
-          recovery: '26'
-          damage: '0'
-          chipDamage: "―"
-          stunReduction: "―"
+          recovery: '20'
+          damage: 80(40+40)
+          chipDamage: 20(10+10)
+          stunReduction: R
           media:
             kind: motion_player
             displayLabel: モーション
-            skillName: Zenpou Tenshin
+            skillName: Nishou Kyaku (Short)
             characterCode: '03'
-            skillCode: '086'
+            skillCode: '082'
+      - id: item_61ad938d43
+        displayName: ニ翔脚【中】
+        detail:
+          displayName: ニ翔脚【中】
+          guard: 両方
+          blocking: 両方
+          startup: '6'
+          active: '2'
+          recovery: '21'
+          damage: 80(40+40)
+          chipDamage: 20(10+10)
+          stunReduction: R
+          media:
+            kind: motion_player
+            displayLabel: モーション
+            skillName: Nishou Kyaku (Forward)
+            characterCode: '03'
+            skillCode: '083'
+      - id: item_61fddcc590
+        displayName: ニ翔脚【大】
+        detail:
+          displayName: ニ翔脚【大】
+          guard: 両方
+          blocking: 両方
+          startup: '6'
+          active: '2'
+          recovery: '22'
+          damage: 80(40+40)
+          chipDamage: 20(10+10)
+          stunReduction: R
+          media:
+            kind: motion_player
+            displayLabel: モーション
+            skillName: Nishou Kyaku (RH)
+            characterCode: '03'
+            skillCode: '084'
+    - id: item_f6aedf51a6
+      displayName: 虎撲子
+      detail:
+        displayName: 虎撲子
+        guard: 両方
+        blocking: "→"
+        startup: '10'
+        active: '6'
+        recovery: '1'
+        damage: '120'
+        chipDamage: '15'
+        stunReduction: '1'
+        media:
+          kind: motion_player
+          displayLabel: モーション
+          skillName: Kobokushi
+          characterCode: '03'
+          skillCode: '085'
+    - id: item_47da8e23d1
+      displayName: 前方転身
+      detail:
+        displayName: 前方転身
+        guard: "×"
+        blocking: "×"
+        startup: '5'
+        active: '2'
+        recovery: '26'
+        damage: '0'
+        chipDamage: "―"
+        stunReduction: "―"
+        media:
+          kind: motion_player
+          displayLabel: モーション
+          skillName: Zenpou Tenshin
+          characterCode: '03'
+          skillCode: '086'
 - id: lever_input_moves
   displayTitle: "【レバー入れ技】"
   entries:
