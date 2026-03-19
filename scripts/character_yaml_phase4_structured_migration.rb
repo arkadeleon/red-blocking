@@ -256,7 +256,7 @@ class CharacterYAMLStructuredMigrator
     builder = MoveDetailBuilder.new(fallback_display_name)
 
     if row["Presented"]
-      builder.media = build_media(row, path: path)
+      builder.media_entries << build_media(row, path: path)
     elsif row["RowDetail"]
       apply_detail_value(
         builder,
@@ -341,11 +341,7 @@ class CharacterYAMLStructuredMigrator
       row_path = path + ["row##{index + 1}"]
 
       if row["Presented"]
-        if builder.media
-          raise MigrationError, "#{format_path(row_path)} would add a second media entry to #{fallback_display_name}."
-        end
-
-        builder.media = build_media(row, path: row_path)
+        builder.media_entries << build_media(row, path: row_path)
       elsif row["RowDetail"]
         row_title = normalize_text(row["RowTitle"])
         row_detail = normalize_text(row["RowDetail"])
@@ -457,7 +453,6 @@ class CharacterYAMLStructuredMigrator
   end
 
   def page_requires_inline_children?(sections)
-    presented_count = 0
     section_titles = []
 
     Array(sections).any? do |section|
@@ -465,7 +460,6 @@ class CharacterYAMLStructuredMigrator
       section_titles << title if title
 
       rows = Array(section["Rows"])
-      presented_count += rows.count { |row| row["Presented"] }
 
       untitled_standard_titles = if title.nil?
         rows.filter_map do |row|
@@ -478,7 +472,7 @@ class CharacterYAMLStructuredMigrator
         []
       end
 
-      presented_count > 1 || untitled_standard_titles.uniq.length != untitled_standard_titles.length
+      untitled_standard_titles.uniq.length != untitled_standard_titles.length
     end || section_titles.uniq.length != section_titles.length
   end
 
@@ -642,7 +636,7 @@ class CharacterYAMLStructuredMigrator
   end
 
   class MoveDetailBuilder
-    attr_accessor :media
+    attr_reader :media_entries
 
     def initialize(fallback_display_name)
       @display_name = fallback_display_name
@@ -658,7 +652,7 @@ class CharacterYAMLStructuredMigrator
         frame_advantage: StableIDAllocator.new,
         stats: StableIDAllocator.new
       }
-      @media = nil
+      @media_entries = []
     end
 
     def assign_standard_field(field_name, value, path:)
@@ -715,7 +709,11 @@ class CharacterYAMLStructuredMigrator
       detail["frameAdvantage"] = @frame_advantage unless @frame_advantage.empty?
       detail["stats"] = @stats unless @stats.empty?
       detail["noteGroups"] = @note_groups unless @note_groups.empty?
-      detail["media"] = @media if @media
+      if @media_entries.length == 1
+        detail["media"] = @media_entries.first
+      elsif @media_entries.length > 1
+        detail["mediaEntries"] = @media_entries
+      end
       detail
     end
 

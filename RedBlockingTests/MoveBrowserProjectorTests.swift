@@ -113,6 +113,20 @@ struct MoveBrowserProjectorTests {
         #expect(link.skillCode == "sa1")
     }
 
+    @Test("Entry with mediaEntries projects multiple motionPlayer rows in final section")
+    func entryWithMediaEntriesProjectsMultipleMotionPlayerRows() throws {
+        let rootPage = try loadPage(yaml: Fixtures.profileWithMultipleMediaEntries)
+        let detailPage = try navigate(from: rootPage, through: ["SA I"])
+        let mediaSection = try #require(detailPage.sections.last)
+        #expect(mediaSection.rows.count == 2)
+        #expect(mediaSection.rows[0].kind == .motionPlayer)
+        #expect(mediaSection.rows[1].kind == .motionPlayer)
+        let firstLink = try #require(mediaSection.rows[0].action.motionPlayerLink)
+        let secondLink = try #require(mediaSection.rows[1].action.motionPlayerLink)
+        #expect(firstLink.skillCode == "sa1_ground")
+        #expect(secondLink.skillCode == "sa1_air")
+    }
+
     // MARK: - Note group section title
 
     @Test("NoteGroup with title matching navigationTitle produces nil section title")
@@ -333,6 +347,53 @@ private enum Fixtures {
                 skillName: "SA I"
                 characterCode: "TST"
                 skillCode: "sa1"
+    """
+
+    // A profile with a super_arts entry that has a mediaEntries field.
+    static let profileWithMultipleMediaEntries = """
+    character:
+      id: test
+      displayName: Test
+    introduction:
+      displayTitle: "Title"
+      body: "Body"
+    moveGroups:
+      - id: air_normals
+        displayTitle: "Air"
+        entries: []
+      - id: ground_normals
+        displayTitle: "Ground"
+        entries: []
+      - id: normal_throws
+        displayTitle: "Throws"
+        entries: []
+      - id: lever_input_moves
+        displayTitle: "【レバー入れ技】"
+        entries: []
+      - id: common_moves
+        displayTitle: "Command"
+        entries: []
+      - id: special_moves
+        displayTitle: "Special"
+        entries: []
+      - id: super_arts
+        displayTitle: "Super"
+        entries:
+          - id: sa_001
+            displayName: "SA I"
+            detail:
+              displayName: "SA I"
+              mediaEntries:
+                - kind: motion_player
+                  displayLabel: "モーション(地上ヒット)"
+                  skillName: "SA I"
+                  characterCode: "TST"
+                  skillCode: "sa1_ground"
+                - kind: motion_player
+                  displayLabel: "モーション(空中ヒット)"
+                  skillName: "SA I (Air hit)"
+                  characterCode: "TST"
+                  skillCode: "sa1_air"
     """
 
     // A noteGroup whose displayTitle matches the entry displayName ("SA I").

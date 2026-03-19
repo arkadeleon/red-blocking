@@ -188,8 +188,8 @@ struct MoveBrowserProjector {
             }
         )
 
-        if let media = detail.media {
-            sections.append(projectMediaSection(media, pageID: pageID))
+        if !detail.mediaEntries.isEmpty {
+            sections.append(projectMediaSection(detail.mediaEntries, pageID: pageID))
         }
 
         return sections
@@ -321,19 +321,19 @@ struct MoveBrowserProjector {
         )
     }
 
-    private func projectMediaSection(_ media: MoveMedia, pageID: String) -> MoveBrowserSection {
+    private func projectMediaSection(_ mediaEntries: [MoveMedia], pageID: String) -> MoveBrowserSection {
         MoveBrowserSection(
             id: "\(pageID):media",
             title: nil,
-            rows: [
+            rows: mediaEntries.enumerated().map { index, media in
                 .motionPlayer(
-                    id: "\(pageID):media:\(media.kind.rawValue)",
+                    id: "\(pageID):media:\(index):\(media.kind.rawValue)",
                     title: media.displayLabel,
                     subtitle: media.displayLabel == media.skillName ? nil : media.skillName,
                     characterCode: media.characterCode,
                     skillCode: media.skillCode
                 )
-            ]
+            }
         )
     }
 

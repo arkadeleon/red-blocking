@@ -1417,263 +1417,95 @@ moveGroups:
         skillCode: '041'
   - id: x_f_l_a_t
     displayName: X.F.L.A.T.
-    children:
-    - id: item_838e702fbc
-      displayName: 技名
-      detail:
-        displayName: X.F.L.A.T.
-    - id: item_49b7386bc1
-      displayName: コマンド
-      detail:
-        displayName: コマンド
-        command: 空中で236236+K
-    - id: item_1143708263
-      displayName: ストック数
-      detail:
-        displayName: ストック数
-        stats:
-          ストック数: '1'
-    - id: item_0b597471fb
-      displayName: ゲージの長さ
-      detail:
-        displayName: ゲージの長さ
-        stats:
-          ゲージの長さ: 112ドット
-    - id: item_5d6ebc9016
-      displayName: ガード
-      detail:
-        displayName: ガード
-        guard: |-
-          両方(地上ヒット)
-          ―(空中ヒット)
-    - id: bl
-      displayName: BL
-      detail:
-        displayName: BL
-        blocking: |-
-          両方(地上ヒット)
-          空中BL(空中ヒット)
-    - id: item_08b61ad07f
-      displayName: 発生
-      detail:
-        displayName: 発生
-        startup: '2'
-    - id: item_50f147eace
-      displayName: 持続
-      detail:
-        displayName: 持続
-        active: 着地まで
-    - id: item_d6852e217f
-      displayName: 硬直
-      detail:
-        displayName: 硬直
-        recovery: '49'
-    - id: item_60d9b0638d
-      displayName: 攻撃力
-      detail:
-        displayName: 攻撃力
-        damage: |-
-          430(地上ヒット)
-          230(空中ヒット)
-    - id: item_2d84a7bb48
-      displayName: ケズリ
-      detail:
-        displayName: ケズリ
-        chipDamage: |-
-          4(地上ヒット)
-          ―(空中ヒット)
-    - id: item_b52816980f
-      displayName: スタン値
-      detail:
-        displayName: スタン値
-        stun: |-
-          25(地上ヒット)
-          18(空中ヒット)
-    - id: item_f32d520a6f
-      displayName: 削減値
-      detail:
-        displayName: 削減値
-        stunReduction: |-
-          R×13・1・1・1・15・15(地上ヒット)
-          R×5・1・1・1・15・15(空中ヒット)
-    - id: item_5d6ebc9016_2
-      displayName: ガード
-      detail:
-        displayName: ガード
-        frameAdvantage:
-          guard: "-26"
-    - id: item_1272286f89
-      displayName: 立ヒット
-      detail:
-        displayName: 立ヒット
-        frameAdvantage:
-          standingHit: ダウン
-    - id: item_a3b78ed257
-      displayName: 屈ヒット
-      detail:
-        displayName: 屈ヒット
-        frameAdvantage:
-          crouchingHit: ダウン
-    - id: 50_50_52_bl_sa_d_r_a_d_r_a_kchj
-      displayName: |-
-        ・コマンド完成後、暗転50フレーム、相手行動不能時間50フレーム。コマンド完成から52フレーム間無敵
-        ・攻撃発生と同時に無敵終了、着地まで空中投げ無敵持続
-        ・硬直は空振り・ガード・BLされた時のもの
-        ・空中専用のSAで、軌道は大D.R.A.とほぼ同じ。ただしD.R.A.の様に中段ではないため注意
-        ・立中KをCHJして出すことにより地上から繋げることが可能
-      detail:
-        displayName: |-
+    detail:
+      displayName: X.F.L.A.T.
+      command: 空中で236236+K
+      guard: |-
+        両方(地上ヒット)
+        ―(空中ヒット)
+      blocking: |-
+        両方(地上ヒット)
+        空中BL(空中ヒット)
+      startup: '2'
+      active: 着地まで
+      recovery: '49'
+      damage: |-
+        430(地上ヒット)
+        230(空中ヒット)
+      chipDamage: |-
+        4(地上ヒット)
+        ―(空中ヒット)
+      stun: |-
+        25(地上ヒット)
+        18(空中ヒット)
+      stunReduction: |-
+        R×13・1・1・1・15・15(地上ヒット)
+        R×5・1・1・1・15・15(空中ヒット)
+      frameAdvantage:
+        guard: "-26"
+        standingHit: ダウン
+        crouchingHit: ダウン
+      stats:
+        ストック数: '1'
+        ゲージの長さ: 112ドット
+      noteGroups:
+      - id: item_cf8aa5b927
+        displayTitle: 補足
+        entries:
+        - |-
           ・コマンド完成後、暗転50フレーム、相手行動不能時間50フレーム。コマンド完成から52フレーム間無敵
           ・攻撃発生と同時に無敵終了、着地まで空中投げ無敵持続
           ・硬直は空振り・ガード・BLされた時のもの
           ・空中専用のSAで、軌道は大D.R.A.とほぼ同じ。ただしD.R.A.の様に中段ではないため注意
           ・立中KをCHJして出すことにより地上から繋げることが可能
-        noteGroups:
-        - id: item_cf8aa5b927
-          displayTitle: 補足
-          entries:
-          - |-
-            ・コマンド完成後、暗転50フレーム、相手行動不能時間50フレーム。コマンド完成から52フレーム間無敵
-            ・攻撃発生と同時に無敵終了、着地まで空中投げ無敵持続
-            ・硬直は空振り・ガード・BLされた時のもの
-            ・空中専用のSAで、軌道は大D.R.A.とほぼ同じ。ただしD.R.A.の様に中段ではないため注意
-            ・立中KをCHJして出すことにより地上から繋げることが可能
-    - id: item_caa92fb804
-      displayName: モーション(地上ヒット)
-      detail:
-        displayName: モーション(地上ヒット)
-        media:
-          kind: motion_player
-          displayLabel: モーション(地上ヒット)
-          skillName: X.F.L.A.T.
-          characterCode: '19'
-          skillCode: '042'
-    - id: item_625c9cf670
-      displayName: モーション(空中ヒット)
-      detail:
-        displayName: モーション(空中ヒット)
-        media:
-          kind: motion_player
-          displayLabel: モーション(空中ヒット)
-          skillName: X.F.L.A.T. (Air hit)
-          characterCode: '19'
-          skillCode: '043'
+      mediaEntries:
+      - kind: motion_player
+        displayLabel: モーション(地上ヒット)
+        skillName: X.F.L.A.T.
+        characterCode: '19'
+        skillCode: '042'
+      - kind: motion_player
+        displayLabel: モーション(空中ヒット)
+        skillName: X.F.L.A.T. (Air hit)
+        characterCode: '19'
+        skillCode: '043'
   - id: x_c_o_p_y
     displayName: X.C.O.P.Y.
-    children:
-    - id: item_838e702fbc
-      displayName: 技名
-      detail:
-        displayName: X.C.O.P.Y.
-    - id: item_49b7386bc1
-      displayName: コマンド
-      detail:
-        displayName: コマンド
-        command: 236236+P
-    - id: item_1143708263
-      displayName: ストック数
-      detail:
-        displayName: ストック数
-        stats:
-          ストック数: '1'
-    - id: item_0b597471fb
-      displayName: ゲージの長さ
-      detail:
-        displayName: ゲージの長さ
-        stats:
-          ゲージの長さ: 120ドット
-    - id: item_5d6ebc9016
-      displayName: ガード
-      detail:
-        displayName: ガード
+    detail:
+      displayName: X.C.O.P.Y.
+      command: 236236+P
+      guard: "―"
+      blocking: "―"
+      startup: '0'
+      active: 1440フレーム(約24秒)
+      recovery: '2'
+      damage: "―"
+      chipDamage: "―"
+      stun: "―"
+      stunReduction: "―"
+      frameAdvantage:
         guard: "―"
-    - id: bl
-      displayName: BL
-      detail:
-        displayName: BL
-        blocking: "―"
-    - id: item_08b61ad07f
-      displayName: 発生
-      detail:
-        displayName: 発生
-        startup: '0'
-    - id: item_50f147eace
-      displayName: 持続
-      detail:
-        displayName: 持続
-        active: 1440フレーム(約24秒)
-    - id: item_d6852e217f
-      displayName: 硬直
-      detail:
-        displayName: 硬直
-        recovery: '2'
-    - id: item_60d9b0638d
-      displayName: 攻撃力
-      detail:
-        displayName: 攻撃力
-        damage: "―"
-    - id: item_2d84a7bb48
-      displayName: ケズリ
-      detail:
-        displayName: ケズリ
-        chipDamage: "―"
-    - id: item_b52816980f
-      displayName: スタン値
-      detail:
-        displayName: スタン値
-        stun: "―"
-    - id: item_f32d520a6f
-      displayName: 削減値
-      detail:
-        displayName: 削減値
-        stunReduction: "―"
-    - id: item_5d6ebc9016_2
-      displayName: ガード
-      detail:
-        displayName: ガード
-        frameAdvantage:
-          guard: "―"
-    - id: item_1272286f89
-      displayName: 立ヒット
-      detail:
-        displayName: 立ヒット
-        frameAdvantage:
-          standingHit: "―"
-    - id: item_a3b78ed257
-      displayName: 屈ヒット
-      detail:
-        displayName: 屈ヒット
-        frameAdvantage:
-          crouchingHit: "―"
-    - id: 85_85_84_exsa_1_25_1_4_2_1_n_sa_sa
-      displayName: "・コマンド完成後、暗転85フレーム、相手行動不能時間85フレーム。コマンド完成から84フレーム間無敵 \n・コピー完成と同時に無敵終了。 空中食らい判定出現\n・硬直は変身開始後&解除後に着地した時のもの\n・変身中は相手と同じ技が使えるが、EX技とSAは使えない\n・攻撃力が約1.25倍になり、防御力がアップする(約1/4程度に食らいダメージを落とす)\n・変身終了モーション時に攻撃を受けると、通常の2倍のダメージを受ける(多段技は1ヒット目のみ)\n・車のボーナスステージでは頭を抱えるだけで変身しない。ボールのボーナスステージではショーンに変身\n・同キャラ対戦だと、ちょっぴり光り輝く攻撃力の高いトゥエルブに変身。\n・新基盤だとユン・ヤンに変身してからのN投げでヒューゴーのムーンサルト並みの威力が出る\n・コピー中に相手を倒すとSAフィニッシュになるが、幻影陣のように技のヒットレベルがSA判定になっているわけではない"
-      detail:
-        displayName: "・コマンド完成後、暗転85フレーム、相手行動不能時間85フレーム。コマンド完成から84フレーム間無敵 \n・コピー完成と同時に無敵終了。 空中食らい判定出現\n・硬直は変身開始後&解除後に着地した時のもの\n・変身中は相手と同じ技が使えるが、EX技とSAは使えない\n・攻撃力が約1.25倍になり、防御力がアップする(約1/4程度に食らいダメージを落とす)\n・変身終了モーション時に攻撃を受けると、通常の2倍のダメージを受ける(多段技は1ヒット目のみ)\n・車のボーナスステージでは頭を抱えるだけで変身しない。ボールのボーナスステージではショーンに変身\n・同キャラ対戦だと、ちょっぴり光り輝く攻撃力の高いトゥエルブに変身。\n・新基盤だとユン・ヤンに変身してからのN投げでヒューゴーのムーンサルト並みの威力が出る\n・コピー中に相手を倒すとSAフィニッシュになるが、幻影陣のように技のヒットレベルがSA判定になっているわけではない"
-        noteGroups:
-        - id: item_cf8aa5b927
-          displayTitle: 補足
-          entries:
-          - "・コマンド完成後、暗転85フレーム、相手行動不能時間85フレーム。コマンド完成から84フレーム間無敵 \n・コピー完成と同時に無敵終了。 空中食らい判定出現\n・硬直は変身開始後&解除後に着地した時のもの\n・変身中は相手と同じ技が使えるが、EX技とSAは使えない\n・攻撃力が約1.25倍になり、防御力がアップする(約1/4程度に食らいダメージを落とす)\n・変身終了モーション時に攻撃を受けると、通常の2倍のダメージを受ける(多段技は1ヒット目のみ)\n・車のボーナスステージでは頭を抱えるだけで変身しない。ボールのボーナスステージではショーンに変身\n・同キャラ対戦だと、ちょっぴり光り輝く攻撃力の高いトゥエルブに変身。\n・新基盤だとユン・ヤンに変身してからのN投げでヒューゴーのムーンサルト並みの威力が出る\n・コピー中に相手を倒すとSAフィニッシュになるが、幻影陣のように技のヒットレベルがSA判定になっているわけではない"
-    - id: '1'
-      displayName: モーション1
-      detail:
-        displayName: モーション1
-        media:
-          kind: motion_player
-          displayLabel: モーション1
-          skillName: X.C.O.P.Y.
-          characterCode: '19'
-          skillCode: '044'
-    - id: '2'
-      displayName: モーション2
-      detail:
-        displayName: モーション2
-        media:
-          kind: motion_player
-          displayLabel: モーション2
-          skillName: X.C.O.P.Y.
-          characterCode: '19'
-          skillCode: '045'
+        standingHit: "―"
+        crouchingHit: "―"
+      stats:
+        ストック数: '1'
+        ゲージの長さ: 120ドット
+      noteGroups:
+      - id: item_cf8aa5b927
+        displayTitle: 補足
+        entries:
+        - "・コマンド完成後、暗転85フレーム、相手行動不能時間85フレーム。コマンド完成から84フレーム間無敵 \n・コピー完成と同時に無敵終了。 空中食らい判定出現\n・硬直は変身開始後&解除後に着地した時のもの\n・変身中は相手と同じ技が使えるが、EX技とSAは使えない\n・攻撃力が約1.25倍になり、防御力がアップする(約1/4程度に食らいダメージを落とす)\n・変身終了モーション時に攻撃を受けると、通常の2倍のダメージを受ける(多段技は1ヒット目のみ)\n・車のボーナスステージでは頭を抱えるだけで変身しない。ボールのボーナスステージではショーンに変身\n・同キャラ対戦だと、ちょっぴり光り輝く攻撃力の高いトゥエルブに変身。\n・新基盤だとユン・ヤンに変身してからのN投げでヒューゴーのムーンサルト並みの威力が出る\n・コピー中に相手を倒すとSAフィニッシュになるが、幻影陣のように技のヒットレベルがSA判定になっているわけではない"
+      mediaEntries:
+      - kind: motion_player
+        displayLabel: モーション1
+        skillName: X.C.O.P.Y.
+        characterCode: '19'
+        skillCode: '044'
+      - kind: motion_player
+        displayLabel: モーション2
+        skillName: X.C.O.P.Y.
+        characterCode: '19'
+        skillCode: '045'
 - id: lever_input_moves
   displayTitle: "【レバー入れ技】"
   entries:

@@ -183,7 +183,7 @@ struct MoveDetail: Decodable, Equatable, Hashable {
     let frameAdvantage: FrameAdvantage?
     let stats: LabeledValueMap?
     let noteGroups: [MoveNoteGroup]
-    let media: MoveMedia?
+    let mediaEntries: [MoveMedia]
 
     init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
@@ -204,7 +204,17 @@ struct MoveDetail: Decodable, Equatable, Hashable {
         frameAdvantage = try container.decodeIfPresent(FrameAdvantage.self, forKey: .frameAdvantage)
         stats = try container.decodeIfPresent(LabeledValueMap.self, forKey: .stats)
         noteGroups = try container.decodeIfPresent([MoveNoteGroup].self, forKey: .noteGroups) ?? []
-        media = try container.decodeIfPresent(MoveMedia.self, forKey: .media)
+        let decodedMediaEntries = try container.decodeIfPresent([MoveMedia].self, forKey: .mediaEntries) ?? []
+        let decodedMedia = try container.decodeIfPresent(MoveMedia.self, forKey: .media)
+        if decodedMediaEntries.isEmpty {
+            if let decodedMedia {
+                mediaEntries = [decodedMedia]
+            } else {
+                mediaEntries = []
+            }
+        } else {
+            mediaEntries = decodedMediaEntries
+        }
 
         guard displayName.containsNonWhitespace else {
             throw DecodingError.dataCorruptedError(
@@ -234,6 +244,7 @@ extension MoveDetail {
         case frameAdvantage
         case stats
         case noteGroups
+        case mediaEntries
         case media
     }
 }

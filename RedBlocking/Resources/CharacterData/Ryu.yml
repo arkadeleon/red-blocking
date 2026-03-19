@@ -1649,144 +1649,50 @@ moveGroups:
         skillCode: '053'
   - id: item_f9ecca6aaf
     displayName: 真・昇龍拳
-    children:
-    - id: item_838e702fbc
-      displayName: 技名
-      detail:
-        displayName: 真・昇龍拳
-    - id: item_49b7386bc1
-      displayName: コマンド
-      detail:
-        displayName: コマンド
-        command: 236236+P
-    - id: item_1143708263
-      displayName: ストック数
-      detail:
-        displayName: ストック数
-        stats:
-          ストック数: '1'
-    - id: item_0b597471fb
-      displayName: ゲージの長さ
-      detail:
-        displayName: ゲージの長さ
-        stats:
-          ゲージの長さ: 128ドット
-    - id: item_5d6ebc9016
-      displayName: ガード
-      detail:
-        displayName: ガード
-        guard: 両方×3～5
-    - id: bl
-      displayName: BL
-      detail:
-        displayName: BL
-        blocking: 両方×3～5
-    - id: item_08b61ad07f
-      displayName: 発生
-      detail:
-        displayName: 発生
-        startup: '1'
-    - id: item_50f147eace
-      displayName: 持続
-      detail:
-        displayName: 持続
-        active: '1'
-    - id: item_d6852e217f
-      displayName: 硬直
-      detail:
-        displayName: 硬直
-        recovery: '40'
-    - id: item_60d9b0638d
-      displayName: 攻撃力
-      detail:
-        displayName: 攻撃力
-        damage: |-
-          570(クリーンヒット時)
-          (60+200+200+140)
-    - id: item_2d84a7bb48
-      displayName: ケズリ
-      detail:
-        displayName: ケズリ
-        chipDamage: |-
-          45(5回ガード時)
-          (9×7)
-    - id: item_b52816980f
-      displayName: スタン値
-      detail:
-        displayName: スタン値
-        stun: |-
-          20(クリーンヒット時)
-          (5×4)
-    - id: item_f32d520a6f
-      displayName: 削減値
-      detail:
-        displayName: 削減値
-        stunReduction: R・R・R・R・(R・R・R)
-    - id: item_5d6ebc9016_2
-      displayName: ガード
-      detail:
-        displayName: ガード
-        frameAdvantage:
-          guard: "-25"
-    - id: item_1272286f89
-      displayName: 立ヒット
-      detail:
-        displayName: 立ヒット
-        frameAdvantage:
-          standingHit: ダウン
-    - id: item_a3b78ed257
-      displayName: 屈ヒット
-      detail:
-        displayName: 屈ヒット
-        frameAdvantage:
-          crouchingHit: ダウン
-    - id: 50_50_74_24_bl_50_50_59_8_1bl
-      displayName: "【クリーンヒット時】\n・コマンド完成後、暗転50フレーム、相手行動不能時間50フレーム。コマンド完成から74フレーム間無敵\n・攻撃発生まで完全無敵。攻撃発生後、24フレーム完全無敵\n・ヒット時、追撃可能\n\n【初段をガード、BL、空振りした時】\n・コマンド完成後、、暗転50フレーム、相手行動不能時間50フレーム。コマンド完成から59フレーム間無敵\n・攻撃発生まで完全無敵。攻撃発生後、8フレーム完全無敵 \n・1段目が空振りやBLされた時の攻撃力、ケズリ、スタン値は以下の表参照"
-      detail:
-        displayName: "【クリーンヒット時】\n・コマンド完成後、暗転50フレーム、相手行動不能時間50フレーム。コマンド完成から74フレーム間無敵\n・攻撃発生まで完全無敵。攻撃発生後、24フレーム完全無敵\n・ヒット時、追撃可能\n\n【初段をガード、BL、空振りした時】\n・コマンド完成後、、暗転50フレーム、相手行動不能時間50フレーム。コマンド完成から59フレーム間無敵\n・攻撃発生まで完全無敵。攻撃発生後、8フレーム完全無敵 \n・1段目が空振りやBLされた時の攻撃力、ケズリ、スタン値は以下の表参照"
-        noteGroups:
-        - id: item_cf8aa5b927
-          displayTitle: 補足
-          entries:
-          - "【クリーンヒット時】\n・コマンド完成後、暗転50フレーム、相手行動不能時間50フレーム。コマンド完成から74フレーム間無敵\n・攻撃発生まで完全無敵。攻撃発生後、24フレーム完全無敵\n・ヒット時、追撃可能\n\n【初段をガード、BL、空振りした時】\n・コマンド完成後、、暗転50フレーム、相手行動不能時間50フレーム。コマンド完成から59フレーム間無敵\n・攻撃発生まで完全無敵。攻撃発生後、8フレーム完全無敵 \n・1段目が空振りやBLされた時の攻撃力、ケズリ、スタン値は以下の表参照"
-    - id: item_60d9b0638d_2
-      displayName: 攻撃力
-      detail:
-        displayName: 攻撃力
-        stats:
-          カス当たり時 攻撃力: 40×7
-    - id: item_2d84a7bb48_2
-      displayName: ケズリ
-      detail:
-        displayName: ケズリ
-        stats:
-          カス当たり時 ケズリ: 9×7
-    - id: item_b52816980f_2
-      displayName: スタン値
-      detail:
-        displayName: スタン値
-        stats:
-          カス当たり時 スタン値: 3×7
-    - id: item_9eacd528f1
-      displayName: モーション(クリーンヒット時)
-      detail:
-        displayName: モーション(クリーンヒット時)
-        media:
-          kind: motion_player
-          displayLabel: モーション(クリーンヒット時)
-          skillName: Shin Shoryuken
-          characterCode: '02'
-          skillCode: '054'
-    - id: item_107e87d466
-      displayName: モーション(ガードされた時)
-      detail:
-        displayName: モーション(ガードされた時)
-        media:
-          kind: motion_player
-          displayLabel: モーション(ガードされた時)
-          skillName: Shin Shoryuken (Far)
-          characterCode: '02'
-          skillCode: '055'
+    detail:
+      displayName: 真・昇龍拳
+      command: 236236+P
+      guard: 両方×3～5
+      blocking: 両方×3～5
+      startup: '1'
+      active: '1'
+      recovery: '40'
+      damage: |-
+        570(クリーンヒット時)
+        (60+200+200+140)
+      chipDamage: |-
+        45(5回ガード時)
+        (9×7)
+      stun: |-
+        20(クリーンヒット時)
+        (5×4)
+      stunReduction: R・R・R・R・(R・R・R)
+      frameAdvantage:
+        guard: "-25"
+        standingHit: ダウン
+        crouchingHit: ダウン
+      stats:
+        ストック数: '1'
+        ゲージの長さ: 128ドット
+        カス当たり時 攻撃力: 40×7
+        カス当たり時 ケズリ: 9×7
+        カス当たり時 スタン値: 3×7
+      noteGroups:
+      - id: item_cf8aa5b927
+        displayTitle: 補足
+        entries:
+        - "【クリーンヒット時】\n・コマンド完成後、暗転50フレーム、相手行動不能時間50フレーム。コマンド完成から74フレーム間無敵\n・攻撃発生まで完全無敵。攻撃発生後、24フレーム完全無敵\n・ヒット時、追撃可能\n\n【初段をガード、BL、空振りした時】\n・コマンド完成後、、暗転50フレーム、相手行動不能時間50フレーム。コマンド完成から59フレーム間無敵\n・攻撃発生まで完全無敵。攻撃発生後、8フレーム完全無敵 \n・1段目が空振りやBLされた時の攻撃力、ケズリ、スタン値は以下の表参照"
+      mediaEntries:
+      - kind: motion_player
+        displayLabel: モーション(クリーンヒット時)
+        skillName: Shin Shoryuken
+        characterCode: '02'
+        skillCode: '054'
+      - kind: motion_player
+        displayLabel: モーション(ガードされた時)
+        skillName: Shin Shoryuken (Far)
+        characterCode: '02'
+        skillCode: '055'
   - id: item_122a9dad20
     displayName: 電刃波動拳
     detail:

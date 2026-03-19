@@ -233,6 +233,7 @@ detail:
 - `frameAdvantage`
 - `stats`
 - `noteGroups`
+- `mediaEntries`
 - `media`
 
 字段说明：
@@ -255,7 +256,7 @@ detail:
 - `MoveDetail` 不再嵌套 `children`
 - `displayName` 不允许为空；若旧数据没有 `技名`，则沿用叶子节点的 `MoveEntry.displayName`
 - `meterGain`、`frameAdvantage`、`stats`、`noteGroups` 都保序
-- `media` 最多 1 个；旧结构里只有一个 `Presented` 入口
+- `media` 与 `mediaEntries` 二选一使用；`media` 为单入口兼容写法，`mediaEntries` 用于同页多个入口
 
 ### MoveLabeledValue
 
@@ -314,6 +315,20 @@ media:
   skillName: Jumping Jab
   characterCode: "01"
   skillCode: "008"
+```
+
+```yaml
+mediaEntries:
+  - kind: motion_player
+    displayLabel: モーション(地上ヒット)
+    skillName: X.F.L.A.T.
+    characterCode: "19"
+    skillCode: "042"
+  - kind: motion_player
+    displayLabel: モーション(空中ヒット)
+    skillName: X.F.L.A.T. (Air hit)
+    characterCode: "19"
+    skillCode: "043"
 ```
 
 字段：
