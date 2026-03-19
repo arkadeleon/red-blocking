@@ -15,7 +15,7 @@ struct MoveNextRowView: View {
 
     var body: some View {
         Button(action: action) {
-            HStack(alignment: .top, spacing: 12) {
+            HStack(alignment: .center, spacing: 12) {
                 VStack(alignment: .leading, spacing: 4) {
                     Text(title)
                         .foregroundStyle(.primary)
@@ -31,9 +31,9 @@ struct MoveNextRowView: View {
 
                 Spacer(minLength: 12)
 
-                Image(systemName: "chevron.right")
-                    .font(.footnote.weight(.semibold))
-                    .foregroundStyle(.tertiary)
+                Image(systemName: "chevron.right.circle.fill")
+                    .font(.body)
+                    .foregroundStyle(.secondary)
                     .accessibilityHidden(true)
             }
             .contentShape(Rectangle())
