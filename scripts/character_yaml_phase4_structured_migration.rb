@@ -4,6 +4,7 @@ require "digest/sha1"
 require "fileutils"
 require "optparse"
 require "pathname"
+require "set"
 require "psych"
 require "yaml"
 
@@ -19,6 +20,15 @@ class CharacterYAMLStructuredMigrator
     ["special_moves", "【必殺技】"],
     ["super_arts", "【スーパーアーツ】"]
   ].freeze
+  NORMAL_THROWS_GROUP_ID = "normal_throws"
+  NORMAL_THROWS_DISPLAY_TITLE = "【通常投げ】"
+  NORMAL_THROW_ENTRY_NAME = "通常投げ"
+  LEVER_INPUT_GROUP_ID = "lever_input_moves"
+  LEVER_INPUT_DISPLAY_TITLE = "【レバー入れ技】"
+  LEVER_INPUT_ENTRY_NAME = "レバー入れ技"
+  TARGET_COMBOS_GROUP_ID = "target_combos"
+  TARGET_COMBOS_DISPLAY_TITLE = "【ターゲットコンボ】"
+  TARGET_COMBOS_ENTRY_NAME = "ターゲットコンボ"
 
   STANDARD_FIELD_MAP = {
     "技名" => "displayName",
@@ -50,6 +60,22 @@ class CharacterYAMLStructuredMigrator
     "追加入力「大」",
     "追加入力「無し」"
   ].freeze
+
+  METER_GAIN_KEY_MAP = {
+    "空振り" => "whiff",
+    "ガード" => "guard",
+    "ヒット" => "hit",
+    "BL" => "bl",
+    "投げ成功時" => "throwSuccess",
+    "空振り時" => "onWhiff"
+  }.freeze
+
+  FRAME_ADVANTAGE_KEY_MAP = {
+    "ガード" => "guard",
+    "ヒット" => "hit",
+    "立ヒット" => "standingHit",
+    "屈ヒット" => "crouchingHit"
+  }.freeze
 
   class MigrationError < StandardError; end
 
@@ -113,21 +139,27 @@ class CharacterYAMLStructuredMigrator
     introduction_section = sections.first
     move_sections = sections.drop(1)
 
+    move_groups = move_sections.each_with_index.map do |section, index|
+      group_id, expected_title = GROUP_DEFINITIONS[index]
+      build_move_group(
+        section,
+        resource_name: resource_name,
+        group_id: group_id,
+        expected_title: expected_title
+      )
+    end
+    extract_normal_throws_group!(move_groups, resource_name: resource_name)
+    extract_lever_input_group!(move_groups, resource_name: resource_name)
+    extract_target_combos_group!(move_groups, resource_name: resource_name)
+    reorder_move_groups!(move_groups, resource_name: resource_name)
+
     {
       "character" => {
         "id" => normalize_character_id(File.basename(resource_name, ".yml")),
         "displayName" => display_name
       },
       "introduction" => build_introduction(introduction_section, resource_name: resource_name),
-      "moveGroups" => move_sections.each_with_index.map do |section, index|
-        group_id, expected_title = GROUP_DEFINITIONS[index]
-        build_move_group(
-          section,
-          resource_name: resource_name,
-          group_id: group_id,
-          expected_title: expected_title
-        )
-      end
+      "moveGroups" => move_groups
     }
   end
 
@@ -589,13 +621,150 @@ class CharacterYAMLStructuredMigrator
     end
 
     move_groups = Array(document["moveGroups"])
-    expected_ids = GROUP_DEFINITIONS.map(&:first)
+    required_ids = [
+      "ground_normals",
+      "air_normals",
+      "special_moves",
+      "super_arts",
+      LEVER_INPUT_GROUP_ID,
+      NORMAL_THROWS_GROUP_ID,
+      "common_moves"
+    ]
+    optional_ids = required_ids + [TARGET_COMBOS_GROUP_ID]
     actual_ids = move_groups.map { |group| group["id"] }
 
-    unless actual_ids == expected_ids
+    unless actual_ids == required_ids || actual_ids == optional_ids
       raise MigrationError,
-            "Structured output #{relative_path(path)} has moveGroups #{actual_ids.inspect}, expected #{expected_ids.inspect}."
+            "Structured output #{relative_path(path)} has moveGroups #{actual_ids.inspect}, expected #{required_ids.inspect} or #{optional_ids.inspect}."
     end
+  end
+
+  def extract_normal_throws_group!(move_groups, resource_name:)
+    ground_index = move_groups.index { |group| group["id"] == "ground_normals" }
+    raise MigrationError, "#{resource_name} is missing ground_normals group." if ground_index.nil?
+
+    ground_group = move_groups.fetch(ground_index)
+    entries = Array(ground_group["entries"])
+    throw_entries, remaining_entries = entries.partition { |entry| entry["displayName"] == NORMAL_THROW_ENTRY_NAME }
+
+    if throw_entries.empty?
+      raise MigrationError, "#{resource_name} does not contain #{NORMAL_THROW_ENTRY_NAME.inspect} under ground_normals."
+    end
+    if throw_entries.length > 1
+      raise MigrationError, "#{resource_name} contains duplicated #{NORMAL_THROW_ENTRY_NAME.inspect} entries."
+    end
+    if remaining_entries.empty?
+      raise MigrationError, "#{resource_name} ground_normals cannot become empty after extracting normal throws."
+    end
+
+    ground_group["entries"] = remaining_entries
+    move_groups.insert(
+      ground_index + 1,
+      {
+        "id" => NORMAL_THROWS_GROUP_ID,
+        "displayTitle" => NORMAL_THROWS_DISPLAY_TITLE,
+        "entries" => throw_entries
+      }
+    )
+  end
+
+  def extract_lever_input_group!(move_groups, resource_name:)
+    common_index = move_groups.index { |group| group["id"] == "common_moves" }
+    raise MigrationError, "#{resource_name} is missing common_moves group." if common_index.nil?
+
+    common_group = move_groups.fetch(common_index)
+    entries = Array(common_group["entries"])
+    lever_entries, remaining_entries = entries.partition { |entry| entry["displayName"] == LEVER_INPUT_ENTRY_NAME }
+
+    if lever_entries.empty?
+      raise MigrationError, "#{resource_name} does not contain #{LEVER_INPUT_ENTRY_NAME.inspect} under common_moves."
+    end
+    if lever_entries.length > 1
+      raise MigrationError, "#{resource_name} contains duplicated #{LEVER_INPUT_ENTRY_NAME.inspect} entries."
+    end
+
+    lever_entry = lever_entries.first
+    extracted_entries = Array(lever_entry["children"])
+    if extracted_entries.empty?
+      raise MigrationError, "#{resource_name} lever input entry must contain children entries."
+    end
+
+    common_group["entries"] = remaining_entries
+    move_groups.insert(
+      common_index,
+      {
+        "id" => LEVER_INPUT_GROUP_ID,
+        "displayTitle" => LEVER_INPUT_DISPLAY_TITLE,
+        "entries" => extracted_entries
+      }
+    )
+  end
+
+  def extract_target_combos_group!(move_groups, resource_name:)
+    common_index = move_groups.index { |group| group["id"] == "common_moves" }
+    raise MigrationError, "#{resource_name} is missing common_moves group." if common_index.nil?
+
+    common_group = move_groups.fetch(common_index)
+    entries = Array(common_group["entries"])
+    target_entries, remaining_entries = entries.partition { |entry| entry["displayName"] == TARGET_COMBOS_ENTRY_NAME }
+    return if target_entries.empty?
+
+    if target_entries.length > 1
+      raise MigrationError, "#{resource_name} contains duplicated #{TARGET_COMBOS_ENTRY_NAME.inspect} entries."
+    end
+
+    target_entry = target_entries.first
+    extracted_entries = Array(target_entry["children"])
+    if extracted_entries.empty?
+      raise MigrationError, "#{resource_name} target combos entry must contain children entries."
+    end
+
+    common_group["entries"] = remaining_entries
+    move_groups.insert(
+      common_index,
+      {
+        "id" => TARGET_COMBOS_GROUP_ID,
+        "displayTitle" => TARGET_COMBOS_DISPLAY_TITLE,
+        "entries" => extracted_entries
+      }
+    )
+  end
+
+  def reorder_move_groups!(move_groups, resource_name:)
+    expected_order = [
+      "ground_normals",
+      "air_normals",
+      "special_moves",
+      "super_arts",
+      LEVER_INPUT_GROUP_ID,
+      NORMAL_THROWS_GROUP_ID,
+      "common_moves",
+      TARGET_COMBOS_GROUP_ID
+    ]
+
+    groups_by_id = {}
+    move_groups.each do |group|
+      id = group["id"]
+      if groups_by_id.key?(id)
+        raise MigrationError, "#{resource_name} contains duplicated move group #{id.inspect}."
+      end
+      groups_by_id[id] = group
+    end
+
+    known_ids = expected_order.to_set
+    unknown_ids = groups_by_id.keys.reject { |id| known_ids.include?(id) }
+    unless unknown_ids.empty?
+      raise MigrationError, "#{resource_name} contains unsupported move group ids: #{unknown_ids.join(", ")}."
+    end
+
+    required_ids = expected_order - [TARGET_COMBOS_GROUP_ID]
+    missing_ids = required_ids.reject { |id| groups_by_id.key?(id) }
+    unless missing_ids.empty?
+      raise MigrationError, "#{resource_name} is missing required move groups: #{missing_ids.join(", ")}."
+    end
+
+    reordered = expected_order.filter_map { |id| groups_by_id[id] }
+    move_groups.replace(reordered)
   end
 
   def relative_path(path)
@@ -642,16 +811,11 @@ class CharacterYAMLStructuredMigrator
       @display_name = fallback_display_name
       @assigned_standard_fields = {}
       @standard_fields = {}
-      @meter_gain = []
-      @frame_advantage = []
-      @stats = []
+      @meter_gain = {}
+      @frame_advantage = {}
+      @stats = {}
       @note_groups = []
       @note_group_ids = StableIDAllocator.new
-      @labeled_value_ids = {
-        meter_gain: StableIDAllocator.new,
-        frame_advantage: StableIDAllocator.new,
-        stats: StableIDAllocator.new
-      }
       @media_entries = []
     end
 
@@ -675,15 +839,17 @@ class CharacterYAMLStructuredMigrator
     end
 
     def add_meter_gain(label, value)
-      @meter_gain << labeled_value(:meter_gain, label, value)
+      key = METER_GAIN_KEY_MAP.fetch(label, label)
+      add_map_value(@meter_gain, key, value, field_name: "meterGain")
     end
 
     def add_frame_advantage(label, value)
-      @frame_advantage << labeled_value(:frame_advantage, label, value)
+      key = FRAME_ADVANTAGE_KEY_MAP.fetch(label, label)
+      add_map_value(@frame_advantage, key, value, field_name: "frameAdvantage")
     end
 
     def add_stat(label, value)
-      @stats << labeled_value(:stats, label, value)
+      add_map_value(@stats, label, value, field_name: "stats")
     end
 
     def add_note_group(display_title, entries)
@@ -719,12 +885,12 @@ class CharacterYAMLStructuredMigrator
 
     private
 
-    def labeled_value(kind, label, value)
-      {
-        "id" => @labeled_value_ids.fetch(kind).next_id(label),
-        "label" => label,
-        "value" => value
-      }
+    def add_map_value(map, key, value, field_name:)
+      if map.key?(key)
+        raise MigrationError, "#{field_name} contains duplicate key #{key.inspect}."
+      end
+
+      map[key] = value
     end
   end
 end

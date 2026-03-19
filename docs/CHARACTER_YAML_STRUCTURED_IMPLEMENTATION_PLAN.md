@@ -101,12 +101,16 @@
   - `introduction`
   - `moveGroups`
 - 定义 `MoveGroup`、`MoveEntry`、`MoveDetail`、`MoveMedia` 的字段和约束。
-- 固定 5 个 group id：
-  - `air_normals`
+- 固定 7 个 group id（另有 1 个可选 group id）：
   - `ground_normals`
-  - `common_moves`
+  - `air_normals`
   - `special_moves`
   - `super_arts`
+  - `lever_input_moves`
+  - `normal_throws`
+  - `common_moves`
+- 可选：
+  - `target_combos`
 - 明确标准字段、弹性字段、说明字段和媒体字段的边界。
 
 ### Done When
@@ -207,6 +211,7 @@
 - 新增浏览投影模型，承接当前 UI 所需的 section 和 row 信息。
 - 将 `MoveGroup` 投影为根页面分类列表。
 - 将 `MoveEntry.children` 投影为中间层导航页面。
+- 将 `MoveEntry.variants` 投影为带 segmented control 的变体详情页面。
 - 将 `MoveDetail` 投影为详情页字段区、说明区和动作入口。
 - 明确保序规则，确保输出顺序与旧界面一致。
 
@@ -229,7 +234,7 @@
 
 - 调整 `AppNavigationModel`，持有当前 `CharacterProfile`。
 - 根页面导航进入 `MoveGroup`。
-- 中间页面导航进入 `MoveEntry.children`。
+- 中间页面导航进入 `MoveEntry.children` 或 `MoveEntry.variants`。
 - 叶子页面展示 `MoveDetail`。
 - `media` 继续驱动 motion player 跳转。
 
@@ -337,6 +342,139 @@
 - 工程可 build。
 - 角色浏览和 motion player 全量回归通过。
 
+## Phase 12: Normalize Labeled Values to Map Format
+
+### Goal
+
+将 `meterGain`、`frameAdvantage`、`stats` 从数组结构统一为 map 结构，减少冗余字段并对齐运行时解码模型。
+
+### Tasks
+
+- 在迁移脚本中直接输出 map 结构，不再生成 `id/label/value` 数组项。
+- 对 `meterGain` 使用固定 key 映射：
+  - `空振り -> whiff`
+  - `ガード -> guard`
+  - `ヒット -> hit`
+  - `BL -> bl`
+  - `投げ成功時 -> throwSuccess`
+  - `空振り時 -> onWhiff`
+- 对 `frameAdvantage` 使用固定 key 映射：
+  - `ガード -> guard`
+  - `ヒット -> hit`
+  - `立ヒット -> standingHit`
+  - `屈ヒット -> crouchingHit`
+- `stats` 以展示文案作为 map key，保持页面展示语义不变。
+- 为 map key 冲突增加严格失败校验，避免静默覆盖。
+
+### Done When
+
+- 19 个角色 YAML 的 `meterGain/frameAdvantage/stats` 都使用 map 表示。
+- 运行时解码与浏览投影行为保持不变。
+
+### Verification
+
+- 结构化 YAML 解码测试通过。
+- 抽查多个角色详情页，确认统计区块标题和值与迁移前一致。
+
+## Phase 13: Convert Children to Variants for Air/Ground Normals
+
+### Goal
+
+将 `air_normals` 和 `ground_normals` 中“同一技名下多个方向/形态详情”的 `children` 结构归并为 `variants`，并为 UI 提供变体切换能力。
+
+### Tasks
+
+- 新增批量脚本 `scripts/migrate_children_to_variants.py`，将目标 group 中符合条件的 `children` 重写为 `variants`。
+- 变体标题使用父级 `displayName` 做前后缀裁剪，生成简化标签（如 `垂直`、`斜め`）。
+- 更新结构化模型：`MoveEntry` 增加 `variants`，并增加 `MoveVariant` 类型。
+- 更新浏览投影和 UI：点击含 `variants` 的 entry 后进入变体详情页，顶部 segmented control 切换变体详情。
+- 增加对应解码、校验、投影测试，覆盖 children/variants 互斥约束与展示行为。
+
+### Done When
+
+- 19 个角色中目标条目已完成 `children -> variants` 迁移。
+- 带变体条目的详情页可以稳定切换且展示结果正确。
+
+### Verification
+
+- 结构化解码测试通过，`MoveEntry` 互斥约束生效。
+- 抽查 air/ground normals 多角色样例，确认变体切换后详情字段和动作入口正确。
+
+## Phase 14: Extract Normal Throws into Standalone Group
+
+### Goal
+
+将 `ground_normals` 下的 `通常投げ` 从混合条目中抽离到独立 `normal_throws` 分组，保证导航结构和分组语义更清晰。
+
+### Tasks
+
+- 在结构化迁移脚本中增加 `通常投げ` 拆分逻辑。
+- 迁移时将 `ground_normals` 中 `displayName == 通常投げ` 的条目移入新分组：
+  - `id: normal_throws`
+  - `displayTitle: 【通常投げ】`
+- 新分组在最终排序中位于 `lever_input_moves` 之后、`common_moves` 之前。
+- 为“缺失/重复 `通常投げ`”与“拆分后 `ground_normals` 为空”增加严格失败校验。
+
+### Done When
+
+- 19 个角色 YAML 中的通常投げ都在 `normal_throws` 独立分组中。
+- `ground_normals` 不再混入通常投げ条目。
+
+### Verification
+
+- 解码测试通过，`moveGroups` 顺序包含 `normal_throws`。
+- 抽查多角色浏览页，确认“地上通常技 / 通常投げ”分组展示和跳转正常。
+
+## Phase 15: Extract Lever Input Moves into Standalone Group
+
+### Goal
+
+将 `common_moves` 下的 `レバー入れ技` 从混合条目中抽离到独立 `lever_input_moves` 分组，减少分类混杂并保持导航语义稳定。
+
+### Tasks
+
+- 在结构化迁移脚本中增加 `レバー入れ技` 拆分逻辑。
+- 迁移时将 `common_moves` 中 `displayName == レバー入れ技` 的条目拆出为新分组：
+  - `id: lever_input_moves`
+  - `displayTitle: 【レバー入れ技】`
+- 新分组在最终排序中位于 `super_arts` 之后、`normal_throws` 之前。
+- 为“缺失/重复 `レバー入れ技`”与“`レバー入れ技` 不是可展开子列表”增加严格失败校验。
+
+### Done When
+
+- 19 个角色 YAML 中的レバー入れ技都在 `lever_input_moves` 独立分组中。
+- `common_moves` 不再直接包含 `レバー入れ技` 容器条目。
+
+### Verification
+
+- 解码测试通过，`moveGroups` 顺序包含 `lever_input_moves`。
+- 抽查多角色浏览页，确认“レバー入れ技 / 特殊入力技”分组展示和跳转正常。
+
+## Phase 16: Extract Target Combos into Standalone Group
+
+### Goal
+
+将 `common_moves` 下的 `ターゲットコンボ` 容器条目抽离为独立 `target_combos` 分组，避免分类组内混入二级目录容器。
+
+### Tasks
+
+- 在结构化迁移脚本中增加 `ターゲットコンボ` 拆分逻辑。
+- 若 `common_moves` 中存在 `displayName == ターゲットコンボ` 条目，则拆出为：
+  - `id: target_combos`
+  - `displayTitle: 【ターゲットコンボ】`
+- `target_combos` 作为可选分组，存在时放在最终分组顺序的末尾。
+- 为“重复 `ターゲットコンボ`”与“`ターゲットコンボ` 不是可展开子列表”增加严格失败校验。
+
+### Done When
+
+- 含ターゲットコンボ的角色 YAML 已独立到 `target_combos` 分组。
+- 不含ターゲットコンボ的角色仍可保持合法分组顺序并通过解码。
+
+### Verification
+
+- 解码测试通过，`moveGroups` 支持“有/无 `target_combos`”两种顺序。
+- 抽查多角色浏览页，确认 `target_combos` 条目展示和跳转与迁移前一致。
+
 ## 推荐执行顺序
 
 建议严格按以下顺序推进，不要跳 Phase：
@@ -353,6 +491,11 @@
 10. Phase 9
 11. Phase 10
 12. Phase 11
+13. Phase 12
+14. Phase 13
+15. Phase 14
+16. Phase 15
+17. Phase 16
 
 ## 不在本计划范围
 

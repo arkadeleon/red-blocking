@@ -47,13 +47,19 @@ moveGroups:
 
 ### moveGroups
 
-`moveGroups` 固定为 5 类，使用英文机器键和展示标题并存：
+`moveGroups` 固定为 7 类，另有 1 个可选分组，使用英文机器键和展示标题并存。最终顺序为：
 
-- `air_normals`
 - `ground_normals`
-- `common_moves`
+- `air_normals`
 - `special_moves`
 - `super_arts`
+- `lever_input_moves`
+- `normal_throws`
+- `common_moves`
+
+可选分组：
+
+- `target_combos`
 
 顶层第一段介绍文案不放入 `moveGroups`，单独放到 `introduction`。
 
@@ -66,13 +72,15 @@ moveGroups:
 - `id`
 - `displayName`
 - `children`
+- `variants`
 - `detail`
 
 约束如下：
 
 - 中间层节点使用 `children`
+- 变体节点使用 `variants`
 - 叶子节点使用 `detail`
-- 同一个节点不同时承担多个语义层级
+- 同一个节点只允许 `children / variants / detail` 三选一
 
 示意结构：
 
@@ -114,7 +122,7 @@ moveGroups:
 
 - `meterGain` 对应 `ゲージ増加量`
 - `frameAdvantage` 对应 `ヒット&ガード硬直時間差`
-- `stats` 用于承接无法归入标准字段的少量键值项，并保留原顺序
+- `stats` 用于承接无法归入标准字段的少量键值项，使用 map 结构保存
 - `noteGroups` 用于承接 `補足`，包括 `通常 / EX` 这类说明分组
 - `media` 用于承接当前 `Presented` 里的动作播放器信息
 
@@ -129,18 +137,15 @@ detail:
   stun: "9"
   stunReduction: "3"
   meterGain:
-    - id: whiff
-      label: 空振り
-      value: "0"
-    - id: guard
-      label: ガード
-      value: "1"
-    - id: hit
-      label: ヒット
-      value: "2"
-    - id: blocking
-      label: BL
-      value: "4"
+    whiff: "0"
+    guard: "1"
+    hit: "2"
+    bl: "4"
+  frameAdvantage:
+    guard: "-1"
+    hit: "+2"
+  stats:
+    対空値: "高"
   noteGroups:
     - id: notes
       displayTitle: 補足
@@ -179,16 +184,20 @@ detail:
 ### 顶层映射
 
 - 第 1 段 `SectionTitle` 和故事文本映射到 `introduction`
-- `【空中通常技】` -> `air_normals`
 - `【地上通常技】` -> `ground_normals`
-- `【特殊入力技】` -> `common_moves`
+- `【空中通常技】` -> `air_normals`
 - `【必殺技】` -> `special_moves`
 - `【スーパーアーツ】` -> `super_arts`
+- `ground_normals` 中的 `通常投げ` 条目拆分到独立 `normal_throws` 分组
+- `【特殊入力技】` -> `common_moves`
+- `common_moves` 中的 `レバー入れ技` 条目拆分到独立 `lever_input_moves` 分组
+- `common_moves` 中的 `ターゲットコンボ` 条目拆分到可选 `target_combos` 分组
 
 ### 中间层映射
 
 - 所有 `Next` 中间层统一转换成 `children`
 - 所有展示标题保留原文，不做文案改写
+- `air_normals` / `ground_normals` 中“同技名多跳跃方向”形态可进一步归并为 `variants`
 
 ### 叶子详情映射
 
