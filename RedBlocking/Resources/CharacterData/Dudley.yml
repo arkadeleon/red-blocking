@@ -1828,125 +1828,44 @@ moveGroups:
         skillCode: '047'
   - id: item_63cae68eee
     displayName: ローリングサンダー
-    children:
-    - id: item_838e702fbc
-      displayName: 技名
-      detail:
-        displayName: ローリングサンダー
-    - id: item_49b7386bc1
-      displayName: コマンド
-      detail:
-        displayName: コマンド
-        command: 236236+P後、P連打
-    - id: item_838e702fbc_2
-      displayName: 技名
-      detail:
-        displayName: フェイクロール
-    - id: item_49b7386bc1_2
-      displayName: コマンド
-      detail:
-        displayName: コマンド
-        command: 236236+P後、6+PPP押しっぱなし
-    - id: item_1143708263
-      displayName: ストック数
-      detail:
-        displayName: ストック数
-        stats:
-          ストック数: '1'
-    - id: item_0b597471fb
-      displayName: ゲージの長さ
-      detail:
-        displayName: ゲージの長さ
-        stats:
-          ゲージの長さ: 112ドット
-    - id: item_5d6ebc9016
-      displayName: ガード
-      detail:
-        displayName: ガード
-        guard: 両方×4～8
-    - id: bl
-      displayName: BL
-      detail:
-        displayName: BL
-        blocking: "→×4～8"
-    - id: item_08b61ad07f
-      displayName: 発生
-      detail:
-        displayName: 発生
-        startup: '2'
-    - id: item_50f147eace
-      displayName: 持続
-      detail:
-        displayName: 持続
-        active: '2'
-    - id: item_d6852e217f
-      displayName: 硬直
-      detail:
-        displayName: 硬直
-        recovery: '20'
-    - id: item_60d9b0638d
-      displayName: 攻撃力
-      detail:
-        displayName: 攻撃力
-        damage: |-
-          415(8ヒット時)
-          140+（40×6)+170
-    - id: item_2d84a7bb48
-      displayName: ケズリ
-      detail:
-        displayName: ケズリ
-        chipDamage: |-
-          71(8回ガード時)
-          18+（7×6)+11
-    - id: item_b52816980f
-      displayName: スタン値
-      detail:
-        displayName: スタン値
-        stun: |-
-          20(8ヒット時)
-          3+（5×6)+3
-    - id: item_f32d520a6f
-      displayName: 削減値
-      detail:
-        displayName: 削減値
-        stunReduction: 1・1・1・(1×4)・1
-    - id: item_5d6ebc9016_2
-      displayName: ガード
-      detail:
-        displayName: ガード
-        frameAdvantage:
-          guard: "-9"
-    - id: item_1272286f89
-      displayName: 立ヒット
-      detail:
-        displayName: 立ヒット
-        frameAdvantage:
-          standingHit: ダウン
-    - id: item_a3b78ed257
-      displayName: 屈ヒット
-      detail:
-        displayName: 屈ヒット
-        frameAdvantage:
-          crouchingHit: ダウン
-    - id: 50_50_47_5_516_11_6_ppp_8_4_14_q_p_5_p_213
-      displayName: "・コマンド完成後、暗転50フレーム、相手行動不能時間50フレーム。コマンド完成から47フレーム間無敵 \n・攻撃発生5フレーム前に無敵終了。食らい判定出現(技を重ねられていたら潰される)\n・攻撃発生5フレーム前から16フレーム間上段打撃無敵(攻撃発生後からは11フレーム間) \n・コマンド入力後、6+PPP押しっぱなしでフェイクロールが出る。フェイクロール後、相手か画面端に接触するとローリングサンダーに移行する\n・連打でヒット数が増加。 最大で8ヒット、最小で4ヒット\n・削減値欄途中の「(1×4)」は連打部分\n・画面端でヒット時、全キャラに小マシンガンブローで追撃可能。\n　エレナ、春麗、まこと、Q、ネクロには立大Pが入る。この5キャラには「小マシンガン→立中P」も決めることが可能\n・各攻撃力とケズリ値、スタン値は以下の表を参照(表内のカッコ内の数値は連打部分のもの。2ヒットを1セットとして最大3回ループする)"
-      detail:
-        displayName: "・コマンド完成後、暗転50フレーム、相手行動不能時間50フレーム。コマンド完成から47フレーム間無敵 \n・攻撃発生5フレーム前に無敵終了。食らい判定出現(技を重ねられていたら潰される)\n・攻撃発生5フレーム前から16フレーム間上段打撃無敵(攻撃発生後からは11フレーム間) \n・コマンド入力後、6+PPP押しっぱなしでフェイクロールが出る。フェイクロール後、相手か画面端に接触するとローリングサンダーに移行する\n・連打でヒット数が増加。 最大で8ヒット、最小で4ヒット\n・削減値欄途中の「(1×4)」は連打部分\n・画面端でヒット時、全キャラに小マシンガンブローで追撃可能。\n　エレナ、春麗、まこと、Q、ネクロには立大Pが入る。この5キャラには「小マシンガン→立中P」も決めることが可能\n・各攻撃力とケズリ値、スタン値は以下の表を参照(表内のカッコ内の数値は連打部分のもの。2ヒットを1セットとして最大3回ループする)"
-        noteGroups:
-        - id: item_cf8aa5b927
-          displayTitle: 補足
-          entries:
-          - "・コマンド完成後、暗転50フレーム、相手行動不能時間50フレーム。コマンド完成から47フレーム間無敵 \n・攻撃発生5フレーム前に無敵終了。食らい判定出現(技を重ねられていたら潰される)\n・攻撃発生5フレーム前から16フレーム間上段打撃無敵(攻撃発生後からは11フレーム間) \n・コマンド入力後、6+PPP押しっぱなしでフェイクロールが出る。フェイクロール後、相手か画面端に接触するとローリングサンダーに移行する\n・連打でヒット数が増加。 最大で8ヒット、最小で4ヒット\n・削減値欄途中の「(1×4)」は連打部分\n・画面端でヒット時、全キャラに小マシンガンブローで追撃可能。\n　エレナ、春麗、まこと、Q、ネクロには立大Pが入る。この5キャラには「小マシンガン→立中P」も決めることが可能\n・各攻撃力とケズリ値、スタン値は以下の表を参照(表内のカッコ内の数値は連打部分のもの。2ヒットを1セットとして最大3回ループする)"
-    - id: item_52edcb822b
-      displayName: モーション
-      detail:
-        displayName: モーション
-        media:
-          kind: motion_player
-          displayLabel: モーション
-          skillName: Rolling Thunder
-          characterCode: '04'
-          skillCode: '048'
+    detail:
+      displayName: ローリングサンダー（フェイクロール）
+      command: |-
+        236236+P後、P連打
+        236236+P後、6+PPP押しっぱなし
+      guard: 両方×4～8
+      blocking: "→×4～8"
+      startup: '2'
+      active: '2'
+      recovery: '20'
+      damage: |-
+        415(8ヒット時)
+        140+（40×6)+170
+      chipDamage: |-
+        71(8回ガード時)
+        18+（7×6)+11
+      stun: |-
+        20(8ヒット時)
+        3+（5×6)+3
+      stunReduction: 1・1・1・(1×4)・1
+      frameAdvantage:
+        guard: "-9"
+        standingHit: ダウン
+        crouchingHit: ダウン
+      stats:
+        ストック数: '1'
+        ゲージの長さ: 112ドット
+      noteGroups:
+      - id: item_cf8aa5b927
+        displayTitle: 補足
+        entries:
+        - "・コマンド完成後、暗転50フレーム、相手行動不能時間50フレーム。コマンド完成から47フレーム間無敵 \n・攻撃発生5フレーム前に無敵終了。食らい判定出現(技を重ねられていたら潰される)\n・攻撃発生5フレーム前から16フレーム間上段打撃無敵(攻撃発生後からは11フレーム間) \n・コマンド入力後、6+PPP押しっぱなしでフェイクロールが出る。フェイクロール後、相手か画面端に接触するとローリングサンダーに移行する\n・連打でヒット数が増加。 最大で8ヒット、最小で4ヒット\n・削減値欄途中の「(1×4)」は連打部分\n・画面端でヒット時、全キャラに小マシンガンブローで追撃可能。\n　エレナ、春麗、まこと、Q、ネクロには立大Pが入る。この5キャラには「小マシンガン→立中P」も決めることが可能\n・各攻撃力とケズリ値、スタン値は以下の表を参照(表内のカッコ内の数値は連打部分のもの。2ヒットを1セットとして最大3回ループする)"
+      media:
+        kind: motion_player
+        displayLabel: モーション
+        skillName: Rolling Thunder
+        characterCode: '04'
+        skillCode: '048'
   - id: item_40710a4055
     displayName: コークスクリューブロー
     detail:
