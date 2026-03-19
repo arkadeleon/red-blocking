@@ -907,9 +907,9 @@ moveGroups:
   entries:
   - id: item_a26147e782
     displayName: ヴェルテュの残光 オット
-    children:
+    variants:
     - id: item_8649590193
-      displayName: ヴェルテュの残光 オット【小】
+      displayName: 【小】
       detail:
         displayName: ヴェルテュの残光 オット【小】
         command: 4タメ6+小P
@@ -939,7 +939,7 @@ moveGroups:
           characterCode: '20'
           skillCode: '030'
     - id: item_a75ee689a8
-      displayName: ヴェルテュの残光 オット【中】
+      displayName: 【中】
       detail:
         displayName: ヴェルテュの残光 オット【中】
         command: 4タメ6+中P
@@ -969,7 +969,7 @@ moveGroups:
           characterCode: '20'
           skillCode: '031'
     - id: item_c1e8108d51
-      displayName: ヴェルテュの残光 オット【大】
+      displayName: 【大】
       detail:
         displayName: ヴェルテュの残光 オット【大】
         command: 4タメ6+大P
@@ -999,7 +999,7 @@ moveGroups:
           characterCode: '20'
           skillCode: '032'
     - id: ex
-      displayName: ヴェルテュの残光 オット【EX 近距離】
+      displayName: 【EX 近距離】
       detail:
         displayName: ヴェルテュの残光 オット【EX 近距離】
         command: 4タメ6+PP
@@ -1035,7 +1035,7 @@ moveGroups:
           characterCode: '20'
           skillCode: '033'
     - id: ex_2
-      displayName: ヴェルテュの残光 オット【EX 遠距離】
+      displayName: 【EX 遠距離】
       detail:
         displayName: ヴェルテュの残光 オット【EX 遠距離】
         command: 4タメ6+PP
@@ -1070,52 +1070,43 @@ moveGroups:
           skillName: Light of Virtue (EX Low)
           characterCode: '20'
           skillCode: '034'
-    - id: item_cf8aa5b927
-      displayName: 補足
-      detail:
-        displayName: 補足
-        noteGroups:
-        - id: item_bd3455e23b
-          displayTitle: 通常
-          entries:
-          - |-
-            ・ボタンによって弾速が変化
-            ・持続は弾発射時のもの。攻撃判定は1フレーム後に発生
-            ・画面端でヒット時、ノーキャンセルでSA1・2に繋ぐ事が可能
-            ・大型キャラ以外のしゃがんでいる相手には当たらない
-        - id: ex
-          displayTitle: EX
-          entries:
-          - |-
-            ・持続は弾発射時のもの。攻撃判定は1フレーム後に発生
-            ・遠距離ではソニックの1つが下段判定になるので注意
+    noteGroups:
+    - id: item_bd3455e23b
+      displayTitle: 通常
+      entries:
+      - |-
+        ・ボタンによって弾速が変化
+        ・持続は弾発射時のもの。攻撃判定は1フレーム後に発生
+        ・画面端でヒット時、ノーキャンセルでSA1・2に繋ぐ事が可能
+        ・大型キャラ以外のしゃがんでいる相手には当たらない
+    - id: ex
+      displayTitle: EX
+      entries:
+      - |-
+        ・持続は弾発射時のもの。攻撃判定は1フレーム後に発生
+        ・遠距離ではソニックの1つが下段判定になるので注意
     - id: item_633ed71b3f
-      displayName: ソニックマシンガン（ソニマ）
-      detail:
-        displayName: ソニックマシンガン（ソニマ）
-        noteGroups:
-        - id: item_633ed71b3f
-          displayTitle: ソニックマシンガン（ソニマ）
-          entries:
-          - |-
-            ソニックマシンガンとは同一方向のタメであるオットとバスのタメの差を利用して、オットとバスを交互に連発するテクニック。
-            タメは各技ごとにタメ時間が設定されているため、オットを出してもバスのタメは残る仕組みを利用したもの。
-            １P側から出す場合の入力方法は、
+      displayTitle: ソニックマシンガン（ソニマ）
+      entries:
+      - |-
+        ソニックマシンガンとは同一方向のタメであるオットとバスのタメの差を利用して、オットとバスを交互に連発するテクニック。
+        タメは各技ごとにタメ時間が設定されているため、オットを出してもバスのタメは残る仕組みを利用したもの。
+        １P側から出す場合の入力方法は、
 
-            1.オットかバスのタメを完成させる
-            2.「前→後」とレバー入力してボタン受付時間を使って一度タメ開放を行い、再びオット・バスともにをタメ開始
-            3.タメが完了したらオットを出す。オットのタメはリセットされるが、バスのタメはそのまま継続されている
-            4.続いて「前→後＋K」でバスを出す
-            5.画面内に上下のソニックが出ていれば成功。 あとはタイミングよく「前後＋P→前後＋K→前後＋P」と上→下の順に出していく
+        1.オットかバスのタメを完成させる
+        2.「前→後」とレバー入力してボタン受付時間を使って一度タメ開放を行い、再びオット・バスともにをタメ開始
+        3.タメが完了したらオットを出す。オットのタメはリセットされるが、バスのタメはそのまま継続されている
+        4.続いて「前→後＋K」でバスを出す
+        5.画面内に上下のソニックが出ていれば成功。 あとはタイミングよく「前後＋P→前後＋K→前後＋P」と上→下の順に出していく
 
-            なお、オットとバスはどちらが初段スタートでも可能。
-            コツとしてはオットかバスを撃つ時に、PかKボタンを若干遅らせて押すと出しやすい。
-            イメージとしては「後→前→後＋P（K）」ではなく「後→前→後→P（K）」のように意識すると良い。
+        なお、オットとバスはどちらが初段スタートでも可能。
+        コツとしてはオットかバスを撃つ時に、PかKボタンを若干遅らせて押すと出しやすい。
+        イメージとしては「後→前→後＋P（K）」ではなく「後→前→後→P（K）」のように意識すると良い。
   - id: item_1b5fab4dd8
     displayName: ヴェルテュの残光 パス
-    children:
+    variants:
     - id: item_1931008413
-      displayName: ヴェルテュの残光 パス【小】
+      displayName: 【小】
       detail:
         displayName: ヴェルテュの残光 パス【小】
         command: 4タメ6+小K
@@ -1145,7 +1136,7 @@ moveGroups:
           characterCode: '20'
           skillCode: '035'
     - id: item_d0bff6ff4c
-      displayName: ヴェルテュの残光 パス【中】
+      displayName: 【中】
       detail:
         displayName: ヴェルテュの残光 パス【中】
         command: 4タメ6+中K
@@ -1175,7 +1166,7 @@ moveGroups:
           characterCode: '20'
           skillCode: '036'
     - id: item_3d04697ddb
-      displayName: ヴェルテュの残光 パス【大】
+      displayName: 【大】
       detail:
         displayName: ヴェルテュの残光 パス【大】
         command: 4タメ6+大K
@@ -1205,7 +1196,7 @@ moveGroups:
           characterCode: '20'
           skillCode: '037'
     - id: ex
-      displayName: ヴェルテュの残光 パス【EX 近距離】
+      displayName: 【EX 近距離】
       detail:
         displayName: ヴェルテュの残光 パス【EX 近距離】
         command: 4タメ6+KK
@@ -1241,7 +1232,7 @@ moveGroups:
           characterCode: '20'
           skillCode: '036'
     - id: ex_2
-      displayName: ヴェルテュの残光 パス【EX 遠距離】
+      displayName: 【EX 遠距離】
       detail:
         displayName: ヴェルテュの残光 パス【EX 遠距離】
         command: 4タメ6+KK
@@ -1276,30 +1267,26 @@ moveGroups:
           skillName: Light of Virtue (EX Low)
           characterCode: '20'
           skillCode: '037'
-    - id: item_cf8aa5b927
-      displayName: 補足
-      detail:
-        displayName: 補足
-        noteGroups:
-        - id: item_bd3455e23b
-          displayTitle: 通常
-          entries:
-          - |-
-            ・ボタンによって弾速が変化
-            ・持続は弾発射時のもの。攻撃判定は1フレーム後に発生
-            ・これをSCしてSA1を出すとBLが困難な連係になる。最後のケズリに最適
-            ・キャンセル猶予時間は19フレーム
-        - id: ex
-          displayTitle: EX
-          entries:
-          - |-
-            ・持続は弾発射時のもの。攻撃判定は1フレーム後に発生
-            ・遠距離ではソニックの1つが下段判定になるので注意
+    noteGroups:
+    - id: item_bd3455e23b
+      displayTitle: 通常
+      entries:
+      - |-
+        ・ボタンによって弾速が変化
+        ・持続は弾発射時のもの。攻撃判定は1フレーム後に発生
+        ・これをSCしてSA1を出すとBLが困難な連係になる。最後のケズリに最適
+        ・キャンセル猶予時間は19フレーム
+    - id: ex
+      displayTitle: EX
+      entries:
+      - |-
+        ・持続は弾発射時のもの。攻撃判定は1フレーム後に発生
+        ・遠距離ではソニックの1つが下段判定になるので注意
   - id: item_d50a324fa2
     displayName: マ・シェリの悲哀
-    children:
+    variants:
     - id: item_d3cdd89670
-      displayName: マ・シェリの悲哀【小】
+      displayName: 【小】
       detail:
         displayName: マ・シェリの悲哀【小】
         command: 2タメ8+小K
@@ -1329,7 +1316,7 @@ moveGroups:
           characterCode: '20'
           skillCode: '040'
     - id: item_da98f4bde0
-      displayName: マ・シェリの悲哀【中】
+      displayName: 【中】
       detail:
         displayName: マ・シェリの悲哀【中】
         command: 2タメ8+中K
@@ -1359,7 +1346,7 @@ moveGroups:
           characterCode: '20'
           skillCode: '041'
     - id: item_901d3d7075
-      displayName: マ・シェリの悲哀【大】
+      displayName: 【大】
       detail:
         displayName: マ・シェリの悲哀【大】
         command: 2タメ8+大K
@@ -1389,7 +1376,7 @@ moveGroups:
           characterCode: '20'
           skillCode: '042'
     - id: ex
-      displayName: マ・シェリの悲哀【EX】
+      displayName: 【EX】
       detail:
         displayName: マ・シェリの悲哀【EX】
         command: 2タメ8+KK
@@ -1418,31 +1405,27 @@ moveGroups:
           skillName: Rising Rage Flash (EX)
           characterCode: '20'
           skillCode: '043'
-    - id: item_cf8aa5b927
-      displayName: 補足
-      detail:
-        displayName: 補足
-        noteGroups:
-        - id: item_bd3455e23b
-          displayTitle: 通常
-          entries:
-          - |-
-            ・小→中→大の順に攻撃判定が前斜め上に長くなる
-            ・小のカッコ内の数値は先端ヒット時のもの
-            ・コマンド完成後、2～3フレーム間投げ無敵(食らい判定は地上)。4フレーム目から空中判定に移行
-            ・小は先端を当てるようにすれば反撃を受けにくい
-        - id: ex
-          displayTitle: EX
-          entries:
-          - |-
-            ・コマンド完成後、7フレーム完全無敵(最後のフレームのみ空中投げられ判定あり)。8フレーム目から空中判定に移行
-            ・ヒット&ガード硬直時間差のカッコ内の数値は、1発のみヒットまたはガードされた時のもの
-            ・キャンセル猶予時間は13フレーム（1段目のみ）
+    noteGroups:
+    - id: item_bd3455e23b
+      displayTitle: 通常
+      entries:
+      - |-
+        ・小→中→大の順に攻撃判定が前斜め上に長くなる
+        ・小のカッコ内の数値は先端ヒット時のもの
+        ・コマンド完成後、2～3フレーム間投げ無敵(食らい判定は地上)。4フレーム目から空中判定に移行
+        ・小は先端を当てるようにすれば反撃を受けにくい
+    - id: ex
+      displayTitle: EX
+      entries:
+      - |-
+        ・コマンド完成後、7フレーム完全無敵(最後のフレームのみ空中投げられ判定あり)。8フレーム目から空中判定に移行
+        ・ヒット&ガード硬直時間差のカッコ内の数値は、1発のみヒットまたはガードされた時のもの
+        ・キャンセル猶予時間は13フレーム（1段目のみ）
   - id: item_fd47d4f1f2
     displayName: 冷たく蒼いルグレ
-    children:
+    variants:
     - id: item_0f7c4e5081
-      displayName: 冷たく蒼いルグレ【小】
+      displayName: 【小】
       detail:
         displayName: 冷たく蒼いルグレ【小】
         command: 214+小K
@@ -1478,7 +1461,7 @@ moveGroups:
           characterCode: '20'
           skillCode: '044'
     - id: item_35de578c57
-      displayName: 冷たく蒼いルグレ【中】
+      displayName: 【中】
       detail:
         displayName: 冷たく蒼いルグレ【中】
         command: 214+中K
@@ -1514,7 +1497,7 @@ moveGroups:
           characterCode: '20'
           skillCode: '045'
     - id: item_8bc0c74fa8
-      displayName: 冷たく蒼いルグレ【大】
+      displayName: 【大】
       detail:
         displayName: 冷たく蒼いルグレ【大】
         command: 214+大K
@@ -1546,7 +1529,7 @@ moveGroups:
           characterCode: '20'
           skillCode: '046'
     - id: ex
-      displayName: 冷たく蒼いルグレ【EX】
+      displayName: 【EX】
       detail:
         displayName: 冷たく蒼いルグレ【EX】
         command: 214+KK
@@ -1577,18 +1560,14 @@ moveGroups:
           skillName: Cold Blue Kick (EX)
           characterCode: '20'
           skillCode: '047'
+    noteGroups:
     - id: item_cf8aa5b927
-      displayName: 補足
-      detail:
-        displayName: 補足
-        noteGroups:
-        - id: item_cf8aa5b927
-          displayTitle: 補足
-          entries:
-          - |-
-            ・コマンド完成後、1フレーム目から空中投げられ判定に移行。ただし1～4フレーム目までは打撃食らい判定は地上のまま。5フレーム目から空中判定に移行
-            ・大とEXのみ相手にヒットするとダウンさせる事が可能
-            ・空中でヒットした場合、間合いによっては更に追撃可能
+      displayTitle: 補足
+      entries:
+      - |-
+        ・コマンド完成後、1フレーム目から空中投げられ判定に移行。ただし1～4フレーム目までは打撃食らい判定は地上のまま。5フレーム目から空中判定に移行
+        ・大とEXのみ相手にヒットするとダウンさせる事が可能
+        ・空中でヒットした場合、間合いによっては更に追撃可能
 - id: super_arts
   displayTitle: "【スーパーアーツ】"
   entries:

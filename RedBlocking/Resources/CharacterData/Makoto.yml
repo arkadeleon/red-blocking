@@ -972,9 +972,9 @@ moveGroups:
   entries:
   - id: item_f0b110da5e
     displayName: 突進正拳突き 「疾風」(はやて)
-    children:
+    variants:
     - id: item_30f479d9a4
-      displayName: 突進正拳突き 「疾風」(はやて)【小】
+      displayName: 【小】
       detail:
         displayName: 突進正拳突き 「疾風」(はやて)【小】
         command: 236+小P
@@ -1007,7 +1007,7 @@ moveGroups:
           characterCode: '17'
           skillCode: '034'
     - id: item_39e1a27879
-      displayName: 突進正拳突き 「疾風」(はやて)【中】
+      displayName: 【中】
       detail:
         displayName: 突進正拳突き 「疾風」(はやて)【中】
         command: 236+中P
@@ -1040,7 +1040,7 @@ moveGroups:
           characterCode: '17'
           skillCode: '035'
     - id: item_3a2d28d735
-      displayName: 突進正拳突き 「疾風」(はやて)【大】
+      displayName: 【大】
       detail:
         displayName: 突進正拳突き 「疾風」(はやて)【大】
         command: 236+大P
@@ -1073,7 +1073,7 @@ moveGroups:
           characterCode: '17'
           skillCode: '036'
     - id: '1'
-      displayName: 突進正拳突き 「疾風」(はやて)【タメ：1】
+      displayName: 【タメ：1】
       detail:
         displayName: 突進正拳突き 「疾風」(はやて)【タメ：1】
         command: 236+P後、P押しっぱなし
@@ -1100,7 +1100,7 @@ moveGroups:
           硬直 ガード: '12'
           硬直 空振り: '11'
     - id: '2'
-      displayName: 突進正拳突き 「疾風」(はやて)【タメ：2】
+      displayName: 【タメ：2】
       detail:
         displayName: 突進正拳突き 「疾風」(はやて)【タメ：2】
         command: 236+P後、P押しっぱなし
@@ -1127,7 +1127,7 @@ moveGroups:
           硬直 ガード: '12'
           硬直 空振り: '10'
     - id: '3'
-      displayName: 突進正拳突き 「疾風」(はやて)【タメ：3】
+      displayName: 【タメ：3】
       detail:
         displayName: 突進正拳突き 「疾風」(はやて)【タメ：3】
         command: 236+P後、P押しっぱなし
@@ -1154,7 +1154,7 @@ moveGroups:
           硬直 ガード: '12'
           硬直 空振り: '10'
     - id: '4'
-      displayName: 突進正拳突き 「疾風」(はやて)【タメ：4】
+      displayName: 【タメ：4】
       detail:
         displayName: 突進正拳突き 「疾風」(はやて)【タメ：4】
         command: 236+P後、P押しっぱなし
@@ -1187,7 +1187,7 @@ moveGroups:
           characterCode: '17'
           skillCode: '033'
     - id: ex
-      displayName: 突進正拳突き 「疾風」(はやて)【EX】
+      displayName: 【EX】
       detail:
         displayName: 突進正拳突き 「疾風」(はやて)【EX】
         command: 236+PP
@@ -1219,57 +1219,36 @@ moveGroups:
           skillName: Hayate (EX)
           characterCode: '17'
           skillCode: '037'
-    - id: item_cf8aa5b927
-      displayName: 補足
-      detail:
-        displayName: 補足
-        noteGroups:
-        - id: item_bd3455e23b
-          displayTitle: 通常
-          entries:
-          - |-
-            ・ボタンによって突進距離が長くなる
-            ・タメ押し可能。ただしEXはタメれない
-            ・タメ時間に応じて隙が少なくなる。またタメ2～4ではダウン効果が付き、ヒット時に画面端であれば追撃可能
-            ・空中ヒット時、追撃可能
-            ・ヒット時、ノーキャンセルでSA1に繋ぐ事が可能。その場合、キャンセル猶予時間は28フレーム
-        - id: ex
-          displayTitle: EX
-          entries:
-          - |-
-            ・突進速度が速くなり、ダウン効果が付く
-            ・画面端でヒットした場合、追撃可能
-            ・追撃できる技&対応キャラは以下の通り。なお表の下のキャラは上の追撃技も入る(アレックス、ヒューゴーなら表内の5種類全部)
+    noteGroups:
+    - id: item_bd3455e23b
+      displayTitle: 通常
+      entries:
+      - |-
+        ・ボタンによって突進距離が長くなる
+        ・タメ押し可能。ただしEXはタメれない
+        ・タメ時間に応じて隙が少なくなる。またタメ2～4ではダウン効果が付き、ヒット時に画面端であれば追撃可能
+        ・空中ヒット時、追撃可能
+        ・ヒット時、ノーキャンセルでSA1に繋ぐ事が可能。その場合、キャンセル猶予時間は28フレーム
+    - id: ex
+      displayTitle: EX
+      entries:
+      - |-
+        ・突進速度が速くなり、ダウン効果が付く
+        ・画面端でヒットした場合、追撃可能
+        ・追撃できる技&対応キャラは以下の通り。なお表の下のキャラは上の追撃技も入る(アレックス、ヒューゴーなら表内の5種類全部)
     - id: item_cc17fefe38
-      displayName: 追撃技の追撃可能キャラ
-      detail:
-        displayName: 追撃技の追撃可能キャラ
-        noteGroups:
-        - id: 6k
-          displayTitle: 6小K
-          entries:
-          - ユン、ヤン、いぶき
-        - id: k
-          displayTitle: 立中K
-          entries:
-          - リュウ、ケン、ショーン、豪鬼、ダッドリー、ネクロ(イマイチ不安定。6小Kから連係の方がいいかも)
-        - id: item_5d353b5fea
-          displayTitle: 小疾風
-          entries:
-          - 春麗、まこと、オロ、エレナ、Q、トゥエルヴ、レミー
-        - id: item_3488bfbe08
-          displayTitle: 中疾風
-          entries:
-          - ユリアン
-        - id: p
-          displayTitle: 立大P
-          entries:
-          - アレックス、ヒューゴー
+      displayTitle: 追撃技の追撃可能キャラ
+      entries:
+      - 6小K：ユン、ヤン、いぶき
+      - 立中K：リュウ、ケン、ショーン、豪鬼、ダッドリー、ネクロ(イマイチ不安定。6小Kから連係の方がいいかも)
+      - 小疾風：春麗、まこと、オロ、エレナ、Q、トゥエルヴ、レミー
+      - 中疾風：ユリアン
+      - 立大P：アレックス、ヒューゴー
   - id: item_f1d3c3132e
     displayName: 直上正拳突き 「吹上」(ふきあげ)
-    children:
+    variants:
     - id: item_4ae8dc8a5e
-      displayName: 直上正拳突き 「吹上」(ふきあげ)【小】
+      displayName: 【小】
       detail:
         displayName: 直上正拳突き 「吹上」(ふきあげ)【小】
         command: 623+小P
@@ -1301,7 +1280,7 @@ moveGroups:
           characterCode: '17'
           skillCode: '038'
     - id: item_df1bad7c4a
-      displayName: 直上正拳突き 「吹上」(ふきあげ)【中】
+      displayName: 【中】
       detail:
         displayName: 直上正拳突き 「吹上」(ふきあげ)【中】
         command: 623+中P
@@ -1333,7 +1312,7 @@ moveGroups:
           characterCode: '17'
           skillCode: '039'
     - id: item_8c0c825cc7
-      displayName: 直上正拳突き 「吹上」(ふきあげ)【大】
+      displayName: 【大】
       detail:
         displayName: 直上正拳突き 「吹上」(ふきあげ)【大】
         command: 623+大P
@@ -1365,7 +1344,7 @@ moveGroups:
           characterCode: '17'
           skillCode: '040'
     - id: ex
-      displayName: 直上正拳突き 「吹上」(ふきあげ)【EX】
+      displayName: 【EX】
       detail:
         displayName: 直上正拳突き 「吹上」(ふきあげ)【EX】
         command: 623+PP
@@ -1396,33 +1375,29 @@ moveGroups:
           skillName: Fukiage (EX)
           characterCode: '17'
           skillCode: '041'
-    - id: item_cf8aa5b927
-      displayName: 補足
-      detail:
-        displayName: 補足
-        noteGroups:
-        - id: item_bd3455e23b
-          displayTitle: 通常
-          entries:
-          - |-
-            ・コマンド完成後、3フレーム上半身打撃無敵
-            ・ヒット後、追撃可能
-            ・ヒット、ガード、BLを問わず、キャンセルハイジャンプが可能
-            ・基本的に空中の相手にしかヒットしないが、相手の食らい判定が前に出ている場合は地上ヒットさせる事が可能
-            ・根元より少し高い位置で当てた方が、より相手を高く浮かせることが出来る
-        - id: ex
-          displayTitle: EX
-          entries:
-          - |-
-            ・コマンド完成後、11フレーム膝から上が打撃無敵
-            ・ヒット後、追撃可能
-            ・ヒット、ガード、BLを問わず、キャンセルハイジャンプが可能
-            ・基本的に空中の相手にしかヒットしないが、相手の食らい判定が前に出ている場合は地上ヒットさせる事が可能
+    noteGroups:
+    - id: item_bd3455e23b
+      displayTitle: 通常
+      entries:
+      - |-
+        ・コマンド完成後、3フレーム上半身打撃無敵
+        ・ヒット後、追撃可能
+        ・ヒット、ガード、BLを問わず、キャンセルハイジャンプが可能
+        ・基本的に空中の相手にしかヒットしないが、相手の食らい判定が前に出ている場合は地上ヒットさせる事が可能
+        ・根元より少し高い位置で当てた方が、より相手を高く浮かせることが出来る
+    - id: ex
+      displayTitle: EX
+      entries:
+      - |-
+        ・コマンド完成後、11フレーム膝から上が打撃無敵
+        ・ヒット後、追撃可能
+        ・ヒット、ガード、BLを問わず、キャンセルハイジャンプが可能
+        ・基本的に空中の相手にしかヒットしないが、相手の食らい判定が前に出ている場合は地上ヒットさせる事が可能
   - id: item_a38a013f81
     displayName: 打ち下ろし手刀 「颪」(おろし)
-    children:
+    variants:
     - id: item_fa9da6d581
-      displayName: 打ち下ろし手刀 「颪」(おろし)【小】
+      displayName: 【小】
       detail:
         displayName: 打ち下ろし手刀 「颪」(おろし)【小】
         command: 214+小P
@@ -1452,7 +1427,7 @@ moveGroups:
           characterCode: '17'
           skillCode: '042'
     - id: item_e3455c23e3
-      displayName: 打ち下ろし手刀 「颪」(おろし)【中】
+      displayName: 【中】
       detail:
         displayName: 打ち下ろし手刀 「颪」(おろし)【中】
         command: 214+中P
@@ -1482,7 +1457,7 @@ moveGroups:
           characterCode: '17'
           skillCode: '043'
     - id: item_d18f718110
-      displayName: 打ち下ろし手刀 「颪」(おろし)【大】
+      displayName: 【大】
       detail:
         displayName: 打ち下ろし手刀 「颪」(おろし)【大】
         command: 214+大P
@@ -1512,7 +1487,7 @@ moveGroups:
           characterCode: '17'
           skillCode: '044'
     - id: ex
-      displayName: 打ち下ろし手刀 「颪」(おろし)【EX】
+      displayName: 【EX】
       detail:
         displayName: 打ち下ろし手刀 「颪」(おろし)【EX】
         command: 214+PP
@@ -1541,23 +1516,19 @@ moveGroups:
           skillName: Oroshi (EX)
           characterCode: '17'
           skillCode: '045'
+    noteGroups:
     - id: item_cf8aa5b927
-      displayName: 補足
-      detail:
-        displayName: 補足
-        noteGroups:
-        - id: item_cf8aa5b927
-          displayTitle: 補足
-          entries:
-          - |-
-            ・大、EXのみ、ダウン効果あり
-            ・EXになると発生、速度が大幅にアップ。非常に優秀な中段技になる
-            ・キャンセル猶予時間は小、中颪が18フレーム。大、ＥＸ颪は21フレーム（立ヒットのみ）。ただし大、ＥＸ颪しゃがみヒット時はヒット確認不可（ヒューゴーのみ可能）
+      displayTitle: 補足
+      entries:
+      - |-
+        ・大、EXのみ、ダウン効果あり
+        ・EXになると発生、速度が大幅にアップ。非常に優秀な中段技になる
+        ・キャンセル猶予時間は小、中颪が18フレーム。大、ＥＸ颪は21フレーム（立ヒットのみ）。ただし大、ＥＸ颪しゃがみヒット時はヒット確認不可（ヒューゴーのみ可能）
   - id: item_89067b311b
     displayName: 吊るし喉輪 「唐草」(からくさ)
-    children:
+    variants:
     - id: item_16b7bc6931
-      displayName: 吊るし喉輪 「唐草」(からくさ)【小】
+      displayName: 【小】
       detail:
         displayName: 吊るし喉輪 「唐草」(からくさ)【小】
         command: 63214+小K
@@ -1589,7 +1560,7 @@ moveGroups:
           characterCode: '17'
           skillCode: '050'
     - id: item_660eb27d6b
-      displayName: 吊るし喉輪 「唐草」(からくさ)【中】
+      displayName: 【中】
       detail:
         displayName: 吊るし喉輪 「唐草」(からくさ)【中】
         command: 63214+中K
@@ -1621,7 +1592,7 @@ moveGroups:
           characterCode: '17'
           skillCode: '051'
     - id: item_95bfa03c23
-      displayName: 吊るし喉輪 「唐草」(からくさ)【大】
+      displayName: 【大】
       detail:
         displayName: 吊るし喉輪 「唐草」(からくさ)【大】
         command: 63214+大K
@@ -1652,20 +1623,16 @@ moveGroups:
           skillName: Karakusa (Roundhouse)
           characterCode: '17'
           skillCode: '052'
+    noteGroups:
     - id: item_cf8aa5b927
-      displayName: 補足
-      detail:
-        displayName: 補足
-        noteGroups:
-        - id: item_cf8aa5b927
-          displayTitle: 補足
-          entries:
-          - "・コマンド投げ。投げた後、追撃可能 \n・投げ成功後、レバー・ボタンに触らない状態にすることで29フレーム完全無敵がつく。レバー・ボタンに触ると解除される\n・投げ成功後、レバーを後ろに入れておく、もしくは最速で各種攻撃を出す事で、相手に接近して密着の攻撃をヒットさせる事が可能\n・まこと側だけ、相手の通常投げを唐草の出掛りでGDできる\n・3214＋Kの簡易コマンドでも出す事が可能"
+      displayTitle: 補足
+      entries:
+      - "・コマンド投げ。投げた後、追撃可能 \n・投げ成功後、レバー・ボタンに触らない状態にすることで29フレーム完全無敵がつく。レバー・ボタンに触ると解除される\n・投げ成功後、レバーを後ろに入れておく、もしくは最速で各種攻撃を出す事で、相手に接近して密着の攻撃をヒットさせる事が可能\n・まこと側だけ、相手の通常投げを唐草の出掛りでGDできる\n・3214＋Kの簡易コマンドでも出す事が可能"
   - id: item_b796591086
     displayName: 閃空カカト落とし 「剣」(つるぎ)
-    children:
+    variants:
     - id: item_03e7b74999
-      displayName: 閃空カカト落とし 「剣」(つるぎ)【小】
+      displayName: 【小】
       detail:
         displayName: 閃空カカト落とし 「剣」(つるぎ)【小】
         command: 垂直 or 前ジャンプ中、214+小K
@@ -1695,7 +1662,7 @@ moveGroups:
           characterCode: '17'
           skillCode: '046'
     - id: item_5d08c589f0
-      displayName: 閃空カカト落とし 「剣」(つるぎ)【中】
+      displayName: 【中】
       detail:
         displayName: 閃空カカト落とし 「剣」(つるぎ)【中】
         command: 垂直 or 前ジャンプ中、214+中K
@@ -1725,7 +1692,7 @@ moveGroups:
           characterCode: '17'
           skillCode: '047'
     - id: item_ded39486cf
-      displayName: 閃空カカト落とし 「剣」(つるぎ)【大】
+      displayName: 【大】
       detail:
         displayName: 閃空カカト落とし 「剣」(つるぎ)【大】
         command: 垂直 or 前ジャンプ中、214+大K
@@ -1755,7 +1722,7 @@ moveGroups:
           characterCode: '17'
           skillCode: '048'
     - id: ex
-      displayName: 閃空カカト落とし 「剣」(つるぎ)【EX】
+      displayName: 【EX】
       detail:
         displayName: 閃空カカト落とし 「剣」(つるぎ)【EX】
         command: 垂直 or 前ジャンプ中、214+KK
@@ -1784,27 +1751,23 @@ moveGroups:
           skillName: Tsurugi (EX)
           characterCode: '17'
           skillCode: '049'
-    - id: item_cf8aa5b927
-      displayName: 補足
-      detail:
-        displayName: 補足
-        noteGroups:
-        - id: item_bd3455e23b
-          displayTitle: 通常
-          entries:
-          - |-
-            ・硬直は着地時のもの
-            ・大のみダウン効果あり
-            ・小、中のみ空対空で当てた場合、追撃可能
-            ・小→中→大の順に前方に移動する力が大きく加わるようになる
-        - id: ex
-          displayTitle: EX
-          entries:
-          - |-
-            ・硬直は着地時のもの
-            ・2段目にダウン効果あり
-            ・1段目のみが空中ヒットした場合は追撃可能
-            ・発生が速く前進しないため、昇りで出すと強力な中段技になる
+    noteGroups:
+    - id: item_bd3455e23b
+      displayTitle: 通常
+      entries:
+      - |-
+        ・硬直は着地時のもの
+        ・大のみダウン効果あり
+        ・小、中のみ空対空で当てた場合、追撃可能
+        ・小→中→大の順に前方に移動する力が大きく加わるようになる
+    - id: ex
+      displayTitle: EX
+      entries:
+      - |-
+        ・硬直は着地時のもの
+        ・2段目にダウン効果あり
+        ・1段目のみが空中ヒットした場合は追撃可能
+        ・発生が速く前進しないため、昇りで出すと強力な中段技になる
 - id: super_arts
   displayTitle: "【スーパーアーツ】"
   entries:

@@ -836,9 +836,9 @@ moveGroups:
   entries:
   - id: item_fc17c88a05
     displayName: 百裂脚
-    children:
+    variants:
     - id: item_c01dbfe714
-      displayName: 百裂脚【小】
+      displayName: 【小】
       detail:
         displayName: 百裂脚【小】
         command: 小K連打
@@ -874,7 +874,7 @@ moveGroups:
           characterCode: '16'
           skillCode: '040'
     - id: item_f3ae54d100
-      displayName: 百裂脚【中】
+      displayName: 【中】
       detail:
         displayName: 百裂脚【中】
         command: 中K連打
@@ -910,7 +910,7 @@ moveGroups:
           characterCode: '16'
           skillCode: '041'
     - id: item_6c3ce51c8a
-      displayName: 百裂脚【大】
+      displayName: 【大】
       detail:
         displayName: 百裂脚【大】
         command: 大K連打
@@ -946,7 +946,7 @@ moveGroups:
           characterCode: '16'
           skillCode: '042'
     - id: ex
-      displayName: 百裂脚【EX】
+      displayName: 【EX】
       detail:
         displayName: 百裂脚【EX】
         command: KK連打
@@ -981,29 +981,25 @@ moveGroups:
           skillName: Hyakuretsu Kyaku (EX)
           characterCode: '16'
           skillCode: '043'
-    - id: item_cf8aa5b927
-      displayName: 補足
-      detail:
-        displayName: 補足
-        noteGroups:
-        - id: item_bd3455e23b
-          displayTitle: 通常
-          entries:
-          - "・連打によりヒット数がアップ\n・削減値欄のカッコ内の部分は連打部分\n・小はヒット時、連打しなければ振り向きのけぞりになりSA2が繋がる\n・ゲージが鬼のように溜まるので鳳翼後の2択などに絡めてガードさせていく \n・各攻撃力、ケズリ、スタン値は以下の表を参照(それぞれ最大で小:4回、中:3回、大:2回、連打部分(カッコ内の数値)がループ)"
-        - id: ex
-          displayTitle: EX
-          entries:
-          - |-
-            ・連打によりヒット数がアップ
-            ・削減値欄のカッコ内の部分は連打部分
-            ・ヒット時、ダウン効果あり
-            ・起き上がりに使うことで、投げや少しでも遅れた打撃に勝つ事ができる。またガードされても隙が少ない
-            ・各攻撃力、ケズリ、スタン値は以下の表を参照(それぞれ最大で2回、連打部分(カッコ内の数値)がループ)
+    noteGroups:
+    - id: item_bd3455e23b
+      displayTitle: 通常
+      entries:
+      - "・連打によりヒット数がアップ\n・削減値欄のカッコ内の部分は連打部分\n・小はヒット時、連打しなければ振り向きのけぞりになりSA2が繋がる\n・ゲージが鬼のように溜まるので鳳翼後の2択などに絡めてガードさせていく \n・各攻撃力、ケズリ、スタン値は以下の表を参照(それぞれ最大で小:4回、中:3回、大:2回、連打部分(カッコ内の数値)がループ)"
+    - id: ex
+      displayTitle: EX
+      entries:
+      - |-
+        ・連打によりヒット数がアップ
+        ・削減値欄のカッコ内の部分は連打部分
+        ・ヒット時、ダウン効果あり
+        ・起き上がりに使うことで、投げや少しでも遅れた打撃に勝つ事ができる。またガードされても隙が少ない
+        ・各攻撃力、ケズリ、スタン値は以下の表を参照(それぞれ最大で2回、連打部分(カッコ内の数値)がループ)
   - id: item_7493f802e6
     displayName: 気功拳
-    children:
+    variants:
     - id: item_5a4fd48020
-      displayName: 気功拳【小】
+      displayName: 【小】
       detail:
         displayName: 気功拳【小】
         command: 41236+小P
@@ -1033,7 +1029,7 @@ moveGroups:
           characterCode: '16'
           skillCode: '036'
     - id: item_d2bc0c7f3e
-      displayName: 気功拳【中】
+      displayName: 【中】
       detail:
         displayName: 気功拳【中】
         command: 41236+中P
@@ -1063,7 +1059,7 @@ moveGroups:
           characterCode: '16'
           skillCode: '037'
     - id: item_5127acab6e
-      displayName: 気功拳【大】
+      displayName: 【大】
       detail:
         displayName: 気功拳【大】
         command: 41236+大P
@@ -1093,7 +1089,7 @@ moveGroups:
           characterCode: '16'
           skillCode: '038'
     - id: ex
-      displayName: 気功拳【EX】
+      displayName: 【EX】
       detail:
         displayName: 気功拳【EX】
         command: 41236+PP
@@ -1122,32 +1118,28 @@ moveGroups:
           skillName: Kikkoken (EX)
           characterCode: '16'
           skillCode: '039'
-    - id: item_cf8aa5b927
-      displayName: 補足
-      detail:
-        displayName: 補足
-        noteGroups:
-        - id: item_bd3455e23b
-          displayTitle: 通常
-          entries:
-          - |-
-            ・ボタンによって弾速と飛距離が変化
-            ・持続は弾発射時のもの。攻撃判定は1フレーム後に発生
-            ・小気功拳[SC]→鳳翼扇で削り殺しにも使える
-            ・1236＋Pの簡易コマンドでも出す事が可能
-        - id: ex
-          displayTitle: EX
-          entries:
-          - |-
-            ・弾速は遅いが、画面端まで届くようになる
-            ・持続は弾発射時のもの。攻撃判定は1フレーム後に発生
-            ・EX気功拳[SC]→鳳翼扇で削り殺しにも使える
-            ・1236＋PPの簡易コマンドでも出す事が可能
+    noteGroups:
+    - id: item_bd3455e23b
+      displayTitle: 通常
+      entries:
+      - |-
+        ・ボタンによって弾速と飛距離が変化
+        ・持続は弾発射時のもの。攻撃判定は1フレーム後に発生
+        ・小気功拳[SC]→鳳翼扇で削り殺しにも使える
+        ・1236＋Pの簡易コマンドでも出す事が可能
+    - id: ex
+      displayTitle: EX
+      entries:
+      - |-
+        ・弾速は遅いが、画面端まで届くようになる
+        ・持続は弾発射時のもの。攻撃判定は1フレーム後に発生
+        ・EX気功拳[SC]→鳳翼扇で削り殺しにも使える
+        ・1236＋PPの簡易コマンドでも出す事が可能
   - id: item_610542c3dc
     displayName: スピニングバードキック
-    children:
+    variants:
     - id: item_f865b98590
-      displayName: スピニングバードキック【小】
+      displayName: 【小】
       detail:
         displayName: スピニングバードキック【小】
         command: 2タメ8+小K
@@ -1183,7 +1175,7 @@ moveGroups:
           characterCode: '16'
           skillCode: '044'
     - id: item_dde8b93d2d
-      displayName: スピニングバードキック【中】
+      displayName: 【中】
       detail:
         displayName: スピニングバードキック【中】
         command: 2タメ8+中K
@@ -1219,7 +1211,7 @@ moveGroups:
           characterCode: '16'
           skillCode: '045'
     - id: item_1d01bfba85
-      displayName: スピニングバードキック【大】
+      displayName: 【大】
       detail:
         displayName: スピニングバードキック【大】
         command: 2タメ8+大K
@@ -1255,7 +1247,7 @@ moveGroups:
           characterCode: '16'
           skillCode: '046'
     - id: ex
-      displayName: スピニングバードキック【EX】
+      displayName: 【EX】
       detail:
         displayName: スピニングバードキック【EX】
         command: 2タメ8+KK
@@ -1290,31 +1282,27 @@ moveGroups:
           skillName: Spinning Bird Kick (EX)
           characterCode: '16'
           skillCode: '047'
-    - id: item_cf8aa5b927
-      displayName: 補足
-      detail:
-        displayName: 補足
-        noteGroups:
-        - id: item_bd3455e23b
-          displayTitle: 通常
-          entries:
-          - |-
-            ・ボタンによって小→中→大の順に移動距離が長くなる
-            ・コマンド完成後、小は13、中は16、大は18フレーム目から着地まで空中判定に移行
-            ・ヒット時は硬直が一律20フレームに減少
-            ・各攻撃力、ケズリ、スタン値は以下の表を参照
-        - id: ex
-          displayTitle: EX
-          entries:
-          - |-
-            ・コマンド完成後、8フレーム完全無敵。9フレーム目から着地まで空中判定に移行
-            ・ヒット時は硬直が21フレームに減少
-            ・各攻撃力、ケズリ、スタン値は以下の表を参照
+    noteGroups:
+    - id: item_bd3455e23b
+      displayTitle: 通常
+      entries:
+      - |-
+        ・ボタンによって小→中→大の順に移動距離が長くなる
+        ・コマンド完成後、小は13、中は16、大は18フレーム目から着地まで空中判定に移行
+        ・ヒット時は硬直が一律20フレームに減少
+        ・各攻撃力、ケズリ、スタン値は以下の表を参照
+    - id: ex
+      displayTitle: EX
+      entries:
+      - |-
+        ・コマンド完成後、8フレーム完全無敵。9フレーム目から着地まで空中判定に移行
+        ・ヒット時は硬直が21フレームに減少
+        ・各攻撃力、ケズリ、スタン値は以下の表を参照
   - id: item_8c63f0f607
     displayName: 覇山蹴
-    children:
+    variants:
     - id: item_3439ff8756
-      displayName: 覇山蹴【小】
+      displayName: 【小】
       detail:
         displayName: 覇山蹴【小】
         command: 63214+小K
@@ -1344,7 +1332,7 @@ moveGroups:
           characterCode: '16'
           skillCode: '048'
     - id: item_d008fa3475
-      displayName: 覇山蹴【中】
+      displayName: 【中】
       detail:
         displayName: 覇山蹴【中】
         command: 63214+中K
@@ -1374,7 +1362,7 @@ moveGroups:
           characterCode: '16'
           skillCode: '049'
     - id: item_4e1d2d5d45
-      displayName: 覇山蹴【大】
+      displayName: 【大】
       detail:
         displayName: 覇山蹴【大】
         command: 63214+大K
@@ -1404,7 +1392,7 @@ moveGroups:
           characterCode: '16'
           skillCode: '050'
     - id: ex
-      displayName: 覇山蹴【EX】
+      displayName: 【EX】
       detail:
         displayName: 覇山蹴【EX】
         command: 63214+KK
@@ -1433,26 +1421,22 @@ moveGroups:
           skillName: Hazan Shu (EX)
           characterCode: '16'
           skillCode: '051'
-    - id: item_cf8aa5b927
-      displayName: 補足
-      detail:
-        displayName: 補足
-        noteGroups:
-        - id: item_bd3455e23b
-          displayTitle: 通常
-          entries:
-          - |-
-            ・ボタンによって移動距離と高度が変化。小→中→大の順に長く、高くなる
-            ・コマンド完成後、小・中は3、大は4フレーム目から着地まで空中判定に移行。攻撃発生と同時に着地
-            ・攻撃力とスタン値のカッコ内の数値は技の後半にヒットした時のもの
-            ・3214＋Kの簡易コマンドでも出す事が可能
-        - id: ex
-          displayTitle: EX
-          entries:
-          - |-
-            ・コマンド完成後、6フレーム完全無敵。7フレーム目から着地まで空中判定に移行。攻撃発生と同時に着地
-            ・攻撃力とスタン値のカッコ内の数値は技の後半にヒットした時のもの
-            ・3214＋KKの簡易コマンドでも出す事が可能
+    noteGroups:
+    - id: item_bd3455e23b
+      displayTitle: 通常
+      entries:
+      - |-
+        ・ボタンによって移動距離と高度が変化。小→中→大の順に長く、高くなる
+        ・コマンド完成後、小・中は3、大は4フレーム目から着地まで空中判定に移行。攻撃発生と同時に着地
+        ・攻撃力とスタン値のカッコ内の数値は技の後半にヒットした時のもの
+        ・3214＋Kの簡易コマンドでも出す事が可能
+    - id: ex
+      displayTitle: EX
+      entries:
+      - |-
+        ・コマンド完成後、6フレーム完全無敵。7フレーム目から着地まで空中判定に移行。攻撃発生と同時に着地
+        ・攻撃力とスタン値のカッコ内の数値は技の後半にヒットした時のもの
+        ・3214＋KKの簡易コマンドでも出す事が可能
 - id: super_arts
   displayTitle: "【スーパーアーツ】"
   entries:

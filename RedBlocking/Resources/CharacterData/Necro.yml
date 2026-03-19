@@ -935,9 +935,9 @@ moveGroups:
   entries:
   - id: item_32f6774bf7
     displayName: 電磁ブラスト
-    children:
+    variants:
     - id: item_767bf222b5
-      displayName: 電磁ブラスト【小】
+      displayName: 【小】
       detail:
         displayName: 電磁ブラスト【小】
         command: 623+小P後、P連打
@@ -967,7 +967,7 @@ moveGroups:
           characterCode: '05'
           skillCode: '036'
     - id: item_d2c2ea60d0
-      displayName: 電磁ブラスト【中】
+      displayName: 【中】
       detail:
         displayName: 電磁ブラスト【中】
         command: 623+中P後、P連打
@@ -1003,7 +1003,7 @@ moveGroups:
           characterCode: '05'
           skillCode: '037'
     - id: item_c8edbed539
-      displayName: 電磁ブラスト【大】
+      displayName: 【大】
       detail:
         displayName: 電磁ブラスト【大】
         command: 623+大P後、P連打
@@ -1038,20 +1038,16 @@ moveGroups:
           skillName: Electric Shock (Fierce)
           characterCode: '05'
           skillCode: '038'
+    noteGroups:
     - id: item_cf8aa5b927
-      displayName: 補足
-      detail:
-        displayName: 補足
-        noteGroups:
-        - id: item_cf8aa5b927
-          displayTitle: 補足
-          entries:
-          - "・硬直欄のカッコ内の数値はヒット時のもの\n・連打によりヒット数が変化。最大で中は3ヒット、大は5ヒットする\n・BLされた場合、小は連打をやめるまで、中・大は最大10回まで攻撃判定がループする\n・連打しなくても相手にヒットおよびガードされた時にボタン押しっぱなしで連打と同じ効果になる \n・中は2ヒット以上、大は3ヒット以上しないとダウンしない\n・コマンド完成後、半キャラほど前に出る。攻撃判定終了後は元の位置に戻るため反撃の間合いに注意\n・主に小、中はめくりにも対応した対空に、大は連続技に使用する\n・キャンセル猶予時間は\n　小電磁：23フレーム \n　中電磁：1段目が18フレーム、２段目が19～36フレーム\n　大電磁：1段目が18フレーム、２段目が19～36フレーム、3段目が37～54フレーム"
+      displayTitle: 補足
+      entries:
+      - "・硬直欄のカッコ内の数値はヒット時のもの\n・連打によりヒット数が変化。最大で中は3ヒット、大は5ヒットする\n・BLされた場合、小は連打をやめるまで、中・大は最大10回まで攻撃判定がループする\n・連打しなくても相手にヒットおよびガードされた時にボタン押しっぱなしで連打と同じ効果になる \n・中は2ヒット以上、大は3ヒット以上しないとダウンしない\n・コマンド完成後、半キャラほど前に出る。攻撃判定終了後は元の位置に戻るため反撃の間合いに注意\n・主に小、中はめくりにも対応した対空に、大は連続技に使用する\n・キャンセル猶予時間は\n　小電磁：23フレーム \n　中電磁：1段目が18フレーム、２段目が19～36フレーム\n　大電磁：1段目が18フレーム、２段目が19～36フレーム、3段目が37～54フレーム"
   - id: item_52ed598045
     displayName: トルネイドフック
-    children:
+    variants:
     - id: item_d5261468f9
-      displayName: トルネイドフック【小】
+      displayName: 【小】
       detail:
         displayName: トルネイドフック【小】
         command: 41236+小P
@@ -1084,7 +1080,7 @@ moveGroups:
           characterCode: '05'
           skillCode: '042'
     - id: item_ddc4135faa
-      displayName: トルネイドフック【中】
+      displayName: 【中】
       detail:
         displayName: トルネイドフック【中】
         command: 41236+中P
@@ -1117,7 +1113,7 @@ moveGroups:
           characterCode: '05'
           skillCode: '043'
     - id: item_7a00f9f6b8
-      displayName: トルネイドフック【大】
+      displayName: 【大】
       detail:
         displayName: トルネイドフック【大】
         command: 41236+大P
@@ -1150,7 +1146,7 @@ moveGroups:
           characterCode: '05'
           skillCode: '044'
     - id: ex
-      displayName: トルネイドフック【EX】
+      displayName: 【EX】
       detail:
         displayName: トルネイドフック【EX】
         command: 41236+PP
@@ -1182,24 +1178,20 @@ moveGroups:
           skillName: Spinning Punch (EX)
           characterCode: '05'
           skillCode: '045'
+    noteGroups:
     - id: item_cf8aa5b927
-      displayName: 補足
-      detail:
-        displayName: 補足
-        noteGroups:
-        - id: item_cf8aa5b927
-          displayTitle: 補足
-          entries:
-          - |-
-            ・小が画面端でヒット後、追撃可能
-            ・大は3段目ヒット時、反転のけぞりの効果あり
-            ・ヒット&ガード硬直時間差の大トルネイドのカッコ内の数値は、最後の1発のみヒットした場合のもの
-            ・1236＋Pの簡易コマンドでも出す事が可能
+      displayTitle: 補足
+      entries:
+      - |-
+        ・小が画面端でヒット後、追撃可能
+        ・大は3段目ヒット時、反転のけぞりの効果あり
+        ・ヒット&ガード硬直時間差の大トルネイドのカッコ内の数値は、最後の1発のみヒットした場合のもの
+        ・1236＋Pの簡易コマンドでも出す事が可能
   - id: item_e131d211ec
     displayName: フライングバイパー
-    children:
+    variants:
     - id: item_d12c370630
-      displayName: フライングバイパー【小】
+      displayName: 【小】
       detail:
         displayName: フライングバイパー【小】
         command: 214+小P
@@ -1229,7 +1221,7 @@ moveGroups:
           characterCode: '05'
           skillCode: '046'
     - id: item_f2039c1c81
-      displayName: フライングバイパー【中】
+      displayName: 【中】
       detail:
         displayName: フライングバイパー【中】
         command: 214+中P
@@ -1259,7 +1251,7 @@ moveGroups:
           characterCode: '05'
           skillCode: '047'
     - id: item_b82cc9e9b2
-      displayName: フライングバイパー【大】
+      displayName: 【大】
       detail:
         displayName: フライングバイパー【大】
         command: 214+大P
@@ -1289,7 +1281,7 @@ moveGroups:
           characterCode: '05'
           skillCode: '048'
     - id: ex
-      displayName: フライングバイパー【EX】
+      displayName: 【EX】
       detail:
         displayName: フライングバイパー【EX】
         command: 214+PP
@@ -1318,25 +1310,21 @@ moveGroups:
           skillName: Flying Viper (EX)
           characterCode: '05'
           skillCode: '049'
+    noteGroups:
     - id: item_cf8aa5b927
-      displayName: 補足
-      detail:
-        displayName: 補足
-        noteGroups:
-        - id: item_cf8aa5b927
-          displayTitle: 補足
-          entries:
-          - |-
-            ・硬直欄のカッコ内の数値は着地時のもの。EXのカッコ内の数値は1ヒット時のもの
-            ・コマンド完成後、7フレーム目から空中判定に移行
-            ・小→中→大→EXの順に移動距離が長くなる。EXは若干、ホーミング性能あり
-            ・EXは空振り時、2段目の攻撃は発生しない
-            ・技のモーション上、下段技をスカしながらの攻撃も可能
+      displayTitle: 補足
+      entries:
+      - |-
+        ・硬直欄のカッコ内の数値は着地時のもの。EXのカッコ内の数値は1ヒット時のもの
+        ・コマンド完成後、7フレーム目から空中判定に移行
+        ・小→中→大→EXの順に移動距離が長くなる。EXは若干、ホーミング性能あり
+        ・EXは空振り時、2段目の攻撃は発生しない
+        ・技のモーション上、下段技をスカしながらの攻撃も可能
   - id: item_8659b1978f
     displayName: ライジングコブラ
-    children:
+    variants:
     - id: item_c7f45639a0
-      displayName: ライジングコブラ【小】
+      displayName: 【小】
       detail:
         displayName: ライジングコブラ【小】
         command: 214+小K
@@ -1366,7 +1354,7 @@ moveGroups:
           characterCode: '05'
           skillCode: '050'
     - id: item_7212df6eb2
-      displayName: ライジングコブラ【中】
+      displayName: 【中】
       detail:
         displayName: ライジングコブラ【中】
         command: 214+中K
@@ -1396,7 +1384,7 @@ moveGroups:
           characterCode: '05'
           skillCode: '051'
     - id: item_df5c6f5b90
-      displayName: ライジングコブラ【大】
+      displayName: 【大】
       detail:
         displayName: ライジングコブラ【大】
         command: 214+大K
@@ -1426,7 +1414,7 @@ moveGroups:
           characterCode: '05'
           skillCode: '052'
     - id: ex
-      displayName: ライジングコブラ【EX】
+      displayName: 【EX】
       detail:
         displayName: ライジングコブラ【EX】
         command: 214+KK
@@ -1455,22 +1443,18 @@ moveGroups:
           skillName: Raging Cobra (EX)
           characterCode: '05'
           skillCode: '053'
+    noteGroups:
     - id: item_cf8aa5b927
-      displayName: 補足
-      detail:
-        displayName: 補足
-        noteGroups:
-        - id: item_cf8aa5b927
-          displayTitle: 補足
-          entries:
-          - |-
-            ・見た目、投げられ判定が後ろに下がるように見えるが、投げられ判定はその場に残ったままなので注意
-            ・ヒット時、叩きつけダウンになるため、QSしにくい
+      displayTitle: 補足
+      entries:
+      - |-
+        ・見た目、投げられ判定が後ろに下がるように見えるが、投げられ判定はその場に残ったままなので注意
+        ・ヒット時、叩きつけダウンになるため、QSしにくい
   - id: item_ba0806d679
     displayName: スネークファング
-    children:
+    variants:
     - id: item_8d878f0bf6
-      displayName: スネークファング【小】
+      displayName: 【小】
       detail:
         displayName: スネークファング【小】
         command: 41236+小K
@@ -1502,7 +1486,7 @@ moveGroups:
           characterCode: '05'
           skillCode: '039'
     - id: item_b29e1ad44b
-      displayName: スネークファング【中】
+      displayName: 【中】
       detail:
         displayName: スネークファング【中】
         command: 41236+中K
@@ -1534,7 +1518,7 @@ moveGroups:
           characterCode: '05'
           skillCode: '040'
     - id: item_1cf7dad963
-      displayName: スネークファング【大】
+      displayName: 【大】
       detail:
         displayName: スネークファング【大】
         command: 41236+大K
@@ -1565,25 +1549,21 @@ moveGroups:
           skillName: Snake Fang (RH)
           characterCode: '05'
           skillCode: '041'
+    noteGroups:
     - id: item_cf8aa5b927
-      displayName: 補足
-      detail:
-        displayName: 補足
-        noteGroups:
-        - id: item_cf8aa5b927
-          displayTitle: 補足
-          entries:
-          - |-
-            ・BL不可の下段打撃投げ。ヒット時、大きく後ろに投げる。QS不可
-            ・ダウンするまでダメージは入らない
-            ・画面端に向かって投げた時のみ追撃可能
-            ・背後から投げた時はジャーマンスープレックスに変化
-            ・1236＋Kの簡易コマンドでも出す事が可能
+      displayTitle: 補足
+      entries:
+      - |-
+        ・BL不可の下段打撃投げ。ヒット時、大きく後ろに投げる。QS不可
+        ・ダウンするまでダメージは入らない
+        ・画面端に向かって投げた時のみ追撃可能
+        ・背後から投げた時はジャーマンスープレックスに変化
+        ・1236＋Kの簡易コマンドでも出す事が可能
   - id: item_f8682e1a5c
     displayName: ジャーマンスープレックス
-    children:
+    variants:
     - id: item_495eb76f73
-      displayName: ジャーマンスープレックス【小】
+      displayName: 【小】
       detail:
         displayName: ジャーマンスープレックス【小】
         command: 相手の背後から41236+小K
@@ -1609,7 +1589,7 @@ moveGroups:
         stats:
           投げ間合い: 66～122
     - id: item_e379553cd1
-      displayName: ジャーマンスープレックス【中】
+      displayName: 【中】
       detail:
         displayName: ジャーマンスープレックス【中】
         command: 相手の背後から41236+中K
@@ -1635,7 +1615,7 @@ moveGroups:
         stats:
           投げ間合い: 74～130
     - id: item_5464eecf97
-      displayName: ジャーマンスープレックス【大】
+      displayName: 【大】
       detail:
         displayName: ジャーマンスープレックス【大】
         command: 相手の背後から41236+大K
@@ -1660,17 +1640,13 @@ moveGroups:
           crouchingHit: ダウン
         stats:
           投げ間合い: 82～138
+    noteGroups:
     - id: item_cf8aa5b927
-      displayName: 補足
-      detail:
-        displayName: 補足
-        noteGroups:
-        - id: item_cf8aa5b927
-          displayTitle: 補足
-          entries:
-          - |-
-            ・ヒット時、QS不可
-            ・1236＋Kの簡易コマンドでも出す事が可能
+      displayTitle: 補足
+      entries:
+      - |-
+        ・ヒット時、QS不可
+        ・1236＋Kの簡易コマンドでも出す事が可能
 - id: super_arts
   displayTitle: "【スーパーアーツ】"
   entries:
@@ -1784,9 +1760,9 @@ moveGroups:
   entries:
   - id: item_bf7bad6f6c
     displayName: ドリルキック
-    children:
+    variants:
     - id: '30'
-      displayName: ドリルキック小(30度)
+      displayName: 小(30度)
       detail:
         displayName: ドリルキック小(30度)
         command: ジャンプ中、2小K
@@ -1816,7 +1792,7 @@ moveGroups:
           characterCode: '05'
           skillCode: '028'
     - id: '45'
-      displayName: ドリルキック中(45度)
+      displayName: 中(45度)
       detail:
         displayName: ドリルキック中(45度)
         command: ジャンプ中、2中K
@@ -1846,7 +1822,7 @@ moveGroups:
           characterCode: '05'
           skillCode: '029'
     - id: '80'
-      displayName: ドリルキック大(80度)
+      displayName: 大(80度)
       detail:
         displayName: ドリルキック大(80度)
         command: ジャンプ中、2大K
@@ -1875,19 +1851,15 @@ moveGroups:
           skillName: Drill RH
           characterCode: '05'
           skillCode: '030'
+    noteGroups:
     - id: item_cf8aa5b927
-      displayName: 補足
-      detail:
-        displayName: 補足
-        noteGroups:
-        - id: item_cf8aa5b927
-          displayTitle: 補足
-          entries:
-          - |-
-            ・硬直は当てる高さによって変化
-            ・当て方によっては連続ヒットしない
-            ・空中ヒットした場合、SA1で拾う事が可能
-            ・大ドリルは状況限定で相手をめくる事ができる
+      displayTitle: 補足
+      entries:
+      - |-
+        ・硬直は当てる高さによって変化
+        ・当て方によっては連続ヒットしない
+        ・空中ヒットした場合、SA1で拾う事が可能
+        ・大ドリルは状況限定で相手をめくる事ができる
   - id: item_b7f2bb505b
     displayName: エルボーキャノン
     detail:

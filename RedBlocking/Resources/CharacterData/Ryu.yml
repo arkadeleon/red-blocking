@@ -898,9 +898,9 @@ moveGroups:
   entries:
   - id: item_60d7466836
     displayName: 波動拳
-    children:
+    variants:
     - id: item_9e36502dc3
-      displayName: 波動拳【小】
+      displayName: 【小】
       detail:
         displayName: 波動拳【小】
         command: 236+小P
@@ -930,7 +930,7 @@ moveGroups:
           characterCode: '02'
           skillCode: '033'
     - id: item_5cff016e2e
-      displayName: 波動拳【中】
+      displayName: 【中】
       detail:
         displayName: 波動拳【中】
         command: 236+中P
@@ -960,7 +960,7 @@ moveGroups:
           characterCode: '02'
           skillCode: '034'
     - id: item_b6994d1e96
-      displayName: 波動拳【大】
+      displayName: 【大】
       detail:
         displayName: 波動拳【大】
         command: 236+大P
@@ -1019,29 +1019,25 @@ moveGroups:
           skillName: Hadouken (EX)
           characterCode: '02'
           skillCode: '036'
-    - id: item_cf8aa5b927
-      displayName: 補足
-      detail:
-        displayName: 補足
-        noteGroups:
-        - id: item_bd3455e23b
-          displayTitle: 通常
-          entries:
-          - |-
-            ・ボタンによって弾速が変化
-            ・持続は弾発射時のもの。攻撃判定は1フレーム後に発生
-        - id: ex
-          displayTitle: EX
-          entries:
-          - |-
-            ・持続は弾発射時のもの。攻撃判定は1フレーム後に発生
-            ・ヒット時、ダウン効果あり
-            ・2段技で当たると吹っ飛ぶため、端に追い込みやすい
+    noteGroups:
+    - id: item_bd3455e23b
+      displayTitle: 通常
+      entries:
+      - |-
+        ・ボタンによって弾速が変化
+        ・持続は弾発射時のもの。攻撃判定は1フレーム後に発生
+    - id: ex
+      displayTitle: EX
+      entries:
+      - |-
+        ・持続は弾発射時のもの。攻撃判定は1フレーム後に発生
+        ・ヒット時、ダウン効果あり
+        ・2段技で当たると吹っ飛ぶため、端に追い込みやすい
   - id: item_f3593af179
     displayName: 昇龍拳
-    children:
+    variants:
     - id: item_0a85020639
-      displayName: 昇龍拳【小】
+      displayName: 【小】
       detail:
         displayName: 昇龍拳【小】
         command: 623+小P
@@ -1071,7 +1067,7 @@ moveGroups:
           characterCode: '02'
           skillCode: '037'
     - id: item_50de36014c
-      displayName: 昇龍拳【中】
+      displayName: 【中】
       detail:
         displayName: 昇龍拳【中】
         command: 623+中P
@@ -1101,7 +1097,7 @@ moveGroups:
           characterCode: '02'
           skillCode: '038'
     - id: item_4b35ace1bf
-      displayName: 昇龍拳【大】
+      displayName: 【大】
       detail:
         displayName: 昇龍拳【大】
         command: 623+大P
@@ -1131,7 +1127,7 @@ moveGroups:
           characterCode: '02'
           skillCode: '039'
     - id: ex
-      displayName: 昇龍拳【EX】
+      displayName: 【EX】
       detail:
         displayName: 昇龍拳【EX】
         command: 623+PP
@@ -1160,26 +1156,22 @@ moveGroups:
           skillName: Shoryuken (EX)
           characterCode: '02'
           skillCode: '040'
-    - id: item_cf8aa5b927
-      displayName: 補足
-      detail:
-        displayName: 補足
-        noteGroups:
-        - id: item_bd3455e23b
-          displayTitle: 通常
-          entries:
-          - "・カッコ内の数値は先端ヒット時のもの\n・SCは根本のみ可能\n・各昇龍拳はコマンド完成後、5フレーム間投げ無敵&上半身打撃無敵。6フレーム目から空中判定に移行 \n・キャンセル猶予時間は小・中が12フレーム、大が13フレーム"
-        - id: ex
-          displayTitle: EX
-          entries:
-          - |-
-            ・コマンド完成後、4フレーム完全無敵。5フレーム目から空中判定に移行
-            ・キャンセル猶予時間は8フレーム(初段のみ)
+    noteGroups:
+    - id: item_bd3455e23b
+      displayTitle: 通常
+      entries:
+      - "・カッコ内の数値は先端ヒット時のもの\n・SCは根本のみ可能\n・各昇龍拳はコマンド完成後、5フレーム間投げ無敵&上半身打撃無敵。6フレーム目から空中判定に移行 \n・キャンセル猶予時間は小・中が12フレーム、大が13フレーム"
+    - id: ex
+      displayTitle: EX
+      entries:
+      - |-
+        ・コマンド完成後、4フレーム完全無敵。5フレーム目から空中判定に移行
+        ・キャンセル猶予時間は8フレーム(初段のみ)
   - id: item_e05acdfe5f
     displayName: 竜巻旋風脚
-    children:
+    variants:
     - id: item_62bbdb70c6
-      displayName: 竜巻旋風脚【小】
+      displayName: 【小】
       detail:
         displayName: 竜巻旋風脚【小】
         command: 214+小K
@@ -1214,7 +1206,7 @@ moveGroups:
           characterCode: '02'
           skillCode: '041'
     - id: item_991cb0fae7
-      displayName: 竜巻旋風脚【中】
+      displayName: 【中】
       detail:
         displayName: 竜巻旋風脚【中】
         command: 214+中K
@@ -1249,7 +1241,7 @@ moveGroups:
           characterCode: '02'
           skillCode: '042'
     - id: item_f696363137
-      displayName: 竜巻旋風脚【大】
+      displayName: 【大】
       detail:
         displayName: 竜巻旋風脚【大】
         command: 214+大K
@@ -1323,31 +1315,27 @@ moveGroups:
           skillName: Tatsumaki Senpuu Kyaku (EX)
           characterCode: '02'
           skillCode: '044'
-    - id: item_cf8aa5b927
-      displayName: 補足
-      detail:
-        displayName: 補足
-        noteGroups:
-        - id: item_bd3455e23b
-          displayTitle: 通常
-          entries:
-          - |-
-            ・ボタンにより小→中→大の順に移動距離が長くなり、高度が高くなる
-            ・コマンド完成後、小は「8」、中・大は「7」フレーム目から空中判定に移行
-            ・攻撃判定は小が1回、中・大は3回発生する
-            ・ガード硬直は全て立ガードした時のもの
-            ・中と大のゲージ増加量はそれぞれ攻撃判定が3回発生した時のもの
-            ・大竜巻のみコマンド完成後、18～33フレームの間でリュウ、ケン、豪鬼の波動拳(EX、灼熱含む)、春麗の気功拳をすり抜ける事が可能
-            ・小型キャラのしゃがみ&しゃがみ状態が低いキャラには当たらないので注意。しゃがみ状態でも当たるキャラは以下の表を参照
-        - id: ex
-          displayTitle: EX
-          entries:
-          - "・コマンド完成後、7フレーム目から空中判定に移行\n・削減値欄の「1」は前方にでる攻撃判定のもの。後方に出る判定は「3」。ただし後方の判定は二回出るが2ヒットしない \n・吸い込み効果あり\n・画面端でヒット時、真空波動拳で追撃可能。キャラ限定で昇龍拳でも追撃可能。詳しくは下の表を参照。"
+    noteGroups:
+    - id: item_bd3455e23b
+      displayTitle: 通常
+      entries:
+      - |-
+        ・ボタンにより小→中→大の順に移動距離が長くなり、高度が高くなる
+        ・コマンド完成後、小は「8」、中・大は「7」フレーム目から空中判定に移行
+        ・攻撃判定は小が1回、中・大は3回発生する
+        ・ガード硬直は全て立ガードした時のもの
+        ・中と大のゲージ増加量はそれぞれ攻撃判定が3回発生した時のもの
+        ・大竜巻のみコマンド完成後、18～33フレームの間でリュウ、ケン、豪鬼の波動拳(EX、灼熱含む)、春麗の気功拳をすり抜ける事が可能
+        ・小型キャラのしゃがみ&しゃがみ状態が低いキャラには当たらないので注意。しゃがみ状態でも当たるキャラは以下の表を参照
+    - id: ex
+      displayTitle: EX
+      entries:
+      - "・コマンド完成後、7フレーム目から空中判定に移行\n・削減値欄の「1」は前方にでる攻撃判定のもの。後方に出る判定は「3」。ただし後方の判定は二回出るが2ヒットしない \n・吸い込み効果あり\n・画面端でヒット時、真空波動拳で追撃可能。キャラ限定で昇龍拳でも追撃可能。詳しくは下の表を参照。"
   - id: item_39ac975157
     displayName: 空中竜巻旋風脚
-    children:
+    variants:
     - id: item_ee4883d922
-      displayName: 空中竜巻旋風脚【小】
+      displayName: 【小】
       detail:
         displayName: 空中竜巻旋風脚【小】
         command: 空中で214+小K
@@ -1377,7 +1365,7 @@ moveGroups:
           characterCode: '02'
           skillCode: '049'
     - id: item_ab6409abde
-      displayName: 空中竜巻旋風脚【中】
+      displayName: 【中】
       detail:
         displayName: 空中竜巻旋風脚【中】
         command: 空中で214+中K
@@ -1407,7 +1395,7 @@ moveGroups:
           characterCode: '02'
           skillCode: '050'
     - id: item_9a20e084d9
-      displayName: 空中竜巻旋風脚【大】
+      displayName: 【大】
       detail:
         displayName: 空中竜巻旋風脚【大】
         command: 空中で214+大K
@@ -1472,32 +1460,28 @@ moveGroups:
           skillName: Air Tatsumaki Senpuu Kyaku (EX)
           characterCode: '02'
           skillCode: '052'
-    - id: item_cf8aa5b927
-      displayName: 補足
-      detail:
-        displayName: 補足
-        noteGroups:
-        - id: item_bd3455e23b
-          displayTitle: 通常
-          entries:
-          - |-
-            ・硬直は着地時のもの
-            ・ガード硬直はガードさせた位置で変化
-            ・小2回、中は3回、大は4回攻撃判定が出現する
-            ・相手を飛び越し、236+Kと入力するとメクリで出す事が可能。一部のキャラにメクリヒットさせることができる
-        - id: ex
-          displayTitle: EX
-          entries:
-          - |-
-            ・硬直は着地時のもの
-            ・ガード硬直はガードさせた位置で変化
-            ・攻撃判定は6回発生
-            ・相手を飛び越し、236+Kと入力するとメクリで出す事が可能。画面端でめくれる相手にメクリで使用すると強力
+    noteGroups:
+    - id: item_bd3455e23b
+      displayTitle: 通常
+      entries:
+      - |-
+        ・硬直は着地時のもの
+        ・ガード硬直はガードさせた位置で変化
+        ・小2回、中は3回、大は4回攻撃判定が出現する
+        ・相手を飛び越し、236+Kと入力するとメクリで出す事が可能。一部のキャラにメクリヒットさせることができる
+    - id: ex
+      displayTitle: EX
+      entries:
+      - |-
+        ・硬直は着地時のもの
+        ・ガード硬直はガードさせた位置で変化
+        ・攻撃判定は6回発生
+        ・相手を飛び越し、236+Kと入力するとメクリで出す事が可能。画面端でめくれる相手にメクリで使用すると強力
   - id: item_efdb4bc086
     displayName: 上段足刀蹴り
-    children:
+    variants:
     - id: item_f63ebc149c
-      displayName: 上段足刀蹴り【小】
+      displayName: 【小】
       detail:
         displayName: 上段足刀蹴り【小】
         command: 41236+小K
@@ -1527,7 +1511,7 @@ moveGroups:
           characterCode: '02'
           skillCode: '045'
     - id: item_c4ddc16c49
-      displayName: 上段足刀蹴り【中】
+      displayName: 【中】
       detail:
         displayName: 上段足刀蹴り【中】
         command: 41236+中K
@@ -1557,7 +1541,7 @@ moveGroups:
           characterCode: '02'
           skillCode: '046'
     - id: item_ec2ead6203
-      displayName: 上段足刀蹴り【大】
+      displayName: 【大】
       detail:
         displayName: 上段足刀蹴り【大】
         command: 41236+大K
@@ -1587,7 +1571,7 @@ moveGroups:
           characterCode: '02'
           skillCode: '047'
     - id: ex
-      displayName: 上段足刀蹴り【EX】
+      displayName: 【EX】
       detail:
         displayName: 上段足刀蹴り【EX】
         command: 41236+KK
@@ -1616,18 +1600,14 @@ moveGroups:
           skillName: Joudan Sokutou Geri (EX)
           characterCode: '02'
           skillCode: '048'
+    noteGroups:
     - id: item_cf8aa5b927
-      displayName: 補足
-      detail:
-        displayName: 補足
-        noteGroups:
-        - id: item_cf8aa5b927
-          displayTitle: 補足
-          entries:
-          - |-
-            ・距離が離れると小型キャラのしゃがみ&しゃがみ状態が低いキャラには当たらないので注意
-            ・攻撃判定発生後の足先は、攻撃判定はあるが食らい判定がないため当たり負けしない
-            ・EX足刀ヒット時、壁で跳ね返る効果あり。追撃可能
+      displayTitle: 補足
+      entries:
+      - |-
+        ・距離が離れると小型キャラのしゃがみ&しゃがみ状態が低いキャラには当たらないので注意
+        ・攻撃判定発生後の足先は、攻撃判定はあるが食らい判定がないため当たり負けしない
+        ・EX足刀ヒット時、壁で跳ね返る効果あり。追撃可能
 - id: super_arts
   displayTitle: "【スーパーアーツ】"
   entries:

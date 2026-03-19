@@ -1178,9 +1178,9 @@ moveGroups:
           skillCode: '035'
   - id: item_e5a80c8b9f
     displayName: 穿弓腿(せんきゅうたい)
-    children:
+    variants:
     - id: item_9090966e62
-      displayName: 穿弓腿(せんきゅうたい)【小】
+      displayName: 【小】
       detail:
         displayName: 穿弓腿(せんきゅうたい)【小】
         command: 236+小K
@@ -1210,7 +1210,7 @@ moveGroups:
           characterCode: '10'
           skillCode: '036'
     - id: item_ef0e6a7370
-      displayName: 穿弓腿(せんきゅうたい)【中】
+      displayName: 【中】
       detail:
         displayName: 穿弓腿(せんきゅうたい)【中】
         command: 236+中K
@@ -1240,7 +1240,7 @@ moveGroups:
           characterCode: '10'
           skillCode: '037'
     - id: item_920244d4a3
-      displayName: 穿弓腿(せんきゅうたい)【大】
+      displayName: 【大】
       detail:
         displayName: 穿弓腿(せんきゅうたい)【大】
         command: 236+大K
@@ -1270,7 +1270,7 @@ moveGroups:
           characterCode: '10'
           skillCode: '038'
     - id: ex
-      displayName: 穿弓腿(せんきゅうたい)【EX】
+      displayName: 【EX】
       detail:
         displayName: 穿弓腿(せんきゅうたい)【EX】
         command: 236+小K
@@ -1299,24 +1299,20 @@ moveGroups:
           skillName: Senkyuutai (EX)
           characterCode: '10'
           skillCode: '039'
-    - id: item_cf8aa5b927
-      displayName: 補足
-      detail:
-        displayName: 補足
-        noteGroups:
-        - id: item_bd3455e23b
-          displayTitle: 通常
-          entries:
-          - "・攻撃力、ケズリ、スタン値欄のカッコ内の数値は技の後半部分のもの\n・ボタンによって移動距離が変化。小→中→大の順に移動距離が長くなる\n・コマンド完成後、中は「6～16」、大は「6～29」フレーム間、飛び道具の下をくぐれる(一部の技はくぐれない) \n・コマンド完成後、小は「13」、中は「21」、大は「34」フレーム目から空中判定に移行\n・中、大はヒット後、立小Pなどで追撃可能\n・近立中Kヒット後、中穿弓腿で追撃可能\n・大がヒット時、転身穿弓腿で追撃可能。ただし補正によりダメージは低い"
-        - id: ex
-          displayTitle: EX
-          entries:
-          - "・コマンド完成後、6～29フレーム間、飛び道具の下をくぐれる(一部の技はくぐれない) \n・コマンド完成後、34フレーム目から空中判定に移行\n・相手をサーチする\n・ヒット時、追撃可能\n・ヒット時、転身穿弓腿で追撃可能。ただし補正によりダメージは低い"
+    noteGroups:
+    - id: item_bd3455e23b
+      displayTitle: 通常
+      entries:
+      - "・攻撃力、ケズリ、スタン値欄のカッコ内の数値は技の後半部分のもの\n・ボタンによって移動距離が変化。小→中→大の順に移動距離が長くなる\n・コマンド完成後、中は「6～16」、大は「6～29」フレーム間、飛び道具の下をくぐれる(一部の技はくぐれない) \n・コマンド完成後、小は「13」、中は「21」、大は「34」フレーム目から空中判定に移行\n・中、大はヒット後、立小Pなどで追撃可能\n・近立中Kヒット後、中穿弓腿で追撃可能\n・大がヒット時、転身穿弓腿で追撃可能。ただし補正によりダメージは低い"
+    - id: ex
+      displayTitle: EX
+      entries:
+      - "・コマンド完成後、6～29フレーム間、飛び道具の下をくぐれる(一部の技はくぐれない) \n・コマンド完成後、34フレーム目から空中判定に移行\n・相手をサーチする\n・ヒット時、追撃可能\n・ヒット時、転身穿弓腿で追撃可能。ただし補正によりダメージは低い"
   - id: item_621fe535ee
     displayName: 快ホウ
-    children:
+    variants:
     - id: item_d0d29b4a17
-      displayName: 快ホウ【小】
+      displayName: 【小】
       detail:
         displayName: 快ホウ【小】
         command: 623+小K
@@ -1346,7 +1342,7 @@ moveGroups:
           characterCode: '10'
           skillCode: '041'
     - id: item_20108e73d8
-      displayName: 快ホウ【中】
+      displayName: 【中】
       detail:
         displayName: 快ホウ【中】
         command: 623+中K
@@ -1376,7 +1372,7 @@ moveGroups:
           characterCode: '10'
           skillCode: '042'
     - id: item_28d0167538
-      displayName: 快ホウ【大】
+      displayName: 【大】
       detail:
         displayName: 快ホウ【大】
         command: 623+大K
@@ -1405,20 +1401,16 @@ moveGroups:
           skillName: Kaihou (RH)
           characterCode: '10'
           skillCode: '043'
+    noteGroups:
     - id: item_cf8aa5b927
-      displayName: 補足
-      detail:
-        displayName: 補足
-        noteGroups:
-        - id: item_cf8aa5b927
-          displayTitle: 補足
-          entries:
-          - |-
-            ・ボタンによって移動距離が変化。小→中→大の順に移動距離が長くなる
-            ・コマンド完成後、小は「12～16」、中は「14～20」、大は「16～27」フレームの間、完全無敵
-            ・相手をすり抜けて移動する事が可能。ただし移動中、完全無敵時間以外は投げられ判定あり
-            ・蟷螂斬ヒット時に相手との間合いを詰めるのに使用
-            ・画面端で起き攻めされている時に、技が重ねられてない時に限り、各小Pをヒットかガードさせて中か大の快ホウを出すことによって高確率で画面端から脱出できる。ただし一部の技やSAで反撃されるので多用は禁物
+      displayTitle: 補足
+      entries:
+      - |-
+        ・ボタンによって移動距離が変化。小→中→大の順に移動距離が長くなる
+        ・コマンド完成後、小は「12～16」、中は「14～20」、大は「16～27」フレームの間、完全無敵
+        ・相手をすり抜けて移動する事が可能。ただし移動中、完全無敵時間以外は投げられ判定あり
+        ・蟷螂斬ヒット時に相手との間合いを詰めるのに使用
+        ・画面端で起き攻めされている時に、技が重ねられてない時に限り、各小Pをヒットかガードさせて中か大の快ホウを出すことによって高確率で画面端から脱出できる。ただし一部の技やSAで反撃されるので多用は禁物
   - id: item_168a5f8420
     displayName: 白虎双掌打(びゃっこそうしょうだ)
     detail:

@@ -834,9 +834,9 @@ moveGroups:
   entries:
   - id: item_59ccc843f0
     displayName: フラッシュチョップ
-    children:
+    variants:
     - id: item_7e978519be
-      displayName: フラッシュチョップ【小】
+      displayName: 【小】
       detail:
         displayName: フラッシュチョップ【小】
         command: 236+小P
@@ -866,7 +866,7 @@ moveGroups:
           characterCode: '01'
           skillCode: '027'
     - id: item_2b7d9a55b8
-      displayName: フラッシュチョップ【中】
+      displayName: 【中】
       detail:
         displayName: フラッシュチョップ【中】
         command: 236+中P
@@ -896,7 +896,7 @@ moveGroups:
           characterCode: '01'
           skillCode: '028'
     - id: item_7db9c49b9a
-      displayName: フラッシュチョップ【大】
+      displayName: 【大】
       detail:
         displayName: フラッシュチョップ【大】
         command: 236+大P
@@ -926,7 +926,7 @@ moveGroups:
           characterCode: '01'
           skillCode: '029'
     - id: ex
-      displayName: フラッシュチョップ【EX】
+      displayName: 【EX】
       detail:
         displayName: フラッシュチョップ【EX】
         command: 236+PP
@@ -955,37 +955,33 @@ moveGroups:
           skillName: Flash Chop (EX)
           characterCode: '01'
           skillCode: '030'
-    - id: item_cf8aa5b927
-      displayName: 補足
-      detail:
-        displayName: 補足
-        noteGroups:
-        - id: item_bd3455e23b
-          displayTitle: 通常
-          entries:
-          - |-
-            ・コマンド完成後、下がる距離は少ないが8フレーム間、投げられ判定が後退する(立大Kのスライド入力で更に大きく後退する)
-            ・小は攻撃発生が早いので、中攻撃をキャンセルしてのコンボや牽制に使用
-            ・中・大は攻撃発生が遅いが、ヒット後は間合いに応じた追撃が可能なため、相手の立ち攻撃や投げを狙ってヒットさせていく
-            ・中・大ヒット時、振り向きのけぞりになりいろいろな追撃を入れることが可能
-            ・下方向への攻撃判定が小さいため、座高の低い相手のしゃがみ状態に対しては空振りしやすいので要注意
-            ・攻撃判定を飛び道具にぶつけることで、単発飛び道具を相殺、多段飛び道具のヒット数を「1」減らすことができる
-            ・キャンセル猶予時間は中が11フレーム、大が14フレーム
-        - id: ex
-          displayTitle: EX
-          entries:
-          - |-
-            ・コマンド完成後、下がる距離は少ないが4フレーム間、投げられ判定が後退する(立大Kのスライド入力で更に大きく後退する)
-            ・2段目に吹き飛ばしダウン属性あり
-            ・空中の相手にも2ヒットするため、多段対空や空中に逃げようとする相手へ使用しても効果的
-            ・SCは1、2段目どちらもできるが、2段目だと相手が吹き飛ぶため画面端でないとSA2が繋がらない
-            ・攻撃判定を飛び道具にぶつけることで、単発飛び道具を相殺、多段飛び道具のヒット数を「2」減らすことができる
-            ・キャンセル猶予時間は近中Pか近中Kからキャンセルして出した場合、14フレーム
+    noteGroups:
+    - id: item_bd3455e23b
+      displayTitle: 通常
+      entries:
+      - |-
+        ・コマンド完成後、下がる距離は少ないが8フレーム間、投げられ判定が後退する(立大Kのスライド入力で更に大きく後退する)
+        ・小は攻撃発生が早いので、中攻撃をキャンセルしてのコンボや牽制に使用
+        ・中・大は攻撃発生が遅いが、ヒット後は間合いに応じた追撃が可能なため、相手の立ち攻撃や投げを狙ってヒットさせていく
+        ・中・大ヒット時、振り向きのけぞりになりいろいろな追撃を入れることが可能
+        ・下方向への攻撃判定が小さいため、座高の低い相手のしゃがみ状態に対しては空振りしやすいので要注意
+        ・攻撃判定を飛び道具にぶつけることで、単発飛び道具を相殺、多段飛び道具のヒット数を「1」減らすことができる
+        ・キャンセル猶予時間は中が11フレーム、大が14フレーム
+    - id: ex
+      displayTitle: EX
+      entries:
+      - |-
+        ・コマンド完成後、下がる距離は少ないが4フレーム間、投げられ判定が後退する(立大Kのスライド入力で更に大きく後退する)
+        ・2段目に吹き飛ばしダウン属性あり
+        ・空中の相手にも2ヒットするため、多段対空や空中に逃げようとする相手へ使用しても効果的
+        ・SCは1、2段目どちらもできるが、2段目だと相手が吹き飛ぶため画面端でないとSA2が繋がらない
+        ・攻撃判定を飛び道具にぶつけることで、単発飛び道具を相殺、多段飛び道具のヒット数を「2」減らすことができる
+        ・キャンセル猶予時間は近中Pか近中Kからキャンセルして出した場合、14フレーム
   - id: item_f5b963d4fa
     displayName: エアニースマッシュ
-    children:
+    variants:
     - id: item_f97c264a94
-      displayName: エアニースマッシュ【小】
+      displayName: 【小】
       detail:
         displayName: エアニースマッシュ【小】
         command: 623+小K
@@ -1015,7 +1011,7 @@ moveGroups:
           characterCode: '01'
           skillCode: '037'
     - id: item_7eebc9ef03
-      displayName: エアニースマッシュ【中】
+      displayName: 【中】
       detail:
         displayName: エアニースマッシュ【中】
         command: 623+中K
@@ -1045,7 +1041,7 @@ moveGroups:
           characterCode: '01'
           skillCode: '038'
     - id: item_bb8464aa15
-      displayName: エアニースマッシュ【大】
+      displayName: 【大】
       detail:
         displayName: エアニースマッシュ【大】
         command: 623+大K
@@ -1075,7 +1071,7 @@ moveGroups:
           characterCode: '01'
           skillCode: '039'
     - id: ex
-      displayName: エアニースマッシュ【EX】
+      displayName: 【EX】
       detail:
         displayName: エアニースマッシュ【EX】
         command: 623+KK
@@ -1104,32 +1100,28 @@ moveGroups:
           skillName: Air Knee Smash (EX)
           characterCode: '01'
           skillCode: '040'
-    - id: item_cf8aa5b927
-      displayName: 補足
-      detail:
-        displayName: 補足
-        noteGroups:
-        - id: item_bd3455e23b
-          displayTitle: 通常
-          entries:
-          - |-
-            ・地上の相手にはヒットしない
-            ・コマンド完成後、4フレーム目から空中判定に移行
-            ・空中の相手に対する打撃投げだが、空中BLされてしまう点に注意
-            ・主に屈大Pが1ヒットした場合の大エアニーでの追撃に使用
-        - id: ex
-          displayTitle: EX
-          entries:
-          - |-
-            ・地上の相手にもヒットする
-            ・コマンド完成後、3フレーム完全無敵。4フレーム目から空中判定に移行
-            ・ダッドリーとオロのしゃがみのけぞりモーションに対してヒットさせることが可能
-            ・ヒット時に地面に叩きつける所でSAゲージが増加するバグあり（AC版のみ）
+    noteGroups:
+    - id: item_bd3455e23b
+      displayTitle: 通常
+      entries:
+      - |-
+        ・地上の相手にはヒットしない
+        ・コマンド完成後、4フレーム目から空中判定に移行
+        ・空中の相手に対する打撃投げだが、空中BLされてしまう点に注意
+        ・主に屈大Pが1ヒットした場合の大エアニーでの追撃に使用
+    - id: ex
+      displayTitle: EX
+      entries:
+      - |-
+        ・地上の相手にもヒットする
+        ・コマンド完成後、3フレーム完全無敵。4フレーム目から空中判定に移行
+        ・ダッドリーとオロのしゃがみのけぞりモーションに対してヒットさせることが可能
+        ・ヒット時に地面に叩きつける所でSAゲージが増加するバグあり（AC版のみ）
   - id: item_27fe5403e2
     displayName: エアスタンピート
-    children:
+    variants:
     - id: item_a87ba406ac
-      displayName: エアスタンピート【小】
+      displayName: 【小】
       detail:
         displayName: エアスタンピート【小】
         command: 2タメ8+小K
@@ -1159,7 +1151,7 @@ moveGroups:
           characterCode: '01'
           skillCode: '041'
     - id: item_7546523206
-      displayName: エアスタンピート【中】
+      displayName: 【中】
       detail:
         displayName: エアスタンピート【中】
         command: 2タメ8+中K
@@ -1189,7 +1181,7 @@ moveGroups:
           characterCode: '01'
           skillCode: '042'
     - id: item_8846c68f75
-      displayName: エアスタンピート【大】
+      displayName: 【大】
       detail:
         displayName: エアスタンピート【大】
         command: 2タメ8+大K
@@ -1219,7 +1211,7 @@ moveGroups:
           characterCode: '01'
           skillCode: '043'
     - id: ex
-      displayName: エアスタンピート【EX】
+      displayName: 【EX】
       detail:
         displayName: エアスタンピート【EX】
         command: 2タメ8+KK
@@ -1248,39 +1240,35 @@ moveGroups:
           skillName: Air Stampede (EX)
           characterCode: '01'
           skillCode: '044'
-    - id: item_cf8aa5b927
-      displayName: 補足
-      detail:
-        displayName: 補足
-        noteGroups:
-        - id: item_bd3455e23b
-          displayTitle: 通常
-          entries:
-          - |-
-            ・小→中→大の順に移動距離が長くなる
-            ・空振りした場合の硬直は24(表中はガードさせた時の硬直)
-            ・コマンド完成後、1フレーム目で投げ、2フレーム目で下段技に対して無敵になる
-            ・リバーサル時、コマンド完成と同時(0フレーム)に投げ、下段技に対して無敵になる
-            ・ヒット時、相手はQSを行うことができない
+    noteGroups:
+    - id: item_bd3455e23b
+      displayTitle: 通常
+      entries:
+      - |-
+        ・小→中→大の順に移動距離が長くなる
+        ・空振りした場合の硬直は24(表中はガードさせた時の硬直)
+        ・コマンド完成後、1フレーム目で投げ、2フレーム目で下段技に対して無敵になる
+        ・リバーサル時、コマンド完成と同時(0フレーム)に投げ、下段技に対して無敵になる
+        ・ヒット時、相手はQSを行うことができない
 
-            【スタンピートループ】
-            スタンピートでダウンを奪った後、そのまま小スタンピートを出すと正面ガード(密着ならばめくりガード)、中スタンピートならめくりガードを狙うことが可能な連係。また 近立中K(屈小K)→大スタンピートも、めくりガードになる。
-            なお、ダウンした相手に屈大Pを出せば、ユン・ヤン等の起き上がりの早い相手を除き多くの相手を飛び越えることができるので、更にそこから正面かめくりガード狙った幻惑効果の高い連係となる。
-            この連係を仕掛けられた側はあせらずに、スタンピートがヒットする瞬間に前か後ろにレバーを入れることで、自動的にガードかBLになり、しのぐ事が可能。
-        - id: ex
-          displayTitle: EX
-          entries:
-          - |-
-            ・相手をホーミングする
-            ・空振りした場合の硬直は24(表中はガードさせた時の硬直)
-            ・コマンド完成後、1フレーム目で投げ、2フレーム目で下段技に対して無敵になる
-            ・リバーサル時、コマンド完成と同時(0フレーム)に投げ、下段技に対して無敵になる
-            ・ヒット時、相手はQSを行うことができない
+        【スタンピートループ】
+        スタンピートでダウンを奪った後、そのまま小スタンピートを出すと正面ガード(密着ならばめくりガード)、中スタンピートならめくりガードを狙うことが可能な連係。また 近立中K(屈小K)→大スタンピートも、めくりガードになる。
+        なお、ダウンした相手に屈大Pを出せば、ユン・ヤン等の起き上がりの早い相手を除き多くの相手を飛び越えることができるので、更にそこから正面かめくりガード狙った幻惑効果の高い連係となる。
+        この連係を仕掛けられた側はあせらずに、スタンピートがヒットする瞬間に前か後ろにレバーを入れることで、自動的にガードかBLになり、しのぐ事が可能。
+    - id: ex
+      displayTitle: EX
+      entries:
+      - |-
+        ・相手をホーミングする
+        ・空振りした場合の硬直は24(表中はガードさせた時の硬直)
+        ・コマンド完成後、1フレーム目で投げ、2フレーム目で下段技に対して無敵になる
+        ・リバーサル時、コマンド完成と同時(0フレーム)に投げ、下段技に対して無敵になる
+        ・ヒット時、相手はQSを行うことができない
   - id: item_27470dea0b
     displayName: スラッシュエルボー
-    children:
+    variants:
     - id: item_001ae947e3
-      displayName: スラッシュエルボー【小】
+      displayName: 【小】
       detail:
         displayName: スラッシュエルボー【小】
         command: 4タメ6+小K
@@ -1310,7 +1298,7 @@ moveGroups:
           characterCode: '01'
           skillCode: '045'
     - id: item_b2262db1f4
-      displayName: スラッシュエルボー【中】
+      displayName: 【中】
       detail:
         displayName: スラッシュエルボー【中】
         command: 4タメ6+中K
@@ -1340,7 +1328,7 @@ moveGroups:
           characterCode: '01'
           skillCode: '046'
     - id: item_9ee29b1f13
-      displayName: スラッシュエルボー【大】
+      displayName: 【大】
       detail:
         displayName: スラッシュエルボー【大】
         command: 4タメ6+大K
@@ -1370,7 +1358,7 @@ moveGroups:
           characterCode: '01'
           skillCode: '047'
     - id: ex
-      displayName: スラッシュエルボー【EX】
+      displayName: 【EX】
       detail:
         displayName: スラッシュエルボー【EX】
         command: 4タメ6+KK
@@ -1399,21 +1387,17 @@ moveGroups:
           skillName: Slash Elbow (EX)
           characterCode: '01'
           skillCode: '048'
-    - id: item_cf8aa5b927
-      displayName: 補足
-      detail:
-        displayName: 補足
-        noteGroups:
-        - id: item_bd3455e23b
-          displayTitle: 通常
-          entries:
-          - "・ボタンによって移動距離が変化する\n・中と大はそれぞれヒット＆BLされた時に、硬直がカッコ内の数値に減少 \n・空中の相手にヒットした場合、追撃が可能。特に画面端では大きなコンボのチャンスとなる\n・キャンセル猶予時間は小13・中15・大17フレーム"
-        - id: ex
-          displayTitle: EX
-          entries:
-          - |-
-            ・画面端付近で初段のみが空中1ヒットした場合、追撃可能
-            ・至近距離でヒットした場合、ダッドリー・ユン・ヤン・エレナのQSを前ダッシュで裏回りすることが可能
+    noteGroups:
+    - id: item_bd3455e23b
+      displayTitle: 通常
+      entries:
+      - "・ボタンによって移動距離が変化する\n・中と大はそれぞれヒット＆BLされた時に、硬直がカッコ内の数値に減少 \n・空中の相手にヒットした場合、追撃が可能。特に画面端では大きなコンボのチャンスとなる\n・キャンセル猶予時間は小13・中15・大17フレーム"
+    - id: ex
+      displayTitle: EX
+      entries:
+      - |-
+        ・画面端付近で初段のみが空中1ヒットした場合、追撃可能
+        ・至近距離でヒットした場合、ダッドリー・ユン・ヤン・エレナのQSを前ダッシュで裏回りすることが可能
   - id: item_ac46994a0d
     displayName: パワーボム
     children:

@@ -760,9 +760,9 @@ moveGroups:
   entries:
   - id: item_34c10faf13
     displayName: ジェットアッパー
-    children:
+    variants:
     - id: item_38a24df23d
-      displayName: ジェットアッパー【小】
+      displayName: 【小】
       detail:
         displayName: ジェットアッパー【小】
         command: 623+小P
@@ -792,7 +792,7 @@ moveGroups:
           characterCode: '04'
           skillCode: '028'
     - id: item_0d679e6271
-      displayName: ジェットアッパー【中】
+      displayName: 【中】
       detail:
         displayName: ジェットアッパー【中】
         command: 623+中P
@@ -822,7 +822,7 @@ moveGroups:
           characterCode: '04'
           skillCode: '029'
     - id: item_03442b088d
-      displayName: ジェットアッパー【大】
+      displayName: 【大】
       detail:
         displayName: ジェットアッパー【大】
         command: 623+大P
@@ -852,7 +852,7 @@ moveGroups:
           characterCode: '04'
           skillCode: '030'
     - id: ex
-      displayName: ジェットアッパー【EX】
+      displayName: 【EX】
       detail:
         displayName: ジェットアッパー【EX】
         command: 623+PP
@@ -881,24 +881,20 @@ moveGroups:
           skillName: Jet Uppercut (EX)
           characterCode: '04'
           skillCode: '031'
-    - id: item_cf8aa5b927
-      displayName: 補足
-      detail:
-        displayName: 補足
-        noteGroups:
-        - id: item_bd3455e23b
-          displayTitle: 通常
-          entries:
-          - |-
-            ・SCは小・中は根本、大は1・2段目がヒットした場合の2段目のみ可能
-            ・小のみ攻撃発生後、2フレーム上半身打撃無敵
-            ・コマンド完成後、7フレーム目から空中判定に移行
-            ・各攻撃力、スタン値のカッコ内の数値はカス当たり時のもの
-            ・主に対空やコンボのしめに使用
-        - id: ex
-          displayTitle: EX
-          entries:
-          - "・コマンド完成後、4フレーム完全無敵。7フレーム目から空中判定に移行。ただし無敵終了後の2フレーム間投げられ判定あり \n・攻撃力、スタン値のカッコ内の数値はカス当たり時のもの\n・2段目の根本部分のみヒットした場合、追撃可能"
+    noteGroups:
+    - id: item_bd3455e23b
+      displayTitle: 通常
+      entries:
+      - |-
+        ・SCは小・中は根本、大は1・2段目がヒットした場合の2段目のみ可能
+        ・小のみ攻撃発生後、2フレーム上半身打撃無敵
+        ・コマンド完成後、7フレーム目から空中判定に移行
+        ・各攻撃力、スタン値のカッコ内の数値はカス当たり時のもの
+        ・主に対空やコンボのしめに使用
+    - id: ex
+      displayTitle: EX
+      entries:
+      - "・コマンド完成後、4フレーム完全無敵。7フレーム目から空中判定に移行。ただし無敵終了後の2フレーム間投げられ判定あり \n・攻撃力、スタン値のカッコ内の数値はカス当たり時のもの\n・2段目の根本部分のみヒットした場合、追撃可能"
   - id: item_abe5d8815a
     displayName: ダッキング系
     children:
@@ -1207,9 +1203,9 @@ moveGroups:
             skillCode: '038'
   - id: item_6c99f74b05
     displayName: マシンガンブロー
-    children:
+    variants:
     - id: item_84c57b6f99
-      displayName: マシンガンブロー【小】
+      displayName: 【小】
       detail:
         displayName: マシンガンブロー【小】
         command: 41236+小P
@@ -1245,7 +1241,7 @@ moveGroups:
           characterCode: '04'
           skillCode: '032'
     - id: item_04f6fb8590
-      displayName: マシンガンブロー【中】
+      displayName: 【中】
       detail:
         displayName: マシンガンブロー【中】
         command: 41236+中P
@@ -1281,7 +1277,7 @@ moveGroups:
           characterCode: '04'
           skillCode: '033'
     - id: item_9915e18599
-      displayName: マシンガンブロー【大】
+      displayName: 【大】
       detail:
         displayName: マシンガンブロー【大】
         command: 41236+大P
@@ -1317,7 +1313,7 @@ moveGroups:
           characterCode: '04'
           skillCode: '034'
     - id: ex
-      displayName: マシンガンブロー【EX】
+      displayName: 【EX】
       detail:
         displayName: マシンガンブロー【EX】
         command: 41236+PP
@@ -1352,19 +1348,15 @@ moveGroups:
           skillName: Machine Gun Blow (EX)
           characterCode: '04'
           skillCode: '035'
-    - id: item_cf8aa5b927
-      displayName: 補足
-      detail:
-        displayName: 補足
-        noteGroups:
-        - id: item_bd3455e23b
-          displayTitle: 通常
-          entries:
-          - "・ボタンにより小→中→大の順に移動距離が長くなる\n・最後のアッパー部分のみがヒットしたら追撃可能\n・コマンド完成後、中・大は「1～4」フレーム膝下まで打撃無敵。この間に攻撃を食らうと、しゃがみ食らい扱い(1.25倍ダメージ)になる \n・426＋Pの簡易コマンドでも出す事が可能\n・各攻撃力とケズリ値、スタン値は以下の表を参照"
-        - id: ex
-          displayTitle: EX
-          entries:
-          - "・ラストのアッパー部分がヒットした場合、追撃可能\n・コマンド完成後、「1～4」フレーム膝下まで打撃無敵。この間に攻撃を食らうと、しゃがみ食らい扱い(1.25倍ダメージ)になる \n・しゃがみ食らいしたオロ、春麗、イブキ、エレナには後半部分が当たらないため注意\n・426＋PPの簡易コマンドでも出す事が可能\n・各攻撃力とケズリ値、スタン値は以下の表を参照"
+    noteGroups:
+    - id: item_bd3455e23b
+      displayTitle: 通常
+      entries:
+      - "・ボタンにより小→中→大の順に移動距離が長くなる\n・最後のアッパー部分のみがヒットしたら追撃可能\n・コマンド完成後、中・大は「1～4」フレーム膝下まで打撃無敵。この間に攻撃を食らうと、しゃがみ食らい扱い(1.25倍ダメージ)になる \n・426＋Pの簡易コマンドでも出す事が可能\n・各攻撃力とケズリ値、スタン値は以下の表を参照"
+    - id: ex
+      displayTitle: EX
+      entries:
+      - "・ラストのアッパー部分がヒットした場合、追撃可能\n・コマンド完成後、「1～4」フレーム膝下まで打撃無敵。この間に攻撃を食らうと、しゃがみ食らい扱い(1.25倍ダメージ)になる \n・しゃがみ食らいしたオロ、春麗、イブキ、エレナには後半部分が当たらないため注意\n・426＋PPの簡易コマンドでも出す事が可能\n・各攻撃力とケズリ値、スタン値は以下の表を参照"
   - id: item_067aa6516d
     displayName: クロスカウンター
     children:
@@ -1652,9 +1644,9 @@ moveGroups:
               ・特殊な条件下でのみガードとBLが可能
   - id: item_70c9c89f46
     displayName: ショートスイングブロー
-    children:
+    variants:
     - id: item_a389b2891a
-      displayName: ショートスイングブロー【小】
+      displayName: 【小】
       detail:
         displayName: ショートスイングブロー【小】
         command: 63214+小K
@@ -1684,7 +1676,7 @@ moveGroups:
           characterCode: '04'
           skillCode: '043'
     - id: item_3b12899686
-      displayName: ショートスイングブロー【中】
+      displayName: 【中】
       detail:
         displayName: ショートスイングブロー【中】
         command: 63214+中K
@@ -1714,7 +1706,7 @@ moveGroups:
           characterCode: '04'
           skillCode: '044'
     - id: item_1a65192d41
-      displayName: ショートスイングブロー【大】
+      displayName: 【大】
       detail:
         displayName: ショートスイングブロー【大】
         command: 63214+大K
@@ -1744,7 +1736,7 @@ moveGroups:
           characterCode: '04'
           skillCode: '045'
     - id: ex
-      displayName: ショートスイングブロー【EX】
+      displayName: 【EX】
       detail:
         displayName: ショートスイングブロー【EX】
         command: 63214+KK
@@ -1773,27 +1765,23 @@ moveGroups:
           skillName: Short Swing Blow (EX)
           characterCode: '04'
           skillCode: '046'
-    - id: item_cf8aa5b927
-      displayName: 補足
-      detail:
-        displayName: 補足
-        noteGroups:
-        - id: item_bd3455e23b
-          displayTitle: 通常
-          entries:
-          - |-
-            ・ボタンにより小→中→大の順にバックステップ距離が長くなる
-            ・小は「2」、中は「3」、大は「4」フレーム目からバックステップ開始。これにより投げを避けることが可能
-            ・主に相手の投げにあわせて出していくほか、コンボにも使用可能
-            ・624＋Kの簡易コマンドでも出す事が可能
-            ・キャンセル猶予時間は14フレーム
-        - id: ex
-          displayTitle: EX
-          entries:
-          - |-
-            ・相手画面端で3段目がヒット後、SA3で追撃可能(ヒューゴーなど一部キャラはジェットアッパーでも可)
-            ・2フレーム目からバックステップ開始
-            ・624＋KKの簡易コマンドでも出す事が可能
+    noteGroups:
+    - id: item_bd3455e23b
+      displayTitle: 通常
+      entries:
+      - |-
+        ・ボタンにより小→中→大の順にバックステップ距離が長くなる
+        ・小は「2」、中は「3」、大は「4」フレーム目からバックステップ開始。これにより投げを避けることが可能
+        ・主に相手の投げにあわせて出していくほか、コンボにも使用可能
+        ・624＋Kの簡易コマンドでも出す事が可能
+        ・キャンセル猶予時間は14フレーム
+    - id: ex
+      displayTitle: EX
+      entries:
+      - |-
+        ・相手画面端で3段目がヒット後、SA3で追撃可能(ヒューゴーなど一部キャラはジェットアッパーでも可)
+        ・2フレーム目からバックステップ開始
+        ・624＋KKの簡易コマンドでも出す事が可能
 - id: super_arts
   displayTitle: "【スーパーアーツ】"
   entries:

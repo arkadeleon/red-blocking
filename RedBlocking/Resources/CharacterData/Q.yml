@@ -815,9 +815,9 @@ moveGroups:
   entries:
   - id: item_f7fda76494
     displayName: 突進頭部打撃(仮)
-    children:
+    variants:
     - id: item_acffa12c3e
-      displayName: 突進頭部打撃(仮)【小】
+      displayName: 【小】
       detail:
         displayName: 突進頭部打撃(仮)【小】
         command: 4タメ6+小P
@@ -847,7 +847,7 @@ moveGroups:
           characterCode: '18'
           skillCode: '028'
     - id: item_1f991e1003
-      displayName: 突進頭部打撃(仮)【中】
+      displayName: 【中】
       detail:
         displayName: 突進頭部打撃(仮)【中】
         command: 4タメ6+中P
@@ -877,7 +877,7 @@ moveGroups:
           characterCode: '18'
           skillCode: '029'
     - id: item_fcc1f18d6f
-      displayName: 突進頭部打撃(仮)【大】
+      displayName: 【大】
       detail:
         displayName: 突進頭部打撃(仮)【大】
         command: 4タメ6+大P
@@ -907,7 +907,7 @@ moveGroups:
           characterCode: '18'
           skillCode: '030'
     - id: ex
-      displayName: 突進頭部打撃(仮)【EX】
+      displayName: 【EX】
       detail:
         displayName: 突進頭部打撃(仮)【EX】
         command: 4タメ6+PP
@@ -936,30 +936,26 @@ moveGroups:
           skillName: Dashing Head Attack (EX)
           characterCode: '18'
           skillCode: '031'
-    - id: item_cf8aa5b927
-      displayName: 補足
-      detail:
-        displayName: 補足
-        noteGroups:
-        - id: item_bd3455e23b
-          displayTitle: 通常
-          entries:
-          - |-
-            ・連続技、牽制技として非常に優秀。またヒット確認でSAに繋げられる
-            ・しゃがみ状態の春麗、レミー、歩き状態のトゥエルヴ、ダッシュ中のオロには当たらないが、先端部分なら問題なく当てる事が出来る
-            ・キャンセル猶予時間は小「13」、中「14」、大「16」フレーム
-        - id: ex
-          displayTitle: EX
-          entries:
-          - |-
-            ・ヒット時、追撃可能
-            ・硬直欄のカッコ内の数値はヒット時のもの
-            ・キャンセル猶予時間は16フレーム
+    noteGroups:
+    - id: item_bd3455e23b
+      displayTitle: 通常
+      entries:
+      - |-
+        ・連続技、牽制技として非常に優秀。またヒット確認でSAに繋げられる
+        ・しゃがみ状態の春麗、レミー、歩き状態のトゥエルヴ、ダッシュ中のオロには当たらないが、先端部分なら問題なく当てる事が出来る
+        ・キャンセル猶予時間は小「13」、中「14」、大「16」フレーム
+    - id: ex
+      displayTitle: EX
+      entries:
+      - |-
+        ・ヒット時、追撃可能
+        ・硬直欄のカッコ内の数値はヒット時のもの
+        ・キャンセル猶予時間は16フレーム
   - id: item_5878ee7073
     displayName: 突進中段打撃(仮)
-    children:
+    variants:
     - id: item_06f1c56abd
-      displayName: 突進中段打撃(仮)【小】
+      displayName: 【小】
       detail:
         displayName: 突進中段打撃(仮)【小】
         command: 4タメ6+小P押しっぱなし
@@ -989,7 +985,7 @@ moveGroups:
           characterCode: '18'
           skillCode: '032'
     - id: item_ec50191ab6
-      displayName: 突進中段打撃(仮)【中】
+      displayName: 【中】
       detail:
         displayName: 突進中段打撃(仮)【中】
         command: 4タメ6+中P押しっぱなし
@@ -1019,7 +1015,7 @@ moveGroups:
           characterCode: '18'
           skillCode: '033'
     - id: item_ef8b53f2b6
-      displayName: 突進中段打撃(仮)【大】
+      displayName: 【大】
       detail:
         displayName: 突進中段打撃(仮)【大】
         command: 4タメ6+大P押しっぱなし
@@ -1048,23 +1044,19 @@ moveGroups:
           skillName: Dashing Head Attack (Fierce)
           characterCode: '18'
           skillCode: '034'
+    noteGroups:
     - id: item_cf8aa5b927
-      displayName: 補足
-      detail:
-        displayName: 補足
-        noteGroups:
-        - id: item_cf8aa5b927
-          displayTitle: 補足
-          entries:
-          - |-
-            ・硬直欄のカッコ内の数値はヒット時のもの
-            ・P押しっぱなしでも、P連打でも出す事が可能
-            ・しゃがみヒット時、目押しでSA2に繋ぐ事が可能。その場合、キャンセル猶予時間は26～27フレーム
+      displayTitle: 補足
+      entries:
+      - |-
+        ・硬直欄のカッコ内の数値はヒット時のもの
+        ・P押しっぱなしでも、P連打でも出す事が可能
+        ・しゃがみヒット時、目押しでSA2に繋ぐ事が可能。その場合、キャンセル猶予時間は26～27フレーム
   - id: item_05025d5412
     displayName: 突進下肢打撃(仮)
-    children:
+    variants:
     - id: item_59a42f572b
-      displayName: 突進下肢打撃(仮)【小】
+      displayName: 【小】
       detail:
         displayName: 突進下肢打撃(仮)【小】
         command: 4タメ6+小K
@@ -1094,7 +1086,7 @@ moveGroups:
           characterCode: '18'
           skillCode: '035'
     - id: item_694c25f6e2
-      displayName: 突進下肢打撃(仮)【中】
+      displayName: 【中】
       detail:
         displayName: 突進下肢打撃(仮)【中】
         command: 4タメ6+中K
@@ -1124,7 +1116,7 @@ moveGroups:
           characterCode: '18'
           skillCode: '036'
     - id: item_b6cc81cbde
-      displayName: 突進下肢打撃(仮)【大】
+      displayName: 【大】
       detail:
         displayName: 突進下肢打撃(仮)【大】
         command: 4タメ6+大K
@@ -1154,7 +1146,7 @@ moveGroups:
           characterCode: '18'
           skillCode: '037'
     - id: ex
-      displayName: 突進下肢打撃(仮)【EX】
+      displayName: 【EX】
       detail:
         displayName: 突進下肢打撃(仮)【EX】
         command: 4タメ6+KK
@@ -1183,22 +1175,18 @@ moveGroups:
           skillName: Dashing Leg Attack (EX)
           characterCode: '18'
           skillCode: '038'
+    noteGroups:
     - id: item_cf8aa5b927
-      displayName: 補足
-      detail:
-        displayName: 補足
-        noteGroups:
-        - id: item_cf8aa5b927
-          displayTitle: 補足
-          entries:
-          - |-
-            ・下段突進技。ヒット時、相手をダウンさせる
-            ・硬直欄のカッコ内の数値はヒット時のもの
+      displayTitle: 補足
+      entries:
+      - |-
+        ・下段突進技。ヒット時、相手をダウンさせる
+        ・硬直欄のカッコ内の数値はヒット時のもの
   - id: item_024cf87d36
     displayName: 高速度連続打撃(仮)
-    children:
+    variants:
     - id: item_518981dcbb
-      displayName: 高速度連続打撃(仮)【小】
+      displayName: 【小】
       detail:
         displayName: 高速度連続打撃(仮)【小】
         command: 214+小P
@@ -1228,7 +1216,7 @@ moveGroups:
           characterCode: '18'
           skillCode: '039'
     - id: item_4b73da6ffd
-      displayName: 高速度連続打撃(仮)【中】
+      displayName: 【中】
       detail:
         displayName: 高速度連続打撃(仮)【中】
         command: 214+中P
@@ -1258,7 +1246,7 @@ moveGroups:
           characterCode: '18'
           skillCode: '040'
     - id: item_1aab9b0c54
-      displayName: 高速度連続打撃(仮)【大】
+      displayName: 【大】
       detail:
         displayName: 高速度連続打撃(仮)【大】
         command: 214+大P
@@ -1288,7 +1276,7 @@ moveGroups:
           characterCode: '18'
           skillCode: '041'
     - id: ex
-      displayName: 高速度連続打撃(仮)【EX】
+      displayName: 【EX】
       detail:
         displayName: 高速度連続打撃(仮)【EX】
         command: 214+PP
@@ -1317,30 +1305,26 @@ moveGroups:
           skillName: High Speed Barrage (EX)
           characterCode: '18'
           skillCode: '042'
-    - id: item_cf8aa5b927
-      displayName: 補足
-      detail:
-        displayName: 補足
-        noteGroups:
-        - id: item_bd3455e23b
-          displayTitle: 通常
-          entries:
-          - |-
-            ・硬直欄のカッコ内の数値はヒット時のもの
-            ・小はしゃがんでる相手にも当たるので主にコンボに、中・大は対空に使用
-            ・対空で1ヒットだった場合、突進頭部打撃などで追撃可能
-        - id: ex
-          displayTitle: EX
-          entries:
-          - |-
-            ・主に連続技や反撃用の技として使用
-            ・ヒット時、PA確定
-            ・しゃがんだ状態の「春麗、まこと、オロ」には2段目が当たらず、3段目からガードされるため注意
+    noteGroups:
+    - id: item_bd3455e23b
+      displayTitle: 通常
+      entries:
+      - |-
+        ・硬直欄のカッコ内の数値はヒット時のもの
+        ・小はしゃがんでる相手にも当たるので主にコンボに、中・大は対空に使用
+        ・対空で1ヒットだった場合、突進頭部打撃などで追撃可能
+    - id: ex
+      displayTitle: EX
+      entries:
+      - |-
+        ・主に連続技や反撃用の技として使用
+        ・ヒット時、PA確定
+        ・しゃがんだ状態の「春麗、まこと、オロ」には2段目が当たらず、3段目からガードされるため注意
   - id: item_1ed82e9598
     displayName: 捕獲及び痛恨打撃(仮)
-    children:
+    variants:
     - id: item_4dc3d550b9
-      displayName: 捕獲及び痛恨打撃(仮)【小】
+      displayName: 【小】
       detail:
         displayName: 捕獲及び痛恨打撃(仮)【小】
         command: 63214+小K
@@ -1372,7 +1356,7 @@ moveGroups:
           characterCode: '18'
           skillCode: '043'
     - id: item_f045bee5ee
-      displayName: 捕獲及び痛恨打撃(仮)【中】
+      displayName: 【中】
       detail:
         displayName: 捕獲及び痛恨打撃(仮)【中】
         command: 63214+中K
@@ -1404,7 +1388,7 @@ moveGroups:
           characterCode: '18'
           skillCode: '044'
     - id: item_da8362f65a
-      displayName: 捕獲及び痛恨打撃(仮)【大】
+      displayName: 【大】
       detail:
         displayName: 捕獲及び痛恨打撃(仮)【大】
         command: 63214+大K
@@ -1435,19 +1419,15 @@ moveGroups:
           skillName: Capture and Deadly Blow (RH)
           characterCode: '18'
           skillCode: '045'
+    noteGroups:
     - id: item_cf8aa5b927
-      displayName: 補足
-      detail:
-        displayName: 補足
-        noteGroups:
-        - id: item_cf8aa5b927
-          displayTitle: 補足
-          entries:
-          - |-
-            ・ボタンにより間合い、威力が変化
-            ・投げた後、追撃可能
-            ・小は手前に、中・大はやや離れた所に相手を落とす
-            ・3214＋Kの簡易コマンドでも出す事が可能
+      displayTitle: 補足
+      entries:
+      - |-
+        ・ボタンにより間合い、威力が変化
+        ・投げた後、追撃可能
+        ・小は手前に、中・大はやや離れた所に相手を落とす
+        ・3214＋Kの簡易コマンドでも出す事が可能
 - id: super_arts
   displayTitle: "【スーパーアーツ】"
   entries:

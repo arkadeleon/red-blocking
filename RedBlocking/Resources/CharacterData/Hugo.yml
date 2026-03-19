@@ -683,9 +683,9 @@ moveGroups:
   entries:
   - id: item_89f227850e
     displayName: ムーンサルトプレス
-    children:
+    variants:
     - id: item_134ed3f6e8
-      displayName: ムーンサルトプレス【小】
+      displayName: 【小】
       detail:
         displayName: ムーンサルトプレス【小】
         command: レバー1回転+小P
@@ -717,7 +717,7 @@ moveGroups:
           characterCode: '06'
           skillCode: '027'
     - id: item_3efc7b3afc
-      displayName: ムーンサルトプレス【中】
+      displayName: 【中】
       detail:
         displayName: ムーンサルトプレス【中】
         command: レバー1回転+中P
@@ -749,7 +749,7 @@ moveGroups:
           characterCode: '06'
           skillCode: '028'
     - id: item_3a56ac566b
-      displayName: ムーンサルトプレス【大】
+      displayName: 【大】
       detail:
         displayName: ムーンサルトプレス【大】
         command: レバー1回転+大P
@@ -780,23 +780,19 @@ moveGroups:
           skillName: Moonsault Press (Fierce)
           characterCode: '06'
           skillCode: '029'
+    noteGroups:
     - id: item_cf8aa5b927
-      displayName: 補足
-      detail:
-        displayName: 補足
-        noteGroups:
-        - id: item_cf8aa5b927
-          displayTitle: 補足
-          entries:
-          - |-
-            ・硬直欄のカッコ内の数値はしゃがみ状態で着地した時のもの
-            ・ボタンにより間合い、威力が変化
-            ・レバーを1回転させなくても上下左右に一回ずつレバーが入っていれば技が出る(例：4628+Pなど)
+      displayTitle: 補足
+      entries:
+      - |-
+        ・硬直欄のカッコ内の数値はしゃがみ状態で着地した時のもの
+        ・ボタンにより間合い、威力が変化
+        ・レバーを1回転させなくても上下左右に一回ずつレバーが入っていれば技が出る(例：4628+Pなど)
   - id: item_4ef4d47e02
     displayName: ウルトラスルー
-    children:
+    variants:
     - id: item_ea46b30e2a
-      displayName: ウルトラスルー【小】
+      displayName: 【小】
       detail:
         displayName: ウルトラスルー【小】
         command: 63214+小K
@@ -828,7 +824,7 @@ moveGroups:
           characterCode: '06'
           skillCode: '041'
     - id: item_822a3279b1
-      displayName: ウルトラスルー【中】
+      displayName: 【中】
       detail:
         displayName: ウルトラスルー【中】
         command: 63214+中K
@@ -860,7 +856,7 @@ moveGroups:
           characterCode: '06'
           skillCode: '042'
     - id: item_f013b380ca
-      displayName: ウルトラスルー【大】
+      displayName: 【大】
       detail:
         displayName: ウルトラスルー【大】
         command: 63214+大K
@@ -891,23 +887,19 @@ moveGroups:
           skillName: Ultra Throw (RH)
           characterCode: '06'
           skillCode: '043'
+    noteGroups:
     - id: item_cf8aa5b927
-      displayName: 補足
-      detail:
-        displayName: 補足
-        noteGroups:
-        - id: item_cf8aa5b927
-          displayTitle: 補足
-          entries:
-          - |-
-            ・つかんだ相手を画面端へ投げ、跳ね返った相手に追撃することが可能
-            ・ボタンにより画面端での跳ね返り方、威力が変化。「大→中→小」の順に、より画面中央に跳ね返ってくる
-            ・624＋Kの簡易コマンドでも出す事が可能
+      displayTitle: 補足
+      entries:
+      - |-
+        ・つかんだ相手を画面端へ投げ、跳ね返った相手に追撃することが可能
+        ・ボタンにより画面端での跳ね返り方、威力が変化。「大→中→小」の順に、より画面中央に跳ね返ってくる
+        ・624＋Kの簡易コマンドでも出す事が可能
   - id: item_d7787bd321
     displayName: シュートダウンバックブリーカー
-    children:
+    variants:
     - id: item_315b1b4809
-      displayName: シュートダウンバックブリーカー【小】
+      displayName: 【小】
       detail:
         displayName: シュートダウンバックブリーカー【小】
         command: 623+小K
@@ -940,7 +932,7 @@ moveGroups:
           characterCode: '06'
           skillCode: '024'
     - id: item_97f634ceeb
-      displayName: シュートダウンバックブリーカー【中】
+      displayName: 【中】
       detail:
         displayName: シュートダウンバックブリーカー【中】
         command: 623+中K
@@ -973,7 +965,7 @@ moveGroups:
           characterCode: '06'
           skillCode: '025'
     - id: item_c07f56d2c4
-      displayName: シュートダウンバックブリーカー【大】
+      displayName: 【大】
       detail:
         displayName: シュートダウンバックブリーカー【大】
         command: 623+大K
@@ -1005,20 +997,16 @@ moveGroups:
           skillName: Shootdown Backbreaker (RH)
           characterCode: '06'
           skillCode: '026'
+    noteGroups:
     - id: item_cf8aa5b927
-      displayName: 補足
-      detail:
-        displayName: 補足
-        noteGroups:
-        - id: item_cf8aa5b927
-          displayTitle: 補足
-          entries:
-          - "・空中投げ。ボタンによりジャンプ軌道、威力が変化 \n・硬直欄のカッコ内の数値はしゃがみ着地した時のもの\n・コマンド完成後、小は「2」、中と大は「4」フレーム目から空中判定に移行\n・BL不可なので、対空・連続技として使用する"
+      displayTitle: 補足
+      entries:
+      - "・空中投げ。ボタンによりジャンプ軌道、威力が変化 \n・硬直欄のカッコ内の数値はしゃがみ着地した時のもの\n・コマンド完成後、小は「2」、中と大は「4」フレーム目から空中判定に移行\n・BL不可なので、対空・連続技として使用する"
   - id: item_2744507b01
     displayName: ミートスカッシャー
-    children:
+    variants:
     - id: item_2ccf0ed729
-      displayName: ミートスカッシャー【小】
+      displayName: 【小】
       detail:
         displayName: ミートスカッシャー【小】
         command: レバー1回転+小K
@@ -1050,7 +1038,7 @@ moveGroups:
           characterCode: '06'
           skillCode: '030'
     - id: item_44232d445b
-      displayName: ミートスカッシャー【中】
+      displayName: 【中】
       detail:
         displayName: ミートスカッシャー【中】
         command: レバー1回転+中K
@@ -1082,7 +1070,7 @@ moveGroups:
           characterCode: '06'
           skillCode: '031'
     - id: item_87b9034aac
-      displayName: ミートスカッシャー【大】
+      displayName: 【大】
       detail:
         displayName: ミートスカッシャー【大】
         command: レバー1回転+大K
@@ -1113,23 +1101,19 @@ moveGroups:
           skillName: Meat Squasher (RH)
           characterCode: '06'
           skillCode: '032'
+    noteGroups:
     - id: item_cf8aa5b927
-      displayName: 補足
-      detail:
-        displayName: 補足
-        noteGroups:
-        - id: item_cf8aa5b927
-          displayTitle: 補足
-          entries:
-          - |-
-            ・ボタンにより小→中→大の順に移動距離が長くなる
-            ・発生は相手と接触するまでの時間で変化。また投げ間合いは移動する距離は含んでいない数値
-            ・投げた後は必ず画面端に追い込む事ができる
+      displayTitle: 補足
+      entries:
+      - |-
+        ・ボタンにより小→中→大の順に移動距離が長くなる
+        ・発生は相手と接触するまでの時間で変化。また投げ間合いは移動する距離は含んでいない数値
+        ・投げた後は必ず画面端に追い込む事ができる
   - id: item_b2c21b3320
     displayName: ジャイアントパームボンバー
-    children:
+    variants:
     - id: item_1a7a4b0d4a
-      displayName: ジャイアントパームボンバー【小】
+      displayName: 【小】
       detail:
         displayName: ジャイアントパームボンバー【小】
         command: 214+小P
@@ -1159,7 +1143,7 @@ moveGroups:
           characterCode: '06'
           skillCode: '033'
     - id: item_ba7a597de5
-      displayName: ジャイアントパームボンバー【中】
+      displayName: 【中】
       detail:
         displayName: ジャイアントパームボンバー【中】
         command: 214+中P
@@ -1189,7 +1173,7 @@ moveGroups:
           characterCode: '06'
           skillCode: '034'
     - id: item_e41e6099ce
-      displayName: ジャイアントパームボンバー【大】
+      displayName: 【大】
       detail:
         displayName: ジャイアントパームボンバー【大】
         command: 214+大P
@@ -1219,7 +1203,7 @@ moveGroups:
           characterCode: '06'
           skillCode: '035'
     - id: ex
-      displayName: ジャイアントパームボンバー【EX】
+      displayName: 【EX】
       detail:
         displayName: ジャイアントパームボンバー【EX】
         command: 214+PP
@@ -1248,31 +1232,27 @@ moveGroups:
           skillName: Giant Palm Bomber (EX)
           characterCode: '06'
           skillCode: '036'
-    - id: item_cf8aa5b927
-      displayName: 補足
-      detail:
-        displayName: 補足
-        noteGroups:
-        - id: item_bd3455e23b
-          displayTitle: 通常
-          entries:
-          - |-
-            ・発生は遅いが判定が強く、技後の硬直が有利なため、どんどん使っていける
-            ・近距離でヒットした時と、画面端で空中ヒットした時は追撃可能
-            ・攻撃判定を飛び道具にぶつけることで、単発飛び道具を相殺、多段飛び道具のヒット数を「1」減らすことができる
-            ・キャンセル猶予時間は14フレーム
-        - id: ex
-          displayTitle: EX
-          entries:
-          - |-
-            ・攻撃判定を飛び道具にぶつけることで、単発飛び道具を相殺、多段飛び道具のヒット数を「3」減らすことができる
-            ・ヒット後、相手を浮かせる事が可能。さらに追撃可能
-            ・キャンセル猶予時間は1段目が1フレーム、2段目が2～3フレーム、3段目が4～19フレーム
+    noteGroups:
+    - id: item_bd3455e23b
+      displayTitle: 通常
+      entries:
+      - |-
+        ・発生は遅いが判定が強く、技後の硬直が有利なため、どんどん使っていける
+        ・近距離でヒットした時と、画面端で空中ヒットした時は追撃可能
+        ・攻撃判定を飛び道具にぶつけることで、単発飛び道具を相殺、多段飛び道具のヒット数を「1」減らすことができる
+        ・キャンセル猶予時間は14フレーム
+    - id: ex
+      displayTitle: EX
+      entries:
+      - |-
+        ・攻撃判定を飛び道具にぶつけることで、単発飛び道具を相殺、多段飛び道具のヒット数を「3」減らすことができる
+        ・ヒット後、相手を浮かせる事が可能。さらに追撃可能
+        ・キャンセル猶予時間は1段目が1フレーム、2段目が2～3フレーム、3段目が4～19フレーム
   - id: item_8cb4f069c7
     displayName: モンスターラリアット
-    children:
+    variants:
     - id: item_db53144458
-      displayName: モンスターラリアット【小】
+      displayName: 【小】
       detail:
         displayName: モンスターラリアット【小】
         command: 236+小K
@@ -1302,7 +1282,7 @@ moveGroups:
           characterCode: '06'
           skillCode: '037'
     - id: item_4fbb7ad441
-      displayName: モンスターラリアット【中】
+      displayName: 【中】
       detail:
         displayName: モンスターラリアット【中】
         command: 236+中K
@@ -1332,7 +1312,7 @@ moveGroups:
           characterCode: '06'
           skillCode: '038'
     - id: item_a579d17cec
-      displayName: モンスターラリアット【大】
+      displayName: 【大】
       detail:
         displayName: モンスターラリアット【大】
         command: 236+大K
@@ -1362,7 +1342,7 @@ moveGroups:
           characterCode: '06'
           skillCode: '039'
     - id: ex
-      displayName: モンスターラリアット【EX】
+      displayName: 【EX】
       detail:
         displayName: モンスターラリアット【EX】
         command: 236+KK
@@ -1391,25 +1371,21 @@ moveGroups:
           skillName: Monster Lariat (EX)
           characterCode: '06'
           skillCode: '040'
-    - id: item_cf8aa5b927
-      displayName: 補足
-      detail:
-        displayName: 補足
-        noteGroups:
-        - id: item_bd3455e23b
-          displayTitle: 通常
-          entries:
-          - |-
-            ・ボタンによって走る距離、攻撃力、スタン値が変化
-            ・持続時間中のヒットした時間帯により硬直が変化
-        - id: ex
-          displayTitle: EX
-          entries:
-          - |-
-            ・発生はボタンを押す長さで変化
-            ・ボタン押しっぱなしで走る距離がのび、最大で画面端から端まで走る。走る距離がのびるほど攻撃力とスタン値が上昇
-            ・持続時間中のヒットした時間帯により硬直が変化
-            ・技の出が速くなり、小技からコンボにする事が可能
+    noteGroups:
+    - id: item_bd3455e23b
+      displayTitle: 通常
+      entries:
+      - |-
+        ・ボタンによって走る距離、攻撃力、スタン値が変化
+        ・持続時間中のヒットした時間帯により硬直が変化
+    - id: ex
+      displayTitle: EX
+      entries:
+      - |-
+        ・発生はボタンを押す長さで変化
+        ・ボタン押しっぱなしで走る距離がのび、最大で画面端から端まで走る。走る距離がのびるほど攻撃力とスタン値が上昇
+        ・持続時間中のヒットした時間帯により硬直が変化
+        ・技の出が速くなり、小技からコンボにする事が可能
 - id: super_arts
   displayTitle: "【スーパーアーツ】"
   entries:
@@ -1448,9 +1424,9 @@ moveGroups:
         skillCode: '044'
   - id: item_8cad1c11fb
     displayName: メガトンプレス
-    children:
+    variants:
     - id: item_cb337b52ba
-      displayName: メガトンプレス【小】
+      displayName: 【小】
       detail:
         displayName: メガトンプレス【小】
         command: 236236+小K
@@ -1479,7 +1455,7 @@ moveGroups:
           characterCode: '06'
           skillCode: '045'
     - id: item_12c6d03f8c
-      displayName: メガトンプレス【中】
+      displayName: 【中】
       detail:
         displayName: メガトンプレス【中】
         command: 236236+中K
@@ -1508,7 +1484,7 @@ moveGroups:
           characterCode: '06'
           skillCode: '046'
     - id: item_aead946ceb
-      displayName: メガトンプレス【大】
+      displayName: 【大】
       detail:
         displayName: メガトンプレス【大】
         command: 236236+大K
@@ -1536,15 +1512,11 @@ moveGroups:
           skillName: Megaton Press (HK)
           characterCode: '06'
           skillCode: '047'
+    noteGroups:
     - id: item_cf8aa5b927
-      displayName: 補足
-      detail:
-        displayName: 補足
-        noteGroups:
-        - id: item_cf8aa5b927
-          displayTitle: 補足
-          entries:
-          - "・コマンド完成後、暗転50フレーム、相手行動不能時間50フレーム。コマンド完成から52フレーム間無敵 \n・暗転終了後、3フレーム目から空中判定に移行(空中判定になるまでは完全無敵)\n・攻撃発生(小は「1」、中は「3」、大は「5」)フレーム前に無敵終了。食らい判定出現(技を重ねられていたら潰される) \n・硬直欄のカッコ内の数値はしゃがみ着地した時のもの\n・対空投げ。ボタンによりジャンプ軌道が変化する。なお地上に居る相手には決まらない \n・ウルトラスルーからの連続技や対空として使用"
+      displayTitle: 補足
+      entries:
+      - "・コマンド完成後、暗転50フレーム、相手行動不能時間50フレーム。コマンド完成から52フレーム間無敵 \n・暗転終了後、3フレーム目から空中判定に移行(空中判定になるまでは完全無敵)\n・攻撃発生(小は「1」、中は「3」、大は「5」)フレーム前に無敵終了。食らい判定出現(技を重ねられていたら潰される) \n・硬直欄のカッコ内の数値はしゃがみ着地した時のもの\n・対空投げ。ボタンによりジャンプ軌道が変化する。なお地上に居る相手には決まらない \n・ウルトラスルーからの連続技や対空として使用"
   - id: item_3089583a56
     displayName: ハンマーマウンテン
     detail:

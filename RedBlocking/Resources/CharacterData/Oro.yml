@@ -867,9 +867,9 @@ moveGroups:
   entries:
   - id: item_f4d49a2554
     displayName: 日輪掌
-    children:
+    variants:
     - id: item_484d9d385d
-      displayName: 日輪掌【小】
+      displayName: 【小】
       detail:
         displayName: 日輪掌【小】
         command: 4タメ6+小P
@@ -899,7 +899,7 @@ moveGroups:
           characterCode: '09'
           skillCode: '041'
     - id: item_ca854a3642
-      displayName: 日輪掌【中】
+      displayName: 【中】
       detail:
         displayName: 日輪掌【中】
         command: 4タメ6+中P
@@ -929,7 +929,7 @@ moveGroups:
           characterCode: '09'
           skillCode: '042'
     - id: item_bc0a6a5ee6
-      displayName: 日輪掌【大】
+      displayName: 【大】
       detail:
         displayName: 日輪掌【大】
         command: 4タメ6+大P
@@ -959,7 +959,7 @@ moveGroups:
           characterCode: '09'
           skillCode: '043'
     - id: ex
-      displayName: 日輪掌【EX 真横】
+      displayName: 【EX 真横】
       detail:
         displayName: 日輪掌【EX 真横】
         command: 4タメ6+PP
@@ -989,7 +989,7 @@ moveGroups:
           characterCode: '09'
           skillCode: '044'
     - id: ex_2
-      displayName: 日輪掌【EX 斜め上】
+      displayName: 【EX 斜め上】
       detail:
         displayName: 日輪掌【EX 斜め上】
         command: 4タメ6+PP
@@ -1018,29 +1018,25 @@ moveGroups:
           skillName: Sun Disk Palm (EX High)
           characterCode: '09'
           skillCode: '045'
-    - id: item_cf8aa5b927
-      displayName: 補足
-      detail:
-        displayName: 補足
-        noteGroups:
-        - id: item_bd3455e23b
-          displayTitle: 通常
-          entries:
-          - |-
-            ・ボタンにより弾の角度が変化
-            ・持続は弾発射時のもの。攻撃判定は1フレーム後に発生
-        - id: ex
-          displayTitle: EX
-          entries:
-          - |-
-            ・持続は弾発射時のもの。攻撃判定は1フレーム後に発生
-            ・相手をホーミングする
-            ・相手が空中にいる時に出すと、斜め上に発射する
+    noteGroups:
+    - id: item_bd3455e23b
+      displayTitle: 通常
+      entries:
+      - |-
+        ・ボタンにより弾の角度が変化
+        ・持続は弾発射時のもの。攻撃判定は1フレーム後に発生
+    - id: ex
+      displayTitle: EX
+      entries:
+      - |-
+        ・持続は弾発射時のもの。攻撃判定は1フレーム後に発生
+        ・相手をホーミングする
+        ・相手が空中にいる時に出すと、斜め上に発射する
   - id: item_7462264038
     displayName: 鬼ヤンマ
-    children:
+    variants:
     - id: item_4cd149939a
-      displayName: 鬼ヤンマ【小】
+      displayName: 【小】
       detail:
         displayName: 鬼ヤンマ【小】
         command: 2タメ8+小P
@@ -1070,7 +1066,7 @@ moveGroups:
           characterCode: '09'
           skillCode: '037'
     - id: item_c86ab82e77
-      displayName: 鬼ヤンマ【中】
+      displayName: 【中】
       detail:
         displayName: 鬼ヤンマ【中】
         command: 2タメ8+中P
@@ -1100,7 +1096,7 @@ moveGroups:
           characterCode: '09'
           skillCode: '038'
     - id: item_4e7d13f351
-      displayName: 鬼ヤンマ【大】
+      displayName: 【大】
       detail:
         displayName: 鬼ヤンマ【大】
         command: 2タメ8+大P
@@ -1132,7 +1128,7 @@ moveGroups:
           characterCode: '09'
           skillCode: '039'
     - id: ex
-      displayName: 鬼ヤンマ【EX】
+      displayName: 【EX】
       detail:
         displayName: 鬼ヤンマ【EX】
         command: 2タメ8+PP
@@ -1163,32 +1159,28 @@ moveGroups:
           skillName: Oniyama (EX)
           characterCode: '09'
           skillCode: '040'
-    - id: item_cf8aa5b927
-      displayName: 補足
-      detail:
-        displayName: 補足
-        noteGroups:
-        - id: item_bd3455e23b
-          displayTitle: 通常
-          entries:
-          - |-
-            ・攻撃力とスタン値欄のカッコ内の数値は技の後半部分のもの
-            ・SCは小、中は根本のみ、大は2段目まで可能
-            ・小と中は攻撃判定が3回出る。ただしヒットするのは1回のみ
-            ・大は攻撃判定が4回出る。ただしヒットするのは最大で2回のみ
-            ・コマンド完成後、小・中は1～6フレーム目まで投げ無敵。9フレーム目から空中判定に移行
-            ・コマンド完成後、大は1～7フレーム目まで投げ無敵。10フレーム目から空中判定に移行
-        - id: ex
-          displayTitle: EX
-          entries:
-          - |-
-            ・SCは2段目まで可能
-            ・コマンド完成後、大は1～7フレーム目まで完全無敵。10フレーム目から空中判定に移行
+    noteGroups:
+    - id: item_bd3455e23b
+      displayTitle: 通常
+      entries:
+      - |-
+        ・攻撃力とスタン値欄のカッコ内の数値は技の後半部分のもの
+        ・SCは小、中は根本のみ、大は2段目まで可能
+        ・小と中は攻撃判定が3回出る。ただしヒットするのは1回のみ
+        ・大は攻撃判定が4回出る。ただしヒットするのは最大で2回のみ
+        ・コマンド完成後、小・中は1～6フレーム目まで投げ無敵。9フレーム目から空中判定に移行
+        ・コマンド完成後、大は1～7フレーム目まで投げ無敵。10フレーム目から空中判定に移行
+    - id: ex
+      displayTitle: EX
+      entries:
+      - |-
+        ・SCは2段目まで可能
+        ・コマンド完成後、大は1～7フレーム目まで完全無敵。10フレーム目から空中判定に移行
   - id: item_54206022b4
     displayName: 人柱渡り
-    children:
+    variants:
     - id: item_2f1b6be3c3
-      displayName: 人柱渡り【小】
+      displayName: 【小】
       detail:
         displayName: 人柱渡り【小】
         command: 236+小K
@@ -1218,7 +1210,7 @@ moveGroups:
           characterCode: '09'
           skillCode: '046'
     - id: item_6276804f4e
-      displayName: 人柱渡り【中】
+      displayName: 【中】
       detail:
         displayName: 人柱渡り【中】
         command: 236+中K
@@ -1248,7 +1240,7 @@ moveGroups:
           characterCode: '09'
           skillCode: '047'
     - id: item_13800863ad
-      displayName: 人柱渡り【大】
+      displayName: 【大】
       detail:
         displayName: 人柱渡り【大】
         command: 236+大K
@@ -1278,7 +1270,7 @@ moveGroups:
           characterCode: '09'
           skillCode: '048'
     - id: ex
-      displayName: 人柱渡り【EX】
+      displayName: 【EX】
       detail:
         displayName: 人柱渡り【EX】
         command: 236+KK
@@ -1307,25 +1299,21 @@ moveGroups:
           skillName: Jinchu Nobori (EX)
           characterCode: '09'
           skillCode: '049'
+    noteGroups:
     - id: item_cf8aa5b927
-      displayName: 補足
-      detail:
-        displayName: 補足
-        noteGroups:
-        - id: item_cf8aa5b927
-          displayTitle: 補足
-          entries:
-          - |-
-            ・硬直は着地時のもの。ヒット時、硬直は「2」に軽減される
-            ・ヒット&ガード硬直時間差は当たり方によって変化
-            ・コマンド完成後、1フレーム目から下段打撃無敵&空中判定に移行
-            ・リバーサルで出した場合、0フレームで下段打撃無敵&空中判定になるため、重ね下段打撃や投げをスカす事が可能
-            ・ボタンにより移動距離が変化。EXは相手をホーミングする
+      displayTitle: 補足
+      entries:
+      - |-
+        ・硬直は着地時のもの。ヒット時、硬直は「2」に軽減される
+        ・ヒット&ガード硬直時間差は当たり方によって変化
+        ・コマンド完成後、1フレーム目から下段打撃無敵&空中判定に移行
+        ・リバーサルで出した場合、0フレームで下段打撃無敵&空中判定になるため、重ね下段打撃や投げをスカす事が可能
+        ・ボタンにより移動距離が変化。EXは相手をホーミングする
   - id: item_49b305a38f
     displayName: 人柱登り
-    children:
+    variants:
     - id: item_803fd34148
-      displayName: 人柱登り【通常】
+      displayName: 【通常】
       detail:
         displayName: 人柱登り【通常】
         command: 空中で236+K
@@ -1359,7 +1347,7 @@ moveGroups:
           characterCode: '09'
           skillCode: '050'
     - id: ex
-      displayName: 人柱登り【EX)】
+      displayName: 【EX)】
       detail:
         displayName: 人柱登り【EX)】
         command: 空中で236+KK
@@ -1392,23 +1380,19 @@ moveGroups:
           skillName: Air Jinchu Nobori (EX)
           characterCode: '09'
           skillCode: '051'
+    noteGroups:
     - id: item_cf8aa5b927
-      displayName: 補足
-      detail:
-        displayName: 補足
-        noteGroups:
-        - id: item_cf8aa5b927
-          displayTitle: 補足
-          entries:
-          - |-
-            ・硬直は着地時のもの。ヒット時、硬直は「2」に軽減される
-            ・低空でヒットした場合、追撃可能
-            ・ボタン連打でヒット数アップ。小・中・大は最大8ヒット。EXは最大9ヒット
+      displayTitle: 補足
+      entries:
+      - |-
+        ・硬直は着地時のもの。ヒット時、硬直は「2」に軽減される
+        ・低空でヒットした場合、追撃可能
+        ・ボタン連打でヒット数アップ。小・中・大は最大8ヒット。EXは最大9ヒット
   - id: item_aa62541c18
     displayName: 仁王力
-    children:
+    variants:
     - id: item_65a011af77
-      displayName: 仁王力【小】
+      displayName: 【小】
       detail:
         displayName: 仁王力【小】
         command: 63214+小P
@@ -1440,7 +1424,7 @@ moveGroups:
           characterCode: '09'
           skillCode: '034'
     - id: item_2dd7b34bc9
-      displayName: 仁王力【中】
+      displayName: 【中】
       detail:
         displayName: 仁王力【中】
         command: 63214+中P
@@ -1472,7 +1456,7 @@ moveGroups:
           characterCode: '09'
           skillCode: '035'
     - id: item_950fc079d2
-      displayName: 仁王力【大】
+      displayName: 【大】
       detail:
         displayName: 仁王力【大】
         command: 63214+大P
@@ -1503,18 +1487,14 @@ moveGroups:
           skillName: Human Pillar Driver (Fierce)
           characterCode: '09'
           skillCode: '036'
+    noteGroups:
     - id: item_cf8aa5b927
-      displayName: 補足
-      detail:
-        displayName: 補足
-        noteGroups:
-        - id: item_cf8aa5b927
-          displayTitle: 補足
-          entries:
-          - |-
-            ・BL不可の打撃投げ。ボタンにより間合い、威力が変化
-            ・ヒット時QS不可のため、起き攻めが継続できる
-            ・624＋Pの簡易コマンドでも出す事が可能
+      displayTitle: 補足
+      entries:
+      - |-
+        ・BL不可の打撃投げ。ボタンにより間合い、威力が変化
+        ・ヒット時QS不可のため、起き攻めが継続できる
+        ・624＋Pの簡易コマンドでも出す事が可能
 - id: super_arts
   displayTitle: "【スーパーアーツ】"
   entries:

@@ -965,9 +965,9 @@ moveGroups:
         skillCode: '038'
   - id: item_f54208b0ad
     displayName: 灼熱波動拳
-    children:
+    variants:
     - id: item_d880b3c8fe
-      displayName: 灼熱波動拳【小】
+      displayName: 【小】
       detail:
         displayName: 灼熱波動拳【小】
         command: 63214+小P
@@ -997,7 +997,7 @@ moveGroups:
           characterCode: '14'
           skillCode: '042'
     - id: item_78addc919f
-      displayName: 灼熱波動拳【中】
+      displayName: 【中】
       detail:
         displayName: 灼熱波動拳【中】
         command: 63214+中P
@@ -1027,7 +1027,7 @@ moveGroups:
           characterCode: '14'
           skillCode: '043'
     - id: item_b2fc88e332
-      displayName: 灼熱波動拳【大】
+      displayName: 【大】
       detail:
         displayName: 灼熱波動拳【大】
         command: 63214+大P
@@ -1056,24 +1056,20 @@ moveGroups:
           skillName: Shakunetsu Hadouken (Fierce)
           characterCode: '14'
           skillCode: '044'
+    noteGroups:
     - id: item_cf8aa5b927
-      displayName: 補足
-      detail:
-        displayName: 補足
-        noteGroups:
-        - id: item_cf8aa5b927
-          displayTitle: 補足
-          entries:
-          - |-
-            ・持続は弾発射時のもの。 攻撃判定は1フレーム後に発生
-            ・押すボタンにより弾数が変化。弾数は小「1」、中「2」、大「3」
-            ・初段にのみダウン属性あり
-            ・3214＋Pの簡易コマンドでも出す事が可能
+      displayTitle: 補足
+      entries:
+      - |-
+        ・持続は弾発射時のもの。 攻撃判定は1フレーム後に発生
+        ・押すボタンにより弾数が変化。弾数は小「1」、中「2」、大「3」
+        ・初段にのみダウン属性あり
+        ・3214＋Pの簡易コマンドでも出す事が可能
   - id: item_74cf7a4d64
     displayName: 豪昇龍拳
-    children:
+    variants:
     - id: item_8c5429be02
-      displayName: 豪昇龍拳【小】
+      displayName: 【小】
       detail:
         displayName: 豪昇龍拳【小】
         command: 623+小P
@@ -1103,7 +1099,7 @@ moveGroups:
           characterCode: '14'
           skillCode: '034'
     - id: item_bf85d90f8b
-      displayName: 豪昇龍拳【中】
+      displayName: 【中】
       detail:
         displayName: 豪昇龍拳【中】
         command: 623+中P
@@ -1133,7 +1129,7 @@ moveGroups:
           characterCode: '14'
           skillCode: '035'
     - id: item_1ed505c713
-      displayName: 豪昇龍拳【大】
+      displayName: 【大】
       detail:
         displayName: 豪昇龍拳【大】
         command: 623+大P
@@ -1162,20 +1158,16 @@ moveGroups:
           skillName: Gou Shoryuken (Fierce)
           characterCode: '14'
           skillCode: '036'
+    noteGroups:
     - id: item_cf8aa5b927
-      displayName: 補足
-      detail:
-        displayName: 補足
-        noteGroups:
-        - id: item_cf8aa5b927
-          displayTitle: 補足
-          entries:
-          - "・SCは小、中は根本、大は2段目まで可能\n・コマンド完成後、\n　小は3フレーム完全無敵。攻撃発生と同時に2フレーム上段&投げ無敵。6フレーム目から空中判定に移行\n　中は2フレーム完全無敵。攻撃発生と同時に2フレーム上段&投げ無敵。5フレーム目から空中判定に移行\n　大は3フレーム完全無敵。完全無敵後2フレーム上段&投げ無敵。6フレーム目から空中判定に移行 \n・小豪昇龍拳のカッコ内の数値はカス当たり時のもの\n・発生時のリーチは小→中→大の順に広くなる\n・大豪昇龍拳は3段ヒットしないとダウンしない。最後の1段のみダウン属性あり\n・大豪昇龍拳SC→滅殺豪波動はほぼ完全対空。BLされていたら昇り竜巻などでBLタイミングをずらす事が可能"
+      displayTitle: 補足
+      entries:
+      - "・SCは小、中は根本、大は2段目まで可能\n・コマンド完成後、\n　小は3フレーム完全無敵。攻撃発生と同時に2フレーム上段&投げ無敵。6フレーム目から空中判定に移行\n　中は2フレーム完全無敵。攻撃発生と同時に2フレーム上段&投げ無敵。5フレーム目から空中判定に移行\n　大は3フレーム完全無敵。完全無敵後2フレーム上段&投げ無敵。6フレーム目から空中判定に移行 \n・小豪昇龍拳のカッコ内の数値はカス当たり時のもの\n・発生時のリーチは小→中→大の順に広くなる\n・大豪昇龍拳は3段ヒットしないとダウンしない。最後の1段のみダウン属性あり\n・大豪昇龍拳SC→滅殺豪波動はほぼ完全対空。BLされていたら昇り竜巻などでBLタイミングをずらす事が可能"
   - id: item_c808cf0481
     displayName: 竜巻斬空脚
-    children:
+    variants:
     - id: item_888a74d5bd
-      displayName: 竜巻斬空脚【小】
+      displayName: 【小】
       detail:
         displayName: 竜巻斬空脚【小】
         command: 214+小K
@@ -1205,7 +1197,7 @@ moveGroups:
           characterCode: '14'
           skillCode: '039'
     - id: item_d06a9d9fad
-      displayName: 竜巻斬空脚【中】
+      displayName: 【中】
       detail:
         displayName: 竜巻斬空脚【中】
         command: 214+中K
@@ -1241,7 +1233,7 @@ moveGroups:
           characterCode: '14'
           skillCode: '040'
     - id: item_a6b4f5694c
-      displayName: 竜巻斬空脚【大】
+      displayName: 【大】
       detail:
         displayName: 竜巻斬空脚【大】
         command: 214+大K
@@ -1276,26 +1268,22 @@ moveGroups:
           skillName: Tatsumaki Zankuu Kyaku (RH)
           characterCode: '14'
           skillCode: '041'
+    noteGroups:
     - id: item_cf8aa5b927
-      displayName: 補足
-      detail:
-        displayName: 補足
-        noteGroups:
-        - id: item_cf8aa5b927
-          displayTitle: 補足
-          entries:
-          - |-
-            ・SCは中、大竜巻の1段目の膝部分のみ可
-            ・コマンド完成後、どの竜巻も5フレーム目から空中判定に移行
-            ・小、中竜巻が近距離ヒット時、追撃可能(中竜巻はキャラ限あり)
-            ・表中のケズリは全段ガードした時のもの
-            ・ゲージ増加量のヒット部分の数値はあくまで攻撃発生回数に応じたもの。 実際は1～3ヒット程度
-            ・各攻撃力、ケズリ、スタン値は以下の表を参照(この数値のカッコ内は攻撃発生(BL)する回数。 実際は1～3ヒット程度)
+      displayTitle: 補足
+      entries:
+      - |-
+        ・SCは中、大竜巻の1段目の膝部分のみ可
+        ・コマンド完成後、どの竜巻も5フレーム目から空中判定に移行
+        ・小、中竜巻が近距離ヒット時、追撃可能(中竜巻はキャラ限あり)
+        ・表中のケズリは全段ガードした時のもの
+        ・ゲージ増加量のヒット部分の数値はあくまで攻撃発生回数に応じたもの。 実際は1～3ヒット程度
+        ・各攻撃力、ケズリ、スタン値は以下の表を参照(この数値のカッコ内は攻撃発生(BL)する回数。 実際は1～3ヒット程度)
   - id: item_668290fad9
     displayName: 空中竜巻斬空脚
-    children:
+    variants:
     - id: item_6fd269ff41
-      displayName: 空中竜巻斬空脚【小】
+      displayName: 【小】
       detail:
         displayName: 空中竜巻斬空脚【小】
         command: 空中で214+小K
@@ -1331,7 +1319,7 @@ moveGroups:
           characterCode: '14'
           skillCode: '045'
     - id: item_f6dc37cf64
-      displayName: 空中竜巻斬空脚【中】
+      displayName: 【中】
       detail:
         displayName: 空中竜巻斬空脚【中】
         command: 空中で214+中K
@@ -1367,7 +1355,7 @@ moveGroups:
           characterCode: '14'
           skillCode: '046'
     - id: item_3497a80590
-      displayName: 空中竜巻斬空脚【大】
+      displayName: 【大】
       detail:
         displayName: 空中竜巻斬空脚【大】
         command: 空中で214+大K
@@ -1402,26 +1390,22 @@ moveGroups:
           skillName: Air Tatsumaki Zankuu Kyaku (RH)
           characterCode: '14'
           skillCode: '047'
+    noteGroups:
     - id: item_cf8aa5b927
-      displayName: 補足
-      detail:
-        displayName: 補足
-        noteGroups:
-        - id: item_cf8aa5b927
-          displayTitle: 補足
-          entries:
-          - |-
-            ・硬直は着地時のもの。 ガード硬直時間差はガードさせた位置で変化
-            ・削減値欄の「7」の部分は竜巻の後ろ足部分
-            ・竜巻ヒット時、追撃可能
-            ・空対空に強く、BLされても先に着地して動ける場合もあり
-            ・ゲージ増加量のガード、ヒット部分の数値はあくまで攻撃発生回数に応じたもの。 実際は1～3ヒット程度
-            ・各攻撃力、ケズリ、スタン値は以下の表を参照(表のカッコ内は攻撃発生(BL)回数。実際は1～3ヒット程度)
+      displayTitle: 補足
+      entries:
+      - |-
+        ・硬直は着地時のもの。 ガード硬直時間差はガードさせた位置で変化
+        ・削減値欄の「7」の部分は竜巻の後ろ足部分
+        ・竜巻ヒット時、追撃可能
+        ・空対空に強く、BLされても先に着地して動ける場合もあり
+        ・ゲージ増加量のガード、ヒット部分の数値はあくまで攻撃発生回数に応じたもの。 実際は1～3ヒット程度
+        ・各攻撃力、ケズリ、スタン値は以下の表を参照(表のカッコ内は攻撃発生(BL)回数。実際は1～3ヒット程度)
   - id: item_9c70d43de2
     displayName: 百鬼襲
-    children:
+    variants:
     - id: item_829fd39a1d
-      displayName: 百鬼襲(ひゃっきしゅう)
+      displayName: 百鬼襲
       detail:
         displayName: 百鬼襲(ひゃっきしゅう)
         command: 623+K
@@ -1454,7 +1438,7 @@ moveGroups:
             ・追加コマンドの受付は17～35フレームの間
             ・追加攻撃発生前に着地するタイミングで派生させると何も出ない(着地に2F硬直)
     - id: item_dd89758906
-      displayName: 百鬼豪斬(ひゃっきごうざん)
+      displayName: 百鬼豪斬
       detail:
         displayName: 百鬼豪斬(ひゃっきごうざん)
         command: 623+K後、追加入力なし
@@ -1489,7 +1473,7 @@ moveGroups:
           characterCode: '14'
           skillCode: '048'
     - id: item_1008966284
-      displayName: 百鬼豪衝(ひゃっきごうしょう)
+      displayName: 百鬼豪衝
       detail:
         displayName: 百鬼豪衝(ひゃっきごうしょう)
         command: 623+K後、P
@@ -1527,7 +1511,7 @@ moveGroups:
           characterCode: '14'
           skillCode: '049'
     - id: item_f073c72cd9
-      displayName: 百鬼豪刃(ひゃっきごうじん)
+      displayName: 百鬼豪刃
       detail:
         displayName: 百鬼豪刃(ひゃっきごうじん)
         command: 623+K後、K
@@ -1566,7 +1550,7 @@ moveGroups:
           characterCode: '14'
           skillCode: '050'
     - id: item_025a7e5f91
-      displayName: 百鬼豪砕(ひゃっきごうさい)
+      displayName: 百鬼豪砕
       detail:
         displayName: 百鬼豪砕(ひゃっきごうさい)
         command: 623+K後、相手の頭付近で小P+小K
@@ -1605,9 +1589,9 @@ moveGroups:
           skillCode: '051'
   - id: item_97dd0d9485
     displayName: 阿修羅閃空
-    children:
+    variants:
     - id: pp
-      displayName: 阿修羅閃空(PP)
+      displayName: (PP)
       detail:
         displayName: 阿修羅閃空(あしゅらせんくう)
         command: |-
@@ -1632,8 +1616,14 @@ moveGroups:
           guard: "―"
           standingHit: "―"
           crouchingHit: "―"
+        media:
+          kind: motion_player
+          displayLabel: モーション
+          skillName: Ashura Senkuu
+          characterCode: '14'
+          skillCode: '037'
     - id: kk
-      displayName: 阿修羅閃空(KK)
+      displayName: (KK)
       detail:
         displayName: 阿修羅閃空(あしゅらせんくう)
         command: |-
@@ -1658,28 +1648,14 @@ moveGroups:
           guard: "―"
           standingHit: "―"
           crouchingHit: "―"
+    noteGroups:
     - id: item_cf8aa5b927
-      displayName: 補足
-      detail:
-        displayName: 補足
-        noteGroups:
-        - id: item_cf8aa5b927
-          displayTitle: 補足
-          entries:
-          - |-
-            ・ボタンによって移動距離が変化
-            ・コマンド完成後、PP版は1～66フレーム、KK版は1～50フレーム間、完全無敵。ただし画面端に到達と同時に無敵終了
-            ・移動中にSAを出されると、無敵が切れ移動が終了。13フレーム硬直する
-    - id: item_52edcb822b
-      displayName: モーション
-      detail:
-        displayName: モーション
-        media:
-          kind: motion_player
-          displayLabel: モーション
-          skillName: Ashura Senkuu
-          characterCode: '14'
-          skillCode: '037'
+      displayTitle: 補足
+      entries:
+      - |-
+        ・ボタンによって移動距離が変化
+        ・コマンド完成後、PP版は1～66フレーム、KK版は1～50フレーム間、完全無敵。ただし画面端に到達と同時に無敵終了
+        ・移動中にSAを出されると、無敵が切れ移動が終了。13フレーム硬直する
 - id: super_arts
   displayTitle: "【スーパーアーツ】"
   entries:

@@ -919,9 +919,9 @@ moveGroups:
   entries:
   - id: item_6e0a4351d6
     displayName: 苦無
-    children:
+    variants:
     - id: item_3a8258345b
-      displayName: 苦無【小】
+      displayName: 【小】
       detail:
         displayName: 苦無【小】
         command: 空中で236+小P
@@ -951,7 +951,7 @@ moveGroups:
           characterCode: '07'
           skillCode: '037'
     - id: item_b828e3a22a
-      displayName: 苦無【中】
+      displayName: 【中】
       detail:
         displayName: 苦無【中】
         command: 空中で236+中P
@@ -981,7 +981,7 @@ moveGroups:
           characterCode: '07'
           skillCode: '038'
     - id: item_2ac2be8dda
-      displayName: 苦無【大】
+      displayName: 【大】
       detail:
         displayName: 苦無【大】
         command: 空中で236+大P
@@ -1011,7 +1011,7 @@ moveGroups:
           characterCode: '07'
           skillCode: '039'
     - id: ex
-      displayName: 苦無【EX】
+      displayName: 【EX】
       detail:
         displayName: 苦無【EX】
         command: 空中で236+PP
@@ -1040,34 +1040,30 @@ moveGroups:
           skillName: Kunai (EX)
           characterCode: '07'
           skillCode: '040'
-    - id: item_cf8aa5b927
-      displayName: 補足
-      detail:
-        displayName: 補足
-        noteGroups:
-        - id: item_bd3455e23b
-          displayTitle: 通常
-          entries:
-          - |-
-            ・硬直欄のカッコ内の数値はしゃがみ着地した時のもの
-            ・ヒット&ガード硬直時間差は当てる高さによって変化
-            ・どの方向にジャンプしても出す事が可能
-            ・通常技で落とす事が可能
-            ・飛び道具と相殺せずに打ち消されるので注意
-        - id: ex
-          displayTitle: EX
-          entries:
-          - |-
-            ・硬直欄のカッコ内の数値はしゃがみ着地した時のもの
-            ・ヒット&ガード硬直時間差は当てる高さによって変化
-            ・コマンド入力後、レバーを前に入れる事で飛距離を伸ばす事が可能。発生内のカッコはその時の数値
-            ・大攻撃のけぞりのため、ヒット時に次の技に繋げやすい
-            ・めくりで当てるには相手の真上を飛び越える瞬間にレバー入れ版を出すと成功しやすい
+    noteGroups:
+    - id: item_bd3455e23b
+      displayTitle: 通常
+      entries:
+      - |-
+        ・硬直欄のカッコ内の数値はしゃがみ着地した時のもの
+        ・ヒット&ガード硬直時間差は当てる高さによって変化
+        ・どの方向にジャンプしても出す事が可能
+        ・通常技で落とす事が可能
+        ・飛び道具と相殺せずに打ち消されるので注意
+    - id: ex
+      displayTitle: EX
+      entries:
+      - |-
+        ・硬直欄のカッコ内の数値はしゃがみ着地した時のもの
+        ・ヒット&ガード硬直時間差は当てる高さによって変化
+        ・コマンド入力後、レバーを前に入れる事で飛距離を伸ばす事が可能。発生内のカッコはその時の数値
+        ・大攻撃のけぞりのため、ヒット時に次の技に繋げやすい
+        ・めくりで当てるには相手の真上を飛び越える瞬間にレバー入れ版を出すと成功しやすい
   - id: item_2dd25732bd
     displayName: 首折り
-    children:
+    variants:
     - id: item_155593bc13
-      displayName: 首折り【小】
+      displayName: 【小】
       detail:
         displayName: 首折り【小】
         command: 236+小P
@@ -1097,7 +1093,7 @@ moveGroups:
           characterCode: '07'
           skillCode: '048'
     - id: item_be80fd393d
-      displayName: 首折り【中】
+      displayName: 【中】
       detail:
         displayName: 首折り【中】
         command: 236+中P
@@ -1127,7 +1123,7 @@ moveGroups:
           characterCode: '07'
           skillCode: '048'
     - id: item_5f7a888b7e
-      displayName: 首折り【大】
+      displayName: 【大】
       detail:
         displayName: 首折り【大】
         command: 236+大P
@@ -1157,7 +1153,7 @@ moveGroups:
           characterCode: '07'
           skillCode: '048'
     - id: ex
-      displayName: 首折り【EX】
+      displayName: 【EX】
       detail:
         displayName: 首折り【EX】
         command: 236+PP
@@ -1186,24 +1182,20 @@ moveGroups:
           skillName: Kubiori (EX)
           characterCode: '07'
           skillCode: '049'
+    noteGroups:
     - id: item_cf8aa5b927
-      displayName: 補足
-      detail:
-        displayName: 補足
-        noteGroups:
-        - id: item_cf8aa5b927
-          displayTitle: 補足
-          entries:
-          - |-
-            ・公式コマンドの41236+Pは間違いで、 実際は236+Pで出る
-            ・ヒット&ガード硬直時間差欄のカッコ内の数値は先端をガードさせた場合のもの
-            ・コマンド完成後、小は「11～25」、中は「12～27」、大は「14～31」、EXは「12～25」フレームの間姿勢が低くなり、上段攻撃と、一部の飛び道具を抜ける事が可能
-            ・主に中間距離からの奇襲として使用
+      displayTitle: 補足
+      entries:
+      - |-
+        ・公式コマンドの41236+Pは間違いで、 実際は236+Pで出る
+        ・ヒット&ガード硬直時間差欄のカッコ内の数値は先端をガードさせた場合のもの
+        ・コマンド完成後、小は「11～25」、中は「12～27」、大は「14～31」、EXは「12～25」フレームの間姿勢が低くなり、上段攻撃と、一部の飛び道具を抜ける事が可能
+        ・主に中間距離からの奇襲として使用
   - id: item_05e926e9ff
     displayName: 風斬り
-    children:
+    variants:
     - id: item_846c23fd84
-      displayName: 風斬り【小】
+      displayName: 【小】
       detail:
         displayName: 風斬り【小】
         command: 623+小K
@@ -1233,7 +1225,7 @@ moveGroups:
           characterCode: '07'
           skillCode: '050'
     - id: item_195418da10
-      displayName: 風斬り【中】
+      displayName: 【中】
       detail:
         displayName: 風斬り【中】
         command: 623+中K
@@ -1263,7 +1255,7 @@ moveGroups:
           characterCode: '07'
           skillCode: '051'
     - id: item_5e57f926c8
-      displayName: 風斬り【大】
+      displayName: 【大】
       detail:
         displayName: 風斬り【大】
         command: 623+大K
@@ -1293,7 +1285,7 @@ moveGroups:
           characterCode: '07'
           skillCode: '052'
     - id: ex
-      displayName: 風斬り【EX】
+      displayName: 【EX】
       detail:
         displayName: 風斬り【EX】
         command: 623+KK
@@ -1322,1131 +1314,276 @@ moveGroups:
           skillName: Kazekiri (EX)
           characterCode: '07'
           skillCode: '053'
-    - id: item_cf8aa5b927
-      displayName: 補足
-      detail:
-        displayName: 補足
-        noteGroups:
-        - id: item_bd3455e23b
-          displayTitle: 通常
-          entries:
-          - "・硬直欄のカッコ内の数値はしゃがみ状態で着地した時のもの\n・攻撃力とスタン値欄のカッコ内の数値はカス当たり時のもの\n・SCは小、中、大ともに1、2段目がSA2と3で、3段目以降がSA1でのみSC可能\n・小と中は1、2段が大は3段目までが強制立たせ技で、3段目(大は4段目)がダウン属性になっている\n・小はコマンド完成後、6フレーム目から投げられ判定が空中になる。ただし打撃は地上で食らう。7フレーム目から空中判定に移行 \n・中はコマンド完成後、8フレーム間、胸より上のみ打撃無敵。9フレーム目から空中判定に移行 \n・大はコマンド完成後、10フレーム間、腰から上のみ打撃無敵。11フレーム目から空中判定に移行"
-        - id: ex
-          displayTitle: EX
-          entries:
-          - "・硬直欄のカッコ内の数値はしゃがみ状態で着地した時のもの\n・SCは1、2段目もできるが、対応SAのゲージが無いため実質出来ず、3段目以降がSA1でのみSC可能\n・ヒットしてもダウンしない\n・ヒット時のみ、斜めジャンプと同様の技が出せる。ただし空中BLはできない。なお霞朱雀のみヒット、ガード、空振りを問わず出せる。 \n・コマンド完成後5フレーム間、完全無敵。6フレーム目のみ腰から上のみ打撃無敵。7フレーム目から空中判定に移行"
+    noteGroups:
+    - id: item_bd3455e23b
+      displayTitle: 通常
+      entries:
+      - "・硬直欄のカッコ内の数値はしゃがみ状態で着地した時のもの\n・攻撃力とスタン値欄のカッコ内の数値はカス当たり時のもの\n・SCは小、中、大ともに1、2段目がSA2と3で、3段目以降がSA1でのみSC可能\n・小と中は1、2段が大は3段目までが強制立たせ技で、3段目(大は4段目)がダウン属性になっている\n・小はコマンド完成後、6フレーム目から投げられ判定が空中になる。ただし打撃は地上で食らう。7フレーム目から空中判定に移行 \n・中はコマンド完成後、8フレーム間、胸より上のみ打撃無敵。9フレーム目から空中判定に移行 \n・大はコマンド完成後、10フレーム間、腰から上のみ打撃無敵。11フレーム目から空中判定に移行"
+    - id: ex
+      displayTitle: EX
+      entries:
+      - "・硬直欄のカッコ内の数値はしゃがみ状態で着地した時のもの\n・SCは1、2段目もできるが、対応SAのゲージが無いため実質出来ず、3段目以降がSA1でのみSC可能\n・ヒットしてもダウンしない\n・ヒット時のみ、斜めジャンプと同様の技が出せる。ただし空中BLはできない。なお霞朱雀のみヒット、ガード、空振りを問わず出せる。 \n・コマンド完成後5フレーム間、完全無敵。6フレーム目のみ腰から上のみ打撃無敵。7フレーム目から空中判定に移行"
   - id: item_902aee76d6
     displayName: 旋
-    children:
+    variants:
     - id: item_0a3dc4f405
-      displayName: 旋【小】
-      children:
-      - id: item_838e702fbc
-        displayName: 技名
-        detail:
-          displayName: 旋【小】
-      - id: item_49b7386bc1
-        displayName: コマンド
-        detail:
-          displayName: コマンド
-          command: 214+小K後2
-      - id: sc
-        displayName: SC
-        detail:
-          displayName: SC
-          stats:
-            上段(1・2段目) SC: "×・×"
-      - id: item_5d6ebc9016
-        displayName: ガード
-        detail:
-          displayName: ガード
-          stats:
-            上段(1・2段目) ガード: 両・両
-      - id: bl
-        displayName: BL
-        detail:
-          displayName: BL
-          stats:
-            上段(1・2段目) BL: "→・→"
-      - id: item_08b61ad07f
-        displayName: 発生
-        detail:
-          displayName: 発生
-          stats:
-            上段(1・2段目) 発生: 11・14
-      - id: item_50f147eace
-        displayName: 持続
-        detail:
-          displayName: 持続
-          stats:
-            上段(1・2段目) 持続: 1・1
-      - id: item_d6852e217f
-        displayName: 硬直
-        detail:
-          displayName: 硬直
-          stats:
-            上段(1・2段目) 硬直: 19(21)
-      - id: item_60d9b0638d
-        displayName: 攻撃力
-        detail:
-          displayName: 攻撃力
-          stats:
-            上段(1・2段目) 攻撃力: 110(60+50)
-      - id: item_2d84a7bb48
-        displayName: ケズリ
-        detail:
-          displayName: ケズリ
-          stats:
-            上段(1・2段目) ケズリ: 6(3+3)
-      - id: item_b52816980f
-        displayName: スタン値
-        detail:
-          displayName: スタン値
-          stats:
-            上段(1・2段目) スタン値: 6(3+3)
-      - id: item_f32d520a6f
-        displayName: 削減値
-        detail:
-          displayName: 削減値
-          stats:
-            上段(1・2段目) 削減値: 1・1
-      - id: item_42cecce534
-        displayName: 空振り
-        detail:
-          displayName: 空振り
-          meterGain:
-            whiff: '3'
-      - id: item_5d6ebc9016_2
-        displayName: ガード
-        detail:
-          displayName: ガード
-          meterGain:
-            guard: 9(8+1)
-      - id: item_f5c94c17e2
-        displayName: ヒット
-        detail:
-          displayName: ヒット
-          meterGain:
-            hit: 15(13+2)
-      - id: bl_2
-        displayName: BL
-        detail:
-          displayName: BL
-          meterGain:
-            bl: 8(4+4)
-      - id: item_5d6ebc9016_3
-        displayName: ガード
-        detail:
-          displayName: ガード
-          frameAdvantage:
-            guard: "-4"
-      - id: item_1272286f89
-        displayName: 立ヒット
-        detail:
-          displayName: 立ヒット
-          frameAdvantage:
-            standingHit: '0'
-      - id: item_a3b78ed257
-        displayName: 屈ヒット
-        detail:
-          displayName: 屈ヒット
-          frameAdvantage:
-            crouchingHit: "+2"
-      - id: sc_2
-        displayName: SC
-        detail:
-          displayName: SC
-          stats:
-            下段(2段目) SC: "×"
-      - id: item_5d6ebc9016_4
-        displayName: ガード
-        detail:
-          displayName: ガード
-          stats:
-            下段(2段目) ガード: 屈
-      - id: bl_3
-        displayName: BL
-        detail:
-          displayName: BL
-          stats:
-            下段(2段目) BL: "↓"
-      - id: item_08b61ad07f_2
-        displayName: 発生
-        detail:
-          displayName: 発生
-          stats:
-            下段(2段目) 発生: '19'
-      - id: item_50f147eace_2
-        displayName: 持続
-        detail:
-          displayName: 持続
-          stats:
-            下段(2段目) 持続: '2'
-      - id: item_d6852e217f_2
-        displayName: 硬直
-        detail:
-          displayName: 硬直
-          stats:
-            下段(2段目) 硬直: '30'
-      - id: item_60d9b0638d_2
-        displayName: 攻撃力
-        detail:
-          displayName: 攻撃力
-          stats:
-            下段(2段目) 攻撃力: '50'
-      - id: item_2d84a7bb48_2
-        displayName: ケズリ
-        detail:
-          displayName: ケズリ
-          stats:
-            下段(2段目) ケズリ: '3'
-      - id: item_b52816980f_2
-        displayName: スタン値
-        detail:
-          displayName: スタン値
-          stats:
-            下段(2段目) スタン値: '3'
-      - id: item_f32d520a6f_2
-        displayName: 削減値
-        detail:
-          displayName: 削減値
-          stats:
-            下段(2段目) 削減値: '1'
-      - id: item_42cecce534_2
-        displayName: 空振り
-        detail:
-          displayName: 空振り
-          meterGain:
-            whiff: '0'
-      - id: item_5d6ebc9016_5
-        displayName: ガード
-        detail:
-          displayName: ガード
-          meterGain:
-            guard: '1'
-      - id: item_f5c94c17e2_2
-        displayName: ヒット
-        detail:
-          displayName: ヒット
-          meterGain:
-            hit: '2'
-      - id: bl_4
-        displayName: BL
-        detail:
-          displayName: BL
-          meterGain:
-            bl: '4'
-      - id: item_5d6ebc9016_6
-        displayName: ガード
-        detail:
-          displayName: ガード
-          frameAdvantage:
-            guard: "-12"
-      - id: item_1272286f89_2
-        displayName: 立ヒット
-        detail:
-          displayName: 立ヒット
-          frameAdvantage:
-            standingHit: ダウン
-      - id: item_a3b78ed257_2
-        displayName: 屈ヒット
-        detail:
-          displayName: 屈ヒット
-          frameAdvantage:
-            crouchingHit: ダウン
-      - id: item_52edcb822b
-        displayName: モーション
-        detail:
-          displayName: モーション
-          media:
-            kind: motion_player
-            displayLabel: モーション
-            skillName: Tsumuji (Short)
-            characterCode: '07'
-            skillCode: '054'
-    - id: item_8917bb57f8
-      displayName: 旋【中】
-      children:
-      - id: item_838e702fbc
-        displayName: 技名
-        detail:
-          displayName: 旋【中】
-      - id: item_49b7386bc1
-        displayName: コマンド
-        detail:
-          displayName: コマンド
-          command: 214+中K後K or 2K
-      - id: sc
-        displayName: SC
-        detail:
-          displayName: SC
-          stats:
-            上段(1・2・3段目) SC: "×・×・×"
-      - id: item_5d6ebc9016
-        displayName: ガード
-        detail:
-          displayName: ガード
-          stats:
-            上段(1・2・3段目) ガード: 両×3
-      - id: bl
-        displayName: BL
-        detail:
-          displayName: BL
-          stats:
-            上段(1・2・3段目) BL: "→×3"
-      - id: item_08b61ad07f
-        displayName: 発生
-        detail:
-          displayName: 発生
-          stats:
-            上段(1・2・3段目) 発生: 13・15・15
-      - id: item_50f147eace
-        displayName: 持続
-        detail:
-          displayName: 持続
-          stats:
-            上段(1・2・3段目) 持続: 1・1・1
-      - id: item_d6852e217f
-        displayName: 硬直
-        detail:
-          displayName: 硬直
-          stats:
-            上段(1・2・3段目) 硬直: 21(27)
-      - id: item_60d9b0638d
-        displayName: 攻撃力
-        detail:
-          displayName: 攻撃力
-          stats:
-            上段(1・2・3段目) 攻撃力: 160(60+50+50)
-      - id: item_2d84a7bb48
-        displayName: ケズリ
-        detail:
-          displayName: ケズリ
-          stats:
-            上段(1・2・3段目) ケズリ: 9(3+3+3)
-      - id: item_b52816980f
-        displayName: スタン値
-        detail:
-          displayName: スタン値
-          stats:
-            上段(1・2・3段目) スタン値: 11(3+3+5)
-      - id: item_f32d520a6f
-        displayName: 削減値
-        detail:
-          displayName: 削減値
-          stats:
-            上段(1・2・3段目) 削減値: 1・1・1
-      - id: item_42cecce534
-        displayName: 空振り
-        detail:
-          displayName: 空振り
-          meterGain:
-            whiff: '3'
-      - id: item_5d6ebc9016_2
-        displayName: ガード
-        detail:
-          displayName: ガード
-          meterGain:
-            guard: 9(8+1)
-      - id: item_f5c94c17e2
-        displayName: ヒット
-        detail:
-          displayName: ヒット
-          meterGain:
-            hit: 15(13+2)
-      - id: bl_2
-        displayName: BL
-        detail:
-          displayName: BL
-          meterGain:
-            bl: 8(4+4)
-      - id: item_5d6ebc9016_3
-        displayName: ガード
-        detail:
-          displayName: ガード
-          frameAdvantage:
-            guard: "-2"
-      - id: item_1272286f89
-        displayName: 立ヒット
-        detail:
-          displayName: 立ヒット
-          frameAdvantage:
-            standingHit: '0'
-      - id: item_a3b78ed257
-        displayName: 屈ヒット
-        detail:
-          displayName: 屈ヒット
-          frameAdvantage:
-            crouchingHit: "+2"
-      - id: item_42cecce534_2
-        displayName: 空振り
-        detail:
-          displayName: 空振り
-          stats:
-            ゲージ増加量(追加入力) 空振り: '0'
-      - id: item_5d6ebc9016_4
-        displayName: ガード
-        detail:
-          displayName: ガード
-          stats:
-            ゲージ増加量(追加入力) ガード: '1'
-      - id: item_f5c94c17e2_2
-        displayName: ヒット
-        detail:
-          displayName: ヒット
-          stats:
-            ゲージ増加量(追加入力) ヒット: '2'
-      - id: bl_3
-        displayName: BL
-        detail:
-          displayName: BL
-          stats:
-            ゲージ増加量(追加入力) BL: '4'
-      - id: item_5d6ebc9016_5
-        displayName: ガード
-        detail:
-          displayName: ガード
-          stats:
-            ヒット&ガード硬直時間差(追加入力) ガード: "-7"
-      - id: item_1272286f89_2
-        displayName: 立ヒット
-        detail:
-          displayName: 立ヒット
-          stats:
-            ヒット&ガード硬直時間差(追加入力) 立ヒット: "+1"
-      - id: item_a3b78ed257_2
-        displayName: 屈ヒット
-        detail:
-          displayName: 屈ヒット
-          stats:
-            ヒット&ガード硬直時間差(追加入力) 屈ヒット: "+3"
-      - id: sc_2
-        displayName: SC
-        detail:
-          displayName: SC
-          stats:
-            下段(3段目) SC: "×"
-      - id: item_5d6ebc9016_6
-        displayName: ガード
-        detail:
-          displayName: ガード
-          stats:
-            下段(3段目) ガード: 屈
-      - id: bl_4
-        displayName: BL
-        detail:
-          displayName: BL
-          stats:
-            下段(3段目) BL: "↓"
-      - id: item_08b61ad07f_2
-        displayName: 発生
-        detail:
-          displayName: 発生
-          stats:
-            下段(3段目) 発生: '20'
-      - id: item_50f147eace_2
-        displayName: 持続
-        detail:
-          displayName: 持続
-          stats:
-            下段(3段目) 持続: '2'
-      - id: item_d6852e217f_2
-        displayName: 硬直
-        detail:
-          displayName: 硬直
-          stats:
-            下段(3段目) 硬直: '30'
-      - id: item_60d9b0638d_2
-        displayName: 攻撃力
-        detail:
-          displayName: 攻撃力
-          stats:
-            下段(3段目) 攻撃力: '50'
-      - id: item_2d84a7bb48_2
-        displayName: ケズリ
-        detail:
-          displayName: ケズリ
-          stats:
-            下段(3段目) ケズリ: '3'
-      - id: item_b52816980f_2
-        displayName: スタン値
-        detail:
-          displayName: スタン値
-          stats:
-            下段(3段目) スタン値: '3'
-      - id: item_f32d520a6f_2
-        displayName: 削減値
-        detail:
-          displayName: 削減値
-          stats:
-            下段(3段目) 削減値: '1'
-      - id: item_42cecce534_3
-        displayName: 空振り
-        detail:
-          displayName: 空振り
-          meterGain:
-            whiff: '0'
-      - id: item_5d6ebc9016_7
-        displayName: ガード
-        detail:
-          displayName: ガード
-          meterGain:
-            guard: '1'
-      - id: item_f5c94c17e2_3
-        displayName: ヒット
-        detail:
-          displayName: ヒット
-          meterGain:
-            hit: '2'
-      - id: bl_5
-        displayName: BL
-        detail:
-          displayName: BL
-          meterGain:
-            bl: '4'
-      - id: item_5d6ebc9016_8
-        displayName: ガード
-        detail:
-          displayName: ガード
-          frameAdvantage:
-            guard: "-12"
-      - id: item_1272286f89_3
-        displayName: 立ヒット
-        detail:
-          displayName: 立ヒット
-          frameAdvantage:
-            standingHit: ダウン
-      - id: item_a3b78ed257_3
-        displayName: 屈ヒット
-        detail:
-          displayName: 屈ヒット
-          frameAdvantage:
-            crouchingHit: ダウン
-      - id: item_52edcb822b
-        displayName: モーション
-        detail:
-          displayName: モーション
-          media:
-            kind: motion_player
-            displayLabel: モーション
-            skillName: Tsumuji (Forward)
-            characterCode: '07'
-            skillCode: '055'
-    - id: item_c2dd6a37ea
-      displayName: 旋【大】
-      children:
-      - id: item_838e702fbc
-        displayName: 技名
-        detail:
-          displayName: 旋【大】
-      - id: item_49b7386bc1
-        displayName: コマンド
-        detail:
-          displayName: コマンド
-          command: 214+大K後2
-      - id: sc
-        displayName: SC
-        detail:
-          displayName: SC
-          stats:
-            上段(1・2・3段目) SC: "×・○・×"
-      - id: item_5d6ebc9016
-        displayName: ガード
-        detail:
-          displayName: ガード
-          stats:
-            上段(1・2・3段目) ガード: 両×3
-      - id: bl
-        displayName: BL
-        detail:
-          displayName: BL
-          stats:
-            上段(1・2・3段目) BL: "→×3"
-      - id: item_08b61ad07f
-        displayName: 発生
-        detail:
-          displayName: 発生
-          stats:
-            上段(1・2・3段目) 発生: 14・13・15
-      - id: item_50f147eace
-        displayName: 持続
-        detail:
-          displayName: 持続
-          stats:
-            上段(1・2・3段目) 持続: 1・1・1
-      - id: item_d6852e217f
-        displayName: 硬直
-        detail:
-          displayName: 硬直
-          stats:
-            上段(1・2・3段目) 硬直: 24(30)
-      - id: item_60d9b0638d
-        displayName: 攻撃力
-        detail:
-          displayName: 攻撃力
-          stats:
-            上段(1・2・3段目) 攻撃力: 190(60+50+80)
-      - id: item_2d84a7bb48
-        displayName: ケズリ
-        detail:
-          displayName: ケズリ
-          stats:
-            上段(1・2・3段目) ケズリ: 11(3+3+5)
-      - id: item_b52816980f
-        displayName: スタン値
-        detail:
-          displayName: スタン値
-          stats:
-            上段(1・2・3段目) スタン値: 13(3+5+5)
-      - id: item_f32d520a6f
-        displayName: 削減値
-        detail:
-          displayName: 削減値
-          stats:
-            上段(1・2・3段目) 削減値: 1・1・1
-      - id: item_42cecce534
-        displayName: 空振り
-        detail:
-          displayName: 空振り
-          meterGain:
-            whiff: '3'
-      - id: item_5d6ebc9016_2
-        displayName: ガード
-        detail:
-          displayName: ガード
-          meterGain:
-            guard: 10(8+1+1)
-      - id: item_f5c94c17e2
-        displayName: ヒット
-        detail:
-          displayName: ヒット
-          meterGain:
-            hit: 17(13+2+2)
-      - id: bl_2
-        displayName: BL
-        detail:
-          displayName: BL
-          meterGain:
-            bl: 12(4+4+4)
-      - id: item_5d6ebc9016_3
-        displayName: ガード
-        detail:
-          displayName: ガード
-          frameAdvantage:
-            guard: "-8"
-      - id: item_1272286f89
-        displayName: 立ヒット
-        detail:
-          displayName: 立ヒット
-          frameAdvantage:
-            standingHit: '0'
-      - id: item_a3b78ed257
-        displayName: 屈ヒット
-        detail:
-          displayName: 屈ヒット
-          frameAdvantage:
-            crouchingHit: "+2"
-      - id: sc_2
-        displayName: SC
-        detail:
-          displayName: SC
-          stats:
-            下段(3段目) SC: "×"
-      - id: item_5d6ebc9016_4
-        displayName: ガード
-        detail:
-          displayName: ガード
-          stats:
-            下段(3段目) ガード: 屈
-      - id: bl_3
-        displayName: BL
-        detail:
-          displayName: BL
-          stats:
-            下段(3段目) BL: "↓"
-      - id: item_08b61ad07f_2
-        displayName: 発生
-        detail:
-          displayName: 発生
-          stats:
-            下段(3段目) 発生: '18'
-      - id: item_50f147eace_2
-        displayName: 持続
-        detail:
-          displayName: 持続
-          stats:
-            下段(3段目) 持続: '2'
-      - id: item_d6852e217f_2
-        displayName: 硬直
-        detail:
-          displayName: 硬直
-          stats:
-            下段(3段目) 硬直: '30'
-      - id: item_60d9b0638d_2
-        displayName: 攻撃力
-        detail:
-          displayName: 攻撃力
-          stats:
-            下段(3段目) 攻撃力: '70'
-      - id: item_2d84a7bb48_2
-        displayName: ケズリ
-        detail:
-          displayName: ケズリ
-          stats:
-            下段(3段目) ケズリ: '4'
-      - id: item_b52816980f_2
-        displayName: スタン値
-        detail:
-          displayName: スタン値
-          stats:
-            下段(3段目) スタン値: '3'
-      - id: item_f32d520a6f_2
-        displayName: 削減値
-        detail:
-          displayName: 削減値
-          stats:
-            下段(3段目) 削減値: '1'
-      - id: item_42cecce534_2
-        displayName: 空振り
-        detail:
-          displayName: 空振り
-          meterGain:
-            whiff: '0'
-      - id: item_5d6ebc9016_5
-        displayName: ガード
-        detail:
-          displayName: ガード
-          meterGain:
-            guard: '1'
-      - id: item_f5c94c17e2_2
-        displayName: ヒット
-        detail:
-          displayName: ヒット
-          meterGain:
-            hit: '2'
-      - id: bl_4
-        displayName: BL
-        detail:
-          displayName: BL
-          meterGain:
-            bl: '4'
-      - id: item_5d6ebc9016_6
-        displayName: ガード
-        detail:
-          displayName: ガード
-          frameAdvantage:
-            guard: "-12"
-      - id: item_1272286f89_2
-        displayName: 立ヒット
-        detail:
-          displayName: 立ヒット
-          frameAdvantage:
-            standingHit: ダウン
-      - id: item_a3b78ed257_2
-        displayName: 屈ヒット
-        detail:
-          displayName: 屈ヒット
-          frameAdvantage:
-            crouchingHit: ダウン
-      - id: item_52edcb822b
-        displayName: モーション
-        detail:
-          displayName: モーション
-          media:
-            kind: motion_player
-            displayLabel: モーション
-            skillName: Tsumuji (Roundhouse)
-            characterCode: '07'
-            skillCode: '056'
-    - id: ex
-      displayName: 旋【EX】
-      children:
-      - id: item_838e702fbc
-        displayName: 技名
-        detail:
-          displayName: 旋【EX】
-      - id: item_49b7386bc1
-        displayName: コマンド
-        detail:
-          displayName: コマンド
-          command: 214+KK後2
-      - id: sc
-        displayName: SC
-        detail:
-          displayName: SC
-          stats:
-            上段(1・2・3段目) SC: "○・○・○"
-      - id: item_5d6ebc9016
-        displayName: ガード
-        detail:
-          displayName: ガード
-          stats:
-            上段(1・2・3段目) ガード: 両×3
-      - id: bl
-        displayName: BL
-        detail:
-          displayName: BL
-          stats:
-            上段(1・2・3段目) BL: "→×3"
-      - id: item_08b61ad07f
-        displayName: 発生
-        detail:
-          displayName: 発生
-          stats:
-            上段(1・2・3段目) 発生: 7・9・9
-      - id: item_50f147eace
-        displayName: 持続
-        detail:
-          displayName: 持続
-          stats:
-            上段(1・2・3段目) 持続: 1・1・1
-      - id: item_d6852e217f
-        displayName: 硬直
-        detail:
-          displayName: 硬直
-          stats:
-            上段(1・2・3段目) 硬直: "―"
-      - id: item_60d9b0638d
-        displayName: 攻撃力
-        detail:
-          displayName: 攻撃力
-          stats:
-            上段(1・2・3段目) 攻撃力: 150(50+50+50)
-      - id: item_2d84a7bb48
-        displayName: ケズリ
-        detail:
-          displayName: ケズリ
-          stats:
-            上段(1・2・3段目) ケズリ: 9(3+3+3)
-      - id: item_b52816980f
-        displayName: スタン値
-        detail:
-          displayName: スタン値
-          stats:
-            上段(1・2・3段目) スタン値: 13(3+5+5)
-      - id: item_f32d520a6f
-        displayName: 削減値
-        detail:
-          displayName: 削減値
-          stats:
-            上段(1・2・3段目) 削減値: 1・1・1
-      - id: sc_2
-        displayName: SC
-        detail:
-          displayName: SC
-          stats:
-            上段(4段目) SC: "×"
-      - id: item_5d6ebc9016_2
-        displayName: ガード
-        detail:
-          displayName: ガード
-          stats:
-            上段(4段目) ガード: 両
-      - id: bl_2
-        displayName: BL
-        detail:
-          displayName: BL
-          stats:
-            上段(4段目) BL: "→"
-      - id: item_08b61ad07f_2
-        displayName: 発生
-        detail:
-          displayName: 発生
-          stats:
-            上段(4段目) 発生: '10'
-      - id: item_50f147eace_2
-        displayName: 持続
-        detail:
-          displayName: 持続
-          stats:
-            上段(4段目) 持続: '1'
-      - id: item_d6852e217f_2
-        displayName: 硬直
-        detail:
-          displayName: 硬直
-          stats:
-            上段(4段目) 硬直: '28'
-      - id: item_60d9b0638d_2
-        displayName: 攻撃力
-        detail:
-          displayName: 攻撃力
-          stats:
-            上段(4段目) 攻撃力: '70'
-      - id: item_2d84a7bb48_2
-        displayName: ケズリ
-        detail:
-          displayName: ケズリ
-          stats:
-            上段(4段目) ケズリ: '4'
-      - id: item_b52816980f_2
-        displayName: スタン値
-        detail:
-          displayName: スタン値
-          stats:
-            上段(4段目) スタン値: '3'
-      - id: item_f32d520a6f_2
-        displayName: 削減値
-        detail:
-          displayName: 削減値
-          stats:
-            上段(4段目) 削減値: '1'
-      - id: item_42cecce534
-        displayName: 空振り
-        detail:
-          displayName: 空振り
-          meterGain:
-            whiff: "―"
-      - id: item_5d6ebc9016_3
-        displayName: ガード
-        detail:
-          displayName: ガード
-          meterGain:
-            guard: "―"
-      - id: item_f5c94c17e2
-        displayName: ヒット
-        detail:
-          displayName: ヒット
-          meterGain:
-            hit: "―"
-      - id: bl_3
-        displayName: BL
-        detail:
-          displayName: BL
-          meterGain:
-            bl: 8(4+4)
-      - id: item_5d6ebc9016_4
-        displayName: ガード
-        detail:
-          displayName: ガード
-          frameAdvantage:
-            guard: "-11"
-      - id: item_1272286f89
-        displayName: 立ヒット
-        detail:
-          displayName: 立ヒット
-          frameAdvantage:
-            standingHit: ダウン
-      - id: item_a3b78ed257
-        displayName: 屈ヒット
-        detail:
-          displayName: 屈ヒット
-          frameAdvantage:
-            crouchingHit: ダウン
-      - id: sc_3
-        displayName: SC
-        detail:
-          displayName: SC
-          stats:
-            下段(2・3段目) SC: "○・○"
-      - id: item_5d6ebc9016_5
-        displayName: ガード
-        detail:
-          displayName: ガード
-          stats:
-            下段(2・3段目) ガード: 屈・屈
-      - id: bl_4
-        displayName: BL
-        detail:
-          displayName: BL
-          stats:
-            下段(2・3段目) BL: "↓・↓"
-      - id: item_08b61ad07f_3
-        displayName: 発生
-        detail:
-          displayName: 発生
-          stats:
-            下段(2・3段目) 発生: 14・14
-      - id: item_50f147eace_3
-        displayName: 持続
-        detail:
-          displayName: 持続
-          stats:
-            下段(2・3段目) 持続: 2・2
-      - id: item_d6852e217f_3
-        displayName: 硬直
-        detail:
-          displayName: 硬直
-          stats:
-            下段(2・3段目) 硬直: "―"
-      - id: item_60d9b0638d_3
-        displayName: 攻撃力
-        detail:
-          displayName: 攻撃力
-          stats:
-            下段(2・3段目) 攻撃力: 80(40+40)
-      - id: item_2d84a7bb48_3
-        displayName: ケズリ
-        detail:
-          displayName: ケズリ
-          stats:
-            下段(2・3段目) ケズリ: 4(2+2)
-      - id: item_b52816980f_3
-        displayName: スタン値
-        detail:
-          displayName: スタン値
-          stats:
-            下段(2・3段目) スタン値: 6(3+3)
-      - id: item_f32d520a6f_3
-        displayName: 削減値
-        detail:
-          displayName: 削減値
-          stats:
-            下段(2・3段目) 削減値: 1・1
-      - id: sc_4
-        displayName: SC
-        detail:
-          displayName: SC
-          stats:
-            下段(4段目) SC: "×"
-      - id: item_5d6ebc9016_6
-        displayName: ガード
-        detail:
-          displayName: ガード
-          stats:
-            下段(4段目) ガード: 屈
-      - id: bl_5
-        displayName: BL
-        detail:
-          displayName: BL
-          stats:
-            下段(4段目) BL: "↓"
-      - id: item_08b61ad07f_4
-        displayName: 発生
-        detail:
-          displayName: 発生
-          stats:
-            下段(4段目) 発生: '15'
-      - id: item_50f147eace_4
-        displayName: 持続
-        detail:
-          displayName: 持続
-          stats:
-            下段(4段目) 持続: '2'
-      - id: item_d6852e217f_4
-        displayName: 硬直
-        detail:
-          displayName: 硬直
-          stats:
-            下段(4段目) 硬直: '30'
-      - id: item_60d9b0638d_4
-        displayName: 攻撃力
-        detail:
-          displayName: 攻撃力
-          stats:
-            下段(4段目) 攻撃力: '60'
-      - id: item_2d84a7bb48_4
-        displayName: ケズリ
-        detail:
-          displayName: ケズリ
-          stats:
-            下段(4段目) ケズリ: '3'
-      - id: item_b52816980f_4
-        displayName: スタン値
-        detail:
-          displayName: スタン値
-          stats:
-            下段(4段目) スタン値: '3'
-      - id: item_f32d520a6f_4
-        displayName: 削減値
-        detail:
-          displayName: 削減値
-          stats:
-            下段(4段目) 削減値: '1'
-      - id: item_42cecce534_2
-        displayName: 空振り
-        detail:
-          displayName: 空振り
-          meterGain:
-            whiff: "―"
-      - id: item_5d6ebc9016_7
-        displayName: ガード
-        detail:
-          displayName: ガード
-          meterGain:
-            guard: "―"
-      - id: item_f5c94c17e2_2
-        displayName: ヒット
-        detail:
-          displayName: ヒット
-          meterGain:
-            hit: "―"
-      - id: bl_6
-        displayName: BL
-        detail:
-          displayName: BL
-          meterGain:
-            bl: 8(4+4)
-      - id: item_5d6ebc9016_8
-        displayName: ガード
-        detail:
-          displayName: ガード
-          frameAdvantage:
-            guard: "-16"
-      - id: item_1272286f89_2
-        displayName: 立ヒット
-        detail:
-          displayName: 立ヒット
-          frameAdvantage:
-            standingHit: ダウン
-      - id: item_a3b78ed257_2
-        displayName: 屈ヒット
-        detail:
-          displayName: 屈ヒット
-          frameAdvantage:
-            crouchingHit: ダウン
-      - id: item_52edcb822b
-        displayName: モーション
-        detail:
-          displayName: モーション
-          media:
-            kind: motion_player
-            displayLabel: モーション
-            skillName: Tsumuji (EX)
-            characterCode: '07'
-            skillCode: '057'
-    - id: item_cf8aa5b927
-      displayName: 補足
+      displayName: 【小】
       detail:
-        displayName: 補足
-        noteGroups:
-        - id: item_031e8e99db
-          displayTitle: 共通
-          entries:
-          - 硬直欄のカッコ内の数値はガードされた時のもの
-        - id: item_922517cc73
-          displayTitle: 小
-          entries:
-          - |-
-            ・レバーを下に入れることで2段目を下段に派生する事が可能
-            ・小攻撃キャンセルからでは繋がらない
-        - id: item_0869071c92
-          displayTitle: 中
-          entries:
-          - |-
-            ・2段目の判定が出ている間に中Kボタンを押す事で3段目を出す事が可能
-            ・2段目の判定が出ている間に中Kボタンを押し、レバー下に入れることで3段目を下段に派生する事が可能
-            ・3段目を出す時はヒット確認して出す。また、しゃがみヒット時は3段目を下段にしても繋がる
-        - id: item_0889c34972
-          displayTitle: 大
-          entries:
-          - |-
-            ・レバーを下に入れることで3段目を下段に派生する事が可能
-            ・大攻撃キャンセルからでないと繋がらない。ただし屈ヒット時は中攻撃からでも繋がる
-            ・2段目のみSC可能。キャンセル猶予時間は17～24フレーム
-            ・3段目の上段はしゃがみ状態の春麗、エレナ、オロにヒットしない
-        - id: ex
-          displayTitle: EX
-          entries:
-          - |-
-            ・レバーを下に入れることで2段目以降を下段に派生させる事が可能。この場合2、3段目の下段ではダウンしない
-            ・上段から下段に派生すると繋がらない。下段から上段なら繋がる｡ なおしゃがみヒットならどちらからでも繋ぐことが可能
-            ・上段、下段ともに4段目のみダウン属性あり
-            ・SCできるが、システムディレクションをいじらない限り、繋がるSAがない
+        displayName: 旋【小】
+        command: 214+小K後2
+        meterGain:
+          whiff: '3'
+          guard: 9(8+1)
+          hit: 15(13+2)
+          bl: 8(4+4)
+        frameAdvantage:
+          guard: "-4"
+          standingHit: '0'
+          crouchingHit: "+2"
+        stats:
+          上段(1・2段目) SC: "×・×"
+          上段(1・2段目) ガード: 両・両
+          上段(1・2段目) BL: "→・→"
+          上段(1・2段目) 発生: 11・14
+          上段(1・2段目) 持続: 1・1
+          上段(1・2段目) 硬直: 19(21)
+          上段(1・2段目) 攻撃力: 110(60+50)
+          上段(1・2段目) ケズリ: 6(3+3)
+          上段(1・2段目) スタン値: 6(3+3)
+          上段(1・2段目) 削減値: 1・1
+          下段(2段目) SC: "×"
+          下段(2段目) ガード: 屈
+          下段(2段目) BL: "↓"
+          下段(2段目) 発生: '19'
+          下段(2段目) 持続: '2'
+          下段(2段目) 硬直: '30'
+          下段(2段目) 攻撃力: '50'
+          下段(2段目) ケズリ: '3'
+          下段(2段目) スタン値: '3'
+          下段(2段目) 削減値: '1'
+          ゲージ増加量(下段(2段目)) 空振り: '0'
+          ゲージ増加量(下段(2段目)) ガード: '1'
+          ゲージ増加量(下段(2段目)) ヒット: '2'
+          ゲージ増加量(下段(2段目)) BL: '4'
+          ヒット&ガード硬直時間差(下段(2段目)) ガード: "-12"
+          ヒット&ガード硬直時間差(下段(2段目)) 立ヒット: ダウン
+          ヒット&ガード硬直時間差(下段(2段目)) 屈ヒット: ダウン
+        media:
+          kind: motion_player
+          displayLabel: モーション
+          skillName: Tsumuji (Short)
+          characterCode: '07'
+          skillCode: '054'
+    - id: item_8917bb57f8
+      displayName: 【中】
+      detail:
+        displayName: 旋【中】
+        command: 214+中K後K or 2K
+        meterGain:
+          whiff: '3'
+          guard: 9(8+1)
+          hit: 15(13+2)
+          bl: 8(4+4)
+        frameAdvantage:
+          guard: "-2"
+          standingHit: '0'
+          crouchingHit: "+2"
+        stats:
+          上段(1・2・3段目) SC: "×・×・×"
+          上段(1・2・3段目) ガード: 両×3
+          上段(1・2・3段目) BL: "→×3"
+          上段(1・2・3段目) 発生: 13・15・15
+          上段(1・2・3段目) 持続: 1・1・1
+          上段(1・2・3段目) 硬直: 21(27)
+          上段(1・2・3段目) 攻撃力: 160(60+50+50)
+          上段(1・2・3段目) ケズリ: 9(3+3+3)
+          上段(1・2・3段目) スタン値: 11(3+3+5)
+          上段(1・2・3段目) 削減値: 1・1・1
+          ゲージ増加量(追加入力) 空振り: '0'
+          ゲージ増加量(追加入力) ガード: '1'
+          ゲージ増加量(追加入力) ヒット: '2'
+          ゲージ増加量(追加入力) BL: '4'
+          ヒット&ガード硬直時間差(追加入力) ガード: "-7"
+          ヒット&ガード硬直時間差(追加入力) 立ヒット: "+1"
+          ヒット&ガード硬直時間差(追加入力) 屈ヒット: "+3"
+          下段(3段目) SC: "×"
+          下段(3段目) ガード: 屈
+          下段(3段目) BL: "↓"
+          下段(3段目) 発生: '20'
+          下段(3段目) 持続: '2'
+          下段(3段目) 硬直: '30'
+          下段(3段目) 攻撃力: '50'
+          下段(3段目) ケズリ: '3'
+          下段(3段目) スタン値: '3'
+          下段(3段目) 削減値: '1'
+          ゲージ増加量(下段(3段目)) 空振り: '0'
+          ゲージ増加量(下段(3段目)) ガード: '1'
+          ゲージ増加量(下段(3段目)) ヒット: '2'
+          ゲージ増加量(下段(3段目)) BL: '4'
+          ヒット&ガード硬直時間差(下段(3段目)) ガード: "-12"
+          ヒット&ガード硬直時間差(下段(3段目)) 立ヒット: ダウン
+          ヒット&ガード硬直時間差(下段(3段目)) 屈ヒット: ダウン
+        media:
+          kind: motion_player
+          displayLabel: モーション
+          skillName: Tsumuji (Forward)
+          characterCode: '07'
+          skillCode: '055'
+    - id: item_c2dd6a37ea
+      displayName: 【大】
+      detail:
+        displayName: 旋【大】
+        command: 214+大K後2
+        meterGain:
+          whiff: '3'
+          guard: 10(8+1+1)
+          hit: 17(13+2+2)
+          bl: 12(4+4+4)
+        frameAdvantage:
+          guard: "-8"
+          standingHit: '0'
+          crouchingHit: "+2"
+        stats:
+          上段(1・2・3段目) SC: "×・○・×"
+          上段(1・2・3段目) ガード: 両×3
+          上段(1・2・3段目) BL: "→×3"
+          上段(1・2・3段目) 発生: 14・13・15
+          上段(1・2・3段目) 持続: 1・1・1
+          上段(1・2・3段目) 硬直: 24(30)
+          上段(1・2・3段目) 攻撃力: 190(60+50+80)
+          上段(1・2・3段目) ケズリ: 11(3+3+5)
+          上段(1・2・3段目) スタン値: 13(3+5+5)
+          上段(1・2・3段目) 削減値: 1・1・1
+          下段(3段目) SC: "×"
+          下段(3段目) ガード: 屈
+          下段(3段目) BL: "↓"
+          下段(3段目) 発生: '18'
+          下段(3段目) 持続: '2'
+          下段(3段目) 硬直: '30'
+          下段(3段目) 攻撃力: '70'
+          下段(3段目) ケズリ: '4'
+          下段(3段目) スタン値: '3'
+          下段(3段目) 削減値: '1'
+          ゲージ増加量(下段(3段目)) 空振り: '0'
+          ゲージ増加量(下段(3段目)) ガード: '1'
+          ゲージ増加量(下段(3段目)) ヒット: '2'
+          ゲージ増加量(下段(3段目)) BL: '4'
+          ヒット&ガード硬直時間差(下段(3段目)) ガード: "-12"
+          ヒット&ガード硬直時間差(下段(3段目)) 立ヒット: ダウン
+          ヒット&ガード硬直時間差(下段(3段目)) 屈ヒット: ダウン
+        media:
+          kind: motion_player
+          displayLabel: モーション
+          skillName: Tsumuji (Roundhouse)
+          characterCode: '07'
+          skillCode: '056'
+    - id: ex
+      displayName: 【EX】
+      detail:
+        displayName: 旋【EX】
+        command: 214+KK後2
+        meterGain:
+          whiff: "―"
+          guard: "―"
+          hit: "―"
+          bl: 8(4+4)
+        frameAdvantage:
+          guard: "-11"
+          standingHit: ダウン
+          crouchingHit: ダウン
+        stats:
+          上段(1・2・3段目) SC: "○・○・○"
+          上段(1・2・3段目) ガード: 両×3
+          上段(1・2・3段目) BL: "→×3"
+          上段(1・2・3段目) 発生: 7・9・9
+          上段(1・2・3段目) 持続: 1・1・1
+          上段(1・2・3段目) 硬直: "―"
+          上段(1・2・3段目) 攻撃力: 150(50+50+50)
+          上段(1・2・3段目) ケズリ: 9(3+3+3)
+          上段(1・2・3段目) スタン値: 13(3+5+5)
+          上段(1・2・3段目) 削減値: 1・1・1
+          上段(4段目) SC: "×"
+          上段(4段目) ガード: 両
+          上段(4段目) BL: "→"
+          上段(4段目) 発生: '10'
+          上段(4段目) 持続: '1'
+          上段(4段目) 硬直: '28'
+          上段(4段目) 攻撃力: '70'
+          上段(4段目) ケズリ: '4'
+          上段(4段目) スタン値: '3'
+          上段(4段目) 削減値: '1'
+          下段(2・3段目) SC: "○・○"
+          下段(2・3段目) ガード: 屈・屈
+          下段(2・3段目) BL: "↓・↓"
+          下段(2・3段目) 発生: 14・14
+          下段(2・3段目) 持続: 2・2
+          下段(2・3段目) 硬直: "―"
+          下段(2・3段目) 攻撃力: 80(40+40)
+          下段(2・3段目) ケズリ: 4(2+2)
+          下段(2・3段目) スタン値: 6(3+3)
+          下段(2・3段目) 削減値: 1・1
+          下段(4段目) SC: "×"
+          下段(4段目) ガード: 屈
+          下段(4段目) BL: "↓"
+          下段(4段目) 発生: '15'
+          下段(4段目) 持続: '2'
+          下段(4段目) 硬直: '30'
+          下段(4段目) 攻撃力: '60'
+          下段(4段目) ケズリ: '3'
+          下段(4段目) スタン値: '3'
+          下段(4段目) 削減値: '1'
+          ゲージ増加量(下段(2～4段目)) 空振り: "―"
+          ゲージ増加量(下段(2～4段目)) ガード: "―"
+          ゲージ増加量(下段(2～4段目)) ヒット: "―"
+          ゲージ増加量(下段(2～4段目)) BL: 8(4+4)
+          ヒット&ガード硬直時間差(下段(2～4段目)) ガード: "-16"
+          ヒット&ガード硬直時間差(下段(2～4段目)) 立ヒット: ダウン
+          ヒット&ガード硬直時間差(下段(2～4段目)) 屈ヒット: ダウン
+        media:
+          kind: motion_player
+          displayLabel: モーション
+          skillName: Tsumuji (EX)
+          characterCode: '07'
+          skillCode: '057'
+    noteGroups:
+    - id: item_031e8e99db
+      displayTitle: 共通
+      entries:
+      - 硬直欄のカッコ内の数値はガードされた時のもの
+    - id: item_922517cc73
+      displayTitle: 小
+      entries:
+      - |-
+        ・レバーを下に入れることで2段目を下段に派生する事が可能
+        ・小攻撃キャンセルからでは繋がらない
+    - id: item_0869071c92
+      displayTitle: 中
+      entries:
+      - |-
+        ・2段目の判定が出ている間に中Kボタンを押す事で3段目を出す事が可能
+        ・2段目の判定が出ている間に中Kボタンを押し、レバー下に入れることで3段目を下段に派生する事が可能
+        ・3段目を出す時はヒット確認して出す。また、しゃがみヒット時は3段目を下段にしても繋がる
+    - id: item_0889c34972
+      displayTitle: 大
+      entries:
+      - |-
+        ・レバーを下に入れることで3段目を下段に派生する事が可能
+        ・大攻撃キャンセルからでないと繋がらない。ただし屈ヒット時は中攻撃からでも繋がる
+        ・2段目のみSC可能。キャンセル猶予時間は17～24フレーム
+        ・3段目の上段はしゃがみ状態の春麗、エレナ、オロにヒットしない
+    - id: ex
+      displayTitle: EX
+      entries:
+      - |-
+        ・レバーを下に入れることで2段目以降を下段に派生させる事が可能。この場合2、3段目の下段ではダウンしない
+        ・上段から下段に派生すると繋がらない。下段から上段なら繋がる｡ なおしゃがみヒットならどちらからでも繋ぐことが可能
+        ・上段、下段ともに4段目のみダウン属性あり
+        ・SCできるが、システムディレクションをいじらない限り、繋がるSAがない
   - id: item_65374614de
     displayName: 飛燕
-    children:
+    variants:
     - id: item_5b1218074f
-      displayName: 飛燕【小】
+      displayName: 【小】
       detail:
         displayName: 飛燕【小】
         command: 421+小K
@@ -2476,7 +1613,7 @@ moveGroups:
           characterCode: '07'
           skillCode: '044'
     - id: item_f0abc7909a
-      displayName: 飛燕【中】
+      displayName: 【中】
       detail:
         displayName: 飛燕【中】
         command: 421+中K
@@ -2506,7 +1643,7 @@ moveGroups:
           characterCode: '07'
           skillCode: '045'
     - id: item_fbdce8e3fb
-      displayName: 飛燕【大】
+      displayName: 【大】
       detail:
         displayName: 飛燕【大】
         command: 421+大K
@@ -2536,7 +1673,7 @@ moveGroups:
           characterCode: '07'
           skillCode: '046'
     - id: ex
-      displayName: 飛燕【EX】
+      displayName: 【EX】
       detail:
         displayName: 飛燕【EX】
         command: 421+KK
@@ -2565,24 +1702,20 @@ moveGroups:
           skillName: Hien (EX)
           characterCode: '07'
           skillCode: '047'
+    noteGroups:
     - id: item_cf8aa5b927
-      displayName: 補足
-      detail:
-        displayName: 補足
-        noteGroups:
-        - id: item_cf8aa5b927
-          displayTitle: 補足
-          entries:
-          - |-
-            ・硬直欄のカッコ内の数値はしゃがみ着地した時のもの
-            ・コマンド完成後、小・中は「5」、大は「6」、EXは「4」フレーム目から空中判定に移行
-            ・小→中→大の順に飛距離が伸びる。EXは相手をホーミングする
-            ・ヒットおよびガードさせた後、苦無・SA1を出す事が可能。ヒット時ならSA1が連続技になる
+      displayTitle: 補足
+      entries:
+      - |-
+        ・硬直欄のカッコ内の数値はしゃがみ着地した時のもの
+        ・コマンド完成後、小・中は「5」、大は「6」、EXは「4」フレーム目から空中判定に移行
+        ・小→中→大の順に飛距離が伸びる。EXは相手をホーミングする
+        ・ヒットおよびガードさせた後、苦無・SA1を出す事が可能。ヒット時ならSA1が連続技になる
   - id: item_e9548c682c
     displayName: 雷打
-    children:
+    variants:
     - id: item_264b53297c
-      displayName: 雷打【小】
+      displayName: 【小】
       detail:
         displayName: 雷打【小】
         command: 63214+小P
@@ -2614,7 +1747,7 @@ moveGroups:
           characterCode: '07'
           skillCode: '041'
     - id: item_eb1dfb8583
-      displayName: 雷打【中】
+      displayName: 【中】
       detail:
         displayName: 雷打【中】
         command: 63214+中P
@@ -2646,7 +1779,7 @@ moveGroups:
           characterCode: '07'
           skillCode: '042'
     - id: item_3387497394
-      displayName: 雷打【大】
+      displayName: 【大】
       detail:
         displayName: 雷打【大】
         command: 63214+大P
@@ -2677,24 +1810,20 @@ moveGroups:
           skillName: Raida (Fierce)
           characterCode: '07'
           skillCode: '043'
+    noteGroups:
     - id: item_cf8aa5b927
-      displayName: 補足
-      detail:
-        displayName: 補足
-        noteGroups:
-        - id: item_cf8aa5b927
-          displayTitle: 補足
-          entries:
-          - |-
-            ・BL不可の打撃投げ。ボタンにより間合い、威力が変化
-            ・ヒットした場合、QSできない
-            ・投げ判定の打撃技のため、出てしまえば投げられ判定のある全ての技に対して勝つ事が出来る
-            ・624＋Pの簡易コマンドでも出す事が可能
+      displayTitle: 補足
+      entries:
+      - |-
+        ・BL不可の打撃投げ。ボタンにより間合い、威力が変化
+        ・ヒットした場合、QSできない
+        ・投げ判定の打撃技のため、出てしまえば投げられ判定のある全ての技に対して勝つ事が出来る
+        ・624＋Pの簡易コマンドでも出す事が可能
   - id: item_e9833c648f
     displayName: 築地越え
-    children:
+    variants:
     - id: item_037d71814b
-      displayName: 築地越え【小】
+      displayName: 【小】
       detail:
         displayName: 築地越え【小】
         command: 623+小P
@@ -2718,7 +1847,7 @@ moveGroups:
           standingHit: "―"
           crouchingHit: "―"
     - id: item_c3677595f9
-      displayName: 築地越え【中】
+      displayName: 【中】
       detail:
         displayName: 築地越え【中】
         command: 623+中P
@@ -2742,7 +1871,7 @@ moveGroups:
           standingHit: "―"
           crouchingHit: "―"
     - id: item_9368e829e1
-      displayName: 築地越え【大】
+      displayName: 【大】
       detail:
         displayName: 築地越え【大】
         command: 623+大P
@@ -2765,23 +1894,19 @@ moveGroups:
           guard: "―"
           standingHit: "―"
           crouchingHit: "―"
+    noteGroups:
     - id: item_cf8aa5b927
-      displayName: 補足
-      detail:
-        displayName: 補足
-        noteGroups:
-        - id: item_cf8aa5b927
-          displayTitle: 補足
-          entries:
-          - |-
-            ・前方宙返り技。小→中→大の順に飛距離が伸びる
-            ・コマンド完成後、小は「5」、中は「6」、大は「7」フレーム目から空中判定に移行
-            ・頂点(小「30」、中「31」、大「35」フレーム以降)を過ぎたら苦無と霞朱雀のみ出す事が可能。その際のコマンド入力は相手の居る方向に向かって行う事
+      displayTitle: 補足
+      entries:
+      - |-
+        ・前方宙返り技。小→中→大の順に飛距離が伸びる
+        ・コマンド完成後、小は「5」、中は「6」、大は「7」フレーム目から空中判定に移行
+        ・頂点(小「30」、中「31」、大「35」フレーム以降)を過ぎたら苦無と霞朱雀のみ出す事が可能。その際のコマンド入力は相手の居る方向に向かって行う事
   - id: item_dfb5c9b59d
     displayName: 霞駆け
-    children:
+    variants:
     - id: item_9b997173ac
-      displayName: 霞駆け【小】
+      displayName: 【小】
       detail:
         displayName: 霞駆け【小】
         command: 236+小K
@@ -2804,8 +1929,14 @@ moveGroups:
           guard: "―"
           standingHit: "―"
           crouchingHit: "―"
+        media:
+          kind: motion_player
+          displayLabel: モーション
+          skillName: Kasumi Gake
+          characterCode: '07'
+          skillCode: '058'
     - id: item_d8e03dbc5f
-      displayName: 霞駆け【中】
+      displayName: 【中】
       detail:
         displayName: 霞駆け【中】
         command: 236+中K
@@ -2829,7 +1960,7 @@ moveGroups:
           standingHit: "―"
           crouchingHit: "―"
     - id: item_a1734dbdc4
-      displayName: 霞駆け【大】
+      displayName: 【大】
       detail:
         displayName: 霞駆け【大】
         command: 236+大K
@@ -2852,28 +1983,14 @@ moveGroups:
           guard: "―"
           standingHit: "―"
           crouchingHit: "―"
+    noteGroups:
     - id: item_cf8aa5b927
-      displayName: 補足
-      detail:
-        displayName: 補足
-        noteGroups:
-        - id: item_cf8aa5b927
-          displayTitle: 補足
-          entries:
-          - |-
-            ・前方宙返り技。小→中→大の順に飛距離が伸びる
-            ・コマンド完成後、小は「5」、中は「6」、大は「7」フレーム目から空中判定に移行
-            ・頂点(小「30」、中「31」、大「35」フレーム以降)を過ぎたら苦無と霞朱雀のみ出す事が可能。その際のコマンド入力は相手の居る方向に向かって行う事
-    - id: item_52edcb822b
-      displayName: モーション
-      detail:
-        displayName: モーション
-        media:
-          kind: motion_player
-          displayLabel: モーション
-          skillName: Kasumi Gake
-          characterCode: '07'
-          skillCode: '058'
+      displayTitle: 補足
+      entries:
+      - |-
+        ・前方宙返り技。小→中→大の順に飛距離が伸びる
+        ・コマンド完成後、小は「5」、中は「6」、大は「7」フレーム目から空中判定に移行
+        ・頂点(小「30」、中「31」、大「35」フレーム以降)を過ぎたら苦無と霞朱雀のみ出す事が可能。その際のコマンド入力は相手の居る方向に向かって行う事
 - id: super_arts
   displayTitle: "【スーパーアーツ】"
   entries:

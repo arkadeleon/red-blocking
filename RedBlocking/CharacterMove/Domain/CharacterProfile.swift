@@ -98,6 +98,7 @@ struct MoveEntry: Decodable, Equatable, Hashable {
     let displayName: String
     let children: [MoveEntry]?
     let variants: [MoveVariant]?
+    let noteGroups: [MoveNoteGroup]?
     let detail: MoveDetail?
 
     init(from decoder: Decoder) throws {
@@ -110,6 +111,7 @@ struct MoveEntry: Decodable, Equatable, Hashable {
         displayName = try container.decode(String.self, forKey: .displayName)
         children = try container.decodeIfPresent([MoveEntry].self, forKey: .children)
         variants = try container.decodeIfPresent([MoveVariant].self, forKey: .variants)
+        noteGroups = try container.decodeIfPresent([MoveNoteGroup].self, forKey: .noteGroups)
         detail = try container.decodeIfPresent(MoveDetail.self, forKey: .detail)
 
         let presentCount = [hasChildrenKey, hasVariantsKey, hasDetailKey].filter { $0 }.count
@@ -136,6 +138,14 @@ struct MoveEntry: Decodable, Equatable, Hashable {
                 debugDescription: "MoveEntry.variants must not be empty."
             )
         }
+
+        if noteGroups != nil, variants == nil {
+            throw DecodingError.dataCorruptedError(
+                forKey: .noteGroups,
+                in: container,
+                debugDescription: "MoveEntry.noteGroups is only valid alongside variants."
+            )
+        }
     }
 }
 
@@ -145,6 +155,7 @@ extension MoveEntry {
         case displayName
         case children
         case variants
+        case noteGroups
         case detail
     }
 }

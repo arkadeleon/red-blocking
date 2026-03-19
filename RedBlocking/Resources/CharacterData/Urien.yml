@@ -756,9 +756,9 @@ moveGroups:
   entries:
   - id: item_9af80ef5f7
     displayName: メタリックスフィア
-    children:
+    variants:
     - id: item_cf09297767
-      displayName: メタリックスフィア【小】
+      displayName: 【小】
       detail:
         displayName: メタリックスフィア【小】
         command: 236+小P
@@ -788,7 +788,7 @@ moveGroups:
           characterCode: '13'
           skillCode: '026'
     - id: item_5fa2a1b62e
-      displayName: メタリックスフィア【中】
+      displayName: 【中】
       detail:
         displayName: メタリックスフィア【中】
         command: 236+中P
@@ -818,7 +818,7 @@ moveGroups:
           characterCode: '13'
           skillCode: '027'
     - id: item_6999e9815e
-      displayName: メタリックスフィア【大】
+      displayName: 【大】
       detail:
         displayName: メタリックスフィア【大】
         command: 236+大P
@@ -848,7 +848,7 @@ moveGroups:
           characterCode: '13'
           skillCode: '028'
     - id: ex
-      displayName: メタリックスフィア【EX】
+      displayName: 【EX】
       detail:
         displayName: メタリックスフィア【EX】
         command: 236+PP
@@ -877,33 +877,29 @@ moveGroups:
           skillName: Metallic Sphere (EX)
           characterCode: '13'
           skillCode: '029'
-    - id: item_cf8aa5b927
-      displayName: 補足
-      detail:
-        displayName: 補足
-        noteGroups:
-        - id: item_bd3455e23b
-          displayTitle: 通常
-          entries:
-          - |-
-            ・ 発生はタメ時間により変化・ ボタン押しっぱなしでタメ撃ち可能
-            ・ 空中ヒット時、追撃可能
-            ・ 画面端で小攻撃(屈大Pはなぜか不可)をキャンセルして小スフィアを出すと、3フレームしか不利にならないため、仕込みBLをして相手の技を誘うのに使える
-        - id: ex
-          displayTitle: EX
-          entries:
-          - |-
-            ・ モーションは小スフィアと同じもの。また弾速が遅くなり、2ヒットするようになる
-            ・ 持続は弾発射時のもの。攻撃判定は1フレーム後に発生
-            ・ 空中ヒット時、追撃可能
-            ・ 端～端で最後の削りなどを狙う時は「EXスフィア→EXニー」などが有効
-            ・ タイラントを選んでる場合、EXスフィア→SCタイラントで安全にタイラントを出せる(タイラントの隙にEXスフィアが重なるため)
-            　 ただし相手が画面端なら反撃を食らう可能性があるので使用禁止(笑)
+    noteGroups:
+    - id: item_bd3455e23b
+      displayTitle: 通常
+      entries:
+      - |-
+        ・ 発生はタメ時間により変化・ ボタン押しっぱなしでタメ撃ち可能
+        ・ 空中ヒット時、追撃可能
+        ・ 画面端で小攻撃(屈大Pはなぜか不可)をキャンセルして小スフィアを出すと、3フレームしか不利にならないため、仕込みBLをして相手の技を誘うのに使える
+    - id: ex
+      displayTitle: EX
+      entries:
+      - |-
+        ・ モーションは小スフィアと同じもの。また弾速が遅くなり、2ヒットするようになる
+        ・ 持続は弾発射時のもの。攻撃判定は1フレーム後に発生
+        ・ 空中ヒット時、追撃可能
+        ・ 端～端で最後の削りなどを狙う時は「EXスフィア→EXニー」などが有効
+        ・ タイラントを選んでる場合、EXスフィア→SCタイラントで安全にタイラントを出せる(タイラントの隙にEXスフィアが重なるため)
+        　 ただし相手が画面端なら反撃を食らう可能性があるので使用禁止(笑)
   - id: item_bb09489920
     displayName: チャリオットタックル
-    children:
+    variants:
     - id: item_6d13c48baa
-      displayName: チャリオットタックル【小】
+      displayName: 【小】
       detail:
         displayName: チャリオットタックル【小】
         command: 4タメ6+小K
@@ -936,7 +932,7 @@ moveGroups:
           characterCode: '13'
           skillCode: '032'
     - id: item_0574d8d962
-      displayName: チャリオットタックル【中】
+      displayName: 【中】
       detail:
         displayName: チャリオットタックル【中】
         command: 4タメ6+中K
@@ -969,7 +965,7 @@ moveGroups:
           characterCode: '13'
           skillCode: '033'
     - id: item_578077532a
-      displayName: チャリオットタックル【大】
+      displayName: 【大】
       detail:
         displayName: チャリオットタックル【大】
         command: 4タメ6+大K
@@ -1002,7 +998,7 @@ moveGroups:
           characterCode: '13'
           skillCode: '034'
     - id: ex
-      displayName: チャリオットタックル【EX】
+      displayName: 【EX】
       detail:
         displayName: チャリオットタックル【EX】
         command: 4タメ6+KK
@@ -1034,35 +1030,31 @@ moveGroups:
           skillName: Chariot rush (EX)
           characterCode: '13'
           skillCode: '035'
-    - id: item_cf8aa5b927
-      displayName: 補足
-      detail:
-        displayName: 補足
-        noteGroups:
-        - id: item_bd3455e23b
-          displayTitle: 通常
-          entries:
-          - |-
-            ・小→中→大の順に攻撃発生が遅くなる変わりに移動距離がのび、ガードされた時の間合いもひらくようになる
-            ・大タックルのみモーションが違う(こちらに背中を向ける)
-            ・空中コンボに組み込んだ場合、コンボ補正が低く鬼のようなダメージを与えることが可能
-            ・タックルをガードされた場合の硬直は、立ちかしゃがみを選択することが可能
-            ・持続当てタックルとはタックルの攻撃判定の終了部分を当てる事でガード後の間合いを離して反撃を受けにくくするもの
-            ・技の終わり際をガードさせても不利フレームは減らないので要注意
-            ・キャンセル猶予時間は16フレーム。どのタックルも同じだが、距離が離れるにつれて確認は楽になる
-        - id: ex
-          displayTitle: EX
-          entries:
-          - |-
-            ・コマンド完成後、2フレーム打撃無敵
-            ・通常ヒット時、ノーキャンセルでタイラントか上エイジスに繋ぐ事が可能
-            ・反撃可能なキャラの屈大Kなどには、しゃがみカウンターを含めて実に212ものダメージ(ショーンのハドウバーストは220)を与えることができるので狙える場面では狙う事も必要
-            ・キャンセル猶予時間は8フレーム(1段目のみ)。SAならしゃがみヒット確認で2ヒット目以後にノーキャンセルで繋ぐ事が可能
+    noteGroups:
+    - id: item_bd3455e23b
+      displayTitle: 通常
+      entries:
+      - |-
+        ・小→中→大の順に攻撃発生が遅くなる変わりに移動距離がのび、ガードされた時の間合いもひらくようになる
+        ・大タックルのみモーションが違う(こちらに背中を向ける)
+        ・空中コンボに組み込んだ場合、コンボ補正が低く鬼のようなダメージを与えることが可能
+        ・タックルをガードされた場合の硬直は、立ちかしゃがみを選択することが可能
+        ・持続当てタックルとはタックルの攻撃判定の終了部分を当てる事でガード後の間合いを離して反撃を受けにくくするもの
+        ・技の終わり際をガードさせても不利フレームは減らないので要注意
+        ・キャンセル猶予時間は16フレーム。どのタックルも同じだが、距離が離れるにつれて確認は楽になる
+    - id: ex
+      displayTitle: EX
+      entries:
+      - |-
+        ・コマンド完成後、2フレーム打撃無敵
+        ・通常ヒット時、ノーキャンセルでタイラントか上エイジスに繋ぐ事が可能
+        ・反撃可能なキャラの屈大Kなどには、しゃがみカウンターを含めて実に212ものダメージ(ショーンのハドウバーストは220)を与えることができるので狙える場面では狙う事も必要
+        ・キャンセル猶予時間は8フレーム(1段目のみ)。SAならしゃがみヒット確認で2ヒット目以後にノーキャンセルで繋ぐ事が可能
   - id: item_c4a724cee1
     displayName: バイオレンスニードロップ
-    children:
+    variants:
     - id: item_49967dc4e7
-      displayName: バイオレンスニードロップ【小】
+      displayName: 【小】
       detail:
         displayName: バイオレンスニードロップ【小】
         command: 2タメ8+小K
@@ -1092,7 +1084,7 @@ moveGroups:
           characterCode: '13'
           skillCode: '030'
     - id: item_8e6ac2e2c8
-      displayName: バイオレンスニードロップ【中】
+      displayName: 【中】
       detail:
         displayName: バイオレンスニードロップ【中】
         command: 2タメ8+中K
@@ -1116,7 +1108,7 @@ moveGroups:
           standingHit: ダウン
           crouchingHit: ダウン
     - id: item_250f5c69c6
-      displayName: バイオレンスニードロップ【大】
+      displayName: 【大】
       detail:
         displayName: バイオレンスニードロップ【大】
         command: 2タメ8+大K
@@ -1140,7 +1132,7 @@ moveGroups:
           standingHit: ダウン
           crouchingHit: ダウン
     - id: ex
-      displayName: バイオレンスニードロップ【EX】
+      displayName: 【EX】
       detail:
         displayName: バイオレンスニードロップ【EX】
         command: 2タメ8+KK
@@ -1169,38 +1161,34 @@ moveGroups:
           skillName: Violence Knee Drop (EX)
           characterCode: '13'
           skillCode: '031'
-    - id: item_cf8aa5b927
-      displayName: 補足
-      detail:
-        displayName: 補足
-        noteGroups:
-        - id: item_bd3455e23b
-          displayTitle: 通常
-          entries:
-          - |-
-            ・小→中→大の順に移動距離が長くなる
-            ・コマンド完成後、5フレーム目から空中判定に移行
-            ・硬直は着地後のもの
-            ・通常はヒット時に相手はダウンするが、相手の技のモーション中に当たるとダウンしない事あり
-            ・ヒット&ガード硬直時間差のガード硬直はニーを当てる位置によって変化
-            ・密着の相手に「屈小P→屈小K」をガードさせた辺りから小ニーを出すと膝下ガードさせやすい
-            ・膝下ニーを当てた後、アレックス、ヒューゴー、ユリアン、レミーの4人にはタイラントや上エイジスをヒットさせることが可能
-        - id: ex
-          displayTitle: EX
-          entries:
-          - |-
-            ・相手をホーミングする
-            ・コマンド完成後、5フレーム目から空中判定に移行
-            ・硬直は着地後のもの
-            ・空振り時は2段目に移行しない
-            ・ヒット&ガード硬直時間差のガード硬直はニーを当てる位置によって変化
-            ・相手が前進中に出すとメクリでEXニーが1ヒットする状況になりやすい
-            ・屈小Kや屈小Pなどをキャンセルして出すと正面1ヒットで落ちるため、2ヒットすると思い込んでる相手やBLを狙ってきた相手には投げが高確率で決まりやすい
+    noteGroups:
+    - id: item_bd3455e23b
+      displayTitle: 通常
+      entries:
+      - |-
+        ・小→中→大の順に移動距離が長くなる
+        ・コマンド完成後、5フレーム目から空中判定に移行
+        ・硬直は着地後のもの
+        ・通常はヒット時に相手はダウンするが、相手の技のモーション中に当たるとダウンしない事あり
+        ・ヒット&ガード硬直時間差のガード硬直はニーを当てる位置によって変化
+        ・密着の相手に「屈小P→屈小K」をガードさせた辺りから小ニーを出すと膝下ガードさせやすい
+        ・膝下ニーを当てた後、アレックス、ヒューゴー、ユリアン、レミーの4人にはタイラントや上エイジスをヒットさせることが可能
+    - id: ex
+      displayTitle: EX
+      entries:
+      - |-
+        ・相手をホーミングする
+        ・コマンド完成後、5フレーム目から空中判定に移行
+        ・硬直は着地後のもの
+        ・空振り時は2段目に移行しない
+        ・ヒット&ガード硬直時間差のガード硬直はニーを当てる位置によって変化
+        ・相手が前進中に出すとメクリでEXニーが1ヒットする状況になりやすい
+        ・屈小Kや屈小Pなどをキャンセルして出すと正面1ヒットで落ちるため、2ヒットすると思い込んでる相手やBLを狙ってきた相手には投げが高確率で決まりやすい
   - id: item_fd461292f8
     displayName: デンジャラスヘッドバット
-    children:
+    variants:
     - id: item_82de4822ec
-      displayName: デンジャラスヘッドバット【小】
+      displayName: 【小】
       detail:
         displayName: デンジャラスヘッドバット【小】
         command: 2タメ8+小P
@@ -1230,7 +1218,7 @@ moveGroups:
           characterCode: '13'
           skillCode: '036'
     - id: item_2c6c032c15
-      displayName: デンジャラスヘッドバット【中】
+      displayName: 【中】
       detail:
         displayName: デンジャラスヘッドバット【中】
         command: 2タメ8+中P
@@ -1260,7 +1248,7 @@ moveGroups:
           characterCode: '13'
           skillCode: '037'
     - id: item_639f0b4a44
-      displayName: デンジャラスヘッドバット【大】
+      displayName: 【大】
       detail:
         displayName: デンジャラスヘッドバット【大】
         command: 2タメ8+大P
@@ -1290,7 +1278,7 @@ moveGroups:
           characterCode: '13'
           skillCode: '038'
     - id: ex
-      displayName: デンジャラスヘッドバット【EX】
+      displayName: 【EX】
       detail:
         displayName: デンジャラスヘッドバット【EX】
         command: 2タメ8+PP
@@ -1319,28 +1307,24 @@ moveGroups:
           skillName: Headbutt (EX)
           characterCode: '13'
           skillCode: '039'
-    - id: item_cf8aa5b927
-      displayName: 補足
-      detail:
-        displayName: 補足
-        noteGroups:
-        - id: item_bd3455e23b
-          displayTitle: 通常
-          entries:
-          - |-
-            ・ボタンによって高度、飛距離が変化する
-            ・コマンド完成後、小は「2」、中は「3」、大は「5」フレーム目から空中判定に移行
-            ・着地後の隙は硬直の後半2フレーム
-            ・小ヘッドはリバーサルの場合、0フレームで空中判定になるため、重ね打撃を食らっても空中食らいになる
-            ・相手の足払い系の技を避けながら近づいたり、空ジャンプやダッシュから投げを誘って出したりと使い道は多様
-        - id: ex
-          displayTitle: EX
-          entries:
-          - |-
-            ・ヒット時、追撃可能
-            ・コマンド完成後、3フレーム目から空中判定に移行
-            ・着地後の隙は硬直の後半2フレーム
-            ・ガードされても他のヘッドと違い、有利フレームが+2あるところが便利。出し得
+    noteGroups:
+    - id: item_bd3455e23b
+      displayTitle: 通常
+      entries:
+      - |-
+        ・ボタンによって高度、飛距離が変化する
+        ・コマンド完成後、小は「2」、中は「3」、大は「5」フレーム目から空中判定に移行
+        ・着地後の隙は硬直の後半2フレーム
+        ・小ヘッドはリバーサルの場合、0フレームで空中判定になるため、重ね打撃を食らっても空中食らいになる
+        ・相手の足払い系の技を避けながら近づいたり、空ジャンプやダッシュから投げを誘って出したりと使い道は多様
+    - id: ex
+      displayTitle: EX
+      entries:
+      - |-
+        ・ヒット時、追撃可能
+        ・コマンド完成後、3フレーム目から空中判定に移行
+        ・着地後の隙は硬直の後半2フレーム
+        ・ガードされても他のヘッドと違い、有利フレームが+2あるところが便利。出し得
 - id: super_arts
   displayTitle: "【スーパーアーツ】"
   entries:

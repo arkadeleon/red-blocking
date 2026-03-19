@@ -849,9 +849,9 @@ moveGroups:
   entries:
   - id: item_3ce6fa98db
     displayName: ショーンタックル
-    children:
+    variants:
     - id: item_cd6a7818eb
-      displayName: ショーンタックル【小】
+      displayName: 【小】
       detail:
         displayName: ショーンタックル【小】
         command: 41236+小P後、P押しっぱなし
@@ -881,7 +881,7 @@ moveGroups:
           characterCode: '12'
           skillCode: '045'
     - id: item_a8c575e437
-      displayName: ショーンタックル【中】
+      displayName: 【中】
       detail:
         displayName: ショーンタックル【中】
         command: 41236+中P後、P押しっぱなし
@@ -911,7 +911,7 @@ moveGroups:
           characterCode: '12'
           skillCode: '045'
     - id: item_ce75e097b0
-      displayName: ショーンタックル【大】
+      displayName: 【大】
       detail:
         displayName: ショーンタックル【大】
         command: 41236+大P後、P押しっぱなし
@@ -941,7 +941,7 @@ moveGroups:
           characterCode: '12'
           skillCode: '045'
     - id: ex
-      displayName: ショーンタックル【EX】
+      displayName: 【EX】
       detail:
         displayName: ショーンタックル【EX】
         command: 41236+PP後、P押しっぱなし
@@ -970,24 +970,20 @@ moveGroups:
           skillName: Tackle (EX)
           characterCode: '12'
           skillCode: '046'
+    noteGroups:
     - id: item_cf8aa5b927
-      displayName: 補足
-      detail:
-        displayName: 補足
-        noteGroups:
-        - id: item_cf8aa5b927
-          displayTitle: 補足
-          entries:
-          - |-
-            ・ボタンにより移動距離が変化。ボタンを押し続けると下段ガード・BL可能のつかみ投げに移行
-            ・硬直は失敗時のもの
-            ・投げ失敗時の隙が大きいため、基本的に通常技キャンセルで出し、移動技として使用する
-            ・426＋Pの簡易コマンドでも出す事が可能
+      displayTitle: 補足
+      entries:
+      - |-
+        ・ボタンにより移動距離が変化。ボタンを押し続けると下段ガード・BL可能のつかみ投げに移行
+        ・硬直は失敗時のもの
+        ・投げ失敗時の隙が大きいため、基本的に通常技キャンセルで出し、移動技として使用する
+        ・426＋Pの簡易コマンドでも出す事が可能
   - id: item_5a152db142
     displayName: ドラゴンスマッシュ
-    children:
+    variants:
     - id: item_66e3a55879
-      displayName: ドラゴンスマッシュ【小】
+      displayName: 【小】
       detail:
         displayName: ドラゴンスマッシュ【小】
         command: 623+小P
@@ -1017,7 +1013,7 @@ moveGroups:
           characterCode: '12'
           skillCode: '047'
     - id: item_5bd37f6fdc
-      displayName: ドラゴンスマッシュ【中】
+      displayName: 【中】
       detail:
         displayName: ドラゴンスマッシュ【中】
         command: 623+中P
@@ -1047,7 +1043,7 @@ moveGroups:
           characterCode: '12'
           skillCode: '048'
     - id: item_1336379b8d
-      displayName: ドラゴンスマッシュ【大】
+      displayName: 【大】
       detail:
         displayName: ドラゴンスマッシュ【大】
         command: 623+大P
@@ -1077,7 +1073,7 @@ moveGroups:
           characterCode: '12'
           skillCode: '049'
     - id: ex
-      displayName: ドラゴンスマッシュ【EX】
+      displayName: 【EX】
       detail:
         displayName: ドラゴンスマッシュ【EX】
         command: 623+PP
@@ -1106,26 +1102,22 @@ moveGroups:
           skillName: Dragon Smash (EX)
           characterCode: '12'
           skillCode: '050'
-    - id: item_cf8aa5b927
-      displayName: 補足
-      detail:
-        displayName: 補足
-        noteGroups:
-        - id: item_bd3455e23b
-          displayTitle: 通常
-          entries:
-          - "・攻撃力とスタン値欄のカッコ内の数値は技の後半部分のもの\n・小は攻撃発生まで無敵無し。攻撃発生後、3フレーム(コマンド完成後、6～8フレーム間)上半身打撃無敵。9フレーム目から空中判定に移行\n・中・大は攻撃発生まで無敵無し。攻撃発生後、2フレーム(コマンド完成後、8～9フレーム間)上半身打撃無敵。10フレーム目から空中判定に移行 \n・空中の相手に技の後半部分がカス当たりすれば追撃可能"
-        - id: ex
-          displayTitle: EX
-          entries:
-          - |-
-            ・攻撃力欄のカッコ内の数値は技の後半部分のもの
-            ・コマンド完成後、8フレーム間完全無敵。9フレーム目(攻撃発生時)肩より上打撃無敵。10フレーム目から空中判定に移行
+    noteGroups:
+    - id: item_bd3455e23b
+      displayTitle: 通常
+      entries:
+      - "・攻撃力とスタン値欄のカッコ内の数値は技の後半部分のもの\n・小は攻撃発生まで無敵無し。攻撃発生後、3フレーム(コマンド完成後、6～8フレーム間)上半身打撃無敵。9フレーム目から空中判定に移行\n・中・大は攻撃発生まで無敵無し。攻撃発生後、2フレーム(コマンド完成後、8～9フレーム間)上半身打撃無敵。10フレーム目から空中判定に移行 \n・空中の相手に技の後半部分がカス当たりすれば追撃可能"
+    - id: ex
+      displayTitle: EX
+      entries:
+      - |-
+        ・攻撃力欄のカッコ内の数値は技の後半部分のもの
+        ・コマンド完成後、8フレーム間完全無敵。9フレーム目(攻撃発生時)肩より上打撃無敵。10フレーム目から空中判定に移行
   - id: item_9fe4e9044e
     displayName: トルネード
-    children:
+    variants:
     - id: item_f5370e69f6
-      displayName: トルネード【小】
+      displayName: 【小】
       detail:
         displayName: トルネード【小】
         command: 214+小K
@@ -1155,7 +1147,7 @@ moveGroups:
           characterCode: '12'
           skillCode: '041'
     - id: item_0d6f6771e5
-      displayName: トルネード【中】
+      displayName: 【中】
       detail:
         displayName: トルネード【中】
         command: 214+中K
@@ -1185,7 +1177,7 @@ moveGroups:
           characterCode: '12'
           skillCode: '042'
     - id: item_17a0fe6581
-      displayName: トルネード【大】
+      displayName: 【大】
       detail:
         displayName: トルネード【大】
         command: 214+大K
@@ -1215,7 +1207,7 @@ moveGroups:
           characterCode: '12'
           skillCode: '043'
     - id: ex
-      displayName: トルネード【EX】
+      displayName: 【EX】
       detail:
         displayName: トルネード【EX】
         command: 214+KK
@@ -1244,23 +1236,19 @@ moveGroups:
           skillName: Tornado Kick (EX)
           characterCode: '12'
           skillCode: '044'
+    noteGroups:
     - id: item_cf8aa5b927
-      displayName: 補足
-      detail:
-        displayName: 補足
-        noteGroups:
-        - id: item_cf8aa5b927
-          displayTitle: 補足
-          entries:
-          - |-
-            ・コマンド完成後、小は「9」、中・大は「11」、EXは「8」フレーム目から空中判定に移行
-            ・1段目に強制立たせ効果あり。2段目以降から当たった場合はしゃがみ食らい状態が継続
-            ・画面端付近で空中の相手に2段目以降が1ヒットだった場合、追撃可能
+      displayTitle: 補足
+      entries:
+      - |-
+        ・コマンド完成後、小は「9」、中・大は「11」、EXは「8」フレーム目から空中判定に移行
+        ・1段目に強制立たせ効果あり。2段目以降から当たった場合はしゃがみ食らい状態が継続
+        ・画面端付近で空中の相手に2段目以降が1ヒットだった場合、追撃可能
   - id: item_fbf0cc81a3
     displayName: リュウビキャク
-    children:
+    variants:
     - id: item_e8fcfb75ec
-      displayName: リュウビキャク【小】
+      displayName: 【小】
       detail:
         displayName: リュウビキャク【小】
         command: 236+小K
@@ -1290,7 +1278,7 @@ moveGroups:
           characterCode: '12'
           skillCode: '037'
     - id: item_65495660f3
-      displayName: リュウビキャク【中】
+      displayName: 【中】
       detail:
         displayName: リュウビキャク【中】
         command: 236+中K
@@ -1320,7 +1308,7 @@ moveGroups:
           characterCode: '12'
           skillCode: '038'
     - id: item_c6585cb0cc
-      displayName: リュウビキャク【大】
+      displayName: 【大】
       detail:
         displayName: リュウビキャク【大】
         command: 236+大K
@@ -1350,7 +1338,7 @@ moveGroups:
           characterCode: '12'
           skillCode: '039'
     - id: ex
-      displayName: リュウビキャク【EX】
+      displayName: 【EX】
       detail:
         displayName: リュウビキャク【EX】
         command: 236+KK
@@ -1379,24 +1367,20 @@ moveGroups:
           skillName: Ryuubi Kyaku (EX)
           characterCode: '12'
           skillCode: '040'
+    noteGroups:
     - id: item_cf8aa5b927
-      displayName: 補足
-      detail:
-        displayName: 補足
-        noteGroups:
-        - id: item_cf8aa5b927
-          displayTitle: 補足
-          entries:
-          - |-
-            ・小→中→大の順に移動距離が長くなる。またEXはホーミングする
-            ・コマンド完成後、小・中・大は「15」、EXは「11」フレーム目から空中判定に移行
-            ・空中ヒット時、ダウンさせる事が可能
-            ・一応、めくり能力あり
+      displayTitle: 補足
+      entries:
+      - |-
+        ・小→中→大の順に移動距離が長くなる。またEXはホーミングする
+        ・コマンド完成後、小・中・大は「15」、EXは「11」フレーム目から空中判定に移行
+        ・空中ヒット時、ダウンさせる事が可能
+        ・一応、めくり能力あり
   - id: item_2a69ba4ce6
     displayName: 前転
-    children:
+    variants:
     - id: item_6e047ce208
-      displayName: 前転【小】
+      displayName: 【小】
       detail:
         displayName: 前転【小】
         command: 214+小P
@@ -1426,7 +1410,7 @@ moveGroups:
           characterCode: '12'
           skillCode: '034'
     - id: item_9a5e50a17c
-      displayName: 前転【中】
+      displayName: 【中】
       detail:
         displayName: 前転【中】
         command: 214+中P
@@ -1456,7 +1440,7 @@ moveGroups:
           characterCode: '12'
           skillCode: '035'
     - id: item_328fb5004d
-      displayName: 前転【大】
+      displayName: 【大】
       detail:
         displayName: 前転【大】
         command: 214+大P
@@ -1485,17 +1469,13 @@ moveGroups:
           skillName: Sean Roll (Fierce)
           characterCode: '12'
           skillCode: '036'
+    noteGroups:
     - id: item_cf8aa5b927
-      displayName: 補足
-      detail:
-        displayName: 補足
-        noteGroups:
-        - id: item_cf8aa5b927
-          displayTitle: 補足
-          entries:
-          - |-
-            ・ボタンにより転がる距離が変化。押し合い判定なし。また打点の高い技を回避可能
-            ・コマンド完成後、3フレーム目から投げ無敵に移行。小は「18」、中は「29」、大は「43」フレーム間持続
+      displayTitle: 補足
+      entries:
+      - |-
+        ・ボタンにより転がる距離が変化。押し合い判定なし。また打点の高い技を回避可能
+        ・コマンド完成後、3フレーム目から投げ無敵に移行。小は「18」、中は「29」、大は「43」フレーム間持続
 - id: super_arts
   displayTitle: "【スーパーアーツ】"
   entries:

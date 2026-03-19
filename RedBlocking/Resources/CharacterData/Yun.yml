@@ -922,9 +922,9 @@ moveGroups:
   entries:
   - id: item_4cdcdf77c1
     displayName: 絶招歩法(ぜっしょうほほう)
-    children:
+    variants:
     - id: item_b4f01bb336
-      displayName: 絶招歩法(ぜっしょうほほう)【小】
+      displayName: 【小】
       detail:
         displayName: 絶招歩法(ぜっしょうほほう)【小】
         command: 236+小P
@@ -954,7 +954,7 @@ moveGroups:
           characterCode: '03'
           skillCode: '035'
     - id: item_e7d729646d
-      displayName: 絶招歩法(ぜっしょうほほう)【中】
+      displayName: 【中】
       detail:
         displayName: 絶招歩法(ぜっしょうほほう)【中】
         command: 236+中P
@@ -984,7 +984,7 @@ moveGroups:
           characterCode: '03'
           skillCode: '036'
     - id: item_9cc685cedd
-      displayName: 絶招歩法(ぜっしょうほほう)【大】
+      displayName: 【大】
       detail:
         displayName: 絶招歩法(ぜっしょうほほう)【大】
         command: 236+大P
@@ -1014,7 +1014,7 @@ moveGroups:
           characterCode: '03'
           skillCode: '037'
     - id: ex
-      displayName: 絶招歩法(ぜっしょうほほう)【EX】
+      displayName: 【EX】
       detail:
         displayName: 絶招歩法(ぜっしょうほほう)【EX】
         command: 236+PP
@@ -1043,23 +1043,19 @@ moveGroups:
           skillName: Zesshou Hohou (EX)
           characterCode: '03'
           skillCode: '038'
+    noteGroups:
     - id: item_cf8aa5b927
-      displayName: 補足
-      detail:
-        displayName: 補足
-        noteGroups:
-        - id: item_cf8aa5b927
-          displayTitle: 補足
-          entries:
-          - |-
-            ・ボタンによって移動距離が変化。小→中→大→EXの順に移動距離が長くなる
-            ・スタン値欄のカッコ内の数値は技の後半部分のもの
-            ・コマンド完成後、小は「8」、中は「11」、大・EXは「14」フレーム目から空中食らい判定に移行(投げられ判定は地上)
+      displayTitle: 補足
+      entries:
+      - |-
+        ・ボタンによって移動距離が変化。小→中→大→EXの順に移動距離が長くなる
+        ・スタン値欄のカッコ内の数値は技の後半部分のもの
+        ・コマンド完成後、小は「8」、中は「11」、大・EXは「14」フレーム目から空中食らい判定に移行(投げられ判定は地上)
   - id: item_2a260ebef4
     displayName: 鉄山靠(てつざんこう)
-    children:
+    variants:
     - id: item_537b054e4b
-      displayName: 鉄山靠(てつざんこう)【小】
+      displayName: 【小】
       detail:
         displayName: 鉄山靠(てつざんこう)【小】
         command: 623+小P
@@ -1089,7 +1085,7 @@ moveGroups:
           characterCode: '03'
           skillCode: '031'
     - id: item_0ff7e57dc3
-      displayName: 鉄山靠(てつざんこう)【中】
+      displayName: 【中】
       detail:
         displayName: 鉄山靠(てつざんこう)【中】
         command: 623+中P
@@ -1119,7 +1115,7 @@ moveGroups:
           characterCode: '03'
           skillCode: '032'
     - id: item_a9b3e66108
-      displayName: 鉄山靠(てつざんこう)【大】
+      displayName: 【大】
       detail:
         displayName: 鉄山靠(てつざんこう)【大】
         command: 623+大P
@@ -1149,7 +1145,7 @@ moveGroups:
           characterCode: '03'
           skillCode: '033'
     - id: ex
-      displayName: 鉄山靠(てつざんこう)【EX】
+      displayName: 【EX】
       detail:
         displayName: 鉄山靠(てつざんこう)【EX】
         command: 623+PP
@@ -1178,30 +1174,26 @@ moveGroups:
           skillName: Tetsu Zankou (EX)
           characterCode: '03'
           skillCode: '034'
-    - id: item_cf8aa5b927
-      displayName: 補足
-      detail:
-        displayName: 補足
-        noteGroups:
-        - id: item_bd3455e23b
-          displayTitle: 通常
-          entries:
-          - |-
-            ・ボタンによって移動距離が変化。小→中→大の順に移動距離が長くなる
-            ・コマンド完成後、小は「9～14」、中は「12～18」、大は「15～22」フレームの間、姿勢が低くなり飛び道具の下をくぐれる(一部の技はくぐれない)
-            ・小は主に連続技に使用
-            ・中、大はヒット時、絶招歩法などで追撃可能
-        - id: ex
-          displayTitle: EX
-          entries:
-          - |-
-            ・コマンド完成後、5～17フレームの間、姿勢が低くなり飛び道具の下をくぐれる(一部の技はくぐれない)
-            ・画面端でヒット時、追撃可能
+    noteGroups:
+    - id: item_bd3455e23b
+      displayTitle: 通常
+      entries:
+      - |-
+        ・ボタンによって移動距離が変化。小→中→大の順に移動距離が長くなる
+        ・コマンド完成後、小は「9～14」、中は「12～18」、大は「15～22」フレームの間、姿勢が低くなり飛び道具の下をくぐれる(一部の技はくぐれない)
+        ・小は主に連続技に使用
+        ・中、大はヒット時、絶招歩法などで追撃可能
+    - id: ex
+      displayTitle: EX
+      entries:
+      - |-
+        ・コマンド完成後、5～17フレームの間、姿勢が低くなり飛び道具の下をくぐれる(一部の技はくぐれない)
+        ・画面端でヒット時、追撃可能
   - id: item_afd675c03a
     displayName: ニ翔脚(にしょうきゃく)
-    children:
+    variants:
     - id: item_20380083c4
-      displayName: ニ翔脚(にしょうきゃく)【小】
+      displayName: 【小】
       detail:
         displayName: ニ翔脚(にしょうきゃく)【小】
         command: 623+小K
@@ -1231,7 +1223,7 @@ moveGroups:
           characterCode: '03'
           skillCode: '039'
     - id: item_b13bb6af40
-      displayName: ニ翔脚(にしょうきゃく)【中】
+      displayName: 【中】
       detail:
         displayName: ニ翔脚(にしょうきゃく)【中】
         command: 623+中K
@@ -1261,7 +1253,7 @@ moveGroups:
           characterCode: '03'
           skillCode: '040'
     - id: item_e9cf8514b3
-      displayName: ニ翔脚(にしょうきゃく)【大】
+      displayName: 【大】
       detail:
         displayName: ニ翔脚(にしょうきゃく)【大】
         command: 623+大K
@@ -1291,7 +1283,7 @@ moveGroups:
           characterCode: '03'
           skillCode: '041'
     - id: ex
-      displayName: ニ翔脚(にしょうきゃく)【EX】
+      displayName: 【EX】
       detail:
         displayName: ニ翔脚(にしょうきゃく)【EX】
         command: 623+KK
@@ -1320,25 +1312,21 @@ moveGroups:
           skillName: Nishou Kyaku (EX)
           characterCode: '03'
           skillCode: '042'
-    - id: item_cf8aa5b927
-      displayName: 補足
-      detail:
-        displayName: 補足
-        noteGroups:
-        - id: item_bd3455e23b
-          displayTitle: 通常
-          entries:
-          - |-
-            ・硬直欄のカッコ内の数値はしゃがみ状態で着地した時のもの
-            ・コマンド完成後、小は「4」、中は「6」、大は「8」フレーム目から空中判定に移行
-            ・1ヒットしかしなかった場合、追撃可能
-        - id: ex
-          displayTitle: EX
-          entries:
-          - |-
-            ・硬直欄のカッコ内の数値はしゃがみ状態で着地した時のもの
-            ・コマンド完成後、4フレーム間、完全無敵。5フレーム目から空中判定に移行
-            ・ヒット時、追撃可能
+    noteGroups:
+    - id: item_bd3455e23b
+      displayTitle: 通常
+      entries:
+      - |-
+        ・硬直欄のカッコ内の数値はしゃがみ状態で着地した時のもの
+        ・コマンド完成後、小は「4」、中は「6」、大は「8」フレーム目から空中判定に移行
+        ・1ヒットしかしなかった場合、追撃可能
+    - id: ex
+      displayTitle: EX
+      entries:
+      - |-
+        ・硬直欄のカッコ内の数値はしゃがみ状態で着地した時のもの
+        ・コマンド完成後、4フレーム間、完全無敵。5フレーム目から空中判定に移行
+        ・ヒット時、追撃可能
   - id: item_869e47ce9d
     displayName: 虎撲子(こぼくし)
     detail:

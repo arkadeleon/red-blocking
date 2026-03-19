@@ -811,9 +811,9 @@ moveGroups:
   entries:
   - id: n_d_l
     displayName: N.D.L.
-    children:
+    variants:
     - id: n_d_l
-      displayName: N.D.L.【小】
+      displayName: 【小】
       detail:
         displayName: N.D.L.【小】
         command: 236+小P
@@ -843,7 +843,7 @@ moveGroups:
           characterCode: '19'
           skillCode: '025'
     - id: n_d_l_2
-      displayName: N.D.L.【中】
+      displayName: 【中】
       detail:
         displayName: N.D.L.【中】
         command: 236+中P
@@ -873,7 +873,7 @@ moveGroups:
           characterCode: '19'
           skillCode: '026'
     - id: n_d_l_3
-      displayName: N.D.L.【大】
+      displayName: 【大】
       detail:
         displayName: N.D.L.【大】
         command: 236+大P
@@ -903,7 +903,7 @@ moveGroups:
           characterCode: '19'
           skillCode: '027'
     - id: n_d_l_ex
-      displayName: N.D.L.【EX】
+      displayName: 【EX】
       detail:
         displayName: N.D.L.【EX】
         command: 236+PP
@@ -932,29 +932,25 @@ moveGroups:
           skillName: N.D.L. (EX)
           characterCode: '19'
           skillCode: '028'
-    - id: item_cf8aa5b927
-      displayName: 補足
-      detail:
-        displayName: 補足
-        noteGroups:
-        - id: item_bd3455e23b
-          displayTitle: 通常
-          entries:
-          - |-
-            ・小、中、大になるにつれて、出現位置が自身を起点に遠くなる
-            ・飛び道具扱いだが相手の飛び道具に当てても一瞬動きが止まるだけで相殺できない
-        - id: ex
-          displayTitle: EX
-          entries:
-          - |-
-            ・相手をホーミングする
-            ・姿勢が低くなるので対空などにも使用可能
-            ・ヒット時、相手を浮かせる事が可能。 また間合い次第で追撃可能
+    noteGroups:
+    - id: item_bd3455e23b
+      displayTitle: 通常
+      entries:
+      - |-
+        ・小、中、大になるにつれて、出現位置が自身を起点に遠くなる
+        ・飛び道具扱いだが相手の飛び道具に当てても一瞬動きが止まるだけで相殺できない
+    - id: ex
+      displayTitle: EX
+      entries:
+      - |-
+        ・相手をホーミングする
+        ・姿勢が低くなるので対空などにも使用可能
+        ・ヒット時、相手を浮かせる事が可能。 また間合い次第で追撃可能
   - id: a_x_e
     displayName: A.X.E.
-    children:
+    variants:
     - id: a_x_e
-      displayName: A.X.E.【小】
+      displayName: 【小】
       detail:
         displayName: A.X.E.【小】
         command: 214+小P
@@ -984,7 +980,7 @@ moveGroups:
           characterCode: '19'
           skillCode: '029'
     - id: a_x_e_2
-      displayName: A.X.E.【中】
+      displayName: 【中】
       detail:
         displayName: A.X.E.【中】
         command: 214+中P
@@ -1014,7 +1010,7 @@ moveGroups:
           characterCode: '19'
           skillCode: '030'
     - id: a_x_e_3
-      displayName: A.X.E.【大】
+      displayName: 【大】
       detail:
         displayName: A.X.E.【大】
         command: 214+大P
@@ -1044,7 +1040,7 @@ moveGroups:
           characterCode: '19'
           skillCode: '031'
     - id: a_x_e_ex
-      displayName: A.X.E.【EX】
+      displayName: 【EX】
       detail:
         displayName: A.X.E.【EX】
         command: 214+PP
@@ -1073,30 +1069,26 @@ moveGroups:
           skillName: A.X.E. (EX)
           characterCode: '19'
           skillCode: '032'
-    - id: item_cf8aa5b927
-      displayName: 補足
-      detail:
-        displayName: 補足
-        noteGroups:
-        - id: item_bd3455e23b
-          displayTitle: 通常
-          entries:
-          - |-
-            ・SCは一段目のみ可能
-            ・中、大は連打によりヒット数がそれぞれ4ヒットと5ヒットにアップ
-            ・ヒットした場合、硬直はカッコ内の数値になる
-        - id: ex
-          displayTitle: EX
-          entries:
-          - |-
-            ・SCは一段目のみ可能
-            ・連打によりヒット数が6ヒットにアップ
-            ・ヒットした場合、硬直はカッコ内の数値になる
+    noteGroups:
+    - id: item_bd3455e23b
+      displayTitle: 通常
+      entries:
+      - |-
+        ・SCは一段目のみ可能
+        ・中、大は連打によりヒット数がそれぞれ4ヒットと5ヒットにアップ
+        ・ヒットした場合、硬直はカッコ内の数値になる
+    - id: ex
+      displayTitle: EX
+      entries:
+      - |-
+        ・SCは一段目のみ可能
+        ・連打によりヒット数が6ヒットにアップ
+        ・ヒットした場合、硬直はカッコ内の数値になる
   - id: a_x_e_2
     displayName: 空中A.X.E.
-    children:
+    variants:
     - id: a_x_e
-      displayName: 空中A.X.E.【小】
+      displayName: 【小】
       detail:
         displayName: 空中A.X.E.【小】
         command: 空中で214+小P
@@ -1126,7 +1118,7 @@ moveGroups:
           characterCode: '19'
           skillCode: '033'
     - id: a_x_e_2
-      displayName: 空中A.X.E.【中】
+      displayName: 【中】
       detail:
         displayName: 空中A.X.E.【中】
         command: 空中で214+中P
@@ -1156,7 +1148,7 @@ moveGroups:
           characterCode: '19'
           skillCode: '034'
     - id: a_x_e_3
-      displayName: 空中A.X.E.【大】
+      displayName: 【大】
       detail:
         displayName: 空中A.X.E.【大】
         command: 空中で214+大P
@@ -1186,7 +1178,7 @@ moveGroups:
           characterCode: '19'
           skillCode: '035'
     - id: a_x_e_ex
-      displayName: 空中A.X.E.【EX】
+      displayName: 【EX】
       detail:
         displayName: 空中A.X.E.【EX】
         command: 空中で214+PP
@@ -1215,28 +1207,24 @@ moveGroups:
           skillName: Air A.X.E. (EX)
           characterCode: '19'
           skillCode: '036'
-    - id: item_cf8aa5b927
-      displayName: 補足
-      detail:
-        displayName: 補足
-        noteGroups:
-        - id: item_bd3455e23b
-          displayTitle: 通常
-          entries:
-          - |-
-            ・中、大は連打によりヒット数がそれぞれ4ヒットと5ヒットにアップ
-            ・硬直は着地後の隙
-        - id: ex
-          displayTitle: EX
-          entries:
-          - |-
-            ・連打によりヒット数が6ヒットにアップ
-            ・硬直は着地後の隙
+    noteGroups:
+    - id: item_bd3455e23b
+      displayTitle: 通常
+      entries:
+      - |-
+        ・中、大は連打によりヒット数がそれぞれ4ヒットと5ヒットにアップ
+        ・硬直は着地後の隙
+    - id: ex
+      displayTitle: EX
+      entries:
+      - |-
+        ・連打によりヒット数が6ヒットにアップ
+        ・硬直は着地後の隙
   - id: d_r_a
     displayName: D.R.A.
-    children:
+    variants:
     - id: d_r_a
-      displayName: D.R.A.【小】
+      displayName: 【小】
       detail:
         displayName: D.R.A.【小】
         command: 空中で214+小K
@@ -1269,7 +1257,7 @@ moveGroups:
           characterCode: '19'
           skillCode: '037'
     - id: d_r_a_2
-      displayName: D.R.A.【中】
+      displayName: 【中】
       detail:
         displayName: D.R.A.【中】
         command: 空中で214+中K
@@ -1302,7 +1290,7 @@ moveGroups:
           characterCode: '19'
           skillCode: '038'
     - id: d_r_a_3
-      displayName: D.R.A.【大】
+      displayName: 【大】
       detail:
         displayName: D.R.A.【大】
         command: 空中で214+大K
@@ -1335,7 +1323,7 @@ moveGroups:
           characterCode: '19'
           skillCode: '039'
     - id: d_r_a_ex
-      displayName: D.R.A.【EX】
+      displayName: 【EX】
       detail:
         displayName: D.R.A.【EX】
         command: 空中で214+KK
@@ -1367,23 +1355,19 @@ moveGroups:
           skillName: D.R.A. (EX)
           characterCode: '19'
           skillCode: '040'
-    - id: item_cf8aa5b927
-      displayName: 補足
-      detail:
-        displayName: 補足
-        noteGroups:
-        - id: item_bd3455e23b
-          displayTitle: 通常
-          entries:
-          - |-
-            ・小、中、大ボタンの順により角度が浅くなり遠くへ飛ぶようになる
-            ・ガードされた時はほぼ反撃確定のため要注意
-        - id: ex
-          displayTitle: EX
-          entries:
-          - |-
-            ・技のスピードが上がって2ヒットするようになり、隙も少なくなるが、攻撃判定が小さくなる
-            ・ダウン属性が付くのは2段目ヒット時のみ
+    noteGroups:
+    - id: item_bd3455e23b
+      displayTitle: 通常
+      entries:
+      - |-
+        ・小、中、大ボタンの順により角度が浅くなり遠くへ飛ぶようになる
+        ・ガードされた時はほぼ反撃確定のため要注意
+    - id: ex
+      displayTitle: EX
+      entries:
+      - |-
+        ・技のスピードが上がって2ヒットするようになり、隙も少なくなるが、攻撃判定が小さくなる
+        ・ダウン属性が付くのは2段目ヒット時のみ
 - id: super_arts
   displayTitle: "【スーパーアーツ】"
   entries:

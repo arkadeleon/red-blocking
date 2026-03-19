@@ -738,9 +738,9 @@ moveGroups:
   entries:
   - id: item_613aad7c37
     displayName: スクラッチホイール
-    children:
+    variants:
     - id: item_0fb9b434e4
-      displayName: スクラッチホイール【小】
+      displayName: 【小】
       detail:
         displayName: スクラッチホイール【小】
         command: 623+小K
@@ -770,7 +770,7 @@ moveGroups:
           characterCode: '08'
           skillCode: '026'
     - id: item_7977b83ee0
-      displayName: スクラッチホイール【中】
+      displayName: 【中】
       detail:
         displayName: スクラッチホイール【中】
         command: 623+中K
@@ -800,7 +800,7 @@ moveGroups:
           characterCode: '08'
           skillCode: '027'
     - id: item_9bcb43e42f
-      displayName: スクラッチホイール【大】
+      displayName: 【大】
       detail:
         displayName: スクラッチホイール【大】
         command: 623+大K
@@ -830,7 +830,7 @@ moveGroups:
           characterCode: '08'
           skillCode: '028'
     - id: ex
-      displayName: スクラッチホイール【EX】
+      displayName: 【EX】
       detail:
         displayName: スクラッチホイール【EX】
         command: 623+KK
@@ -859,26 +859,22 @@ moveGroups:
           skillName: Scratch Wheel (EX)
           characterCode: '08'
           skillCode: '029'
-    - id: item_cf8aa5b927
-      displayName: 補足
-      detail:
-        displayName: 補足
-        noteGroups:
-        - id: item_bd3455e23b
-          displayTitle: 通常
-          entries:
-          - "・硬直欄のカッコ内の数値は着地後の隙 \n・小はコマンド完成後、1～4フレーム目まで投げ無敵。5フレーム目から空中判定に移行。7フレーム目から着地まで下段打撃無敵\n・中はコマンド完成後、1～4フレーム目まで投げ&下段無敵。下段無敵は5フレーム目から着地まで続行。5フレーム目から空中判定に移行\n・大はコマンド完成後、1～3フレーム目まで投げ無敵。4フレーム目から空中判定に移行。6フレーム目から着地まで下段打撃無敵"
-        - id: ex
-          displayTitle: EX
-          entries:
-          - |-
-            ・硬直欄のカッコ内の数値は着地後の隙
-            ・コマンド完成後、5フレーム完全無敵。6フレーム目から空中判定に移行。6フレーム目から着地まで下段打撃無敵
+    noteGroups:
+    - id: item_bd3455e23b
+      displayTitle: 通常
+      entries:
+      - "・硬直欄のカッコ内の数値は着地後の隙 \n・小はコマンド完成後、1～4フレーム目まで投げ無敵。5フレーム目から空中判定に移行。7フレーム目から着地まで下段打撃無敵\n・中はコマンド完成後、1～4フレーム目まで投げ&下段無敵。下段無敵は5フレーム目から着地まで続行。5フレーム目から空中判定に移行\n・大はコマンド完成後、1～3フレーム目まで投げ無敵。4フレーム目から空中判定に移行。6フレーム目から着地まで下段打撃無敵"
+    - id: ex
+      displayTitle: EX
+      entries:
+      - |-
+        ・硬直欄のカッコ内の数値は着地後の隙
+        ・コマンド完成後、5フレーム完全無敵。6フレーム目から空中判定に移行。6フレーム目から着地まで下段打撃無敵
   - id: item_b949952c14
     displayName: ライノホーン
-    children:
+    variants:
     - id: item_85512c287a
-      displayName: ライノホーン【小】
+      displayName: 【小】
       detail:
         displayName: ライノホーン【小】
         command: 41236+小K
@@ -908,7 +904,7 @@ moveGroups:
           characterCode: '08'
           skillCode: '030'
     - id: item_bc7760f1b5
-      displayName: ライノホーン【中】
+      displayName: 【中】
       detail:
         displayName: ライノホーン【中】
         command: 41236+中K
@@ -938,7 +934,7 @@ moveGroups:
           characterCode: '08'
           skillCode: '031'
     - id: item_c1e275c0f3
-      displayName: ライノホーン【大】
+      displayName: 【大】
       detail:
         displayName: ライノホーン【大】
         command: 41236+大K
@@ -968,7 +964,7 @@ moveGroups:
           characterCode: '08'
           skillCode: '032'
     - id: ex
-      displayName: ライノホーン【EX】
+      displayName: 【EX】
       detail:
         displayName: ライノホーン【EX】
         command: 41236+KK
@@ -997,36 +993,32 @@ moveGroups:
           skillName: Rhino Horn (EX)
           characterCode: '08'
           skillCode: '033'
-    - id: item_cf8aa5b927
-      displayName: 補足
-      detail:
-        displayName: 補足
-        noteGroups:
-        - id: item_bd3455e23b
-          displayTitle: 通常
-          entries:
-          - |-
-            ・硬直欄のカッコ内の数値は着地後の隙
-            ・攻撃判定は3回出る。2回目(判定は真上)の攻撃力、スタン値、削減値は1段目と同じ
-            ・実は大より中のほうがダメージが大きい
-            ・コマンド完成後、小は「15」、中は「19」、大は「24」フレーム目から着地まで空中判定に移行&下段打撃無敵になる
-            ・空中ヒット時、追撃可能。ただし最後の攻撃がヒットした時は不可
-            ・ブレイブダンスヒット後のゲージ溜めを兼ねた移動手段としても有効
-            ・426＋Kの簡易コマンドでも出す事が可能
-        - id: ex
-          displayTitle: EX
-          entries:
-          - |-
-            ・硬直欄のカッコ内の数値は着地後の隙
-            ・攻撃判定は4回出る。2回目(判定は真上)の攻撃力、スタン値、削減値は1段目と同じ
-            ・コマンド完成後、12フレーム目から着地まで空中判定に移行&下段打撃無敵になる
-            ・主にコンボの繋ぎに使用
-            ・426＋KKの簡易コマンドでも出す事が可能
+    noteGroups:
+    - id: item_bd3455e23b
+      displayTitle: 通常
+      entries:
+      - |-
+        ・硬直欄のカッコ内の数値は着地後の隙
+        ・攻撃判定は3回出る。2回目(判定は真上)の攻撃力、スタン値、削減値は1段目と同じ
+        ・実は大より中のほうがダメージが大きい
+        ・コマンド完成後、小は「15」、中は「19」、大は「24」フレーム目から着地まで空中判定に移行&下段打撃無敵になる
+        ・空中ヒット時、追撃可能。ただし最後の攻撃がヒットした時は不可
+        ・ブレイブダンスヒット後のゲージ溜めを兼ねた移動手段としても有効
+        ・426＋Kの簡易コマンドでも出す事が可能
+    - id: ex
+      displayTitle: EX
+      entries:
+      - |-
+        ・硬直欄のカッコ内の数値は着地後の隙
+        ・攻撃判定は4回出る。2回目(判定は真上)の攻撃力、スタン値、削減値は1段目と同じ
+        ・コマンド完成後、12フレーム目から着地まで空中判定に移行&下段打撃無敵になる
+        ・主にコンボの繋ぎに使用
+        ・426＋KKの簡易コマンドでも出す事が可能
   - id: item_1e93bed061
     displayName: マレットスマッシュ
-    children:
+    variants:
     - id: item_dabd038b0d
-      displayName: マレットスマッシュ【小】
+      displayName: 【小】
       detail:
         displayName: マレットスマッシュ【小】
         command: 63214+小P
@@ -1058,7 +1050,7 @@ moveGroups:
           characterCode: '08'
           skillCode: '034'
     - id: item_7403933698
-      displayName: マレットスマッシュ【中】
+      displayName: 【中】
       detail:
         displayName: マレットスマッシュ【中】
         command: 63214+中P
@@ -1090,7 +1082,7 @@ moveGroups:
           characterCode: '08'
           skillCode: '035'
     - id: item_3f01a2d6d5
-      displayName: マレットスマッシュ【大】
+      displayName: 【大】
       detail:
         displayName: マレットスマッシュ【大】
         command: 63214+大P
@@ -1122,7 +1114,7 @@ moveGroups:
           characterCode: '08'
           skillCode: '036'
     - id: ex
-      displayName: マレットスマッシュ【EX】
+      displayName: 【EX】
       detail:
         displayName: マレットスマッシュ【EX】
         command: 63214+PP
@@ -1151,24 +1143,20 @@ moveGroups:
           skillName: Mallet Smash (EX)
           characterCode: '08'
           skillCode: '037'
-    - id: item_cf8aa5b927
-      displayName: 補足
-      detail:
-        displayName: 補足
-        noteGroups:
-        - id: item_bd3455e23b
-          displayTitle: 通常
-          entries:
-          - "・ボタンにより小→中→大の順に移動距離が長くなる\n・最後のアッパー部分のみがヒットしたら追撃可能\n・コマンド完成後、中・大は「1～4」フレーム膝下まで打撃無敵。この間に攻撃を食らうと、しゃがみ食らい扱い(1.25倍ダメージ)になる \n・426＋Pの簡易コマンドでも出す事が可能\n・各攻撃力とケズリ値、スタン値は以下の表を参照"
-        - id: ex
-          displayTitle: EX
-          entries:
-          - "・ラストのアッパー部分がヒットした場合、追撃可能\n・コマンド完成後、「1～4」フレーム膝下まで打撃無敵。この間に攻撃を食らうと、しゃがみ食らい扱い(1.25倍ダメージ)になる \n・しゃがみ食らいしたオロ、春麗、イブキ、エレナには後半部分が当たらないため注意\n・426＋PPの簡易コマンドでも出す事が可能\n・各攻撃力とケズリ値、スタン値は以下の表を参照"
+    noteGroups:
+    - id: item_bd3455e23b
+      displayTitle: 通常
+      entries:
+      - "・ボタンにより小→中→大の順に移動距離が長くなる\n・最後のアッパー部分のみがヒットしたら追撃可能\n・コマンド完成後、中・大は「1～4」フレーム膝下まで打撃無敵。この間に攻撃を食らうと、しゃがみ食らい扱い(1.25倍ダメージ)になる \n・426＋Pの簡易コマンドでも出す事が可能\n・各攻撃力とケズリ値、スタン値は以下の表を参照"
+    - id: ex
+      displayTitle: EX
+      entries:
+      - "・ラストのアッパー部分がヒットした場合、追撃可能\n・コマンド完成後、「1～4」フレーム膝下まで打撃無敵。この間に攻撃を食らうと、しゃがみ食らい扱い(1.25倍ダメージ)になる \n・しゃがみ食らいしたオロ、春麗、イブキ、エレナには後半部分が当たらないため注意\n・426＋PPの簡易コマンドでも出す事が可能\n・各攻撃力とケズリ値、スタン値は以下の表を参照"
   - id: item_7682e096b9
     displayName: スピンサイズ
-    children:
+    variants:
     - id: item_44417d6cc0
-      displayName: スピンサイズ【小】
+      displayName: 【小】
       detail:
         displayName: スピンサイズ【小】
         command: 214+小K(2回まで入力可能)
@@ -1216,7 +1204,7 @@ moveGroups:
           characterCode: '08'
           skillCode: '038'
     - id: item_6bbdebd350
-      displayName: スピンサイズ【中】
+      displayName: 【中】
       detail:
         displayName: スピンサイズ【中】
         command: 214+中K(2回まで入力可能)
@@ -1264,7 +1252,7 @@ moveGroups:
           characterCode: '08'
           skillCode: '039'
     - id: item_748846f514
-      displayName: スピンサイズ【大】
+      displayName: 【大】
       detail:
         displayName: スピンサイズ【大】
         command: 214+大K(2回まで入力可能)
@@ -1312,7 +1300,7 @@ moveGroups:
           characterCode: '08'
           skillCode: '040'
     - id: ex
-      displayName: スピンサイズ【EX】
+      displayName: 【EX】
       detail:
         displayName: スピンサイズ【EX】
         command: 214+KK(2回まで入力可能)
@@ -1391,28 +1379,24 @@ moveGroups:
           skillName: Spinning Scythe (EX)
           characterCode: '08'
           skillCode: '041'
-    - id: item_cf8aa5b927
-      displayName: 補足
-      detail:
-        displayName: 補足
-        noteGroups:
-        - id: item_bd3455e23b
-          displayTitle: 通常
-          entries:
-          - |-
-            ・追加入力する事で、ヒット時に相手を吹き飛びダウンさせる追加技に派生
-            ・小はガードされても隙がないので、追加入力せずにキャンセルからケズリ目的で出すのもあり
-        - id: ex
-          displayTitle: EX
-          entries:
-          - |-
-            ・ヒット後、追加入力してなければ追撃可能
-            ・追加入力無しの場合、最後の蹴り上げにSCをかける事が可能
+    noteGroups:
+    - id: item_bd3455e23b
+      displayTitle: 通常
+      entries:
+      - |-
+        ・追加入力する事で、ヒット時に相手を吹き飛びダウンさせる追加技に派生
+        ・小はガードされても隙がないので、追加入力せずにキャンセルからケズリ目的で出すのもあり
+    - id: ex
+      displayTitle: EX
+      entries:
+      - |-
+        ・ヒット後、追加入力してなければ追撃可能
+        ・追加入力無しの場合、最後の蹴り上げにSCをかける事が可能
   - id: item_8a0b640a85
     displayName: リンクステイル
-    children:
+    variants:
     - id: item_9b6d8749b8
-      displayName: リンクステイル【小】
+      displayName: 【小】
       detail:
         displayName: リンクステイル【小】
         command: 421+小K
@@ -1442,7 +1426,7 @@ moveGroups:
           characterCode: '08'
           skillCode: '042'
     - id: item_7bd2fad438
-      displayName: リンクステイル【中】
+      displayName: 【中】
       detail:
         displayName: リンクステイル【中】
         command: 421+中K
@@ -1472,7 +1456,7 @@ moveGroups:
           characterCode: '08'
           skillCode: '043'
     - id: item_330012a95d
-      displayName: リンクステイル【大】
+      displayName: 【大】
       detail:
         displayName: リンクステイル【大】
         command: 421+大K
@@ -1502,7 +1486,7 @@ moveGroups:
           characterCode: '08'
           skillCode: '044'
     - id: ex
-      displayName: リンクステイル【EX】
+      displayName: 【EX】
       detail:
         displayName: リンクステイル【EX】
         command: 421+KK
@@ -1531,19 +1515,15 @@ moveGroups:
           skillName: Lynx Tail (EX)
           characterCode: '08'
           skillCode: '045'
+    noteGroups:
     - id: item_cf8aa5b927
-      displayName: 補足
-      detail:
-        displayName: 補足
-        noteGroups:
-        - id: item_cf8aa5b927
-          displayTitle: 補足
-          entries:
-          - |-
-            ・ボタンにより攻撃回数が変化
-            ・小リンクスは2回攻撃判定が出るが、1ヒットでダウンするため、各攻撃力とスタン値は「60、60」、「3、3」となる
-            ・下段技でリーチは長いが、ヒットしてもリターンが小さくガード硬直が長いので注意
-            ・通常技キャンセルや足先を当てるなど工夫して、連係のアクセントに使用
+      displayTitle: 補足
+      entries:
+      - |-
+        ・ボタンにより攻撃回数が変化
+        ・小リンクスは2回攻撃判定が出るが、1ヒットでダウンするため、各攻撃力とスタン値は「60、60」、「3、3」となる
+        ・下段技でリーチは長いが、ヒットしてもリターンが小さくガード硬直が長いので注意
+        ・通常技キャンセルや足先を当てるなど工夫して、連係のアクセントに使用
 - id: super_arts
   displayTitle: "【スーパーアーツ】"
   entries:

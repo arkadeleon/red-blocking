@@ -77,18 +77,34 @@ struct MoveBrowserProjector {
         }
 
         if let variants = entry.variants {
+            var variantNames = variants.map(\.displayName)
+            var variantSections: [[MoveBrowserSection]] = variants.map { variant in
+                projectSections(
+                    for: variant.detail,
+                    pageID: "\(pageID):variant:\(variant.id)",
+                    navigationTitle: entry.displayName
+                )
+            }
+
+            if let noteGroups = entry.noteGroups, !noteGroups.isEmpty {
+                variantNames.append("補足")
+                variantSections.append(
+                    noteGroups.map { noteGroup in
+                        projectNoteGroupSection(
+                            noteGroup,
+                            pageID: "\(pageID):note_groups",
+                            navigationTitle: entry.displayName
+                        )
+                    }
+                )
+            }
+
             return MoveBrowserPage(
                 id: pageID,
                 navigationTitle: entry.displayName,
                 sections: [],
-                variantNames: variants.map(\.displayName),
-                variantSections: variants.map { variant in
-                    projectSections(
-                        for: variant.detail,
-                        pageID: "\(pageID):variant:\(variant.id)",
-                        navigationTitle: entry.displayName
-                    )
-                }
+                variantNames: variantNames,
+                variantSections: variantSections
             )
         }
 
