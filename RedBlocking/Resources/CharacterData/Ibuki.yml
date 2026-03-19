@@ -2038,210 +2038,66 @@ moveGroups:
         skillCode: '059'
   - id: item_430e1cc2ce
     displayName: 鎧通し
-    children:
-    - id: item_838e702fbc
-      displayName: 技名
+    variants:
+    - id: item_yoroi_doushi_throw
+      displayName: 投げ版
       detail:
-        displayName: 鎧通し
-    - id: item_49b7386bc1
-      displayName: コマンド
-      detail:
-        displayName: コマンド
+        displayName: 鎧通し【投げ版】
         command: 236236+P
-    - id: item_1143708263
-      displayName: ストック数
-      detail:
-        displayName: ストック数
-        stats:
-          ストック数: '1'
-    - id: item_0b597471fb
-      displayName: ゲージの長さ
-      detail:
-        displayName: ゲージの長さ
-        stats:
-          ゲージの長さ: 120ドット
-    - id: item_5d6ebc9016
-      displayName: ガード
-      detail:
-        displayName: ガード
-        stats:
-          投げ版 ガード: "×"
-    - id: bl
-      displayName: BL
-      detail:
-        displayName: BL
-        stats:
-          投げ版 BL: "×"
-    - id: item_08b61ad07f
-      displayName: 発生
-      detail:
-        displayName: 発生
-        stats:
-          投げ版 発生: '1'
-    - id: item_50f147eace
-      displayName: 持続
-      detail:
-        displayName: 持続
-        stats:
-          投げ版 持続: '1'
-    - id: item_d6852e217f
-      displayName: 硬直
-      detail:
-        displayName: 硬直
-        stats:
-          投げ版 硬直: '65'
-    - id: item_60d9b0638d
-      displayName: 攻撃力
-      detail:
-        displayName: 攻撃力
-        stats:
-          投げ版 攻撃力: '435'
-    - id: item_2d84a7bb48
-      displayName: ケズリ
-      detail:
-        displayName: ケズリ
-        stats:
-          投げ版 ケズリ: "―"
-    - id: item_b52816980f
-      displayName: スタン値
-      detail:
-        displayName: スタン値
-        stats:
-          投げ版 スタン値: '13'
-    - id: item_7c11c7fd25
-      displayName: 投げ間合い
-      detail:
-        displayName: 投げ間合い
-        stats:
-          投げ版 投げ間合い: '32'
-    - id: item_f32d520a6f
-      displayName: 削減値
-      detail:
-        displayName: 削減値
-        stats:
-          投げ版 削減値: "―"
-    - id: item_5d6ebc9016_2
-      displayName: ガード
-      detail:
-        displayName: ガード
+        guard: "×"
+        blocking: "×"
+        startup: '1'
+        active: '1'
+        recovery: '65'
+        damage: '435'
+        chipDamage: "―"
+        stun: '13'
+        stunReduction: "―"
         frameAdvantage:
           guard: "―"
-    - id: item_1272286f89
-      displayName: 立ヒット
-      detail:
-        displayName: 立ヒット
-        frameAdvantage:
           standingHit: ダウン
-    - id: item_a3b78ed257
-      displayName: 屈ヒット
-      detail:
-        displayName: 屈ヒット
-        frameAdvantage:
           crouchingHit: ダウン
-    - id: 50_51_53_1_sa_4_136_jptc_jp
-      displayName: "・コマンド完成後、暗転50フレーム、相手行動不能時間51フレーム。コマンド完成から53フレーム間無敵 \n・つかみ判定発生まで完全無敵。つかみ判定発生後、1フレーム完全無敵\n・SAコマンド完成後の、暗転直後4フレーム間の先行ジャンプ入力で回避可能。密着時なら、暗転後にジャンプで回避できない\n・相手との距離が136ドット以上、もしくは投げの持続終了後、下の打撃版に移行\n・J小PTC、J大Pを高めで当てると振り向きのけぞり中に繋ぐことが可能\n　ただし打点が低いと振り向きのけぞりが出ないため繋がらない。またエレナ、ユリアン、ギルにはヒットしても入らない"
-      detail:
-        displayName: "・コマンド完成後、暗転50フレーム、相手行動不能時間51フレーム。コマンド完成から53フレーム間無敵 \n・つかみ判定発生まで完全無敵。つかみ判定発生後、1フレーム完全無敵\n・SAコマンド完成後の、暗転直後4フレーム間の先行ジャンプ入力で回避可能。密着時なら、暗転後にジャンプで回避できない\n・相手との距離が136ドット以上、もしくは投げの持続終了後、下の打撃版に移行\n・J小PTC、J大Pを高めで当てると振り向きのけぞり中に繋ぐことが可能\n　ただし打点が低いと振り向きのけぞりが出ないため繋がらない。またエレナ、ユリアン、ギルにはヒットしても入らない"
+        stats:
+          ストック数: '1'
+          ゲージの長さ: 120ドット
+          投げ間合い: '32'
         noteGroups:
-        - id: item_cf8aa5b927
+        - id: item_cf8aa5b927_throw
           displayTitle: 補足
           entries:
           - "・コマンド完成後、暗転50フレーム、相手行動不能時間51フレーム。コマンド完成から53フレーム間無敵 \n・つかみ判定発生まで完全無敵。つかみ判定発生後、1フレーム完全無敵\n・SAコマンド完成後の、暗転直後4フレーム間の先行ジャンプ入力で回避可能。密着時なら、暗転後にジャンプで回避できない\n・相手との距離が136ドット以上、もしくは投げの持続終了後、下の打撃版に移行\n・J小PTC、J大Pを高めで当てると振り向きのけぞり中に繋ぐことが可能\n　ただし打点が低いと振り向きのけぞりが出ないため繋がらない。またエレナ、ユリアン、ギルにはヒットしても入らない"
-    - id: item_52edcb822b
-      displayName: モーション
-      detail:
-        displayName: モーション
         media:
           kind: motion_player
           displayLabel: モーション
           skillName: Yoroi Doushi
           characterCode: '07'
           skillCode: '060'
-    - id: item_5d6ebc9016_3
-      displayName: ガード
+    - id: item_yoroi_doushi_strike
+      displayName: 打撃版
       detail:
-        displayName: ガード
-        stats:
-          打撃版 ガード: 両方×1～13
-    - id: bl_2
-      displayName: BL
-      detail:
-        displayName: BL
-        stats:
-          打撃版 BL: 両方×1～13
-    - id: item_08b61ad07f_2
-      displayName: 発生
-      detail:
-        displayName: 発生
-        stats:
-          打撃版 発生: '12'
-    - id: item_50f147eace_2
-      displayName: 持続
-      detail:
-        displayName: 持続
-        stats:
-          打撃版 持続: 1×13
-    - id: item_d6852e217f_2
-      displayName: 硬直
-      detail:
-        displayName: 硬直
-        stats:
-          打撃版 硬直: '65'
-    - id: item_60d9b0638d_2
-      displayName: 攻撃力
-      detail:
-        displayName: 攻撃力
-        stats:
-          打撃版 攻撃力: 280(13ヒット)
-    - id: item_2d84a7bb48_2
-      displayName: ケズリ
-      detail:
-        displayName: ケズリ
-        stats:
-          打撃版 ケズリ: '18'
-    - id: item_b52816980f_2
-      displayName: スタン値
-      detail:
-        displayName: スタン値
-        stats:
-          打撃版 スタン値: '0'
-    - id: item_f32d520a6f_2
-      displayName: 削減値
-      detail:
-        displayName: 削減値
-        stats:
-          打撃版 削減値: Rx13
-    - id: item_5d6ebc9016_4
-      displayName: ガード
-      detail:
-        displayName: ガード
+        displayName: 鎧通し【打撃版】
+        command: 236236+P
+        guard: 両方×1～13
+        blocking: 両方×1～13
+        startup: '12'
+        active: 1×13
+        recovery: '65'
+        damage: 280(13ヒット)
+        chipDamage: '18'
+        stun: '0'
+        stunReduction: Rx13
         frameAdvantage:
           guard: "-54"
-    - id: item_1272286f89_2
-      displayName: 立ヒット
-      detail:
-        displayName: 立ヒット
-        frameAdvantage:
           standingHit: ダウン
-    - id: item_a3b78ed257_2
-      displayName: 屈ヒット
-      detail:
-        displayName: 屈ヒット
-        frameAdvantage:
           crouchingHit: ダウン
-    - id: 50_50_53_10_136_tc_2_sc
-      displayName: "・コマンド完成後、暗転50フレーム、相手行動不能時間50フレーム。コマンド完成から53フレーム間無敵 \n・攻撃発生10フレーム前に無敵終了。食らい判定出現(技を重ねられていたら潰される)\n・相手との距離が136ドット以上、もしくは投げの持続終了後、自動的に打撃鎧通しになる\n・間合いは離れるが、技後の隙はかなり大きいため注意\n・小中大TC→大旋(2段目)SCから繋ぐことが可能"
-      detail:
-        displayName: "・コマンド完成後、暗転50フレーム、相手行動不能時間50フレーム。コマンド完成から53フレーム間無敵 \n・攻撃発生10フレーム前に無敵終了。食らい判定出現(技を重ねられていたら潰される)\n・相手との距離が136ドット以上、もしくは投げの持続終了後、自動的に打撃鎧通しになる\n・間合いは離れるが、技後の隙はかなり大きいため注意\n・小中大TC→大旋(2段目)SCから繋ぐことが可能"
+        stats:
+          ストック数: '1'
+          ゲージの長さ: 120ドット
         noteGroups:
-        - id: item_cf8aa5b927
+        - id: item_cf8aa5b927_strike
           displayTitle: 補足
           entries:
           - "・コマンド完成後、暗転50フレーム、相手行動不能時間50フレーム。コマンド完成から53フレーム間無敵 \n・攻撃発生10フレーム前に無敵終了。食らい判定出現(技を重ねられていたら潰される)\n・相手との距離が136ドット以上、もしくは投げの持続終了後、自動的に打撃鎧通しになる\n・間合いは離れるが、技後の隙はかなり大きいため注意\n・小中大TC→大旋(2段目)SCから繋ぐことが可能"
-    - id: item_52edcb822b_2
-      displayName: モーション
-      detail:
-        displayName: モーション
         media:
           kind: motion_player
           displayLabel: モーション
