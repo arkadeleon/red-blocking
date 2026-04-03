@@ -10,6 +10,7 @@ import SwiftUI
 
 struct MotionPlayerHitboxToggleView: View {
     let title: String
+    let description: String
     let symbolName: String
     let tintColor: Color
 
@@ -17,11 +18,13 @@ struct MotionPlayerHitboxToggleView: View {
 
     init(
         title: String,
+        description: String,
         symbolName: String,
         tintColor: Color,
         isOn: Binding<Bool>
     ) {
         self.title = title
+        self.description = description
         self.symbolName = symbolName
         self.tintColor = tintColor
         _isOn = isOn
@@ -30,8 +33,15 @@ struct MotionPlayerHitboxToggleView: View {
     var body: some View {
         Toggle(isOn: $isOn) {
             Label {
-                Text(title)
-                    .font(.subheadline.weight(.semibold))
+                VStack(alignment: .leading, spacing: 2) {
+                    Text(title)
+                        .font(.subheadline.weight(.semibold))
+
+                    Text(description)
+                        .font(.caption)
+                        .foregroundStyle(.secondary)
+                        .fixedSize(horizontal: false, vertical: true)
+                }
             } icon: {
                 Image(systemName: symbolName)
                     .foregroundStyle(tintColor)

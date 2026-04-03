@@ -90,36 +90,42 @@ struct MotionPlayerHitboxVisibilityGroupView: View {
                 LazyVStack(alignment: .leading, spacing: 12) {
                     MotionPlayerHitboxToggleView(
                         title: "Passive",
+                        description: "Hurtbox present during neutral and non-attacking frames",
                         symbolName: "shield",
                         tintColor: Color(rgb: passiveColorRGB),
                         isOn: $passiveVisible
                     )
                     MotionPlayerHitboxToggleView(
                         title: "Vulnerability",
+                        description: "Extra hurtbox exposed during specific attack frames",
                         symbolName: "shield.lefthalf.filled",
                         tintColor: Color(rgb: otherVulnerabilityColorRGB),
                         isOn: $otherVulnerabilityVisible
                     )
                     MotionPlayerHitboxToggleView(
                         title: "Active",
+                        description: "Attack hitbox that deals damage on contact",
                         symbolName: "burst.fill",
                         tintColor: Color(rgb: activeColorRGB),
                         isOn: $activeVisible
                     )
                     MotionPlayerHitboxToggleView(
                         title: "Throw",
+                        description: "Area that initiates a throw when it reaches the opponent",
                         symbolName: "hand.raised.fill",
                         tintColor: Color(rgb: throwColorRGB),
                         isOn: $throwVisible
                     )
                     MotionPlayerHitboxToggleView(
                         title: "Throwable",
+                        description: "Area where the character can be grabbed",
                         symbolName: "figure.fall",
                         tintColor: Color(rgb: throwableColorRGB),
                         isOn: $throwableVisible
                     )
                     MotionPlayerHitboxToggleView(
                         title: "Push",
+                        description: "Collision box that prevents characters from overlapping",
                         symbolName: "arrow.left.and.right.circle.fill",
                         tintColor: Color(rgb: pushColorRGB),
                         isOn: $pushVisible
