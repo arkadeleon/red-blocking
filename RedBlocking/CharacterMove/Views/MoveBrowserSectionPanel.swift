@@ -15,43 +15,26 @@ struct MoveBrowserSectionPanel: View {
     @Environment(\.displayScale) private var displayScale
 
     var body: some View {
-        VStack(alignment: .leading, spacing: 12) {
-            if let title = section.title, !title.isEmpty {
-                HStack(spacing: 10) {
-                    Text(title)
-                        .redBlockingSectionTag(prominent: true)
-
-                    Rectangle()
-                        .fill(
-                            LinearGradient(
-                                colors: [
-                                    Color.rbGold.opacity(0.36),
-                                    Color.rbScarlet.opacity(0.12),
-                                    Color.clear
-                                ],
-                                startPoint: .leading,
-                                endPoint: .trailing
-                            )
-                        )
-                        .frame(height: max(1 / displayScale, 1))
-                }
-            }
-
-            VStack(spacing: 0) {
-                ForEach(Array(section.rows.enumerated()), id: \.element.id) { index, row in
-                    if index > 0 {
-                        Rectangle()
-                            .fill(Color.rbPanelBorder.opacity(0.28))
-                            .frame(height: 1 / displayScale)
-                            .padding(.leading, dividerLeadingInset(for: row))
+        Group {
+            if sectionBehavior.isCollapsedByDefault {
+                CollapsibleSectionPanel(
+                    section: section,
+                    model: model,
+                    displayScale: displayScale,
+                    rowSpacingResolver: verticalPadding(for:),
+                    dividerInsetResolver: dividerLeadingInset(for:),
+                    summary: sectionSummary
+                )
+            } else {
+                VStack(alignment: .leading, spacing: 12) {
+                    if section.title?.isEmpty == false {
+                        sectionHeader
                     }
 
-                    MoveBrowserRowView(row: row, model: model)
-                        .padding(.horizontal, 16)
-                        .padding(.vertical, verticalPadding(for: row))
+                    sectionRows
+                        .redBlockingPanel(cornerRadius: 22)
                 }
             }
-            .redBlockingPanel(cornerRadius: 22)
         }
     }
 
@@ -76,6 +59,134 @@ struct MoveBrowserSectionPanel: View {
             20
         case .next, .motionPlayer:
             16
+        }
+    }
+
+    @ViewBuilder
+    private var sectionHeader: some View {
+        if let title = section.title, !title.isEmpty {
+            HStack(spacing: 10) {
+                Text(title)
+                    .redBlockingSectionTag(prominent: sectionBehavior.isProminent)
+
+                Rectangle()
+                    .fill(
+                        LinearGradient(
+                            colors: [
+                                Color.rbGold.opacity(0.36),
+                                Color.rbScarlet.opacity(0.12),
+                                Color.clear
+                            ],
+                            startPoint: .leading,
+                            endPoint: .trailing
+                        )
+                    )
+                    .frame(height: max(1 / displayScale, 1))
+            }
+        }
+    }
+
+    private var sectionRows: some View {
+        VStack(spacing: 0) {
+            ForEach(Array(section.rows.enumerated()), id: \.element.id) { index, row in
+                if index > 0 {
+                    Rectangle()
+                        .fill(Color.rbPanelBorder.opacity(0.28))
+                        .frame(height: 1 / displayScale)
+                        .padding(.leading, dividerLeadingInset(for: row))
+                }
+
+                MoveBrowserRowView(row: row, model: model)
+                    .padding(.horizontal, 16)
+                    .padding(.vertical, verticalPadding(for: row))
+            }
+        }
+    }
+
+    private var sectionBehavior: SectionBehavior {
+        let hasMotionPlayerRow = section.rows.contains { $0.kind == .motionPlayer }
+        let hasNavigationRow = section.rows.contains { $0.kind == .next }
+
+        return SectionBehavior(
+            isCollapsedByDefault: hasMotionPlayerRow == false
+                && hasNavigationRow == false
+                && section.title?.isEmpty == false,
+            isProminent: hasMotionPlayerRow
+        )
+    }
+
+    private var sectionSummary: String {
+        let noteCount = section.rows.filter { $0.kind == .supplementary }.count
+        if noteCount > 0 {
+            return noteCount == 1 ? "1 note" : "\(noteCount) notes"
+        }
+
+        let valueCount = section.rows.filter { $0.kind == .detail }.count
+        return valueCount == 1 ? "1 value" : "\(valueCount) values"
+    }
+}
+
+private extension MoveBrowserSectionPanel {
+    struct SectionBehavior {
+        let isCollapsedByDefault: Bool
+        let isProminent: Bool
+    }
+}
+
+private struct CollapsibleSectionPanel: View {
+    let section: MoveBrowserSection
+    let model: MoveBrowserModel
+    let displayScale: CGFloat
+    let rowSpacingResolver: (MoveBrowserRow) -> CGFloat
+    let dividerInsetResolver: (MoveBrowserRow) -> CGFloat
+    let summary: String
+
+    @State private var isExpanded = false
+
+    var body: some View {
+        VStack(alignment: .leading, spacing: 12) {
+            Button(action: { isExpanded.toggle() }) {
+                HStack(spacing: 12) {
+                    if let title = section.title, !title.isEmpty {
+                        Text(title)
+                            .redBlockingSectionTag()
+                    }
+
+                    Text(summary)
+                        .font(.caption.weight(.medium))
+                        .foregroundStyle(.secondary)
+
+                    Spacer(minLength: 12)
+
+                    Image(systemName: isExpanded ? "chevron.up" : "chevron.down")
+                        .font(.caption.weight(.bold))
+                        .foregroundStyle(Color.rbAmber.opacity(0.9))
+                }
+                .padding(.horizontal, 14)
+                .padding(.vertical, 12)
+                .redBlockingControlSurface(cornerRadius: 18)
+                .contentShape(Rectangle())
+            }
+            .buttonStyle(.plain)
+            .accessibilityHint(isExpanded ? "Collapses this section." : "Expands this section.")
+
+            if isExpanded {
+                VStack(spacing: 0) {
+                    ForEach(Array(section.rows.enumerated()), id: \.element.id) { index, row in
+                        if index > 0 {
+                            Rectangle()
+                                .fill(Color.rbPanelBorder.opacity(0.28))
+                                .frame(height: 1 / displayScale)
+                                .padding(.leading, dividerInsetResolver(row))
+                        }
+
+                        MoveBrowserRowView(row: row, model: model)
+                            .padding(.horizontal, 16)
+                            .padding(.vertical, rowSpacingResolver(row))
+                    }
+                }
+                .redBlockingPanel(cornerRadius: 22)
+            }
         }
     }
 }
