@@ -172,6 +172,9 @@ private struct RedBlockingSectionTagModifier: ViewModifier {
 }
 
 struct RedBlockingActionButtonStyle: ButtonStyle {
+    @Environment(\.accessibilityReduceMotion) private var reduceMotion
+    @Environment(\.isEnabled) private var isEnabled
+
     let prominent: Bool
 
     init(prominent: Bool = false) {
@@ -185,6 +188,7 @@ struct RedBlockingActionButtonStyle: ButtonStyle {
             .padding(.horizontal, 14)
             .padding(.vertical, 12)
             .frame(maxWidth: .infinity, minHeight: 48)
+            .opacity(isEnabled ? 1 : 0.62)
             .background {
                 RoundedRectangle(cornerRadius: 16, style: .continuous)
                     .fill(backgroundFill(isPressed: configuration.isPressed))
@@ -194,13 +198,13 @@ struct RedBlockingActionButtonStyle: ButtonStyle {
                     }
                     .shadow(
                         color: prominent ? Color.rbAmber.opacity(0.18) : Color.black.opacity(0.16),
-                        radius: configuration.isPressed ? 6 : 12,
+                        radius: configuration.isPressed ? 6 : (isEnabled ? 12 : 8),
                         x: 0,
-                        y: configuration.isPressed ? 3 : 7
+                        y: configuration.isPressed ? 3 : (isEnabled ? 7 : 4)
                     )
             }
-            .scaleEffect(configuration.isPressed ? 0.985 : 1)
-            .animation(.easeOut(duration: 0.14), value: configuration.isPressed)
+            .scaleEffect(configuration.isPressed && isEnabled ? 0.985 : 1)
+            .animation(reduceMotion ? nil : .easeOut(duration: 0.14), value: configuration.isPressed)
     }
 
     private func backgroundFill(isPressed: Bool) -> LinearGradient {
@@ -248,6 +252,26 @@ struct RedBlockingActionButtonStyle: ButtonStyle {
             startPoint: .topLeading,
             endPoint: .bottomTrailing
         )
+    }
+}
+
+struct RedBlockingPressableButtonStyle: ButtonStyle {
+    @Environment(\.accessibilityReduceMotion) private var reduceMotion
+    @Environment(\.isEnabled) private var isEnabled
+
+    let pressedScale: CGFloat
+    let pressedOpacity: Double
+
+    init(pressedScale: CGFloat = 0.985, pressedOpacity: Double = 0.96) {
+        self.pressedScale = pressedScale
+        self.pressedOpacity = pressedOpacity
+    }
+
+    func makeBody(configuration: Configuration) -> some View {
+        configuration.label
+            .opacity(isEnabled ? (configuration.isPressed ? pressedOpacity : 1) : 0.62)
+            .scaleEffect(configuration.isPressed && isEnabled ? pressedScale : 1)
+            .animation(reduceMotion ? nil : .easeOut(duration: 0.14), value: configuration.isPressed)
     }
 }
 

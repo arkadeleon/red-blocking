@@ -70,7 +70,8 @@ struct MotionPlayerHitboxVisibilityGroupView: View {
 
                     Text(summaryText)
                         .font(.caption.weight(.medium))
-                        .foregroundStyle(.secondary)
+                        .foregroundStyle(Color.rbAmber.opacity(0.74))
+                        .lineLimit(1)
 
                     Spacer(minLength: 12)
 
@@ -84,7 +85,9 @@ struct MotionPlayerHitboxVisibilityGroupView: View {
                 .redBlockingControlSurface(cornerRadius: 16)
                 .contentShape(Rectangle())
             }
-            .buttonStyle(.plain)
+            .buttonStyle(RedBlockingPressableButtonStyle())
+            .accessibilityValue(isExpanded ? "Expanded" : "Collapsed")
+            .accessibilityHint(isExpanded ? "Collapses the hitbox group." : "Expands the hitbox group.")
 
             if isExpanded {
                 LazyVStack(alignment: .leading, spacing: 12) {
@@ -131,7 +134,7 @@ struct MotionPlayerHitboxVisibilityGroupView: View {
                         isOn: $pushVisible
                     )
                 }
-                .transition(.opacity)
+                .transition(.opacity.combined(with: .scale(scale: 0.985, anchor: .top)))
             }
         }
     }
@@ -140,7 +143,7 @@ struct MotionPlayerHitboxVisibilityGroupView: View {
         if reduceMotion {
             isExpanded.toggle()
         } else {
-            withAnimation(.snappy(duration: 0.28)) {
+            withAnimation(.snappy(duration: 0.26, extraBounce: 0)) {
                 isExpanded.toggle()
             }
         }
@@ -155,6 +158,10 @@ struct MotionPlayerHitboxVisibilityGroupView: View {
             throwableVisible,
             pushVisible
         ].filter { $0 }.count
+
+        if visibleCount == 0 {
+            return "All layers hidden"
+        }
 
         return visibleCount == 1 ? "1 layer visible" : "\(visibleCount) layers visible"
     }

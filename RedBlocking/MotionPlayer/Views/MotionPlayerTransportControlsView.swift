@@ -46,14 +46,14 @@ struct MotionPlayerTransportControlsView: View {
             if playerModel.framesPerSecond == 0 {
                 Text("Playback is paused at the current frame until you raise the speed again.")
                     .font(.footnote)
-                    .foregroundStyle(.secondary)
+                    .foregroundStyle(Color.rbAmber.opacity(0.74))
                     .fixedSize(horizontal: false, vertical: true)
             }
 
             if reduceMotion {
                 Text("Reduce Motion is enabled, so continuous playback is paused. Use the frame slider or step controls to inspect the motion.")
                     .font(.footnote)
-                    .foregroundStyle(.secondary)
+                    .foregroundStyle(Color.rbAmber.opacity(0.74))
                     .fixedSize(horizontal: false, vertical: true)
             }
         }
@@ -179,7 +179,7 @@ struct MotionPlayerTransportControlsView: View {
         .disabled(playerModel.totalFrames == 0 || (prominent && reduceMotion))
         .accessibilityLabel(accessibilityLabel)
         .accessibilityHint(accessibilityHint)
-        .buttonStyle(TransportStripButtonStyle())
+        .buttonStyle(RedBlockingPressableButtonStyle(pressedScale: 0.96, pressedOpacity: 0.92))
     }
 
     @ViewBuilder
@@ -249,7 +249,8 @@ struct MotionPlayerTransportControlsView: View {
 
                     Text(speedSummary(for: playerModel))
                         .font(.subheadline.weight(.medium))
-                        .foregroundStyle(.secondary)
+                        .foregroundStyle(Color.rbAmber.opacity(0.74))
+                        .contentTransition(.numericText())
 
                     Image(systemName: "chevron.down")
                         .font(.caption.weight(.bold))
@@ -261,7 +262,9 @@ struct MotionPlayerTransportControlsView: View {
                 .redBlockingControlSurface(cornerRadius: 18)
                 .contentShape(Rectangle())
             }
-            .buttonStyle(.plain)
+            .buttonStyle(RedBlockingPressableButtonStyle())
+            .accessibilityValue(showsSpeedControls ? "Expanded" : "Collapsed")
+            .accessibilityHint(showsSpeedControls ? "Collapses the speed controls." : "Expands the speed controls.")
 
             if showsSpeedControls {
                 ViewThatFits(in: .horizontal) {
@@ -307,7 +310,7 @@ struct MotionPlayerTransportControlsView: View {
                     .padding(.vertical, 12)
                     .redBlockingControlSurface(cornerRadius: 18)
                 }
-                .transition(.opacity)
+                .transition(.opacity.combined(with: .scale(scale: 0.985, anchor: .top)))
             }
         }
     }
@@ -316,7 +319,7 @@ struct MotionPlayerTransportControlsView: View {
         if reduceMotion {
             showsSpeedControls.toggle()
         } else {
-            withAnimation(.snappy(duration: 0.28)) {
+            withAnimation(.snappy(duration: 0.26, extraBounce: 0)) {
                 showsSpeedControls.toggle()
             }
         }
@@ -328,13 +331,5 @@ struct MotionPlayerTransportControlsView: View {
         }
 
         return "\(playerModel.framesPerSecond) FPS"
-    }
-}
-
-private struct TransportStripButtonStyle: ButtonStyle {
-    func makeBody(configuration: Configuration) -> some View {
-        configuration.label
-            .scaleEffect(configuration.isPressed ? 0.88 : 1)
-            .animation(.easeOut(duration: 0.12), value: configuration.isPressed)
     }
 }

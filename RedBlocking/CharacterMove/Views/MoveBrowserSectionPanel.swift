@@ -155,7 +155,8 @@ private struct CollapsibleSectionPanel: View {
 
                     Text(summary)
                         .font(.caption.weight(.medium))
-                        .foregroundStyle(.secondary)
+                        .foregroundStyle(Color.rbAmber.opacity(0.74))
+                        .lineLimit(1)
 
                     Spacer(minLength: 12)
 
@@ -169,7 +170,8 @@ private struct CollapsibleSectionPanel: View {
                 .redBlockingControlSurface(cornerRadius: 18)
                 .contentShape(Rectangle())
             }
-            .buttonStyle(.plain)
+            .buttonStyle(RedBlockingPressableButtonStyle())
+            .accessibilityValue(isExpanded ? "Expanded" : "Collapsed")
             .accessibilityHint(isExpanded ? "Collapses this section." : "Expands this section.")
 
             if isExpanded {
@@ -188,7 +190,7 @@ private struct CollapsibleSectionPanel: View {
                     }
                 }
                 .redBlockingPanel(cornerRadius: 22)
-                .transition(.opacity)
+                .transition(.opacity.combined(with: .scale(scale: 0.985, anchor: .top)))
             }
         }
     }
@@ -197,7 +199,7 @@ private struct CollapsibleSectionPanel: View {
         if reduceMotion {
             isExpanded.toggle()
         } else {
-            withAnimation(.snappy(duration: 0.28)) {
+            withAnimation(.snappy(duration: 0.26, extraBounce: 0)) {
                 isExpanded.toggle()
             }
         }

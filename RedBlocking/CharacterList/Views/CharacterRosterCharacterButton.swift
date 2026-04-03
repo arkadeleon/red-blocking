@@ -105,15 +105,12 @@ struct CharacterRosterCharacterButton: View {
         .buttonStyle(.plain)
         .frame(minWidth: 44, minHeight: 44)
         .accessibilityLabel(character.title)
+        .accessibilityValue(isSelected ? "Selected" : "Not selected")
         .accessibilityHint("Browse \(character.title)'s moves.")
         .accessibilityAddTraits(isSelected ? [.isSelected] : [])
     }
 
     private var selectionAnimation: Animation {
-        if accessibilityReduceMotion {
-            return .easeOut(duration: 0.12)
-        }
-
-        return .spring(duration: 0.28, bounce: 0.18)
+        .easeOut(duration: accessibilityReduceMotion ? 0.12 : 0.22)
     }
 }

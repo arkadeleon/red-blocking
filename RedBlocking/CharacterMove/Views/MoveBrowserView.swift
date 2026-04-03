@@ -98,6 +98,7 @@ private struct VariantPickerBar: ViewModifier {
                 }
             }
             .pickerStyle(.segmented)
+            .accessibilityLabel("Variant")
         }
         .padding(.horizontal, 14)
         .padding(.vertical, 12)

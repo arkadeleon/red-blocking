@@ -39,7 +39,7 @@ struct MovePlayerEntryRowView: View {
             .redBlockingControlSurface(cornerRadius: 14, highlighted: true)
             .contentShape(Rectangle())
         }
-        .buttonStyle(.plain)
+        .buttonStyle(RedBlockingPressableButtonStyle())
         .accessibilityElement(children: .combine)
         .accessibilityHint("Opens the move preview.")
     }

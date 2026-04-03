@@ -39,7 +39,7 @@ struct MoveNextRowView: View {
             .redBlockingControlSurface(cornerRadius: 14)
             .contentShape(Rectangle())
         }
-        .buttonStyle(.plain)
+        .buttonStyle(RedBlockingPressableButtonStyle())
         .accessibilityElement(children: .combine)
         .accessibilityHint("Opens this move category.")
     }
