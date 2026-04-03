@@ -14,16 +14,9 @@ struct MotionPlayerHitboxControlsView: View {
     var body: some View {
         @Bindable var visibility = appModel.settings.hitboxVisibility
 
-        VStack(alignment: .leading, spacing: 18) {
-            VStack(alignment: .leading, spacing: 8) {
-                Text("Hitbox Layers")
-                    .redBlockingSectionTag(prominent: true)
-
-                Text("Core visibility stays upfront. Mirror player layers stay tucked away until needed.")
-                    .font(.footnote)
-                    .foregroundStyle(.secondary)
-                    .fixedSize(horizontal: false, vertical: true)
-            }
+        VStack(alignment: .leading, spacing: 16) {
+            Text("Hitbox")
+                .redBlockingSectionTag(prominent: true)
 
             MotionPlayerHitboxVisibilityGroupView(
                 title: "Player 1",
@@ -59,7 +52,7 @@ struct MotionPlayerHitboxControlsView: View {
                 pushVisible: $visibility.player2PushVisible
             )
         }
-        .padding(20)
-        .redBlockingPanel(cornerRadius: 28)
+        .padding(16)
+        .redBlockingPanel(cornerRadius: 22)
     }
 }

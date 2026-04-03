@@ -124,8 +124,6 @@ struct MotionPlayerHitboxVisibilityGroupView: View {
                 }
             }
         }
-        .padding(16)
-        .redBlockingControlSurface(cornerRadius: 22)
     }
 
     private var summaryText: String {
