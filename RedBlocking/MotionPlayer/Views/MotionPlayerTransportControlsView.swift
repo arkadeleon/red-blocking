@@ -37,7 +37,7 @@ struct MotionPlayerTransportControlsView: View {
     var body: some View {
         @Bindable var playerModel = playerModel
 
-        VStack(alignment: .leading, spacing: 20) {
+        VStack(alignment: .leading, spacing: 22) {
             HStack(alignment: .center, spacing: 12) {
                 Text("Playback")
                     .redBlockingSectionTag(prominent: true)
@@ -47,51 +47,13 @@ struct MotionPlayerTransportControlsView: View {
                 frameCounter(playerModel: playerModel)
             }
 
-            LabeledContent("Frame", value: "\(formattedFrame(playerModel.currentFrameIndex)) / \(formattedFrame(motionData.frameCount))")
-                .font(.body.monospacedDigit())
-                .padding(.horizontal, 14)
-                .padding(.vertical, 12)
-                .redBlockingControlSurface(cornerRadius: 18)
+            playbackCluster(playerModel: playerModel)
 
-            if playerModel.totalFrames > 1 {
-                VStack(alignment: .leading, spacing: 8) {
-                    Text("Frame Position")
-                        .font(.subheadline.weight(.medium))
-                        .foregroundStyle(Color.rbAmber.opacity(0.92))
+            VStack(alignment: .leading, spacing: 12) {
+                Text("Speed")
+                    .redBlockingSectionTag()
 
-                    Slider(
-                        value: $scrubbedFrame,
-                        in: 0...Double(playerModel.totalFrames - 1),
-                        step: 1,
-                        onEditingChanged: handleScrubbingChange
-                    )
-                    .accessibilityLabel("Frame Position")
-                    .accessibilityValue("Frame \(formattedFrame(playerModel.currentFrameIndex)) of \(formattedFrame(playerModel.totalFrames))")
-                    .onChange(of: scrubbedFrame) { _, newValue in
-                        guard isScrubbing else {
-                            return
-                        }
-
-                        playerModel.seek(to: Int(newValue))
-                    }
-
-                    HStack {
-                        Text(formattedFrame(0))
-                        Spacer()
-                        Text(formattedFrame(playerModel.totalFrames - 1))
-                    }
-                    .font(.caption.monospacedDigit())
-                    .foregroundStyle(.secondary)
-                }
-                .padding(.horizontal, 14)
-                .padding(.vertical, 12)
-                .redBlockingControlSurface(cornerRadius: 18, highlighted: true)
-            }
-
-            transportButtonGrid
-                .labelStyle(.titleAndIcon)
-
-            ViewThatFits(in: .horizontal) {
+                ViewThatFits(in: .horizontal) {
                 HStack(spacing: 12) {
                     Text("FPS")
                         .font(.subheadline.weight(.medium))
@@ -133,6 +95,7 @@ struct MotionPlayerTransportControlsView: View {
                 .padding(.horizontal, 14)
                 .padding(.vertical, 12)
                 .redBlockingControlSurface(cornerRadius: 18)
+            }
             }
 
             if playerModel.framesPerSecond == 0 {
@@ -219,5 +182,54 @@ struct MotionPlayerTransportControlsView: View {
             .padding(.horizontal, 12)
             .padding(.vertical, 8)
             .redBlockingControlSurface(cornerRadius: 16, highlighted: true)
+    }
+
+    @ViewBuilder
+    private func playbackCluster(playerModel: MotionPlayerModel) -> some View {
+        VStack(alignment: .leading, spacing: 14) {
+            LabeledContent("Frame", value: "\(formattedFrame(playerModel.currentFrameIndex)) / \(formattedFrame(motionData.frameCount))")
+                .font(.body.monospacedDigit())
+                .padding(.horizontal, 14)
+                .padding(.vertical, 12)
+                .redBlockingControlSurface(cornerRadius: 18)
+
+            if playerModel.totalFrames > 1 {
+                VStack(alignment: .leading, spacing: 8) {
+                    Text("Frame Position")
+                        .font(.subheadline.weight(.medium))
+                        .foregroundStyle(Color.rbAmber.opacity(0.92))
+
+                    Slider(
+                        value: $scrubbedFrame,
+                        in: 0...Double(playerModel.totalFrames - 1),
+                        step: 1,
+                        onEditingChanged: handleScrubbingChange
+                    )
+                    .accessibilityLabel("Frame Position")
+                    .accessibilityValue("Frame \(formattedFrame(playerModel.currentFrameIndex)) of \(formattedFrame(playerModel.totalFrames))")
+                    .onChange(of: scrubbedFrame) { _, newValue in
+                        guard isScrubbing else {
+                            return
+                        }
+
+                        playerModel.seek(to: Int(newValue))
+                    }
+
+                    HStack {
+                        Text(formattedFrame(0))
+                        Spacer()
+                        Text(formattedFrame(playerModel.totalFrames - 1))
+                    }
+                    .font(.caption.monospacedDigit())
+                    .foregroundStyle(.secondary)
+                }
+                .padding(.horizontal, 14)
+                .padding(.vertical, 12)
+                .redBlockingControlSurface(cornerRadius: 18, highlighted: true)
+            }
+
+            transportButtonGrid
+                .labelStyle(.titleAndIcon)
+        }
     }
 }

@@ -43,15 +43,39 @@ struct MoveBrowserSectionPanel: View {
                         Rectangle()
                             .fill(Color.rbPanelBorder.opacity(0.28))
                             .frame(height: 1 / displayScale)
-                            .padding(.leading, 20)
+                            .padding(.leading, dividerLeadingInset(for: row))
                     }
 
                     MoveBrowserRowView(row: row, model: model)
                         .padding(.horizontal, 16)
-                        .padding(.vertical, 12)
+                        .padding(.vertical, verticalPadding(for: row))
                 }
             }
             .redBlockingPanel(cornerRadius: 22)
+        }
+    }
+
+    private func verticalPadding(for row: MoveBrowserRow) -> CGFloat {
+        switch row.kind {
+        case .motionPlayer:
+            14
+        case .next:
+            12
+        case .detail:
+            8
+        case .supplementary:
+            10
+        }
+    }
+
+    private func dividerLeadingInset(for row: MoveBrowserRow) -> CGFloat {
+        switch row.kind {
+        case .detail:
+            24
+        case .supplementary:
+            20
+        case .next, .motionPlayer:
+            16
         }
     }
 }

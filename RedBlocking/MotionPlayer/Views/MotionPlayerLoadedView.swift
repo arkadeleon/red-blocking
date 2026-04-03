@@ -33,23 +33,11 @@ struct MotionPlayerLoadedView: View {
     var body: some View {
         ScrollView {
             layout {
-                MotionPlayerPreviewCardView(
-                    motionData: motionData,
-                    playerModel: playerModel
-                )
-                .frame(maxWidth: 560)
+                leadingColumn
 
-                VStack(spacing: 24) {
-                    MotionPlayerTransportControlsView(
-                        motionData: motionData,
-                        playerModel: playerModel,
-                        scrubbedFrame: $scrubbedFrame,
-                        isScrubbing: $isScrubbing
-                    )
-
-                    MotionPlayerHitboxControlsView()
+                if usesTwoColumnLayout {
+                    trailingColumn
                 }
-                .frame(maxWidth: 400)
             }
             .padding(24)
             .frame(maxWidth: 1080, alignment: .center)
@@ -59,10 +47,44 @@ struct MotionPlayerLoadedView: View {
     }
 
     private var layout: AnyLayout {
-        if horizontalSizeClass == .compact || dynamicTypeSize.isAccessibilitySize {
+        if usesTwoColumnLayout == false {
             AnyLayout(VStackLayout(spacing: 24))
         } else {
             AnyLayout(HStackLayout(alignment: .top, spacing: 28))
         }
+    }
+
+    private var usesTwoColumnLayout: Bool {
+        horizontalSizeClass == .regular && dynamicTypeSize.isAccessibilitySize == false
+    }
+
+    private var leadingColumn: some View {
+        VStack(spacing: 24) {
+            MotionPlayerPreviewCardView(
+                motionData: motionData,
+                playerModel: playerModel
+            )
+            .frame(maxWidth: 560)
+
+            MotionPlayerTransportControlsView(
+                motionData: motionData,
+                playerModel: playerModel,
+                scrubbedFrame: $scrubbedFrame,
+                isScrubbing: $isScrubbing
+            )
+            .frame(maxWidth: 560)
+
+            if usesTwoColumnLayout == false {
+                MotionPlayerHitboxControlsView()
+            }
+        }
+        .frame(maxWidth: 560)
+    }
+
+    private var trailingColumn: some View {
+        VStack(spacing: 18) {
+            MotionPlayerHitboxControlsView()
+        }
+        .frame(maxWidth: 400)
     }
 }

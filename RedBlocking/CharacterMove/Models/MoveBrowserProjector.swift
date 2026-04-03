@@ -130,6 +130,7 @@ struct MoveBrowserProjector {
     ) -> [MoveBrowserSection] {
         var sections: [MoveBrowserSection] = []
         var primaryRows = projectPrimaryRows(detail, pageID: pageID)
+        let mediaSection = detail.mediaEntries.isEmpty ? nil : projectMediaSection(detail.mediaEntries, pageID: pageID)
 
         if let meterGain = detail.meterGain {
             let values = meterGain.asLabeledValues
@@ -178,6 +179,11 @@ struct MoveBrowserProjector {
             )
         }
 
+        if let mediaSection {
+            let insertionIndex = min(1, sections.count)
+            sections.insert(mediaSection, at: insertionIndex)
+        }
+
         sections.append(
             contentsOf: detail.noteGroups.map { noteGroup in
                 projectNoteGroupSection(
@@ -187,10 +193,6 @@ struct MoveBrowserProjector {
                 )
             }
         )
-
-        if !detail.mediaEntries.isEmpty {
-            sections.append(projectMediaSection(detail.mediaEntries, pageID: pageID))
-        }
 
         return sections
     }
@@ -324,7 +326,7 @@ struct MoveBrowserProjector {
     private func projectMediaSection(_ mediaEntries: [MoveMedia], pageID: String) -> MoveBrowserSection {
         MoveBrowserSection(
             id: "\(pageID):media",
-            title: nil,
+            title: "Motion Preview",
             rows: mediaEntries.enumerated().map { index, media in
                 .motionPlayer(
                     id: "\(pageID):media:\(index):\(media.kind.rawValue)",

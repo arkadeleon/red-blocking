@@ -49,29 +49,38 @@ struct MotionPlayerPreviewCardView: View {
                 )
             }
 
-            VStack(alignment: .leading, spacing: 10) {
-                metadataRow("\(motionData.frameCount) motion frames", systemImage: "film.stack")
-                metadataRow("\(motionData.spriteFrameCount) sprite frames", systemImage: "photo.stack")
-                metadataRow("\(motionData.characterCode) / \(motionData.skillCode)", systemImage: "shippingbox")
+            metadataGrid
 
-                if let previewSize = motionData.previewSize {
-                    metadataRow(
-                        "\(Int(previewSize.width)) x \(Int(previewSize.height)) sprite size",
-                        systemImage: "rectangle.expand.vertical"
-                    )
-                }
-
-                if motionData.hasSpriteCountMismatch {
-                    Text("Some preview frames are missing, so the closest available image is used.")
-                        .font(.footnote)
-                        .foregroundStyle(.secondary)
-                        .fixedSize(horizontal: false, vertical: true)
-                }
+            if motionData.hasSpriteCountMismatch {
+                Text("Some preview frames are missing, so the closest available image is used.")
+                    .font(.footnote)
+                    .foregroundStyle(.secondary)
+                    .fixedSize(horizontal: false, vertical: true)
+                    .padding(.top, 2)
             }
         }
         .padding(22)
         .redBlockingPanel(cornerRadius: 28, elevated: true)
         .accessibilityElement(children: .contain)
+    }
+
+    private var metadataGrid: some View {
+        let columns = dynamicTypeSize.isAccessibilitySize
+            ? [GridItem(.flexible())]
+            : [GridItem(.flexible(), spacing: 10), GridItem(.flexible(), spacing: 10)]
+
+        return LazyVGrid(columns: columns, alignment: .leading, spacing: 10) {
+            metadataRow("\(motionData.frameCount) motion frames", systemImage: "film.stack")
+            metadataRow("\(motionData.spriteFrameCount) sprite frames", systemImage: "photo.stack")
+            metadataRow("\(motionData.characterCode) / \(motionData.skillCode)", systemImage: "shippingbox")
+
+            if let previewSize = motionData.previewSize {
+                metadataRow(
+                    "\(Int(previewSize.width)) x \(Int(previewSize.height)) sprite size",
+                    systemImage: "rectangle.expand.vertical"
+                )
+            }
+        }
     }
 
     private func playbackStateLabel(for state: MotionPlayerModel.State) -> String {
@@ -117,7 +126,7 @@ struct MotionPlayerPreviewCardView: View {
             .foregroundStyle(.primary)
             .padding(.horizontal, 12)
             .padding(.vertical, 10)
-            .frame(maxWidth: .infinity, alignment: .leading)
+            .frame(maxWidth: .infinity, minHeight: 52, alignment: .leading)
             .redBlockingControlSurface(cornerRadius: 16)
     }
 }
