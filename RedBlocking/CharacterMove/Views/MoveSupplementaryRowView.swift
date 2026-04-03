@@ -13,6 +13,8 @@ struct MoveSupplementaryRowView: View {
 
     var body: some View {
         Text(title)
+            .font(.subheadline)
+            .foregroundStyle(.primary.opacity(0.92))
             .frame(maxWidth: .infinity, alignment: .leading)
             .fixedSize(horizontal: false, vertical: true)
     }

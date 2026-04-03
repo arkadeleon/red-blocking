@@ -14,9 +14,9 @@ struct MotionPlayerHitboxControlsView: View {
     var body: some View {
         @Bindable var visibility = appModel.settings.hitboxVisibility
 
-        VStack(alignment: .leading, spacing: 16) {
+        VStack(alignment: .leading, spacing: 18) {
             Text("Hitbox Layers")
-                .font(.headline)
+                .redBlockingSectionTag(prominent: true)
 
             MotionPlayerHitboxVisibilityGroupView(
                 title: "Player 1",

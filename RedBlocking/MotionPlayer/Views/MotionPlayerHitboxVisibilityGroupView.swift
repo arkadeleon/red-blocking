@@ -55,9 +55,9 @@ struct MotionPlayerHitboxVisibilityGroupView: View {
     }
 
     var body: some View {
-        VStack(alignment: .leading, spacing: 12) {
+        VStack(alignment: .leading, spacing: 14) {
             Text(title)
-                .font(.subheadline.weight(.semibold))
+                .redBlockingSectionTag()
 
             LazyVStack(alignment: .leading, spacing: 12) {
                 MotionPlayerHitboxToggleView(
@@ -99,6 +99,6 @@ struct MotionPlayerHitboxVisibilityGroupView: View {
             }
         }
         .padding(16)
-        .redBlockingInsetPanel()
+        .redBlockingControlSurface(cornerRadius: 22)
     }
 }

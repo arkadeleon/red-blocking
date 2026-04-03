@@ -18,6 +18,7 @@ struct MoveNextRowView: View {
             HStack(alignment: .center, spacing: 12) {
                 VStack(alignment: .leading, spacing: 4) {
                     Text(title)
+                        .font(.body.weight(.semibold))
                         .foregroundStyle(.primary)
                         .fixedSize(horizontal: false, vertical: true)
 
@@ -31,15 +32,37 @@ struct MoveNextRowView: View {
 
                 Spacer(minLength: 12)
 
-                Image(systemName: "chevron.right.circle.fill")
-                    .font(.body)
-                    .foregroundStyle(.secondary)
-                    .accessibilityHidden(true)
+                rowBadge
             }
+            .padding(.horizontal, 14)
+            .padding(.vertical, 12)
+            .redBlockingControlSurface(cornerRadius: 14)
             .contentShape(Rectangle())
         }
         .buttonStyle(.plain)
         .accessibilityElement(children: .combine)
         .accessibilityHint("Opens this move category.")
+    }
+
+    private var rowBadge: some View {
+        HStack(spacing: 6) {
+            Text("Browse")
+                .font(.caption.weight(.bold))
+
+            Image(systemName: "chevron.right")
+                .font(.caption.weight(.bold))
+        }
+        .foregroundStyle(Color.rbAmber.opacity(0.94))
+        .padding(.horizontal, 10)
+        .padding(.vertical, 8)
+        .background {
+            Capsule(style: .continuous)
+                .fill(Color.rbCoal.opacity(0.72))
+                .overlay {
+                    Capsule(style: .continuous)
+                        .strokeBorder(Color.rbPanelBorder.opacity(0.48), lineWidth: 1)
+                }
+        }
+        .accessibilityHidden(true)
     }
 }

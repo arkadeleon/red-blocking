@@ -26,7 +26,7 @@ struct MoveBrowserView: View {
 
     var body: some View {
         ScrollView {
-            LazyVStack(spacing: 20) {
+            LazyVStack(spacing: 24) {
                 if let errorMessage = model.errorMessage {
                     ContentUnavailableView(
                         "Couldn't Load Moves",
@@ -52,8 +52,10 @@ struct MoveBrowserView: View {
                 }
             }
         }
-        .contentMargins(.top, 16, for: .scrollContent)
+        .scrollIndicators(.hidden)
+        .contentMargins(.top, 20, for: .scrollContent)
         .contentMargins(.horizontal, horizontalContentMargin, for: .scrollContent)
+        .contentMargins(.bottom, 28, for: .scrollContent)
         .navigationTitle(model.page.navigationTitle)
         .modifier(VariantPickerBar(variantNames: model.page.variantNames, selection: $selectedVariant))
         .onChange(of: model.page.id) { selectedVariant = 0 }
@@ -86,11 +88,19 @@ private struct VariantPickerBar: ViewModifier {
     }
 
     private var pickerView: some View {
-        Picker("", selection: $selection) {
-            ForEach(variantNames.indices, id: \.self) { index in
-                Text(variantNames[index]).tag(index)
+        VStack(alignment: .leading, spacing: 10) {
+            Text("Variant")
+                .redBlockingSectionTag()
+
+            Picker("", selection: $selection) {
+                ForEach(variantNames.indices, id: \.self) { index in
+                    Text(variantNames[index]).tag(index)
+                }
             }
+            .pickerStyle(.segmented)
         }
-        .pickerStyle(.segmented)
+        .padding(.horizontal, 14)
+        .padding(.vertical, 12)
+        .redBlockingControlSurface(cornerRadius: 20, highlighted: true)
     }
 }

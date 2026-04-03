@@ -31,6 +31,7 @@ struct MotionPlayerHitboxToggleView: View {
         Toggle(isOn: $isOn) {
             Label {
                 Text(title)
+                    .font(.subheadline.weight(.semibold))
             } icon: {
                 Image(systemName: symbolName)
                     .foregroundStyle(tintColor)
@@ -39,5 +40,8 @@ struct MotionPlayerHitboxToggleView: View {
             }
         }
         .tint(tintColor)
+        .padding(.horizontal, 12)
+        .padding(.vertical, 10)
+        .redBlockingControlSurface(cornerRadius: 16, highlighted: isOn)
     }
 }

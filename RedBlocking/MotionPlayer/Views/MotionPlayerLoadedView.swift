@@ -37,9 +37,9 @@ struct MotionPlayerLoadedView: View {
                     motionData: motionData,
                     playerModel: playerModel
                 )
-                .frame(maxWidth: 520)
+                .frame(maxWidth: 560)
 
-                VStack(spacing: 20) {
+                VStack(spacing: 24) {
                     MotionPlayerTransportControlsView(
                         motionData: motionData,
                         playerModel: playerModel,
@@ -49,10 +49,10 @@ struct MotionPlayerLoadedView: View {
 
                     MotionPlayerHitboxControlsView()
                 }
-                .frame(maxWidth: 380)
+                .frame(maxWidth: 400)
             }
             .padding(24)
-            .frame(maxWidth: 1040, alignment: .center)
+            .frame(maxWidth: 1080, alignment: .center)
             .frame(maxWidth: .infinity, alignment: .center)
         }
         .scrollIndicators(.hidden)
@@ -60,9 +60,9 @@ struct MotionPlayerLoadedView: View {
 
     private var layout: AnyLayout {
         if horizontalSizeClass == .compact || dynamicTypeSize.isAccessibilitySize {
-            AnyLayout(VStackLayout(spacing: 20))
+            AnyLayout(VStackLayout(spacing: 24))
         } else {
-            AnyLayout(HStackLayout(alignment: .top, spacing: 24))
+            AnyLayout(HStackLayout(alignment: .top, spacing: 28))
         }
     }
 }

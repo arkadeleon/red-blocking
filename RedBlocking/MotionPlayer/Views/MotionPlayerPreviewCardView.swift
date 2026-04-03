@@ -20,7 +20,7 @@ struct MotionPlayerPreviewCardView: View {
         .precision(.integerLength(3...))
 
     var body: some View {
-        VStack(alignment: .leading, spacing: 16) {
+        VStack(alignment: .leading, spacing: 18) {
             ViewThatFits(in: .horizontal) {
                 HStack(alignment: .firstTextBaseline) {
                     headerText
@@ -50,12 +50,12 @@ struct MotionPlayerPreviewCardView: View {
             }
 
             VStack(alignment: .leading, spacing: 10) {
-                Label("\(motionData.frameCount) motion frames", systemImage: "film.stack")
-                Label("\(motionData.spriteFrameCount) sprite frames", systemImage: "photo.stack")
-                Label("\(motionData.characterCode) / \(motionData.skillCode)", systemImage: "shippingbox")
+                metadataRow("\(motionData.frameCount) motion frames", systemImage: "film.stack")
+                metadataRow("\(motionData.spriteFrameCount) sprite frames", systemImage: "photo.stack")
+                metadataRow("\(motionData.characterCode) / \(motionData.skillCode)", systemImage: "shippingbox")
 
                 if let previewSize = motionData.previewSize {
-                    Label(
+                    metadataRow(
                         "\(Int(previewSize.width)) x \(Int(previewSize.height)) sprite size",
                         systemImage: "rectangle.expand.vertical"
                     )
@@ -68,10 +68,8 @@ struct MotionPlayerPreviewCardView: View {
                         .fixedSize(horizontal: false, vertical: true)
                 }
             }
-            .font(.subheadline)
-            .foregroundStyle(.secondary)
         }
-        .padding(20)
+        .padding(22)
         .redBlockingPanel(cornerRadius: 28, elevated: true)
         .accessibilityElement(children: .contain)
     }
@@ -96,17 +94,30 @@ struct MotionPlayerPreviewCardView: View {
     private var headerText: some View {
         VStack(alignment: .leading, spacing: 4) {
             Text("Motion Preview")
-                .font(.headline)
+                .redBlockingSectionTag(prominent: true)
 
             Text(playbackStateLabel(for: playerModel.state))
                 .font(.subheadline.weight(.medium))
-                .foregroundStyle(.secondary)
+                .foregroundStyle(Color.rbAmber.opacity(0.88))
         }
     }
 
     private var currentFrameLabel: some View {
         Text("Frame \(formattedFrame(playerModel.currentFrameIndex))")
             .font(dynamicTypeSize.isAccessibilitySize ? .title3.monospacedDigit() : .headline.monospacedDigit())
-            .foregroundStyle(.secondary)
+            .foregroundStyle(.primary)
+            .padding(.horizontal, 14)
+            .padding(.vertical, 10)
+            .redBlockingControlSurface(cornerRadius: 18, highlighted: true)
+    }
+
+    private func metadataRow(_ title: String, systemImage: String) -> some View {
+        Label(title, systemImage: systemImage)
+            .font(.subheadline.weight(.medium))
+            .foregroundStyle(.primary)
+            .padding(.horizontal, 12)
+            .padding(.vertical, 10)
+            .frame(maxWidth: .infinity, alignment: .leading)
+            .redBlockingControlSurface(cornerRadius: 16)
     }
 }

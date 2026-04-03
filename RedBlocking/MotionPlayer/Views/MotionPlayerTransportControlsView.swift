@@ -37,20 +37,27 @@ struct MotionPlayerTransportControlsView: View {
     var body: some View {
         @Bindable var playerModel = playerModel
 
-        VStack(alignment: .leading, spacing: 18) {
-            Text("Playback")
-                .font(.headline)
+        VStack(alignment: .leading, spacing: 20) {
+            HStack(alignment: .center, spacing: 12) {
+                Text("Playback")
+                    .redBlockingSectionTag(prominent: true)
 
-            LabeledContent(
-                "Frame",
-                value: "\(formattedFrame(playerModel.currentFrameIndex)) / \(formattedFrame(motionData.frameCount))"
-            )
-            .font(.body.monospacedDigit())
+                Spacer(minLength: 12)
+
+                frameCounter(playerModel: playerModel)
+            }
+
+            LabeledContent("Frame", value: "\(formattedFrame(playerModel.currentFrameIndex)) / \(formattedFrame(motionData.frameCount))")
+                .font(.body.monospacedDigit())
+                .padding(.horizontal, 14)
+                .padding(.vertical, 12)
+                .redBlockingControlSurface(cornerRadius: 18)
 
             if playerModel.totalFrames > 1 {
                 VStack(alignment: .leading, spacing: 8) {
                     Text("Frame Position")
                         .font(.subheadline.weight(.medium))
+                        .foregroundStyle(Color.rbAmber.opacity(0.92))
 
                     Slider(
                         value: $scrubbedFrame,
@@ -76,48 +83,56 @@ struct MotionPlayerTransportControlsView: View {
                     .font(.caption.monospacedDigit())
                     .foregroundStyle(.secondary)
                 }
+                .padding(.horizontal, 14)
+                .padding(.vertical, 12)
+                .redBlockingControlSurface(cornerRadius: 18, highlighted: true)
             }
 
-            Group {
-                if dynamicTypeSize.isAccessibilitySize {
-                    transportButtonGrid
-                        .labelStyle(.titleAndIcon)
-                } else {
-                    transportButtonGrid
-                        .labelStyle(.iconOnly)
-                }
-            }
-            .buttonStyle(.bordered)
-            .controlSize(.large)
+            transportButtonGrid
+                .labelStyle(.titleAndIcon)
 
             ViewThatFits(in: .horizontal) {
                 HStack(spacing: 12) {
                     Text("FPS")
                         .font(.subheadline.weight(.medium))
+                        .foregroundStyle(Color.rbAmber.opacity(0.92))
 
                     Spacer()
 
                     TextField("Frames Per Second", value: $playerModel.framesPerSecond, format: .number)
-                        .textFieldStyle(.roundedBorder)
+                        .textFieldStyle(.plain)
                         .multilineTextAlignment(.trailing)
                         .frame(minWidth: 84, maxWidth: 100)
                         .keyboardType(.numberPad)
+                        .padding(.horizontal, 10)
+                        .padding(.vertical, 8)
+                        .redBlockingControlSurface(cornerRadius: 14)
 
                     Stepper("Frames Per Second", value: $playerModel.framesPerSecond, in: PlaybackSettings.supportedFPSRange)
                         .labelsHidden()
                         .accessibilityLabel("Frames Per Second")
                 }
+                .padding(.horizontal, 14)
+                .padding(.vertical, 12)
+                .redBlockingControlSurface(cornerRadius: 18)
 
                 VStack(alignment: .leading, spacing: 12) {
                     Text("FPS")
                         .font(.subheadline.weight(.medium))
+                        .foregroundStyle(Color.rbAmber.opacity(0.92))
 
                     TextField("Frames Per Second", value: $playerModel.framesPerSecond, format: .number)
-                        .textFieldStyle(.roundedBorder)
+                        .textFieldStyle(.plain)
                         .keyboardType(.numberPad)
+                        .padding(.horizontal, 10)
+                        .padding(.vertical, 10)
+                        .redBlockingControlSurface(cornerRadius: 14)
 
                     Stepper("Frames Per Second", value: $playerModel.framesPerSecond, in: PlaybackSettings.supportedFPSRange)
                 }
+                .padding(.horizontal, 14)
+                .padding(.vertical, 12)
+                .redBlockingControlSurface(cornerRadius: 18)
             }
 
             if playerModel.framesPerSecond == 0 {
@@ -176,7 +191,7 @@ struct MotionPlayerTransportControlsView: View {
         LazyVGrid(columns: transportColumns, alignment: .leading, spacing: 12) {
             Button("Previous Frame", systemImage: "backward.frame", action: playerModel.stepBackward)
                 .disabled(playerModel.totalFrames == 0)
-                .frame(maxWidth: .infinity, minHeight: 44)
+                .buttonStyle(RedBlockingActionButtonStyle())
 
             Button(
                 playerModel.isPlaying ? "Pause" : "Play",
@@ -185,16 +200,24 @@ struct MotionPlayerTransportControlsView: View {
             )
             .disabled(playerModel.totalFrames == 0 || reduceMotion)
             .accessibilityHint(reduceMotion ? "Playback is unavailable while Reduce Motion is enabled." : "Plays or pauses the preview.")
-            .frame(maxWidth: .infinity, minHeight: 44)
-            .buttonStyle(.borderedProminent)
+            .buttonStyle(RedBlockingActionButtonStyle(prominent: true))
 
             Button("Stop", systemImage: "stop.circle", action: playerModel.stop)
                 .disabled(playerModel.totalFrames == 0)
-                .frame(maxWidth: .infinity, minHeight: 44)
+                .buttonStyle(RedBlockingActionButtonStyle())
 
             Button("Next Frame", systemImage: "forward.frame", action: playerModel.stepForward)
                 .disabled(playerModel.totalFrames == 0)
-                .frame(maxWidth: .infinity, minHeight: 44)
+                .buttonStyle(RedBlockingActionButtonStyle())
         }
+    }
+
+    private func frameCounter(playerModel: MotionPlayerModel) -> some View {
+        Text("\(formattedFrame(playerModel.currentFrameIndex)) / \(formattedFrame(motionData.frameCount))")
+            .font(.caption.monospacedDigit().weight(.bold))
+            .foregroundStyle(Color.rbGold)
+            .padding(.horizontal, 12)
+            .padding(.vertical, 8)
+            .redBlockingControlSurface(cornerRadius: 16, highlighted: true)
     }
 }
