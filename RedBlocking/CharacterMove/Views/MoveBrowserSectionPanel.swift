@@ -141,11 +141,12 @@ private struct CollapsibleSectionPanel: View {
     let dividerInsetResolver: (MoveBrowserRow) -> CGFloat
     let summary: String
 
+    @Environment(\.accessibilityReduceMotion) private var reduceMotion
     @State private var isExpanded = false
 
     var body: some View {
         VStack(alignment: .leading, spacing: 12) {
-            Button(action: { isExpanded.toggle() }) {
+            Button(action: { toggleExpanded() }) {
                 HStack(spacing: 12) {
                     if let title = section.title, !title.isEmpty {
                         Text(title)
@@ -158,9 +159,10 @@ private struct CollapsibleSectionPanel: View {
 
                     Spacer(minLength: 12)
 
-                    Image(systemName: isExpanded ? "chevron.up" : "chevron.down")
+                    Image(systemName: "chevron.down")
                         .font(.caption.weight(.bold))
                         .foregroundStyle(Color.rbAmber.opacity(0.9))
+                        .rotationEffect(.degrees(isExpanded ? -180 : 0))
                 }
                 .padding(.horizontal, 14)
                 .padding(.vertical, 12)
@@ -186,6 +188,17 @@ private struct CollapsibleSectionPanel: View {
                     }
                 }
                 .redBlockingPanel(cornerRadius: 22)
+                .transition(.opacity)
+            }
+        }
+    }
+
+    private func toggleExpanded() {
+        if reduceMotion {
+            isExpanded.toggle()
+        } else {
+            withAnimation(.snappy(duration: 0.28)) {
+                isExpanded.toggle()
             }
         }
     }

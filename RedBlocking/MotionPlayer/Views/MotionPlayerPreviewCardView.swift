@@ -68,6 +68,8 @@ struct MotionPlayerPreviewCardView: View {
             Text(playbackStateLabel(for: playerModel.state))
                 .font(.subheadline.weight(.medium))
                 .foregroundStyle(Color.rbAmber.opacity(0.88))
+                .contentTransition(.numericText())
+                .animation(.easeOut(duration: 0.2), value: playerModel.state)
         }
     }
 }

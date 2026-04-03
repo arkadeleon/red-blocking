@@ -11,4 +11,9 @@ enum MotionPlayerLoadState {
     case loading
     case loaded(MotionPlaybackData)
     case failed(String)
+
+    var isLoaded: Bool {
+        if case .loaded = self { return true }
+        return false
+    }
 }

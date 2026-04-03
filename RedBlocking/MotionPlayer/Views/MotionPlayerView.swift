@@ -25,42 +25,45 @@ struct MotionPlayerView: View {
         ZStack {
             CharacterDetailBackgroundView(selection: appModel.navigation.selectedCharacter)
 
-            switch loadState {
-            case .idle, .loading:
-                ProgressView("Loading move preview...")
-                    .padding(24)
-                    .redBlockingPanel()
-            case let .failed(message):
-                ContentUnavailableView(
-                    "Couldn't Load Preview",
-                    systemImage: "exclamationmark.triangle",
-                    description: Text(message)
-                )
-                .padding(24)
-                .redBlockingPanel()
-                .padding(24)
-            case let .loaded(motionData):
-                if let playerModel {
-                    MotionPlayerLoadedView(
-                        motionData: motionData,
-                        playerModel: playerModel,
-                        scrubbedFrame: $scrubbedFrame,
-                        isScrubbing: $isScrubbing
-                    )
-                    .onChange(of: playerModel.currentFrameIndex, initial: true) { _, newValue in
-                        guard isScrubbing == false else {
-                            return
-                        }
-
-                        scrubbedFrame = Double(newValue)
-                    }
-                    .onDisappear(perform: playerModel.pause)
-                } else {
-                    ProgressView("Setting up preview...")
+            Group {
+                switch loadState {
+                case .idle, .loading:
+                    ProgressView("Loading move preview...")
                         .padding(24)
                         .redBlockingPanel()
+                case let .failed(message):
+                    ContentUnavailableView(
+                        "Couldn't Load Preview",
+                        systemImage: "exclamationmark.triangle",
+                        description: Text(message)
+                    )
+                    .padding(24)
+                    .redBlockingPanel()
+                    .padding(24)
+                case let .loaded(motionData):
+                    if let playerModel {
+                        MotionPlayerLoadedView(
+                            motionData: motionData,
+                            playerModel: playerModel,
+                            scrubbedFrame: $scrubbedFrame,
+                            isScrubbing: $isScrubbing
+                        )
+                        .onChange(of: playerModel.currentFrameIndex, initial: true) { _, newValue in
+                            guard isScrubbing == false else {
+                                return
+                            }
+
+                            scrubbedFrame = Double(newValue)
+                        }
+                        .onDisappear(perform: playerModel.pause)
+                    } else {
+                        ProgressView("Setting up preview...")
+                            .padding(24)
+                            .redBlockingPanel()
+                    }
                 }
             }
+            .animation(reduceMotion ? nil : .easeOut(duration: 0.32), value: loadState.isLoaded)
         }
         .navigationTitle(title)
         .toolbarTitleDisplayMode(.inline)

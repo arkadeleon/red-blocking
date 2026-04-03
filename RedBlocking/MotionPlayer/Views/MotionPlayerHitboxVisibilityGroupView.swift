@@ -59,9 +59,11 @@ struct MotionPlayerHitboxVisibilityGroupView: View {
         _isExpanded = State(initialValue: startsExpanded)
     }
 
+    @Environment(\.accessibilityReduceMotion) private var reduceMotion
+
     var body: some View {
         VStack(alignment: .leading, spacing: 14) {
-            Button(action: { isExpanded.toggle() }) {
+            Button(action: { toggleExpanded() }) {
                 HStack(spacing: 12) {
                     Text(title)
                         .redBlockingSectionTag()
@@ -72,9 +74,10 @@ struct MotionPlayerHitboxVisibilityGroupView: View {
 
                     Spacer(minLength: 12)
 
-                    Image(systemName: isExpanded ? "chevron.up" : "chevron.down")
+                    Image(systemName: "chevron.down")
                         .font(.caption.weight(.bold))
                         .foregroundStyle(Color.rbAmber.opacity(0.9))
+                        .rotationEffect(.degrees(isExpanded ? -180 : 0))
                 }
                 .padding(.horizontal, 12)
                 .padding(.vertical, 10)
@@ -122,6 +125,17 @@ struct MotionPlayerHitboxVisibilityGroupView: View {
                         isOn: $pushVisible
                     )
                 }
+                .transition(.opacity)
+            }
+        }
+    }
+
+    private func toggleExpanded() {
+        if reduceMotion {
+            isExpanded.toggle()
+        } else {
+            withAnimation(.snappy(duration: 0.28)) {
+                isExpanded.toggle()
             }
         }
     }

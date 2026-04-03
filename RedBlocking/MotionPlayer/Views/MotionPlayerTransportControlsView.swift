@@ -150,6 +150,7 @@ struct MotionPlayerTransportControlsView: View {
             Image(systemName: systemImage)
                 .font(.system(size: prominent ? 24 : 18, weight: .black, design: .rounded))
                 .foregroundStyle(prominent ? Color.rbCoal : Color.rbAmber.opacity(0.96))
+                .contentTransition(.symbolEffect(.replace.offUp))
                 .frame(maxWidth: .infinity)
                 .frame(minHeight: dynamicTypeSize.isAccessibilitySize ? 60 : 48)
                 .background {
@@ -178,7 +179,7 @@ struct MotionPlayerTransportControlsView: View {
         .disabled(playerModel.totalFrames == 0 || (prominent && reduceMotion))
         .accessibilityLabel(accessibilityLabel)
         .accessibilityHint(accessibilityHint)
-        .buttonStyle(.plain)
+        .buttonStyle(TransportStripButtonStyle())
     }
 
     @ViewBuilder
@@ -239,7 +240,7 @@ struct MotionPlayerTransportControlsView: View {
         )
 
         VStack(alignment: .leading, spacing: 12) {
-            Button(action: { showsSpeedControls.toggle() }) {
+            Button(action: { toggleSpeedControls() }) {
                 HStack(spacing: 12) {
                     Text("Speed")
                         .redBlockingSectionTag()
@@ -250,9 +251,10 @@ struct MotionPlayerTransportControlsView: View {
                         .font(.subheadline.weight(.medium))
                         .foregroundStyle(.secondary)
 
-                    Image(systemName: showsSpeedControls ? "chevron.up" : "chevron.down")
+                    Image(systemName: "chevron.down")
                         .font(.caption.weight(.bold))
                         .foregroundStyle(Color.rbAmber.opacity(0.9))
+                        .rotationEffect(.degrees(showsSpeedControls ? -180 : 0))
                 }
                 .padding(.horizontal, 14)
                 .padding(.vertical, 12)
@@ -305,6 +307,17 @@ struct MotionPlayerTransportControlsView: View {
                     .padding(.vertical, 12)
                     .redBlockingControlSurface(cornerRadius: 18)
                 }
+                .transition(.opacity)
+            }
+        }
+    }
+
+    private func toggleSpeedControls() {
+        if reduceMotion {
+            showsSpeedControls.toggle()
+        } else {
+            withAnimation(.snappy(duration: 0.28)) {
+                showsSpeedControls.toggle()
             }
         }
     }
@@ -315,5 +328,13 @@ struct MotionPlayerTransportControlsView: View {
         }
 
         return "\(playerModel.framesPerSecond) FPS"
+    }
+}
+
+private struct TransportStripButtonStyle: ButtonStyle {
+    func makeBody(configuration: Configuration) -> some View {
+        configuration.label
+            .scaleEffect(configuration.isPressed ? 0.88 : 1)
+            .animation(.easeOut(duration: 0.12), value: configuration.isPressed)
     }
 }

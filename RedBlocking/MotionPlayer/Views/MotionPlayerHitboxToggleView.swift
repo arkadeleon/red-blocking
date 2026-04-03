@@ -43,5 +43,6 @@ struct MotionPlayerHitboxToggleView: View {
         .padding(.horizontal, 12)
         .padding(.vertical, 10)
         .redBlockingControlSurface(cornerRadius: 16, highlighted: isOn)
+        .animation(.easeOut(duration: 0.18), value: isOn)
     }
 }
