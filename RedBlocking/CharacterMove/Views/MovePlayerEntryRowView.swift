@@ -25,7 +25,7 @@ struct MovePlayerEntryRowView: View {
                     if let subtitle {
                         Text(subtitle)
                             .font(.subheadline)
-                            .foregroundStyle(.secondary)
+                            .foregroundStyle(Color.rbTextMuted)
                             .fixedSize(horizontal: false, vertical: true)
                     }
                 }

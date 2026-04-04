@@ -46,14 +46,14 @@ struct MotionPlayerTransportControlsView: View {
             if playerModel.framesPerSecond == 0 {
                 Text("Playback is paused at the current frame until you raise the speed again.")
                     .font(.footnote)
-                    .foregroundStyle(Color.rbAmber.opacity(0.74))
+                    .foregroundStyle(Color.rbTextMuted)
                     .fixedSize(horizontal: false, vertical: true)
             }
 
             if reduceMotion {
                 Text("Reduce Motion is enabled, so continuous playback is paused. Use the frame slider or step controls to inspect the motion.")
                     .font(.footnote)
-                    .foregroundStyle(Color.rbAmber.opacity(0.74))
+                    .foregroundStyle(Color.rbTextMuted)
                     .fixedSize(horizontal: false, vertical: true)
             }
         }
@@ -162,7 +162,7 @@ struct MotionPlayerTransportControlsView: View {
                 HStack(alignment: .firstTextBaseline, spacing: 12) {
                     Text("Frame Position")
                         .font(.subheadline.weight(.medium))
-                        .foregroundStyle(Color.rbAmber.opacity(0.92))
+                        .foregroundStyle(Color.rbTextMuted)
 
                     Spacer(minLength: 12)
 
@@ -194,7 +194,7 @@ struct MotionPlayerTransportControlsView: View {
                         Text(formattedFrame(playerModel.totalFrames - 1))
                     }
                     .font(.caption.monospacedDigit())
-                    .foregroundStyle(.secondary)
+                    .foregroundStyle(Color.rbTextMuted)
                 }
             }
             .padding(.horizontal, 14)
@@ -222,7 +222,7 @@ struct MotionPlayerTransportControlsView: View {
 
                     Text(speedSummary(for: playerModel))
                         .font(.subheadline.weight(.medium))
-                        .foregroundStyle(Color.rbAmber.opacity(0.74))
+                        .foregroundStyle(Color.rbTextMuted)
                         .contentTransition(reduceMotion ? .identity : .numericText())
 
                     Image(systemName: "chevron.down")
@@ -244,7 +244,7 @@ struct MotionPlayerTransportControlsView: View {
                     HStack(spacing: 12) {
                         Text("FPS")
                             .font(.subheadline.weight(.medium))
-                            .foregroundStyle(Color.rbAmber.opacity(0.92))
+                            .foregroundStyle(Color.rbTextMuted)
 
                         Spacer()
 
@@ -268,7 +268,7 @@ struct MotionPlayerTransportControlsView: View {
                     VStack(alignment: .leading, spacing: 12) {
                         Text("FPS")
                             .font(.subheadline.weight(.medium))
-                            .foregroundStyle(Color.rbAmber.opacity(0.92))
+                            .foregroundStyle(Color.rbTextMuted)
 
                         TextField("Frames Per Second", value: framesPerSecond, format: .number)
                             .textFieldStyle(.plain)

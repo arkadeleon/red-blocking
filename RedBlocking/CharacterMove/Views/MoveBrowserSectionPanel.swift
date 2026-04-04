@@ -155,7 +155,7 @@ private struct CollapsibleSectionPanel: View {
 
                     Text(summary)
                         .font(.caption.weight(.medium))
-                        .foregroundStyle(Color.rbAmber.opacity(0.74))
+                        .foregroundStyle(Color.rbTextMuted)
                         .lineLimit(1)
 
                     Spacer(minLength: 12)

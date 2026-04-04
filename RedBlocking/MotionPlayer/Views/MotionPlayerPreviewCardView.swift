@@ -32,7 +32,7 @@ struct MotionPlayerPreviewCardView: View {
             if motionData.hasSpriteCountMismatch {
                 Label("Some frames are missing. The nearest available image is shown instead.", systemImage: "exclamationmark.triangle")
                     .font(.footnote.weight(.medium))
-                    .foregroundStyle(Color.rbAmber.opacity(0.92))
+                    .foregroundStyle(Color.rbTextMuted)
                     .padding(.horizontal, 12)
                     .padding(.vertical, 10)
                     .redBlockingControlSurface(cornerRadius: 16)
@@ -92,7 +92,7 @@ struct MotionPlayerPreviewCardView: View {
     private var playbackStateText: some View {
         let stateText = Text(playbackStateLabel(for: playerModel.state))
             .font(.subheadline.weight(.medium))
-            .foregroundStyle(Color.rbAmber.opacity(0.88))
+            .foregroundStyle(Color.rbTextMuted)
 
         if reduceMotion {
             stateText

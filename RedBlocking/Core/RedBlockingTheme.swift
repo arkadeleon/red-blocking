@@ -19,6 +19,7 @@ extension Color {
     static let rbPanelBorder = Color("RBPanelBorder")
     static let rbPanelElevated = Color("RBPanelElevated")
     static let rbScarlet = Color("RBScarlet")
+    static let rbTextMuted = Color("RBTextMuted")
 }
 
 private struct RedBlockingPanelModifier: ViewModifier {
@@ -135,7 +136,7 @@ private struct RedBlockingSectionTagModifier: ViewModifier {
             .font(prominent ? .caption.weight(.black) : .caption.weight(.bold))
             .kerning(prominent ? 1.2 : 0.9)
             .textCase(.uppercase)
-            .foregroundStyle(prominent ? Color.rbGold : Color.rbAmber.opacity(0.92))
+            .foregroundStyle(prominent ? Color.rbGold : Color.rbTextMuted)
             .padding(.horizontal, prominent ? 12 : 10)
             .padding(.vertical, prominent ? 7 : 6)
             .background {

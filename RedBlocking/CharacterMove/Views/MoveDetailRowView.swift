@@ -31,7 +31,7 @@ struct MoveDetailRowView: View {
         Text(title)
             .font(.caption.weight(.bold))
             .kerning(0.4)
-            .foregroundStyle(Color.rbAmber.opacity(0.84))
+            .foregroundStyle(Color.rbTextMuted)
             .fixedSize(horizontal: false, vertical: true)
     }
 

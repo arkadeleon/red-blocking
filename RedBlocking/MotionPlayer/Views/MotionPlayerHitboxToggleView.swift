@@ -41,7 +41,7 @@ struct MotionPlayerHitboxToggleView: View {
 
                     Text(description)
                         .font(.caption)
-                        .foregroundStyle(.secondary)
+                        .foregroundStyle(Color.rbTextMuted)
                         .fixedSize(horizontal: false, vertical: true)
                 }
             } icon: {
