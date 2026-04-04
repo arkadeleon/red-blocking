@@ -90,6 +90,14 @@ struct MotionPlayerTransportControlsView: View {
         frame.formatted(frameNumberFormat)
     }
 
+    private func displayedFrameNumber(_ frameIndex: Int, totalFrames: Int) -> Int {
+        guard totalFrames > 0 else {
+            return 0
+        }
+
+        return min(max(frameIndex + 1, 1), totalFrames)
+    }
+
     private var transportButtonGrid: some View {
         HStack(spacing: 0) {
             stripButton(
@@ -166,9 +174,11 @@ struct MotionPlayerTransportControlsView: View {
 
                     Spacer(minLength: 12)
 
-                    Text("\(formattedFrame(playerModel.currentFrameIndex)) / \(formattedFrame(playerModel.totalFrames))")
-                        .font(.headline.monospacedDigit().weight(.semibold))
-                        .redBlockingText(.primary)
+                    Text(
+                        "\(formattedFrame(displayedFrameNumber(playerModel.currentFrameIndex, totalFrames: playerModel.totalFrames))) / \(formattedFrame(playerModel.totalFrames))"
+                    )
+                    .font(.headline.monospacedDigit().weight(.semibold))
+                    .redBlockingText(.primary)
                 }
 
                 if playerModel.totalFrames > 1 {
@@ -179,7 +189,9 @@ struct MotionPlayerTransportControlsView: View {
                         onEditingChanged: handleScrubbingChange
                     )
                     .accessibilityLabel("Frame Position")
-                    .accessibilityValue("Frame \(formattedFrame(playerModel.currentFrameIndex)) of \(formattedFrame(playerModel.totalFrames))")
+                    .accessibilityValue(
+                        "Frame \(formattedFrame(displayedFrameNumber(playerModel.currentFrameIndex, totalFrames: playerModel.totalFrames))) of \(formattedFrame(playerModel.totalFrames))"
+                    )
                     .onChange(of: scrubbedFrame) { _, newValue in
                         guard isScrubbing else {
                             return
@@ -189,9 +201,9 @@ struct MotionPlayerTransportControlsView: View {
                     }
 
                     HStack {
-                        Text(formattedFrame(0))
+                        Text(formattedFrame(1))
                         Spacer()
-                        Text(formattedFrame(playerModel.totalFrames - 1))
+                        Text(formattedFrame(playerModel.totalFrames))
                     }
                     .font(.caption.monospacedDigit())
                     .redBlockingText(.secondary)

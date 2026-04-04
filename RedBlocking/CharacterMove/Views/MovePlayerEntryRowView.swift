@@ -15,33 +15,52 @@ struct MovePlayerEntryRowView: View {
 
     var body: some View {
         Button(action: action) {
-            HStack(alignment: .top, spacing: 12) {
-                VStack(alignment: .leading, spacing: 4) {
-                    Text(title)
-                        .font(.body.weight(.semibold))
-                        .redBlockingText(.primary)
-                        .fixedSize(horizontal: false, vertical: true)
-
-                    if let subtitle {
-                        Text(subtitle)
-                            .font(.subheadline)
-                            .redBlockingText(.secondary)
-                            .fixedSize(horizontal: false, vertical: true)
-                    }
-                }
-
-                Spacer(minLength: 12)
-
-                rowBadge
-            }
-            .padding(.horizontal, 14)
-            .padding(.vertical, 12)
-            .redBlockingControlSurface(cornerRadius: 14, highlighted: true)
-            .contentShape(Rectangle())
+            rowContent
+                .padding(.horizontal, 14)
+                .padding(.vertical, 12)
+                .redBlockingControlSurface(cornerRadius: 14, highlighted: true)
+                .contentShape(Rectangle())
         }
         .buttonStyle(RedBlockingPressableButtonStyle())
         .accessibilityElement(children: .combine)
         .accessibilityHint("Opens the move preview.")
+    }
+
+    @ViewBuilder
+    private var rowContent: some View {
+        ViewThatFits(in: .horizontal) {
+            HStack(alignment: .top, spacing: 12) {
+                titleStack
+                Spacer(minLength: 12)
+                rowBadge
+            }
+
+            VStack(alignment: .leading, spacing: 12) {
+                titleStack
+
+                HStack {
+                    rowBadge
+                    Spacer(minLength: 0)
+                }
+            }
+        }
+    }
+
+    private var titleStack: some View {
+        VStack(alignment: .leading, spacing: 4) {
+            Text(title)
+                .font(.body.weight(.semibold))
+                .redBlockingText(.primary)
+                .fixedSize(horizontal: false, vertical: true)
+
+            if let subtitle {
+                Text(subtitle)
+                    .font(.subheadline)
+                    .redBlockingText(.secondary)
+                    .fixedSize(horizontal: false, vertical: true)
+            }
+        }
+        .layoutPriority(1)
     }
 
     private var rowBadge: some View {
@@ -73,5 +92,6 @@ struct MovePlayerEntryRowView: View {
                 }
         }
         .accessibilityHidden(true)
+        .fixedSize(horizontal: true, vertical: false)
     }
 }

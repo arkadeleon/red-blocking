@@ -97,11 +97,15 @@ struct CharacterRosterCharacterButton: View {
             .offset(y: accessibilityReduceMotion ? 0 : (isSelected ? -diameter * 0.03 : 0))
             .animation(selectionAnimation, value: isSelected)
         }
-        .buttonStyle(.plain)
+        .buttonStyle(RedBlockingPressableButtonStyle(pressedScale: 0.97, pressedOpacity: 0.94))
         .frame(minWidth: 44, minHeight: 44)
         .accessibilityLabel(character.title)
         .accessibilityValue(isSelected ? "Selected" : "Not selected")
-        .accessibilityHint("Browse \(character.title)'s moves.")
+        .accessibilityHint(
+            isSelected
+                ? "\(character.title) is already selected."
+                : "Browse \(character.title)'s moves."
+        )
         .accessibilityAddTraits(isSelected ? [.isSelected] : [])
     }
 

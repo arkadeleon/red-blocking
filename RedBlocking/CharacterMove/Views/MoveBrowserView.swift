@@ -18,10 +18,10 @@ struct MoveBrowserView: View {
         if model.page.variantNames.isEmpty {
             return model.page.sections
         }
-        guard model.page.variantSections.indices.contains(selectedVariant) else {
-            return []
+        guard model.page.variantSections.indices.contains(resolvedSelectedVariant) else {
+            return model.page.sections
         }
-        return model.page.variantSections[selectedVariant]
+        return model.page.variantSections[resolvedSelectedVariant]
     }
 
     var body: some View {
@@ -57,12 +57,35 @@ struct MoveBrowserView: View {
         .contentMargins(.horizontal, horizontalContentMargin, for: .scrollContent)
         .contentMargins(.bottom, 28, for: .scrollContent)
         .navigationTitle(model.page.navigationTitle)
-        .modifier(VariantPickerBar(variantNames: model.page.variantNames, selection: $selectedVariant))
-        .onChange(of: model.page.id) { selectedVariant = 0 }
+        .modifier(
+            VariantPickerBar(
+                variantNames: model.page.variantNames,
+                selection: Binding(
+                    get: { resolvedSelectedVariant },
+                    set: { selectedVariant = clampedVariantIndex(for: $0) }
+                )
+            )
+        )
+        .onChange(of: model.page.id) { _, _ in
+            selectedVariant = 0
+        }
     }
 
     private var horizontalContentMargin: CGFloat {
         horizontalSizeClass == .regular ? 24 : 16
+    }
+
+    private var resolvedSelectedVariant: Int {
+        clampedVariantIndex(for: selectedVariant)
+    }
+
+    private func clampedVariantIndex(for index: Int) -> Int {
+        let upperBound = model.page.variantSections.count - 1
+        guard upperBound >= 0 else {
+            return 0
+        }
+
+        return min(max(index, 0), upperBound)
     }
 }
 
