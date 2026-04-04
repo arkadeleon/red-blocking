@@ -62,7 +62,8 @@ struct MotionRepository {
             characterCode: characterCode,
             skillCode: skillCode,
             spriteFrameCount: imageStore.frameCount,
-            frames: frames
+            frames: frames,
+            imageStore: imageStore
         )
     }
 }

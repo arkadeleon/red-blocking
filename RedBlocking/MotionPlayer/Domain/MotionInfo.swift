@@ -18,7 +18,7 @@ struct MotionInfo {
 }
 
 extension MotionInfo {
-    struct Frame: Decodable {
+    struct Frame: Decodable, Sendable {
         let player1: Player
         let player2: Player
 
@@ -30,13 +30,13 @@ extension MotionInfo {
 }
 
 extension MotionInfo {
-    struct Player: Decodable {
+    struct Player: Decodable, Sendable {
         let hitboxes: Hitboxes
     }
 }
 
 extension MotionInfo.Player {
-    struct Hitboxes: Decodable {
+    struct Hitboxes: Decodable, Sendable {
         let passive: [String]
         let otherVulnerability: [String]
         let active: [String]

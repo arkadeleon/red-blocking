@@ -94,6 +94,7 @@ struct MotionPlayerView: View {
                 characterCode: characterCode,
                 skillCode: skillCode
             )
+            await motionData.prepareFrame(at: 0)
             playerModel = MotionPlayerModel(
                 motionData: motionData,
                 playbackSettings: appModel.settings.playback

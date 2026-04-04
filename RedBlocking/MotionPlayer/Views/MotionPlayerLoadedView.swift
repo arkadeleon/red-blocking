@@ -50,6 +50,9 @@ struct MotionPlayerLoadedView: View {
         .contentMargins(.top, 20, for: .scrollContent)
         .contentMargins(.horizontal, horizontalContentMargin, for: .scrollContent)
         .contentMargins(.bottom, 28, for: .scrollContent)
+        .task(id: "\(motionData.characterCode)-\(motionData.skillCode)") {
+            await motionData.prepareAllFrames()
+        }
     }
 
     private var horizontalContentMargin: CGFloat {

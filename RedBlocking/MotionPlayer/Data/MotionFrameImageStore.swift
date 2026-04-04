@@ -9,10 +9,16 @@
 import CoreGraphics
 import Foundation
 import ImageIO
+import Synchronization
 
-final class MotionFrameImageStore {
+final class MotionFrameImageStore: @unchecked Sendable {
+    private struct State {
+        var imageCache: [Int: CGImage] = [:]
+    }
+
     private let imageSource: CGImageSource
-    private var imageCache: [Int: CGImage] = [:]
+    private let state = Mutex(State())
+    private let decodeLock = Mutex(())
 
     init(imageSource: CGImageSource) {
         self.imageSource = imageSource
@@ -27,16 +33,27 @@ final class MotionFrameImageStore {
             return nil
         }
 
-        if let cachedImage = imageCache[index] {
+        if let cachedImage = state.withLock({ $0.imageCache[index] }) {
             return cachedImage
         }
 
-        guard let image = CGImageSourceCreateImageAtIndex(imageSource, index, nil) else {
-            return nil
-        }
+        return decodeLock.withLock { _ in
+            if let cachedImage = state.withLock({ $0.imageCache[index] }) {
+                return cachedImage
+            }
 
-        imageCache[index] = image
-        return image
+            let decodeOptions = [
+                kCGImageSourceShouldCache: true,
+                kCGImageSourceShouldCacheImmediately: true
+            ] as CFDictionary
+
+            guard let image = CGImageSourceCreateImageAtIndex(imageSource, index, decodeOptions) else {
+                return nil
+            }
+
+            state.withLock { $0.imageCache[index] = image }
+            return image
+        }
     }
 
     func pixelSize(at index: Int) -> CGSize? {
@@ -53,5 +70,23 @@ final class MotionFrameImageStore {
         }
 
         return CGSize(width: width.doubleValue, height: height.doubleValue)
+    }
+
+    func prepareFrame(at index: Int) async {
+        _ = image(at: index)
+    }
+
+    func prepareAllFrames() async {
+        for index in 0..<frameCount {
+            guard Task.isCancelled == false else {
+                return
+            }
+
+            _ = image(at: index)
+
+            if index.isMultiple(of: 6) {
+                await Task.yield()
+            }
+        }
     }
 }

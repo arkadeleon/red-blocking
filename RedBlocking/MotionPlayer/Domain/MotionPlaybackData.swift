@@ -8,11 +8,27 @@
 
 import CoreGraphics
 
-struct MotionPlaybackData {
+struct MotionPlaybackData: Sendable {
     let characterCode: String
     let skillCode: String
     let spriteFrameCount: Int
     let frames: [MotionFrame]
+
+    private let imageStore: MotionFrameImageStore
+
+    init(
+        characterCode: String,
+        skillCode: String,
+        spriteFrameCount: Int,
+        frames: [MotionFrame],
+        imageStore: MotionFrameImageStore
+    ) {
+        self.characterCode = characterCode
+        self.skillCode = skillCode
+        self.spriteFrameCount = spriteFrameCount
+        self.frames = frames
+        self.imageStore = imageStore
+    }
 
     var frameCount: Int {
         frames.count
@@ -28,5 +44,13 @@ struct MotionPlaybackData {
 
     var hasSpriteCountMismatch: Bool {
         spriteFrameCount != frameCount
+    }
+
+    func prepareFrame(at index: Int) async {
+        await imageStore.prepareFrame(at: index)
+    }
+
+    func prepareAllFrames() async {
+        await imageStore.prepareAllFrames()
     }
 }

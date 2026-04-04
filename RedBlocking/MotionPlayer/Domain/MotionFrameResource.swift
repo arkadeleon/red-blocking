@@ -8,7 +8,7 @@
 
 import CoreGraphics
 
-struct MotionFrameResource {
+struct MotionFrameResource: Sendable {
     let index: Int
 
     private let imageStore: MotionFrameImageStore

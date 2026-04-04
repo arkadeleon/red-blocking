@@ -20,7 +20,7 @@ struct MotionCanvasView: View {
         )
         let renderer = MotionCanvasRenderer(configuration: configuration)
 
-        Canvas(opaque: false, rendersAsynchronously: false) { context, size in
+        Canvas(opaque: false, rendersAsynchronously: true) { context, size in
             renderer.render(motionFrame: motionFrame, in: &context, size: size)
         }
         .aspectRatio(MotionCanvasRenderer.aspectRatio, contentMode: .fit)
