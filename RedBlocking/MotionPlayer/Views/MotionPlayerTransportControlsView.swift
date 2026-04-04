@@ -147,34 +147,7 @@ struct MotionPlayerTransportControlsView: View {
         action: @escaping () -> Void
     ) -> some View {
         Button(action: action) {
-            Image(systemName: systemImage)
-                .font(.system(size: prominent ? 24 : 18, weight: .black, design: .rounded))
-                .foregroundStyle(prominent ? Color.rbCoal : Color.rbAmber.opacity(0.96))
-                .contentTransition(.symbolEffect(.replace.offUp))
-                .frame(maxWidth: .infinity)
-                .frame(minHeight: dynamicTypeSize.isAccessibilitySize ? 60 : 48)
-                .background {
-                    if prominent {
-                        Capsule(style: .continuous)
-                            .fill(
-                                LinearGradient(
-                                    colors: [
-                                        Color.rbGold.opacity(0.98),
-                                        Color.rbAmber.opacity(0.96)
-                                    ],
-                                    startPoint: .topLeading,
-                                    endPoint: .bottomTrailing
-                                )
-                            )
-                            .overlay {
-                                Capsule(style: .continuous)
-                                    .strokeBorder(Color.rbGold.opacity(0.44), lineWidth: 1)
-                            }
-                            .padding(.horizontal, 6)
-                            .padding(.vertical, 2)
-                    }
-                }
-                .contentShape(Rectangle())
+            transportButtonLabel(systemImage: systemImage, prominent: prominent)
         }
         .disabled(playerModel.totalFrames == 0 || (prominent && reduceMotion))
         .accessibilityLabel(accessibilityLabel)
@@ -250,7 +223,7 @@ struct MotionPlayerTransportControlsView: View {
                     Text(speedSummary(for: playerModel))
                         .font(.subheadline.weight(.medium))
                         .foregroundStyle(Color.rbAmber.opacity(0.74))
-                        .contentTransition(.numericText())
+                        .contentTransition(reduceMotion ? .identity : .numericText())
 
                     Image(systemName: "chevron.down")
                         .font(.caption.weight(.bold))
@@ -312,6 +285,43 @@ struct MotionPlayerTransportControlsView: View {
                 }
                 .transition(.opacity.combined(with: .scale(scale: 0.985, anchor: .top)))
             }
+        }
+    }
+
+    @ViewBuilder
+    private func transportButtonLabel(systemImage: String, prominent: Bool) -> some View {
+        let baseLabel = Image(systemName: systemImage)
+            .font(.system(size: prominent ? 24 : 18, weight: .black, design: .rounded))
+            .foregroundStyle(prominent ? Color.rbCoal : Color.rbAmber.opacity(0.96))
+            .frame(maxWidth: .infinity)
+            .frame(minHeight: dynamicTypeSize.isAccessibilitySize ? 60 : 48)
+            .background {
+                if prominent {
+                    Capsule(style: .continuous)
+                        .fill(
+                            LinearGradient(
+                                colors: [
+                                    Color.rbGold.opacity(0.98),
+                                    Color.rbAmber.opacity(0.96)
+                                ],
+                                startPoint: .topLeading,
+                                endPoint: .bottomTrailing
+                            )
+                        )
+                        .overlay {
+                            Capsule(style: .continuous)
+                                .strokeBorder(Color.rbGold.opacity(0.44), lineWidth: 1)
+                        }
+                        .padding(.horizontal, 6)
+                        .padding(.vertical, 2)
+                }
+            }
+            .contentShape(Rectangle())
+
+        if reduceMotion {
+            baseLabel
+        } else {
+            baseLabel.contentTransition(.symbolEffect(.replace.offUp))
         }
     }
 

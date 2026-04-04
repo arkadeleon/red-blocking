@@ -9,6 +9,8 @@
 import SwiftUI
 
 struct MotionPlayerHitboxToggleView: View {
+    @Environment(\.accessibilityReduceMotion) private var reduceMotion
+
     let title: String
     let description: String
     let symbolName: String
@@ -53,6 +55,6 @@ struct MotionPlayerHitboxToggleView: View {
         .padding(.horizontal, 12)
         .padding(.vertical, 10)
         .redBlockingControlSurface(cornerRadius: 16, highlighted: isOn)
-        .animation(.easeOut(duration: 0.18), value: isOn)
+        .animation(reduceMotion ? nil : .easeOut(duration: 0.18), value: isOn)
     }
 }

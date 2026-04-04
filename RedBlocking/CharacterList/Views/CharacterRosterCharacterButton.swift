@@ -98,8 +98,8 @@ struct CharacterRosterCharacterButton: View {
                 x: 0,
                 y: isSelected ? diameter * 0.05 : diameter * 0.03
             )
-            .scaleEffect(isSelected ? 1.08 : 1.0)
-            .offset(y: isSelected ? -diameter * 0.03 : 0)
+            .scaleEffect(accessibilityReduceMotion ? 1.0 : (isSelected ? 1.08 : 1.0))
+            .offset(y: accessibilityReduceMotion ? 0 : (isSelected ? -diameter * 0.03 : 0))
             .animation(selectionAnimation, value: isSelected)
         }
         .buttonStyle(.plain)
@@ -110,7 +110,7 @@ struct CharacterRosterCharacterButton: View {
         .accessibilityAddTraits(isSelected ? [.isSelected] : [])
     }
 
-    private var selectionAnimation: Animation {
-        .easeOut(duration: accessibilityReduceMotion ? 0.12 : 0.22)
+    private var selectionAnimation: Animation? {
+        accessibilityReduceMotion ? nil : .easeOut(duration: 0.22)
     }
 }
