@@ -31,14 +31,14 @@ struct MoveDetailRowView: View {
         Text(title)
             .font(.caption.weight(.bold))
             .kerning(0.4)
-            .foregroundStyle(Color.rbTextMuted)
+            .redBlockingText(.secondary)
             .fixedSize(horizontal: false, vertical: true)
     }
 
     private func detailText(multilineAlignment: TextAlignment) -> some View {
         Text(detail)
             .font(.body.weight(.medium))
-            .foregroundStyle(.primary)
+            .redBlockingText(.primary)
             .multilineTextAlignment(multilineAlignment)
             .fixedSize(horizontal: false, vertical: true)
     }

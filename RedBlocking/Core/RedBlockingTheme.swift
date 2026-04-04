@@ -22,6 +22,129 @@ extension Color {
     static let rbTextMuted = Color("RBTextMuted")
 }
 
+enum RedBlockingTextRole {
+    case primary
+    case secondary
+    case accent
+    case accentSoft
+    case inverse
+
+    var color: Color {
+        switch self {
+        case .primary:
+            Color.white.opacity(0.96)
+        case .secondary:
+            Color.rbTextMuted
+        case .accent:
+            Color.rbAmber.opacity(0.96)
+        case .accentSoft:
+            Color.rbAmber.opacity(0.90)
+        case .inverse:
+            Color.rbCoal
+        }
+    }
+}
+
+struct RedBlockingShadowStyle {
+    let color: Color
+    let radius: CGFloat
+    let x: CGFloat
+    let y: CGFloat
+}
+
+enum RedBlockingShadowToken {
+    static func panel(elevated: Bool) -> RedBlockingShadowStyle {
+        RedBlockingShadowStyle(
+            color: Color.black.opacity(elevated ? 0.40 : 0.28),
+            radius: elevated ? 20 : 14,
+            x: 0,
+            y: elevated ? 12 : 8
+        )
+    }
+
+    static func actionButton(prominent: Bool, isPressed: Bool, isEnabled: Bool) -> RedBlockingShadowStyle {
+        RedBlockingShadowStyle(
+            color: prominent ? Color.rbAmber.opacity(0.18) : Color.black.opacity(0.16),
+            radius: isPressed ? 6 : (isEnabled ? 12 : 8),
+            x: 0,
+            y: isPressed ? 3 : (isEnabled ? 7 : 4)
+        )
+    }
+
+    static func rosterSelection(isSelected: Bool, diameter: CGFloat) -> RedBlockingShadowStyle {
+        RedBlockingShadowStyle(
+            color: isSelected ? Color.rbScarlet.opacity(0.28) : Color.black.opacity(0.28),
+            radius: isSelected ? diameter * 0.10 : diameter * 0.05,
+            x: 0,
+            y: isSelected ? diameter * 0.05 : diameter * 0.03
+        )
+    }
+
+    static func icon(diameter: CGFloat) -> RedBlockingShadowStyle {
+        RedBlockingShadowStyle(
+            color: Color.black.opacity(0.35),
+            radius: diameter * 0.03,
+            x: 0,
+            y: diameter * 0.02
+        )
+    }
+}
+
+enum RedBlockingOverlayToken {
+    static func characterDetailScrim(isCompact: Bool) -> LinearGradient {
+        LinearGradient(
+            colors: isCompact
+                ? [
+                    Color.rbPanel.opacity(0.98),
+                    Color.rbPanelElevated.opacity(0.86),
+                    Color.rbCoal.opacity(0.58)
+                ]
+                : [
+                    Color.rbPanel.opacity(0.92),
+                    Color.rbPanelElevated.opacity(0.60),
+                    Color.rbCoal.opacity(0.18)
+                ],
+            startPoint: .leading,
+            endPoint: .trailing
+        )
+    }
+
+    static var rosterHeatScrim: LinearGradient {
+        LinearGradient(
+            colors: [
+                Color.rbScarlet.opacity(0.0),
+                Color.rbBurgundy.opacity(0.32)
+            ],
+            startPoint: .top,
+            endPoint: .bottom
+        )
+    }
+
+    static var rosterDepthScrim: LinearGradient {
+        LinearGradient(
+            colors: [
+                Color.clear,
+                Color.black.opacity(0.18),
+                Color.rbCoal.opacity(0.50)
+            ],
+            startPoint: .leading,
+            endPoint: .trailing
+        )
+    }
+
+    static var rosterHighlightVeil: LinearGradient {
+        LinearGradient(
+            colors: [
+                Color.rbAmber.opacity(0.14),
+                Color.black.opacity(0.05),
+                Color.black.opacity(0.0)
+            ],
+            startPoint: .top,
+            endPoint: .bottom
+        )
+    }
+}
+
 private struct RedBlockingPanelModifier: ViewModifier {
     let cornerRadius: CGFloat
     let elevated: Bool
@@ -46,12 +169,7 @@ private struct RedBlockingPanelModifier: ViewModifier {
                                 lineWidth: 1
                             )
                     }
-                    .shadow(
-                        color: Color.black.opacity(elevated ? 0.40 : 0.28),
-                        radius: elevated ? 20 : 14,
-                        x: 0,
-                        y: elevated ? 12 : 8
-                    )
+                    .redBlockingShadow(RedBlockingShadowToken.panel(elevated: elevated))
             }
     }
 }
@@ -185,7 +303,7 @@ struct RedBlockingActionButtonStyle: ButtonStyle {
     func makeBody(configuration: Configuration) -> some View {
         configuration.label
             .font(.subheadline.weight(.semibold))
-            .foregroundStyle(prominent ? Color.rbCoal : Color.rbAmber.opacity(0.96))
+            .redBlockingText(prominent ? .inverse : .accent)
             .padding(.horizontal, 14)
             .padding(.vertical, 12)
             .frame(maxWidth: .infinity, minHeight: 48)
@@ -197,11 +315,12 @@ struct RedBlockingActionButtonStyle: ButtonStyle {
                         RoundedRectangle(cornerRadius: 16, style: .continuous)
                             .strokeBorder(borderStyle, lineWidth: 1)
                     }
-                    .shadow(
-                        color: prominent ? Color.rbAmber.opacity(0.18) : Color.black.opacity(0.16),
-                        radius: configuration.isPressed ? 6 : (isEnabled ? 12 : 8),
-                        x: 0,
-                        y: configuration.isPressed ? 3 : (isEnabled ? 7 : 4)
+                    .redBlockingShadow(
+                        RedBlockingShadowToken.actionButton(
+                            prominent: prominent,
+                            isPressed: configuration.isPressed,
+                            isEnabled: isEnabled
+                        )
                     )
             }
             .scaleEffect(configuration.isPressed && isEnabled ? 0.985 : 1)
@@ -277,6 +396,14 @@ struct RedBlockingPressableButtonStyle: ButtonStyle {
 }
 
 extension View {
+    func redBlockingText(_ role: RedBlockingTextRole) -> some View {
+        foregroundStyle(role.color)
+    }
+
+    func redBlockingShadow(_ style: RedBlockingShadowStyle) -> some View {
+        shadow(color: style.color, radius: style.radius, x: style.x, y: style.y)
+    }
+
     func redBlockingPanel(cornerRadius: CGFloat = 24, elevated: Bool = false) -> some View {
         modifier(RedBlockingPanelModifier(cornerRadius: cornerRadius, elevated: elevated))
     }

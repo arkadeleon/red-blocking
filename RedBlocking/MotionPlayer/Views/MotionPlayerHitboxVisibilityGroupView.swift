@@ -70,14 +70,14 @@ struct MotionPlayerHitboxVisibilityGroupView: View {
 
                     Text(summaryText)
                         .font(.caption.weight(.medium))
-                        .foregroundStyle(Color.rbTextMuted)
+                        .redBlockingText(.secondary)
                         .lineLimit(1)
 
                     Spacer(minLength: 12)
 
                     Image(systemName: "chevron.down")
                         .font(.caption.weight(.bold))
-                        .foregroundStyle(Color.rbAmber.opacity(0.9))
+                        .redBlockingText(.accentSoft)
                         .rotationEffect(.degrees(isExpanded ? -180 : 0))
                 }
                 .padding(.horizontal, 12)

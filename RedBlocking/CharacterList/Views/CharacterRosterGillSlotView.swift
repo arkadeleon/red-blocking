@@ -41,8 +41,8 @@ struct CharacterRosterGillSlotView: View {
 
             Image(systemName: "lock.fill")
                 .font(.system(size: diameter * 0.26, weight: .black, design: .rounded))
-                .foregroundStyle(Color.white.opacity(0.94))
-                .shadow(color: Color.black.opacity(0.35), radius: diameter * 0.03, x: 0, y: diameter * 0.02)
+                .redBlockingText(.primary)
+                .redBlockingShadow(RedBlockingShadowToken.icon(diameter: diameter))
         }
         .frame(width: diameter, height: diameter)
         .opacity(0.94)

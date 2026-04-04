@@ -19,13 +19,13 @@ struct MovePlayerEntryRowView: View {
                 VStack(alignment: .leading, spacing: 4) {
                     Text(title)
                         .font(.body.weight(.semibold))
-                        .foregroundStyle(.primary)
+                        .redBlockingText(.primary)
                         .fixedSize(horizontal: false, vertical: true)
 
                     if let subtitle {
                         Text(subtitle)
                             .font(.subheadline)
-                            .foregroundStyle(Color.rbTextMuted)
+                            .redBlockingText(.secondary)
                             .fixedSize(horizontal: false, vertical: true)
                     }
                 }
@@ -52,7 +52,7 @@ struct MovePlayerEntryRowView: View {
             Text("Preview")
                 .font(.caption.weight(.bold))
         }
-        .foregroundStyle(Color.rbCoal)
+        .redBlockingText(.inverse)
         .padding(.horizontal, 10)
         .padding(.vertical, 8)
         .background {

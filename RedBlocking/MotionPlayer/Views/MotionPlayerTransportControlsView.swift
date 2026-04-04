@@ -46,14 +46,14 @@ struct MotionPlayerTransportControlsView: View {
             if playerModel.framesPerSecond == 0 {
                 Text("Playback is paused at the current frame until you raise the speed again.")
                     .font(.footnote)
-                    .foregroundStyle(Color.rbTextMuted)
+                    .redBlockingText(.secondary)
                     .fixedSize(horizontal: false, vertical: true)
             }
 
             if reduceMotion {
                 Text("Reduce Motion is enabled, so continuous playback is paused. Use the frame slider or step controls to inspect the motion.")
                     .font(.footnote)
-                    .foregroundStyle(Color.rbTextMuted)
+                    .redBlockingText(.secondary)
                     .fixedSize(horizontal: false, vertical: true)
             }
         }
@@ -162,13 +162,13 @@ struct MotionPlayerTransportControlsView: View {
                 HStack(alignment: .firstTextBaseline, spacing: 12) {
                     Text("Frame Position")
                         .font(.subheadline.weight(.medium))
-                        .foregroundStyle(Color.rbTextMuted)
+                        .redBlockingText(.secondary)
 
                     Spacer(minLength: 12)
 
                     Text("\(formattedFrame(playerModel.currentFrameIndex)) / \(formattedFrame(playerModel.totalFrames))")
                         .font(.headline.monospacedDigit().weight(.semibold))
-                        .foregroundStyle(.primary)
+                        .redBlockingText(.primary)
                 }
 
                 if playerModel.totalFrames > 1 {
@@ -194,7 +194,7 @@ struct MotionPlayerTransportControlsView: View {
                         Text(formattedFrame(playerModel.totalFrames - 1))
                     }
                     .font(.caption.monospacedDigit())
-                    .foregroundStyle(Color.rbTextMuted)
+                    .redBlockingText(.secondary)
                 }
             }
             .padding(.horizontal, 14)
@@ -222,12 +222,12 @@ struct MotionPlayerTransportControlsView: View {
 
                     Text(speedSummary(for: playerModel))
                         .font(.subheadline.weight(.medium))
-                        .foregroundStyle(Color.rbTextMuted)
+                        .redBlockingText(.secondary)
                         .contentTransition(reduceMotion ? .identity : .numericText())
 
                     Image(systemName: "chevron.down")
                         .font(.caption.weight(.bold))
-                        .foregroundStyle(Color.rbAmber.opacity(0.9))
+                        .redBlockingText(.accentSoft)
                         .rotationEffect(.degrees(showsSpeedControls ? -180 : 0))
                 }
                 .padding(.horizontal, 14)
@@ -244,7 +244,7 @@ struct MotionPlayerTransportControlsView: View {
                     HStack(spacing: 12) {
                         Text("FPS")
                             .font(.subheadline.weight(.medium))
-                            .foregroundStyle(Color.rbTextMuted)
+                            .redBlockingText(.secondary)
 
                         Spacer()
 
@@ -268,7 +268,7 @@ struct MotionPlayerTransportControlsView: View {
                     VStack(alignment: .leading, spacing: 12) {
                         Text("FPS")
                             .font(.subheadline.weight(.medium))
-                            .foregroundStyle(Color.rbTextMuted)
+                            .redBlockingText(.secondary)
 
                         TextField("Frames Per Second", value: framesPerSecond, format: .number)
                             .textFieldStyle(.plain)
@@ -292,7 +292,7 @@ struct MotionPlayerTransportControlsView: View {
     private func transportButtonLabel(systemImage: String, prominent: Bool) -> some View {
         let baseLabel = Image(systemName: systemImage)
             .font(.system(size: prominent ? 24 : 18, weight: .black, design: .rounded))
-            .foregroundStyle(prominent ? Color.rbCoal : Color.rbAmber.opacity(0.96))
+            .redBlockingText(prominent ? .inverse : .accent)
             .frame(maxWidth: .infinity)
             .frame(minHeight: dynamicTypeSize.isAccessibilitySize ? 60 : 48)
             .background {

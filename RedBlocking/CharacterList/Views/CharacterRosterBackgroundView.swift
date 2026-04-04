@@ -36,42 +36,13 @@ struct CharacterRosterBackgroundView: View {
                 .blendMode(.screen)
 
                 Rectangle()
-                    .fill(
-                        LinearGradient(
-                            colors: [
-                                Color.rbScarlet.opacity(0.0),
-                                Color.rbBurgundy.opacity(0.32)
-                            ],
-                            startPoint: .top,
-                            endPoint: .bottom
-                        )
-                    )
+                    .fill(RedBlockingOverlayToken.rosterHeatScrim)
 
                 Rectangle()
-                    .fill(
-                        LinearGradient(
-                            colors: [
-                                Color.clear,
-                                Color.black.opacity(0.18),
-                                Color.rbCoal.opacity(0.50)
-                            ],
-                            startPoint: .leading,
-                            endPoint: .trailing
-                        )
-                    )
+                    .fill(RedBlockingOverlayToken.rosterDepthScrim)
 
                 Rectangle()
-                    .fill(
-                        LinearGradient(
-                            colors: [
-                                Color.rbAmber.opacity(0.14),
-                                Color.black.opacity(0.05),
-                                Color.black.opacity(0.0)
-                            ],
-                            startPoint: .top,
-                            endPoint: .bottom
-                        )
-                    )
+                    .fill(RedBlockingOverlayToken.rosterHighlightVeil)
                     .frame(width: proxy.size.width * 0.52)
                     .rotationEffect(.degrees(-14))
                     .offset(x: proxy.size.width * 0.09, y: -proxy.size.height * 0.08)

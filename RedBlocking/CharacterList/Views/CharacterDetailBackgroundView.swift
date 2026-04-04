@@ -40,11 +40,7 @@ struct CharacterDetailBackgroundView: View {
                 .blendMode(.screen)
 
                 if let selection {
-                    LinearGradient(
-                        colors: overlayColors,
-                        startPoint: .leading,
-                        endPoint: .trailing
-                    )
+                    RedBlockingOverlayToken.characterDetailScrim(isCompact: isCompactLayout)
 
                     Image(selection.backgroundAssetName)
                         .resizable()
@@ -72,20 +68,8 @@ struct CharacterDetailBackgroundView: View {
         horizontalSizeClass == .regular ? .trailing : .center
     }
 
-    private var overlayColors: [Color] {
-        if horizontalSizeClass == .compact {
-            [
-                Color.rbPanel.opacity(0.98),
-                Color.rbPanelElevated.opacity(0.86),
-                Color.rbCoal.opacity(0.58)
-            ]
-        } else {
-            [
-                Color.rbPanel.opacity(0.92),
-                Color.rbPanelElevated.opacity(0.60),
-                Color.rbCoal.opacity(0.18)
-            ]
-        }
+    private var isCompactLayout: Bool {
+        horizontalSizeClass == .compact
     }
 
     private var imageWidthMultiplier: CGFloat {

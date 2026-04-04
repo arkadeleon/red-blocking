@@ -92,12 +92,7 @@ struct CharacterRosterCharacterButton: View {
             }
             .frame(width: diameter, height: diameter)
             .contentShape(Circle())
-            .shadow(
-                color: isSelected ? Color.rbScarlet.opacity(0.28) : Color.black.opacity(0.28),
-                radius: isSelected ? diameter * 0.10 : diameter * 0.05,
-                x: 0,
-                y: isSelected ? diameter * 0.05 : diameter * 0.03
-            )
+            .redBlockingShadow(RedBlockingShadowToken.rosterSelection(isSelected: isSelected, diameter: diameter))
             .scaleEffect(accessibilityReduceMotion ? 1.0 : (isSelected ? 1.08 : 1.0))
             .offset(y: accessibilityReduceMotion ? 0 : (isSelected ? -diameter * 0.03 : 0))
             .animation(selectionAnimation, value: isSelected)

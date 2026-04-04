@@ -19,13 +19,13 @@ struct MoveNextRowView: View {
                 VStack(alignment: .leading, spacing: 4) {
                     Text(title)
                         .font(.body.weight(.semibold))
-                        .foregroundStyle(.primary)
+                        .redBlockingText(.primary)
                         .fixedSize(horizontal: false, vertical: true)
 
                     if let subtitle {
                         Text(subtitle)
                             .font(.subheadline)
-                            .foregroundStyle(Color.rbTextMuted)
+                            .redBlockingText(.secondary)
                             .fixedSize(horizontal: false, vertical: true)
                     }
                 }
@@ -52,7 +52,7 @@ struct MoveNextRowView: View {
             Image(systemName: "chevron.right")
                 .font(.caption.weight(.bold))
         }
-        .foregroundStyle(Color.rbAmber.opacity(0.94))
+        .redBlockingText(.accent)
         .padding(.horizontal, 10)
         .padding(.vertical, 8)
         .background {

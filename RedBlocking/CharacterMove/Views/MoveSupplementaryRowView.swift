@@ -14,7 +14,7 @@ struct MoveSupplementaryRowView: View {
     var body: some View {
         Text(title)
             .font(.subheadline)
-            .foregroundStyle(Color.rbTextMuted)
+            .redBlockingText(.secondary)
             .frame(maxWidth: .infinity, alignment: .leading)
             .fixedSize(horizontal: false, vertical: true)
     }
