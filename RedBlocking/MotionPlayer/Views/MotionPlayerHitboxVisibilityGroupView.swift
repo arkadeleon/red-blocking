@@ -10,7 +10,6 @@ import SwiftUI
 
 struct MotionPlayerHitboxVisibilityGroupView: View {
     let title: String
-    let startsExpanded: Bool
     let passiveColorRGB: Int
     let otherVulnerabilityColorRGB: Int
     let activeColorRGB: Int
@@ -43,7 +42,6 @@ struct MotionPlayerHitboxVisibilityGroupView: View {
         pushVisible: Binding<Bool>
     ) {
         self.title = title
-        self.startsExpanded = startsExpanded
         self.passiveColorRGB = passiveColorRGB
         self.otherVulnerabilityColorRGB = otherVulnerabilityColorRGB
         self.activeColorRGB = activeColorRGB
@@ -59,67 +57,40 @@ struct MotionPlayerHitboxVisibilityGroupView: View {
         _isExpanded = State(initialValue: startsExpanded)
     }
 
-    @Environment(\.dynamicTypeSize) private var dynamicTypeSize
     @Environment(\.accessibilityReduceMotion) private var reduceMotion
 
     var body: some View {
         VStack(alignment: .leading, spacing: 14) {
-            Button(action: { toggleExpanded() }) {
-                groupHeader
-                    .padding(.horizontal, 12)
-                    .padding(.vertical, 10)
-                    .redBlockingControlSurface(cornerRadius: 16)
-                    .contentShape(Rectangle())
+            Button(action: toggleExpanded) {
+                MotionPlayerHitboxVisibilityHeaderView(
+                    title: title,
+                    summaryText: summaryText,
+                    isExpanded: isExpanded
+                )
+                .padding(.horizontal, 12)
+                .padding(.vertical, 10)
+                .redBlockingControlSurface(cornerRadius: 16)
+                .contentShape(Rectangle())
             }
             .buttonStyle(RedBlockingPressableButtonStyle())
             .accessibilityValue(isExpanded ? "Expanded" : "Collapsed")
             .accessibilityHint(isExpanded ? "Collapses the hitbox group." : "Expands the hitbox group.")
 
             if isExpanded {
-                LazyVStack(alignment: .leading, spacing: 12) {
-                    MotionPlayerHitboxToggleView(
-                        title: "Passive",
-                        description: "Hurtbox present during neutral and non-attacking frames",
-                        symbolName: "shield",
-                        tintColor: Color(rgb: passiveColorRGB),
-                        isOn: $passiveVisible
-                    )
-                    MotionPlayerHitboxToggleView(
-                        title: "Vulnerability",
-                        description: "Extra hurtbox exposed during specific attack frames",
-                        symbolName: "shield.lefthalf.filled",
-                        tintColor: Color(rgb: otherVulnerabilityColorRGB),
-                        isOn: $otherVulnerabilityVisible
-                    )
-                    MotionPlayerHitboxToggleView(
-                        title: "Active",
-                        description: "Attack hitbox that deals damage on contact",
-                        symbolName: "burst.fill",
-                        tintColor: Color(rgb: activeColorRGB),
-                        isOn: $activeVisible
-                    )
-                    MotionPlayerHitboxToggleView(
-                        title: "Throw",
-                        description: "Area that initiates a throw when it reaches the opponent",
-                        symbolName: "hand.raised.fill",
-                        tintColor: Color(rgb: throwColorRGB),
-                        isOn: $throwVisible
-                    )
-                    MotionPlayerHitboxToggleView(
-                        title: "Throwable",
-                        description: "Area where the character can be grabbed",
-                        symbolName: "figure.fall",
-                        tintColor: Color(rgb: throwableColorRGB),
-                        isOn: $throwableVisible
-                    )
-                    MotionPlayerHitboxToggleView(
-                        title: "Push",
-                        description: "Collision box that prevents characters from overlapping",
-                        symbolName: "arrow.left.and.right.circle.fill",
-                        tintColor: Color(rgb: pushColorRGB),
-                        isOn: $pushVisible
-                    )
-                }
+                MotionPlayerHitboxToggleStackView(
+                    passiveColorRGB: passiveColorRGB,
+                    passiveVisible: $passiveVisible,
+                    otherVulnerabilityColorRGB: otherVulnerabilityColorRGB,
+                    otherVulnerabilityVisible: $otherVulnerabilityVisible,
+                    activeColorRGB: activeColorRGB,
+                    activeVisible: $activeVisible,
+                    throwColorRGB: throwColorRGB,
+                    throwVisible: $throwVisible,
+                    throwableColorRGB: throwableColorRGB,
+                    throwableVisible: $throwableVisible,
+                    pushColorRGB: pushColorRGB,
+                    pushVisible: $pushVisible
+                )
                 .transition(.opacity.combined(with: .scale(scale: 0.985, anchor: .top)))
             }
         }
@@ -150,50 +121,5 @@ struct MotionPlayerHitboxVisibilityGroupView: View {
         }
 
         return visibleCount == 1 ? "1 layer visible" : "\(visibleCount) layers visible"
-    }
-
-    @ViewBuilder
-    private var groupHeader: some View {
-        ViewThatFits(in: .horizontal) {
-            HStack(alignment: .firstTextBaseline, spacing: 12) {
-                Text(title)
-                    .redBlockingSectionTag()
-
-                summaryLabel(lineLimit: 1)
-                    .fixedSize(horizontal: true, vertical: false)
-
-                Spacer(minLength: 12)
-
-                chevron
-            }
-
-            VStack(alignment: .leading, spacing: 10) {
-                HStack(spacing: 12) {
-                    Text(title)
-                        .redBlockingSectionTag()
-
-                    Spacer(minLength: 12)
-
-                    chevron
-                }
-
-                summaryLabel(lineLimit: dynamicTypeSize.isAccessibilitySize ? 3 : 2)
-            }
-        }
-    }
-
-    private func summaryLabel(lineLimit: Int) -> some View {
-        Text(summaryText)
-            .font(.caption.weight(.medium))
-            .redBlockingText(.secondary)
-            .lineLimit(lineLimit)
-            .fixedSize(horizontal: false, vertical: true)
-    }
-
-    private var chevron: some View {
-        Image(systemName: "chevron.down")
-            .font(.caption.weight(.bold))
-            .redBlockingText(.accentSoft)
-            .rotationEffect(.degrees(isExpanded ? -180 : 0))
     }
 }

@@ -16,8 +16,8 @@ struct MoveBrowserSectionPanel: View {
 
     var body: some View {
         Group {
-            if sectionBehavior.isCollapsedByDefault {
-                CollapsibleSectionPanel(
+            if isCollapsedByDefault {
+                MoveBrowserCollapsibleSectionPanel(
                     section: section,
                     model: model,
                     displayScale: displayScale,
@@ -31,8 +31,14 @@ struct MoveBrowserSectionPanel: View {
                         sectionHeader
                     }
 
-                    sectionRows
-                        .redBlockingPanel(cornerRadius: 22)
+                    MoveBrowserSectionRowsView(
+                        section: section,
+                        model: model,
+                        displayScale: displayScale,
+                        rowSpacingResolver: verticalPadding(for:),
+                        dividerInsetResolver: dividerLeadingInset(for:)
+                    )
+                    .redBlockingPanel(cornerRadius: 22)
                 }
             }
         }
@@ -67,7 +73,7 @@ struct MoveBrowserSectionPanel: View {
         if let title = section.title, !title.isEmpty {
             HStack(spacing: 10) {
                 Text(title)
-                    .redBlockingSectionTag(prominent: sectionBehavior.isProminent)
+                    .redBlockingSectionTag(prominent: isProminent)
 
                 Rectangle()
                     .fill(
@@ -86,35 +92,6 @@ struct MoveBrowserSectionPanel: View {
         }
     }
 
-    private var sectionRows: some View {
-        VStack(spacing: 0) {
-            ForEach(Array(section.rows.enumerated()), id: \.element.id) { index, row in
-                if index > 0 {
-                    Rectangle()
-                        .fill(Color.rbPanelBorder.opacity(0.28))
-                        .frame(height: 1 / displayScale)
-                        .padding(.leading, dividerLeadingInset(for: row))
-                }
-
-                MoveBrowserRowView(row: row, model: model)
-                    .padding(.horizontal, 16)
-                    .padding(.vertical, verticalPadding(for: row))
-            }
-        }
-    }
-
-    private var sectionBehavior: SectionBehavior {
-        let hasMotionPlayerRow = section.rows.contains { $0.kind == .motionPlayer }
-        let hasNavigationRow = section.rows.contains { $0.kind == .next }
-
-        return SectionBehavior(
-            isCollapsedByDefault: hasMotionPlayerRow == false
-                && hasNavigationRow == false
-                && section.title?.isEmpty == false,
-            isProminent: hasMotionPlayerRow
-        )
-    }
-
     private var sectionSummary: String {
         let noteCount = section.rows.filter { $0.kind == .supplementary }.count
         if noteCount > 0 {
@@ -124,117 +101,22 @@ struct MoveBrowserSectionPanel: View {
         let valueCount = section.rows.filter { $0.kind == .detail }.count
         return valueCount == 1 ? "1 value" : "\(valueCount) values"
     }
-}
 
-private extension MoveBrowserSectionPanel {
-    struct SectionBehavior {
-        let isCollapsedByDefault: Bool
-        let isProminent: Bool
-    }
-}
-
-private struct CollapsibleSectionPanel: View {
-    let section: MoveBrowserSection
-    let model: MoveBrowserModel
-    let displayScale: CGFloat
-    let rowSpacingResolver: (MoveBrowserRow) -> CGFloat
-    let dividerInsetResolver: (MoveBrowserRow) -> CGFloat
-    let summary: String
-
-    @Environment(\.dynamicTypeSize) private var dynamicTypeSize
-    @Environment(\.accessibilityReduceMotion) private var reduceMotion
-    @State private var isExpanded = false
-
-    var body: some View {
-        VStack(alignment: .leading, spacing: 12) {
-            Button(action: { toggleExpanded() }) {
-                sectionToggleLabel
-                    .padding(.horizontal, 14)
-                    .padding(.vertical, 12)
-                    .redBlockingControlSurface(cornerRadius: 18)
-                    .contentShape(Rectangle())
-            }
-            .buttonStyle(RedBlockingPressableButtonStyle())
-            .accessibilityValue(isExpanded ? "Expanded" : "Collapsed")
-            .accessibilityHint(isExpanded ? "Collapses this section." : "Expands this section.")
-
-            if isExpanded {
-                VStack(spacing: 0) {
-                    ForEach(Array(section.rows.enumerated()), id: \.element.id) { index, row in
-                        if index > 0 {
-                            Rectangle()
-                                .fill(Color.rbPanelBorder.opacity(0.28))
-                                .frame(height: 1 / displayScale)
-                                .padding(.leading, dividerInsetResolver(row))
-                        }
-
-                        MoveBrowserRowView(row: row, model: model)
-                            .padding(.horizontal, 16)
-                            .padding(.vertical, rowSpacingResolver(row))
-                    }
-                }
-                .redBlockingPanel(cornerRadius: 22)
-                .transition(.opacity.combined(with: .scale(scale: 0.985, anchor: .top)))
-            }
-        }
+    private var isCollapsedByDefault: Bool {
+        hasMotionPlayerRow == false
+            && hasNavigationRow == false
+            && section.title?.isEmpty == false
     }
 
-    private func toggleExpanded() {
-        if reduceMotion {
-            isExpanded.toggle()
-        } else {
-            withAnimation(.snappy(duration: 0.26, extraBounce: 0)) {
-                isExpanded.toggle()
-            }
-        }
+    private var isProminent: Bool {
+        hasMotionPlayerRow
     }
 
-    @ViewBuilder
-    private var sectionToggleLabel: some View {
-        ViewThatFits(in: .horizontal) {
-            HStack(alignment: .firstTextBaseline, spacing: 12) {
-                sectionTitleLabel
-
-                summaryLabel(lineLimit: 1)
-                    .fixedSize(horizontal: true, vertical: false)
-
-                Spacer(minLength: 12)
-
-                chevron
-            }
-
-            VStack(alignment: .leading, spacing: 10) {
-                HStack(spacing: 12) {
-                    sectionTitleLabel
-                    Spacer(minLength: 12)
-                    chevron
-                }
-
-                summaryLabel(lineLimit: dynamicTypeSize.isAccessibilitySize ? 3 : 2)
-            }
-        }
+    private var hasMotionPlayerRow: Bool {
+        section.rows.contains { $0.kind == .motionPlayer }
     }
 
-    @ViewBuilder
-    private var sectionTitleLabel: some View {
-        if let title = section.title, !title.isEmpty {
-            Text(title)
-                .redBlockingSectionTag()
-        }
-    }
-
-    private func summaryLabel(lineLimit: Int) -> some View {
-        Text(summary)
-            .font(.caption.weight(.medium))
-            .redBlockingText(.secondary)
-            .lineLimit(lineLimit)
-            .fixedSize(horizontal: false, vertical: true)
-    }
-
-    private var chevron: some View {
-        Image(systemName: "chevron.down")
-            .font(.caption.weight(.bold))
-            .redBlockingText(.accentSoft)
-            .rotationEffect(.degrees(isExpanded ? -180 : 0))
+    private var hasNavigationRow: Bool {
+        section.rows.contains { $0.kind == .next }
     }
 }

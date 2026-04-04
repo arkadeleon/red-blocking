@@ -58,7 +58,7 @@ struct MoveBrowserView: View {
         .contentMargins(.bottom, 28, for: .scrollContent)
         .navigationTitle(model.page.navigationTitle)
         .modifier(
-            VariantPickerBar(
+            MoveBrowserVariantPickerBar(
                 variantNames: model.page.variantNames,
                 selection: Binding(
                     get: { resolvedSelectedVariant },
@@ -86,45 +86,5 @@ struct MoveBrowserView: View {
         }
 
         return min(max(index, 0), upperBound)
-    }
-}
-
-private struct VariantPickerBar: ViewModifier {
-    let variantNames: [String]
-    @Binding var selection: Int
-
-    func body(content: Content) -> some View {
-        if variantNames.isEmpty {
-            content
-        } else if #available(iOS 26, *) {
-            content.safeAreaBar(edge: .top) {
-                pickerView
-            }
-        } else {
-            content.safeAreaInset(edge: .top) {
-                pickerView
-                    .padding(.horizontal)
-                    .padding(.vertical, 8)
-                    .background(.bar)
-            }
-        }
-    }
-
-    private var pickerView: some View {
-        VStack(alignment: .leading, spacing: 10) {
-            Text("Variant")
-                .redBlockingSectionTag()
-
-            Picker("", selection: $selection) {
-                ForEach(variantNames.indices, id: \.self) { index in
-                    Text(variantNames[index]).tag(index)
-                }
-            }
-            .pickerStyle(.segmented)
-            .accessibilityLabel("Variant")
-        }
-        .padding(.horizontal, 14)
-        .padding(.vertical, 12)
-        .redBlockingControlSurface(cornerRadius: 20, highlighted: true)
     }
 }
