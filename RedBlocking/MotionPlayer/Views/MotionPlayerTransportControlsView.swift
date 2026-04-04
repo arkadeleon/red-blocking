@@ -214,76 +214,19 @@ struct MotionPlayerTransportControlsView: View {
 
         VStack(alignment: .leading, spacing: 12) {
             Button(action: { toggleSpeedControls() }) {
-                HStack(spacing: 12) {
-                    Text("Speed")
-                        .redBlockingSectionTag()
-
-                    Spacer(minLength: 12)
-
-                    Text(speedSummary(for: playerModel))
-                        .font(.subheadline.weight(.medium))
-                        .redBlockingText(.secondary)
-                        .contentTransition(reduceMotion ? .identity : .numericText())
-
-                    Image(systemName: "chevron.down")
-                        .font(.caption.weight(.bold))
-                        .redBlockingText(.accentSoft)
-                        .rotationEffect(.degrees(showsSpeedControls ? -180 : 0))
-                }
-                .padding(.horizontal, 14)
-                .padding(.vertical, 12)
-                .redBlockingControlSurface(cornerRadius: 18)
-                .contentShape(Rectangle())
+                speedToggleLabel(for: playerModel)
+                    .padding(.horizontal, 14)
+                    .padding(.vertical, 12)
+                    .redBlockingControlSurface(cornerRadius: 18)
+                    .contentShape(Rectangle())
             }
             .buttonStyle(RedBlockingPressableButtonStyle())
             .accessibilityValue(showsSpeedControls ? "Expanded" : "Collapsed")
             .accessibilityHint(showsSpeedControls ? "Collapses the speed controls." : "Expands the speed controls.")
 
             if showsSpeedControls {
-                ViewThatFits(in: .horizontal) {
-                    HStack(spacing: 12) {
-                        Text("FPS")
-                            .font(.subheadline.weight(.medium))
-                            .redBlockingText(.secondary)
-
-                        Spacer()
-
-                        TextField("Frames Per Second", value: framesPerSecond, format: .number)
-                            .textFieldStyle(.plain)
-                            .multilineTextAlignment(.trailing)
-                            .frame(minWidth: 84, maxWidth: 100)
-                            .keyboardType(.numberPad)
-                            .padding(.horizontal, 10)
-                            .padding(.vertical, 8)
-                            .redBlockingControlSurface(cornerRadius: 14)
-
-                        Stepper("Frames Per Second", value: framesPerSecond, in: PlaybackSettings.supportedFPSRange)
-                            .labelsHidden()
-                            .accessibilityLabel("Frames Per Second")
-                    }
-                    .padding(.horizontal, 14)
-                    .padding(.vertical, 12)
-                    .redBlockingControlSurface(cornerRadius: 18)
-
-                    VStack(alignment: .leading, spacing: 12) {
-                        Text("FPS")
-                            .font(.subheadline.weight(.medium))
-                            .redBlockingText(.secondary)
-
-                        TextField("Frames Per Second", value: framesPerSecond, format: .number)
-                            .textFieldStyle(.plain)
-                            .keyboardType(.numberPad)
-                            .padding(.horizontal, 10)
-                            .padding(.vertical, 10)
-                            .redBlockingControlSurface(cornerRadius: 14)
-
-                        Stepper("Frames Per Second", value: framesPerSecond, in: PlaybackSettings.supportedFPSRange)
-                    }
-                    .padding(.horizontal, 14)
-                    .padding(.vertical, 12)
-                    .redBlockingControlSurface(cornerRadius: 18)
-                }
-                .transition(.opacity.combined(with: .scale(scale: 0.985, anchor: .top)))
+                speedEditor(framesPerSecond: framesPerSecond)
+                    .transition(.opacity.combined(with: .scale(scale: 0.985, anchor: .top)))
             }
         }
     }
@@ -341,5 +284,128 @@ struct MotionPlayerTransportControlsView: View {
         }
 
         return "\(playerModel.framesPerSecond) FPS"
+    }
+
+    @ViewBuilder
+    private func speedToggleLabel(for playerModel: MotionPlayerModel) -> some View {
+        ViewThatFits(in: .horizontal) {
+            HStack(alignment: .firstTextBaseline, spacing: 12) {
+                Text("Speed")
+                    .redBlockingSectionTag()
+
+                speedSummaryLabel(for: playerModel, lineLimit: 1)
+                    .fixedSize(horizontal: true, vertical: false)
+
+                Spacer(minLength: 12)
+
+                speedChevron
+            }
+
+            VStack(alignment: .leading, spacing: 10) {
+                HStack(spacing: 12) {
+                    Text("Speed")
+                        .redBlockingSectionTag()
+
+                    Spacer(minLength: 12)
+
+                    speedChevron
+                }
+
+                speedSummaryLabel(for: playerModel, lineLimit: dynamicTypeSize.isAccessibilitySize ? 3 : 2)
+            }
+        }
+    }
+
+    private func speedSummaryLabel(for playerModel: MotionPlayerModel, lineLimit: Int) -> some View {
+        Text(speedSummary(for: playerModel))
+            .font(.subheadline.weight(.medium))
+            .redBlockingText(.secondary)
+            .lineLimit(lineLimit)
+            .fixedSize(horizontal: false, vertical: true)
+            .contentTransition(reduceMotion ? .identity : .numericText())
+    }
+
+    private var speedChevron: some View {
+        Image(systemName: "chevron.down")
+            .font(.caption.weight(.bold))
+            .redBlockingText(.accentSoft)
+            .rotationEffect(.degrees(showsSpeedControls ? -180 : 0))
+    }
+
+    @ViewBuilder
+    private func speedEditor(framesPerSecond: Binding<Int>) -> some View {
+        ViewThatFits(in: .horizontal) {
+            compactSpeedEditor(framesPerSecond: framesPerSecond)
+            expandedSpeedEditor(framesPerSecond: framesPerSecond)
+        }
+    }
+
+    private func compactSpeedEditor(framesPerSecond: Binding<Int>) -> some View {
+        HStack(alignment: .center, spacing: 12) {
+            fpsLabel
+                .fixedSize(horizontal: true, vertical: false)
+
+            Spacer(minLength: 8)
+
+            HStack(spacing: 10) {
+                fpsTextField(framesPerSecond: framesPerSecond, alignment: .trailing)
+                    .frame(width: compactFPSFieldWidth)
+
+                fpsStepper(framesPerSecond: framesPerSecond)
+            }
+            .fixedSize(horizontal: true, vertical: false)
+        }
+        .padding(.horizontal, 14)
+        .padding(.vertical, 12)
+        .redBlockingControlSurface(cornerRadius: 18)
+    }
+
+    private func expandedSpeedEditor(framesPerSecond: Binding<Int>) -> some View {
+        VStack(alignment: .leading, spacing: 12) {
+            fpsLabel
+
+            ViewThatFits(in: .horizontal) {
+                HStack(alignment: .center, spacing: 10) {
+                    fpsTextField(framesPerSecond: framesPerSecond, alignment: .leading)
+                    fpsStepper(framesPerSecond: framesPerSecond)
+                }
+
+                VStack(alignment: .leading, spacing: 12) {
+                    fpsTextField(framesPerSecond: framesPerSecond, alignment: .leading)
+                    fpsStepper(framesPerSecond: framesPerSecond)
+                }
+            }
+        }
+        .padding(.horizontal, 14)
+        .padding(.vertical, 12)
+        .redBlockingControlSurface(cornerRadius: 18)
+    }
+
+    private var fpsLabel: some View {
+        Text("FPS")
+            .font(.subheadline.weight(.medium))
+            .redBlockingText(.secondary)
+    }
+
+    private func fpsTextField(framesPerSecond: Binding<Int>, alignment: TextAlignment) -> some View {
+        TextField("Frames Per Second", value: framesPerSecond, format: .number)
+            .textFieldStyle(.plain)
+            .multilineTextAlignment(alignment)
+            .keyboardType(.numberPad)
+            .padding(.horizontal, 10)
+            .frame(minHeight: dynamicTypeSize.isAccessibilitySize ? 48 : 40)
+            .redBlockingControlSurface(cornerRadius: 14)
+            .accessibilityLabel("Frames Per Second")
+    }
+
+    private func fpsStepper(framesPerSecond: Binding<Int>) -> some View {
+        Stepper("Frames Per Second", value: framesPerSecond, in: PlaybackSettings.supportedFPSRange)
+            .labelsHidden()
+            .accessibilityLabel("Frames Per Second")
+            .fixedSize(horizontal: true, vertical: false)
+    }
+
+    private var compactFPSFieldWidth: CGFloat {
+        dynamicTypeSize.isAccessibilitySize ? 104 : 84
     }
 }

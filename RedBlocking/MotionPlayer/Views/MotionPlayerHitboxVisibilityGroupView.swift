@@ -59,31 +59,17 @@ struct MotionPlayerHitboxVisibilityGroupView: View {
         _isExpanded = State(initialValue: startsExpanded)
     }
 
+    @Environment(\.dynamicTypeSize) private var dynamicTypeSize
     @Environment(\.accessibilityReduceMotion) private var reduceMotion
 
     var body: some View {
         VStack(alignment: .leading, spacing: 14) {
             Button(action: { toggleExpanded() }) {
-                HStack(spacing: 12) {
-                    Text(title)
-                        .redBlockingSectionTag()
-
-                    Text(summaryText)
-                        .font(.caption.weight(.medium))
-                        .redBlockingText(.secondary)
-                        .lineLimit(1)
-
-                    Spacer(minLength: 12)
-
-                    Image(systemName: "chevron.down")
-                        .font(.caption.weight(.bold))
-                        .redBlockingText(.accentSoft)
-                        .rotationEffect(.degrees(isExpanded ? -180 : 0))
-                }
-                .padding(.horizontal, 12)
-                .padding(.vertical, 10)
-                .redBlockingControlSurface(cornerRadius: 16)
-                .contentShape(Rectangle())
+                groupHeader
+                    .padding(.horizontal, 12)
+                    .padding(.vertical, 10)
+                    .redBlockingControlSurface(cornerRadius: 16)
+                    .contentShape(Rectangle())
             }
             .buttonStyle(RedBlockingPressableButtonStyle())
             .accessibilityValue(isExpanded ? "Expanded" : "Collapsed")
@@ -164,5 +150,50 @@ struct MotionPlayerHitboxVisibilityGroupView: View {
         }
 
         return visibleCount == 1 ? "1 layer visible" : "\(visibleCount) layers visible"
+    }
+
+    @ViewBuilder
+    private var groupHeader: some View {
+        ViewThatFits(in: .horizontal) {
+            HStack(alignment: .firstTextBaseline, spacing: 12) {
+                Text(title)
+                    .redBlockingSectionTag()
+
+                summaryLabel(lineLimit: 1)
+                    .fixedSize(horizontal: true, vertical: false)
+
+                Spacer(minLength: 12)
+
+                chevron
+            }
+
+            VStack(alignment: .leading, spacing: 10) {
+                HStack(spacing: 12) {
+                    Text(title)
+                        .redBlockingSectionTag()
+
+                    Spacer(minLength: 12)
+
+                    chevron
+                }
+
+                summaryLabel(lineLimit: dynamicTypeSize.isAccessibilitySize ? 3 : 2)
+            }
+        }
+    }
+
+    private func summaryLabel(lineLimit: Int) -> some View {
+        Text(summaryText)
+            .font(.caption.weight(.medium))
+            .redBlockingText(.secondary)
+            .lineLimit(lineLimit)
+            .fixedSize(horizontal: false, vertical: true)
+    }
+
+    private var chevron: some View {
+        Image(systemName: "chevron.down")
+            .font(.caption.weight(.bold))
+            .redBlockingText(.accentSoft)
+            .rotationEffect(.degrees(isExpanded ? -180 : 0))
     }
 }
