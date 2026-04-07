@@ -58,3 +58,17 @@ struct MotionPlayerHitboxToggleView: View {
         .animation(reduceMotion ? nil : .easeOut(duration: 0.18), value: isOn)
     }
 }
+
+#Preview("Hitbox Toggle") {
+    @Previewable @State var isOn = true
+
+    return MotionPlayerHitboxToggleView(
+        title: "Active",
+        description: "Attack hitbox that deals damage on contact",
+        symbolName: "burst.fill",
+        tintColor: .red,
+        isOn: $isOn
+    )
+    .padding()
+    .background(Color.rbCoal)
+}

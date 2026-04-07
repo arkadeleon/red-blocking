@@ -63,3 +63,27 @@ struct MotionPlayerTransportButtonView: View {
         .buttonStyle(RedBlockingPressableButtonStyle(pressedScale: 0.96, pressedOpacity: 0.92))
     }
 }
+
+#Preview("Transport Buttons") {
+    HStack(spacing: 12) {
+        MotionPlayerTransportButtonView(
+            systemImage: "backward.frame.fill",
+            accessibilityLabel: "Previous Frame",
+            accessibilityHint: "Moves to the previous frame.",
+            prominent: false,
+            isDisabled: false,
+            action: {}
+        )
+
+        MotionPlayerTransportButtonView(
+            systemImage: "play.fill",
+            accessibilityLabel: "Play",
+            accessibilityHint: "Plays the preview.",
+            prominent: true,
+            isDisabled: false,
+            action: {}
+        )
+    }
+    .padding()
+    .background(Color.rbCoal)
+}

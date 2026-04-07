@@ -76,3 +76,17 @@ struct MotionPlayerTransportButtonStripView: View {
             .padding(.vertical, 2)
     }
 }
+
+#Preview("Transport Button Strip") {
+    MotionPlayerTransportButtonStripView(
+        isPlaying: true,
+        totalFrames: 42,
+        reduceMotionEnabled: false,
+        onStepBackward: {},
+        onTogglePlayback: {},
+        onStop: {},
+        onStepForward: {}
+    )
+    .padding()
+    .background(Color.rbCoal)
+}

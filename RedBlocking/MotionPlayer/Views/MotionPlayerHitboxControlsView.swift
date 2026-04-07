@@ -56,3 +56,12 @@ struct MotionPlayerHitboxControlsView: View {
         .redBlockingPanel(cornerRadius: 22)
     }
 }
+
+#Preview("Hitbox Controls") {
+    let appModel = PreviewAppModel.rootNavigation()
+
+    return MotionPlayerHitboxControlsView()
+        .environment(appModel)
+        .padding()
+        .background(Color.rbCoal)
+}

@@ -120,3 +120,29 @@ struct MoveBrowserSectionPanel: View {
         section.rows.contains { $0.kind == .next }
     }
 }
+
+#Preview("Section Panel") {
+    let preview = PreviewAppModel.moveBrowserModel()
+    let section = MoveBrowserSection(
+        id: "specials",
+        title: "Special Moves",
+        rows: [
+            .motionPlayer(
+                id: "hadoken",
+                title: "Hadoken",
+                subtitle: "236P",
+                characterCode: "RYU",
+                skillCode: "HADOU"
+            ),
+            .detail(id: "startup", title: "Startup", value: "13"),
+            .supplementary(id: "note", title: "Fastest version controls space well."),
+            .next(id: "supers", title: "Super Arts", node: preview.node)
+        ]
+    )
+
+    return ScrollView {
+        MoveBrowserSectionPanel(section: section, model: preview.model)
+            .padding(16)
+    }
+    .background(Color.rbCoal)
+}

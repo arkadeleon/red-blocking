@@ -55,3 +55,12 @@ struct NavigationDetailView: View {
         .padding(24)
     }
 }
+
+#Preview("Navigation Detail") {
+    let appModel = PreviewAppModel.rootNavigation()
+
+    return NavigationStack {
+        NavigationDetailView()
+    }
+    .environment(appModel)
+}

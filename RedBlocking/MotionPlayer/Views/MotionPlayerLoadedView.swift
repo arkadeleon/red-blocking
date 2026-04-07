@@ -59,3 +59,24 @@ struct MotionPlayerLoadedView: View {
         horizontalSizeClass == .regular ? 24 : 16
     }
 }
+
+#Preview("Loaded Motion Player") {
+    @Previewable @State var scrubbedFrame = 0.0
+    @Previewable @State var isScrubbing = false
+
+    if let preview = PreviewAppModel.motionPlayerLoaded() {
+        MotionPlayerLoadedView(
+            motionData: preview.motionData,
+            playerModel: preview.playerModel,
+            scrubbedFrame: $scrubbedFrame,
+            isScrubbing: $isScrubbing
+        )
+        .environment(preview.appModel)
+    } else {
+        ContentUnavailableView(
+            "Preview Unavailable",
+            systemImage: "exclamationmark.triangle",
+            description: Text("No motion preview data is available.")
+        )
+    }
+}

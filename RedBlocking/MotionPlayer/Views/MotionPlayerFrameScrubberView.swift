@@ -95,3 +95,19 @@ struct MotionPlayerFrameScrubberView: View {
         frame.formatted(frameNumberFormat)
     }
 }
+
+#Preview("Frame Scrubber") {
+    @Previewable @State var scrubbedFrame = 12.0
+    @Previewable @State var isScrubbing = false
+
+    return MotionPlayerFrameScrubberView(
+        currentFrameIndex: 12,
+        totalFrames: 38,
+        scrubbedFrame: $scrubbedFrame,
+        isScrubbing: $isScrubbing,
+        onScrubbingChanged: { isScrubbing = $0 },
+        onSeek: { scrubbedFrame = Double($0) }
+    )
+    .padding()
+    .background(Color.rbCoal)
+}

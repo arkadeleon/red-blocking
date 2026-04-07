@@ -49,3 +49,9 @@ struct CharacterRosterGillSlotView: View {
         .accessibilityHidden(true)
     }
 }
+
+#Preview("Locked Slot") {
+    CharacterRosterGillSlotView(diameter: 88)
+        .padding(24)
+        .background(Color.rbCoal)
+}

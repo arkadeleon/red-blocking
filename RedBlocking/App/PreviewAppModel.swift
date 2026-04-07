@@ -10,11 +10,23 @@ import Foundation
 
 @MainActor
 enum PreviewAppModel {
+    struct MoveBrowserModelPreviewConfiguration {
+        let appModel: AppModel
+        let node: MoveNode
+        let model: MoveBrowserModel
+    }
+
     struct MotionPlayerPreviewConfiguration {
         let appModel: AppModel
         let title: String
         let characterCode: String
         let skillCode: String
+    }
+
+    struct MotionPlayerLoadedPreviewConfiguration {
+        let appModel: AppModel
+        let motionData: MotionPlaybackData
+        let playerModel: MotionPlayerModel
     }
 
     static func rootNavigation() -> AppModel {
@@ -30,6 +42,20 @@ enum PreviewAppModel {
         }
 
         return (appModel, node)
+    }
+
+    static func moveBrowserModel() -> MoveBrowserModelPreviewConfiguration {
+        let preview = moveBrowser()
+        let model = MoveBrowserModel(
+            node: preview.node,
+            navigation: preview.appModel.navigation
+        )
+
+        return MoveBrowserModelPreviewConfiguration(
+            appModel: preview.appModel,
+            node: preview.node,
+            model: model
+        )
     }
 
     static func motionPlayer() -> MotionPlayerPreviewConfiguration? {
@@ -52,6 +78,43 @@ enum PreviewAppModel {
             characterCode: playableMove.characterCode,
             skillCode: playableMove.skillCode
         )
+    }
+
+    static func motionPlayerLoaded() -> MotionPlayerLoadedPreviewConfiguration? {
+        guard let preview = motionPlayer() else {
+            return nil
+        }
+
+        do {
+            let motionData = try preview.appModel.motionRepository.prepareMotion(
+                characterCode: preview.characterCode,
+                skillCode: preview.skillCode
+            )
+            let playerModel = MotionPlayerModel(
+                motionData: motionData,
+                playbackSettings: preview.appModel.settings.playback
+            )
+
+            if motionData.frameCount > 1 {
+                playerModel.seek(to: 1)
+            }
+
+            return MotionPlayerLoadedPreviewConfiguration(
+                appModel: preview.appModel,
+                motionData: motionData,
+                playerModel: playerModel
+            )
+        } catch {
+            return nil
+        }
+    }
+
+    static func characterSelection(_ character: Character = .ken) -> CharacterSelection {
+        CharacterSelection(character: character)
+    }
+
+    static func characterSelections() -> [CharacterSelection] {
+        Character.allCases.map(CharacterSelection.init)
     }
 
     private static func makeAppModel() -> AppModel {

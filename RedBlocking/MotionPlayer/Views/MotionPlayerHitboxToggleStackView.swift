@@ -97,3 +97,29 @@ struct MotionPlayerHitboxToggleStackView: View {
         }
     }
 }
+
+#Preview("Hitbox Toggle Stack") {
+    @Previewable @State var passiveVisible = true
+    @Previewable @State var otherVulnerabilityVisible = true
+    @Previewable @State var activeVisible = true
+    @Previewable @State var throwVisible = false
+    @Previewable @State var throwableVisible = true
+    @Previewable @State var pushVisible = true
+
+    return MotionPlayerHitboxToggleStackView(
+        passiveColorRGB: 0x00AEEF,
+        passiveVisible: $passiveVisible,
+        otherVulnerabilityColorRGB: 0x93D500,
+        otherVulnerabilityVisible: $otherVulnerabilityVisible,
+        activeColorRGB: 0xFF3B30,
+        activeVisible: $activeVisible,
+        throwColorRGB: 0xFF9500,
+        throwVisible: $throwVisible,
+        throwableColorRGB: 0xAF52DE,
+        throwableVisible: $throwableVisible,
+        pushColorRGB: 0xFFD60A,
+        pushVisible: $pushVisible
+    )
+    .padding()
+    .background(Color.rbCoal)
+}

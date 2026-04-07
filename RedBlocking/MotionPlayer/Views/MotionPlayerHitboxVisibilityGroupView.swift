@@ -123,3 +123,31 @@ struct MotionPlayerHitboxVisibilityGroupView: View {
         return visibleCount == 1 ? "1 layer visible" : "\(visibleCount) layers visible"
     }
 }
+
+#Preview("Hitbox Visibility Group") {
+    @Previewable @State var passiveVisible = true
+    @Previewable @State var otherVulnerabilityVisible = true
+    @Previewable @State var activeVisible = true
+    @Previewable @State var throwVisible = false
+    @Previewable @State var throwableVisible = true
+    @Previewable @State var pushVisible = true
+
+    return MotionPlayerHitboxVisibilityGroupView(
+        title: "Player 1",
+        startsExpanded: true,
+        passiveColorRGB: 0x00AEEF,
+        passiveVisible: $passiveVisible,
+        otherVulnerabilityColorRGB: 0x93D500,
+        otherVulnerabilityVisible: $otherVulnerabilityVisible,
+        activeColorRGB: 0xFF3B30,
+        activeVisible: $activeVisible,
+        throwColorRGB: 0xFF9500,
+        throwVisible: $throwVisible,
+        throwableColorRGB: 0xAF52DE,
+        throwableVisible: $throwableVisible,
+        pushColorRGB: 0xFFD60A,
+        pushVisible: $pushVisible
+    )
+    .padding()
+    .background(Color.rbCoal)
+}

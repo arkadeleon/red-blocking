@@ -73,3 +73,14 @@ struct CharacterListView: View {
         }
     }
 }
+
+#Preview("Character List") {
+    let appModel = PreviewAppModel.rootNavigation()
+
+    return NavigationStack {
+        CharacterListView(
+            model: appModel.characterList,
+            onActivateSelection: { _ in }
+        )
+    }
+}

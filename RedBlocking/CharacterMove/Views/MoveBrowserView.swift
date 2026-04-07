@@ -88,3 +88,12 @@ struct MoveBrowserView: View {
         return min(max(index, 0), upperBound)
     }
 }
+
+#Preview("Move Browser View") {
+    let preview = PreviewAppModel.moveBrowserModel()
+
+    return NavigationStack {
+        MoveBrowserView(model: preview.model)
+    }
+    .environment(preview.appModel)
+}

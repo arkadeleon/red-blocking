@@ -97,3 +97,24 @@ struct MotionPlayerTransportControlsView: View {
         }
     }
 }
+
+#Preview("Transport Controls") {
+    @Previewable @State var scrubbedFrame = 0.0
+    @Previewable @State var isScrubbing = false
+
+    if let preview = PreviewAppModel.motionPlayerLoaded() {
+        MotionPlayerTransportControlsView(
+            playerModel: preview.playerModel,
+            scrubbedFrame: $scrubbedFrame,
+            isScrubbing: $isScrubbing
+        )
+        .padding()
+        .background(Color.rbCoal)
+    } else {
+        ContentUnavailableView(
+            "Preview Unavailable",
+            systemImage: "exclamationmark.triangle",
+            description: Text("No motion preview data is available.")
+        )
+    }
+}

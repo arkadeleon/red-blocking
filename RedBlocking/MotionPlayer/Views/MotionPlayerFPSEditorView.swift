@@ -85,3 +85,11 @@ struct MotionPlayerFPSEditorView: View {
         dynamicTypeSize.isAccessibilitySize ? 104 : 84
     }
 }
+
+#Preview("FPS Editor") {
+    @Previewable @State var framesPerSecond = 30
+
+    return MotionPlayerFPSEditorView(framesPerSecond: $framesPerSecond)
+        .padding()
+        .background(Color.rbCoal)
+}

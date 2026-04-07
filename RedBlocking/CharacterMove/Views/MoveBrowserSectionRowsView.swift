@@ -31,3 +31,37 @@ struct MoveBrowserSectionRowsView: View {
         }
     }
 }
+
+#Preview("Section Rows") {
+    let preview = PreviewAppModel.moveBrowserModel()
+    let section = MoveBrowserSection(
+        id: "preview-rows",
+        title: "Preview",
+        rows: [
+            .motionPlayer(
+                id: "dragon-punch",
+                title: "Shoryuken",
+                subtitle: "623P",
+                characterCode: "RYU",
+                skillCode: "DP"
+            ),
+            .detail(id: "startup", title: "Startup", value: "3"),
+            .supplementary(id: "note", title: "Cancelable into Super Art on hit."),
+            .next(id: "browse-more", title: "More Uppercuts", node: preview.node)
+        ]
+    )
+
+    return MoveBrowserSectionRowsView(
+        section: section,
+        model: preview.model,
+        displayScale: 3,
+        rowSpacingResolver: { _ in 12 },
+        dividerInsetResolver: { row in
+            row.kind == .detail ? 24 : 16
+        }
+    )
+    .padding(16)
+    .redBlockingPanel(cornerRadius: 22)
+    .padding()
+    .background(Color.rbCoal)
+}

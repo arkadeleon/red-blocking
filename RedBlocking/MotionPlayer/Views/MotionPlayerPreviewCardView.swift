@@ -176,3 +176,24 @@ struct MotionPlayerPreviewCardView: View {
         values.filter { $0 }.count
     }
 }
+
+#Preview("Preview Card") {
+    if let preview = PreviewAppModel.motionPlayerLoaded() {
+        MotionPlayerPreviewCardView(
+            motionData: preview.motionData,
+            playerModel: preview.playerModel
+        )
+        .environment(preview.appModel)
+        .padding()
+        .background(Color.rbCoal)
+        .task {
+            await preview.motionData.prepareFrame(at: preview.playerModel.currentFrameIndex)
+        }
+    } else {
+        ContentUnavailableView(
+            "Preview Unavailable",
+            systemImage: "exclamationmark.triangle",
+            description: Text("No motion preview data is available.")
+        )
+    }
+}

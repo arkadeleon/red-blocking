@@ -31,3 +31,40 @@ struct MoveBrowserRowView: View {
         }
     }
 }
+
+#Preview("Row Variants") {
+    let preview = PreviewAppModel.moveBrowserModel()
+
+    return VStack(alignment: .leading, spacing: 16) {
+        MoveBrowserRowView(
+            row: .motionPlayer(
+                id: "shoryuken",
+                title: "Shoryuken",
+                subtitle: "623P",
+                characterCode: "RYU",
+                skillCode: "DP"
+            ),
+            model: preview.model
+        )
+
+        MoveBrowserRowView(
+            row: .next(id: "specials", title: "Special Moves", node: preview.node),
+            model: preview.model
+        )
+
+        MoveBrowserRowView(
+            row: .detail(id: "startup", title: "Startup", value: "3"),
+            model: preview.model
+        )
+
+        MoveBrowserRowView(
+            row: .supplementary(
+                id: "note",
+                title: "Fully invulnerable through startup."
+            ),
+            model: preview.model
+        )
+    }
+    .padding()
+    .background(Color.rbCoal)
+}

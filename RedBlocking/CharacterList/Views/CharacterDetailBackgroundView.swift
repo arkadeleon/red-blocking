@@ -96,3 +96,7 @@ struct CharacterDetailBackgroundView: View {
         horizontalSizeClass == .regular ? 24 : 12
     }
 }
+
+#Preview("Character Detail Background") {
+    CharacterDetailBackgroundView(selection: PreviewAppModel.characterSelection(.remy))
+}

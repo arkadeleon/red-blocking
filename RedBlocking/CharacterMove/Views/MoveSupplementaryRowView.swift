@@ -19,3 +19,9 @@ struct MoveSupplementaryRowView: View {
             .fixedSize(horizontal: false, vertical: true)
     }
 }
+
+#Preview("Move Supplementary Row") {
+    MoveSupplementaryRowView(title: "Can be kara-canceled into throw.")
+        .padding()
+        .background(Color.rbCoal)
+}

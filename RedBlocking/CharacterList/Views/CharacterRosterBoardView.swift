@@ -79,3 +79,16 @@ struct CharacterRosterBoardView: View {
         return min(max(idealDiameter, 70), maximumDiameter)
     }
 }
+
+#Preview("Roster Board") {
+    let characters = PreviewAppModel.characterSelections()
+
+    return CharacterRosterBoardView(
+        characters: characters,
+        selectedCharacter: characters.first(where: { $0.title == "Ken" }),
+        containerWidth: 390,
+        minimumHeight: 520,
+        activateCharacter: { _ in }
+    )
+    .background(Color.rbCoal)
+}

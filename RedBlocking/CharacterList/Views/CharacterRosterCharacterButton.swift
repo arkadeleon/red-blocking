@@ -113,3 +113,23 @@ struct CharacterRosterCharacterButton: View {
         accessibilityReduceMotion ? nil : .easeOut(duration: 0.22)
     }
 }
+
+#Preview("Roster Token") {
+    HStack(spacing: 24) {
+        CharacterRosterCharacterButton(
+            character: PreviewAppModel.characterSelection(.ken),
+            isSelected: false,
+            diameter: 88,
+            action: {}
+        )
+
+        CharacterRosterCharacterButton(
+            character: PreviewAppModel.characterSelection(.chunLi),
+            isSelected: true,
+            diameter: 88,
+            action: {}
+        )
+    }
+    .padding(24)
+    .background(Color.rbCoal)
+}

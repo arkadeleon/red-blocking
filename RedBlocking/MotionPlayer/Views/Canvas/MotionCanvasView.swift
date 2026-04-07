@@ -27,3 +27,25 @@ struct MotionCanvasView: View {
         .background(Color.rbCanvas, in: RoundedRectangle(cornerRadius: 18, style: .continuous))
     }
 }
+
+#Preview("Motion Canvas") {
+    if let preview = PreviewAppModel.motionPlayerLoaded(),
+       let motionFrame = preview.motionData.previewFrame {
+        MotionCanvasView(
+            motionFrame: motionFrame,
+            hitboxVisibilitySettings: preview.appModel.settings.hitboxVisibility,
+            hitboxColorSettings: preview.appModel.settings.hitboxColors
+        )
+        .padding()
+        .background(Color.rbCoal)
+        .task {
+            await preview.motionData.prepareFrame(at: motionFrame.index)
+        }
+    } else {
+        ContentUnavailableView(
+            "Preview Unavailable",
+            systemImage: "exclamationmark.triangle",
+            description: Text("No motion preview data is available.")
+        )
+    }
+}

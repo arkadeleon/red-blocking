@@ -24,3 +24,12 @@ struct MoveDestinationView: View {
         }
     }
 }
+
+#Preview("Move Destination") {
+    let preview = PreviewAppModel.moveBrowser()
+
+    return NavigationStack {
+        MoveDestinationView(destination: .moveNode(preview.node))
+    }
+    .environment(preview.appModel)
+}

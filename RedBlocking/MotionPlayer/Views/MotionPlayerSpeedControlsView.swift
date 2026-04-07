@@ -97,3 +97,11 @@ struct MotionPlayerSpeedControlsView: View {
         }
     }
 }
+
+#Preview("Speed Controls") {
+    @Previewable @State var framesPerSecond = 30
+
+    return MotionPlayerSpeedControlsView(framesPerSecond: $framesPerSecond)
+        .padding()
+        .background(Color.rbCoal)
+}

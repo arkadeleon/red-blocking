@@ -95,3 +95,13 @@ struct MovePlayerEntryRowView: View {
         .fixedSize(horizontal: true, vertical: false)
     }
 }
+
+#Preview("Motion Player Entry Row") {
+    MovePlayerEntryRowView(
+        title: "Shoryuken",
+        subtitle: "623P, invulnerable through startup",
+        action: {}
+    )
+    .padding()
+    .background(Color.rbCoal)
+}

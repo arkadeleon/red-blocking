@@ -56,3 +56,24 @@ struct MoveBrowserVariantPickerBar: ViewModifier {
         }
     }
 }
+
+#Preview("Variant Picker Bar") {
+    @Previewable @State var selection = 0
+
+    return NavigationStack {
+        ScrollView {
+            RoundedRectangle(cornerRadius: 22, style: .continuous)
+                .fill(Color.rbCoal.opacity(0.4))
+                .frame(height: 420)
+                .padding(.horizontal, 16)
+                .padding(.vertical, 24)
+        }
+        .modifier(
+            MoveBrowserVariantPickerBar(
+                variantNames: ["Normal", "SA I", "SA II"],
+                selection: $selection
+            )
+        )
+        .navigationTitle("Move Browser")
+    }
+}

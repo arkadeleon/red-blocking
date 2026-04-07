@@ -57,3 +57,13 @@ struct MotionPlayerHitboxVisibilityHeaderView: View {
             .rotationEffect(.degrees(isExpanded ? -180 : 0))
     }
 }
+
+#Preview("Hitbox Header") {
+    MotionPlayerHitboxVisibilityHeaderView(
+        title: "Player 1",
+        summaryText: "5 layers visible",
+        isExpanded: true
+    )
+    .padding()
+    .background(Color.rbCoal)
+}

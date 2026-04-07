@@ -43,3 +43,9 @@ struct MoveDetailRowView: View {
             .fixedSize(horizontal: false, vertical: true)
     }
 }
+
+#Preview("Move Detail Row") {
+    MoveDetailRowView(title: "Startup", detail: "5")
+        .padding()
+        .background(Color.rbCoal)
+}

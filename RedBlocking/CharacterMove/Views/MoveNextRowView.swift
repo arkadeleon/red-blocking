@@ -86,3 +86,13 @@ struct MoveNextRowView: View {
         .fixedSize(horizontal: true, vertical: false)
     }
 }
+
+#Preview("Move Browser Row") {
+    MoveNextRowView(
+        title: "Special Moves",
+        subtitle: "Browse quarter-circle, charge, and command inputs.",
+        action: {}
+    )
+    .padding()
+    .background(Color.rbCoal)
+}

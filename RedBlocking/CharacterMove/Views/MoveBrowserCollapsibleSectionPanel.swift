@@ -99,3 +99,31 @@ struct MoveBrowserCollapsibleSectionPanel: View {
         }
     }
 }
+
+#Preview("Collapsible Section") {
+    let preview = PreviewAppModel.moveBrowserModel()
+    let section = MoveBrowserSection(
+        id: "frame-data",
+        title: "Frame Data",
+        rows: [
+            .detail(id: "startup", title: "Startup", value: "5"),
+            .detail(id: "recovery", title: "Recovery", value: "18"),
+            .supplementary(id: "note", title: "Safe against most lights at max range.")
+        ]
+    )
+
+    return ScrollView {
+        MoveBrowserCollapsibleSectionPanel(
+            section: section,
+            model: preview.model,
+            displayScale: 3,
+            rowSpacingResolver: { _ in 10 },
+            dividerInsetResolver: { row in
+                row.kind == .detail ? 24 : 20
+            },
+            summary: "2 values, 1 note"
+        )
+        .padding(16)
+    }
+    .background(Color.rbCoal)
+}
