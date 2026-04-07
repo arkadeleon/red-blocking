@@ -1,5 +1,5 @@
 //
-//  MoveBrowserSectionPanel.swift
+//  MoveBrowserSectionView.swift
 //  RedBlocking
 //
 //  Created by Leon Li on 2026/3/19.
@@ -8,7 +8,7 @@
 
 import SwiftUI
 
-struct MoveBrowserSectionPanel: View {
+struct MoveBrowserSectionView: View {
     let section: MoveBrowserSection
     let model: MoveBrowserModel
 
@@ -17,7 +17,7 @@ struct MoveBrowserSectionPanel: View {
     var body: some View {
         Group {
             if isCollapsedByDefault {
-                MoveBrowserCollapsibleSectionPanel(
+                MoveBrowserCollapsibleSectionView(
                     section: section,
                     model: model,
                     displayScale: displayScale,
@@ -121,7 +121,7 @@ struct MoveBrowserSectionPanel: View {
     }
 }
 
-#Preview("Section Panel") {
+#Preview("Move Browser Section") {
     let preview = PreviewAppModel.moveBrowserModel()
     let section = MoveBrowserSection(
         id: "specials",
@@ -141,7 +141,7 @@ struct MoveBrowserSectionPanel: View {
     )
 
     return ScrollView {
-        MoveBrowserSectionPanel(section: section, model: preview.model)
+        MoveBrowserSectionView(section: section, model: preview.model)
             .padding(16)
     }
     .background(Color.rbCoal)

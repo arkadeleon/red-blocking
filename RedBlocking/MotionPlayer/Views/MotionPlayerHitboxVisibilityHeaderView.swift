@@ -58,7 +58,7 @@ struct MotionPlayerHitboxVisibilityHeaderView: View {
     }
 }
 
-#Preview("Hitbox Header") {
+#Preview("Motion Player Hitbox Visibility Header") {
     MotionPlayerHitboxVisibilityHeaderView(
         title: "Player 1",
         summaryText: "5 layers visible",

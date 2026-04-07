@@ -32,7 +32,7 @@ struct MoveBrowserSectionRowsView: View {
     }
 }
 
-#Preview("Section Rows") {
+#Preview("Move Browser Section Rows") {
     let preview = PreviewAppModel.moveBrowserModel()
     let section = MoveBrowserSection(
         id: "preview-rows",

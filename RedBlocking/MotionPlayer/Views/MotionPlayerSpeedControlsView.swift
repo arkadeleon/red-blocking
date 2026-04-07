@@ -98,7 +98,7 @@ struct MotionPlayerSpeedControlsView: View {
     }
 }
 
-#Preview("Speed Controls") {
+#Preview("Motion Player Speed Controls") {
     @Previewable @State var framesPerSecond = 30
 
     return MotionPlayerSpeedControlsView(framesPerSecond: $framesPerSecond)

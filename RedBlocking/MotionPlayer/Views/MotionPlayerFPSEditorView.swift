@@ -86,7 +86,7 @@ struct MotionPlayerFPSEditorView: View {
     }
 }
 
-#Preview("FPS Editor") {
+#Preview("Motion Player FPS Editor") {
     @Previewable @State var framesPerSecond = 30
 
     return MotionPlayerFPSEditorView(framesPerSecond: $framesPerSecond)

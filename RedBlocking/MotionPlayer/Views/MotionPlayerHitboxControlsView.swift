@@ -57,7 +57,7 @@ struct MotionPlayerHitboxControlsView: View {
     }
 }
 
-#Preview("Hitbox Controls") {
+#Preview("Motion Player Hitbox Controls") {
     let appModel = PreviewAppModel.rootNavigation()
 
     return MotionPlayerHitboxControlsView()

@@ -34,7 +34,7 @@ struct MoveBrowserPageView: View {
     }
 }
 
-#Preview("Move Browser") {
+#Preview("Move Browser Page") {
     let preview = PreviewAppModel.moveBrowser()
 
     return MoveBrowserPageView(node: preview.node)

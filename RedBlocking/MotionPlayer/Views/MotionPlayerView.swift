@@ -42,7 +42,7 @@ struct MotionPlayerView: View {
                     .padding(24)
                 case let .loaded(motionData):
                     if let playerModel {
-                        MotionPlayerLoadedView(
+                        MotionPlayerContentView(
                             motionData: motionData,
                             playerModel: playerModel,
                             scrubbedFrame: $scrubbedFrame,

@@ -1,5 +1,5 @@
 //
-//  MoveBrowserVariantPickerBar.swift
+//  MoveBrowserVariantPickerModifier.swift
 //  RedBlocking
 //
 //  Created by Leon Li on 2026/4/4.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct MoveBrowserVariantPickerBar: ViewModifier {
+struct MoveBrowserVariantPickerModifier: ViewModifier {
     let variantNames: [String]
     @Binding var selection: Int
 
@@ -57,7 +57,7 @@ struct MoveBrowserVariantPickerBar: ViewModifier {
     }
 }
 
-#Preview("Variant Picker Bar") {
+#Preview("Move Browser Variant Picker Modifier") {
     @Previewable @State var selection = 0
 
     return NavigationStack {
@@ -69,7 +69,7 @@ struct MoveBrowserVariantPickerBar: ViewModifier {
                 .padding(.vertical, 24)
         }
         .modifier(
-            MoveBrowserVariantPickerBar(
+            MoveBrowserVariantPickerModifier(
                 variantNames: ["Normal", "SA I", "SA II"],
                 selection: $selection
             )

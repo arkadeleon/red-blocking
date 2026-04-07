@@ -96,7 +96,7 @@ struct MotionPlayerFrameScrubberView: View {
     }
 }
 
-#Preview("Frame Scrubber") {
+#Preview("Motion Player Frame Scrubber") {
     @Previewable @State var scrubbedFrame = 12.0
     @Previewable @State var isScrubbing = false
 

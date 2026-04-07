@@ -177,7 +177,7 @@ struct MotionPlayerPreviewCardView: View {
     }
 }
 
-#Preview("Preview Card") {
+#Preview("Motion Player Preview Card") {
     if let preview = PreviewAppModel.motionPlayerLoaded() {
         MotionPlayerPreviewCardView(
             motionData: preview.motionData,

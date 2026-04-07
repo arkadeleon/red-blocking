@@ -1,5 +1,5 @@
 //
-//  CharacterRosterCharacterButton.swift
+//  CharacterRosterButton.swift
 //  RedBlocking
 //
 //  Created by Leon Li on 2026/3/12.
@@ -8,7 +8,7 @@
 
 import SwiftUI
 
-struct CharacterRosterCharacterButton: View {
+struct CharacterRosterButton: View {
     @Environment(\.accessibilityDifferentiateWithoutColor) private var differentiateWithoutColor
     @Environment(\.accessibilityReduceMotion) private var accessibilityReduceMotion
 
@@ -114,16 +114,16 @@ struct CharacterRosterCharacterButton: View {
     }
 }
 
-#Preview("Roster Token") {
+#Preview("Character Roster Button") {
     HStack(spacing: 24) {
-        CharacterRosterCharacterButton(
+        CharacterRosterButton(
             character: PreviewAppModel.characterSelection(.ken),
             isSelected: false,
             diameter: 88,
             action: {}
         )
 
-        CharacterRosterCharacterButton(
+        CharacterRosterButton(
             character: PreviewAppModel.characterSelection(.chunLi),
             isSelected: true,
             diameter: 88,

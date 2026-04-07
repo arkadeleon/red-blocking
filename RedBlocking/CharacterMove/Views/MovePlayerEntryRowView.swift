@@ -96,7 +96,7 @@ struct MovePlayerEntryRowView: View {
     }
 }
 
-#Preview("Motion Player Entry Row") {
+#Preview("Move Player Entry Row") {
     MovePlayerEntryRowView(
         title: "Shoryuken",
         subtitle: "623P, invulnerable through startup",

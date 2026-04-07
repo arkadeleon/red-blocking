@@ -32,7 +32,7 @@ struct MoveBrowserRowView: View {
     }
 }
 
-#Preview("Row Variants") {
+#Preview("Move Browser Row") {
     let preview = PreviewAppModel.moveBrowserModel()
 
     return VStack(alignment: .leading, spacing: 16) {

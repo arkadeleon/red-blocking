@@ -1,5 +1,5 @@
 //
-//  MotionPlayerLoadedView.swift
+//  MotionPlayerContentView.swift
 //  RedBlocking
 //
 //  Created by Leon Li on 2026/3/11.
@@ -8,7 +8,7 @@
 
 import SwiftUI
 
-struct MotionPlayerLoadedView: View {
+struct MotionPlayerContentView: View {
     @Environment(\.horizontalSizeClass) private var horizontalSizeClass
 
     let motionData: MotionPlaybackData
@@ -60,12 +60,12 @@ struct MotionPlayerLoadedView: View {
     }
 }
 
-#Preview("Loaded Motion Player") {
+#Preview("Motion Player Content") {
     @Previewable @State var scrubbedFrame = 0.0
     @Previewable @State var isScrubbing = false
 
     if let preview = PreviewAppModel.motionPlayerLoaded() {
-        MotionPlayerLoadedView(
+        MotionPlayerContentView(
             motionData: preview.motionData,
             playerModel: preview.playerModel,
             scrubbedFrame: $scrubbedFrame,

@@ -59,7 +59,7 @@ struct MotionPlayerHitboxToggleView: View {
     }
 }
 
-#Preview("Hitbox Toggle") {
+#Preview("Motion Player Hitbox Toggle") {
     @Previewable @State var isOn = true
 
     return MotionPlayerHitboxToggleView(

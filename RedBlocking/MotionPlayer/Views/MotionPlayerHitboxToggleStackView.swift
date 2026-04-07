@@ -98,7 +98,7 @@ struct MotionPlayerHitboxToggleStackView: View {
     }
 }
 
-#Preview("Hitbox Toggle Stack") {
+#Preview("Motion Player Hitbox Toggle Stack") {
     @Previewable @State var passiveVisible = true
     @Previewable @State var otherVulnerabilityVisible = true
     @Previewable @State var activeVisible = true

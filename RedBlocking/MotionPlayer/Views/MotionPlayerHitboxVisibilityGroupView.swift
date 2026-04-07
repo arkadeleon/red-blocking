@@ -124,7 +124,7 @@ struct MotionPlayerHitboxVisibilityGroupView: View {
     }
 }
 
-#Preview("Hitbox Visibility Group") {
+#Preview("Motion Player Hitbox Visibility Group") {
     @Previewable @State var passiveVisible = true
     @Previewable @State var otherVulnerabilityVisible = true
     @Previewable @State var activeVisible = true

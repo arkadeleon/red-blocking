@@ -98,7 +98,7 @@ struct MotionPlayerTransportControlsView: View {
     }
 }
 
-#Preview("Transport Controls") {
+#Preview("Motion Player Transport Controls") {
     @Previewable @State var scrubbedFrame = 0.0
     @Previewable @State var isScrubbing = false
 

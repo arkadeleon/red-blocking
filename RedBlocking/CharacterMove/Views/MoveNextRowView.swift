@@ -87,7 +87,7 @@ struct MoveNextRowView: View {
     }
 }
 
-#Preview("Move Browser Row") {
+#Preview("Move Next Row") {
     MoveNextRowView(
         title: "Special Moves",
         subtitle: "Browse quarter-circle, charge, and command inputs.",

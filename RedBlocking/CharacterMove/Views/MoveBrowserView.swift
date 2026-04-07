@@ -47,7 +47,7 @@ struct MoveBrowserView: View {
                     .redBlockingPanel()
                 } else {
                     ForEach(activeSections) { section in
-                        MoveBrowserSectionPanel(section: section, model: model)
+                        MoveBrowserSectionView(section: section, model: model)
                     }
                 }
             }
@@ -58,7 +58,7 @@ struct MoveBrowserView: View {
         .contentMargins(.bottom, 28, for: .scrollContent)
         .navigationTitle(model.page.navigationTitle)
         .modifier(
-            MoveBrowserVariantPickerBar(
+            MoveBrowserVariantPickerModifier(
                 variantNames: model.page.variantNames,
                 selection: Binding(
                     get: { resolvedSelectedVariant },
@@ -89,7 +89,7 @@ struct MoveBrowserView: View {
     }
 }
 
-#Preview("Move Browser View") {
+#Preview("Move Browser") {
     let preview = PreviewAppModel.moveBrowserModel()
 
     return NavigationStack {

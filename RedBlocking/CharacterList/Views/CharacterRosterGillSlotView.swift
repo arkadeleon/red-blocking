@@ -50,7 +50,7 @@ struct CharacterRosterGillSlotView: View {
     }
 }
 
-#Preview("Locked Slot") {
+#Preview("Character Roster Gill Slot") {
     CharacterRosterGillSlotView(diameter: 88)
         .padding(24)
         .background(Color.rbCoal)

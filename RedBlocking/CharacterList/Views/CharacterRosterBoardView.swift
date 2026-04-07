@@ -28,7 +28,7 @@ struct CharacterRosterBoardView: View {
                             if selection.isLocked {
                                 CharacterRosterGillSlotView(diameter: tokenDiameter)
                             } else {
-                                CharacterRosterCharacterButton(
+                                CharacterRosterButton(
                                     character: selection,
                                     isSelected: selection.id == selectedCharacter?.id,
                                     diameter: tokenDiameter,
@@ -80,7 +80,7 @@ struct CharacterRosterBoardView: View {
     }
 }
 
-#Preview("Roster Board") {
+#Preview("Character Roster Board") {
     let characters = PreviewAppModel.characterSelections()
 
     return CharacterRosterBoardView(

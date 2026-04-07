@@ -77,7 +77,7 @@ struct MotionPlayerTransportButtonStripView: View {
     }
 }
 
-#Preview("Transport Button Strip") {
+#Preview("Motion Player Transport Button Strip") {
     MotionPlayerTransportButtonStripView(
         isPlaying: true,
         totalFrames: 42,

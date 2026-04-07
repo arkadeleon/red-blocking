@@ -64,7 +64,7 @@ struct MotionPlayerTransportButtonView: View {
     }
 }
 
-#Preview("Transport Buttons") {
+#Preview("Motion Player Transport Button") {
     HStack(spacing: 12) {
         MotionPlayerTransportButtonView(
             systemImage: "backward.frame.fill",
