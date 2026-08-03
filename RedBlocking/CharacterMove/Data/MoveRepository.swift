@@ -7,7 +7,7 @@
 //
 
 import Foundation
-import Yams
+import RapidYAML
 
 enum MoveRepositoryError: LocalizedError {
     case invalidStructuredProfile(path: String, underlying: Error)

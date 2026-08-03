@@ -1,13 +1,13 @@
 {
-  "originHash" : "00fc82b0de716b0b6fae8646fae1c289e5b4679f93a4b0a9aca7e47cd71f9315",
+  "originHash" : "e4224070890c19558d3fa81752290fd6d5f22cd1c0177e4198a1173ac3df473c",
   "pins" : [
     {
-      "identity" : "yams",
+      "identity" : "swift-rapidyaml",
       "kind" : "remoteSourceControl",
-      "location" : "https://github.com/jpsim/Yams.git",
+      "location" : "https://github.com/arkadeleon/swift-rapidyaml.git",
       "state" : {
-        "revision" : "deaf82e867fa2cbd3cd865978b079bfcf384ac28",
-        "version" : "6.2.1"
+        "branch" : "master",
+        "revision" : "f481114398c3611b9f969af3e008204314e5f724"
       }
     }
   ],

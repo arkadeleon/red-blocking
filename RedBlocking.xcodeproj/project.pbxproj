@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3583FA662DBDF97300778995 /* Yams in Frameworks */ = {isa = PBXBuildFile; productRef = 3583FA652DBDF97300778995 /* Yams */; };
+		35CEBC64302038F700A18649 /* RapidYAML in Frameworks */ = {isa = PBXBuildFile; productRef = 35CEBC63302038F700A18649 /* RapidYAML */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,7 +52,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3583FA662DBDF97300778995 /* Yams in Frameworks */,
+				35CEBC64302038F700A18649 /* RapidYAML in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -117,7 +117,7 @@
 			);
 			name = RedBlocking;
 			packageProductDependencies = (
-				3583FA652DBDF97300778995 /* Yams */,
+				35CEBC63302038F700A18649 /* RapidYAML */,
 			);
 			productName = RedBlocking;
 			productReference = EEE27ACB176C1347008A41AB /* RedBlocking.app */;
@@ -161,7 +161,7 @@
 			);
 			mainGroup = EEE27AC2176C1347008A41AB;
 			packageReferences = (
-				3583FA642DBDF97300778995 /* XCRemoteSwiftPackageReference "Yams" */,
+				35CEBC62302038F700A18649 /* XCRemoteSwiftPackageReference "swift-rapidyaml" */,
 			);
 			productRefGroup = EEE27ACC176C1347008A41AB /* Products */;
 			projectDirPath = "";
@@ -442,21 +442,21 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		3583FA642DBDF97300778995 /* XCRemoteSwiftPackageReference "Yams" */ = {
+		35CEBC62302038F700A18649 /* XCRemoteSwiftPackageReference "swift-rapidyaml" */ = {
 			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/jpsim/Yams.git";
+			repositoryURL = "https://github.com/arkadeleon/swift-rapidyaml.git";
 			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 6.2.1;
+				branch = master;
+				kind = branch;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		3583FA652DBDF97300778995 /* Yams */ = {
+		35CEBC63302038F700A18649 /* RapidYAML */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 3583FA642DBDF97300778995 /* XCRemoteSwiftPackageReference "Yams" */;
-			productName = Yams;
+			package = 35CEBC62302038F700A18649 /* XCRemoteSwiftPackageReference "swift-rapidyaml" */;
+			productName = RapidYAML;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
